@@ -1,6 +1,5 @@
 package br.com.wgc.design_system_wgc.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
