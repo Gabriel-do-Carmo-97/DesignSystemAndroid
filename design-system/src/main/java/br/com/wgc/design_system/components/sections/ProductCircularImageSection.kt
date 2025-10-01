@@ -15,9 +15,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.R
+import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductCard
+import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductModel
+import java.math.BigDecimal
 
 @Composable
-fun ProductSectionHorizontal(
+fun ProductCircularImageSection(
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
@@ -40,9 +44,27 @@ fun ProductSectionHorizontal(
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Spacer(Modifier)
-//            CardDegradedAndCircleImage()
-//            CardDegradedAndCircleImage()
-//            CardDegradedAndCircleImage()
+            CircularImageProductCard(
+                model = CircularImageProductModel(
+                    image = R.drawable.ic_launcher_background,
+                    title = "Camiseta",
+                    price = BigDecimal(149.99)
+                )
+            )
+            CircularImageProductCard(
+                model = CircularImageProductModel(
+                    image = R.drawable.ic_launcher_background,
+                    title = "Camiseta",
+                    price = BigDecimal(149.99)
+                )
+            )
+            CircularImageProductCard(
+                model = CircularImageProductModel(
+                    image = R.drawable.ic_launcher_background,
+                    title = "Camiseta",
+                    price = BigDecimal(149.99)
+                )
+            )
             Spacer(Modifier)
         }
     }
@@ -50,8 +72,8 @@ fun ProductSectionHorizontal(
 
 @Preview(showBackground = true, name = "Only Component", widthDp = 1000)
 @Composable
-private fun ProductSectionHorizontalPreview() = ProductSectionHorizontal()
+private fun ProductSectionHorizontalPreview() = ProductCircularImageSection()
 
 @Preview(showBackground = true, showSystemUi = true, name = "Component and SystemUi")
 @Composable
-private fun ProductSectionHorizontalPreview2() = ProductSectionHorizontal()
+private fun ProductSectionHorizontalPreview2() = ProductCircularImageSection()

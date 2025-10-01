@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -32,6 +33,7 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.R
+import java.math.BigDecimal
 
 @Composable
 fun CircularImageProductDescriptionCard(
@@ -69,7 +71,8 @@ fun CircularImageProductDescriptionCard(
                         .size(imageSize)
                         .offset(y = imageSize / 2)
                         .clip(shape = CircleShape)
-                        .align(Alignment.BottomCenter)
+                        .align(Alignment.BottomCenter),
+                    contentScale = ContentScale.Crop
                 )
             }
             Spacer(modifier = Modifier.height(imageSize / 2))
@@ -82,8 +85,9 @@ fun CircularImageProductDescriptionCard(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = model.price,
+                    text = model.price.toPlainString(),
                     fontSize = 14.sp,
+                    maxLines = 1,
                     modifier = Modifier.padding(top = 8.dp),
                     fontWeight = FontWeight(400)
                 )
@@ -112,7 +116,7 @@ private fun ProductItemPrev() = CircularImageProductDescriptionCard(
     model = CircularImageProductModel(
         image = R.drawable.ic_launcher_background,
         title = LoremIpsum(5).values.first(),
-        price = "R$ 149,99",
+        price = BigDecimal(149.99),
         description = LoremIpsum(100).values.first()
     )
 )
@@ -124,7 +128,7 @@ private fun ProductItemPrev2() = CircularImageProductDescriptionCard(
     model = CircularImageProductModel(
         image = R.drawable.ic_launcher_background,
         title = LoremIpsum(5).values.first(),
-        price = "R$ 149,99",
+        price = BigDecimal(149.99),
         description = LoremIpsum(100).values.first()
     )
 )
