@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.cardPrice
+package br.com.wgc.design_system.components.items
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.R
 
@@ -20,9 +21,11 @@ import br.com.wgc.design_system.R
 fun CardPrice(modifier: Modifier = Modifier){
     Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Image(
-            painter = painterResource(id = R.drawable.baseline_add_box_24),
+            painter = painterResource(id = R.drawable.ic_launcher_background),
             contentDescription = "Produto",
-            modifier = Modifier.size(90.dp).padding(end = 8.dp)
+            modifier = Modifier
+                .size(90.dp)
+                .padding(end = 8.dp)
         )
         Column {
             Text(text = "Titulo!")
@@ -31,3 +34,7 @@ fun CardPrice(modifier: Modifier = Modifier){
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+private fun CardPricePreview() = CardPrice()
