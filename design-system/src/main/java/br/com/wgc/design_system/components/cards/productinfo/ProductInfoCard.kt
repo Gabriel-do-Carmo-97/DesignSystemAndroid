@@ -1,6 +1,5 @@
 package br.com.wgc.design_system.components.cards.productinfo
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -30,6 +29,7 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.R
+import coil3.compose.AsyncImage
 
 
 @Composable
@@ -60,15 +60,17 @@ fun ProductInfoCard(
                     )
                     .fillMaxHeight()
             ) {
-                Image(
-                    painter = painterResource(model.image),
+                AsyncImage(
+                    model = model.image,
                     contentDescription = model.imageDescription,
+                    placeholder = painterResource(id = R.drawable.ic_launcher_background),
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .size(imageSize)
                         .offset(x = imageSize / 2)
                         .clip(shape = CircleShape)
                         .align(Alignment.Center),
-                    contentScale = ContentScale.Crop
+                    error = painterResource(id = R.drawable.baseline_add_box_24)
                 )
             }
             Spacer(modifier = Modifier.width(imageSize / 2))
@@ -86,7 +88,7 @@ fun ProductInfoCard(
 @Composable
 private fun CardDegradedHorizontalDescriptionPreview() = ProductInfoCard(
     model = ProductInfoModel(
-        image = R.drawable.ic_launcher_background,
+        image = "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
         imageDescription = LoremIpsum(5).values.first(),
         description = LoremIpsum(100).values.first()
     )
@@ -97,7 +99,7 @@ private fun CardDegradedHorizontalDescriptionPreview() = ProductInfoCard(
 @Composable
 private fun ProductItemPrev2() = ProductInfoCard(
     model = ProductInfoModel(
-        image = R.drawable.ic_launcher_background,
+        image = "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
         imageDescription = LoremIpsum(5).values.first(),
         description = LoremIpsum(100).values.first()
     )

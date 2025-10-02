@@ -1,6 +1,5 @@
 package br.com.wgc.design_system.components.cards.circularImageproduct
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,6 +30,8 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.R
+import br.com.wgc.design_system.commons.toBrazilianCurrency
+import coil3.compose.AsyncImage
 import java.math.BigDecimal
 
 @Composable
@@ -61,15 +62,17 @@ fun CircularImageProductCard(
                     )
                     .fillMaxWidth()
             ) {
-                Image(
-                    painter = painterResource(model.image),
+                AsyncImage(
+                    model = model.image,
                     contentDescription = "Imagem do produto",
+                    placeholder = painterResource(id = R.drawable.ic_launcher_background),
                     modifier = Modifier
                         .size(imageSize)
                         .offset(y = imageSize / 2)
                         .clip(shape = CircleShape)
                         .align(Alignment.BottomCenter),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
+                    error = painterResource(id = R.drawable.baseline_add_box_24)
                 )
             }
             Spacer(modifier = Modifier.height(imageSize / 2))
@@ -82,7 +85,7 @@ fun CircularImageProductCard(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = model.price.toPlainString(),
+                    text = model.price.toBrazilianCurrency(),
                     fontSize = 14.sp,
                     maxLines = 1,
                     modifier = Modifier.padding(top = 8.dp),
@@ -97,7 +100,7 @@ fun CircularImageProductCard(
 @Composable
 private fun ProductItemPrev() = CircularImageProductCard(
     model = CircularImageProductModel(
-        image = R.drawable.ic_launcher_background,
+        image = "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg",
         title = LoremIpsum(5).values.first(),
         price = BigDecimal(149.99)
     )
@@ -108,7 +111,7 @@ private fun ProductItemPrev() = CircularImageProductCard(
 @Composable
 private fun ProductItemPrev2() = CircularImageProductCard(
     model = CircularImageProductModel(
-        image = R.drawable.ic_launcher_background,
+        image = "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg",
         title = LoremIpsum(5).values.first(),
         price =  BigDecimal(149.99)
     )
