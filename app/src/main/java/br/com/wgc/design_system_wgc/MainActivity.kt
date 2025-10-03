@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
@@ -18,12 +17,15 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.cards.carddetail.ProductDetailCard
 import br.com.wgc.design_system.components.cards.carddetail.ProductDetailModel
+import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductDescriptionCard
 import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductModel
 import br.com.wgc.design_system.components.cards.productinfo.ProductInfoModel
+import br.com.wgc.design_system.components.filter.SearchTextFieldModel
+import br.com.wgc.design_system.components.filter.SearchTextField
+import br.com.wgc.design_system.components.filter.sampleDrinks
 import br.com.wgc.design_system.components.sections.ProductCircularImageDescriptionSection
 import br.com.wgc.design_system.components.sections.ProductCircularImageSection
 import br.com.wgc.design_system.components.sections.ProductInfoSection
-import br.com.wgc.design_system.components.textFields.RoundedTextField
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
 import java.math.BigDecimal
 
@@ -48,9 +50,20 @@ fun App(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp)
     ) {
+
         item {
-            RoundedTextField(modifier = Modifier.fillMaxWidth())
+            SearchTextField(
+                sections = sampleFilter,
+                filterPredicate = { item, query ->
+                    item.title.contains(query, ignoreCase = true) ||
+                            item.description.contains(query, ignoreCase = true)
+                },
+                itemContent = { item ->
+                    CircularImageProductDescriptionCard(model = item)
+                }
+            )
         }
+
         item {
             ProductCircularImageSection(
                 title = "Comidas",
@@ -112,30 +125,6 @@ val sampleCandies = listOf(
         price = BigDecimal("11.99"),
         image = "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg",
         description = LoremIpsum(100).values.first()
-    )
-)
-
-
-val sampleDrinks = listOf(
-    CircularImageProductModel(
-        title = "Cerveja",
-        price = BigDecimal("5.99"),
-        image = "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg",
-    ),
-    CircularImageProductModel(
-        title = "Refrigerante",
-        price = BigDecimal("4.99"),
-        image = "https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg"
-    ),
-    CircularImageProductModel(
-        title = "Suco",
-        price = BigDecimal("7.99"),
-        image = "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg"
-    ),
-    CircularImageProductModel(
-        title = "Água",
-        price = BigDecimal("2.99"),
-        image = "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg"
     )
 )
 
@@ -204,7 +193,7 @@ val sampleItemDetail = listOf<ProductDetailModel>(
     )
 )
 
-val sampleInfoModel= listOf<ProductInfoModel>(
+val sampleInfoModel = listOf<ProductInfoModel>(
     ProductInfoModel(
         image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
         imageDescription = "Imagem do produto",
@@ -214,5 +203,20 @@ val sampleInfoModel= listOf<ProductInfoModel>(
         image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
         imageDescription = "Imagem do produto",
         description = LoremIpsum(100).values.first()
+    )
+)
+
+val sampleFilter = listOf(
+    SearchTextFieldModel(
+        title = "Promoções",
+        items = sampleDrinks
     ),
+    SearchTextFieldModel(
+        title = "Doces",
+        items = sampleDrinks
+    ),
+    SearchTextFieldModel(
+        title = "Bebidas",
+        items = sampleDrinks
+    )
 )

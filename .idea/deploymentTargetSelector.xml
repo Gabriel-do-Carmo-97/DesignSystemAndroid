@@ -22,6 +22,9 @@
       <SelectionState runConfigName="ProductDetailCardPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="RoundedTextFieldPreview2">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
