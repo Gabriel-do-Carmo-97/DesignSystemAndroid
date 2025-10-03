@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
@@ -15,11 +16,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.components.cards.carddetail.ProductDetailCard
+import br.com.wgc.design_system.components.cards.carddetail.ProductDetailModel
 import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductModel
 import br.com.wgc.design_system.components.cards.productinfo.ProductInfoModel
 import br.com.wgc.design_system.components.sections.ProductCircularImageDescriptionSection
 import br.com.wgc.design_system.components.sections.ProductCircularImageSection
 import br.com.wgc.design_system.components.sections.ProductInfoSection
+import br.com.wgc.design_system.components.textFields.RoundedTextField
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
 import java.math.BigDecimal
 
@@ -45,6 +49,9 @@ fun App(modifier: Modifier = Modifier) {
         contentPadding = PaddingValues(16.dp)
     ) {
         item {
+            RoundedTextField(modifier = Modifier.fillMaxWidth())
+        }
+        item {
             ProductCircularImageSection(
                 title = "Comidas",
                 producs = sampleCandies
@@ -60,6 +67,11 @@ fun App(modifier: Modifier = Modifier) {
             ProductInfoSection(
                 title = "Comidas",
                 producs = sampleInfoModel
+            )
+        }
+        items(sampleItemDetail.size) {
+            ProductDetailCard(
+                productDetailModel = sampleItemDetail[it],
             )
         }
     }
@@ -154,6 +166,43 @@ val sampleSections = mapOf(
     "Bebidas" to sampleDrinks
 )
 
+val sampleItemDetail = listOf<ProductDetailModel>(
+    ProductDetailModel(
+        image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+        imageDescription = "Imagem do produto",
+        name = "Batata frita",
+        price = BigDecimal("7.99"),
+        description = LoremIpsum(100).values.first()
+    ),
+    ProductDetailModel(
+        image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+        imageDescription = "Imagem do produto",
+        name = "Batata frita",
+        price = BigDecimal("7.99"),
+        description = LoremIpsum(100).values.first()
+    ),
+    ProductDetailModel(
+        image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+        imageDescription = "Imagem do produto",
+        name = "Batata frita",
+        price = BigDecimal("7.99"),
+        description = LoremIpsum(100).values.first()
+    ),
+    ProductDetailModel(
+        image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+        imageDescription = "Imagem do produto",
+        name = "Batata frita",
+        price = BigDecimal("7.99"),
+        description = LoremIpsum(100).values.first()
+    ),
+    ProductDetailModel(
+        image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+        imageDescription = "Imagem do produto",
+        name = "Batata frita",
+        price = BigDecimal("7.99"),
+        description = LoremIpsum(100).values.first()
+    )
+)
 
 val sampleInfoModel= listOf<ProductInfoModel>(
     ProductInfoModel(
