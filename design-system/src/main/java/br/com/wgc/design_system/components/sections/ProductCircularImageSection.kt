@@ -2,6 +2,7 @@ package br.com.wgc.design_system.components.sections
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
@@ -35,7 +36,8 @@ fun ProductCircularImageSection(
             modifier = Modifier
                 .padding(top = 8.dp)
                 .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp)
         ) {
             items(producs.size) { index ->
                 CircularImageProductCard(model = producs[index])

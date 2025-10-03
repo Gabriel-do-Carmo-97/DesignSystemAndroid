@@ -4,14 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,7 +17,6 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.cards.circularImageproduct.CircularImageProductModel
 import br.com.wgc.design_system.components.cards.productinfo.ProductInfoModel
-import br.com.wgc.design_system.components.items.CardPrice
 import br.com.wgc.design_system.components.sections.ProductCircularImageDescriptionSection
 import br.com.wgc.design_system.components.sections.ProductCircularImageSection
 import br.com.wgc.design_system.components.sections.ProductInfoSection
@@ -34,41 +30,55 @@ class MainActivity : ComponentActivity() {
         setContent {
             DesignSystemWGCTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Spacer(modifier = Modifier)
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding)
-                            .verticalScroll(rememberScrollState()),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
-                    ) {
-                        Spacer(modifier = Modifier.height(16.dp))
-                        ProductCircularImageSection(
-                            title = "Comidas",
-                            producs = sampleCandies
-                        )
-                        ProductCircularImageDescriptionSection(
-                            title = "Comidas",
-                            producs = sampleCandies
-                        )
-                        ProductInfoSection(
-                            title = "Comidas",
-                            producs = sampleInfoModel
-                        )
-                        Spacer(modifier = Modifier)
-                    }
+                    Spacer(modifier = Modifier.padding(innerPadding))
+                    App()
                 }
             }
         }
     }
 }
 
+@Composable
+fun App(modifier: Modifier = Modifier) {
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        contentPadding = PaddingValues(16.dp)
+    ) {
+        item {
+            ProductCircularImageSection(
+                title = "Comidas",
+                producs = sampleCandies
+            )
+        }
+        item {
+            ProductCircularImageDescriptionSection(
+                title = "Comidas",
+                producs = sampleCandies
+            )
+        }
+        item {
+            ProductInfoSection(
+                title = "Comidas",
+                producs = sampleInfoModel
+            )
+        }
+    }
+
+}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     DesignSystemWGCTheme {
-        CardPrice()
+        App()
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun GreetingPreview2() {
+    DesignSystemWGCTheme {
+        App()
     }
 }
 
