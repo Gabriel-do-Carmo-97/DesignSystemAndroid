@@ -71,7 +71,7 @@ fun ProductDetailCard(
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, name = "Only Component")
 @Composable
 private fun ProductDetailCardPreview() = ProductDetailCard(
     productDetailModel = ProductDetailModel(
@@ -84,7 +84,7 @@ private fun ProductDetailCardPreview() = ProductDetailCard(
 )
 
 
-@Preview(showSystemUi = true, showBackground = true)
+@Preview(showSystemUi = true, showBackground = true, name = "Component and SystemUi")
 @Composable
 private fun ProductDetailCardPreview2() = ProductDetailCard(
     productDetailModel = ProductDetailModel(
