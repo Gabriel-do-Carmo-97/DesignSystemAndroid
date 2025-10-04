@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards.circularImageproduct
+package br.com.wgc.design_system.components.sections.items.product
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -37,9 +37,9 @@ import coil3.compose.AsyncImage
 import java.math.BigDecimal
 
 @Composable
-fun CircularImageProductDescriptionCard(
+fun ItemSectionCard(
     modifier: Modifier = Modifier,
-    model: CircularImageProductModel
+    model: ItemSectionCardModel
 ) {
     Surface(
         shape = RoundedCornerShape(15.dp),
@@ -81,7 +81,7 @@ fun CircularImageProductDescriptionCard(
             Spacer(modifier = Modifier.height(imageSize / 2))
             Column(modifier = Modifier.padding(16.dp)) {
                 Text(
-                    text = model.title,
+                    text = model.name,
                     fontSize = 18.sp,
                     fontWeight = FontWeight(700),
                     maxLines = 2,
@@ -115,10 +115,10 @@ fun CircularImageProductDescriptionCard(
 
 @Preview(showBackground = true, name = "Only Component")
 @Composable
-private fun ProductItemPrev() = CircularImageProductDescriptionCard(
-    model = CircularImageProductModel(
+private fun SectionDescriptionItemCardPrev() = ItemSectionCard(
+    model = ItemSectionCardModel(
         image = "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
-        title = LoremIpsum(5).values.first(),
+        name = LoremIpsum(5).values.first(),
         price = BigDecimal(149.99),
         description = LoremIpsum(100).values.first()
     )
@@ -127,10 +127,10 @@ private fun ProductItemPrev() = CircularImageProductDescriptionCard(
 
 @Preview(showBackground = true, showSystemUi = true, name = "Component and SystemUi")
 @Composable
-private fun ProductItemPrev2() = CircularImageProductDescriptionCard(
-    model = CircularImageProductModel(
+private fun SectionDescriptionItemCardPrev2() = ItemSectionCard(
+    model = ItemSectionCardModel(
         image = "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
-        title = LoremIpsum(5).values.first(),
+        name = LoremIpsum(5).values.first(),
         price = BigDecimal(149.99),
         description = LoremIpsum(100).values.first()
     )
