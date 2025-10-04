@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -14,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
-import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.cards.carddetail.ProductDetailCard
 import br.com.wgc.design_system.components.cards.carddetail.ProductDetailModel
 import br.com.wgc.design_system.components.filter.sampleDrinks
@@ -48,7 +46,6 @@ class MainActivity : ComponentActivity() {
 fun App(modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp)
     ) {
 
         item {
@@ -56,6 +53,26 @@ fun App(modifier: Modifier = Modifier) {
                 sectionModel = SectionCategoryModel(
                     title = "Categorias",
                     items = listOf(
+                        ItemSectionCircleCategoryModel(
+                            image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+                            name = "Hamburguer"
+                        ),
+                        ItemSectionCircleCategoryModel(
+                            image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+                            name = "Hamburguer"
+                        ),
+                        ItemSectionCircleCategoryModel(
+                            image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+                            name = "Hamburguer"
+                        ),
+                        ItemSectionCircleCategoryModel(
+                            image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+                            name = "Hamburguer"
+                        ),
+                        ItemSectionCircleCategoryModel(
+                            image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
+                            name = "Hamburguer"
+                        ),
                         ItemSectionCircleCategoryModel(
                             image = "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg",
                             name = "Hamburguer"

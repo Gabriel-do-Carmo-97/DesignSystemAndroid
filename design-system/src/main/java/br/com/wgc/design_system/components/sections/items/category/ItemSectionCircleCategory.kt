@@ -1,7 +1,6 @@
 package br.com.wgc.design_system.components.sections.items.category
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
@@ -30,17 +29,17 @@ fun ItemSectionCircleCategory(
         AsyncImage(
             model = model.image,
             contentDescription = "Imagem do produto",
-            placeholder = painterResource(id = R.drawable.ic_launcher_background),
+            placeholder = painterResource(id = R.drawable.placeholder),
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(80.dp)
                 .clip(shape = CircleShape),
-            error = painterResource(id = R.drawable.baseline_add_box_24)
+            error = painterResource(id = R.drawable.error)
         )
         Text(
             text = model.name,
             fontSize = 14.sp,
-            modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 16.dp),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             fontWeight = FontWeight.Bold,
 
         )

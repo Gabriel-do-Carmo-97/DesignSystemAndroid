@@ -26,15 +26,14 @@ fun SectionCategories(
     Column(modifier = modifier) {
         Text(
             sectionModel.title,
-            fontSize = 20.sp,
+            fontSize = 12.sp,
             fontWeight = FontWeight(400),
             modifier = modifier.padding(start = 16.dp)
         )
         LazyRow(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
-            contentPadding = PaddingValues(16.dp)
+            contentPadding = PaddingValues(horizontal = 16.dp)
         ) {
             items(sectionModel.items.size) { index ->
                 when (sectionModel.itemType) {
