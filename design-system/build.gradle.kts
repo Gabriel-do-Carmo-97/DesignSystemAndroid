@@ -65,9 +65,10 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.github.Gabriel-do-Carmo-97"
+            groupId = "com.github.Gabriel-do-Carmo-97.DesignSystemWGC"
             artifactId = "design-system"
             version = "0.0.${System.getenv("GITHUB_RUN_NUMBER") ?: "0.0.1-SNAPSHOT"}"
+
             afterEvaluate {
                 from(components["release"])
             }
@@ -77,7 +78,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+            url = uri("https://maven.pkg.github.com/Gabriel-do-Carmo-97/DesignSystemWGC")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
@@ -85,3 +86,4 @@ publishing {
         }
     }
 }
+
