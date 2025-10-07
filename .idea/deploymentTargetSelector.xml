@@ -13,9 +13,6 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="WITH circular - ProductSectionHorizontalPreview4">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="WITH CIRCLE - ProductSectionHorizontalPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
