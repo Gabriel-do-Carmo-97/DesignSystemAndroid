@@ -27,7 +27,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
-n
+
       - name: 🤖 Setup Android SDK
         uses: android-actions/setup-android@v3
 
@@ -51,5 +51,3 @@ n
 
       - name: Build with Gradle
         run: ./gradlew build
-
-      - name: Create GitHub Release
