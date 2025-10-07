@@ -2,16 +2,11 @@ package br.com.wgc.design_system.components.filter
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,9 +16,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.components.searchfield.SearchField
+import br.com.wgc.design_system.components.sections.items.product.ItemSectionCardModel
 import br.com.wgc.design_system.components.sections.product.SectionCards
 import br.com.wgc.design_system.components.sections.product.SectionCardsModel
-import br.com.wgc.design_system.components.sections.items.product.ItemSectionCardModel
 import br.com.wgc.design_system.components.sections.type.ItemSectionType
 import java.math.BigDecimal
 
@@ -40,30 +36,21 @@ fun SearchTextField(
             sections
         } else {
             sections.map { section ->
-                    val filteredItems = section.items.filter { item ->
-                        filterPredicate(item, searchQuery)
-                    }
-                    section.copy(items = filteredItems)
-                }.filter { it.items.isNotEmpty() }
+                val filteredItems = section.items.filter { item ->
+                    filterPredicate(item, searchQuery)
+                }
+                section.copy(items = filteredItems)
+            }.filter { it.items.isNotEmpty() }
         }
     }
 
     Column(modifier = modifier) {
-        OutlinedTextField(
-            value = searchQuery,
-            onValueChange = { newValue -> searchQuery = newValue },
-            modifier = Modifier
-                .padding(top = 16.dp, start = 16.dp, end = 16.dp)
-                .fillMaxWidth(),
-            shape = RoundedCornerShape(100),
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Search,
-                    contentDescription = "Search"
-                )
-            },
-            label = { Text(text = "Pesquisar") },
-            placeholder = { Text(text = "O que você procura?") }
+        SearchField(modifier = Modifier
+            .padding (top = 16.dp, start = 16.dp, end = 16.dp),
+        value = searchQuery,
+        onValueChange = { newValue -> searchQuery = newValue },
+        label = "Pesquisar",
+        leadingIcon = Icons.Default.Search
         )
         LazyColumn(contentPadding = PaddingValues(vertical = 8.dp)) {
             items(
@@ -96,6 +83,7 @@ private fun RoundedTextFieldPreview2() = SearchTextField(
                 item.description.contains(query, ignoreCase = true)
     },
 )
+
 val sampleDrinks = listOf(
     ItemSectionCardModel(
         name = "Cerveja",
