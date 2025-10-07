@@ -51,3 +51,16 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Configure GitHub Access
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "Gabriel Carmo"
+          git config user.email "gabriel.desenvolvedor.97@gmail.com"
+
+#      - name: 'PASSO 2: Criar e Empurrar a Tag Git'
+#        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+#        run: |
+#          TAG_NAME="v1.0.${{ github.run_number }}"
+#          git tag -a "$TAG_NAME" -m "Release $TAG_NAME"
+#          git push origin "$TAG_NAME"
