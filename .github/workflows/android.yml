@@ -61,14 +61,14 @@ jobs:
           git config user.name "Gabriel Carmo"
           git config user.email "gabriel.desenvolvedor.97@gmail.com"
 
-      - name: 'PASSO 2: Criar e Empurrar a Tag Git'
+      - name: Create Git Tag
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           TAG_NAME="v0.0.${{ github.run_number }}"
           git tag -a "$TAG_NAME" -m "Release $TAG_NAME"
           git push origin "$TAG_NAME"
 
-      - name: 'PASSO 3: Criar o Release no GitHub'
+      - name: Create Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,3 +79,9 @@ jobs:
             --notes "Release automático gerado pelo workflow. Sobre a versao v0.0.{{github.run_number}}" \
             ./design-system/build/outputs/aar/design-system-debug.aar \
             ./design-system/build/outputs/aar/design-system-release.aar
+
+      - name: 📦 Publish to GitHub Packages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew :design-system:publish
