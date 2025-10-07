@@ -23,7 +23,6 @@ jobs:
 
     - name: 📦 Build Debug AAR
       run: ./gradlew :core:assembleDebug
-      shell: bash
       with:
         java-version: '17'
         distribution: 'temurin'
