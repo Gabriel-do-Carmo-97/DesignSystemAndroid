@@ -64,7 +64,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.github.Gabriel-do-Carmo-97.DesignSystemAndroid"
+            groupId = "com.github.gabriel-do-carmo-97"
             artifactId = "design-system"
             version = "0.0.${System.getenv("GITHUB_RUN_NUMBER") ?: "0.0.1-SNAPSHOT"}"
 

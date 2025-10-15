@@ -59,8 +59,8 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.github.Gabriel-do-Carmo-97.DesignSystemAndroid"
-            artifactId = "ds-templates" // Está perfeito
+            groupId = "com.github.gabriel-do-carmo-97"
+            artifactId = "ds-templates"
             version = "0.0.${System.getenv("GITHUB_RUN_NUMBER") ?: "0.0.1-SNAPSHOT"}" // Está perfeito
 
             afterEvaluate {
@@ -74,8 +74,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
             credentials {
-                username = System.getenv("GITHUB_ACTOR") // Está perfeito
-                password = System.getenv("GITHUB_TOKEN") // Está perfeito
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
