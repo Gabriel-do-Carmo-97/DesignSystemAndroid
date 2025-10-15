@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.searchfield
+package br.com.wgc.design_system.components.fields
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,7 +16,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun SearchField(
+fun SearchTextField(
     modifier: Modifier = Modifier,
     value: String,
     onValueChange: (String) -> Unit,
@@ -43,7 +43,7 @@ fun SearchField(
 @Preview(showBackground = true)
 @Composable
 private fun SearchFieldPrev() {
-    SearchField(
+    SearchTextField(
         value = "",
         onValueChange = {},
         label = "Pesquisar"
@@ -54,7 +54,7 @@ private fun SearchFieldPrev() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun SearchFieldPrev2() {
-    SearchField(
+    SearchTextField(
         value = "",
         onValueChange = {},
         label = "Pesquisar",

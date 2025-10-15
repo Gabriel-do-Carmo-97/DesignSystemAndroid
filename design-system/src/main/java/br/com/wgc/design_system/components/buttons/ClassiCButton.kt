@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ButtonClassic(
+fun ClassiCButton(
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
     isEnabled: Boolean = true,
@@ -36,11 +36,11 @@ fun ButtonClassic(
 
 @Preview(showBackground = true , name = "Only Component")
 @Composable
-private fun ButtonClassicPreview() = ButtonClassic(
+private fun ButtonClassicPreview() = ClassiCButton(
     isEnabled = false
 )
 
 
 @Preview(showBackground = true, showSystemUi = true, name = "Component and SystemUi")
 @Composable
-private fun ButtonClassicPreview2() = ButtonClassic()
+private fun ButtonClassicPreview2() = ClassiCButton()

@@ -16,7 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.components.searchfield.SearchField
+import br.com.wgc.design_system.components.fields.SearchTextField
 import br.com.wgc.design_system.components.sections.items.product.ItemSectionCardModel
 import br.com.wgc.design_system.components.sections.product.SectionCards
 import br.com.wgc.design_system.components.sections.product.SectionCardsModel
@@ -45,7 +45,7 @@ fun SearchTextField(
     }
 
     Column(modifier = modifier) {
-        SearchField(modifier = Modifier
+        SearchTextField(modifier = Modifier
             .padding (top = 16.dp, start = 16.dp, end = 16.dp),
         value = searchQuery,
         onValueChange = { newValue -> searchQuery = newValue },
