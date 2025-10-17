@@ -12,9 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun LoginScreenTemplate(
     modifier: Modifier = Modifier,
-    imageLogo: String = "",
-    onLoginClick: () -> Unit = {},
-    onRegisterClick: () -> Unit = {},
+    state: LoginScreenUiState = LoginScreenUiState()
 ) {
     Scaffold(
         modifier = modifier,

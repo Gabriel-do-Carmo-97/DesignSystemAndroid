@@ -2,62 +2,77 @@ package br.com.wgc.design_system.components.images
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.shimmerEffect
+import br.com.wgc.design_system.components.placeholder.PlaceholderDefault
 import br.com.wgc.design_system.mock.MockData
-import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePainter
+import coil3.compose.SubcomposeAsyncImage
+import coil3.compose.SubcomposeAsyncImageContent
 
 @Composable
 fun AsyncImageDefault(
     modifier: Modifier = Modifier,
-    image: String = "",
+    image: String? = null,
+    contentDescription: String? = null,
+    onLoading: (AsyncImagePainter.State.Loading) -> Unit = {},
+    onSuccess: (AsyncImagePainter.State.Success) -> Unit = {},
+    onError: (AsyncImagePainter.State.Error) -> Unit = {},
 ) {
-    var isLoading by remember { mutableStateOf(false) }
-
-    Box(
+    SubcomposeAsyncImage(
         modifier = modifier,
-        contentAlignment = Alignment.Center
-    ) {
-        AsyncImage(
-            modifier = Modifier.fillMaxSize(),
-            model = image,
-            contentDescription = "Imagem do produto",
-            contentScale = ContentScale.Crop,
-            onState = { state: AsyncImagePainter.State ->
-                when(state){
-                    is AsyncImagePainter.State.Empty -> TODO()
-                    is AsyncImagePainter.State.Error -> TODO()
-                    is AsyncImagePainter.State.Loading -> TODO()
-                    is AsyncImagePainter.State.Success -> TODO()
-                }
-            },
-        )
-
-        if (isLoading) {
-            CircularProgressIndicator()
-        }
-    }
+        model = image,
+        onLoading = onLoading,
+        loading = {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .shimmerEffect(true)
+            )
+        },
+        onError = onError,
+        error = {
+            PlaceholderDefault(isError = true)
+        },
+        onSuccess = onSuccess,
+        success = {
+            SubcomposeAsyncImageContent()
+        },
+        contentDescription = contentDescription,
+        contentScale = ContentScale.Crop,
+    )
 }
 
-@Preview(showBackground = true, name = "Only Component")
+
+@Preview(showBackground = true, name = "Estado de Sucesso")
 @Composable
-private fun AsyncImageDefaultPreview() {
+private fun AsyncImageDefaultSuccessPreview() {
     AsyncImageDefault(
+        modifier = Modifier.size(128.dp),
         image = MockData.listItemSectionCardModel[1].image
     )
 }
 
-@Preview(showSystemUi = true, showBackground = true, name = "Component and SystemUi")
+@Preview(showBackground = true, name = "Estado de Erro")
 @Composable
-private fun AsyncImageDefaultPreview2() {
-    AsyncImageDefault()
+private fun AsyncImageDefaultErrorPreview() {
+    AsyncImageDefault(
+        modifier = Modifier.size(128.dp),
+        image = "https://invalid-url-for-error.com/image.jpg"
+    )
+}
+
+@Preview(showBackground = true, name = "Estado Vazio (Empty)")
+@Composable
+private fun AsyncImageDefaultEmptyPreview() {
+    // 3. Novo preview para testar o estado 'empty'
+    AsyncImageDefault(
+        modifier = Modifier.size(128.dp),
+        image = null // Passando null para ativar o bloco 'empty'
+    )
 }
