@@ -1,7 +1,10 @@
 package br.com.wgc.ds_templates.screens.login
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -14,13 +17,18 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.SecondaryClassicButton
+import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
@@ -34,59 +42,92 @@ fun LoginScreenTemplate(
     onLoginClick: () -> Unit = {},
     onRegisterClick: () -> Unit = {},
     onForgotPasswordClick: () -> Unit = {},
-    onTermsClick: () -> Unit = {},
     onTogglePasswordVisibility: () -> Unit = {},
 ) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
     ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            AsyncImageDefault(
-                modifier = Modifier.size(64.dp),
-                image = state.imageLogo,
-                contentDescription = state.imageLogoDescription,
-            )
-            Spacer(modifier = Modifier.height(32.dp))
-            SimpleTextField(
-                modifier = Modifier,
-                value = state.email,
-                onValueChange = onEmailChange,
-                isEnabled = !state.isLoading,
-                label = "Email :",
-                placeholderText = "Digite seu E-mail:",
-                leadingIcon = Icons.Default.Email,
-                isError = state.emailError != null,
-                errorMessage = state.emailError.orEmpty(),
-                keyboardType = KeyboardType.Email,
-                isReadOnly = state.isLoading
-            )
-            SimpleTextField(
-                modifier = Modifier,
-                value = state.password,
-                onValueChange = onPasswordChange,
-                isEnabled = !state.isLoading,
-                label = "Senha :",
-                placeholderText = "Digite sua senha:",
-                leadingIcon = Icons.Default.Password,
-                trailingIcon = if (state.isPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                onTrailingIconClick = onTogglePasswordVisibility,
-                isError = state.passwordError != null,
-                errorMessage = state.passwordError.orEmpty(),
-                keyboardType = KeyboardType.Password,
-                isReadOnly = state.isLoading,
-                isPasswordField = true
-            )
-            ClassicButton(
-                modifier = Modifier.padding(top = 16.dp),
-                textButton = "Login"
-            )
+        Box(modifier = Modifier.padding(innerPadding)) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                AsyncImageDefault(
+                    modifier = Modifier.size(64.dp),
+                    image = state.imageLogo,
+                    contentDescription = state.imageLogoDescription,
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                SimpleTextField(
+                    modifier = Modifier,
+                    value = state.email,
+                    onValueChange = onEmailChange,
+                    isEnabled = !state.isLoading,
+                    label = "Email :",
+                    placeholderText = "Digite seu E-mail:",
+                    leadingIcon = Icons.Default.Email,
+                    isError = state.emailError != null,
+                    errorMessage = state.emailError.orEmpty(),
+                    keyboardType = KeyboardType.Email,
+                    isReadOnly = state.isLoading
+                )
+                SimpleTextField(
+                    modifier = Modifier,
+                    value = state.password,
+                    onValueChange = onPasswordChange,
+                    isEnabled = !state.isLoading,
+                    label = "Senha :",
+                    placeholderText = "Digite sua senha:",
+                    leadingIcon = Icons.Default.Password,
+                    trailingIcon = if (state.isPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                    onTrailingIconClick = onTogglePasswordVisibility,
+                    isError = state.passwordError != null,
+                    errorMessage = state.passwordError.orEmpty(),
+                    keyboardType = KeyboardType.Password,
+                    isReadOnly = state.isLoading,
+                    isPasswordField = true
+                )
+                CheckboxDefaults(
+                    label = "Lembrar de mim",
+                    isEnabled = !state.isLoading,
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                ClassicButton(
+                    modifier = Modifier.padding(top = 16.dp),
+                    textButton = "Login",
+                    onClick = onLoginClick
+                )
+                SecondaryClassicButton(
+                    textButton = "Não tem uma conta? Cadastrar-se",
+                    onClick = onRegisterClick
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Row(
+                    modifier = Modifier
+                        .clickable { onForgotPasswordClick() }
+                        .height(48.dp),
+                    verticalAlignment = Alignment.CenterVertically
+
+                ) {
+                    Text(
+                        text = "Esqueceu a senha?",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
+                    Text(
+                        "Recuperar",
+                        color = MaterialTheme.colorScheme.primary,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                }
+            }
+
         }
     }
 }
