@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -41,7 +42,6 @@ fun SimpleTextField(
     onTrailingIconClick: () -> Unit = {},
     isError: Boolean = false,
     errorMessage: String = "SimpleErrorMessage",
-    color: Color = Color.Green,
     keyboardType: KeyboardType = KeyboardType.Text,
     isPasswordField: Boolean = false
 ) {
@@ -59,7 +59,10 @@ fun SimpleTextField(
     }
 
     val finalOnTrailingIconClick = when {
-        isPasswordField -> { { isPasswordVisible = !isPasswordVisible } }
+        isPasswordField -> {
+            { isPasswordVisible = !isPasswordVisible }
+        }
+
         else -> onTrailingIconClick
     }
     OutlinedTextField(
@@ -68,7 +71,8 @@ fun SimpleTextField(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(15),
         leadingIcon = { if (leadingIcon != null) Icon(leadingIcon, null) },
-        trailingIcon = { finalTrailingIcon?.let {safeIcon ->
+        trailingIcon = {
+            finalTrailingIcon?.let { safeIcon ->
                 Icon(
                     modifier = Modifier.clickable(
                         onClick = { finalOnTrailingIconClick() }
@@ -98,20 +102,22 @@ fun SimpleTextField(
         enabled = isEnabled,
         readOnly = isReadOnly,
         colors = OutlinedTextFieldDefaults.colors(
-            errorTextColor = Color.Red,
-            errorLabelColor = Color.Red,
-            errorCursorColor = Color.Red,
-            errorBorderColor = Color.Red,
-            errorContainerColor = Color.Red.copy(alpha = 0.1f),
-            errorLeadingIconColor = Color.Red,
-            errorTrailingIconColor = Color.Red,
+            errorContainerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.2f),
+            errorTextColor = MaterialTheme.colorScheme.onErrorContainer,
+            errorLabelColor = MaterialTheme.colorScheme.error,
+            errorBorderColor = MaterialTheme.colorScheme.error,
+            errorLeadingIconColor = MaterialTheme.colorScheme.error,
+            errorTrailingIconColor = MaterialTheme.colorScheme.error,
+            errorSupportingTextColor = MaterialTheme.colorScheme.error,
+            errorCursorColor = MaterialTheme.colorScheme.error,
 
             focusedContainerColor = Color.Transparent,
-            focusedTextColor = Color.Black,
-            focusedLabelColor = color,
-            focusedBorderColor = color,
-            focusedPlaceholderColor = Color.LightGray,
-            focusedLeadingIconColor = color,
+            focusedTextColor = MaterialTheme.colorScheme.onSurface,
+            focusedLabelColor = MaterialTheme.colorScheme.primary,
+            focusedBorderColor = MaterialTheme.colorScheme.primary,
+            focusedLeadingIconColor = MaterialTheme.colorScheme.primary,
+            focusedTrailingIconColor = MaterialTheme.colorScheme.primary,
+            focusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     )
 }
