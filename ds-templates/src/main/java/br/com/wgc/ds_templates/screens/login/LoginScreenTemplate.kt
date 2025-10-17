@@ -1,18 +1,42 @@
 package br.com.wgc.ds_templates.screens.login
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Password
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 
 @Composable
 fun LoginScreenTemplate(
     modifier: Modifier = Modifier,
-    state: LoginScreenUiState = LoginScreenUiState()
+    state: LoginScreenUiState = LoginScreenUiState(),
+    onEmailChange: (String) -> Unit = {},
+    onPasswordChange: (String) -> Unit = {},
+    onLoginClick: () -> Unit = {},
+    onRegisterClick: () -> Unit = {},
+    onForgotPasswordClick: () -> Unit = {},
+    onTermsClick: () -> Unit = {},
+    onTogglePasswordVisibility: () -> Unit = {},
 ) {
     Scaffold(
         modifier = modifier,
@@ -21,8 +45,51 @@ fun LoginScreenTemplate(
         Column(
             modifier = Modifier
                 .padding(innerPadding)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
-
+            AsyncImageDefault(
+                modifier = Modifier.size(64.dp),
+                image = state.imageLogo,
+                contentDescription = state.imageLogoDescription,
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+            SimpleTextField(
+                modifier = Modifier,
+                value = state.email,
+                onValueChange = onEmailChange,
+                isEnabled = !state.isLoading,
+                label = "Email :",
+                placeholderText = "Digite seu E-mail:",
+                leadingIcon = Icons.Default.Email,
+                isError = state.emailError != null,
+                errorMessage = state.emailError.orEmpty(),
+                color = Color.Red,
+                keyboardType = KeyboardType.Email,
+                isReadOnly = state.isLoading
+            )
+            SimpleTextField(
+                modifier = Modifier,
+                value = state.password,
+                onValueChange = onPasswordChange,
+                isEnabled = !state.isLoading,
+                label = "Senha :",
+                placeholderText = "Digite sua senha:",
+                leadingIcon = Icons.Default.Password,
+                trailingIcon = if (state.isPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                onTrailingIconClick = onTogglePasswordVisibility,
+                isError = state.passwordError != null,
+                errorMessage = state.passwordError.orEmpty(),
+                keyboardType = KeyboardType.Password,
+                isReadOnly = state.isLoading,
+                color = Color.Blue,
+                isPasswordField = true
+            )
+            ClassicButton(
+                modifier = Modifier.padding(top = 16.dp),
+                textButton = "Login"
+            )
         }
     }
 }
@@ -30,12 +97,9 @@ fun LoginScreenTemplate(
 
 @Preview(showBackground = true, name = "Only Component")
 @Composable
-private fun LoginScreenTemplatePreview() {
-    LoginScreenTemplate()
-}
+private fun LoginScreenTemplatePreview() = LoginScreenTemplate()
+
 
 @Preview(showSystemUi = true, showBackground = true, name = "Component and SystemUi")
 @Composable
-private fun LoginScreenTemplatePreview2() {
-    LoginScreenTemplate()
-}
+private fun LoginScreenTemplatePreview2() = LoginScreenTemplate()

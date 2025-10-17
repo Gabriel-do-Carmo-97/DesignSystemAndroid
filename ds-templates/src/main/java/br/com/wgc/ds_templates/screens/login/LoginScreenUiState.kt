@@ -1,10 +1,19 @@
 package br.com.wgc.ds_templates.screens.login
 
-class LoginScreenUiState(
+data class LoginScreenUiState(
+    // Dados do formulário
+    val email: String = "",
+    val password: String = "",
+
+    // Estado da UI
     val imageLogo: String = "",
-    val onLoginClick: () -> Unit = {},
-    val onRegisterClick: () -> Unit = {},
-    val onForgotPasswordClick: () -> Unit = {},
-    val onTermsClick: () -> Unit = {},
-) {
-}
+    val imageLogoDescription: String = "",
+
+    val isPasswordVisible: Boolean = false,
+    val isLoading: Boolean = false,
+
+    // Estado de erros (podem ser nulos se não houver erro)
+    val emailError: String? = null,
+    val passwordError: String? = null,
+    val generalError: String? = null,
+)
