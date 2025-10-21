@@ -31,6 +31,7 @@ import br.com.wgc.design_system.components.buttons.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.images.AsyncImageDefault
+import br.com.wgc.design_system.components.providers_login.ProvidersLogin
 
 
 @Composable
@@ -107,6 +108,12 @@ fun LoginScreenTemplate(
                     onClick = onRegisterClick
                 )
                 Spacer(modifier = Modifier.height(16.dp))
+                if (state.providers.isNotEmpty()) {
+                    ProvidersLogin(
+                        providers = state.providers
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
                 Row(
                     modifier = Modifier
                         .clickable { onForgotPasswordClick() }
@@ -119,7 +126,7 @@ fun LoginScreenTemplate(
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
-                    Spacer(modifier = Modifier.weight(1f))
+                    Spacer(modifier = Modifier.padding(16.dp))
                     Text(
                         "Recuperar",
                         color = MaterialTheme.colorScheme.primary,
