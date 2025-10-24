@@ -13,16 +13,10 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="RoundedTextFieldPreview">
+      <SelectionState runConfigName="FAButtonTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Shimmer em um Círculo - ShimmerCirclePreview">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="Component and SystemUi - LoginScreenTemplatePreview2">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="Only Component - LoginScreenTemplatePreview">
+      <SelectionState runConfigName="extendedFab_whenRendered_showsIconAndText()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

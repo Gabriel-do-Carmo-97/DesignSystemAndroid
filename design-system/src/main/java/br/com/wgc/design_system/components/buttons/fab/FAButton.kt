@@ -1,9 +1,14 @@
 package br.com.wgc.design_system.components.buttons.fab
 
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sensors
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -13,7 +18,9 @@ import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun FAButton(
@@ -22,7 +29,7 @@ fun FAButton(
     fabType: FABType = FABType.MEDIUM,
     shape: RoundedCornerShape = CircleShape,
     description: String = "Button",
-    content: @Composable () -> Unit
+    icon: ImageVector = Icons.Default.Add,
 ) {
     when(fabType){
         FABType.SMALL -> SmallFloatingActionButton(
@@ -31,7 +38,7 @@ fun FAButton(
             shape = shape,
             containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.secondary,
-            content = content,
+            content = { Icon(icon, description) },
         )
         FABType.MEDIUM -> FloatingActionButton(
             modifier =modifier,
@@ -39,7 +46,7 @@ fun FAButton(
             shape =shape,
             containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.secondary,
-            content = content
+            content = { Icon(icon, description) }
 
         )
         FABType.LARGE -> LargeFloatingActionButton(
@@ -48,7 +55,7 @@ fun FAButton(
             shape = shape,
             containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.secondary,
-            content =content
+            content ={ Icon(icon, description) }
         )
 
         FABType.DESCRIPTION -> ExtendedFloatingActionButton(
@@ -57,7 +64,12 @@ fun FAButton(
             shape =shape,
             containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.secondary,
-        ) { Text(text = description) }
+            content = {
+                Icon(icon, description)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(text = description)
+            }
+        )
     }
 }
 
@@ -66,20 +78,21 @@ fun FAButton(
 private fun FAButtonSmallPreview() {
     FAButton(
         onClick = {},
-        fabType = FABType.SMALL
-    ) {
-        Icon(Icons.Default.Add, contentDescription = "Adicionar")
-    }
+        fabType = FABType.SMALL,
+        icon = Icons.Default.Add,
+        description = "Adicionar"
+    )
 }
 
 @Preview(name = "FAB Medium")
 @Composable
 private fun FAButtonMediumPreview() {
     FAButton(
-        onClick = {}
-    ) {
-        Icon(Icons.Default.Add, contentDescription = "Adicionar")
-    }
+        onClick = {},
+        fabType = FABType.MEDIUM,
+        icon = Icons.Default.Search,
+        description = "Pesquisar"
+    )
 }
 
 @Preview(name = "FAB Large")
@@ -87,10 +100,10 @@ private fun FAButtonMediumPreview() {
 private fun FAButtonLargePreview() {
     FAButton(
         onClick = {},
-        fabType = FABType.LARGE
-    ) {
-        Icon(Icons.Default.Add, contentDescription = "Adicionar")
-    }
+        fabType = FABType.LARGE,
+        icon = Icons.Default.Sensors,
+        description = "Sensor"
+    )
 }
 
 @Preview(name = "FAB Description")
@@ -99,8 +112,7 @@ private fun FAButtonDescriptionPreview() {
     FAButton(
         onClick = {},
         fabType = FABType.DESCRIPTION,
-        description = "Floating Button"
-    ) {
-        Icon(Icons.Default.Add, contentDescription = "Adicionar")
-    }
+        icon = Icons.Default.ShoppingCart,
+        description = "Carrinho"
+    )
 }
