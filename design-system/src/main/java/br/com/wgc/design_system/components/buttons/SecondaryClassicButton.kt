@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.buttons
+package br.com.wgc.design_system.components.buttons.secondarybutton
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,42 +11,44 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun SecondaryClassicButton(
-   modifier: Modifier = Modifier,
-   onClick: () -> Unit = {},
-   textButton: String = "Button"
-){
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {},
+    textButton: String = "Button",
+    isEnabled: Boolean = true
+) {
     OutlinedButton(
-        modifier = modifier.fillMaxWidth().heightIn(56.dp),
-        onClick = { onClick()},
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(56.dp),
+        onClick = { onClick() },
+        enabled = isEnabled,
         shape = RoundedCornerShape(15),
         colors = ButtonDefaults.elevatedButtonColors(
             containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f),
             contentColor = MaterialTheme.colorScheme.secondary,
-            disabledContainerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f),
-            disabledContentColor = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.5f)
+            disabledContainerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.12f),
+            disabledContentColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
         ),
         border = BorderStroke(
-            width = Dp(value = 2.0f),
-            color = MaterialTheme.colorScheme.primary
+            width = 1.5.dp,
+            color = if (isEnabled) MaterialTheme.colorScheme.primary
+            else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)
         )
-    ){
+    ) {
         Text(text = textButton, fontSize = 14.sp)
     }
 }
 
-@Preview(showBackground = true , name = "Only Component")
+@Preview(showBackground = true, name = "Only Component")
 @Composable
 private fun SecondaryClassicButtonPreview() = SecondaryClassicButton()
 
 
-@Preview(showSystemUi = true, showBackground = true , name = "Component and SystemUi")
+@Preview(showSystemUi = true, showBackground = true, name = "Component and SystemUi")
 @Composable
-private fun SecondaryClassicButtonPreview2() {
-    SecondaryClassicButton()
-}
+private fun SecondaryClassicButtonPreview2() = SecondaryClassicButton()
