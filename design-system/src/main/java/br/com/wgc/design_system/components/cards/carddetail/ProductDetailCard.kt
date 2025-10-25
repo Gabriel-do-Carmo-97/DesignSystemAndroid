@@ -29,7 +29,8 @@ import java.math.BigDecimal
 
 @Composable
 fun ProductDetailCard(
-    modifier: Modifier = Modifier, productDetailModel: ProductDetailModel, elevation: Dp = 4.dp
+    modifier: Modifier = Modifier,
+    productDetailModel: ProductDetailModel, elevation: Dp = 4.dp
 ) {
     var expanded by rememberSaveable { mutableStateOf(false) }
     Card(

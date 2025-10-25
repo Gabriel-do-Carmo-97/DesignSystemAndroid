@@ -1,10 +1,9 @@
-package br.com.wgc.ds_templates.screens.login
+package br.com.wgc.ds_templates.screens.login.state
 
 import br.com.wgc.design_system.R
 import br.com.wgc.design_system.components.providers_login.LoginProviderModel
 
 data class LoginScreenUiState(
-    // Dados do formulário
     val email: String = "",
     val password: String = "",
     val providers: List<LoginProviderModel> = listOf(
@@ -25,15 +24,19 @@ data class LoginScreenUiState(
         )
     ),
 
-    // Estado da UI
     val imageLogo: String = "",
     val imageLogoDescription: String = "",
 
     val isPasswordVisible: Boolean = false,
     val isLoading: Boolean = false,
 
-    // Estado de erros (podem ser nulos se não houver erro)
     val emailError: String? = null,
     val passwordError: String? = null,
     val generalError: String? = null,
-)
+){
+    val isLoginButtonEnabled: Boolean
+        get() = !isLoading && email.isNotBlank() &&
+                password.isNotBlank() && emailError == null &&
+                passwordError == null && generalError == null
+
+}

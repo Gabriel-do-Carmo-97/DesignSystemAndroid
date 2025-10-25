@@ -82,7 +82,7 @@ fun SimpleTextField(
                 )
             }
         },
-        label = { Text(text = label) },
+        label = { Text(text = label, fontSize = MaterialTheme.typography.labelSmall.fontSize) },
         maxLines = 1,
         singleLine = true,
         placeholder = { Text(text = placeholderText) },

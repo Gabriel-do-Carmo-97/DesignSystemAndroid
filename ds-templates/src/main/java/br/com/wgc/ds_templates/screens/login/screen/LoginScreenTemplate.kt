@@ -1,4 +1,4 @@
-package br.com.wgc.ds_templates.screens.login
+package br.com.wgc.ds_templates.screens.login.screen
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -27,12 +27,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.buttons.ClassicButton
-import br.com.wgc.design_system.components.buttons.SecondaryClassicButton
+import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 import br.com.wgc.design_system.components.providers_login.ProvidersLogin
-
+import br.com.wgc.ds_templates.screens.login.state.LoginScreenUiState
 
 @Composable
 fun LoginScreenTemplate(
@@ -99,8 +99,9 @@ fun LoginScreenTemplate(
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
                     modifier = Modifier.padding(top = 16.dp),
-                    textButton = "Login",
-                    onClick = onLoginClick
+                    onClick = onLoginClick,
+                    isEnabled = state.isLoginButtonEnabled,
+                    textButton = "Login"
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 SecondaryClassicButton(
