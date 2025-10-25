@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 
+
 abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
 
     protected val email = MutableStateFlow("")
