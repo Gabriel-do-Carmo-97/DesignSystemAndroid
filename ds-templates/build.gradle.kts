@@ -45,6 +45,7 @@ android {
         }
     }
     experimentalProperties["android.experimental.enableScreenshotTest"] = true
+
 }
 
 dependencies {
