@@ -26,6 +26,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
@@ -98,7 +99,9 @@ fun LoginScreenTemplate(
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
-                    modifier = Modifier.padding(top = 16.dp),
+                    modifier = Modifier
+                        .padding(top = 16.dp)
+                        .shimmerEffect(isLoading = state.isLoading),
                     onClick = onLoginClick,
                     isEnabled = state.isLoginButtonEnabled,
                     textButton = "Login"
@@ -106,7 +109,8 @@ fun LoginScreenTemplate(
                 Spacer(modifier = Modifier.height(8.dp))
                 SecondaryClassicButton(
                     textButton = "Não tem uma conta? Cadastrar-se",
-                    onClick = onRegisterClick
+                    onClick = onRegisterClick,
+                    isEnabled = !state.isLoading
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 if (state.providers.isNotEmpty()) {
@@ -117,7 +121,7 @@ fun LoginScreenTemplate(
                 }
                 Row(
                     modifier = Modifier
-                        .clickable { onForgotPasswordClick() }
+                        .clickable { if (!state.isLoading) return@clickable onForgotPasswordClick() }
                         .height(48.dp),
                     verticalAlignment = Alignment.CenterVertically
 

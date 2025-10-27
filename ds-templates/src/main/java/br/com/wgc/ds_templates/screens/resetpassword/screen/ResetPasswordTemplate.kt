@@ -24,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.ds_templates.screens.resetpassword.state.ResetPasswordScreenUiState
@@ -81,6 +82,7 @@ fun ResetPasswordScreenTemplate(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 ClassicButton(
+                    modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
                     onClick = onRegisterClick,
                     textButton = "Enviar"
                 )

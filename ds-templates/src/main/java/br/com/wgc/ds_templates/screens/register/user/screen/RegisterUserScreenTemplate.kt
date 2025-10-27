@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
@@ -171,12 +172,13 @@ fun RegisterUserScreenTemplate(
                 Spacer(modifier = Modifier.height(24.dp))
 
                 ClassicButton(
+                    modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
                     textButton = "Cadastrar",
                     onClick = onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled
                 )
 
-                TextButton(onClick = onLoginClick) {
+                TextButton(onClick = {if (!state.isLoading) return@TextButton onLoginClick()}) {
                     Text(
                         "Já tem uma conta? Faça login",
                         color = MaterialTheme.colorScheme.primary

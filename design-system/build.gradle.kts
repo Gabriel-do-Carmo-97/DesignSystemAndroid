@@ -5,7 +5,6 @@ plugins {
     id("maven-publish")
     alias(libs.plugins.screenshot)
     alias(libs.plugins.jetbrains.kotlin.serialization)
-
 }
 
 android {

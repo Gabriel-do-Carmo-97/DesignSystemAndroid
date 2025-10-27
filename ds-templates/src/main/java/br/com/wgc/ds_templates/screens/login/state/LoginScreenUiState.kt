@@ -30,12 +30,15 @@ data class LoginScreenUiState(
     val imageLogoDescription: String = "",
 
     val isPasswordVisible: Boolean = false,
+    val isLoading: Boolean = false,
 
     val emailError: String? = null,
     val passwordError: String? = null,
+    val generalError: String? = null,
 ){
     val isLoginButtonEnabled: Boolean
-        get() = email.isNotBlank() && password.isNotBlank()
-                && emailError == null && passwordError == null
+        get() = !isLoading && email.isNotBlank() &&
+                password.isNotBlank() && emailError == null &&
+                passwordError == null && generalError == null
 
 }
