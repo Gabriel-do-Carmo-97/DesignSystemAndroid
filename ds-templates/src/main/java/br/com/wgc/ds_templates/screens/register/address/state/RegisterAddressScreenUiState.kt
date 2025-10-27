@@ -1,7 +1,9 @@
 package br.com.wgc.ds_templates.screens.register.address.state
 
 import br.com.wgc.ds_templates.screens.register.address.model.Address
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class RegisterAddressScreenUiState(
     val address: Address = Address(),
     val cepError: String? = null,

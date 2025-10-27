@@ -1,5 +1,8 @@
 package br.com.wgc.ds_templates.screens.register.address.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Address(
     val cep: String = "",
     val street: String = "",

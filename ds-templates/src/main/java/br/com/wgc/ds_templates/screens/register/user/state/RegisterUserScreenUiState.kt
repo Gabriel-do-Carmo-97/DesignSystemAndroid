@@ -1,5 +1,8 @@
 package br.com.wgc.ds_templates.screens.register.user.state
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class RegisterUserScreenUiState(
     val name: String = "",
     val nameError: String? = null,

@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("maven-publish")
     alias(libs.plugins.screenshot)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
+
 }
 
 android {
@@ -62,6 +64,9 @@ dependencies {
     implementation(libs.coil.network.okhttp)
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
+    implementation(libs.kotlinx.serialization.core)
+
+
     androidTestImplementation( libs.mockk.android)
 
     androidTestImplementation(libs.androidx.junit)

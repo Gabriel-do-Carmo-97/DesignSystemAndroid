@@ -17,7 +17,6 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     val onEmailChange: (String) -> Unit = { email.value = it }
     val password = MutableStateFlow("")
     val onPasswordChange: (String) -> Unit = { password.value = it }
-    private val _isLoading = MutableStateFlow(false)
 
     private val emailError = combine(email) { (email) ->
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) "E-mail inválido"
@@ -37,14 +36,12 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     val uiState: StateFlow<LoginScreenUiState> = combine(
         email,
         password,
-        _isLoading,
         emailError,
         passwordError
-    ) { email, password, isLoading, emailError, passwordError ->
+    ) { email, password, emailError, passwordError ->
         LoginScreenUiState(
             email = email,
             password = password,
-            isLoading = isLoading,
             emailError = emailError,
             passwordError = passwordError
         )
@@ -54,7 +51,7 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
         initialValue = LoginScreenUiState(),
     )
 
-    abstract fun<T: Any> onLoginClick(): T
+    abstract fun onLoginClick()
     abstract fun onRegisterClick()
     abstract fun onForgotPasswordClick()
 }

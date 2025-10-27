@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.register.car.state
 
+import kotlinx.serialization.Serializable
+
 /**
  * Representa o estado da UI para a tela de cadastro de um novo veículo.
  * A tela é genérica e se adapta para coletar informações extras se o veículo for um Food Truck.
@@ -35,6 +37,8 @@ package br.com.wgc.ds_templates.screens.register.car.state
  *
  * @property isLoading Controla a exibição de indicadores de progresso durante operações de rede.
  */
+
+@Serializable
 data class RegisterCarScreenUiState(
     // --- Dados do Veículo (Genérico) ---
     val brand: String = "",

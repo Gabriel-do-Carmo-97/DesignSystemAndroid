@@ -2,7 +2,9 @@ package br.com.wgc.ds_templates.screens.login.state
 
 import br.com.wgc.design_system.R
 import br.com.wgc.design_system.components.providers_login.LoginProviderModel
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class LoginScreenUiState(
     val email: String = "",
     val password: String = "",
@@ -28,15 +30,12 @@ data class LoginScreenUiState(
     val imageLogoDescription: String = "",
 
     val isPasswordVisible: Boolean = false,
-    val isLoading: Boolean = false,
 
     val emailError: String? = null,
     val passwordError: String? = null,
-    val generalError: String? = null,
 ){
     val isLoginButtonEnabled: Boolean
-        get() = !isLoading && email.isNotBlank() &&
-                password.isNotBlank() && emailError == null &&
-                passwordError == null && generalError == null
+        get() = email.isNotBlank() && password.isNotBlank()
+                && emailError == null && passwordError == null
 
 }
