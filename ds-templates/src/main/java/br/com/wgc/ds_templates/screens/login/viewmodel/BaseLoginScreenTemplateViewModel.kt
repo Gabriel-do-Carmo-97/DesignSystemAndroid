@@ -21,6 +21,7 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     private val emailError = combine(email) { (email) ->
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) "E-mail inválido"
         else if (email.length < 5) "O e-mail deve ter pelo menos 5 caracteres"
+        else if (email.length > 50) "O e-mail deve ter no máximo 50 caracteres"
         else null
     }
 

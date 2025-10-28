@@ -28,7 +28,7 @@ data class LoginScreenUiState(
 
     val imageLogo: String = "",
     val imageLogoDescription: String = "",
-
+    val isChecked: Boolean = false,
     val isPasswordVisible: Boolean = false,
     val isLoading: Boolean = false,
 
@@ -40,5 +40,10 @@ data class LoginScreenUiState(
         get() = !isLoading && email.isNotBlank() &&
                 password.isNotBlank() && emailError == null &&
                 passwordError == null && generalError == null
+
+    fun showLoading(): LoginScreenUiState = copy(isLoading = true , emailError = null, passwordError = null, generalError = null)
+    fun hideLoading(): LoginScreenUiState = copy(isLoading = false)
+
+
 
 }

@@ -43,6 +43,7 @@ fun LoginScreenTemplate(
     onPasswordChange: (String) -> Unit = {},
     onLoginClick: () -> Unit = {},
     onRegisterClick: () -> Unit = {},
+    onCheckBoxChange: (Boolean) -> Unit = {},
     onForgotPasswordClick: () -> Unit = {},
     onTogglePasswordVisibility: () -> Unit = {},
 ) {
@@ -96,6 +97,10 @@ fun LoginScreenTemplate(
                 CheckboxDefaults(
                     label = "Lembrar de mim",
                     isEnabled = !state.isLoading,
+                    checked = state.isChecked,
+                    onCheckedChange = {
+                        onCheckBoxChange(it)
+                    }
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
