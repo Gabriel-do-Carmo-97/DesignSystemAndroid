@@ -1,5 +1,6 @@
 package br.com.wgc.ds_templates.screens.login.screen
 
+import android.content.res.Configuration
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -98,9 +99,7 @@ fun LoginScreenTemplate(
                     label = "Lembrar de mim",
                     isEnabled = !state.isLoading,
                     checked = state.isChecked,
-                    onCheckedChange = {
-                        onCheckBoxChange(it)
-                    }
+                    onCheckedChange = onCheckBoxChange
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
@@ -151,11 +150,18 @@ fun LoginScreenTemplate(
 }
 
 
-@Preview(showBackground = true, name = "Only Component")
+@Preview(showBackground = true, name = "Light Theme" ,uiMode = Configuration.UI_MODE_NIGHT_NO)
 @Composable
 private fun LoginScreenTemplatePreview() = LoginScreenTemplate()
 
 
-@Preview(showSystemUi = true, showBackground = true, name = "Component and SystemUi")
+@Preview(showBackground = true, name = "Night Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 private fun LoginScreenTemplatePreview2() = LoginScreenTemplate()
+
+
+@Preview(showBackground = true, name = "Loading")
+@Composable
+private fun LoginScreenTemplatePreview3() = LoginScreenTemplate(
+    state = LoginScreenUiState().showLoading()
+)

@@ -43,6 +43,11 @@ data class LoginScreenUiState(
 
     fun showLoading(): LoginScreenUiState = copy(isLoading = true , emailError = null, passwordError = null, generalError = null)
     fun hideLoading(): LoginScreenUiState = copy(isLoading = false)
+    fun showEmailError(error: String): LoginScreenUiState = copy(emailError = error)
+    fun showPasswordError(error: String): LoginScreenUiState = copy(passwordError = error)
+    fun showGeneralError(error: String): LoginScreenUiState = copy(generalError = error)
+    fun showProviders(providers: List<LoginProviderModel>): LoginScreenUiState = copy(providers = providers)
+
 
 
 
