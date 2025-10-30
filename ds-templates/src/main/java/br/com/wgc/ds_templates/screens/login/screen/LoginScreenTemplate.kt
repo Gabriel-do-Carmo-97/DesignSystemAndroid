@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Password
@@ -32,7 +31,6 @@ import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
-import br.com.wgc.design_system.components.images.AsyncImageDefault
 import br.com.wgc.design_system.components.providers_login.ProvidersLogin
 import br.com.wgc.ds_templates.screens.login.state.LoginScreenUiState
 
@@ -60,10 +58,11 @@ fun LoginScreenTemplate(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                AsyncImageDefault(
-                    modifier = Modifier.size(64.dp),
-                    image = state.imageLogo,
-                    contentDescription = state.imageLogoDescription,
+                Text(
+                    text = "Login",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 32.sp,
+                    color = MaterialTheme.colorScheme.primary,
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 SimpleTextField(
@@ -98,7 +97,7 @@ fun LoginScreenTemplate(
                 CheckboxDefaults(
                     label = "Lembrar de mim",
                     isEnabled = !state.isLoading,
-                    checked = state.isChecked,
+                    checked = state.rememberMeChecked,
                     onCheckedChange = onCheckBoxChange
                 )
                 Spacer(modifier = Modifier.height(32.dp))
@@ -150,7 +149,7 @@ fun LoginScreenTemplate(
 }
 
 
-@Preview(showBackground = true, name = "Light Theme" ,uiMode = Configuration.UI_MODE_NIGHT_NO)
+@Preview(showBackground = true, name = "Light Theme", uiMode = Configuration.UI_MODE_NIGHT_NO)
 @Composable
 private fun LoginScreenTemplatePreview() = LoginScreenTemplate()
 

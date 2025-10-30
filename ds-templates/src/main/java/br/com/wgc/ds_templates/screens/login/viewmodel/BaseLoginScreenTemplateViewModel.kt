@@ -54,6 +54,17 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
         _uiState.update { it.copy(isPasswordVisible = !it.isPasswordVisible) }
     }
 
+    /**
+     * Função chamada pela UI para atualizar o estado do checkbox "Lembrar-me".
+     * @param isChecked O novo estado do checkbox, fornecido diretamente pelo Composable.
+     */
+    fun onRememberMeCheckedChange(isChecked: Boolean) {
+        _uiState.update { currentState ->
+            // Correção: O campo correto é 'rememberMeChecked'
+            currentState.copy(rememberMeChecked = isChecked)
+        }
+    }
+
     private fun validateEmail(email: String): String? {
         return when {
             email.isBlank() -> "O e-mail é obrigatório"

@@ -25,10 +25,7 @@ data class LoginScreenUiState(
             onClick = {}
         )
     ),
-
-    val imageLogo: String = "",
-    val imageLogoDescription: String = "",
-    val isChecked: Boolean = false,
+    val rememberMeChecked: Boolean = false,
     val isPasswordVisible: Boolean = false,
     val isLoading: Boolean = false,
 
