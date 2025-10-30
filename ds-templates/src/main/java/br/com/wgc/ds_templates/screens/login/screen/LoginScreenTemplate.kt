@@ -19,6 +19,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -32,20 +34,15 @@ import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClas
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.providers_login.ProvidersLogin
-import br.com.wgc.ds_templates.screens.login.state.LoginScreenUiState
+import br.com.wgc.ds_templates.screens.login.viewmodel.BaseLoginScreenTemplateViewModel
+import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 
 @Composable
 fun LoginScreenTemplate(
     modifier: Modifier = Modifier,
-    state: LoginScreenUiState = LoginScreenUiState(),
-    onEmailChange: (String) -> Unit = {},
-    onPasswordChange: (String) -> Unit = {},
-    onLoginClick: () -> Unit = {},
-    onRegisterClick: () -> Unit = {},
-    onCheckBoxChange: (Boolean) -> Unit = {},
-    onForgotPasswordClick: () -> Unit = {},
-    onTogglePasswordVisibility: () -> Unit = {},
+    viewModel: BaseLoginScreenTemplateViewModel
 ) {
+    val state by viewModel.uiState.collectAsState()
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -68,7 +65,7 @@ fun LoginScreenTemplate(
                 SimpleTextField(
                     modifier = Modifier,
                     value = state.email,
-                    onValueChange = onEmailChange,
+                    onValueChange = viewModel.onEmailChange,
                     isEnabled = !state.isLoading,
                     label = "Email :",
                     placeholderText = "Digite seu E-mail:",
@@ -81,13 +78,13 @@ fun LoginScreenTemplate(
                 SimpleTextField(
                     modifier = Modifier,
                     value = state.password,
-                    onValueChange = onPasswordChange,
+                    onValueChange = viewModel.onPasswordChange,
                     isEnabled = !state.isLoading,
                     label = "Senha :",
                     placeholderText = "Digite sua senha:",
                     leadingIcon = Icons.Default.Password,
                     trailingIcon = if (state.isPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                    onTrailingIconClick = onTogglePasswordVisibility,
+                    onTrailingIconClick = viewModel.onTogglePasswordVisibility,
                     isError = state.passwordError != null,
                     errorMessage = state.passwordError.orEmpty(),
                     keyboardType = KeyboardType.Password,
@@ -98,21 +95,21 @@ fun LoginScreenTemplate(
                     label = "Lembrar de mim",
                     isEnabled = !state.isLoading,
                     checked = state.rememberMeChecked,
-                    onCheckedChange = onCheckBoxChange
+                    onCheckedChange = viewModel::onRememberMeCheckedChange
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
                     modifier = Modifier
                         .padding(top = 16.dp)
                         .shimmerEffect(isLoading = state.isLoading),
-                    onClick = onLoginClick,
+                    onClick = viewModel::onLoginClick,
                     isEnabled = state.isLoginButtonEnabled,
                     textButton = "Login"
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 SecondaryClassicButton(
                     textButton = "Não tem uma conta? Cadastrar-se",
-                    onClick = onRegisterClick,
+                    onClick = viewModel::onRegisterClick,
                     isEnabled = !state.isLoading
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -124,7 +121,7 @@ fun LoginScreenTemplate(
                 }
                 Row(
                     modifier = Modifier
-                        .clickable { if (!state.isLoading) return@clickable onForgotPasswordClick() }
+                        .clickable { if (!state.isLoading) return@clickable viewModel.onForgotPasswordClick() }
                         .height(48.dp),
                     verticalAlignment = Alignment.CenterVertically
 
@@ -151,9 +148,10 @@ fun LoginScreenTemplate(
 
 @Preview(showBackground = true, name = "Light Theme", uiMode = Configuration.UI_MODE_NIGHT_NO)
 @Composable
-private fun LoginScreenTemplatePreview() = LoginScreenTemplate()
+private fun LoginScreenTemplatePreview() = LoginScreenTemplate(viewModel = FakeLoginViewModel())
+
 
 
 @Preview(showBackground = true, name = "Night Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-private fun LoginScreenTemplatePreview2() = LoginScreenTemplate()
+private fun LoginScreenTemplatePreview2() = LoginScreenTemplate(viewModel = FakeLoginViewModel())

@@ -26,6 +26,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
@@ -33,9 +35,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
-
-import br.com.wgc.ds_templates.screens.register.address.model.Address
-import br.com.wgc.ds_templates.screens.register.address.state.RegisterAddressScreenUiState
+import br.com.wgc.ds_templates.screens.register.address.viewmodel.BaseRegisterAddressScreenTemplateViewModel
+import br.com.wgc.ds_templates.screens.register.address.viewmodel.FakeRegisterAddressVIewModel
 
 
 /**
@@ -53,11 +54,9 @@ import br.com.wgc.ds_templates.screens.register.address.state.RegisterAddressScr
 @Composable
 fun RegisterAddressScreenTemplate(
     modifier: Modifier = Modifier,
-    state: RegisterAddressScreenUiState = RegisterAddressScreenUiState(),
-    onAddressChange: (Address) -> Unit = {},
-    onRegisterClick: () -> Unit = {},
-    onBackClick: () -> Unit = {},
+    viewModel: BaseRegisterAddressScreenTemplateViewModel
 ) {
+    val state by viewModel.uiState.collectAsState()
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -65,7 +64,7 @@ fun RegisterAddressScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = onBackClick) {
+                    IconButton(onClick = viewModel::onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar")
                     }
                 }
@@ -94,9 +93,7 @@ fun RegisterAddressScreenTemplate(
 
                 SimpleTextField(
                     value = state.address.cep,
-                    onValueChange = { newCep ->
-                        onAddressChange(state.address.copy(cep = newCep))
-                    },
+                    onValueChange = viewModel.onCepChange,
                     label = "CEP:",
                     placeholderText = "00000-000",
                     leadingIcon = Icons.Default.Map,
@@ -107,9 +104,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.street,
-                    onValueChange = { newStreet ->
-                        onAddressChange(state.address.copy(street = newStreet))
-                    },
+                    onValueChange = viewModel.onStreetChange,
                     label = "Rua / Logradouro:",
                     placeholderText = "Ex: Av. Paulista",
                     leadingIcon = Icons.Default.Signpost,
@@ -119,9 +114,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.number,
-                    onValueChange = { newNumber ->
-                        onAddressChange(state.address.copy(number = newNumber))
-                    },
+                    onValueChange = viewModel.onNumberChange,
                     label = "Número:",
                     placeholderText = "Ex: 100",
                     leadingIcon = Icons.Default.ConfirmationNumber,
@@ -132,9 +125,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.complement.orEmpty(),
-                    onValueChange = { newComplement ->
-                        onAddressChange(state.address.copy(complement = newComplement))
-                    },
+                    onValueChange = viewModel.onComplementChange,
                     label = "Complemento (Opcional):",
                     placeholderText = "Ex: Apto 10, Bloco 2",
                     leadingIcon = Icons.Default.Business,
@@ -144,9 +135,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.referencePoint.orEmpty(),
-                    onValueChange = { newReference ->
-                        onAddressChange(state.address.copy(referencePoint = newReference))
-                    },
+                    onValueChange = viewModel.onReferencePointChange,
                     label = "Ponto de Referência:",
                     placeholderText = "Ex: Em frente à estação de metrô",
                     leadingIcon = Icons.Default.LocationOn,
@@ -156,9 +145,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.neighborhood,
-                    onValueChange = { newNeighborhood ->
-                        onAddressChange(state.address.copy(neighborhood = newNeighborhood))
-                    },
+                    onValueChange = viewModel.onNeighborhoodChange,
                     label = "Bairro:",
                     placeholderText = "Ex: Bela Vista",
                     leadingIcon = Icons.Default.LocationOn,
@@ -168,9 +155,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.city,
-                    onValueChange = { newCity ->
-                        onAddressChange(state.address.copy(city = newCity))
-                    },
+                    onValueChange = viewModel.onCityChange,
                     label = "Cidade:",
                     placeholderText = "Ex: São Paulo",
                     leadingIcon = Icons.Default.LocationCity,
@@ -182,7 +167,7 @@ fun RegisterAddressScreenTemplate(
                 //LOADING NO BOTAO
                 ClassicButton(
                     textButton = "Salvar",
-                    onClick = onRegisterClick,
+                    onClick = viewModel::onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled,
                 )
             }
@@ -194,7 +179,7 @@ fun RegisterAddressScreenTemplate(
 @Composable
 private fun RegisterAddressScreenTemplatePreview() {
     MaterialTheme {
-        RegisterAddressScreenTemplate()
+        RegisterAddressScreenTemplate(viewModel = FakeRegisterAddressVIewModel())
     }
 }
 
@@ -202,15 +187,6 @@ private fun RegisterAddressScreenTemplatePreview() {
 @Composable
 private fun RegisterAddressScreenTemplateWithErrorPreview() {
     MaterialTheme {
-        RegisterAddressScreenTemplate(
-            state = RegisterAddressScreenUiState(
-                address = Address(
-                    cep = "12345-678",
-                    street = "Rua Teste"
-                ),
-                streetError = "Campo inválido",
-                cepError = "CEP não encontrado"
-            )
-        )
+        RegisterAddressScreenTemplate(viewModel = FakeRegisterAddressVIewModel())
     }
 }
