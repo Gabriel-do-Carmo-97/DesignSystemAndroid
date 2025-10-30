@@ -10,7 +10,6 @@ plugins {
 android {
     namespace = "br.com.wgc.design_system"
     compileSdk = 36
-
     defaultConfig {
         minSdk = 29
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
