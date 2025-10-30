@@ -158,10 +158,3 @@ private fun LoginScreenTemplatePreview() = LoginScreenTemplate()
 @Preview(showBackground = true, name = "Night Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 private fun LoginScreenTemplatePreview2() = LoginScreenTemplate()
-
-
-@Preview(showBackground = true, name = "Loading")
-@Composable
-private fun LoginScreenTemplatePreview3() = LoginScreenTemplate(
-    state = LoginScreenUiState().showLoading()
-)
