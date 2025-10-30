@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.screenshot)
     alias(libs.plugins.jetbrains.kotlin.serialization)
 }
-
 android {
     namespace = "br.com.wgc.design_system"
     compileSdk = 36
