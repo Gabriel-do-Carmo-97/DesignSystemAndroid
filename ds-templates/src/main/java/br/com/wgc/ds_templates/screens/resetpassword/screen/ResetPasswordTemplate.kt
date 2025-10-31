@@ -18,6 +18,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -27,17 +29,18 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
-import br.com.wgc.ds_templates.screens.resetpassword.state.ResetPasswordScreenUiState
+import br.com.wgc.ds_templates.screens.resetpassword.viewmodel.BaseResetPasswordScreenTemplateViewModel
+import br.com.wgc.ds_templates.screens.resetpassword.viewmodel.FakeResetPasswordViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ResetPasswordScreenTemplate(
     modifier: Modifier = Modifier,
-    state: ResetPasswordScreenUiState = ResetPasswordScreenUiState(),
-    onEmailChange: (String) -> Unit = {},
-    onRegisterClick: () -> Unit = {},
-    onBackClick: () -> Unit = {},
+    viewModel: BaseResetPasswordScreenTemplateViewModel,
 ) {
+    val state by viewModel.uiState.collectAsState()
+
+
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -45,7 +48,7 @@ fun ResetPasswordScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = onBackClick) {
+                    IconButton(onClick = viewModel::onBackToLoginClick) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar"
@@ -72,7 +75,7 @@ fun ResetPasswordScreenTemplate(
                 Spacer(modifier = Modifier.height(32.dp))
                 SimpleTextField(
                     value = state.email,
-                    onValueChange = onEmailChange,
+                    onValueChange = viewModel.onEmailChange,
                     label = "Email",
                     placeholderText = "Digite seu email:",
                     leadingIcon = Icons.Default.Email,
@@ -83,7 +86,7 @@ fun ResetPasswordScreenTemplate(
                 Spacer(modifier = Modifier.height(16.dp))
                 ClassicButton(
                     modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
-                    onClick = onRegisterClick,
+                    onClick = viewModel::onResetPasswordClick,
                     textButton = "Enviar"
                 )
             }
@@ -95,4 +98,6 @@ fun ResetPasswordScreenTemplate(
 
 @Preview
 @Composable
-private fun ResetPasswordScreenTemplatePreview() = ResetPasswordScreenTemplate()
+private fun ResetPasswordScreenTemplatePreview() = ResetPasswordScreenTemplate(
+    viewModel = FakeResetPasswordViewModel()
+)

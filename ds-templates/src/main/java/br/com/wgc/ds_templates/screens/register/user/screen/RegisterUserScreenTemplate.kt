@@ -24,6 +24,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
@@ -33,7 +35,8 @@ import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
-import br.com.wgc.ds_templates.screens.register.user.state.RegisterUserScreenUiState
+import br.com.wgc.ds_templates.screens.register.user.viewmodel.BaseRegisterUserTemplateViewModel
+import br.com.wgc.ds_templates.screens.register.user.viewmodel.FakeUserViewModel
 
 /**
  * Template de UI para a tela de cadastro de um novo usuário (cliente).
@@ -54,22 +57,11 @@ import br.com.wgc.ds_templates.screens.register.user.state.RegisterUserScreenUiS
 @Composable
 fun RegisterUserScreenTemplate(
     modifier: Modifier = Modifier,
-    state: RegisterUserScreenUiState = RegisterUserScreenUiState(),
-
-    onNameChange: (String) -> Unit = {},
-    onLastNameChange: (String) -> Unit = {},
-    onEmailChange: (String) -> Unit = {},
-    onPhoneChange: (String) -> Unit = {},
-    onPasswordChange: (String) -> Unit = {},
-    onConfirmPasswordChange: (String) -> Unit = {},
-
-    onAcceptTermsToggle: (Boolean) -> Unit = {},
-    onRegisterClick: () -> Unit = {},
-
-    // --- Ações de Navegação ---
-    onBackClick: () -> Unit = {},
-    onLoginClick: () -> Unit = {},
+    viewModel: BaseRegisterUserTemplateViewModel
 ) {
+    val state by viewModel.uiState.collectAsState()
+
+
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -77,7 +69,7 @@ fun RegisterUserScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = onBackClick) {
+                    IconButton(onClick = viewModel::onBackClick) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar"
@@ -104,7 +96,7 @@ fun RegisterUserScreenTemplate(
 
                 SimpleTextField(
                     value = state.name,
-                    onValueChange = onNameChange,
+                    onValueChange = viewModel.onNameChange,
                     label = "Nome :",
                     placeholderText = "Digite seu nome:",
                     leadingIcon = Icons.Default.Person,
@@ -114,7 +106,7 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.lastName,
-                    onValueChange = onLastNameChange,
+                    onValueChange = viewModel.onLastNameChange,
                     label = "Sobrenome :",
                     leadingIcon = Icons.Default.Person,
                     placeholderText = "Digite o sobrenome:",
@@ -124,7 +116,7 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.email,
-                    onValueChange = onEmailChange,
+                    onValueChange = viewModel.onEmailChange,
                     label = "Email :",
                     placeholderText = "Digite seu email ",
                     leadingIcon = Icons.Default.Email,
@@ -134,7 +126,7 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.phone,
-                    onValueChange = onPhoneChange,
+                    onValueChange = viewModel.onPhoneChange,
                     label = "Telefone :",
                     placeholderText = "Digite seu telefone",
                     leadingIcon = Icons.Default.Phone,
@@ -144,7 +136,7 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.password,
-                    onValueChange = onPasswordChange,
+                    onValueChange = viewModel.onPasswordChange,
                     label = "Senha :",
                     placeholderText = "Digite sua senha",
                     leadingIcon = Icons.Default.Password,
@@ -155,7 +147,7 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.confirmPassword,
-                    onValueChange = onConfirmPasswordChange,
+                    onValueChange = viewModel.onConfirmPasswordChange,
                     label = "Confirmar Senha :",
                     placeholderText = "Confirme sua senha",
                     leadingIcon = Icons.Default.Password,
@@ -167,18 +159,18 @@ fun RegisterUserScreenTemplate(
                 CheckboxDefaults(
                     label = "Aceito os termos e condições",
                     checked = state.acceptedTerms,
-                    onCheckedChange = onAcceptTermsToggle
+                    onCheckedChange = viewModel.onAcceptedTermsChange
                 )
                 Spacer(modifier = Modifier.height(24.dp))
 
                 ClassicButton(
                     modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
                     textButton = "Cadastrar",
-                    onClick = onRegisterClick,
+                    onClick = viewModel::onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled
                 )
 
-                TextButton(onClick = {if (!state.isLoading) return@TextButton onLoginClick()}) {
+                TextButton(onClick = { if (!state.isLoading) return@TextButton viewModel.onLoginClick() }) {
                     Text(
                         "Já tem uma conta? Faça login",
                         color = MaterialTheme.colorScheme.primary
@@ -192,5 +184,5 @@ fun RegisterUserScreenTemplate(
 @Preview
 @Composable
 private fun RegisterUserScreenTemplatePReview() {
-    RegisterUserScreenTemplate()
+    RegisterUserScreenTemplate(viewModel = FakeUserViewModel())
 }

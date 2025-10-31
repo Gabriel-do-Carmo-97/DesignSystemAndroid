@@ -21,6 +21,7 @@ abstract class BaseRegisterUserTemplateViewModel: ViewModel() {
     abstract fun onRegisterClick()
     abstract fun onLoginClick()
     abstract fun onTermsClick()
+    abstract fun onBackClick()
 
 
     /** Atualiza o nome e executa a validação. */

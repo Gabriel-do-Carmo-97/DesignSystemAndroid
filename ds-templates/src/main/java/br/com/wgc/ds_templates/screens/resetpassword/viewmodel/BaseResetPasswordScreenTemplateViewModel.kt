@@ -32,8 +32,6 @@ abstract class BaseResetPasswordScreenTemplateViewModel : ViewModel() {
      */
     abstract fun onBackToLoginClick()
 
-
-
     /**
      * Atualiza o e-mail no estado e executa a validação em tempo real.
      */
