@@ -7,19 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.components.sections.category.SectionCategories
-import br.com.wgc.design_system.components.sections.category.SectionCategoryModel
-import br.com.wgc.design_system.components.sections.product.SectionCards
-import br.com.wgc.design_system.components.sections.product.SectionCardsModel
-import br.com.wgc.design_system.components.sections.type.ItemSectionCategory
-import br.com.wgc.design_system.components.sections.type.ItemSectionType
-import br.com.wgc.design_system.mock.MockData
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
+import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
+import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,50 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun App(modifier: Modifier = Modifier) {
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
-    ) {
-
-        item {
-            SectionCategories(
-                sectionModel = SectionCategoryModel(
-                    title = "Categorias",
-                    items = MockData.listItemSectionCircleCategoryModel,
-                    itemType = ItemSectionCategory.CIRCLE
-                )
-            )
-        }
-
-        item {
-            SectionCategories(
-                sectionModel = SectionCategoryModel(
-                    title = "Categorias",
-                    items = MockData.listItemSectionCircleCategoryModel,
-                    itemType = ItemSectionCategory.HORIZONTAL
-                )
-            )
-        }
-        item {
-            SectionCards(
-                sectionModel = SectionCardsModel(
-                    title = "Promocoes",
-                    items = MockData.listItemSectionCardModel,
-                    itemType = ItemSectionType.DEFAULT
-                )
-            )
-        }
-
-        item {
-            SectionCards(
-                sectionModel = SectionCardsModel(
-                    title = "Comidas",
-                    items = MockData.listItemSectionCardModel,
-                    itemType = ItemSectionType.HORIZONTAL
-                )
-            )
-        }
-    }
-
+    LoginScreenTemplate(viewModel = FakeLoginViewModel())
 }
 
 @Preview(showBackground = true)
