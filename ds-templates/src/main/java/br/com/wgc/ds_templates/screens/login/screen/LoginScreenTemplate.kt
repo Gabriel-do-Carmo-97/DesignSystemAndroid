@@ -70,7 +70,7 @@ fun LoginScreenTemplate(
 ) {
     val state by viewModel.uiState.collectAsState()
 
-    LoginScreenTemplateStateless(
+    LoginScreenTemplate(
         modifier = modifier,
         state = state,
         onEmailChange = viewModel::onEmailChange,
@@ -85,7 +85,7 @@ fun LoginScreenTemplate(
 
 
 @Composable
-fun LoginScreenTemplateStateless(
+fun LoginScreenTemplate(
     modifier: Modifier = Modifier,
     state: LoginScreenUiState,
     onEmailChange: (String) -> Unit,
@@ -201,7 +201,7 @@ fun LoginScreenTemplateStateless(
 @Preview(showBackground = true, name = "Stateless Light Theme")
 @Composable
 private fun LoginScreenTemplateStatelessPreview() {
-    LoginScreenTemplateStateless(
+    LoginScreenTemplate(
         state = LoginScreenUiState( // Crie um estado de exemplo
             email = "preview@email.com",
             password = "123",
@@ -219,7 +219,7 @@ private fun LoginScreenTemplateStatelessPreview() {
 @Preview(showBackground = true, name = "Stateless Loading")
 @Composable
 private fun LoginScreenTemplateStatelessLoadingPreview() {
-    LoginScreenTemplateStateless(
+    LoginScreenTemplate(
         state = LoginScreenUiState(
             isLoading = true, // Exemplo com loading
             email = "preview@email.com"
