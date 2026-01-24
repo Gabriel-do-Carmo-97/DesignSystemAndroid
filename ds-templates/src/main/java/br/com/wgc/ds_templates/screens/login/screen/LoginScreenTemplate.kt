@@ -1,6 +1,5 @@
 package br.com.wgc.ds_templates.screens.login.screen
 
-import android.content.res.Configuration
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -36,15 +35,67 @@ import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClas
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.providers_login.ProvidersLogin
+import br.com.wgc.ds_templates.screens.login.state.LoginScreenUiState
 import br.com.wgc.ds_templates.screens.login.viewmodel.BaseLoginScreenTemplateViewModel
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 
+/**
+ * Versão Stateless e pura do template de login.
+ *
+ * Este componente não tem conhecimento sobre ViewModels ou qualquer outra fonte de dados.
+ * Ele é totalmente controlado de fora, recebendo o estado (`state`) e os callbacks de eventos.
+ * Isso o torna altamente reutilizável, testável e alinhado com as melhores práticas do Jetpack Compose.
+ *
+ * @param state O objeto de estado que contém todos os dados necessários para renderizar a UI.
+ * @param onEmailChange Callback invocado quando o valor do campo de e-mail muda.
+ * @param onPasswordChange Callback invocado quando o valor do campo de senha muda.
+ * @param onTogglePasswordVisibility Callback para alternar a visibilidade da senha.
+ * @param onRememberMeCheckedChange Callback para alterar o estado do checkbox "Lembrar de mim".
+ * @param onLoginClick Callback invocado quando o botão de login é clicado.
+ * @param onRegisterClick Callback invocado quando o botão de registro é clicado.
+ * @param onForgotPasswordClick Callback invocado quando o link "Esqueceu a senha" é clicado.
+ */
+
+/**
+ * Versão "Stateful" ou "ViewModel-Driven" do template.
+ *
+ * Esta função atua como um conector (ou "collector"). Ela coleta o estado
+ * do ViewModel e o passa, junto com os callbacks, para a versão Stateless
+ * do template, que é responsável pela renderização da UI.
+ */
 @Composable
 fun LoginScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseLoginScreenTemplateViewModel
 ) {
     val state by viewModel.uiState.collectAsState()
+
+    LoginScreenTemplateStateless(
+        modifier = modifier,
+        state = state,
+        onEmailChange = viewModel::onEmailChange,
+        onPasswordChange = viewModel::onPasswordChange,
+        onTogglePasswordVisibility = viewModel::onTogglePasswordVisibility,
+        onRememberMeCheckedChange = viewModel::onRememberMeCheckedChange,
+        onLoginClick = viewModel::onLoginClick,
+        onRegisterClick = viewModel::onRegisterClick,
+        onForgotPasswordClick = viewModel::onForgotPasswordClick
+    )
+}
+
+
+@Composable
+fun LoginScreenTemplateStateless(
+    modifier: Modifier = Modifier,
+    state: LoginScreenUiState,
+    onEmailChange: (String) -> Unit,
+    onPasswordChange: (String) -> Unit,
+    onTogglePasswordVisibility: () -> Unit,
+    onRememberMeCheckedChange: (Boolean) -> Unit,
+    onLoginClick: () -> Unit,
+    onRegisterClick: () -> Unit,
+    onForgotPasswordClick: () -> Unit
+) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -68,7 +119,7 @@ fun LoginScreenTemplate(
                 SimpleTextField(
                     modifier = Modifier,
                     value = state.email,
-                    onValueChange = viewModel.onEmailChange,
+                    onValueChange = onEmailChange, // <-- MUDOU
                     isEnabled = !state.isLoading,
                     label = "Email :",
                     placeholderText = "Digite seu E-mail:",
@@ -81,13 +132,13 @@ fun LoginScreenTemplate(
                 SimpleTextField(
                     modifier = Modifier,
                     value = state.password,
-                    onValueChange = viewModel.onPasswordChange,
+                    onValueChange = onPasswordChange, // <-- MUDOU
                     isEnabled = !state.isLoading,
                     label = "Senha :",
                     placeholderText = "Digite sua senha:",
                     leadingIcon = Icons.Default.Password,
                     trailingIcon = if (state.isPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                    onTrailingIconClick = viewModel.onTogglePasswordVisibility,
+                    onTrailingIconClick = onTogglePasswordVisibility, // <-- MUDOU
                     isError = state.passwordError != null,
                     errorMessage = state.passwordError.orEmpty(),
                     keyboardType = KeyboardType.Password,
@@ -98,21 +149,21 @@ fun LoginScreenTemplate(
                     label = "Lembrar de mim",
                     isEnabled = !state.isLoading,
                     checked = state.rememberMeChecked,
-                    onCheckedChange = viewModel::onRememberMeCheckedChange
+                    onCheckedChange = onRememberMeCheckedChange // <-- MUDOU
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
                     modifier = Modifier
                         .padding(top = 16.dp)
                         .shimmerEffect(isLoading = state.isLoading),
-                    onClick = viewModel::onLoginClick,
+                    onClick = onLoginClick, // <-- MUDOU
                     isEnabled = state.isLoginButtonEnabled,
                     textButton = "Login"
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 SecondaryClassicButton(
                     textButton = "Não tem uma conta? Cadastrar-se",
-                    onClick = viewModel::onRegisterClick,
+                    onClick = onRegisterClick, // <-- MUDOU
                     isEnabled = !state.isLoading
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -124,7 +175,7 @@ fun LoginScreenTemplate(
                 }
                 Row(
                     modifier = Modifier
-                        .clickable { if (!state.isLoading) return@clickable viewModel.onForgotPasswordClick() }
+                        .clickable { if (!state.isLoading) return@clickable onForgotPasswordClick() } // <-- MUDOU
                         .height(48.dp),
                     verticalAlignment = Alignment.CenterVertically
 
@@ -143,18 +194,47 @@ fun LoginScreenTemplate(
                     )
                 }
             }
-
         }
     }
 }
 
+@Preview(showBackground = true, name = "Stateless Light Theme")
+@Composable
+private fun LoginScreenTemplateStatelessPreview() {
+    LoginScreenTemplateStateless(
+        state = LoginScreenUiState( // Crie um estado de exemplo
+            email = "preview@email.com",
+            password = "123",
+        ),
+        onEmailChange = {}, // Lambdas vazias para o preview
+        onPasswordChange = {},
+        onTogglePasswordVisibility = {},
+        onRememberMeCheckedChange = {},
+        onLoginClick = {},
+        onRegisterClick = {},
+        onForgotPasswordClick = {}
+    )
+}
 
-@Preview(showBackground = true, name = "Light Theme", uiMode = Configuration.UI_MODE_NIGHT_NO)
+@Preview(showBackground = true, name = "Stateless Loading")
+@Composable
+private fun LoginScreenTemplateStatelessLoadingPreview() {
+    LoginScreenTemplateStateless(
+        state = LoginScreenUiState(
+            isLoading = true, // Exemplo com loading
+            email = "preview@email.com"
+        ),
+        onEmailChange = {},
+        onPasswordChange = {},
+        onTogglePasswordVisibility = {},
+        onRememberMeCheckedChange = {},
+        onLoginClick = {},
+        onRegisterClick = {},
+        onForgotPasswordClick = {}
+    )
+}
+
+// O preview antigo, que usa a versão com ViewModel, continua funcionando normalmente
+@Preview(showBackground = true, name = "Stateful (Old) Preview")
 @Composable
 private fun LoginScreenTemplatePreview() = LoginScreenTemplate(viewModel = FakeLoginViewModel())
-
-
-
-@Preview(showBackground = true, name = "Night Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
-@Composable
-private fun LoginScreenTemplatePreview2() = LoginScreenTemplate(viewModel = FakeLoginViewModel())

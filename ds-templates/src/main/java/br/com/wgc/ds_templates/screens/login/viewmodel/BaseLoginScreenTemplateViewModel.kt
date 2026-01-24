@@ -21,10 +21,10 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     abstract fun onForgotPasswordClick()
 
     /**
-     * Função chamada pela UI sempre que o campo de e-mail muda.
-     * Ela atualiza o valor do e-mail e executa a validação reativamente.
+     * Atualiza o estado com o novo valor do e-mail.
+     * A validação ocorre em tempo real para fornecer feedback ao usuário.
      */
-    val onEmailChange: (String) -> Unit = { newEmail ->
+    fun onEmailChange(newEmail: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 email = newEmail,
@@ -34,10 +34,10 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     }
 
     /**
-     * Função chamada pela UI sempre que o campo de senha muda.
-     * Ela atualiza o valor da senha e executa a validação reativamente.
+     * Atualiza o estado com o novo valor da senha.
+     * A validação ocorre em tempo real.
      */
-    val onPasswordChange: (String) -> Unit = { newPassword ->
+    fun onPasswordChange(newPassword: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 password = newPassword,
@@ -47,9 +47,9 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     }
 
     /**
-     * Função chamada pela UI para alternar a visibilidade da senha.
+     * Alterna a visibilidade do campo de senha.
      */
-    val onTogglePasswordVisibility: () -> Unit = {
+    fun onTogglePasswordVisibility() {
         _uiState.update { it.copy(isPasswordVisible = !it.isPasswordVisible) }
     }
 
