@@ -20,7 +20,6 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
     abstract fun onRegisterClick()
     abstract fun onForgotPasswordClick()
 
-
     /**
      * Função chamada pela UI sempre que o campo de e-mail muda.
      * Ela atualiza o valor do e-mail e executa a validação reativamente.
@@ -58,9 +57,8 @@ abstract class BaseLoginScreenTemplateViewModel : ViewModel() {
      * Função chamada pela UI para atualizar o estado do checkbox "Lembrar-me".
      * @param isChecked O novo estado do checkbox, fornecido diretamente pelo Composable.
      */
-    fun onRememberMeCheckedChange(isChecked: Boolean) {
+    open fun onRememberMeCheckedChange(isChecked: Boolean) {
         _uiState.update { currentState ->
-            // Correção: O campo correto é 'rememberMeChecked'
             currentState.copy(rememberMeChecked = isChecked)
         }
     }
