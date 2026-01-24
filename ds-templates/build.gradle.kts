@@ -58,6 +58,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4")
     implementation(libs.kotlinx.serialization.core)
 
+
     testImplementation(libs.mockk)
     androidTestImplementation( libs.mockk.android)
     testImplementation(libs.junit)
