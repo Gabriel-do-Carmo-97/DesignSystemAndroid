@@ -35,28 +35,70 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.ds_templates.screens.register.address.state.RegisterAddressScreenUiState
 import br.com.wgc.ds_templates.screens.register.address.viewmodel.BaseRegisterAddressScreenTemplateViewModel
-import br.com.wgc.ds_templates.screens.register.address.viewmodel.FakeRegisterAddressVIewModel
 
 
 /**
- * Um template de UI reutilizável para um formulário de endereço.
+ * Componente Stateful para a tela de registro de endereço.
+ * Ele observa o estado do ViewModel e o passa para o componente Stateless.
  *
  * @param modifier O modificador a ser aplicado ao componente.
- * @param state O estado atual do formulário de endereço, contendo os valores e os erros.
- * @param onAddressChange Callback invocado quando qualquer campo do endereço é alterado.
- *                         Ele retorna o objeto Address completo e atualizado.
- * @param onRegisterClick Callback para a ação do botão principal de salvar/registrar o endereço.
- * @param isStreetFoodVendor Flag para adaptar a UI, por exemplo, dando mais destaque
- *                           ao campo "Ponto de Referência" para um vendedor.
+ * @param viewModel A instância do ViewModel que gerencia o estado e a lógica da tela.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterAddressScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseRegisterAddressScreenTemplateViewModel
 ) {
     val state by viewModel.uiState.collectAsState()
+
+    RegisterAddressScreenTemplateStateless(
+        modifier = modifier,
+        state = state,
+        onCepChange = viewModel::onCepChange,
+        onStreetChange = viewModel::onStreetChange,
+        onNumberChange = viewModel::onNumberChange,
+        onComplementChange = viewModel::onComplementChange,
+        onReferencePointChange = viewModel::onReferencePointChange,
+        onNeighborhoodChange = viewModel::onNeighborhoodChange,
+        onCityChange = viewModel::onCityChange,
+        onRegisterClick = viewModel::onRegisterClick,
+        onBackClick = viewModel::onBackClick
+    )
+}
+
+/**
+ * Componente Stateless (apenas UI) para o formulário de endereço.
+ * Ele é puramente declarativo, recebendo o estado e os callbacks como parâmetros.
+ *
+ * @param modifier O modificador a ser aplicado ao componente.
+ * @param state O estado da UI a ser exibido.
+ * @param onCepChange Callback invocado quando o campo CEP é alterado.
+ * @param onStreetChange Callback invocado quando o campo Rua é alterado.
+ * @param onNumberChange Callback invocado quando o campo Número é alterado.
+ * @param onComplementChange Callback invocado quando o campo Complemento é alterado.
+ * @param onReferencePointChange Callback invocado quando o Ponto de Referência é alterado.
+ * @param onNeighborhoodChange Callback invocado quando o campo Bairro é alterado.
+ * @param onCityChange Callback invocado quando o campo Cidade é alterado.
+ * @param onRegisterClick Callback para a ação do botão principal de salvar.
+ * @param onBackClick Callback para a ação do botão de voltar.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun RegisterAddressScreenTemplateStateless(
+    modifier: Modifier = Modifier,
+    state: RegisterAddressScreenUiState,
+    onCepChange: (String) -> Unit,
+    onStreetChange: (String) -> Unit,
+    onNumberChange: (String) -> Unit,
+    onComplementChange: (String) -> Unit,
+    onReferencePointChange: (String) -> Unit,
+    onNeighborhoodChange: (String) -> Unit,
+    onCityChange: (String) -> Unit,
+    onRegisterClick: () -> Unit,
+    onBackClick: () -> Unit
+) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -64,7 +106,7 @@ fun RegisterAddressScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = viewModel::onBackClick) {
+                    IconButton(onClick = onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar")
                     }
                 }
@@ -93,7 +135,7 @@ fun RegisterAddressScreenTemplate(
 
                 SimpleTextField(
                     value = state.address.cep,
-                    onValueChange = viewModel.onCepChange,
+                    onValueChange = onCepChange,
                     label = "CEP:",
                     placeholderText = "00000-000",
                     leadingIcon = Icons.Default.Map,
@@ -104,7 +146,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.street,
-                    onValueChange = viewModel.onStreetChange,
+                    onValueChange = onStreetChange,
                     label = "Rua / Logradouro:",
                     placeholderText = "Ex: Av. Paulista",
                     leadingIcon = Icons.Default.Signpost,
@@ -114,7 +156,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.number,
-                    onValueChange = viewModel.onNumberChange,
+                    onValueChange = onNumberChange,
                     label = "Número:",
                     placeholderText = "Ex: 100",
                     leadingIcon = Icons.Default.ConfirmationNumber,
@@ -125,7 +167,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.complement.orEmpty(),
-                    onValueChange = viewModel.onComplementChange,
+                    onValueChange = onComplementChange,
                     label = "Complemento (Opcional):",
                     placeholderText = "Ex: Apto 10, Bloco 2",
                     leadingIcon = Icons.Default.Business,
@@ -135,7 +177,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.referencePoint.orEmpty(),
-                    onValueChange = viewModel.onReferencePointChange,
+                    onValueChange = onReferencePointChange,
                     label = "Ponto de Referência:",
                     placeholderText = "Ex: Em frente à estação de metrô",
                     leadingIcon = Icons.Default.LocationOn,
@@ -145,7 +187,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.neighborhood,
-                    onValueChange = viewModel.onNeighborhoodChange,
+                    onValueChange = onNeighborhoodChange,
                     label = "Bairro:",
                     placeholderText = "Ex: Bela Vista",
                     leadingIcon = Icons.Default.LocationOn,
@@ -155,7 +197,7 @@ fun RegisterAddressScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.address.city,
-                    onValueChange = viewModel.onCityChange,
+                    onValueChange = onCityChange,
                     label = "Cidade:",
                     placeholderText = "Ex: São Paulo",
                     leadingIcon = Icons.Default.LocationCity,
@@ -164,29 +206,57 @@ fun RegisterAddressScreenTemplate(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(32.dp))
-                //LOADING NO BOTAO
+
                 ClassicButton(
                     textButton = "Salvar",
-                    onClick = viewModel::onRegisterClick,
+                    onClick = onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled,
+                    // Adicione aqui o suporte a `isLoading` se o seu ClassicButton tiver
                 )
             }
         }
     }
 }
 
+// Preview atualizado para usar o componente Stateless
 @Preview(showBackground = true, name = "Estado Padrão")
 @Composable
 private fun RegisterAddressScreenTemplatePreview() {
     MaterialTheme {
-        RegisterAddressScreenTemplate(viewModel = FakeRegisterAddressVIewModel())
+        RegisterAddressScreenTemplateStateless(
+            state = RegisterAddressScreenUiState(),
+            onCepChange = {},
+            onStreetChange = {},
+            onNumberChange = {},
+            onComplementChange = {},
+            onReferencePointChange = {},
+            onNeighborhoodChange = {},
+            onCityChange = {},
+            onRegisterClick = {},
+            onBackClick = {}
+        )
     }
 }
 
+// Preview atualizado para simular um estado de erro
 @Preview(showBackground = true, name = "Com Erros")
 @Composable
 private fun RegisterAddressScreenTemplateWithErrorPreview() {
     MaterialTheme {
-        RegisterAddressScreenTemplate(viewModel = FakeRegisterAddressVIewModel())
+        RegisterAddressScreenTemplateStateless(
+            state = RegisterAddressScreenUiState(
+                cepError = "CEP inválido",
+                streetError = "Campo obrigatório"
+            ),
+            onCepChange = {},
+            onStreetChange = {},
+            onNumberChange = {},
+            onComplementChange = {},
+            onReferencePointChange = {},
+            onNeighborhoodChange = {},
+            onCityChange = {},
+            onRegisterClick = {},
+            onBackClick = {}
+        )
     }
 }

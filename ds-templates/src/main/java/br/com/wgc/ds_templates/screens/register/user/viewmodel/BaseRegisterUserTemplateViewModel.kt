@@ -23,60 +23,70 @@ abstract class BaseRegisterUserTemplateViewModel: ViewModel() {
     abstract fun onTermsClick()
     abstract fun onBackClick()
 
-
     /** Atualiza o nome e executa a validação. */
-    val onNameChange: (String) -> Unit = { newName ->
+    fun onNameChange(newName: String) {
         _uiState.update { it.copy(name = newName, nameError = validateName(newName)) }
     }
 
     /** Atualiza o sobrenome e executa a validação. */
-    val onLastNameChange: (String) -> Unit = { newLastName ->
-        _uiState.update { it.copy(lastName = newLastName, lastNameError = validateLastName(newLastName)) }
+    fun onLastNameChange(newLastName: String) {
+        _uiState.update {
+            it.copy(
+                lastName = newLastName,
+                lastNameError = validateLastName(newLastName)
+            )
+        }
     }
 
     /** Atualiza o e-mail e executa a validação. */
-    val onEmailChange: (String) -> Unit = { newEmail ->
+    fun onEmailChange(newEmail: String) {
         _uiState.update { it.copy(email = newEmail, emailError = validateEmail(newEmail)) }
     }
 
     /** Atualiza o telefone e executa a validação. */
-    val onPhoneChange: (String) -> Unit = { newPhone ->
+    fun onPhoneChange(newPhone: String) {
         _uiState.update { it.copy(phone = newPhone, phoneError = validatePhone(newPhone)) }
     }
 
     /** Atualiza a senha e executa a validação. */
-    val onPasswordChange: (String) -> Unit = { newPassword ->
+    fun onPasswordChange(newPassword: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 password = newPassword,
                 passwordError = validatePassword(newPassword),
-                confirmPasswordError = validateConfirmPassword(currentState.confirmPassword, newPassword)
+                confirmPasswordError = validateConfirmPassword(
+                    currentState.confirmPassword,
+                    newPassword
+                )
             )
         }
     }
 
     /** Atualiza a confirmação de senha e executa a validação. */
-    val onConfirmPasswordChange: (String) -> Unit = { newConfirmPassword ->
+    fun onConfirmPasswordChange(newConfirmPassword: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 confirmPassword = newConfirmPassword,
-                confirmPasswordError = validateConfirmPassword(newConfirmPassword, currentState.password)
+                confirmPasswordError = validateConfirmPassword(
+                    newConfirmPassword,
+                    currentState.password
+                )
             )
         }
     }
 
     /** Alterna a visibilidade da senha. */
-    val onTogglePasswordVisibility: () -> Unit = {
+    fun onTogglePasswordVisibility() {
         _uiState.update { it.copy(isPasswordVisible = !it.isPasswordVisible) }
     }
 
     /** Alterna a visibilidade da confirmação de senha. */
-    val onToggleConfirmPasswordVisibility: () -> Unit = {
+    fun onToggleConfirmPasswordVisibility() {
         _uiState.update { it.copy(isConfirmPasswordVisible = !it.isConfirmPasswordVisible) }
     }
 
     /** Atualiza o estado de aceite dos termos. */
-    val onAcceptedTermsChange: (Boolean) -> Unit = { isChecked ->
+    fun onAcceptedTermsChange(isChecked: Boolean) {
         _uiState.update { it.copy(acceptedTerms = isChecked) }
     }
 

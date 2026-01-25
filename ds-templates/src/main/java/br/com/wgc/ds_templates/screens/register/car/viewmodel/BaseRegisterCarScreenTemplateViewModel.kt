@@ -24,19 +24,19 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
     abstract fun onRegisterClick()
     abstract fun onBackClick()
 
-    val onBrandChange: (String) -> Unit = { newBrand ->
+    fun onBrandChange(newBrand: String) {
         _uiState.update { it.copy(brand = newBrand, brandError = validateBrand(newBrand)) }
     }
 
-    val onModelChange: (String) -> Unit = { newModel ->
+    fun onModelChange(newModel: String) {
         _uiState.update { it.copy(model = newModel, modelError = validateModel(newModel)) }
     }
 
-    val onYearChange: (String) -> Unit = { newYear ->
+    fun onYearChange(newYear: String) {
         _uiState.update { it.copy(year = newYear, yearError = validateYear(newYear)) }
     }
 
-    val onLicensePlateChange: (String) -> Unit = { newLicensePlate ->
+    fun onLicensePlateChange(newLicensePlate: String) {
         _uiState.update {
             it.copy(
                 licensePlate = newLicensePlate,
@@ -45,7 +45,7 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
         }
     }
 
-    val onOwnerNameChange: (String) -> Unit = { newOwnerName ->
+    fun onOwnerNameChange(newOwnerName: String) {
         _uiState.update {
             it.copy(
                 ownerName = newOwnerName,
@@ -54,11 +54,11 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
         }
     }
 
-    val onEmailChange: (String) -> Unit = { newEmail ->
+    fun onEmailChange(newEmail: String) {
         _uiState.update { it.copy(email = newEmail, emailError = validateEmail(newEmail)) }
     }
 
-    val onPasswordChange: (String) -> Unit = { newPassword ->
+    fun onPasswordChange(newPassword: String) {
         _uiState.update {
             it.copy(
                 password = newPassword,
@@ -68,7 +68,7 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
     }
 
 
-    val onIsFoodTruckChange: (Boolean) -> Unit = { isChecked ->
+    fun onIsFoodTruckChange(isChecked: Boolean) {
         _uiState.update { currentState ->
             currentState.copy(
                 isFoodTruck = isChecked,
@@ -79,7 +79,7 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
         }
     }
 
-    val onVehicleNameChange: (String) -> Unit = { newVehicleName ->
+    fun onVehicleNameChange(newVehicleName: String) {
         _uiState.update {
             it.copy(
                 vehicleName = newVehicleName,
@@ -88,7 +88,7 @@ abstract class BaseRegisterCarScreenTemplateViewModel: ViewModel() {
         }
     }
 
-    val onFoodCategoryChange: (String) -> Unit = { newFoodCategory ->
+    fun onFoodCategoryChange(newFoodCategory: String) {
         _uiState.update {
             it.copy(
                 foodCategory = newFoodCategory,

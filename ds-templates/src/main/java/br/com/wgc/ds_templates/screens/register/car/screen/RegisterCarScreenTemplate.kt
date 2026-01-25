@@ -39,17 +39,77 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.ds_templates.screens.register.car.state.RegisterCarScreenUiState
 import br.com.wgc.ds_templates.screens.register.car.viewmodel.BaseRegisterCarScreenTemplateViewModel
-import br.com.wgc.ds_templates.screens.register.car.viewmodel.FakeRegisterCarViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+/**
+ * Tela de cadastro de veículo (Stateful).
+ *
+ * Esta versão é "com estado" (stateful). Ela é responsável por conectar a lógica de negócio
+ * (ViewModel) com a interface do usuário (UI). Ela coleta o estado e passa os eventos
+ * para a versão stateless desta função.
+ *
+ * @param modifier O modificador a ser aplicado ao Composable.
+ * @param viewModel A instância do ViewModel que provê o estado e os manipuladores de eventos.
+ */
 @Composable
 fun RegisterCarScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseRegisterCarScreenTemplateViewModel,
 ) {
+    // Coleta o estado (UiState) a partir do ViewModel.
     val state by viewModel.uiState.collectAsState()
 
+    // Chama a versão Stateless, passando o estado e as referências das funções do ViewModel.
+    RegisterCarScreenTemplate(
+        modifier = modifier,
+        state = state,
+        onBackClick = viewModel::onBackClick,
+        onBrandChange = viewModel::onBrandChange,
+        onModelChange = viewModel::onModelChange,
+        onYearChange = viewModel::onYearChange,
+        onLicensePlateChange = viewModel::onLicensePlateChange,
+        onIsFoodTruckChange = viewModel::onIsFoodTruckChange,
+        onVehicleNameChange = viewModel::onVehicleNameChange,
+        onFoodCategoryChange = viewModel::onFoodCategoryChange,
+        onRegisterClick = viewModel::onRegisterClick
+    )
+}
+
+/**
+ * Tela de cadastro de veículo (Stateless).
+ *
+ * Esta versão é "sem estado" (stateless) e puramente declarativa. Ela descreve a UI
+ * com base no estado (`state`) recebido e delega os eventos para as funções de callback
+ * (`on...Click`, `on...Change`). Isso a torna previsível, fácil de testar e reutilizável.
+ *
+ * @param modifier O modificador a ser aplicado ao Composable.
+ * @param state O estado atual da UI a ser exibido.
+ * @param onBackClick Callback invocado ao clicar no botão de voltar.
+ * @param onBrandChange Callback invocado quando o campo de marca muda.
+ * @param onModelChange Callback invocado quando o campo de modelo muda.
+ * @param onYearChange Callback invocado quando o campo de ano muda.
+ * @param onLicensePlateChange Callback invocado quando o campo de placa muda.
+ * @param onIsFoodTruckChange Callback invocado quando o checkbox de food truck é alterado.
+ * @param onVehicleNameChange Callback invocado quando o campo de nome do negócio muda.
+ * @param onFoodCategoryChange Callback invocado quando o campo de categoria da comida muda.
+ * @param onRegisterClick Callback invocado ao clicar no botão de registrar.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun RegisterCarScreenTemplate(
+    modifier: Modifier = Modifier,
+    state: RegisterCarScreenUiState,
+    onBackClick: () -> Unit,
+    onBrandChange: (String) -> Unit,
+    onModelChange: (String) -> Unit,
+    onYearChange: (String) -> Unit,
+    onLicensePlateChange: (String) -> Unit,
+    onIsFoodTruckChange: (Boolean) -> Unit,
+    onVehicleNameChange: (String) -> Unit,
+    onFoodCategoryChange: (String) -> Unit,
+    onRegisterClick: () -> Unit,
+) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -57,7 +117,7 @@ fun RegisterCarScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = viewModel::onBackClick) {
+                    IconButton(onClick = onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar")
                     }
                 }
@@ -79,7 +139,7 @@ fun RegisterCarScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.brand,
-                    onValueChange = viewModel.onBrandChange,
+                    onValueChange = onBrandChange,
                     label = "Marca:",
                     placeholderText = "Ex: Volkswagen",
                     leadingIcon = Icons.Default.Factory,
@@ -88,7 +148,7 @@ fun RegisterCarScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.model,
-                    onValueChange = viewModel.onModelChange,
+                    onValueChange = onModelChange,
                     label = "Modelo:",
                     placeholderText = "Ex: Kombi",
                     leadingIcon = Icons.Default.DirectionsCar,
@@ -97,7 +157,7 @@ fun RegisterCarScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.year,
-                    onValueChange = viewModel.onYearChange,
+                    onValueChange = onYearChange,
                     label = "Ano:",
                     placeholderText = "Ex: 1998",
                     leadingIcon = Icons.Default.CalendarMonth,
@@ -107,7 +167,7 @@ fun RegisterCarScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.licensePlate,
-                    onValueChange = viewModel.onLicensePlateChange,
+                    onValueChange = onLicensePlateChange,
                     label = "Placa do Veículo:",
                     placeholderText = "Ex: ABC1D23",
                     leadingIcon = Icons.Default.ConfirmationNumber,
@@ -117,7 +177,7 @@ fun RegisterCarScreenTemplate(
                 CheckboxDefaults(
                     label = "Este veículo é um Food Truck?",
                     checked = state.isFoodTruck,
-                    onCheckedChange = viewModel.onIsFoodTruckChange
+                    onCheckedChange = onIsFoodTruckChange
                 )
                 AnimatedVisibility(
                     visible = state.isFoodTruck,
@@ -128,7 +188,7 @@ fun RegisterCarScreenTemplate(
                         Spacer(modifier = Modifier.height(16.dp))
                         SimpleTextField(
                             value = state.vehicleName,
-                            onValueChange = viewModel.onVehicleNameChange,
+                            onValueChange = onVehicleNameChange,
                             label = "Nome do Negócio:",
                             placeholderText = "Ex: Lanches do Zé",
                             leadingIcon = Icons.Default.Storefront,
@@ -138,7 +198,7 @@ fun RegisterCarScreenTemplate(
                         Spacer(modifier = Modifier.height(8.dp))
                         SimpleTextField(
                             value = state.foodCategory,
-                            onValueChange = viewModel.onFoodCategoryChange,
+                            onValueChange = onFoodCategoryChange,
                             label = "Categoria da Comida:",
                             placeholderText = "Ex: Hambúrguer, Pastel",
                             leadingIcon = Icons.Default.Fastfood,
@@ -150,7 +210,7 @@ fun RegisterCarScreenTemplate(
                 Spacer(modifier = Modifier.height(32.dp))
                 ClassicButton(
                     textButton = if (state.isFoodTruck) "Cadastrar Food Truck" else "Cadastrar Veículo",
-                    onClick = viewModel::onRegisterClick,
+                    onClick = onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled
                 )
             }
@@ -164,8 +224,18 @@ fun RegisterCarScreenTemplate(
 @Composable
 private fun RegisterCarScreenTemplatePreview() {
     MaterialTheme {
+        // As previews agora chamam a versão stateless (privada)
         RegisterCarScreenTemplate(
-            viewModel = FakeRegisterCarViewModel(),
+            state = RegisterCarScreenUiState(), // Estado inicial padrão
+            onBackClick = {},
+            onBrandChange = {},
+            onModelChange = {},
+            onYearChange = {},
+            onLicensePlateChange = {},
+            onIsFoodTruckChange = {},
+            onVehicleNameChange = {},
+            onFoodCategoryChange = {},
+            onRegisterClick = {}
         )
     }
 }
@@ -174,8 +244,18 @@ private fun RegisterCarScreenTemplatePreview() {
 @Composable
 private fun RegisterFoodTruckScreenTemplatePreview() {
     MaterialTheme {
+        // Exemplo de como visualizar um estado específico (Food Truck)
         RegisterCarScreenTemplate(
-            viewModel = FakeRegisterCarViewModel(),
+            state = RegisterCarScreenUiState(isFoodTruck = true),
+            onBackClick = {},
+            onBrandChange = {},
+            onModelChange = {},
+            onYearChange = {},
+            onLicensePlateChange = {},
+            onIsFoodTruckChange = {},
+            onVehicleNameChange = {},
+            onFoodCategoryChange = {},
+            onRegisterClick = {}
         )
     }
 }

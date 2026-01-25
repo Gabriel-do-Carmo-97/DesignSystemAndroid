@@ -35,7 +35,10 @@ abstract class BaseResetPasswordScreenTemplateViewModel : ViewModel() {
     /**
      * Atualiza o e-mail no estado e executa a validação em tempo real.
      */
-    val onEmailChange: (String) -> Unit = { newEmail ->
+    /**
+     * Atualiza o e-mail no estado e executa a validação em tempo real.
+     */
+    fun onEmailChange(newEmail: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 email = newEmail,

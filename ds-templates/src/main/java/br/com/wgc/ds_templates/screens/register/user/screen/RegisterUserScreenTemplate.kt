@@ -35,33 +35,69 @@ import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.ds_templates.screens.register.user.state.RegisterUserScreenUiState
 import br.com.wgc.ds_templates.screens.register.user.viewmodel.BaseRegisterUserTemplateViewModel
-import br.com.wgc.ds_templates.screens.register.user.viewmodel.FakeUserViewModel
 
 /**
- * Template de UI para a tela de cadastro de um novo usuário (cliente).
+ * Tela de cadastro de usuário (Stateful).
  *
- * @param modifier O modificador a ser aplicado ao componente.
- * @param state O estado atual da tela de cadastro de usuário.
- * @param onNameChange Callback para o campo "Nome".
- * @param onLastNameChange Callback para o campo "Sobrenome".
- * @param onEmailChange Callback para o campo "Email".
- * @param onPasswordChange Callback para o campo "Senha".
- * @param onPhoneChange Callback para o campo "Telefone".
- * @param onAcceptTermsToggle Callback para o checkbox de "Aceitar Termos".
- * @param onRegisterClick Ação do botão principal para registrar.
- * @param onBackClick Ação para o botão de voltar.
- * @param onLoginClick Ação para o link "Já tem uma conta?".
+ * Esta versão é "com estado" (stateful). Ela conecta a lógica de negócio (ViewModel)
+ * com a UI, coletando o estado e passando os eventos para a versão stateless.
+ *
+ * @param modifier O modificador a ser aplicado ao Composable.
+ * @param viewModel A instância do ViewModel que provê o estado e os eventos.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterUserScreenTemplate(
     modifier: Modifier = Modifier,
-    viewModel: BaseRegisterUserTemplateViewModel
+    viewModel: BaseRegisterUserTemplateViewModel,
 ) {
-    val state by viewModel.uiState.collectAsState()
+    // Coleta o estado como 'uiState' para manter a nomenclatura consistente com o ViewModel.
+    val uiState by viewModel.uiState.collectAsState()
 
+    // Chama a versão Stateless, passando o 'uiState' e as referências das funções.
+    RegisterUserScreenTemplate(
+        modifier = modifier,
+        state = uiState,
+        onNameChange = viewModel::onNameChange,
+        onLastNameChange = viewModel::onLastNameChange,
+        onEmailChange = viewModel::onEmailChange,
+        onPhoneChange = viewModel::onPhoneChange,
+        onPasswordChange = viewModel::onPasswordChange,
+        onConfirmPasswordChange = viewModel::onConfirmPasswordChange,
+        onAcceptedTermsChange = viewModel::onAcceptedTermsChange,
+        onRegisterClick = viewModel::onRegisterClick,
+        onBackClick = viewModel::onBackClick,
+        onLoginClick = viewModel::onLoginClick
+    )
+}
 
+/**
+ * Tela de cadastro de usuário (Stateless).
+ *
+ * Esta versão é "sem estado" (stateless) e puramente declarativa. Ela descreve a UI
+ * com base no `state` recebido e delega os eventos para as funções de callback.
+ *
+ * @param state O estado atual da UI a ser exibido.
+ * @param onChange Callbacks para atualização dos campos de texto.
+ * @param onClick Callbacks para ações de clique.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun RegisterUserScreenTemplate(
+    modifier: Modifier = Modifier,
+    state: RegisterUserScreenUiState,
+    onNameChange: (String) -> Unit,
+    onLastNameChange: (String) -> Unit,
+    onEmailChange: (String) -> Unit,
+    onPhoneChange: (String) -> Unit,
+    onPasswordChange: (String) -> Unit,
+    onConfirmPasswordChange: (String) -> Unit,
+    onAcceptedTermsChange: (Boolean) -> Unit,
+    onRegisterClick: () -> Unit,
+    onBackClick: () -> Unit,
+    onLoginClick: () -> Unit,
+) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -69,7 +105,7 @@ fun RegisterUserScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = viewModel::onBackClick) {
+                    IconButton(onClick = onBackClick) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar"
@@ -78,12 +114,12 @@ fun RegisterUserScreenTemplate(
                 }
             )
         }
-    ) {
-        Box(modifier = Modifier.padding(it)) {
+    ) { paddingValues ->
+        Box(modifier = Modifier.padding(paddingValues)) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(32.dp)
+                    .padding(horizontal = 32.dp)
                     .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
@@ -96,29 +132,27 @@ fun RegisterUserScreenTemplate(
 
                 SimpleTextField(
                     value = state.name,
-                    onValueChange = viewModel.onNameChange,
-                    label = "Nome :",
-                    placeholderText = "Digite seu nome:",
+                    onValueChange = onNameChange,
+                    label = "Nome:",
+                    placeholderText = "Digite seu nome",
                     leadingIcon = Icons.Default.Person,
                     isError = state.nameError != null,
                     errorMessage = state.nameError.orEmpty(),
-                    keyboardType = KeyboardType.Text,
                 )
                 SimpleTextField(
                     value = state.lastName,
-                    onValueChange = viewModel.onLastNameChange,
-                    label = "Sobrenome :",
+                    onValueChange = onLastNameChange,
+                    label = "Sobrenome:",
+                    placeholderText = "Digite seu sobrenome",
                     leadingIcon = Icons.Default.Person,
-                    placeholderText = "Digite o sobrenome:",
                     isError = state.lastNameError != null,
                     errorMessage = state.lastNameError.orEmpty(),
-                    keyboardType = KeyboardType.Text,
                 )
                 SimpleTextField(
                     value = state.email,
-                    onValueChange = viewModel.onEmailChange,
-                    label = "Email :",
-                    placeholderText = "Digite seu email ",
+                    onValueChange = onEmailChange,
+                    label = "Email:",
+                    placeholderText = "Digite seu email",
                     leadingIcon = Icons.Default.Email,
                     isError = state.emailError != null,
                     errorMessage = state.emailError.orEmpty(),
@@ -126,8 +160,8 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.phone,
-                    onValueChange = viewModel.onPhoneChange,
-                    label = "Telefone :",
+                    onValueChange = onPhoneChange,
+                    label = "Telefone:",
                     placeholderText = "Digite seu telefone",
                     leadingIcon = Icons.Default.Phone,
                     isError = state.phoneError != null,
@@ -136,8 +170,8 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.password,
-                    onValueChange = viewModel.onPasswordChange,
-                    label = "Senha :",
+                    onValueChange = onPasswordChange,
+                    label = "Senha:",
                     placeholderText = "Digite sua senha",
                     leadingIcon = Icons.Default.Password,
                     isError = state.passwordError != null,
@@ -147,8 +181,8 @@ fun RegisterUserScreenTemplate(
                 )
                 SimpleTextField(
                     value = state.confirmPassword,
-                    onValueChange = viewModel.onConfirmPasswordChange,
-                    label = "Confirmar Senha :",
+                    onValueChange = onConfirmPasswordChange,
+                    label = "Confirmar Senha:",
                     placeholderText = "Confirme sua senha",
                     leadingIcon = Icons.Default.Password,
                     isError = state.confirmPasswordError != null,
@@ -159,18 +193,18 @@ fun RegisterUserScreenTemplate(
                 CheckboxDefaults(
                     label = "Aceito os termos e condições",
                     checked = state.acceptedTerms,
-                    onCheckedChange = viewModel.onAcceptedTermsChange
+                    onCheckedChange = onAcceptedTermsChange
                 )
                 Spacer(modifier = Modifier.height(24.dp))
 
                 ClassicButton(
                     modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
                     textButton = "Cadastrar",
-                    onClick = viewModel::onRegisterClick,
+                    onClick = onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled
                 )
 
-                TextButton(onClick = { if (!state.isLoading) return@TextButton viewModel.onLoginClick() }) {
+                TextButton(onClick = { if (!state.isLoading) onLoginClick() }) {
                     Text(
                         "Já tem uma conta? Faça login",
                         color = MaterialTheme.colorScheme.primary
@@ -181,8 +215,46 @@ fun RegisterUserScreenTemplate(
     }
 }
 
-@Preview
+// --- PREVIEWS ---
+
+@Preview(showBackground = true, name = "Estado Padrão")
 @Composable
-private fun RegisterUserScreenTemplatePReview() {
-    RegisterUserScreenTemplate(viewModel = FakeUserViewModel())
+private fun RegisterUserScreenTemplatePreview() {
+    MaterialTheme {
+        // A preview agora chama a versão stateless (privada)
+        RegisterUserScreenTemplate(
+            state = RegisterUserScreenUiState(),
+            onNameChange = {},
+            onLastNameChange = {},
+            onEmailChange = {},
+            onPhoneChange = {},
+            onPasswordChange = {},
+            onConfirmPasswordChange = {},
+            onAcceptedTermsChange = {},
+            onRegisterClick = {},
+            onBackClick = {},
+            onLoginClick = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Estado de Carregamento")
+@Composable
+private fun RegisterUserScreenTemplateLoadingPreview() {
+    MaterialTheme {
+        // Exemplo de preview para o estado de loading
+        RegisterUserScreenTemplate(
+            state = RegisterUserScreenUiState(isLoading = true),
+            onNameChange = {},
+            onLastNameChange = {},
+            onEmailChange = {},
+            onPhoneChange = {},
+            onPasswordChange = {},
+            onConfirmPasswordChange = {},
+            onAcceptedTermsChange = {},
+            onRegisterClick = {},
+            onBackClick = {},
+            onLoginClick = {}
+        )
+    }
 }

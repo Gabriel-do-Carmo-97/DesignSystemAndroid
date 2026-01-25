@@ -29,18 +29,57 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.ds_templates.screens.resetpassword.state.ResetPasswordScreenUiState
 import br.com.wgc.ds_templates.screens.resetpassword.viewmodel.BaseResetPasswordScreenTemplateViewModel
-import br.com.wgc.ds_templates.screens.resetpassword.viewmodel.FakeResetPasswordViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+/**
+ * Tela de redefinição de senha (Stateful).
+ *
+ * Esta versão é "com estado" (stateful). Ela é responsável por conectar a lógica de negócio
+ * (ViewModel) com a interface do usuário (UI). Ela coleta o estado e passa os eventos
+ * para a versão stateless desta função.
+ *
+ * @param modifier O modificador a ser aplicado ao Composable.
+ * @param viewModel A instância do ViewModel que provê o estado e os manipuladores de eventos.
+ */
 @Composable
 fun ResetPasswordScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseResetPasswordScreenTemplateViewModel,
 ) {
-    val state by viewModel.uiState.collectAsState()
+    // Coleta o estado (UiState) a partir do ViewModel.
+    val uiState by viewModel.uiState.collectAsState()
 
+    // Chama a versão Stateless, passando o estado e as referências das funções.
+    ResetPasswordScreenTemplate(
+        modifier = modifier,
+        state = uiState,
+        onEmailChange = viewModel::onEmailChange,
+        onResetPasswordClick = viewModel::onResetPasswordClick,
+        onBackToLoginClick = viewModel::onBackToLoginClick
+    )
+}
 
+/**
+ * Tela de redefinição de senha (Stateless).
+ *
+ * Esta versão é "sem estado" (stateless) e puramente declarativa. Ela descreve a UI
+ * com base no `state` recebido e delega os eventos para as funções de callback.
+ *
+ * @param state O estado atual da UI a ser exibido.
+ * @param onEmailChange Callback invocado quando o campo de email muda.
+ * @param onResetPasswordClick Callback invocado ao clicar no botão de redefinir.
+ * @param onBackToLoginClick Callback invocado ao clicar no botão de voltar.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ResetPasswordScreenTemplate(
+    modifier: Modifier = Modifier,
+    state: ResetPasswordScreenUiState,
+    onEmailChange: (String) -> Unit,
+    onResetPasswordClick: () -> Unit,
+    onBackToLoginClick: () -> Unit,
+) {
     Scaffold(
         modifier = modifier,
         containerColor = MaterialTheme.colorScheme.background,
@@ -48,7 +87,7 @@ fun ResetPasswordScreenTemplate(
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = viewModel::onBackToLoginClick) {
+                    IconButton(onClick = onBackToLoginClick) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar"
@@ -60,7 +99,7 @@ fun ResetPasswordScreenTemplate(
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
             Column(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxSize()
                     .padding(32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -75,7 +114,7 @@ fun ResetPasswordScreenTemplate(
                 Spacer(modifier = Modifier.height(32.dp))
                 SimpleTextField(
                     value = state.email,
-                    onValueChange = viewModel.onEmailChange,
+                    onValueChange = onEmailChange,
                     label = "Email",
                     placeholderText = "Digite seu email:",
                     leadingIcon = Icons.Default.Email,
@@ -86,18 +125,40 @@ fun ResetPasswordScreenTemplate(
                 Spacer(modifier = Modifier.height(16.dp))
                 ClassicButton(
                     modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
-                    onClick = viewModel::onResetPasswordClick,
+                    onClick = onResetPasswordClick,
                     textButton = "Enviar"
                 )
             }
         }
-
     }
-
 }
 
-@Preview
+// --- PREVIEWS ---
+
+@Preview(showBackground = true, name = "Estado Padrão")
 @Composable
-private fun ResetPasswordScreenTemplatePreview() = ResetPasswordScreenTemplate(
-    viewModel = FakeResetPasswordViewModel()
-)
+private fun ResetPasswordScreenTemplatePreview() {
+    MaterialTheme {
+        // A preview agora chama a versão stateless (privada)
+        ResetPasswordScreenTemplate(
+            state = ResetPasswordScreenUiState(title = "Redefinir Senha"),
+            onEmailChange = {},
+            onResetPasswordClick = {},
+            onBackToLoginClick = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Estado de Carregamento")
+@Composable
+private fun ResetPasswordScreenTemplateLoadingPreview() {
+    MaterialTheme {
+        // Exemplo de como visualizar o estado de carregamento
+        ResetPasswordScreenTemplate(
+            state = ResetPasswordScreenUiState(title = "Redefinir Senha", isLoading = true),
+            onEmailChange = {},
+            onResetPasswordClick = {},
+            onBackToLoginClick = {}
+        )
+    }
+}

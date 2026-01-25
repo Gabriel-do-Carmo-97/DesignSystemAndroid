@@ -23,11 +23,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     abstract fun onCepSearch(cep: String)
 
 
-    /**
-     * Atualiza o CEP no estado e executa a validação.
-     * Se o CEP estiver completo (8 dígitos), dispara a busca automática.
-     */
-    val onCepChange: (String) -> Unit = { newCep ->
+    fun onCepChange(newCep: String) {
         val cleanedCep = newCep.filter { it.isDigit() }
         _uiState.update { currentState ->
             currentState.copy(
@@ -41,7 +37,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza o estado (UF) no estado e executa a validação. */
-    val onStateChange: (String) -> Unit = { newState ->
+    fun onStateChange(newState: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(state = newState),
@@ -51,7 +47,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza a cidade no estado e executa a validação. */
-    val onCityChange: (String) -> Unit = { newCity ->
+    fun onCityChange(newCity: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(city = newCity),
@@ -61,7 +57,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza o bairro no estado e executa a validação. */
-    val onNeighborhoodChange: (String) -> Unit = { newNeighborhood ->
+    fun onNeighborhoodChange(newNeighborhood: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(neighborhood = newNeighborhood),
@@ -71,7 +67,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza a rua no estado e executa a validação. */
-    val onStreetChange: (String) -> Unit = { newStreet ->
+    fun onStreetChange(newStreet: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(street = newStreet),
@@ -81,7 +77,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza o número no estado e executa a validação. */
-    val onNumberChange: (String) -> Unit = { newNumber ->
+    fun onNumberChange(newNumber: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(number = newNumber),
@@ -91,7 +87,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza o complemento no estado (campo opcional). */
-    val onComplementChange: (String) -> Unit = { newComplement ->
+    fun onComplementChange(newComplement: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(complement = newComplement)
@@ -100,7 +96,7 @@ abstract class BaseRegisterAddressScreenTemplateViewModel : ViewModel() {
     }
 
     /** Atualiza o ponto de referência no estado (campo opcional). */
-    val onReferencePointChange: (String) -> Unit = { newReference ->
+    fun onReferencePointChange(newReference: String) {
         _uiState.update { currentState ->
             currentState.copy(
                 address = currentState.address.copy(referencePoint = newReference)
