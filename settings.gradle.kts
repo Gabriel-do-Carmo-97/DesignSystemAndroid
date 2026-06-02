@@ -23,3 +23,4 @@ rootProject.name = "Design-System-WGC"
 include(":app")
 include(":design-system")
 include(":ds-templates")
+include(":core-ds")
