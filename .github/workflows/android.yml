@@ -31,6 +31,7 @@ jobs:
           files: |
             design-system/**
             ds-templates/**
+            core-ds/**
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -55,6 +56,7 @@ jobs:
           path: |
             ./design-system/build/outputs/aar/design-system-debug.aar
             ./ds-templates/build/outputs/aar/ds-templates-debug.aar
+            ./core-ds/build/outputs/aar/core-ds-debug.aar
 
       - name: ⬆️ Upload Release AARs as Artifacts
         uses: actions/upload-artifact@v4
@@ -63,6 +65,13 @@ jobs:
           path: |
             ./design-system/build/outputs/aar/design-system-release.aar
             ./ds-templates/build/outputs/aar/ds-templates-release.aar
+            ./core-ds/build/outputs/aar/core-ds-release.aar
+
+      - name: 📦 Publish core-ds if changed
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' && contains(steps.changed_modules.outputs.all_changed_files, 'core-ds/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew :core-ds:publish
 
       - name: 📦 Publish design-system if changed
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && contains(steps.changed_modules.outputs.all_changed_files, 'design-system/')
@@ -103,4 +112,5 @@ jobs:
             --title "Release $TAG_NAME" \
             --notes "Release automático. Mudanças detectadas em: ${{ steps.changed_modules.outputs.all_changed_files }}." \
             ./design-system/build/outputs/aar/design-system-release.aar \
-            ./ds-templates/build/outputs/aar/ds-templates-release.aar
+            ./ds-templates/build/outputs/aar/ds-templates-release.aar \
+            ./core-ds/build/outputs/aar/core-ds-release.aar
