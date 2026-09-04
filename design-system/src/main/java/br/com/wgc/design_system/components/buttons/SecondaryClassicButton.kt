@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 
 @Composable
 fun SecondaryClassicButton(
@@ -27,7 +28,7 @@ fun SecondaryClassicButton(
             .heightIn(56.dp),
         onClick = { onClick() },
         enabled = isEnabled,
-        shape = RoundedCornerShape(15),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = ButtonDefaults.elevatedButtonColors(
             containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f),
             contentColor = MaterialTheme.colorScheme.secondary,

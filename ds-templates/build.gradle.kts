@@ -49,6 +49,7 @@ android {
 
 dependencies {
     implementation(project(":design-system"))
+    implementation(project(":core-ds"))
     implementation(libs.androidx.core.ktx)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)

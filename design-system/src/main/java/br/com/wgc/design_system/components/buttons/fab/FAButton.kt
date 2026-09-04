@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
 fun FAButton(
@@ -66,7 +67,7 @@ fun FAButton(
             contentColor = MaterialTheme.colorScheme.secondary,
             content = {
                 Icon(icon, description)
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                 Text(text = description)
             }
         )
