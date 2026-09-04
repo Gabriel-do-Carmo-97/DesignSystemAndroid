@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 
 @Composable
 fun ClassicButton(
@@ -30,7 +31,7 @@ fun ClassicButton(
             disabledContentColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
         ),
         enabled = isEnabled,
-        shape = RoundedCornerShape(10),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         content = {
             Text(text = textButton, fontSize = 14.sp)
         },

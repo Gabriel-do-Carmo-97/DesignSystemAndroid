@@ -30,6 +30,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.shimmerEffect
 import br.com.wgc.design_system.components.buttons.ClassicButton
 import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
@@ -111,7 +112,7 @@ fun LoginScreenTemplate(
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
                     .imePadding()
-                    .padding(32.dp),
+                    .padding(WgcCoreDsSpacing.xl32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -121,7 +122,7 @@ fun LoginScreenTemplate(
                     fontSize = 32.sp,
                     color = MaterialTheme.colorScheme.primary,
                 )
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl32.dp))
                 SimpleTextField(
                     modifier = Modifier,
                     value = state.email,
