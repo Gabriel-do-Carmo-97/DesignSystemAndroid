@@ -33,17 +33,16 @@ jobs:
       all_changed_files: ${{ steps.changed_modules.outputs.all_changed_files }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Detect changes
         id: changed_modules
         uses: tj-actions/changed-files@v47
         with:
-          files_yaml: |
-            core-ds:
-              - core-ds/**
-            design-system:
-              - design-system/**
-            ds-templates:
-              - ds-templates/**
+          files: |
+            design-system/**
+            ds-templates/**
+            core-ds/**
 
   build-and-test:
     name: 🧪 Build, Test & Lint
