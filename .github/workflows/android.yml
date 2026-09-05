@@ -62,7 +62,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle Cache
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v6
 
       - name: 🤖 Setup Android SDK
         uses: android-actions/setup-android@v3
@@ -112,7 +112,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle Cache
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v6
 
       - name: 🤖 Setup Android SDK
         uses: android-actions/setup-android@v3
