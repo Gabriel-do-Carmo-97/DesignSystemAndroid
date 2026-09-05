@@ -16,6 +16,7 @@ mockk = "1.14.6"
 screenshot = "0.0.1-alpha11"
 kotlinSerialization = "2.1.21"
 kotlinxSerializationCore = "1.8.1"
+detekt = "1.23.7"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
@@ -52,3 +53,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 android-library = { id = "com.android.library", version.ref = "agp" }
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization"}
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
