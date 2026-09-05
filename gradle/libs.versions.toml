@@ -17,7 +17,7 @@ screenshot = "0.0.1-alpha16"
 kotlinSerialization = "2.1.21"
 kotlinxSerializationCore = "1.11.0"
 detekt = "1.23.7"
-sonarqube = "5.1.0.4882"
+sonarqube = "7.4.0.8496"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
