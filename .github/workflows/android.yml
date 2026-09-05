@@ -71,7 +71,7 @@ jobs:
         run: ./gradlew detekt test validateDebugScreenshotTest assembleDebug
 
       - name: ⬆️ Upload Debug AARs as Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: debug-aars
           path: |
@@ -80,7 +80,7 @@ jobs:
             ./core-ds/build/outputs/aar/core-ds-debug.aar
 
       - name: ⬆️ Upload Release AARs as Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-aars
           path: |
