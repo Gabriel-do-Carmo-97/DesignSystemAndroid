@@ -14,10 +14,10 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
 import br.com.wgc.design_system.components.avatar.WgcAvatar
-import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcIconButton
+import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
-import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.inputs.WgcSlider
@@ -57,10 +57,10 @@ fun DesignSystemGalleryScreen(modifier: Modifier = Modifier) {
 
             // --- SEÇÃO DE BOTÕES ---
             GallerySection(title = "1. Botões & Ações") {
-                ClassicButton(textButton = "Botão Primário", onClick = {})
-                ClassicButton(textButton = "Botão Carregando", isLoading = true, onClick = {})
-                ClassicButton(textButton = "Botão Desabilitado", isEnabled = false, onClick = {})
-                SecondaryClassicButton(textButton = "Botão Secundário", onClick = {})
+                WgcClassicButton(textButton = "Botão Primário", onClick = {})
+                WgcClassicButton(textButton = "Botão Carregando", isLoading = true, onClick = {})
+                WgcClassicButton(textButton = "Botão Desabilitado", isEnabled = false, onClick = {})
+                WgcSecondaryClassicButton(textButton = "Botão Secundário", onClick = {})
                 
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     WgcIconButton(onClick = {}, icon = Icons.Default.Star, contentDescription = "Favorito")

@@ -32,8 +32,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.shimmerEffect
-import br.com.wgc.design_system.components.buttons.ClassicButton
-import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.providers_login.ProvidersLogin
@@ -159,7 +159,7 @@ fun LoginScreenTemplate(
                     onCheckedChange = onRememberMeCheckedChange // <-- MUDOU
                 )
                 Spacer(modifier = Modifier.height(32.dp))
-                ClassicButton(
+                WgcClassicButton(
                     modifier = Modifier
                         .padding(top = 16.dp)
                         .shimmerEffect(isLoading = state.isLoading),
@@ -168,7 +168,7 @@ fun LoginScreenTemplate(
                     textButton = "Login"
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                SecondaryClassicButton(
+                WgcSecondaryClassicButton(
                     textButton = "Não tem uma conta? Cadastrar-se",
                     onClick = onRegisterClick, // <-- MUDOU
                     isEnabled = !state.isLoading

@@ -17,10 +17,10 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
 import br.com.wgc.design_system.components.avatar.WgcAvatar
-import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcIconButton
+import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
-import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
@@ -154,8 +154,8 @@ fun ButtonsCatalogSection() {
             }
         }
 
-        ClassicButton(textButton = "Botão Primário (ClassicButton)", isEnabled = isEnabled, isLoading = isLoading, onClick = {})
-        SecondaryClassicButton(textButton = "Botão Secundário", isEnabled = isEnabled, onClick = {})
+        WgcClassicButton(textButton = "Botão Primário (WgcClassicButton)", isEnabled = isEnabled, isLoading = isLoading, onClick = {})
+        WgcSecondaryClassicButton(textButton = "Botão Secundário (WgcSecondaryClassicButton)", isEnabled = isEnabled, onClick = {})
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             WgcIconButton(onClick = {}, icon = Icons.Default.Star, contentDescription = "Favorito")
