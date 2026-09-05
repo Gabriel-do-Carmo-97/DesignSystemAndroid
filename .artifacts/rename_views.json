@@ -1,0 +1,3 @@
+{
+  "query": "mutation { v1: updateProjectV2View(input: { projectId: \"PVT_kwHODfM_U84BigPs\", viewId: \"PVTV_lAHODfM_U84BigPszgLjE7E\", name: \"Backlog & Tarefas (Tabela)\" }) { projectV2View { name } } v2: updateProjectV2View(input: { projectId: \"PVT_kwHODfM_U84BigPs\", viewId: \"PVTV_lAHODfM_U84BigPszgLjFBo\", name: \"Kanban Board de Desenvolvimento\" }) { projectV2View { name } } }"
+}
