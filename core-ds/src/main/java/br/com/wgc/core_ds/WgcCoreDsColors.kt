@@ -28,7 +28,13 @@ object WgcCoreDsColors {
     val nineNineDarkBlue = Color.parseColor("#0B2545")
     val nineNineLightBlue = Color.parseColor("#1E88E5")
 
-    // --- 4. TOKENS SEMÂNTICOS ---
+    // --- 4. CORES BRAND MERCADO LIVRE ---
+    val mercadoLivreYellow = Color.parseColor("#FFE600")
+    val mercadoLivreBlue = Color.parseColor("#2D3277")
+    val mercadoLivreGreen = Color.parseColor("#00A650")
+    val mercadoLivreBgGray = Color.parseColor("#EBEBEB")
+
+    // --- 5. TOKENS SEMÂNTICOS ---
     val primary = orange500
     val secondary = white
     val background = grey50
