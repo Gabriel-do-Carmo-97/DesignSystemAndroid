@@ -21,7 +21,16 @@ import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 
 /**
  * Botão de ação primária do Design System (ClassicButton).
- * Suporta estado de carregamento nativo (isLoading) e semântica de acessibilidade.
+ * Suporta estado de carregamento nativo (`isLoading`) e semântica de acessibilidade.
+ *
+ * Exemplo de uso:
+ * ```kotlin
+ * ClassicButton(
+ *     textButton = "Salvar",
+ *     isLoading = false,
+ *     onClick = { /* ação */ }
+ * )
+ * ```
  */
 @Composable
 fun ClassicButton(
