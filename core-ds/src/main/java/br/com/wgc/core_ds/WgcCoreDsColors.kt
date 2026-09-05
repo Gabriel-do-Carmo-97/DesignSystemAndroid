@@ -24,7 +24,11 @@ object WgcCoreDsColors {
     val ifoodGreen = Color.parseColor("#00A251")
     val ifoodBgGray = Color.parseColor("#F7F7F7")
 
-    // --- 3. TOKENS SEMÂNTICOS ---
+    // --- 3. CORES BRAND 99FOOD ---
+    val nineNineDarkBlue = Color.parseColor("#0B2545")
+    val nineNineLightBlue = Color.parseColor("#1E88E5")
+
+    // --- 4. TOKENS SEMÂNTICOS ---
     val primary = orange500
     val secondary = white
     val background = grey50
