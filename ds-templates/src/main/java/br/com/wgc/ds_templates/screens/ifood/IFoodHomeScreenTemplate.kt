@@ -7,7 +7,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -34,12 +33,12 @@ data class IFoodRestaurant(
 data class IFoodHomeUiState(
     val address: String = "Rua Augusta, 1000 - Consolação",
     val searchQuery: String = "",
-    val categories: List<IFoodCategoryItem> = listOf(
-        IFoodCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
-        IFoodCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        IFoodCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
-        IFoodCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
-        IFoodCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
+    val categories: List<WgcIFoodCategoryItem> = listOf(
+        WgcIFoodCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
+        WgcIFoodCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
+        WgcIFoodCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
+        WgcIFoodCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
+        WgcIFoodCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
     ),
     val restaurants: List<IFoodRestaurant> = listOf(
         IFoodRestaurant("1", "Mcdonald's", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
@@ -89,7 +88,7 @@ fun IFoodHomeScreenContent(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
             if (state.hasCartItems) {
-                IFoodStickyCartBar(
+                WgcIFoodStickyCartBar(
                     itemCount = state.cartItemCount,
                     totalPrice = state.cartTotal,
                     restaurantName = state.cartRestaurantName,
@@ -107,7 +106,7 @@ fun IFoodHomeScreenContent(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             Surface(color = MaterialTheme.colorScheme.surface) {
-                IFoodAddressHeader(
+                WgcIFoodAddressHeader(
                     address = state.address,
                     searchQuery = state.searchQuery,
                     onAddressClick = onAddressClick,
@@ -115,7 +114,7 @@ fun IFoodHomeScreenContent(
                 )
             }
 
-            IFoodCategoryGrid(categories = state.categories)
+            WgcIFoodCategoryGrid(categories = state.categories)
 
             PaddingBox {
                 Card(
@@ -146,7 +145,7 @@ fun IFoodHomeScreenContent(
                 verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
             ) {
                 state.restaurants.forEach { restaurant ->
-                    IFoodRestaurantCard(
+                    WgcIFoodRestaurantCard(
                         name = restaurant.name,
                         rating = restaurant.rating,
                         category = restaurant.category,

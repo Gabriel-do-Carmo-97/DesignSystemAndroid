@@ -17,10 +17,10 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
 /**
- * Card Oficial de Restaurante do iFood com rating, tempo de entrega e taxa de entrega.
+ * Card Oficial de Restaurante do iFood (WgcIFoodRestaurantCard).
  */
 @Composable
-fun IFoodRestaurantCard(
+fun WgcIFoodRestaurantCard(
     modifier: Modifier = Modifier,
     name: String,
     rating: String = "4.8",
@@ -107,14 +107,14 @@ fun IFoodRestaurantCard(
 
 @WgcComponentPreviews
 @Composable
-private fun IFoodRestaurantCardPreview() {
+private fun WgcIFoodRestaurantCardPreview() {
     MaterialTheme {
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.padding(16.dp)
         ) {
-            IFoodRestaurantCard(name = "Mcdonald's", rating = "4.8", deliveryFee = "Grátis")
-            IFoodRestaurantCard(name = "Outback Steakhouse", rating = "4.9", deliveryFee = "R$ 7,99", isSuperRestaurant = false)
+            WgcIFoodRestaurantCard(name = "Mcdonald's", rating = "4.8", deliveryFee = "Grátis")
+            WgcIFoodRestaurantCard(name = "Outback Steakhouse", rating = "4.9", deliveryFee = "R$ 7,99", isSuperRestaurant = false)
         }
     }
 }
