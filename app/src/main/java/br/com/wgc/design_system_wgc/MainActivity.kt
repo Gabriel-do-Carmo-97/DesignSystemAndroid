@@ -28,6 +28,9 @@ import br.com.wgc.design_system.components.inputs.WgcSlider
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
 import br.com.wgc.design_system.components.radio.WgcRadioButton
+import br.com.wgc.design_system.components.story.StoryState
+import br.com.wgc.design_system.components.story.StoryTrayItem
+import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
@@ -43,6 +46,8 @@ import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
 import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
 import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
 import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
+import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
+import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +68,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
+    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
 
     Column(modifier = Modifier.fillMaxSize()) {
         ScrollableTabRow(selectedTabIndex = selectedTab) {
@@ -81,14 +86,42 @@ fun DesignSystemCatalogApp() {
                 0 -> ButtonsCatalogSection()
                 1 -> InputsCatalogSection()
                 2 -> FeedbackCatalogSection()
-                3 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                4 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                5 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                6 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                7 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                8 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                9 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                3 -> InstagramStoryCatalogSection()
+                4 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                5 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                6 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                7 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                8 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                9 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                10 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
             }
+        }
+    }
+}
+
+@Composable
+fun InstagramStoryCatalogSection() {
+    val sampleStories = remember {
+        listOf(
+            StoryTrayItem("1", "Seu Story", isUserStory = true),
+            StoryTrayItem("2", "Maria", storyState = StoryState.UNSEEN),
+            StoryTrayItem("3", "Lucas", storyState = StoryState.CLOSE_FRIENDS),
+            StoryTrayItem("4", "Ana", storyState = StoryState.SEEN)
+        )
+    }
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(text = "Carrossel de Stories (WgcStoryTray)", style = MaterialTheme.typography.titleMedium)
+        WgcStoryTray(stories = sampleStories, onStoryClick = {})
+
+        HorizontalDivider()
+
+        Text(text = "Visualizador de Story em Tela Cheia", style = MaterialTheme.typography.titleMedium)
+        Box(modifier = Modifier.fillMaxWidth().height(400.dp)) {
+            InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
         }
     }
 }
