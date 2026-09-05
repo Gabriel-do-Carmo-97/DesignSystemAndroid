@@ -1,6 +1,10 @@
-## feat(docs): adição de README principal, READMEs por módulo e guia do Dokka
+## feat(ds-templates): implementação da Suíte Completa de Templates de Telas (4 Grupos)
 
-### 📋 O que foi implementado:
-1. **Root `README.md`:** Visão geral do projeto, arquitetura modular, tech stack, instruções de execução e guia de consumo via GitHub Packages.
-2. **Modular READMEs (`core-ds`, `design-system`, `ds-templates`):** Documentação específica de cada módulo detalhando o que contém e regras de desenvolvimento.
-3. **Dokka Documentation Guide (`docs/DOKKA.md`):** Instruções de uso e geração local de documentação de API baseada em KDoc.
+### 📋 O que foi implementado em Commits Atômicos Separados:
+1. **Grupo 1 (Home & Dashboard):** `FintechHomeScreenTemplate` (Saldo, atalhos de Pix/transferência e transações recentes).
+2. **Grupo 2 (Carrinho & Checkout):** `StandardCartScreenTemplate` (Lista de itens do carrinho com resumo financeiro e CTA fixo).
+3. **Grupo 3 (Perfil & Configurações):** `SettingsHubScreenTemplate` (Cabeçalho de perfil do usuário, comutadores de preferências e links).
+4. **Grupo 4 (Listagem & Busca):** `SearchAndFilterScreenTemplate` (Campo de pesquisa, linha de chips de categoria e lista de resultados).
+
+### 🎯 Por quê?
+Fornecer uma fábrica completa de templates de telas desacopladas para aceleração do desenvolvimento de qualquer app corporativo usando o WGC Design System.
