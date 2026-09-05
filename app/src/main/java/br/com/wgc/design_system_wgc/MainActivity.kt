@@ -7,17 +7,42 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.components.alert.AlertType
+import br.com.wgc.design_system.components.alert.WgcAlert
+import br.com.wgc.design_system.components.avatar.WgcAvatar
 import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcIconButton
+import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
 import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
+import br.com.wgc.design_system.components.chip.WgcChip
+import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
+import br.com.wgc.design_system.components.inputs.WgcSlider
+import br.com.wgc.design_system.components.inputs.WgcSwitch
+import br.com.wgc.design_system.components.list.WgcListItem
+import br.com.wgc.design_system.components.radio.WgcRadioButton
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
+import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
+import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
+import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
+import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
+import br.com.wgc.ds_templates.screens.home.fintech.FintechHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
+import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
+import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
+import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
+import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
+import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
+import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +63,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Botões", "Checkboxes", "Template Login")
+    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
 
     Column(modifier = Modifier.fillMaxSize()) {
         ScrollableTabRow(selectedTabIndex = selectedTab) {
@@ -54,8 +79,15 @@ fun DesignSystemCatalogApp() {
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             when (selectedTab) {
                 0 -> ButtonsCatalogSection()
-                1 -> CheckboxCatalogSection()
-                2 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                1 -> InputsCatalogSection()
+                2 -> FeedbackCatalogSection()
+                3 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                4 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                5 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                6 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                7 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                8 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                9 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
             }
         }
     }
@@ -65,13 +97,14 @@ fun DesignSystemCatalogApp() {
 fun ButtonsCatalogSection() {
     var isLoading by remember { mutableStateOf(false) }
     var isEnabled by remember { mutableStateOf(true) }
+    var segmentIndex by remember { mutableStateOf(0) }
 
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Catálogo de Botões", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "Catálogo de Botões & Ações", style = MaterialTheme.typography.headlineMedium)
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Button(onClick = { isLoading = !isLoading }) {
@@ -82,41 +115,105 @@ fun ButtonsCatalogSection() {
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        ClassicButton(textButton = "Botão Primário (ClassicButton)", isEnabled = isEnabled, isLoading = isLoading, onClick = {})
+        SecondaryClassicButton(textButton = "Botão Secundário", isEnabled = isEnabled, onClick = {})
 
-        Text(text = "ClassicButton (Primary)", style = MaterialTheme.typography.titleMedium)
-        ClassicButton(
-            textButton = "Salvar Alterações",
-            isEnabled = isEnabled,
-            isLoading = isLoading,
-            onClick = {}
-        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            WgcIconButton(onClick = {}, icon = Icons.Default.Star, contentDescription = "Favorito")
+        }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(text = "SecondaryClassicButton", style = MaterialTheme.typography.titleMedium)
-        SecondaryClassicButton(
-            textButton = "Cancelar",
-            isEnabled = isEnabled,
-            onClick = {}
+        WgcSegmentedButton(
+            options = listOf("Opção 1", "Opção 2", "Opção 3"),
+            selectedIndex = segmentIndex,
+            onOptionSelected = { segmentIndex = it }
         )
     }
 }
 
 @Composable
-fun CheckboxCatalogSection() {
+fun InputsCatalogSection() {
     var checkedState by remember { mutableStateOf(false) }
+    var switchState by remember { mutableStateOf(true) }
+    var radioState by remember { mutableStateOf(true) }
+    var chipState by remember { mutableStateOf(true) }
+    var sliderValue by remember { mutableStateOf(0.5f) }
 
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Text(text = "Catálogo de Checkboxes", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "Catálogo de Entradas & Seleção", style = MaterialTheme.typography.headlineMedium)
 
         CheckboxDefaults(
             label = "Aceito os termos e condições",
             checked = checkedState,
             onCheckedChange = { checkedState = it }
         )
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(text = "Interruptor (Switch)")
+            WgcSwitch(checked = switchState, onCheckedChange = { switchState = it })
+        }
+
+        WgcRadioButton(
+            selected = radioState,
+            label = "Opção de Rádio Selecionada",
+            onClick = { radioState = !radioState }
+        )
+
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            WgcChip(label = "Filtro Ativo", selected = chipState, onClick = { chipState = !chipState })
+            WgcChip(label = "Filtro Inativo", selected = false, onClick = {})
+        }
+
+        Text(text = "Slider: ${(sliderValue * 100).toInt()}%")
+        WgcSlider(value = sliderValue, onValueChange = { sliderValue = it })
+    }
+}
+
+@Composable
+fun FeedbackCatalogSection() {
+    var showDialog by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(text = "Catálogo de Feedback & Listas", style = MaterialTheme.typography.headlineMedium)
+
+        WgcAlert(title = "Sucesso", message = "Operação executada com sucesso.", type = AlertType.SUCCESS)
+        WgcAlert(title = "Erro", message = "Falha no processamento.", type = AlertType.ERROR)
+
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            WgcAvatar(initials = "WG")
+            Text("Avatar de Usuário com Iniciais")
+        }
+
+        WgcListItem(
+            headlineText = "Item de Lista Principal",
+            supportingText = "Subtítulo explicativo com ação",
+            leadingContent = { WgcAvatar(initials = "DS") }
+        )
+
+        Button(onClick = { showDialog = true }) {
+            Text("Abrir Diálogo de Alerta")
+        }
+
+        if (showDialog) {
+            WgcAlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = "Confirmação de Ação",
+                message = "Deseja realmente aplicar esta alteração no sistema?",
+                onConfirmClick = { showDialog = false },
+                onDismissClick = { showDialog = false }
+            )
+        }
     }
 }
