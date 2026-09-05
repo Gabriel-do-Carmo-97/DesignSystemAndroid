@@ -10,6 +10,7 @@ plugins {
 
 subprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
+    apply(plugin = "jacoco")
     
     afterEvaluate {
         extensions.findByName("detekt")?.let {
