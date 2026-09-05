@@ -16,7 +16,7 @@ mockk = "1.14.6"
 screenshot = "0.0.1-alpha16"
 kotlinSerialization = "2.4.10"
 kotlinxSerializationCore = "1.11.0"
-detekt = "1.23.7"
+detekt = "1.23.8"
 sonarqube = "7.4.0.8496"
 
 [libraries]
