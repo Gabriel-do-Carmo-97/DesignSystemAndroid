@@ -49,7 +49,7 @@ kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.2.0" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.4.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
