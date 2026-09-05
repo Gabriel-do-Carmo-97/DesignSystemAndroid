@@ -44,6 +44,8 @@ import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
 import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
+import br.com.wgc.ds_templates.screens.mercadolivre.FakeMercadoLivreHomeViewModel
+import br.com.wgc.ds_templates.screens.mercadolivre.MercadoLivreHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.nineninefood.FakeNineNineFoodHomeViewModel
 import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
@@ -72,7 +74,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "99Food Home", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
+    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Mercado Livre Home", "99Food Home", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
 
     Column(modifier = Modifier.fillMaxSize()) {
         ScrollableTabRow(selectedTabIndex = selectedTab) {
@@ -90,16 +92,17 @@ fun DesignSystemCatalogApp() {
                 0 -> ButtonsCatalogSection()
                 1 -> InputsCatalogSection()
                 2 -> FeedbackCatalogSection()
-                3 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
-                4 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
-                5 -> InstagramStoryCatalogSection()
-                6 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                7 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                8 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                9 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                10 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                11 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                12 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                3 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
+                4 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                5 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                6 -> InstagramStoryCatalogSection()
+                7 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                8 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                9 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                10 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                11 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                12 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                13 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
             }
         }
     }
