@@ -38,6 +38,8 @@ import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplat
 import br.com.wgc.ds_templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
 import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
 import br.com.wgc.ds_templates.screens.home.fintech.FintechHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.ifood.FakeIFoodHomeViewModel
+import br.com.wgc.ds_templates.screens.ifood.IFoodHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
@@ -68,7 +70,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
+    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
 
     Column(modifier = Modifier.fillMaxSize()) {
         ScrollableTabRow(selectedTabIndex = selectedTab) {
@@ -86,14 +88,15 @@ fun DesignSystemCatalogApp() {
                 0 -> ButtonsCatalogSection()
                 1 -> InputsCatalogSection()
                 2 -> FeedbackCatalogSection()
-                3 -> InstagramStoryCatalogSection()
-                4 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                5 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                6 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                7 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                8 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                9 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                10 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                3 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                4 -> InstagramStoryCatalogSection()
+                5 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                6 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                7 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                8 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                9 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                10 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                11 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
             }
         }
     }

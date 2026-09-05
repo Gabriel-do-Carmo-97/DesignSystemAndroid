@@ -18,7 +18,13 @@ object WgcCoreDsColors {
     const val black = Color.BLACK
     const val transparent = Color.TRANSPARENT
 
-    // --- 2. TOKENS SEMÂNTICOS ---
+    // --- 2. CORES BRAND IFOOD ---
+    val ifoodRed = Color.parseColor("#EA1D2C")
+    val ifoodRedDark = Color.parseColor("#CC1825")
+    val ifoodGreen = Color.parseColor("#00A251")
+    val ifoodBgGray = Color.parseColor("#F7F7F7")
+
+    // --- 3. TOKENS SEMÂNTICOS ---
     val primary = orange500
     val secondary = white
     val background = grey50
