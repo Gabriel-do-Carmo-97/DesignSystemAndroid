@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "br.com.wgc.design_system_wgc"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "br.com.wgc.design_system_wgc"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -31,8 +31,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        }
     }
     buildFeatures {
         compose = true

@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "br.com.wgc.core_ds"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 29
@@ -28,8 +28,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        }
     }
     publishing {
         singleVariant("release")

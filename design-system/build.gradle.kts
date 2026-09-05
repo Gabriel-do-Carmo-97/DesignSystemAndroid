@@ -8,7 +8,7 @@ plugins {
 }
 android {
     namespace = "br.com.wgc.design_system"
-    compileSdk = 36
+    compileSdk = 37
     defaultConfig {
         minSdk = 29
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -28,8 +28,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        }
     }
     buildFeatures {
         compose = true
