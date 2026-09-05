@@ -1,0 +1,3 @@
+{
+  "query": "query { node(id: \"PVT_kwHODfM_U84BigPs\") { ... on ProjectV2 { views(first: 10) { nodes { id name layout } } } } }"
+}

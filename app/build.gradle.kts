@@ -47,8 +47,9 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":design-system")))
-    implementation(project(mapOf("path" to ":ds-templates")))
+    implementation(project(":design-system"))
+    implementation(project(":ds-templates"))
+    implementation(project(":core-ds"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

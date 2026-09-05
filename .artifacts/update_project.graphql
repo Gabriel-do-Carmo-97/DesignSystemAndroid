@@ -1,0 +1,27 @@
+mutation {
+  updateProjectV2SingleSelectField(input: {
+    projectId: "PVT_kwHODfM_U84BigPs"
+    fieldId: "PVTSSF_lAHODfM_U84BigPszhhYFlk"
+    name: "Status"
+    options: [
+      { name: "Backlog", color: GRAY },
+      { name: "refinamento", color: YELLOW },
+      { name: "Desenvolvimento", color: BLUE },
+      { name: "Teste Desenvolvimento", color: PURPLE },
+      { name: "Documentacao", color: GREEN },
+      { name: "waiting deploy", color: ORANGE },
+      { name: "deploy", color: PINK },
+      { name: "cancelado", color: RED },
+      { name: "done", color: GREEN }
+    ]
+  }) {
+    projectV2Field {
+      ... on ProjectV2SingleSelectField {
+        name
+        options {
+          name
+        }
+      }
+    }
+  }
+}
