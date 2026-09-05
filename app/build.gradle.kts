@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "br.com.wgc.design_system_wgc"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "br.com.wgc.design_system_wgc"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
