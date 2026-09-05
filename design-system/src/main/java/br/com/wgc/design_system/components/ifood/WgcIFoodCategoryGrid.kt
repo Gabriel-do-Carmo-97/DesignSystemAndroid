@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
-data class IFoodCategoryItem(
+data class WgcIFoodCategoryItem(
     val id: String,
     val name: String,
     val initials: String,
@@ -24,19 +24,19 @@ data class IFoodCategoryItem(
 )
 
 /**
- * Carrossel de Categorias Circulares do iFood (Restaurantes, Mercado, Farmácia, Bebidas, Pet, etc.)
+ * Carrossel de Categorias Circulares do iFood (WgcIFoodCategoryGrid).
  */
 @Composable
-fun IFoodCategoryGrid(
+fun WgcIFoodCategoryGrid(
     modifier: Modifier = Modifier,
-    categories: List<IFoodCategoryItem> = listOf(
-        IFoodCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
-        IFoodCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        IFoodCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
-        IFoodCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
-        IFoodCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
+    categories: List<WgcIFoodCategoryItem> = listOf(
+        WgcIFoodCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
+        WgcIFoodCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
+        WgcIFoodCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
+        WgcIFoodCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
+        WgcIFoodCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
     ),
-    onCategoryClick: (IFoodCategoryItem) -> Unit = {}
+    onCategoryClick: (WgcIFoodCategoryItem) -> Unit = {}
 ) {
     LazyRow(
         modifier = modifier.fillMaxWidth(),
@@ -74,8 +74,8 @@ fun IFoodCategoryGrid(
 
 @WgcComponentPreviews
 @Composable
-private fun IFoodCategoryGridPreview() {
+private fun WgcIFoodCategoryGridPreview() {
     MaterialTheme {
-        IFoodCategoryGrid()
+        WgcIFoodCategoryGrid()
     }
 }

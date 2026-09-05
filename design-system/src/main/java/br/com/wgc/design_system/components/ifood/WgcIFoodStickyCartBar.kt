@@ -13,10 +13,10 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**
- * Barra de Carrinho Flutuante do iFood (Sticky Cart Bar) na cor vermelha oficial (#EA1D2C).
+ * Barra de Carrinho Flutuante do iFood (WgcIFoodStickyCartBar) na cor vermelha oficial (#EA1D2C).
  */
 @Composable
-fun IFoodStickyCartBar(
+fun WgcIFoodStickyCartBar(
     modifier: Modifier = Modifier,
     itemCount: Int = 2,
     totalPrice: String = "R$ 48,90",
@@ -74,8 +74,8 @@ fun IFoodStickyCartBar(
 
 @WgcComponentPreviews
 @Composable
-private fun IFoodStickyCartBarPreview() {
+private fun WgcIFoodStickyCartBarPreview() {
     MaterialTheme {
-        IFoodStickyCartBar()
+        WgcIFoodStickyCartBar()
     }
 }

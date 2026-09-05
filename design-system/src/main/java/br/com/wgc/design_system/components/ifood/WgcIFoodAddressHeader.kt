@@ -18,10 +18,10 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
 /**
- * Cabeçalho de Endereço e Pesquisa oficial do iFood.
+ * Cabeçalho de Endereço e Pesquisa oficial do iFood (WgcIFoodAddressHeader).
  */
 @Composable
-fun IFoodAddressHeader(
+fun WgcIFoodAddressHeader(
     modifier: Modifier = Modifier,
     address: String = "Rua Augusta, 1000",
     searchQuery: String = "",
@@ -76,8 +76,8 @@ fun IFoodAddressHeader(
 
 @WgcComponentPreviews
 @Composable
-private fun IFoodAddressHeaderPreview() {
+private fun WgcIFoodAddressHeaderPreview() {
     MaterialTheme {
-        IFoodAddressHeader(address = "Av. Paulista, 1500 - São Paulo, SP")
+        WgcIFoodAddressHeader(address = "Av. Paulista, 1500 - São Paulo, SP")
     }
 }
