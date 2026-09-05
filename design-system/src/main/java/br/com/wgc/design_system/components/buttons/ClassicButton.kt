@@ -9,11 +9,18 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 
+/**
+ * Botão de ação primária do Design System (ClassicButton).
+ * Segue boas práticas de Modifier ordering e semântica de acessibilidade.
+ */
 @Composable
 fun ClassicButton(
     modifier: Modifier = Modifier,
@@ -22,7 +29,11 @@ fun ClassicButton(
     textButton: String = "Button"
 ) {
     ElevatedButton(
-        modifier = modifier.fillMaxWidth().heightIn(56.dp),
+        // Modificador externo aplicado primeiro, seguido de restrições de layout
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(56.dp)
+            .semantics { role = Role.Button },
         onClick = { onClick() },
         colors = ButtonDefaults.elevatedButtonColors(
             containerColor = MaterialTheme.colorScheme.primary,
