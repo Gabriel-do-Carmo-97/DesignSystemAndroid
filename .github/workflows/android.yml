@@ -32,7 +32,7 @@ jobs:
       any_changed: ${{ steps.changed_modules.outputs.any_changed }}
       all_changed_files: ${{ steps.changed_modules.outputs.all_changed_files }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Detect changes
         id: changed_modules
         uses: tj-actions/changed-files@v47
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -98,7 +98,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
