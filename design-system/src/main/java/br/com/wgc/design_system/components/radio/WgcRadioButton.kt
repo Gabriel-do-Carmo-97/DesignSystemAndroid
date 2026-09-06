@@ -11,6 +11,7 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**
  * Botão de Rádio com Rótulo (WgcRadioButton) baseado no Material 3.
@@ -41,5 +42,21 @@ fun WgcRadioButton(
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurface
         )
+    }
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcRadioButtonAllStatesPreview() {
+    MaterialTheme {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            WgcRadioButton(selected = true, label = "Selecionado & Habilitado", onClick = {}, isEnabled = true)
+            WgcRadioButton(selected = false, label = "Não Selecionado & Habilitado", onClick = {}, isEnabled = true)
+            WgcRadioButton(selected = true, label = "Selecionado & Desabilitado", onClick = {}, isEnabled = false)
+            WgcRadioButton(selected = false, label = "Não Selecionado & Desabilitado", onClick = {}, isEnabled = false)
+        }
     }
 }
