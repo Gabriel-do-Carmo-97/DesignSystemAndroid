@@ -71,8 +71,8 @@ jobs:
           tag_prefix: "v"
           major_pattern: "(MAJOR)"
           minor_pattern: "feat"
-          patch_pattern: "fix|refactor"
-          format: "${major}.${minor}.${patch}"
+          bump_each_commit_patch_pattern: "fix|refactor"
+          version_format: "${major}.${minor}.${patch}"
 
   # --- 4. JOBS PARALELOS DE QUALIDADE E BUILD (FEEDBACK RÁPIDO) ---
   static-analysis:
