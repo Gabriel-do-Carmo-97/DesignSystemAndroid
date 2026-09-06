@@ -4,11 +4,11 @@ import android.graphics.Color
 
 object WgcCoreDsColors {
     // --- 1. CORES PRIMITIVAS ---
-    val red500 = Color.parseColor("#F44336") // Equivalente ao Colors.red
+    val red500 = Color.parseColor("#F44336")
     val red700 = Color.parseColor("#D32F2F")
 
-    val blue500 = Color.parseColor("#2196F3") // Equivalente ao Colors.blue
-    val orange500 = Color.parseColor("#FF5722") // Equivalente ao Colors.deepOrange
+    val blue500 = Color.parseColor("#2196F3")
+    val orange500 = Color.parseColor("#FF5722")
 
     val grey50 = Color.parseColor("#FAFAFA")
     val grey100 = Color.parseColor("#F5F5F5")
@@ -34,14 +34,20 @@ object WgcCoreDsColors {
     val mercadoLivreGreen = Color.parseColor("#00A650")
     val mercadoLivreBgGray = Color.parseColor("#EBEBEB")
 
-    // --- 5. TOKENS SEMÂNTICOS ---
+    // --- 5. NOVAS BRANDS (SHOPEE, UBER, ALIEXPRESS) ---
+    val shopeeOrange = Color.parseColor("#EE4D2D")
+    val uberBlack = Color.parseColor("#111111")
+    val aliExpressRed = Color.parseColor("#FF4747")
+    val aliExpressOrange = Color.parseColor("#FF6E00")
+
+    // --- 6. TOKENS SEMÂNTICOS ---
     val primary = orange500
     val secondary = white
     val background = grey50
 
     val error = red500
-    val success = Color.parseColor("#4CAF50") // Equivalente ao Colors.green
-    val warning = Color.parseColor("#FFC107") // Equivalente ao Colors.amber
+    val success = Color.parseColor("#4CAF50")
+    val warning = Color.parseColor("#FFC107")
 
     val textPrimary = grey900
     val textSecondary = Color.parseColor("#757575")

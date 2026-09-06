@@ -32,6 +32,7 @@ import br.com.wgc.design_system.components.story.StoryState
 import br.com.wgc.design_system.components.story.StoryTrayItem
 import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
+import br.com.wgc.ds_templates.screens.aliexpress.auth.*
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
 import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
@@ -40,20 +41,25 @@ import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
 import br.com.wgc.ds_templates.screens.home.fintech.FintechHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.ifood.FakeIFoodHomeViewModel
 import br.com.wgc.ds_templates.screens.ifood.IFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.ifood.auth.*
 import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
 import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
 import br.com.wgc.ds_templates.screens.mercadolivre.FakeMercadoLivreHomeViewModel
 import br.com.wgc.ds_templates.screens.mercadolivre.MercadoLivreHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.mercadolivre.auth.*
 import br.com.wgc.ds_templates.screens.nineninefood.FakeNineNineFoodHomeViewModel
 import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.nineninefood.auth.*
 import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
 import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
 import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
 import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
+import br.com.wgc.ds_templates.screens.shopee.auth.*
 import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
 import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
+import br.com.wgc.ds_templates.screens.uber.auth.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +80,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Botões", "Inputs & Seleção", "Feedback & Diálogos", "Mercado Livre Home", "99Food Home", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
+    val tabs = listOf("Auth Multi-Brand", "Botões", "Inputs & Seleção", "Feedback & Diálogos", "Mercado Livre Home", "99Food Home", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
 
     Column(modifier = Modifier.fillMaxSize()) {
         ScrollableTabRow(selectedTabIndex = selectedTab) {
@@ -89,20 +95,84 @@ fun DesignSystemCatalogApp() {
 
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             when (selectedTab) {
-                0 -> ButtonsCatalogSection()
-                1 -> InputsCatalogSection()
-                2 -> FeedbackCatalogSection()
-                3 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
-                4 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
-                5 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
-                6 -> InstagramStoryCatalogSection()
-                7 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                8 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                9 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                10 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                11 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                12 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                13 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                0 -> MultiBrandAuthCatalogSection()
+                1 -> ButtonsCatalogSection()
+                2 -> InputsCatalogSection()
+                3 -> FeedbackCatalogSection()
+                4 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
+                5 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                6 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                7 -> InstagramStoryCatalogSection()
+                8 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                9 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                10 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                11 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                12 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                13 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                14 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+            }
+        }
+    }
+}
+
+@Composable
+fun MultiBrandAuthCatalogSection() {
+    var selectedBrand by remember { mutableStateOf(0) }
+    var selectedFlow by remember { mutableStateOf(0) }
+    val brands = listOf("iFood", "Uber", "Shopee", "Mercado Livre", "99Food", "AliExpress")
+    val flows = listOf("Login", "Cadastro", "Recuperar Senha")
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        Text("Escolha a Marca:", style = MaterialTheme.typography.titleMedium)
+        ScrollableTabRow(selectedTabIndex = selectedBrand) {
+            brands.forEachIndexed { index, name ->
+                Tab(selected = selectedBrand == index, onClick = { selectedBrand = index }, text = { Text(name) })
+            }
+        }
+
+        Spacer(Modifier.height(8.dp))
+
+        Text("Escolha o Fluxo:", style = MaterialTheme.typography.titleMedium)
+        TabRow(selectedTabIndex = selectedFlow) {
+            flows.forEachIndexed { index, name ->
+                Tab(selected = selectedFlow == index, onClick = { selectedFlow = index }, text = { Text(name) })
+            }
+        }
+
+        Spacer(Modifier.height(16.dp))
+
+        Box(modifier = Modifier.fillMaxSize()) {
+            when (selectedBrand) {
+                0 -> when (selectedFlow) {
+                    0 -> WgcIFoodLoginScreenTemplate(viewModel = FakeIFoodAuthViewModel())
+                    1 -> WgcIFoodRegisterScreenTemplate(viewModel = FakeIFoodAuthViewModel())
+                    else -> WgcIFoodResetPasswordScreenTemplate(viewModel = FakeIFoodAuthViewModel())
+                }
+                1 -> when (selectedFlow) {
+                    0 -> WgcUberLoginScreenTemplate(viewModel = FakeUberAuthViewModel())
+                    1 -> WgcUberRegisterScreenTemplate(viewModel = FakeUberAuthViewModel())
+                    else -> WgcUberResetPasswordScreenTemplate(viewModel = FakeUberAuthViewModel())
+                }
+                2 -> when (selectedFlow) {
+                    0 -> WgcShopeeLoginScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+                    1 -> WgcShopeeRegisterScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+                    else -> WgcShopeeResetPasswordScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+                }
+                3 -> when (selectedFlow) {
+                    0 -> WgcMercadoLivreLoginScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
+                    1 -> WgcMercadoLivreRegisterScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
+                    else -> WgcMercadoLivreResetPasswordScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
+                }
+                4 -> when (selectedFlow) {
+                    0 -> WgcNineNineLoginScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+                    1 -> WgcNineNineRegisterScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+                    else -> WgcNineNineResetPasswordScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+                }
+                5 -> when (selectedFlow) {
+                    0 -> WgcAliExpressLoginScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
+                    1 -> WgcAliExpressRegisterScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
+                    else -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
+                }
             }
         }
     }
