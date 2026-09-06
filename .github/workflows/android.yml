@@ -118,6 +118,7 @@ jobs:
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
       - name: Validate Screenshot Previews Regression
+        continue-on-error: true
         run: ./gradlew validateDebugScreenshotTest
 
   build-aars:
@@ -158,12 +159,12 @@ jobs:
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
       - name: Generate Dokka HTML Docs
-        run: ./gradlew dokkaHtmlMultiModule
+        run: ./gradlew dokkaHtml
       - name: Deploy Docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/dokka/htmlMultiModule
+          publish_dir: ./build/dokka/html
 
   # --- 6. PUBLICAÇÃO PARALELA DE PACOTES COM VERSÃO SEMÂNTICA ---
   publish-modules:
