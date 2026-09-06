@@ -1,37 +1,66 @@
-# Plano de Implementação: Suíte Completa de Templates de Telas (4 Grupos & Variações)
+# Plano de Implementação: Suíte Completa de Autenticação Multi-Brand (iFood, Uber, Shopee, Mercado Livre, 99Food e AliExpress)
 
-Este plano descreve a criação de uma suíte robusta de templates de telas no módulo `:ds-templates`, dividida em 4 grupos principais com múltiplas variações. Cada variação será desenvolvida e commitada de forma atômica e independente em uma nova branch (`feature/m3-all-templates-suite`) criada a partir da `master` atualizada.
+Este plano descreve a criação dos fluxos completos de autenticação (**Login, Cadastro e Recuperação de Senha**) para as 6 marcas solicitadas, organizando os tokens no `:core-ds`, os componentes no `:design-system`, os templates no `:ds-templates` e a visualização interativa no módulo `:app`.
 
 ## User Review Required
 
 > [!IMPORTANT]
-> Todos os templates seguirão o padrão arquitetural Pro estabelecido no projeto: `UiState` imutável, `BaseViewModel` abstrato, `FakeViewModel` para Previews e separação estrita entre Stateless e Stateful.
+> Todos os componentes criados no `:design-system` utilizarão o prefixo obrigatório `Wgc` e serão reutilizados no `:ds-templates` sem acoplamento. Todos os templates contarão com `UiState`, `BaseViewModel`, `FakeViewModel`, Previews, Testes Unitários e Testes Instrumentados.
 
-## Proposed Implementation Roadmap & Atomic Commits
+---
 
-### Grupo 1: Home / Dashboard (5 Variações)
-1. **Fintech Home**: Saldo principal, atalhos de transação e lista de movimentações.
-2. **E-commerce Home**: Banner hero, grade de categorias e produtos em destaque.
-3. **SaaS Dashboard**: Resumo de métricas, tarefas e gráficos de progresso.
-4. **Social Feed**: Stories, posts com avatares e interações.
-5. **Health Fitness**: Metas diárias, calorias e lembretes.
+## Proposed Implementation Roadmap
 
-### Grupo 2: Carrinho & Checkout (3 Variações)
-1. **Standard Cart**: Lista de itens, cupom e totalizador.
-2. **Stepper Checkout**: Passo a passo de endereço, frete e pagamento.
-3. **SaaS Subscription**: Comparativo de planos (*Pricing Table*).
+### 1. Módulo `:core-ds` (Tokens de Cores das Marcas)
+- Inclusão dos tokens oficiais:
+  - **Shopee:** `shopeeOrange` (`#EE4D2D`)
+  - **Uber:** `uberBlack` (`#111111`)
+  - **AliExpress:** `aliExpressRed` (`#FF4747`)
 
-### Grupo 3: Perfil & Configurações (3 Variações)
-1. **Social Profile**: Capa, avatar, bio e contadores.
-2. **Settings Hub**: Lista agrupada de opções com switches e toggles.
-3. **Edit Profile Form**: Formulário completo de edição de dados pessoais.
+### 2. Módulo `:design-system` (Componentes de Autenticação Reutilizáveis)
+- `WgcBrandAuthHeader`: Cabeçalho com logo/identidade visual da marca.
+- `WgcSocialLoginButtons`: Botões de login social (Google, Apple, Facebook).
+- `WgcOtpCodeInput`: Campo de entrada de código OTP de 4 a 6 dígitos para verificação.
 
-### Grupo 4: Listagem & Busca (3 Variações)
-1. **Search & Filter**: Barra de busca, chips de filtro e resultados.
-2. **Notification Feed**: Lista cronológica de avisos e alertas.
-3. **Grid Catalog**: Catálogo em grade de 2 colunas com paginação.
+### 3. Módulo `:ds-templates` (Suítes de Autenticação por Marca)
+
+#### A. iFood Auth Suite (`screens/ifood/auth/`)
+- `WgcIFoodLoginScreenTemplate`
+- `WgcIFoodRegisterScreenTemplate`
+- `WgcIFoodResetPasswordScreenTemplate`
+
+#### B. Uber Auth Suite (`screens/uber/auth/`)
+- `WgcUberLoginScreenTemplate`
+- `WgcUberRegisterScreenTemplate`
+- `WgcUberResetPasswordScreenTemplate`
+
+#### C. Shopee Auth Suite (`screens/shopee/auth/`)
+- `WgcShopeeLoginScreenTemplate`
+- `WgcShopeeRegisterScreenTemplate`
+- `WgcShopeeResetPasswordScreenTemplate`
+
+#### D. Mercado Livre Auth Suite (`screens/mercadolivre/auth/`)
+- `WgcMercadoLivreLoginScreenTemplate`
+- `WgcMercadoLivreRegisterScreenTemplate`
+- `WgcMercadoLivreResetPasswordScreenTemplate`
+
+#### E. 99Food Auth Suite (`screens/nineninefood/auth/`)
+- `WgcNineNineLoginScreenTemplate`
+- `WgcNineNineRegisterScreenTemplate`
+- `WgcNineNineResetPasswordScreenTemplate`
+
+#### F. AliExpress Auth Suite (`screens/aliexpress/auth/`)
+- `WgcAliExpressLoginScreenTemplate`
+- `WgcAliExpressRegisterScreenTemplate`
+- `WgcAliExpressResetPasswordScreenTemplate`
+
+### 4. Módulo `:app` (`MainActivity.kt`)
+- Adição da seção **"Fluxos de Autenticação Multi-Brand"** com seletor interativo para alternar entre as 6 marcas (iFood, Uber, Shopee, Mercado Livre, 99Food, AliExpress) e visualizar os fluxos de Login, Cadastro e Recuperação em tempo real.
+
+---
 
 ## Verification Plan
 
 ### Automated Tests
-- Executar `./gradlew assembleDebug` e `./gradlew check` após a conclusão de cada grupo para garantir estabilidade absoluta.
+- Executar `./gradlew assembleDebug`
+- Executar `./gradlew check` para validar unit tests e instrumented UI tests de todos os novos templates.
