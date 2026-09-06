@@ -59,7 +59,9 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "br.com.wgc"
             artifactId = "design-system"
-            version = "0.0.${System.getenv("GITHUB_RUN_NUMBER") ?: "0.0.1-SNAPSHOT"}"
+            version = project.findProperty("VERSION_NAME")?.toString()
+                ?: System.getenv("VERSION_NAME")
+                ?: "1.0.0-SNAPSHOT"
 
             afterEvaluate {
                 from(components["release"])
