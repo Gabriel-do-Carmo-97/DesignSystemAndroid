@@ -25,12 +25,16 @@ import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
+import br.com.wgc.design_system.components.ifood.*
 import br.com.wgc.design_system.components.inputs.WgcSlider
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
+import br.com.wgc.design_system.components.mercadolivre.*
+import br.com.wgc.design_system.components.nineninefood.*
 import br.com.wgc.design_system.components.radio.WgcRadioButton
 import br.com.wgc.design_system.components.story.StoryState
 import br.com.wgc.design_system.components.story.StoryTrayItem
+import br.com.wgc.design_system.components.story.WgcStoryAvatar
 import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
 import br.com.wgc.ds_templates.screens.aliexpress.auth.*
@@ -87,7 +91,13 @@ fun DesignSystemCatalogApp() {
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
 
     val primaryTabs = listOf("🧩 Componentes (:design-system)", "📱 Templates (:ds-templates)")
-    val componentSubTabs = listOf("Botões & Ações", "Inputs & Seleção", "Feedback & Listas", "Stories & Avatares")
+
+    val componentSubTabs = listOf(
+        "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
+        "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
+        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents"
+    )
+
     val templateSubTabs = listOf(
         "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
@@ -130,10 +140,22 @@ fun DesignSystemCatalogApp() {
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             if (primarySection == 0) {
                 when (selectedComponentSubTab) {
-                    0 -> ButtonsCatalogSection()
-                    1 -> InputsCatalogSection()
-                    2 -> FeedbackCatalogSection()
-                    3 -> InstagramStoryCatalogSection()
+                    0 -> WgcClassicButtonCatalogSection()
+                    1 -> WgcSecondaryClassicButtonCatalogSection()
+                    2 -> WgcIconButtonCatalogSection()
+                    3 -> WgcSegmentedButtonCatalogSection()
+                    4 -> WgcSwitchCatalogSection()
+                    5 -> WgcRadioButtonCatalogSection()
+                    6 -> WgcChipCatalogSection()
+                    7 -> WgcSliderCatalogSection()
+                    8 -> WgcAlertCatalogSection()
+                    9 -> WgcAvatarCatalogSection()
+                    10 -> WgcListItemCatalogSection()
+                    11 -> WgcStoryAvatarCatalogSection()
+                    12 -> WgcStoryTrayCatalogSection()
+                    13 -> WgcIFoodComponentsCatalogSection()
+                    14 -> WgcNineNineComponentsCatalogSection()
+                    15 -> WgcMercadoLivreComponentsCatalogSection()
                 }
             } else {
                 when (selectedTemplateSubTab) {
@@ -152,6 +174,187 @@ fun DesignSystemCatalogApp() {
                 }
             }
         }
+    }
+}
+
+// --- SEÇÕES ISOLADAS PARA CADA COMPONENTE INDIVIDUAL COM SEUS ESTADOS ---
+
+@Composable
+fun WgcClassicButtonCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcClassicButton (Todos os Estados)", style = MaterialTheme.typography.titleLarge)
+        Text("1. Habilitado:")
+        WgcClassicButton(textButton = "Salvar Alterações", onClick = {})
+        Text("2. Carregando (Loading):")
+        WgcClassicButton(textButton = "Carregando", isLoading = true, onClick = {})
+        Text("3. Desabilitado:")
+        WgcClassicButton(textButton = "Desabilitado", isEnabled = false, onClick = {})
+    }
+}
+
+@Composable
+fun WgcSecondaryClassicButtonCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcSecondaryClassicButton (Todos os Estados)", style = MaterialTheme.typography.titleLarge)
+        Text("1. Habilitado:")
+        WgcSecondaryClassicButton(textButton = "Cancelar Operação", onClick = {})
+        Text("2. Desabilitado:")
+        WgcSecondaryClassicButton(textButton = "Desabilitado", isEnabled = false, onClick = {})
+    }
+}
+
+@Composable
+fun WgcIconButtonCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcIconButton", style = MaterialTheme.typography.titleLarge)
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+            WgcIconButton(onClick = {}, icon = Icons.Default.Star, contentDescription = "Favoritar")
+        }
+    }
+}
+
+@Composable
+fun WgcSegmentedButtonCatalogSection() {
+    var segmentIndex by remember { mutableIntStateOf(0) }
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcSegmentedButton", style = MaterialTheme.typography.titleLarge)
+        WgcSegmentedButton(options = listOf("Dia", "Semana", "Mês"), selectedIndex = segmentIndex, onOptionSelected = { segmentIndex = it })
+    }
+}
+
+@Composable
+fun WgcSwitchCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcSwitch (Todos os Estados)", style = MaterialTheme.typography.titleLarge)
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Ativado & Habilitado"); WgcSwitch(checked = true, onCheckedChange = {}) }
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Desativado & Habilitado"); WgcSwitch(checked = false, onCheckedChange = {}) }
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Ativado & Desabilitado"); WgcSwitch(checked = true, onCheckedChange = {}, isEnabled = false) }
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Desativado & Desabilitado"); WgcSwitch(checked = false, onCheckedChange = {}, isEnabled = false) }
+    }
+}
+
+@Composable
+fun WgcRadioButtonCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcRadioButton (Todos os Estados)", style = MaterialTheme.typography.titleLarge)
+        WgcRadioButton(selected = true, label = "Selecionado & Habilitado", onClick = {}, isEnabled = true)
+        WgcRadioButton(selected = false, label = "Não Selecionado & Habilitado", onClick = {}, isEnabled = true)
+        WgcRadioButton(selected = true, label = "Selecionado & Desabilitado", onClick = {}, isEnabled = false)
+        WgcRadioButton(selected = false, label = "Não Selecionado & Desabilitado", onClick = {}, isEnabled = false)
+    }
+}
+
+@Composable
+fun WgcChipCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcChip (Todos os Estados)", style = MaterialTheme.typography.titleLarge)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            WgcChip(label = "Selecionado", selected = true, onClick = {})
+            WgcChip(label = "Não Selecionado", selected = false, onClick = {})
+            WgcChip(label = "Desabilitado", selected = false, isEnabled = false, onClick = {})
+        }
+    }
+}
+
+@Composable
+fun WgcSliderCatalogSection() {
+    var value by remember { mutableFloatStateOf(0.6f) }
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcSlider (Valor: ${(value * 100).toInt()}%)", style = MaterialTheme.typography.titleLarge)
+        WgcSlider(value = value, onValueChange = { value = it })
+    }
+}
+
+@Composable
+fun WgcAlertCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcAlert (Variantes Semânticas)", style = MaterialTheme.typography.titleLarge)
+        WgcAlert(title = "Sucesso", message = "Operação concluída.", type = AlertType.SUCCESS)
+        WgcAlert(title = "Erro", message = "Erro ao processar.", type = AlertType.ERROR)
+        WgcAlert(title = "Aviso", message = "Atenção necessária.", type = AlertType.WARNING)
+        WgcAlert(title = "Informação", message = "Dica útil.", type = AlertType.INFO)
+    }
+}
+
+@Composable
+fun WgcAvatarCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcAvatar (Tamanhos)", style = MaterialTheme.typography.titleLarge)
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            WgcAvatar(initials = "SM", size = 32.dp)
+            WgcAvatar(initials = "MD", size = 48.dp)
+            WgcAvatar(initials = "LG", size = 64.dp)
+            WgcAvatar(initials = "XL", size = 96.dp)
+        }
+    }
+}
+
+@Composable
+fun WgcListItemCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcListItem", style = MaterialTheme.typography.titleLarge)
+        WgcListItem(headlineText = "Título do Item", supportingText = "Descrição de suporte do item", leadingContent = { WgcAvatar(initials = "DS") })
+    }
+}
+
+@Composable
+fun WgcStoryAvatarCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcStoryAvatar (Estados do Anel)", style = MaterialTheme.typography.titleLarge)
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+            WgcStoryAvatar(userName = "Seu Story", isUserStory = true, onClick = {})
+            WgcStoryAvatar(userName = "Maria", storyState = StoryState.UNSEEN, onClick = {})
+            WgcStoryAvatar(userName = "Lucas", storyState = StoryState.CLOSE_FRIENDS, onClick = {})
+            WgcStoryAvatar(userName = "Ana", storyState = StoryState.SEEN, onClick = {})
+        }
+    }
+}
+
+@Composable
+fun WgcStoryTrayCatalogSection() {
+    val sampleStories = remember {
+        listOf(
+            StoryTrayItem("1", "Seu Story", isUserStory = true),
+            StoryTrayItem("2", "Maria", storyState = StoryState.UNSEEN),
+            StoryTrayItem("3", "Lucas", storyState = StoryState.CLOSE_FRIENDS),
+            StoryTrayItem("4", "Ana", storyState = StoryState.SEEN)
+        )
+    }
+    Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("WgcStoryTray (Carrossel Horizontal)", style = MaterialTheme.typography.titleLarge)
+        WgcStoryTray(stories = sampleStories, onStoryClick = {})
+    }
+}
+
+@Composable
+fun WgcIFoodComponentsCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("Componentes iFood", style = MaterialTheme.typography.titleLarge)
+        WgcIFoodAddressHeader()
+        WgcIFoodCategoryGrid()
+        WgcIFoodRestaurantCard(name = "McDonald's", rating = "4.8", deliveryFee = "Grátis")
+        WgcIFoodStickyCartBar()
+    }
+}
+
+@Composable
+fun WgcNineNineComponentsCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("Componentes 99Food", style = MaterialTheme.typography.titleLarge)
+        WgcNineNineAddressHeader()
+        WgcNineNineCategoryGrid()
+        WgcNineNineRestaurantCard(name = "Pizza Hut", rating = "4.9")
+        WgcNineNineStickyCartBar()
+    }
+}
+
+@Composable
+fun WgcMercadoLivreComponentsCatalogSection() {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("Componentes Mercado Livre", style = MaterialTheme.typography.titleLarge)
+        WgcMercadoLivreHeader()
+        WgcMercadoLivreCategoryGrid()
+        WgcMercadoLivreProductCard(title = "Smart TV 50\" 4K")
     }
 }
 
@@ -229,158 +432,6 @@ fun MultiBrandAuthCatalogSection() {
                     else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "AliExpress", brandLogoText = "Ali", brandColor = brandColors[5])
                 }
             }
-        }
-    }
-}
-
-@Composable
-fun InstagramStoryCatalogSection() {
-    val sampleStories = remember {
-        listOf(
-            StoryTrayItem("1", "Seu Story", isUserStory = true),
-            StoryTrayItem("2", "Maria", storyState = StoryState.UNSEEN),
-            StoryTrayItem("3", "Lucas", storyState = StoryState.CLOSE_FRIENDS),
-            StoryTrayItem("4", "Ana", storyState = StoryState.SEEN)
-        )
-    }
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(text = "Carrossel de Stories (WgcStoryTray)", style = MaterialTheme.typography.titleMedium)
-        WgcStoryTray(stories = sampleStories, onStoryClick = {})
-
-        HorizontalDivider()
-
-        Text(text = "Visualizador de Story em Tela Cheia", style = MaterialTheme.typography.titleMedium)
-        Box(modifier = Modifier.fillMaxWidth().height(400.dp)) {
-            InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
-        }
-    }
-}
-
-@Composable
-fun ButtonsCatalogSection() {
-    var isLoading by remember { mutableStateOf(false) }
-    var isEnabled by remember { mutableStateOf(true) }
-    var segmentIndex by remember { mutableIntStateOf(0) }
-
-    Column(
-        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Catálogo de Botões & Ações", style = MaterialTheme.typography.headlineMedium)
-
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Button(onClick = { isLoading = !isLoading }) {
-                Text(text = if (isLoading) "Parar Loading" else "Simular Loading")
-            }
-            Button(onClick = { isEnabled = !isEnabled }) {
-                Text(text = if (isEnabled) "Desabilitar" else "Habilitar")
-            }
-        }
-
-        WgcClassicButton(textButton = "Botão Primário (WgcClassicButton)", isEnabled = isEnabled, isLoading = isLoading, onClick = {})
-        WgcSecondaryClassicButton(textButton = "Botão Secundário (WgcSecondaryClassicButton)", isEnabled = isEnabled, onClick = {})
-
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            WgcIconButton(onClick = {}, icon = Icons.Default.Star, contentDescription = "Favorito")
-        }
-
-        WgcSegmentedButton(
-            options = listOf("Opção 1", "Opção 2", "Opção 3"),
-            selectedIndex = segmentIndex,
-            onOptionSelected = { segmentIndex = it }
-        )
-    }
-}
-
-@Composable
-fun InputsCatalogSection() {
-    var checkedState by remember { mutableStateOf(false) }
-    var switchState by remember { mutableStateOf(true) }
-    var radioState by remember { mutableStateOf(true) }
-    var chipState by remember { mutableStateOf(true) }
-    var sliderValue by remember { mutableFloatStateOf(0.5f) }
-
-    Column(
-        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(text = "Catálogo de Entradas & Seleção", style = MaterialTheme.typography.headlineMedium)
-
-        CheckboxDefaults(
-            label = "Aceito os termos e condições",
-            checked = checkedState,
-            onCheckedChange = { checkedState = it }
-        )
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(text = "Interruptor (Switch)")
-            WgcSwitch(checked = switchState, onCheckedChange = { switchState = it })
-        }
-
-        WgcRadioButton(
-            selected = radioState,
-            label = "Opção de Rádio Selecionada",
-            onClick = { radioState = !radioState }
-        )
-
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            WgcChip(label = "Filtro Ativo", selected = chipState, onClick = { chipState = !chipState })
-            WgcChip(label = "Filtro Inativo", selected = false, onClick = {})
-        }
-
-        Text(text = "Slider: ${(sliderValue * 100).toInt()}%")
-        WgcSlider(value = sliderValue, onValueChange = { sliderValue = it })
-    }
-}
-
-@Composable
-fun FeedbackCatalogSection() {
-    var showDialog by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(text = "Catálogo de Feedback & Listas", style = MaterialTheme.typography.headlineMedium)
-
-        WgcAlert(title = "Sucesso", message = "Operação executada com sucesso.", type = AlertType.SUCCESS)
-        WgcAlert(title = "Erro", message = "Falha no processamento.", type = AlertType.ERROR)
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            WgcAvatar(initials = "WG")
-            Text("Avatar de Usuário com Iniciais")
-        }
-
-        WgcListItem(
-            headlineText = "Item de Lista Principal",
-            supportingText = "Subtítulo explicativo com ação",
-            leadingContent = { WgcAvatar(initials = "DS") }
-        )
-
-        Button(onClick = { showDialog = true }) {
-            Text("Abrir Diálogo de Alerta")
-        }
-
-        if (showDialog) {
-            WgcAlertDialog(
-                onDismissRequest = { showDialog = false },
-                title = "Confirmação de Ação",
-                message = "Deseja realmente aplicar esta alteração no sistema?",
-                onConfirmClick = { showDialog = false },
-                onDismissClick = { showDialog = false }
-            )
         }
     }
 }

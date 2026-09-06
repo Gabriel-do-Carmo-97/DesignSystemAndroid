@@ -16,21 +16,13 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**
  * Componente de Chip (WgcChip) inspirado no Material UI / Material 3.
- *
- * Exemplo de uso:
- * ```kotlin
- * WgcChip(
- *     label = "Filtro Ativo",
- *     selected = true,
- *     onClick = { /* toggle */ }
- * )
- * ```
  */
 @Composable
 fun WgcChip(
     modifier: Modifier = Modifier,
     label: String,
     selected: Boolean = false,
+    isEnabled: Boolean = true,
     leadingIcon: ImageVector? = null,
     onClick: () -> Unit
 ) {
@@ -39,6 +31,7 @@ fun WgcChip(
     FilterChip(
         selected = selected,
         onClick = onClick,
+        enabled = isEnabled,
         label = { Text(text = label) },
         modifier = modifier
             .semantics(mergeDescendants = true) {
@@ -74,6 +67,7 @@ private fun WgcChipPreview() {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             WgcChip(label = "Todos", selected = true, onClick = {})
             WgcChip(label = "Favoritos", selected = false, onClick = {})
+            WgcChip(label = "Desabilitado", selected = false, isEnabled = false, onClick = {})
         }
     }
 }
