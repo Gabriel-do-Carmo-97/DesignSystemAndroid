@@ -82,37 +82,74 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DesignSystemCatalogApp() {
-    var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("Auth Multi-Brand", "Botões", "Inputs & Seleção", "Feedback & Diálogos", "Mercado Livre Home", "99Food Home", "iFood Home", "Instagram Story", "Home Fintech", "Home E-commerce", "Mapa & Tracking", "Carrinho", "Perfil", "Busca", "Login")
+    var primarySection by remember { mutableIntStateOf(0) }
+    var selectedComponentSubTab by remember { mutableIntStateOf(0) }
+    var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
+
+    val primaryTabs = listOf("🧩 Componentes (:design-system)", "📱 Templates (:ds-templates)")
+    val componentSubTabs = listOf("Botões & Ações", "Inputs & Seleção", "Feedback & Listas", "Stories & Avatares")
+    val templateSubTabs = listOf(
+        "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
+        "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
+        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
+    )
 
     Column(modifier = Modifier.fillMaxSize()) {
-        ScrollableTabRow(selectedTabIndex = selectedTab) {
-            tabs.forEachIndexed { index, title ->
+        TabRow(selectedTabIndex = primarySection) {
+            primaryTabs.forEachIndexed { index, title ->
                 Tab(
-                    selected = selectedTab == index,
-                    onClick = { selectedTab = index },
-                    text = { Text(text = title) }
+                    selected = primarySection == index,
+                    onClick = { primarySection = index },
+                    text = { Text(text = title, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold) }
                 )
             }
         }
 
+        if (primarySection == 0) {
+            ScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
+                componentSubTabs.forEachIndexed { index, title ->
+                    Tab(
+                        selected = selectedComponentSubTab == index,
+                        onClick = { selectedComponentSubTab = index },
+                        text = { Text(text = title) }
+                    )
+                }
+            }
+        } else {
+            ScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
+                templateSubTabs.forEachIndexed { index, title ->
+                    Tab(
+                        selected = selectedTemplateSubTab == index,
+                        onClick = { selectedTemplateSubTab = index },
+                        text = { Text(text = title) }
+                    )
+                }
+            }
+        }
+
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-            when (selectedTab) {
-                0 -> MultiBrandAuthCatalogSection()
-                1 -> ButtonsCatalogSection()
-                2 -> InputsCatalogSection()
-                3 -> FeedbackCatalogSection()
-                4 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
-                5 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
-                6 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
-                7 -> InstagramStoryCatalogSection()
-                8 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                9 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                10 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                11 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                12 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                13 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                14 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+            if (primarySection == 0) {
+                when (selectedComponentSubTab) {
+                    0 -> ButtonsCatalogSection()
+                    1 -> InputsCatalogSection()
+                    2 -> FeedbackCatalogSection()
+                    3 -> InstagramStoryCatalogSection()
+                }
+            } else {
+                when (selectedTemplateSubTab) {
+                    0 -> MultiBrandAuthCatalogSection()
+                    1 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
+                    2 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                    3 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                    4 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
+                    5 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                    6 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                    7 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                    8 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                    9 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                    10 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                    11 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                }
             }
         }
     }
@@ -120,18 +157,18 @@ fun DesignSystemCatalogApp() {
 
 @Composable
 fun MultiBrandAuthCatalogSection() {
-    var selectedBrand by remember { mutableStateOf(0) }
-    var selectedFlow by remember { mutableStateOf(0) }
+    var selectedBrand by remember { mutableIntStateOf(0) }
+    var selectedFlow by remember { mutableIntStateOf(0) }
     val brands = listOf("iFood", "Uber", "Shopee", "Mercado Livre", "99Food", "AliExpress")
     val flows = listOf("Login", "Cadastro", "Recuperar", "Endereço 2026")
 
     val brandColors = listOf(
-        Color(0xFFEA1D2C), // iFood Red
-        Color(0xFF111111), // Uber Black
-        Color(0xFFEE4D2D), // Shopee Orange
-        Color(0xFFFFE600), // Mercado Livre Yellow
-        Color(0xFF0B2545), // 99Food Dark Blue
-        Color(0xFFFF4747)  // AliExpress Red
+        Color(0xFFEA1D2C),
+        Color(0xFF111111),
+        Color(0xFFEE4D2D),
+        Color(0xFFFFE600),
+        Color(0xFF0B2545),
+        Color(0xFFFF4747)
     )
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -227,7 +264,7 @@ fun InstagramStoryCatalogSection() {
 fun ButtonsCatalogSection() {
     var isLoading by remember { mutableStateOf(false) }
     var isEnabled by remember { mutableStateOf(true) }
-    var segmentIndex by remember { mutableStateOf(0) }
+    var segmentIndex by remember { mutableIntStateOf(0) }
 
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
@@ -266,7 +303,7 @@ fun InputsCatalogSection() {
     var switchState by remember { mutableStateOf(true) }
     var radioState by remember { mutableStateOf(true) }
     var chipState by remember { mutableStateOf(true) }
-    var sliderValue by remember { mutableStateOf(0.5f) }
+    var sliderValue by remember { mutableFloatStateOf(0.5f) }
 
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
