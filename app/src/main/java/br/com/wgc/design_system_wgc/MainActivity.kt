@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
@@ -35,6 +36,8 @@ import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
 import br.com.wgc.ds_templates.screens.aliexpress.auth.*
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
+import br.com.wgc.ds_templates.screens.common.auth.FakeBrandAddressAuthViewModel
+import br.com.wgc.ds_templates.screens.common.auth.WgcBrandAddressRegistrationScreenTemplate
 import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
 import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
@@ -120,7 +123,16 @@ fun MultiBrandAuthCatalogSection() {
     var selectedBrand by remember { mutableStateOf(0) }
     var selectedFlow by remember { mutableStateOf(0) }
     val brands = listOf("iFood", "Uber", "Shopee", "Mercado Livre", "99Food", "AliExpress")
-    val flows = listOf("Login", "Cadastro", "Recuperar Senha")
+    val flows = listOf("Login", "Cadastro", "Recuperar", "Endereço 2026")
+
+    val brandColors = listOf(
+        Color(0xFFEA1D2C), // iFood Red
+        Color(0xFF111111), // Uber Black
+        Color(0xFFEE4D2D), // Shopee Orange
+        Color(0xFFFFE600), // Mercado Livre Yellow
+        Color(0xFF0B2545), // 99Food Dark Blue
+        Color(0xFFFF4747)  // AliExpress Red
+    )
 
     Column(modifier = Modifier.fillMaxSize()) {
         Text("Escolha a Marca:", style = MaterialTheme.typography.titleMedium)
@@ -133,7 +145,7 @@ fun MultiBrandAuthCatalogSection() {
         Spacer(Modifier.height(8.dp))
 
         Text("Escolha o Fluxo:", style = MaterialTheme.typography.titleMedium)
-        TabRow(selectedTabIndex = selectedFlow) {
+        ScrollableTabRow(selectedTabIndex = selectedFlow) {
             flows.forEachIndexed { index, name ->
                 Tab(selected = selectedFlow == index, onClick = { selectedFlow = index }, text = { Text(name) })
             }
@@ -146,32 +158,38 @@ fun MultiBrandAuthCatalogSection() {
                 0 -> when (selectedFlow) {
                     0 -> WgcIFoodLoginScreenTemplate(viewModel = FakeIFoodAuthViewModel())
                     1 -> WgcIFoodRegisterScreenTemplate(viewModel = FakeIFoodAuthViewModel())
-                    else -> WgcIFoodResetPasswordScreenTemplate(viewModel = FakeIFoodAuthViewModel())
+                    2 -> WgcIFoodResetPasswordScreenTemplate(viewModel = FakeIFoodAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "iFood", brandLogoText = "iF", brandColor = brandColors[0])
                 }
                 1 -> when (selectedFlow) {
                     0 -> WgcUberLoginScreenTemplate(viewModel = FakeUberAuthViewModel())
                     1 -> WgcUberRegisterScreenTemplate(viewModel = FakeUberAuthViewModel())
-                    else -> WgcUberResetPasswordScreenTemplate(viewModel = FakeUberAuthViewModel())
+                    2 -> WgcUberResetPasswordScreenTemplate(viewModel = FakeUberAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Uber", brandLogoText = "Uber", brandColor = brandColors[1])
                 }
                 2 -> when (selectedFlow) {
                     0 -> WgcShopeeLoginScreenTemplate(viewModel = FakeShopeeAuthViewModel())
                     1 -> WgcShopeeRegisterScreenTemplate(viewModel = FakeShopeeAuthViewModel())
-                    else -> WgcShopeeResetPasswordScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+                    2 -> WgcShopeeResetPasswordScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Shopee", brandLogoText = "S", brandColor = brandColors[2])
                 }
                 3 -> when (selectedFlow) {
                     0 -> WgcMercadoLivreLoginScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
                     1 -> WgcMercadoLivreRegisterScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
-                    else -> WgcMercadoLivreResetPasswordScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
+                    2 -> WgcMercadoLivreResetPasswordScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Mercado Livre", brandLogoText = "ML", brandColor = brandColors[3])
                 }
                 4 -> when (selectedFlow) {
                     0 -> WgcNineNineLoginScreenTemplate(viewModel = FakeNineNineAuthViewModel())
                     1 -> WgcNineNineRegisterScreenTemplate(viewModel = FakeNineNineAuthViewModel())
-                    else -> WgcNineNineResetPasswordScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+                    2 -> WgcNineNineResetPasswordScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "99Food", brandLogoText = "99", brandColor = brandColors[4])
                 }
                 5 -> when (selectedFlow) {
                     0 -> WgcAliExpressLoginScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
                     1 -> WgcAliExpressRegisterScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
-                    else -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
+                    2 -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "AliExpress", brandLogoText = "Ali", brandColor = brandColors[5])
                 }
             }
         }
