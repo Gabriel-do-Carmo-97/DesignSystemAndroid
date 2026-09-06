@@ -1,4 +1,4 @@
-name: Android CI/CD Pipeline
+name: Android CI/CD Pipeline (Enterprise Pro)
 
 on:
   push:
@@ -6,7 +6,13 @@ on:
   pull_request:
     branches: [ "master" ]
 
+permissions:
+  contents: write
+  packages: write
+  pages: write
+
 jobs:
+  # --- 1. VALIDAR TÍTULO DO PR (CONVENTIONAL COMMITS) ---
   semantic-pull-request:
     name: 🏷️ Validate PR Title
     if: github.event_name == 'pull_request'
@@ -25,6 +31,7 @@ jobs:
             chore
           requireScope: false
 
+  # --- 2. DETECTAR MÓDULOS ALTERADOS ---
   detect-changes:
     name: 🔍 Detect Changed Modules
     runs-on: ubuntu-latest
@@ -44,43 +51,89 @@ jobs:
             ds-templates/**
             core-ds/**
 
-  build-and-test:
-    name: 🧪 Build, Test & Lint
+  # --- 3. CÁLCULO DE VERSÃO SEMÂNTICA (SEMVER REAL BASEADA NAS MUDANÇAS) ---
+  calculate-version:
+    name: 🔢 Calculate Semantic Version
     needs: detect-changes
     runs-on: ubuntu-latest
+    outputs:
+      version_name: ${{ steps.semver.outputs.version }}
+      version_tag: v${{ steps.semver.outputs.version }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Calculate SemVer from Commit History
+        id: semver
+        uses: PaulHatch/semantic-version@v5.4.0
+        with:
+          tag_prefix: "v"
+          major_pattern: "(MAJOR)"
+          minor_pattern: "feat"
+          patch_pattern: "fix|refactor"
+          format: "${major}.${minor}.${patch}"
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+  # --- 4. JOBS PARALELOS DE QUALIDADE E BUILD (FEEDBACK RÁPIDO) ---
+  static-analysis:
+    name: 🧹 Detekt & Static Analysis
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Run Detekt Static Analysis
+        run: ./gradlew detekt
 
-      - name: Setup Gradle Cache
-        uses: gradle/actions/setup-gradle@v3
-
-      - name: 🤖 Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Static Analysis, Tests, Screenshot Tests & Assemble AARs
-        run: ./gradlew detekt test validateDebugScreenshotTest assembleDebug assembleRelease
-
-      - name: ⬆️ Upload Debug AARs as Artifacts
-        uses: actions/upload-artifact@v4
+  unit-tests:
+    name: 🧪 Unit Tests
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
         with:
-          name: debug-aars
-          path: |
-            ./design-system/build/outputs/aar/design-system-debug.aar
-            ./ds-templates/build/outputs/aar/ds-templates-debug.aar
-            ./core-ds/build/outputs/aar/core-ds-debug.aar
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Run Unit Tests Across All Modules
+        run: ./gradlew test
 
+  screenshot-tests:
+    name: 📸 Screenshot Tests
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Validate Screenshot Previews Regression
+        run: ./gradlew validateDebugScreenshotTest
+
+  build-aars:
+    name: 📦 Assemble Release AARs
+    needs: [detect-changes, calculate-version]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Assemble Release AARs with SemVer
+        run: ./gradlew assembleRelease -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
       - name: ⬆️ Upload Release AARs as Artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -90,9 +143,32 @@ jobs:
             ./ds-templates/build/outputs/aar/ds-templates-release.aar
             ./core-ds/build/outputs/aar/core-ds-release.aar
 
+  # --- 5. DOCUMENTAÇÃO DOKKA NO GITHUB PAGES ---
+  publish-docs:
+    name: 📚 Publish Dokka Portal to GitHub Pages
+    needs: [detect-changes, static-analysis, unit-tests]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Generate Dokka HTML Docs
+        run: ./gradlew dokkaHtmlMultiModule
+      - name: Deploy Docs to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/dokka/htmlMultiModule
+
+  # --- 6. PUBLICAÇÃO PARALELA DE PACOTES COM VERSÃO SEMÂNTICA ---
   publish-modules:
-    name: 📦 Publish ${{ matrix.module }}
-    needs: [detect-changes, build-and-test]
+    name: 📦 Publish ${{ matrix.module }} (${{ needs.calculate-version.outputs.version_name }})
+    needs: [detect-changes, calculate-version, static-analysis, unit-tests, screenshot-tests, build-aars]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.detect-changes.outputs.any_changed == 'true'
     strategy:
       fail-fast: false
@@ -105,51 +181,33 @@ jobs:
           - module: "ds-templates"
             path_pattern: "ds-templates/"
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
     steps:
-      - name: Checkout repository
+      - uses: actions/checkout@v4
         if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Grant execute permission for gradlew
+      - run: chmod +x gradlew
         if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
-        run: chmod +x gradlew
-
-      - name: Set up JDK 17
+      - uses: actions/setup-java@v4
         if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
-        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Setup Gradle Cache
+      - uses: gradle/actions/setup-gradle@v3
         if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
-        uses: gradle/actions/setup-gradle@v3
-
-      - name: 🤖 Setup Android SDK
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
-        uses: android-actions/setup-android@v3
-
       - name: 📦 Publish ${{ matrix.module }}
         if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :${{ matrix.module }}:publish
+          VERSION_NAME: ${{ needs.calculate-version.outputs.version_name }}
+        run: ./gradlew :${{ matrix.module }}:publish -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
 
+  # --- 7. CRIAR RELEASE NO GITHUB COM CHANGELOG AUTOMÁTICO ---
   release:
-    name: 🏷️ Create Release
-    needs: [detect-changes, build-and-test, publish-modules]
+    name: 🏷️ Create Release (${{ needs.calculate-version.outputs.version_tag }})
+    needs: [detect-changes, calculate-version, publish-modules]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.detect-changes.outputs.any_changed == 'true'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -170,7 +228,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG_NAME="v0.0.${{ github.run_number }}"
+          TAG_NAME="${{ needs.calculate-version.outputs.version_tag }}"
           git tag -a "$TAG_NAME" -m "Release $TAG_NAME"
           git push origin "$TAG_NAME"
           
@@ -178,5 +236,5 @@ jobs:
           
           gh release create "$TAG_NAME" \
             --title "Release $TAG_NAME" \
-            --notes "Release automático. Mudanças detectadas em: ${{ needs.detect-changes.outputs.all_changed_files }}." \
+            --generate-notes \
             $AARS
