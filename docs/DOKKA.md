@@ -3,7 +3,16 @@
 O projeto está configurado com o plugin **Dokka** para gerar documentação em formato HTML/Markdown diretamente a partir dos KDocs do código-fonte.
 
 ## Como gerar a documentação localmente:
-Execute a task do Gradle correspondente:
+
+### Portal consolidado (Multi-Módulo):
+Gera o portal unificado com todos os módulos (`app`, `core-ds`, `design-system`, `ds-templates`):
+```bash
+./gradlew dokkaHtmlMultiModule
+```
+Os arquivos gerados estarão disponíveis na raiz do projeto em:
+`build/dokka/htmlMultiModule/`
+
+### Documentação individual por submódulo:
 ```bash
 ./gradlew dokkaHtml
 ```
