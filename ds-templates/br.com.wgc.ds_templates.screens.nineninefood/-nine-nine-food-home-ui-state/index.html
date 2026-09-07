@@ -1,0 +1,244 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NineNineFoodHomeUiState</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Design-System-WGC
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ds-templates:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ds-templates::br.com.wgc.ds_templates.screens.nineninefood/NineNineFoodHomeUiState///PointingToDeclaration//1590371320">
+  <div class="breadcrumbs"><a href="../../index.html">ds-templates</a><span class="delimiter">/</span><a href="../index.html">br.com.wgc.ds_templates.screens.nineninefood</a><span class="delimiter">/</span><span class="current">NineNineFoodHomeUiState</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Nine</span><wbr><span>Nine</span><wbr><span>Food</span><wbr><span>Home</span><wbr><span>Ui</span><wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">NineNineFoodHomeUiState</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>address<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Av. Paulista, 1000 - Bela Vista"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>searchQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>categories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../design-system/br.com.wgc.design_system.components.nineninefood/-wgc-nine-nine-category-item/index.html">WgcNineNineCategoryItem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcNineNineCategoryItem("1", "Entrega 15m", "⚡", Color(0xFF0B2545)),
+        WgcNineNineCategoryItem("2", "Restaurantes", "🍕", Color(0xFFE3F2FD)),
+        WgcNineNineCategoryItem("3", "Cupons", "🎟️", Color(0xFFFFF8E1)),
+        WgcNineNineCategoryItem("4", "Mercado", "🛒", Color(0xFFE8F5E9)),
+        WgcNineNineCategoryItem("5", "Bebidas", "🥤", Color(0xFFF3E5F5))
+    )<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>restaurants<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-nine-nine-restaurant/index.html">NineNineRestaurant</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        NineNineRestaurant("1", "Pizza Hut", "4.9", "Pizzaria", "15-25 min", "Grátis", "R$ 12 OFF"),
+        NineNineRestaurant("2", "Habib's", "4.6", "Esfiha", "20-30 min", "R$ 3,99", "Frete Grátis"),
+        NineNineRestaurant("3", "China in Box", "4.8", "Chinesa", "25-35 min", "Grátis", "Cupom 20%")
+    )<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hasCartItems<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cartItemCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cartTotal<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"R"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cartRestaurantName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Pizza Hut"</span></span></span><span class="token punctuation">)</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1293968634%2FConstructors%2F1590371320" anchor-label="NineNineFoodHomeUiState" id="1293968634%2FConstructors%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nine-nine-food-home-ui-state.html"><span>Nine</span><wbr><span>Nine</span><wbr><span>Food</span><wbr><span>Home</span><wbr><span>Ui</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293968634%2FConstructors%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">address<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Av. Paulista, 1000 - Bela Vista"</span><span class="token punctuation">, </span></span><span class="parameter ">searchQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">categories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../design-system/br.com.wgc.design_system.components.nineninefood/-wgc-nine-nine-category-item/index.html">WgcNineNineCategoryItem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcNineNineCategoryItem("1", "Entrega 15m", "⚡", Color(0xFF0B2545)),
+        WgcNineNineCategoryItem("2", "Restaurantes", "🍕", Color(0xFFE3F2FD)),
+        WgcNineNineCategoryItem("3", "Cupons", "🎟️", Color(0xFFFFF8E1)),
+        WgcNineNineCategoryItem("4", "Mercado", "🛒", Color(0xFFE8F5E9)),
+        WgcNineNineCategoryItem("5", "Bebidas", "🥤", Color(0xFFF3E5F5))
+    )<span class="token punctuation">, </span></span><span class="parameter ">restaurants<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-nine-nine-restaurant/index.html">NineNineRestaurant</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        NineNineRestaurant("1", "Pizza Hut", "4.9", "Pizzaria", "15-25 min", "Grátis", "R$ 12 OFF"),
+        NineNineRestaurant("2", "Habib's", "4.6", "Esfiha", "20-30 min", "R$ 3,99", "Frete Grátis"),
+        NineNineRestaurant("3", "China in Box", "4.8", "Chinesa", "25-35 min", "Grátis", "Cupom 20%")
+    )<span class="token punctuation">, </span></span><span class="parameter ">hasCartItems<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">cartItemCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span><span class="token punctuation">, </span></span><span class="parameter ">cartTotal<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"R"</span><span class="token punctuation">, </span></span><span class="parameter ">cartRestaurantName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Pizza Hut"</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="994966403%2FProperties%2F1590371320" anchor-label="address" id="994966403%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="address.html"><span><span>address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="994966403%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="address.html">address</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2074400133%2FProperties%2F1590371320" anchor-label="cartItemCount" id="-2074400133%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cart-item-count.html"><span>cart</span><wbr><span>Item</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2074400133%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="cart-item-count.html">cartItemCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-978629477%2FProperties%2F1590371320" anchor-label="cartRestaurantName" id="-978629477%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cart-restaurant-name.html"><span>cart</span><wbr><span>Restaurant</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-978629477%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="cart-restaurant-name.html">cartRestaurantName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="331677427%2FProperties%2F1590371320" anchor-label="cartTotal" id="331677427%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cart-total.html"><span>cart</span><wbr><span><span>Total</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="331677427%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="cart-total.html">cartTotal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-217474649%2FProperties%2F1590371320" anchor-label="categories" id="-217474649%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="categories.html"><span><span>categories</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-217474649%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="categories.html">categories</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../design-system/br.com.wgc.design_system.components.nineninefood/-wgc-nine-nine-category-item/index.html">WgcNineNineCategoryItem</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2118318467%2FProperties%2F1590371320" anchor-label="hasCartItems" id="-2118318467%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-cart-items.html"><span>has</span><wbr><span>Cart</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2118318467%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="has-cart-items.html">hasCartItems</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="194949089%2FProperties%2F1590371320" anchor-label="restaurants" id="194949089%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="restaurants.html"><span><span>restaurants</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="194949089%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="restaurants.html">restaurants</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-nine-nine-restaurant/index.html">NineNineRestaurant</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2107196407%2FProperties%2F1590371320" anchor-label="searchQuery" id="2107196407%2FProperties%2F1590371320" data-filterable-set=":ds-templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":ds-templates:dokkaHtmlPartial/release" data-filterable-set=":ds-templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="search-query.html"><span>search</span><wbr><span><span>Query</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2107196407%2FProperties%2F1590371320"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ds-templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="search-query.html">searchQuery</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
