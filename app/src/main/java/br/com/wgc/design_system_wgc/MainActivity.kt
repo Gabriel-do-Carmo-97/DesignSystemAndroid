@@ -105,7 +105,7 @@ fun DesignSystemCatalogApp() {
     )
 
     Column(modifier = Modifier.fillMaxSize()) {
-        TabRow(selectedTabIndex = primarySection) {
+        PrimaryTabRow(selectedTabIndex = primarySection) {
             primaryTabs.forEachIndexed { index, title ->
                 Tab(
                     selected = primarySection == index,
@@ -116,7 +116,7 @@ fun DesignSystemCatalogApp() {
         }
 
         if (primarySection == 0) {
-            ScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
+            PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
                 componentSubTabs.forEachIndexed { index, title ->
                     Tab(
                         selected = selectedComponentSubTab == index,
@@ -126,7 +126,7 @@ fun DesignSystemCatalogApp() {
                 }
             }
         } else {
-            ScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
+            PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
                 templateSubTabs.forEachIndexed { index, title ->
                     Tab(
                         selected = selectedTemplateSubTab == index,
@@ -376,7 +376,7 @@ fun MultiBrandAuthCatalogSection() {
 
     Column(modifier = Modifier.fillMaxSize()) {
         Text("Escolha a Marca:", style = MaterialTheme.typography.titleMedium)
-        ScrollableTabRow(selectedTabIndex = selectedBrand) {
+        PrimaryScrollableTabRow(selectedTabIndex = selectedBrand) {
             brands.forEachIndexed { index, name ->
                 Tab(selected = selectedBrand == index, onClick = { selectedBrand = index }, text = { Text(name) })
             }
@@ -385,7 +385,7 @@ fun MultiBrandAuthCatalogSection() {
         Spacer(Modifier.height(8.dp))
 
         Text("Escolha o Fluxo:", style = MaterialTheme.typography.titleMedium)
-        ScrollableTabRow(selectedTabIndex = selectedFlow) {
+        PrimaryScrollableTabRow(selectedTabIndex = selectedFlow) {
             flows.forEachIndexed { index, name ->
                 Tab(selected = selectedFlow == index, onClick = { selectedFlow = index }, text = { Text(name) })
             }

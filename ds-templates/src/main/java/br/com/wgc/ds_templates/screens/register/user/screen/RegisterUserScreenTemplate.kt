@@ -32,7 +32,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.shimmerEffect
-import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.ds_templates.screens.register.user.state.RegisterUserScreenUiState
@@ -197,7 +197,7 @@ private fun RegisterUserScreenTemplate(
                 )
                 Spacer(modifier = Modifier.height(24.dp))
 
-                ClassicButton(
+                WgcClassicButton(
                     modifier = Modifier.shimmerEffect(isLoading = state.isLoading),
                     textButton = "Cadastrar",
                     onClick = onRegisterClick,
