@@ -66,3 +66,7 @@ A equipe é liderada por um **Orquestrador Central (Tech Lead / Arquiteto)**, qu
    - Todo componente público DEVE ter `@Preview` para cada variante (Default, Loading, Disabled) e `@PreviewTest` no módulo de screenshot testing.
 5. **Preservação de APIs Públicas:**
    - Nenhuma alteração que quebre compatibilidade reversa deve ser feita sem aprovação explícita do Tech Lead / Orquestrador.
+6. **Arquitetura Universal de Factories, Defaults Sensatos & Slots (Obrigatório para Todos os Componentes e Templates):**
+   - **Factories Unificadas:** Todo componente e todo template deve ser exposto através de uma Factory/ponto de entrada unificado (ex: `WgcButton`, `WgcMenuFactory`, `WgcAuthFactory`, `WgcHomeFactory`).
+   - **Sensible Defaults:** Todo parâmetro da Factory DEVE possuir um valor padrão corporativo sensato. Uma chamada sem parâmetros adicionais (ou apenas com o texto/ViewModel) DEVE funcionar imediatamente no padrão de produção da WGC.
+   - **Decomposição em Componentes & Slots:** Telas e templates NUNCA devem ser blocos monolíticos. Devem sempre ser decompostos em pequenos componentes reutilizáveis e expor slots opcionais (`slot?.invoke() ?: ComponentePadrao()`) para permitir a substituição granular de menus, botões, headers e footers.
