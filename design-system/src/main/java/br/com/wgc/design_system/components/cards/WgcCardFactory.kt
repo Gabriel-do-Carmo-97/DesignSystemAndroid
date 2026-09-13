@@ -1,0 +1,200 @@
+package br.com.wgc.design_system.components.cards
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.core_ds.WgcCoreDsElevation
+import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.components.chip.WgcChip
+import br.com.wgc.design_system.components.ifood.WgcIFoodRestaurantCard
+
+/**
+ * Variantes de cards suportadas pela WgcCardFactory.
+ */
+enum class WgcCardType {
+    ProductDetail,
+    RestaurantCard,
+    StatusCard
+}
+
+/**
+ * Fábrica Universal de Cards do Design System (WgcCardFactory).
+ * Provê alternância imediata entre [WgcCardType] com defaults prontos para produção,
+ * slot de ação granular ([actionSlot]) e substituição total via [customCardSlot].
+ */
+@Composable
+fun WgcCardFactory(
+    modifier: Modifier = Modifier,
+    type: WgcCardType = WgcCardType.ProductDetail,
+    title: String = "Item em Destaque",
+    subtitle: String = "Descrição do item selecionado",
+    price: String = "R$ 29,90",
+    imageUrl: String? = null,
+    badgeText: String? = null,
+    onClick: () -> Unit = {},
+    actionSlot: (@Composable () -> Unit)? = null,
+    customCardSlot: (@Composable () -> Unit)? = null
+) {
+    if (customCardSlot != null) {
+        customCardSlot()
+        return
+    }
+
+    when (type) {
+        WgcCardType.ProductDetail -> {
+            Card(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onClick),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(WgcCoreDsSpacing.md16.dp),
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                ) {
+                    if (badgeText != null) {
+                        WgcChip(label = badgeText, selected = true, onClick = {})
+                    }
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = subtitle,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = price,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        actionSlot?.invoke()
+                    }
+                }
+            }
+        }
+        WgcCardType.RestaurantCard -> {
+            WgcIFoodRestaurantCard(
+                modifier = modifier,
+                name = title,
+                rating = badgeText ?: "4.8",
+                category = subtitle,
+                onClick = onClick
+            )
+        }
+        WgcCardType.StatusCard -> {
+            Card(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onClick),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(WgcCoreDsSpacing.md16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.CheckCircle,
+                        contentDescription = "Status",
+                        tint = MaterialTheme.colorScheme.primary
+                    )
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    ) {
+                        Text(
+                            text = title,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Text(
+                            text = subtitle,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
+                        )
+                        if (badgeText != null) {
+                            Text(
+                                text = badgeText,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
+                    actionSlot?.invoke()
+                }
+            }
+        }
+    }
+}
+
+@Preview(name = "WgcCardFactory - All Variants", showBackground = true)
+@Composable
+private fun WgcCardFactoryPreview() {
+    MaterialTheme {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        ) {
+            WgcCardFactory(
+                type = WgcCardType.ProductDetail,
+                title = "Hambúrguer Artesanal Angus",
+                subtitle = "Pão brioche, 180g de blend angus e queijo cheddar",
+                price = "R$ 38,90",
+                badgeText = "Mais Pedido"
+            )
+
+            WgcCardFactory(
+                type = WgcCardType.RestaurantCard,
+                title = "Outback Steakhouse",
+                subtitle = "Steakhouse & Carnes"
+            )
+
+            WgcCardFactory(
+                type = WgcCardType.StatusCard,
+                title = "Pedido Confirmado",
+                subtitle = "Seu pedido #8392 foi enviado para a cozinha",
+                badgeText = "Previsão: 25-35 min"
+            )
+        }
+    }
+}

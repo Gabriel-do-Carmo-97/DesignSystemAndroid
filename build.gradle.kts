@@ -18,6 +18,7 @@ subprojects {
         extensions.findByName("detekt")?.let {
             val detektExt = it as? io.gitlab.arturbosch.detekt.extensions.DetektExtension
             detektExt?.buildUponDefaultConfig = true
+            detektExt?.config?.setFrom(files("${rootProject.rootDir}/config/detekt/detekt.yml"))
             detektExt?.ignoreFailures = true
         }
     }

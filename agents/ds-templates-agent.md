@@ -59,6 +59,13 @@ Cria e mantém templates de telas, estados de UI (`UiState`), ViewModels abstrat
 
 8. Performance: `remember` para cálculos pesados, `derivedStateOf` para estados derivados, `key` em listas.
 
+9. `Modifier` recebido aplicado uma única vez no elemento raiz.
+
+10. **Arquitetura de Template Factory com Sensible Defaults e Slots:**
+    - Toda tela/fluxo deve ser exposta através de uma Factory (ex: `WgcAuthFactory`, `WgcHomeFactory`).
+    - A Factory DEVE possuir valores padrão para marca, fluxos e menus (`brand = WgcBrand.IFood`, etc.).
+    - A Factory DEVE expor slots opcionais (`slot?.invoke() ?: Default()`) para permitir que o app consumidor substitua facilmente cabeçalho, menu de navegação, botões de ação ou rodapé.
+
 ---
 
 ## 4. Fluxo de Trabalho

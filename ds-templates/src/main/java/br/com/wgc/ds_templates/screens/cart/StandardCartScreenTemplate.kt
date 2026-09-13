@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.list.WgcListItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -71,7 +71,7 @@ fun StandardCartScreenContent(
                         Text("Total:", style = MaterialTheme.typography.titleMedium)
                         Text(state.total, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                     }
-                    ClassicButton(
+                    WgcClassicButton(
                         textButton = "Finalizar Compra",
                         isLoading = state.isLoading,
                         onClick = onCheckoutClick

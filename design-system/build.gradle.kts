@@ -1,5 +1,6 @@
 plugins {
-    id("wgc.android.library")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("maven-publish")
     alias(libs.plugins.screenshot)
@@ -8,6 +9,23 @@ plugins {
 
 android {
     namespace = "br.com.wgc.design_system"
+    compileSdk = 37
+
+    defaultConfig {
+        minSdk = 29
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        }
+    }
 
     buildFeatures {
         compose = true

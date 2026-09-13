@@ -58,6 +58,10 @@ Cria e mantém componentes atômicos (botões, campos, cards, etc.) com state ho
 
 9. `Modifier` recebido aplicado uma única vez no elemento raiz.
 
+10. **Arquitetura de Factory com Sensible Defaults:**
+    - Toda família de componentes deve possuir uma Factory/função unificada (ex: `WgcButton`, `WgcFieldFactory`, `WgcMenuFactory`) com enums de variantes e tamanhos.
+    - Todo parâmetro deve possuir um valor padrão corporativo sensato para que `WgcButton(text = "OK", onClick = { })` funcione imediatamente no padrão primário sem exigir configuração manual.
+
 ---
 
 ## 4. Fluxo de Trabalho

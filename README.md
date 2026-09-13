@@ -1,5 +1,14 @@
 # 🎨 Design System WGC (Android)
 
+[![Android CI/CD](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/actions/workflows/android.yml/badge.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/actions)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Min SDK](https://img.shields.io/badge/minSdk-24-green.svg)
+![Compile SDK](https://img.shields.io/badge/compileSdk-36-brightgreen.svg)
+![Kotlin](https://img.shields.io/badge/kotlin-2.2.0-purple.svg)
+![Detekt](https://img.shields.io/badge/Detekt-Passing-success.svg)
+![SemVer](https://img.shields.io/badge/SemVer-Conventional%20Commits-orange.svg)
+[![Dokka Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/)
+
 Um Design System moderno, modular e escalável construído em **Jetpack Compose** e **Material 3**, seguindo os princípios de **Atomic Design** e arquitetura limpa em Kotlin.
 
 ---
@@ -80,5 +89,15 @@ dependencies {
 
 ---
 
+## 🤖 Governança de Agentes & Documentação
+
+- **Topologia de Agentes:** Consulte [`AGENTS.md`](./AGENTS.md) para diretrizes sobre o Orquestrador Central e os 7 agentes especialistas.
+- **Guia de Contribuição:** Consulte [`CONTRIBUTING.md`](./CONTRIBUTING.md) para padrões de Conventional Commits e validações locais.
+- **Política de Segurança:** Consulte [`SECURITY.md`](./SECURITY.md) para procedimentos de divulgação responsável de vulnerabilidades.
+- **Documentação de API (Dokka):** Consulte [`docs/DOKKA.md`](./docs/DOKKA.md) ou acesse o [Portal Dokka no GitHub Pages](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/).
+
+---
+
 ## 📄 Licença
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+

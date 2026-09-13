@@ -17,19 +17,32 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
+import br.com.wgc.design_system.components.auth.WgcBiometricButton
+import br.com.wgc.design_system.components.auth.WgcBiometricStyle
+import br.com.wgc.design_system.components.auth.WgcSocialLoginPillGroup
 import br.com.wgc.design_system.components.avatar.WgcAvatar
+import br.com.wgc.design_system.components.buttons.WgcButton
+import br.com.wgc.design_system.components.buttons.WgcButtonSize
+import br.com.wgc.design_system.components.buttons.WgcButtonVariant
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcIconButton
+import br.com.wgc.design_system.components.buttons.WgcPillTabSwitch
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
+import br.com.wgc.design_system.components.cards.WgcCardFactory
+import br.com.wgc.design_system.components.cards.WgcCardType
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
+import br.com.wgc.design_system.components.fields.WgcFieldFactory
+import br.com.wgc.design_system.components.fields.WgcFieldType
 import br.com.wgc.design_system.components.ifood.*
 import br.com.wgc.design_system.components.inputs.WgcSlider
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
 import br.com.wgc.design_system.components.mercadolivre.*
+import br.com.wgc.design_system.components.navigation.WgcMenuFactory
+import br.com.wgc.design_system.components.navigation.WgcMenuType
 import br.com.wgc.design_system.components.nineninefood.*
 import br.com.wgc.design_system.components.radio.WgcRadioButton
 import br.com.wgc.design_system.components.story.StoryState
@@ -37,6 +50,13 @@ import br.com.wgc.design_system.components.story.StoryTrayItem
 import br.com.wgc.design_system.components.story.WgcStoryAvatar
 import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
+import br.com.wgc.ds_templates.brand.WgcBrand
+import br.com.wgc.ds_templates.factories.WgcAuthFactory
+import br.com.wgc.ds_templates.factories.WgcAuthFlow
+import br.com.wgc.ds_templates.factories.WgcHomeFactory
+import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.split.WgcSplitCardAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.wave.WgcWaveAuthScreenTemplate
 import br.com.wgc.ds_templates.screens.aliexpress.auth.*
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
@@ -90,22 +110,42 @@ fun DesignSystemCatalogApp() {
     var selectedComponentSubTab by remember { mutableIntStateOf(0) }
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
 
-    val primaryTabs = listOf("🧩 Componentes (:design-system)", "📱 Templates (:ds-templates)")
+    val primaryTabs = listOf(
+        "🎨 Figma (3 Templates)",
+        "🧩 Componentes (:design-system)",
+        "📱 Templates (:ds-templates)",
+        "🏭 Fábricas & Slots"
+    )
+
+    val figmaSubTabs = listOf(
+        "1. Clean Wave Auth",
+        "2. Split Card Auth",
+        "3. Modern Klok Auth"
+    )
+    var selectedFigmaSubTab by remember { mutableIntStateOf(0) }
 
     val componentSubTabs = listOf(
         "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
-        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents"
+        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents",
+        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch"
     )
 
     val templateSubTabs = listOf(
+        "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth",
         "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
         "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
     )
 
+    val factorySubTabs = listOf(
+        "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory"
+    )
+
+    var selectedFactorySubTab by remember { mutableIntStateOf(0) }
+
     Column(modifier = Modifier.fillMaxSize()) {
-        TabRow(selectedTabIndex = primarySection) {
+        PrimaryTabRow(selectedTabIndex = primarySection) {
             primaryTabs.forEachIndexed { index, title ->
                 Tab(
                     selected = primarySection == index,
@@ -115,62 +155,106 @@ fun DesignSystemCatalogApp() {
             }
         }
 
-        if (primarySection == 0) {
-            ScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
-                componentSubTabs.forEachIndexed { index, title ->
-                    Tab(
-                        selected = selectedComponentSubTab == index,
-                        onClick = { selectedComponentSubTab = index },
-                        text = { Text(text = title) }
-                    )
+        when (primarySection) {
+            0 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
+                    figmaSubTabs.forEachIndexed { index, title ->
+                        Tab(
+                            selected = selectedFigmaSubTab == index,
+                            onClick = { selectedFigmaSubTab = index },
+                            text = { Text(text = title, fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
                 }
             }
-        } else {
-            ScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
-                templateSubTabs.forEachIndexed { index, title ->
-                    Tab(
-                        selected = selectedTemplateSubTab == index,
-                        onClick = { selectedTemplateSubTab = index },
-                        text = { Text(text = title) }
-                    )
+            1 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
+                    componentSubTabs.forEachIndexed { index, title ->
+                        Tab(
+                            selected = selectedComponentSubTab == index,
+                            onClick = { selectedComponentSubTab = index },
+                            text = { Text(text = title) }
+                        )
+                    }
+                }
+            }
+            2 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
+                    templateSubTabs.forEachIndexed { index, title ->
+                        Tab(
+                            selected = selectedTemplateSubTab == index,
+                            onClick = { selectedTemplateSubTab = index },
+                            text = { Text(text = title) }
+                        )
+                    }
+                }
+            }
+            3 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
+                    factorySubTabs.forEachIndexed { index, title ->
+                        Tab(
+                            selected = selectedFactorySubTab == index,
+                            onClick = { selectedFactorySubTab = index },
+                            text = { Text(text = title) }
+                        )
+                    }
                 }
             }
         }
 
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-            if (primarySection == 0) {
-                when (selectedComponentSubTab) {
-                    0 -> WgcClassicButtonCatalogSection()
-                    1 -> WgcSecondaryClassicButtonCatalogSection()
-                    2 -> WgcIconButtonCatalogSection()
-                    3 -> WgcSegmentedButtonCatalogSection()
-                    4 -> WgcSwitchCatalogSection()
-                    5 -> WgcRadioButtonCatalogSection()
-                    6 -> WgcChipCatalogSection()
-                    7 -> WgcSliderCatalogSection()
-                    8 -> WgcAlertCatalogSection()
-                    9 -> WgcAvatarCatalogSection()
-                    10 -> WgcListItemCatalogSection()
-                    11 -> WgcStoryAvatarCatalogSection()
-                    12 -> WgcStoryTrayCatalogSection()
-                    13 -> WgcIFoodComponentsCatalogSection()
-                    14 -> WgcNineNineComponentsCatalogSection()
-                    15 -> WgcMercadoLivreComponentsCatalogSection()
+            when (primarySection) {
+                0 -> {
+                    when (selectedFigmaSubTab) {
+                        0 -> WgcWaveAuthScreenTemplate()
+                        1 -> WgcSplitCardAuthScreenTemplate()
+                        2 -> WgcKlokAuthScreenTemplate()
+                    }
                 }
-            } else {
-                when (selectedTemplateSubTab) {
-                    0 -> MultiBrandAuthCatalogSection()
-                    1 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
-                    2 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
-                    3 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
-                    4 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
-                    5 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                    6 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                    7 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                    8 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                    9 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                    10 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                    11 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                1 -> {
+                    when (selectedComponentSubTab) {
+                        0 -> WgcClassicButtonCatalogSection()
+                        1 -> WgcSecondaryClassicButtonCatalogSection()
+                        2 -> WgcIconButtonCatalogSection()
+                        3 -> WgcSegmentedButtonCatalogSection()
+                        4 -> WgcSwitchCatalogSection()
+                        5 -> WgcRadioButtonCatalogSection()
+                        6 -> WgcChipCatalogSection()
+                        7 -> WgcSliderCatalogSection()
+                        8 -> WgcAlertCatalogSection()
+                        9 -> WgcAvatarCatalogSection()
+                        10 -> WgcListItemCatalogSection()
+                        11 -> WgcStoryAvatarCatalogSection()
+                        12 -> WgcStoryTrayCatalogSection()
+                        13 -> WgcIFoodComponentsCatalogSection()
+                        14 -> WgcNineNineComponentsCatalogSection()
+                        15 -> WgcMercadoLivreComponentsCatalogSection()
+                        16 -> WgcBiometricButtonCatalogSection()
+                        17 -> WgcSocialLoginPillCatalogSection()
+                        18 -> WgcPillTabSwitchCatalogSection()
+                    }
+                }
+                2 -> {
+                    when (selectedTemplateSubTab) {
+                        0 -> WgcWaveAuthScreenTemplate()
+                        1 -> WgcSplitCardAuthScreenTemplate()
+                        2 -> WgcKlokAuthScreenTemplate()
+                        3 -> MultiBrandAuthCatalogSection()
+                        4 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
+                        5 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                        6 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                        7 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
+                        8 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                        9 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                        10 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                        11 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                        12 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                        13 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                        14 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                    }
+                }
+                3 -> {
+                    WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
                 }
             }
         }
@@ -376,7 +460,7 @@ fun MultiBrandAuthCatalogSection() {
 
     Column(modifier = Modifier.fillMaxSize()) {
         Text("Escolha a Marca:", style = MaterialTheme.typography.titleMedium)
-        ScrollableTabRow(selectedTabIndex = selectedBrand) {
+        PrimaryScrollableTabRow(selectedTabIndex = selectedBrand) {
             brands.forEachIndexed { index, name ->
                 Tab(selected = selectedBrand == index, onClick = { selectedBrand = index }, text = { Text(name) })
             }
@@ -385,7 +469,7 @@ fun MultiBrandAuthCatalogSection() {
         Spacer(Modifier.height(8.dp))
 
         Text("Escolha o Fluxo:", style = MaterialTheme.typography.titleMedium)
-        ScrollableTabRow(selectedTabIndex = selectedFlow) {
+        PrimaryScrollableTabRow(selectedTabIndex = selectedFlow) {
             flows.forEachIndexed { index, name ->
                 Tab(selected = selectedFlow == index, onClick = { selectedFlow = index }, text = { Text(name) })
             }
@@ -430,6 +514,320 @@ fun MultiBrandAuthCatalogSection() {
                     1 -> WgcAliExpressRegisterScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
                     2 -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
                     else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "AliExpress", brandLogoText = "Ali", brandColor = brandColors[5])
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun WgcBiometricButtonCatalogSection() {
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcBiometricButton (Autenticação por Impressão Digital)", style = MaterialTheme.typography.titleLarge)
+        Text("1. Estilo Circular (Template 1 Figma):")
+        WgcBiometricButton(label = "Login with touch", style = WgcBiometricStyle.Circular)
+
+        Text("2. Estilo Rounded Square (Template 2 Figma):")
+        WgcBiometricButton(label = "Login with touch ID", style = WgcBiometricStyle.RoundedSquare)
+
+        Text("3. Estilo Outlined Square (Template 3 Klok Figma):")
+        WgcBiometricButton(
+            label = "Login with touch ID",
+            style = WgcBiometricStyle.OutlinedSquare,
+            borderColor = Color(0xFFFFA000)
+        )
+    }
+}
+
+@Composable
+fun WgcSocialLoginPillCatalogSection() {
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcSocialLoginPillButton (Botões Sociais em Barra - Template 3 Figma)", style = MaterialTheme.typography.titleLarge)
+        WgcSocialLoginPillGroup()
+    }
+}
+
+@Composable
+fun WgcPillTabSwitchCatalogSection() {
+    var selectedTab by remember { mutableIntStateOf(0) }
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcPillTabSwitch (Seletor Dual-Pill - Template 3 Figma)", style = MaterialTheme.typography.titleLarge)
+        WgcPillTabSwitch(
+            selectedIndex = selectedTab,
+            onTabSelected = { selectedTab = it },
+            tabs = listOf("Login", "Register")
+        )
+    }
+}
+
+@Composable
+fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        when (selectedSubTab) {
+            0 -> {
+                Text("WgcButton - Fábrica Universal de Botões", style = MaterialTheme.typography.titleLarge)
+                Text(
+                    "Ponto de entrada unificado para botões do Design System com defaults de produção e variações por enum.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Text("1. Padrão Absoluto (Zero Parâmetros):", style = MaterialTheme.typography.titleSmall)
+                WgcButton()
+
+                Text("2. Variantes:", style = MaterialTheme.typography.titleSmall)
+                WgcButton(text = "Primary (Default)", variant = WgcButtonVariant.Primary)
+                WgcButton(text = "Secondary", variant = WgcButtonVariant.Secondary)
+                WgcButton(text = "Outlined", variant = WgcButtonVariant.Outlined)
+                WgcButton(text = "Ghost", variant = WgcButtonVariant.Ghost)
+                WgcButton(text = "Danger", variant = WgcButtonVariant.Danger)
+
+                Text("3. Tamanhos:", style = MaterialTheme.typography.titleSmall)
+                WgcButton(text = "Small (36dp)", size = WgcButtonSize.Small)
+                WgcButton(text = "Medium (56dp - Default)", size = WgcButtonSize.Medium)
+                WgcButton(text = "Large (64dp)", size = WgcButtonSize.Large)
+
+                Text("4. Estado de Carregamento:", style = MaterialTheme.typography.titleSmall)
+                WgcButton(text = "Processando...", isLoading = true)
+            }
+            1 -> {
+                var menuIndex by remember { mutableIntStateOf(0) }
+                Text("WgcMenuFactory - Fábrica Universal de Navegação", style = MaterialTheme.typography.titleLarge)
+                Text(
+                    "Alternância rápida entre estilos de menu com defaults de produção e suporte a custom slot.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+
+                Text("1. ClassicBottomBar (Padrão):", style = MaterialTheme.typography.titleSmall)
+                WgcMenuFactory(
+                    type = WgcMenuType.ClassicBottomBar,
+                    selectedIndex = menuIndex,
+                    onItemSelected = { menuIndex = it }
+                )
+
+                Spacer(Modifier.height(8.dp))
+                Text("2. FloatingPill:", style = MaterialTheme.typography.titleSmall)
+                WgcMenuFactory(
+                    type = WgcMenuType.FloatingPill,
+                    selectedIndex = menuIndex,
+                    onItemSelected = { menuIndex = it }
+                )
+
+                Spacer(Modifier.height(8.dp))
+                Text("3. CollapsibleHeader / Tabs:", style = MaterialTheme.typography.titleSmall)
+                WgcMenuFactory(
+                    type = WgcMenuType.CollapsibleHeader,
+                    selectedIndex = menuIndex,
+                    onItemSelected = { menuIndex = it }
+                )
+            }
+            2 -> {
+                var textInput by remember { mutableStateOf("") }
+                var passwordInput by remember { mutableStateOf("") }
+                var otpInput by remember { mutableStateOf("") }
+
+                Text("WgcFieldFactory - Fábrica Universal de Campos", style = MaterialTheme.typography.titleLarge)
+                Text("Campos padronizados com defaults e tipagem via enum:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("1. Standard (Padrão):", style = MaterialTheme.typography.titleSmall)
+                WgcFieldFactory(
+                    type = WgcFieldType.Standard,
+                    value = textInput,
+                    onValueChange = { textInput = it },
+                    label = "Nome Completo",
+                    placeholderText = "Digite seu nome..."
+                )
+
+                Text("2. Search:", style = MaterialTheme.typography.titleSmall)
+                WgcFieldFactory(
+                    type = WgcFieldType.Search,
+                    value = textInput,
+                    onValueChange = { textInput = it },
+                    placeholderText = "Buscar no aplicativo..."
+                )
+
+                Text("3. Password:", style = MaterialTheme.typography.titleSmall)
+                WgcFieldFactory(
+                    type = WgcFieldType.Password,
+                    value = passwordInput,
+                    onValueChange = { passwordInput = it }
+                )
+
+                Text("4. OtpCode (6 dígitos):", style = MaterialTheme.typography.titleSmall)
+                WgcFieldFactory(
+                    type = WgcFieldType.OtpCode,
+                    value = otpInput,
+                    onValueChange = { otpInput = it }
+                )
+            }
+            3 -> {
+                var customSlotEnabled by remember { mutableStateOf(false) }
+                Text("WgcCardFactory - Fábrica Universal de Cards", style = MaterialTheme.typography.titleLarge)
+                Text("Cards prontos para catálogo com slots customizáveis:", style = MaterialTheme.typography.bodyMedium)
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = customSlotEnabled,
+                        onCheckedChange = { customSlotEnabled = it }
+                    )
+                    Text("Injetar Slot de Ação Customizado")
+                }
+
+                Text("1. ProductDetail (Padrão):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(
+                    type = WgcCardType.ProductDetail,
+                    title = "Pizza Especial Quatro Queijos",
+                    subtitle = "Massa fina artesanal, molho pelati e queijos nobres",
+                    price = "R$ 64,90",
+                    badgeText = "Destaque da Semana",
+                    actionSlot = if (customSlotEnabled) {
+                        {
+                            WgcButton(
+                                text = "Adicionar",
+                                size = WgcButtonSize.Small,
+                                modifier = Modifier.width(120.dp)
+                            )
+                        }
+                    } else null
+                )
+
+                Text("2. RestaurantCard:", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(
+                    type = WgcCardType.RestaurantCard,
+                    title = "Churrascaria Fogo Nobre",
+                    subtitle = "Carnes nobres & Grelhados"
+                )
+
+                Text("3. StatusCard:", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(
+                    type = WgcCardType.StatusCard,
+                    title = "Pedido em Preparo",
+                    subtitle = "O restaurante confirmou seu pedido #1042",
+                    badgeText = "15-25 min",
+                    actionSlot = if (customSlotEnabled) {
+                        {
+                            WgcButton(
+                                text = "Rastrear",
+                                variant = WgcButtonVariant.Outlined,
+                                size = WgcButtonSize.Small,
+                                modifier = Modifier.width(110.dp)
+                            )
+                        }
+                    } else null
+                )
+            }
+            4 -> {
+                var authBrandIndex by remember { mutableIntStateOf(0) }
+                var authFlowIndex by remember { mutableIntStateOf(0) }
+                var overrideHeaderSlot by remember { mutableStateOf(false) }
+
+                val brands = WgcBrand.entries
+                val flows = WgcAuthFlow.entries
+
+                Text("WgcAuthFactory - Fábrica Universal de Autenticação", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne marca e fluxo instantaneamente com defaults completos:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Marca:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = authBrandIndex) {
+                    brands.forEachIndexed { idx, b ->
+                        Tab(
+                            selected = authBrandIndex == idx,
+                            onClick = { authBrandIndex = idx },
+                            text = { Text(b.brandName) }
+                        )
+                    }
+                }
+
+                Text("Fluxo:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = authFlowIndex) {
+                    flows.forEachIndexed { idx, f ->
+                        Tab(
+                            selected = authFlowIndex == idx,
+                            onClick = { authFlowIndex = idx },
+                            text = { Text(f.name) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideHeaderSlot,
+                        onCheckedChange = { overrideHeaderSlot = it }
+                    )
+                    Text("Substituir Header via Slot Customizado")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(480.dp)) {
+                    WgcAuthFactory(
+                        brand = brands[authBrandIndex],
+                        flow = flows[authFlowIndex],
+                        headerSlot = if (overrideHeaderSlot) {
+                            {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.primaryContainer,
+                                    shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                ) {
+                                    Text(
+                                        text = "🎯 HEADER INJETADO VIA SLOT NO ${brands[authBrandIndex].brandName.uppercase()}",
+                                        modifier = Modifier.padding(16.dp),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold
+                                    )
+                                }
+                            }
+                        } else null
+                    )
+                }
+            }
+            5 -> {
+                var homeBrandIndex by remember { mutableIntStateOf(0) }
+                var overrideBottomNav by remember { mutableStateOf(false) }
+                val brands = WgcBrand.entries
+
+                Text("WgcHomeFactory - Fábrica Universal de Home", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne telas Home completas simplesmente escolhendo a marca:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Marca:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = homeBrandIndex) {
+                    brands.forEachIndexed { idx, b ->
+                        Tab(
+                            selected = homeBrandIndex == idx,
+                            onClick = { homeBrandIndex = idx },
+                            text = { Text(b.brandName) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideBottomNav,
+                        onCheckedChange = { overrideBottomNav = it }
+                    )
+                    Text("Substituir BottomBar por FloatingPill via Slot")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcHomeFactory(
+                        brand = brands[homeBrandIndex],
+                        bottomNavSlot = if (overrideBottomNav) {
+                            {
+                                WgcMenuFactory(type = WgcMenuType.FloatingPill)
+                            }
+                        } else null
+                    )
                 }
             }
         }

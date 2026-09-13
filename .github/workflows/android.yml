@@ -1,4 +1,4 @@
-name: Android CI/CD Pipeline (Enterprise Pro)
+name: Android CI/CD Pipeline (Hypergranular Pro)
 
 on:
   push:
@@ -38,20 +38,29 @@ jobs:
     outputs:
       any_changed: ${{ steps.changed_modules.outputs.any_changed }}
       all_changed_files: ${{ steps.changed_modules.outputs.all_changed_files }}
+      core_ds: ${{ steps.changed_modules.outputs.core_ds_any_changed }}
+      design_system: ${{ steps.changed_modules.outputs.design_system_any_changed }}
+      ds_templates: ${{ steps.changed_modules.outputs.ds_templates_any_changed }}
+      app: ${{ steps.changed_modules.outputs.app_any_changed }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Detect changes
+      - name: Detect changes per module
         id: changed_modules
         uses: tj-actions/changed-files@v47
         with:
-          files: |
-            design-system/**
-            ds-templates/**
-            core-ds/**
+          files_yaml: |
+            core_ds:
+              - core-ds/**
+            design_system:
+              - design-system/**
+            ds_templates:
+              - ds-templates/**
+            app:
+              - app/**
 
-  # --- 3. CÁLCULO DE VERSÃO SEMÂNTICA (SEMVER REAL BASEADA NAS MUDANÇAS) ---
+  # --- 3. CÁLCULO DE VERSÃO SEMÂNTICA (SEMVER REAL) ---
   calculate-version:
     name: 🔢 Calculate Semantic Version
     needs: detect-changes
@@ -63,7 +72,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Calculate SemVer from Commit History
         id: semver
         uses: PaulHatch/semantic-version@v5.4.0
@@ -74,11 +82,23 @@ jobs:
           bump_each_commit_patch_pattern: "fix|refactor"
           version_format: "${major}.${minor}.${patch}"
 
-  # --- 4. JOBS PARALELOS DE QUALIDADE E BUILD (FEEDBACK RÁPIDO) ---
-  static-analysis:
-    name: 🧹 Detekt & Static Analysis
+  # --- 4. QUALIDADE HIPERGRANULAR: DETEKT POR MÓDULO (PARALELO) ---
+  detekt-matrix:
+    name: 🧹 Detekt [:${{ matrix.module }}]
     needs: detect-changes
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - module: "core-ds"
+            filter: "core_ds"
+          - module: "design-system"
+            filter: "design_system"
+          - module: "ds-templates"
+            filter: "ds_templates"
+          - module: "app"
+            filter: "app"
     steps:
       - uses: actions/checkout@v4
       - run: chmod +x gradlew
@@ -87,13 +107,22 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
-      - name: Run Detekt Static Analysis
-        run: ./gradlew detekt
+      - name: Run Detekt on ${{ matrix.module }}
+        run: ./gradlew :${{ matrix.module }}:detekt
 
-  unit-tests:
-    name: 🧪 Unit Tests
+  # --- 5. TESTES HIPERGRANULARES: TESTES UNITÁRIOS POR MÓDULO (PARALELO) ---
+  unit-tests-matrix:
+    name: 🧪 Tests [:${{ matrix.module }}]
     needs: detect-changes
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - module: "core-ds"
+          - module: "design-system"
+          - module: "ds-templates"
+          - module: "app"
     steps:
       - uses: actions/checkout@v4
       - run: chmod +x gradlew
@@ -102,11 +131,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
-      - name: Run Unit Tests Across All Modules
-        run: ./gradlew test
+      - name: Run Unit Tests for ${{ matrix.module }}
+        run: ./gradlew :${{ matrix.module }}:testDebugUnitTest
 
+  # --- 6. REGRESSÃO VISUAL: SCREENSHOT TESTS ---
   screenshot-tests:
-    name: 📸 Screenshot Tests
+    name: 📸 Screenshot Tests [:app]
     needs: detect-changes
     runs-on: ubuntu-latest
     steps:
@@ -121,8 +151,43 @@ jobs:
         continue-on-error: true
         run: ./gradlew validateDebugScreenshotTest
 
-  build-aars:
-    name: 📦 Assemble Release AARs
+  # --- 7. BUILD HIPERGRANULAR: ASSEMBLE RELEASE POR BIBLIOTECA (PARALELO) ---
+  build-aars-matrix:
+    name: 📦 Assemble [:${{ matrix.module }}]
+    needs: [detect-changes, calculate-version]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - module: "core-ds"
+            task: "assembleRelease"
+            artifact_path: "core-ds/build/outputs/aar/core-ds-release.aar"
+          - module: "design-system"
+            task: "assembleRelease"
+            artifact_path: "design-system/build/outputs/aar/design-system-release.aar"
+          - module: "ds-templates"
+            task: "assembleRelease"
+            artifact_path: "ds-templates/build/outputs/aar/ds-templates-release.aar"
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Assemble ${{ matrix.module }}
+        run: ./gradlew :${{ matrix.module }}:${{ matrix.task }} -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
+      - name: Upload ${{ matrix.module }} AAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: aar-${{ matrix.module }}
+          path: ${{ matrix.artifact_path }}
+
+  # --- 8. BUILD DO APP DE CATÁLOGO (APK DEBUG) ---
+  build-catalog-app:
+    name: 📱 Assemble Catalog App
     needs: [detect-changes, calculate-version]
     runs-on: ubuntu-latest
     steps:
@@ -133,21 +198,18 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
-      - name: Assemble Release AARs with SemVer
-        run: ./gradlew assembleRelease -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
-      - name: ⬆️ Upload Release AARs as Artifacts
+      - name: Assemble Catalog App Debug APK
+        run: ./gradlew :app:assembleDebug
+      - name: Upload Catalog APK
         uses: actions/upload-artifact@v4
         with:
-          name: release-aars
-          path: |
-            ./design-system/build/outputs/aar/design-system-release.aar
-            ./ds-templates/build/outputs/aar/ds-templates-release.aar
-            ./core-ds/build/outputs/aar/core-ds-release.aar
+          name: catalog-app-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
 
-  # --- 5. DOCUMENTAÇÃO DOKKA NO GITHUB PAGES ---
+  # --- 9. DOCUMENTAÇÃO DOKKA NO GITHUB PAGES ---
   publish-docs:
     name: 📚 Publish Dokka Portal to GitHub Pages
-    needs: [detect-changes, static-analysis, unit-tests]
+    needs: [detect-changes, detekt-matrix, unit-tests-matrix]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -166,10 +228,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/dokka/htmlMultiModule
 
-  # --- 6. PUBLICAÇÃO PARALELA DE PACOTES COM VERSÃO SEMÂNTICA ---
+  # --- 10. PUBLICAÇÃO HIPERGRANULAR: PUBLICAR APENAS MÓDULOS ALTERADOS ---
   publish-modules:
-    name: 📦 Publish ${{ matrix.module }} (${{ needs.calculate-version.outputs.version_name }})
-    needs: [detect-changes, calculate-version, static-analysis, unit-tests, screenshot-tests, build-aars]
+    name: 🚀 Publish [:${{ matrix.module }}] (${{ needs.calculate-version.outputs.version_name }})
+    needs: [detect-changes, calculate-version, detekt-matrix, unit-tests-matrix, screenshot-tests, build-aars-matrix]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.detect-changes.outputs.any_changed == 'true'
     strategy:
       fail-fast: false
@@ -201,7 +263,7 @@ jobs:
           VERSION_NAME: ${{ needs.calculate-version.outputs.version_name }}
         run: ./gradlew :${{ matrix.module }}:publish -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
 
-  # --- 7. CRIAR RELEASE NO GITHUB COM CHANGELOG AUTOMÁTICO ---
+  # --- 11. CRIAR RELEASE NO GITHUB COM TODOS OS AARS PUBLICADOS ---
   release:
     name: 🏷️ Create Release (${{ needs.calculate-version.outputs.version_tag }})
     needs: [detect-changes, calculate-version, publish-modules]
@@ -212,10 +274,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download Release AAR Artifacts
+      - name: Download core-ds AAR
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
-          name: release-aars
+          name: aar-core-ds
+          path: release-aars/
+
+      - name: Download design-system AAR
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: aar-design-system
+          path: release-aars/
+
+      - name: Download ds-templates AAR
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: aar-ds-templates
           path: release-aars/
 
       - name: Configure GitHub Access

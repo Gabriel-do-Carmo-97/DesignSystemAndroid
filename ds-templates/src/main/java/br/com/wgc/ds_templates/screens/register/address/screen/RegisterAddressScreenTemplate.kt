@@ -33,7 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.components.buttons.ClassicButton
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.ds_templates.screens.register.address.state.RegisterAddressScreenUiState
 import br.com.wgc.ds_templates.screens.register.address.viewmodel.BaseRegisterAddressScreenTemplateViewModel
@@ -207,7 +207,7 @@ private fun RegisterAddressScreenTemplateStateless(
                 )
                 Spacer(modifier = Modifier.height(32.dp))
 
-                ClassicButton(
+                WgcClassicButton(
                     textButton = "Salvar",
                     onClick = onRegisterClick,
                     isEnabled = state.isRegisterButtonEnabled,
