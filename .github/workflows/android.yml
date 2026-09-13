@@ -36,8 +36,7 @@ jobs:
     name: 🔍 Detect Changed Modules
     runs-on: ubuntu-latest
     outputs:
-      any_changed: ${{ steps.changed_modules.outputs.any_changed }}
-      all_changed_files: ${{ steps.changed_modules.outputs.all_changed_files }}
+      any_changed: ${{ steps.changed_modules.outputs.core_ds_any_changed == 'true' || steps.changed_modules.outputs.design_system_any_changed == 'true' || steps.changed_modules.outputs.ds_templates_any_changed == 'true' || steps.changed_modules.outputs.app_any_changed == 'true' }}
       core_ds: ${{ steps.changed_modules.outputs.core_ds_any_changed }}
       design_system: ${{ steps.changed_modules.outputs.design_system_any_changed }}
       ds_templates: ${{ steps.changed_modules.outputs.ds_templates_any_changed }}
@@ -232,32 +231,32 @@ jobs:
   publish-modules:
     name: 🚀 Publish [:${{ matrix.module }}] (${{ needs.calculate-version.outputs.version_name }})
     needs: [detect-changes, calculate-version, detekt-matrix, unit-tests-matrix, screenshot-tests, build-aars-matrix]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.detect-changes.outputs.any_changed == 'true'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     strategy:
       fail-fast: false
       matrix:
         include:
           - module: "core-ds"
-            path_pattern: "core-ds/"
+            key: "core_ds"
           - module: "design-system"
-            path_pattern: "design-system/"
+            key: "design_system"
           - module: "ds-templates"
-            path_pattern: "ds-templates/"
+            key: "ds_templates"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
+        if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
       - run: chmod +x gradlew
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
+        if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
       - uses: actions/setup-java@v4
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
+        if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
         with:
           java-version: '17'
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
+        if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
       - name: 📦 Publish ${{ matrix.module }}
-        if: contains(needs.detect-changes.outputs.all_changed_files, matrix.path_pattern)
+        if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION_NAME: ${{ needs.calculate-version.outputs.version_name }}
@@ -267,7 +266,7 @@ jobs:
   release:
     name: 🏷️ Create Release (${{ needs.calculate-version.outputs.version_tag }})
     needs: [detect-changes, calculate-version, publish-modules]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.detect-changes.outputs.any_changed == 'true'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
