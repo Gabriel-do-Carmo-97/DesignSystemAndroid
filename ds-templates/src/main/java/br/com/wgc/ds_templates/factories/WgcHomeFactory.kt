@@ -60,7 +60,8 @@ fun WgcHomeFactory(
             WgcBrand.NineNineFood -> NineNineFoodHomeScreenTemplate(FakeNineNineFoodHomeViewModel())
             WgcBrand.Uber,
             WgcBrand.Shopee,
-            WgcBrand.AliExpress -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
+            WgcBrand.AliExpress,
+            WgcBrand.Klok -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
         }
         return
     }

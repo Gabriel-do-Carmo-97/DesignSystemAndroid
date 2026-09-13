@@ -39,5 +39,10 @@ enum class WgcBrand(
         brandName = "AliExpress",
         brandLogoText = "Ali",
         primaryColor = Color(0xFFFF4747)
+    ),
+    Klok(
+        brandName = "KLOK",
+        brandLogoText = "KLOK",
+        primaryColor = Color(0xFFFF9800)
     )
 }

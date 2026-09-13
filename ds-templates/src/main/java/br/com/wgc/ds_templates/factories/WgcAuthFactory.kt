@@ -47,6 +47,7 @@ import br.com.wgc.ds_templates.screens.uber.auth.FakeUberAuthViewModel
 import br.com.wgc.ds_templates.screens.uber.auth.WgcUberLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.uber.auth.WgcUberRegisterScreenTemplate
 import br.com.wgc.ds_templates.screens.uber.auth.WgcUberResetPasswordScreenTemplate
+import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
 
 /**
  * Fluxos de autenticação disponíveis nas fábricas.
@@ -135,6 +136,11 @@ fun WgcAuthFactory(
                     WgcAuthFlow.ResetPassword,
                     WgcAuthFlow.OtpVerification -> WgcAliExpressResetPasswordScreenTemplate(vm, onNavigateToLogin)
                 }
+            }
+            WgcBrand.Klok -> {
+                WgcKlokAuthScreenTemplate(
+                    onNavigateToForgotPassword = onNavigateToResetPassword
+                )
             }
         }
         return

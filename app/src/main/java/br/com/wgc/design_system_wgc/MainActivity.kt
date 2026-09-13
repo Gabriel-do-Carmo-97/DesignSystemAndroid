@@ -50,6 +50,9 @@ import br.com.wgc.ds_templates.brand.WgcBrand
 import br.com.wgc.ds_templates.factories.WgcAuthFactory
 import br.com.wgc.ds_templates.factories.WgcAuthFlow
 import br.com.wgc.ds_templates.factories.WgcHomeFactory
+import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.split.WgcSplitCardAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.wave.WgcWaveAuthScreenTemplate
 import br.com.wgc.ds_templates.screens.aliexpress.auth.*
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
@@ -114,7 +117,8 @@ fun DesignSystemCatalogApp() {
     val templateSubTabs = listOf(
         "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
-        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
+        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login",
+        "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth"
     )
 
     val factorySubTabs = listOf(
@@ -206,6 +210,9 @@ fun DesignSystemCatalogApp() {
                     9 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
                     10 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
                     11 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                    12 -> WgcWaveAuthScreenTemplate()
+                    13 -> WgcSplitCardAuthScreenTemplate()
+                    14 -> WgcKlokAuthScreenTemplate()
                 }
             }
             2 -> {
