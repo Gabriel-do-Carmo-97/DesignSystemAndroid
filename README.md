@@ -33,10 +33,10 @@ O projeto é estritamente modularizado para garantir desacoplamento, reuso e ind
 └───────────────┘
 ```
 
-- **`:core-ds`**: Camada fundamental contendo todos os **Tokens de Design** (cores primitivas e semânticas, espaçamentos, tamanhos e raios de borda).
-- **`:design-system`**: Biblioteca de componentes atômicos e moleculares reutilizáveis em Jetpack Compose (`ClassicButton`, `SimpleTextField`, `CheckBoxDefault`, etc.), totalmente acessíveis e com suporte a *Screenshot Tests*.
-- **`:ds-templates`**: Biblioteca de templates de telas e fluxos completos (Login, Cadastros, Recuperação de Senha) seguindo o padrão `UiState` + `BaseViewModel` + `FakeViewModel`.
-- **`:app`**: Aplicativo de Catálogo Interativo (*Storybook*) para visualizar e testar componentes e estados em tempo de execução.
+- **[`:core-ds`](./core-ds/README.md)**: Camada fundamental contendo todos os **Tokens de Design** (cores primitivas e semânticas, espaçamentos, tamanhos e raios de borda). 👉 [Docs no GitHub Pages](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/core-ds/)
+- **[`:design-system`](./design-system/README.md)**: Biblioteca de componentes atômicos e moleculares reutilizáveis em Jetpack Compose (`ClassicButton`, `WgcBiometricButton`, `WgcPillTabSwitch`, etc.), totalmente acessíveis e com suporte a *Screenshot Tests*. 👉 [Docs no GitHub Pages](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/design-system/)
+- **[`:ds-templates`](./ds-templates/README.md)**: Biblioteca de telas completas, fluxos e **Fábricas Universais** (`WgcAuthFactory`, `WgcHomeFactory`), incluindo os novos templates de login do Figma. 👉 [Docs no GitHub Pages](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-templates/)
+- **[`:app`](./app/README.md)**: Aplicativo de Catálogo Interativo (*Storybook*) para visualizar e testar componentes e estados em tempo de execução.
 
 ---
 
