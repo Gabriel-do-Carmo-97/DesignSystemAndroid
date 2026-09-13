@@ -61,7 +61,9 @@ fun WgcHomeFactory(
             WgcBrand.Uber,
             WgcBrand.Shopee,
             WgcBrand.AliExpress,
-            WgcBrand.Klok -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
+            WgcBrand.Klok,
+            WgcBrand.CleanWave,
+            WgcBrand.SplitCard -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
         }
         return
     }

@@ -48,6 +48,8 @@ import br.com.wgc.ds_templates.screens.uber.auth.WgcUberLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.uber.auth.WgcUberRegisterScreenTemplate
 import br.com.wgc.ds_templates.screens.uber.auth.WgcUberResetPasswordScreenTemplate
 import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.split.WgcSplitCardAuthScreenTemplate
+import br.com.wgc.ds_templates.screens.community.wave.WgcWaveAuthScreenTemplate
 
 /**
  * Fluxos de autenticação disponíveis nas fábricas.
@@ -139,6 +141,16 @@ fun WgcAuthFactory(
             }
             WgcBrand.Klok -> {
                 WgcKlokAuthScreenTemplate(
+                    onNavigateToForgotPassword = onNavigateToResetPassword
+                )
+            }
+            WgcBrand.CleanWave -> {
+                WgcWaveAuthScreenTemplate(
+                    onNavigateToForgotPassword = onNavigateToResetPassword
+                )
+            }
+            WgcBrand.SplitCard -> {
+                WgcSplitCardAuthScreenTemplate(
                     onNavigateToForgotPassword = onNavigateToResetPassword
                 )
             }

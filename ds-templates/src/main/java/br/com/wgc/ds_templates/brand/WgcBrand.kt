@@ -44,5 +44,15 @@ enum class WgcBrand(
         brandName = "KLOK",
         brandLogoText = "KLOK",
         primaryColor = Color(0xFFFF9800)
+    ),
+    CleanWave(
+        brandName = "Clean Wave",
+        brandLogoText = "Wave",
+        primaryColor = Color(0xFF1976D2)
+    ),
+    SplitCard(
+        brandName = "Split Card",
+        brandLogoText = "Split",
+        primaryColor = Color(0xFF0288D1)
     )
 }

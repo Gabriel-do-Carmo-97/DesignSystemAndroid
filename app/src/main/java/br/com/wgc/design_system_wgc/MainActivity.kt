@@ -17,12 +17,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
+import br.com.wgc.design_system.components.auth.WgcBiometricButton
+import br.com.wgc.design_system.components.auth.WgcBiometricStyle
+import br.com.wgc.design_system.components.auth.WgcSocialLoginPillGroup
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.components.buttons.WgcButtonSize
 import br.com.wgc.design_system.components.buttons.WgcButtonVariant
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcIconButton
+import br.com.wgc.design_system.components.buttons.WgcPillTabSwitch
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
 import br.com.wgc.design_system.components.cards.WgcCardFactory
@@ -106,19 +110,32 @@ fun DesignSystemCatalogApp() {
     var selectedComponentSubTab by remember { mutableIntStateOf(0) }
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
 
-    val primaryTabs = listOf("🧩 Componentes (:design-system)", "📱 Templates (:ds-templates)", "🏭 Fábricas & Slots")
+    val primaryTabs = listOf(
+        "🎨 Figma (3 Templates)",
+        "🧩 Componentes (:design-system)",
+        "📱 Templates (:ds-templates)",
+        "🏭 Fábricas & Slots"
+    )
+
+    val figmaSubTabs = listOf(
+        "1. Clean Wave Auth",
+        "2. Split Card Auth",
+        "3. Modern Klok Auth"
+    )
+    var selectedFigmaSubTab by remember { mutableIntStateOf(0) }
 
     val componentSubTabs = listOf(
         "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
-        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents"
+        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents",
+        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch"
     )
 
     val templateSubTabs = listOf(
+        "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth",
         "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
-        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login",
-        "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth"
+        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
     )
 
     val factorySubTabs = listOf(
@@ -140,6 +157,17 @@ fun DesignSystemCatalogApp() {
 
         when (primarySection) {
             0 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
+                    figmaSubTabs.forEachIndexed { index, title ->
+                        Tab(
+                            selected = selectedFigmaSubTab == index,
+                            onClick = { selectedFigmaSubTab = index },
+                            text = { Text(text = title, fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            1 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
                     componentSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -150,7 +178,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            1 -> {
+            2 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
                     templateSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -161,7 +189,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            2 -> {
+            3 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
                     factorySubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -177,50 +205,60 @@ fun DesignSystemCatalogApp() {
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             when (primarySection) {
                 0 -> {
-                when (selectedComponentSubTab) {
-                    0 -> WgcClassicButtonCatalogSection()
-                    1 -> WgcSecondaryClassicButtonCatalogSection()
-                    2 -> WgcIconButtonCatalogSection()
-                    3 -> WgcSegmentedButtonCatalogSection()
-                    4 -> WgcSwitchCatalogSection()
-                    5 -> WgcRadioButtonCatalogSection()
-                    6 -> WgcChipCatalogSection()
-                    7 -> WgcSliderCatalogSection()
-                    8 -> WgcAlertCatalogSection()
-                    9 -> WgcAvatarCatalogSection()
-                    10 -> WgcListItemCatalogSection()
-                    11 -> WgcStoryAvatarCatalogSection()
-                    12 -> WgcStoryTrayCatalogSection()
-                    13 -> WgcIFoodComponentsCatalogSection()
-                    14 -> WgcNineNineComponentsCatalogSection()
-                    15 -> WgcMercadoLivreComponentsCatalogSection()
+                    when (selectedFigmaSubTab) {
+                        0 -> WgcWaveAuthScreenTemplate()
+                        1 -> WgcSplitCardAuthScreenTemplate()
+                        2 -> WgcKlokAuthScreenTemplate()
+                    }
                 }
-            }
-            1 -> {
-                when (selectedTemplateSubTab) {
-                    0 -> MultiBrandAuthCatalogSection()
-                    1 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
-                    2 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
-                    3 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
-                    4 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
-                    5 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
-                    6 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
-                    7 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
-                    8 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
-                    9 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
-                    10 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
-                    11 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
-                    12 -> WgcWaveAuthScreenTemplate()
-                    13 -> WgcSplitCardAuthScreenTemplate()
-                    14 -> WgcKlokAuthScreenTemplate()
+                1 -> {
+                    when (selectedComponentSubTab) {
+                        0 -> WgcClassicButtonCatalogSection()
+                        1 -> WgcSecondaryClassicButtonCatalogSection()
+                        2 -> WgcIconButtonCatalogSection()
+                        3 -> WgcSegmentedButtonCatalogSection()
+                        4 -> WgcSwitchCatalogSection()
+                        5 -> WgcRadioButtonCatalogSection()
+                        6 -> WgcChipCatalogSection()
+                        7 -> WgcSliderCatalogSection()
+                        8 -> WgcAlertCatalogSection()
+                        9 -> WgcAvatarCatalogSection()
+                        10 -> WgcListItemCatalogSection()
+                        11 -> WgcStoryAvatarCatalogSection()
+                        12 -> WgcStoryTrayCatalogSection()
+                        13 -> WgcIFoodComponentsCatalogSection()
+                        14 -> WgcNineNineComponentsCatalogSection()
+                        15 -> WgcMercadoLivreComponentsCatalogSection()
+                        16 -> WgcBiometricButtonCatalogSection()
+                        17 -> WgcSocialLoginPillCatalogSection()
+                        18 -> WgcPillTabSwitchCatalogSection()
+                    }
                 }
-            }
-            2 -> {
-                WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
+                2 -> {
+                    when (selectedTemplateSubTab) {
+                        0 -> WgcWaveAuthScreenTemplate()
+                        1 -> WgcSplitCardAuthScreenTemplate()
+                        2 -> WgcKlokAuthScreenTemplate()
+                        3 -> MultiBrandAuthCatalogSection()
+                        4 -> MercadoLivreHomeScreenTemplate(viewModel = FakeMercadoLivreHomeViewModel())
+                        5 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                        6 -> IFoodHomeScreenTemplate(viewModel = FakeIFoodHomeViewModel())
+                        7 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
+                        8 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
+                        9 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
+                        10 -> RealtimeLocationMapScreenTemplate(viewModel = FakeRealtimeLocationViewModel())
+                        11 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
+                        12 -> SettingsHubScreenTemplate(viewModel = FakeSettingsHubViewModel())
+                        13 -> SearchAndFilterScreenTemplate(viewModel = FakeSearchAndFilterViewModel())
+                        14 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
+                    }
+                }
+                3 -> {
+                    WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
+                }
             }
         }
     }
-}
 }
 
 // --- SEÇÕES ISOLADAS PARA CADA COMPONENTE INDIVIDUAL COM SEUS ESTADOS ---
@@ -479,6 +517,55 @@ fun MultiBrandAuthCatalogSection() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun WgcBiometricButtonCatalogSection() {
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcBiometricButton (Autenticação por Impressão Digital)", style = MaterialTheme.typography.titleLarge)
+        Text("1. Estilo Circular (Template 1 Figma):")
+        WgcBiometricButton(label = "Login with touch", style = WgcBiometricStyle.Circular)
+
+        Text("2. Estilo Rounded Square (Template 2 Figma):")
+        WgcBiometricButton(label = "Login with touch ID", style = WgcBiometricStyle.RoundedSquare)
+
+        Text("3. Estilo Outlined Square (Template 3 Klok Figma):")
+        WgcBiometricButton(
+            label = "Login with touch ID",
+            style = WgcBiometricStyle.OutlinedSquare,
+            borderColor = Color(0xFFFFA000)
+        )
+    }
+}
+
+@Composable
+fun WgcSocialLoginPillCatalogSection() {
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcSocialLoginPillButton (Botões Sociais em Barra - Template 3 Figma)", style = MaterialTheme.typography.titleLarge)
+        WgcSocialLoginPillGroup()
+    }
+}
+
+@Composable
+fun WgcPillTabSwitchCatalogSection() {
+    var selectedTab by remember { mutableIntStateOf(0) }
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcPillTabSwitch (Seletor Dual-Pill - Template 3 Figma)", style = MaterialTheme.typography.titleLarge)
+        WgcPillTabSwitch(
+            selectedIndex = selectedTab,
+            onTabSelected = { selectedTab = it },
+            tabs = listOf("Login", "Register")
+        )
     }
 }
 
