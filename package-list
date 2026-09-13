@@ -14,6 +14,7 @@ br.com.wgc.design_system.components.avatar
 br.com.wgc.design_system.components.bottomsheet
 br.com.wgc.design_system.components.buttons
 br.com.wgc.design_system.components.buttons.fab
+br.com.wgc.design_system.components.cards
 br.com.wgc.design_system.components.cards.carddetail
 br.com.wgc.design_system.components.checkbox
 br.com.wgc.design_system.components.chip
@@ -41,10 +42,15 @@ br.com.wgc.design_system.components.tooltip
 br.com.wgc.design_system.mock
 br.com.wgc.design_system.previews
 module:ds-templates
+br.com.wgc.ds_templates.brand
 br.com.wgc.ds_templates.ecommerces.v1
+br.com.wgc.ds_templates.factories
 br.com.wgc.ds_templates.screens.aliexpress.auth
 br.com.wgc.ds_templates.screens.cart
 br.com.wgc.ds_templates.screens.common.auth
+br.com.wgc.ds_templates.screens.community.klok
+br.com.wgc.ds_templates.screens.community.split
+br.com.wgc.ds_templates.screens.community.wave
 br.com.wgc.ds_templates.screens.home.ecommerce
 br.com.wgc.ds_templates.screens.home.fintech
 br.com.wgc.ds_templates.screens.ifood
