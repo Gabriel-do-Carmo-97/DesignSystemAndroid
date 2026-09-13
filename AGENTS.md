@@ -1,4 +1,4 @@
-﻿# Equipe de Agentes Especialistas: DesignSystemAndroid 🎨
+# Equipe de Agentes Especialistas: DesignSystemAndroid 🎨
 
 Este documento define a governança, as responsabilidades e a arquitetura de **Agentes Especialistas** que operam no monorepo `DesignSystemAndroid`.
 
@@ -46,7 +46,7 @@ A equipe é liderada por um **Orquestrador Central (Tech Lead / Arquiteto)**, qu
 | **`design-system`** | [`agents/design-system-agent.md`](./agents/design-system-agent.md) | `:design-system` | Desenvolve átomos e moléculas reutilizáveis em Jetpack Compose com State Hoisting, acessibilidade e screenshot tests. |
 | **`ds-templates`** | [`agents/ds-templates-agent.md`](./agents/ds-templates-agent.md) | `:ds-templates` | Desenvolve telas completas e fluxos desacoplados baseados em `UiState` + `BaseViewModel` + `FakeViewModel`. |
 | **`code-reviewer`** | [`agents/code-reviewer-agent.md`](./agents/code-reviewer-agent.md) | Validação / QA | Audita código gerado, valida checklists de padrões, OWASP, acessibilidade e conformidade com tokens. Parecer: APROVADO / REPROVADO. |
-| **`gradle`** | [`agents/gradle-agent.md`](./agents/gradle-agent.md) | Build & Tooling | Gerencia plugins (`build-logic`), dependências (`libs.versions.toml`), Detekt, Dokka e compilação do Gradle. |
+| **`gradle`** | [`agents/gradle-agent.md`](./agents/gradle-agent.md) | Build & Tooling | Gerencia dependências (`libs.versions.toml`), plugins Gradle, Detekt, Dokka e compilação. |
 | **`github`** | [`agents/github-agent.md`](./agents/github-agent.md) | CI/CD & Releases | Gerencia branches, convenções de commits, Pull Requests, publicação de AARs no GitHub Packages e releases SemVer. |
 
 ---
