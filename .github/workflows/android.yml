@@ -10,6 +10,7 @@ permissions:
   contents: write
   packages: write
   pages: write
+  deployments: write
 
 jobs:
   # --- 1. VALIDAR TÍTULO DO PR (CONVENTIONAL COMMITS) ---
@@ -211,6 +212,9 @@ jobs:
     needs: [detect-changes, detekt-matrix, unit-tests-matrix]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/
     steps:
       - uses: actions/checkout@v4
       - run: chmod +x gradlew
@@ -238,11 +242,20 @@ jobs:
         include:
           - module: "core-ds"
             key: "core_ds"
+            env_name: "core-ds"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/core-ds/"
           - module: "design-system"
             key: "design_system"
+            env_name: "design-system"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/design-system/"
           - module: "ds-templates"
             key: "ds_templates"
+            env_name: "ds-templates"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-templates/"
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ matrix.env_name }}
+      url: ${{ matrix.doc_url }}
     steps:
       - uses: actions/checkout@v4
         if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
