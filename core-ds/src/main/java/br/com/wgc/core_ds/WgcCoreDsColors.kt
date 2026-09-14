@@ -242,4 +242,27 @@ object WgcCoreDsColors {
     val vivaRealSurface = Color.WHITE
     val vivaRealBorder = Color.parseColor("#E2E8F0")
     val vivaRealCardPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- ZAP IMÓVEIS TOKENS (CATEGORIA 1: IMOBILIÁRIA) ---
+    val zapPrimary = Color.parseColor("#002F6C") // Azul Marinho Zap Oficial
+    val zapPrimaryDark = Color.parseColor("#001C42")
+    val zapPrimaryLight = Color.parseColor("#E6EDF5")
+    val zapBlue = Color.parseColor("#0066CC") // Azul Royal Zap
+    val zapBlueDark = Color.parseColor("#004C99")
+    val zapBlueLight = Color.parseColor("#EBF3FC")
+    val zapOrange = Color.parseColor("#FF6500") // Laranja Zap para Destaques e Ações
+    val zapOrangeDark = Color.parseColor("#D65400")
+    val zapOrangeLight = Color.parseColor("#FFF0E6")
+    val zapFipeGreen = Color.parseColor("#00875A") // Selo FipeZAP - Bom Preço / Na Média
+    val zapFipeGreenLight = Color.parseColor("#E3FCEF")
+    val zapFipeYellow = Color.parseColor("#FFAB00") // Selo FipeZAP - Atenção
+    val zapFipeYellowLight = Color.parseColor("#FFF0B3")
+    val zapFipeRed = Color.parseColor("#DE350B") // Selo FipeZAP - Acima da Média
+    val zapFipeRedLight = Color.parseColor("#FFEBE6")
+    val zapDark = Color.parseColor("#1A202C")
+    val zapSecondaryText = Color.parseColor("#64748B")
+    val zapBackground = Color.parseColor("#F8FAFC")
+    val zapSurface = Color.WHITE
+    val zapBorder = Color.parseColor("#E2E8F0")
+    val zapCardPlaceholder = Color.parseColor("#CBD5E1")
 }
