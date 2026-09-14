@@ -80,4 +80,11 @@ br.com.wgc.ds_templates.screens.resetpassword.viewmodel
 br.com.wgc.ds_templates.screens.search
 br.com.wgc.ds_templates.screens.shopee.auth
 br.com.wgc.ds_templates.screens.social
+br.com.wgc.ds_templates.screens.stylish.auth
+br.com.wgc.ds_templates.screens.stylish.catalog
+br.com.wgc.ds_templates.screens.stylish.checkout
+br.com.wgc.ds_templates.screens.stylish.home
+br.com.wgc.ds_templates.screens.stylish.model
+br.com.wgc.ds_templates.screens.stylish.onboarding
+br.com.wgc.ds_templates.screens.stylish.profile
 br.com.wgc.ds_templates.screens.uber.auth
