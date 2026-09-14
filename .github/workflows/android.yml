@@ -78,7 +78,7 @@ jobs:
           fetch-depth: 0
       - name: Calculate SemVer from Commit History
         id: semver
-        uses: PaulHatch/semantic-version@v5.4.0
+        uses: PaulHatch/semantic-version@v6.0.4
         with:
           tag_prefix: "v"
           major_pattern: "(MAJOR)"
