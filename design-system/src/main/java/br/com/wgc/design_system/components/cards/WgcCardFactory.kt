@@ -65,7 +65,8 @@ enum class WgcCardType {
     OrganizzeBalance,
     OrganizzeCreditCard,
     OrganizzeTransaction,
-    QuintoAndarProperty
+    QuintoAndarProperty,
+    VivaRealProperty
 }
 
 /**
@@ -474,6 +475,19 @@ fun WgcCardFactory(
                 price = price.ifBlank { "R$ 3.200 /mês" },
                 totalPrice = "Total R$ 4.050 /mês",
                 badgeText = badgeText ?: "Sem Fiador",
+                onClick = onClick
+            )
+        }
+        WgcCardType.VivaRealProperty -> {
+            WgcVivaRealPropertyCard(
+                modifier = modifier,
+                title = title.ifBlank { "Apartamento à venda" },
+                neighborhood = subtitle.ifBlank { "Moema" },
+                address = "Alameda dos Maracatins, 450",
+                price = price.ifBlank { "R$ 890.000" },
+                condoAndIptu = "Condomínio R$ 780 • IPTU R$ 220",
+                agencyName = "Lopes Prime",
+                badgeText = badgeText ?: "Super Destaque",
                 onClick = onClick
             )
         }

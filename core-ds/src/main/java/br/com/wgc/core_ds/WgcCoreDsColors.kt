@@ -224,4 +224,22 @@ object WgcCoreDsColors {
     val quintoAndarSurface = Color.WHITE
     val quintoAndarBorder = Color.parseColor("#E2E8F0")
     val quintoAndarCardPlaceholder = Color.parseColor("#CBD5E1")
+
+    // Viva Real Real Estate Tokens
+    val vivaRealPrimary = Color.parseColor("#1C9963")
+    val vivaRealPrimaryDark = Color.parseColor("#0E5C3A")
+    val vivaRealPrimaryLight = Color.parseColor("#E8F8F0")
+    val vivaRealOrange = Color.parseColor("#FF6600")
+    val vivaRealOrangeDark = Color.parseColor("#E05A00")
+    val vivaRealOrangeLight = Color.parseColor("#FFF0E6")
+    val vivaRealWhatsApp = Color.parseColor("#25D366")
+    val vivaRealWhatsAppLight = Color.parseColor("#E7F9EE")
+    val vivaRealSuperDestaque = Color.parseColor("#E02424")
+    val vivaRealSuperDestaqueLight = Color.parseColor("#FDE8E8")
+    val vivaRealDark = Color.parseColor("#1E293B")
+    val vivaRealSecondaryText = Color.parseColor("#64748B")
+    val vivaRealBackground = Color.parseColor("#F8FAFC")
+    val vivaRealSurface = Color.WHITE
+    val vivaRealBorder = Color.parseColor("#E2E8F0")
+    val vivaRealCardPlaceholder = Color.parseColor("#CBD5E1")
 }

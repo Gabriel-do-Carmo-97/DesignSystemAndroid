@@ -293,6 +293,17 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.VivaReal -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.vivareal.profile.WgcVivaRealProfileTemplate(
+                        onMessagesClick = onNavigateToLogin,
+                        onAdvertisePropertyClick = onNavigateToRegister
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
