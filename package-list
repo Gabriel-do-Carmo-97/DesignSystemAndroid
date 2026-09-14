@@ -79,6 +79,14 @@ br.com.wgc.ds_templates.screens.resetpassword.state
 br.com.wgc.ds_templates.screens.resetpassword.viewmodel
 br.com.wgc.ds_templates.screens.search
 br.com.wgc.ds_templates.screens.shopee.auth
+br.com.wgc.ds_templates.screens.shoppe.auth
+br.com.wgc.ds_templates.screens.shoppe.chat
+br.com.wgc.ds_templates.screens.shoppe.checkout
+br.com.wgc.ds_templates.screens.shoppe.home
+br.com.wgc.ds_templates.screens.shoppe.model
+br.com.wgc.ds_templates.screens.shoppe.product
+br.com.wgc.ds_templates.screens.shoppe.profile
+br.com.wgc.ds_templates.screens.shoppe.search
 br.com.wgc.ds_templates.screens.social
 br.com.wgc.ds_templates.screens.stylish.auth
 br.com.wgc.ds_templates.screens.stylish.catalog
