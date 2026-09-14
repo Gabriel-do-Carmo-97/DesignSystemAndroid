@@ -175,6 +175,12 @@ br.com.wgc.ds_templates.screens.vivareal.favorites
 br.com.wgc.ds_templates.screens.vivareal.home
 br.com.wgc.ds_templates.screens.vivareal.model
 br.com.wgc.ds_templates.screens.vivareal.profile
+br.com.wgc.ds_templates.screens.wellhub.checkin
+br.com.wgc.ds_templates.screens.wellhub.explore
+br.com.wgc.ds_templates.screens.wellhub.home
+br.com.wgc.ds_templates.screens.wellhub.model
+br.com.wgc.ds_templates.screens.wellhub.plans
+br.com.wgc.ds_templates.screens.wellhub.wellness
 br.com.wgc.ds_templates.screens.zap.detail
 br.com.wgc.ds_templates.screens.zap.favorites
 br.com.wgc.ds_templates.screens.zap.fipezap
