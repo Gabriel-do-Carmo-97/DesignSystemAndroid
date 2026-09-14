@@ -208,7 +208,6 @@ fun WgcCardFactory(
                 onSelect = onClick
             )
         }
-<<<<<<< HEAD
         WgcCardType.KutukuProduct -> {
             WgcKutukuProductCard(
                 modifier = modifier,
