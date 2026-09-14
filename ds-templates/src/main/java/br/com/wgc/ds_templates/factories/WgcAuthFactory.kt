@@ -241,6 +241,16 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Shopper -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.shopper.splash.WgcShopperSplashTemplate(
+                        onGetStartedClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

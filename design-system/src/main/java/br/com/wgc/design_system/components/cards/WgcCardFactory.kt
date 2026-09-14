@@ -50,7 +50,9 @@ enum class WgcCardType {
     ClotheeCartItem,
     TasselCollection,
     TasselProduct,
-    TasselOrderTracker
+    TasselOrderTracker,
+    ShopperProduct,
+    ShopperPromoBanner
 }
 
 /**
@@ -324,6 +326,24 @@ fun WgcCardFactory(
                 productDetails = subtitle,
                 productImageUrl = imageUrl,
                 onMoreInfoClick = onClick
+            )
+        }
+        WgcCardType.ShopperProduct -> {
+            WgcShopperProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                discountBadge = badgeText?.takeIf { it.isNotBlank() },
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopperPromoBanner -> {
+            WgcShopperPromoBanner(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                onButtonClick = onClick
             )
         }
     }

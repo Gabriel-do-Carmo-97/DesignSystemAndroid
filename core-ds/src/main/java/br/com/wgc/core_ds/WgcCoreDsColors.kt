@@ -111,5 +111,23 @@ object WgcCoreDsColors {
     val tasselAlertRed = Color.parseColor("#FA3636")
     val tasselGold = Color.parseColor("#FFB800")
     val tasselDenimBlue = Color.parseColor("#4A90E2")
+
+    // --- 10. CORES BRAND SHOPPER (EMERALD GREEN MODERN ECOMMERCE) ---
+    val shopperPrimary = Color.parseColor("#00966B")
+    val shopperPrimaryDark = Color.parseColor("#007A56")
+    val shopperPrimaryLight = Color.parseColor("#E6F7F2")
+    val shopperSecondary = Color.parseColor("#00BF8A")
+    val shopperAccent = Color.parseColor("#FF6B6B")
+    val shopperDark = Color.parseColor("#1B2A26")
+    val shopperSecondaryText = Color.parseColor("#7A8B87")
+    val shopperBackground = Color.WHITE
+    val shopperSurface = Color.parseColor("#F5F9F7")
+    val shopperDarkBackground = Color.parseColor("#0F1A17")
+    val shopperDarkSurface = Color.parseColor("#172622")
+    val shopperBorder = Color.parseColor("#E1EAE6")
+    val shopperSaleOrange = Color.parseColor("#FFF3E0")
+    val shopperSaleOrangeText = Color.parseColor("#FF9800")
+    val shopperSuccessGreen = Color.parseColor("#00966B")
+    val shopperGold = Color.parseColor("#FFC107")
 }
 
