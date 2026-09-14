@@ -147,6 +147,12 @@ br.com.wgc.ds_templates.screens.shopper.home
 br.com.wgc.ds_templates.screens.shopper.model
 br.com.wgc.ds_templates.screens.shopper.profile
 br.com.wgc.ds_templates.screens.shopper.splash
+br.com.wgc.ds_templates.screens.smartfit.classes
+br.com.wgc.ds_templates.screens.smartfit.go
+br.com.wgc.ds_templates.screens.smartfit.home
+br.com.wgc.ds_templates.screens.smartfit.model
+br.com.wgc.ds_templates.screens.smartfit.profile
+br.com.wgc.ds_templates.screens.smartfit.workouts
 br.com.wgc.ds_templates.screens.social
 br.com.wgc.ds_templates.screens.stylish.auth
 br.com.wgc.ds_templates.screens.stylish.catalog
