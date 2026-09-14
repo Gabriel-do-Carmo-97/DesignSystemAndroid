@@ -69,7 +69,9 @@ enum class WgcCardType {
     VivaRealProperty,
     ZapProperty,
     SmartFitWorkout,
-    SmartFitCrowd
+    SmartFitCrowd,
+    WellhubGym,
+    WellhubCheckIn
 }
 
 /**
@@ -535,6 +537,30 @@ fun WgcCardFactory(
                 crowdLevel = WgcSmartFitCrowdLevel.LOW,
                 crowdPercentage = 30,
                 onClick = onClick
+            )
+        }
+        WgcCardType.WellhubGym -> {
+            WgcWellhubGymCard(
+                modifier = modifier,
+                name = title.ifBlank { "Smart Fit - Paulista" },
+                category = subtitle.ifBlank { "Musculação • Aeróbico" },
+                address = "Av. Paulista, 2064",
+                distance = "350 m",
+                rating = 4.8,
+                reviewsCount = "1.4k",
+                requiredTier = WgcWellhubPlanTier.BASIC,
+                onClick = onClick
+            )
+        }
+        WgcCardType.WellhubCheckIn -> {
+            WgcWellhubCheckInCard(
+                modifier = modifier,
+                gymName = title.ifBlank { "Bio Ritmo - Jardins" },
+                userName = subtitle.ifBlank { "Gabriel do Carmo" },
+                planTitle = badgeText ?: "Plano Gold",
+                tokenCode = price.ifBlank { "WH-94821" },
+                validUntil = "23:59 de hoje",
+                onCopyToken = onClick
             )
         }
     }

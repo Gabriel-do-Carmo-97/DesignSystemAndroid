@@ -327,6 +327,18 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Wellhub -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.wellhub.plans.WgcWellhubPlansTemplate(
+                        plans = br.com.wgc.ds_templates.screens.wellhub.model.WellhubMockData.mockPlans,
+                        currentTier = br.com.wgc.design_system.components.cards.WgcWellhubPlanTier.GOLD,
+                        onBackClick = onNavigateToLogin
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(

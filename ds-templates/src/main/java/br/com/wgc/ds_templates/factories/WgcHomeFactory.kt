@@ -78,6 +78,7 @@ fun WgcHomeFactory(
             WgcBrand.VivaReal -> br.com.wgc.ds_templates.screens.vivareal.home.WgcVivaRealHomeTemplate()
             WgcBrand.Zap -> br.com.wgc.ds_templates.screens.zap.home.WgcZapHomeTemplate()
             WgcBrand.SmartFit -> WgcSmartFitFactory.Screen(WgcSmartFitScreen.Home)
+            WgcBrand.Wellhub -> WgcWellhubFactory.Screen(WgcWellhubScreen.Home)
         }
         return
     }
