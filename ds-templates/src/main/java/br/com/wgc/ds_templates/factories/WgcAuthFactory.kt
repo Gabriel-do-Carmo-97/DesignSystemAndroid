@@ -315,6 +315,18 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.SmartFit -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.smartfit.profile.WgcSmartFitProfilePassTemplate(
+                        user = br.com.wgc.ds_templates.screens.smartfit.model.SmartFitMockData.mockUser,
+                        onBackClick = onNavigateToLogin,
+                        onManagePlan = onNavigateToRegister
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(

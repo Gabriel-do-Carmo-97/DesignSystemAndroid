@@ -4,6 +4,9 @@ object WgcCoreDsSize {
     /** 0px */
     const val s0 = 0.0
 
+    /** 1px / 1dp */
+    const val s1 = 1.0
+
     /** 2px */
     const val s2 = 2.0
 

@@ -265,4 +265,24 @@ object WgcCoreDsColors {
     val zapSurface = Color.WHITE
     val zapBorder = Color.parseColor("#E2E8F0")
     val zapCardPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- SMART FIT TOKENS (CATEGORIA 2: ACADEMIA & FITNESS) ---
+    val smartfitYellow = Color.parseColor("#FFB800") // Amarelo icônico Smart Fit
+    val smartfitYellowDark = Color.parseColor("#E0A300")
+    val smartfitYellowLight = Color.parseColor("#FFF8E7")
+    val smartfitBlack = Color.parseColor("#0D0D0D") // Fundo atlético escuro
+    val smartfitDarkGray = Color.parseColor("#1A1A1A") // Superfícies e cards escuros
+    val smartfitMediumGray = Color.parseColor("#2D2D2D") // Bordas e separadores
+    val smartfitLightGray = Color.parseColor("#404040") // Bordas ativas e ícones secundários
+    val smartfitCrowdLow = Color.parseColor("#10B981") // Lotação tranquila - Verde
+    val smartfitCrowdLowLight = Color.parseColor("#E6F9F2")
+    val smartfitCrowdMedium = Color.parseColor("#F59E0B") // Lotação moderada - Laranja
+    val smartfitCrowdMediumLight = Color.parseColor("#FEF3C7")
+    val smartfitCrowdHigh = Color.parseColor("#EF4444") // Lotação intensa - Vermelho
+    val smartfitCrowdHighLight = Color.parseColor("#FEE2E2")
+    val smartfitTextPrimary = Color.WHITE
+    val smartfitTextSecondary = Color.parseColor("#A3A3A3")
+    val smartfitTextInverse = Color.parseColor("#000000")
+    val smartfitCardPlaceholder = Color.parseColor("#242424")
+    val smartfitAccentCyan = Color.parseColor("#00E5FF")
 }
