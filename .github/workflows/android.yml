@@ -110,7 +110,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Run Detekt on ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:detekt
       - name: Upload Detekt Reports
@@ -140,7 +140,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Run Unit Tests for ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:testDebugUnitTest
       - name: Upload Test Results
@@ -162,7 +162,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Validate Screenshot Previews Regression
         continue-on-error: true
         run: ./gradlew validateDebugScreenshotTest
@@ -199,7 +199,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Assemble ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:${{ matrix.task }} -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
       - name: Upload ${{ matrix.module }} AAR
@@ -220,7 +220,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Assemble Catalog App Debug APK
         run: ./gradlew :app:assembleDebug
       - name: Upload Catalog APK
@@ -245,7 +245,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Generate Dokka HTML Docs
         run: ./gradlew dokkaHtmlMultiModule
       - name: Deploy Docs to GitHub Pages
@@ -289,7 +289,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
         if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
       - name: 📦 Publish ${{ matrix.module }}
         if: needs.detect-changes.outputs[matrix.key] == 'true' || needs.detect-changes.outputs.any_changed == 'true'
