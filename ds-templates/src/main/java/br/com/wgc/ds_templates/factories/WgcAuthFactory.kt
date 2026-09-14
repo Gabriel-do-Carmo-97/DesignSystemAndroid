@@ -229,6 +229,75 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Tassel -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.tassel.profile.WgcTasselProfileTemplate(
+                        onBackClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.tassel.profile.WgcTasselProfileTemplate(
+                        onBackClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.Shopper -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.shopper.splash.WgcShopperSplashTemplate(
+                        onGetStartedClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.Nexkart -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.nexkart.onboarding.WgcNexkartOnboardingTemplate(
+                        onNextClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.ShopEase -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.shopease.onboarding.WgcShopEaseOnboardingTemplate(
+                        onNextClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.Organizze -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.organizze.onboarding.WgcOrganizzeOnboardingTemplate(
+                        onGetStartedClick = onNavigateToRegister,
+                        onLoginClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.Laza -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
+                        onEmailSignInClick = onNavigateToRegister,
+                        onCreateAccountClick = onNavigateToRegister
+                    )
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaEmailSignInTemplate(
+                        onSignInClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaIntroScreenTemplate(
+                        onGetStartedClick = onNavigateToLogin,
+                        onSkipClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

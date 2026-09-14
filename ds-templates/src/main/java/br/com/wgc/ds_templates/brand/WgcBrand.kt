@@ -74,5 +74,35 @@ enum class WgcBrand(
         brandName = "Clothee",
         brandLogoText = "Clothee",
         primaryColor = Color(0xFF8E6CEF)
+    ),
+    Laza(
+        brandName = "Laza",
+        brandLogoText = "Laza",
+        primaryColor = Color(0xFF9775FA)
+    ),
+    Tassel(
+        brandName = "Tassel",
+        brandLogoText = "Tassel",
+        primaryColor = Color(0xFF4D38DC)
+    ),
+    Shopper(
+        brandName = "Shopper",
+        brandLogoText = "Shopper",
+        primaryColor = Color(0xFF00966B)
+    ),
+    Nexkart(
+        brandName = "Nexkart",
+        brandLogoText = "Nexkart",
+        primaryColor = Color(0xFF2D60FF)
+    ),
+    ShopEase(
+        brandName = "ShopEase",
+        brandLogoText = "ShopEase",
+        primaryColor = Color(0xFFFF8C42)
+    ),
+    Organizze(
+        brandName = "Organizze",
+        brandLogoText = "Organizze",
+        primaryColor = Color(0xFF2ECC71)
     )
 }

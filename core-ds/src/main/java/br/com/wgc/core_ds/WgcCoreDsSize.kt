@@ -153,4 +153,34 @@ object WgcCoreDsSize {
 
     /** 100px */
     const val s100 = 100.0
+
+    /** 120px */
+    const val s120 = 120.0
+
+    /** 140px */
+    const val s140 = 140.0
+
+    /** 160px */
+    const val s160 = 160.0
+
+    /** 180px */
+    const val s180 = 180.0
+
+    /** 200px */
+    const val s200 = 200.0
+
+    /** 240px */
+    const val s240 = 240.0
+
+    /** 280px */
+    const val s280 = 280.0
+
+    /** 300px */
+    const val s300 = 300.0
+
+    /** 360px */
+    const val s360 = 360.0
+
+    /** 400px */
+    const val s400 = 400.0
 }

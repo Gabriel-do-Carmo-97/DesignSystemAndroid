@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.components.buttons.WgcLazaBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.ifood.WgcIFoodRestaurantCard
 
@@ -47,7 +48,23 @@ enum class WgcCardType {
     KutukuCartItem,
     ClotheeProduct,
     ClotheeCategory,
-    ClotheeCartItem
+    ClotheeCartItem,
+    LazaProduct,
+    LazaBrand,
+    LazaCartItem,
+    TasselCollection,
+    TasselProduct,
+    TasselOrderTracker,
+    ShopperProduct,
+    ShopperPromoBanner,
+    NexkartProduct,
+    NexkartTopProduct,
+    NexkartCartItem,
+    ShopEaseProduct,
+    ShopEaseOfferBanner,
+    OrganizzeBalance,
+    OrganizzeCreditCard,
+    OrganizzeTransaction
 }
 
 /**
@@ -294,6 +311,156 @@ fun WgcCardFactory(
                 title = title,
                 price = price,
                 imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaProduct -> {
+            WgcLazaProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                subtitle = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaBrand -> {
+            WgcLazaBrandPill(
+                modifier = modifier,
+                brandName = title,
+                logoUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaCartItem -> {
+            WgcLazaCartItemRow(
+                modifier = modifier,
+                title = title,
+                price = price,
+                taxInfo = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.TasselCollection -> {
+            WgcTasselCollectionCard(
+                modifier = modifier,
+                title = title,
+                onClick = onClick
+            )
+        }
+        WgcCardType.TasselProduct -> {
+            WgcTasselProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                brand = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.TasselOrderTracker -> {
+            WgcTasselOrderTrackerCard(
+                modifier = modifier,
+                productTitle = title,
+                productDetails = subtitle,
+                productImageUrl = imageUrl,
+                onMoreInfoClick = onClick
+            )
+        }
+        WgcCardType.ShopperProduct -> {
+            WgcShopperProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                discountBadge = badgeText?.takeIf { it.isNotBlank() },
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopperPromoBanner -> {
+            WgcShopperPromoBanner(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                onButtonClick = onClick
+            )
+        }
+        WgcCardType.NexkartProduct -> {
+            WgcNexkartProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                tag = badgeText,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.NexkartTopProduct -> {
+            WgcNexkartTopProductRow(
+                modifier = modifier,
+                rank = 1,
+                title = title,
+                description = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.NexkartCartItem -> {
+            WgcNexkartCartItemRow(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopEaseProduct -> {
+            WgcShopEaseProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                discountBadge = badgeText?.takeIf { it.isNotBlank() },
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopEaseOfferBanner -> {
+            WgcShopEaseOfferBanner(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                badgeText = badgeText ?: "FREE",
+                onApplyClick = onClick
+            )
+        }
+        WgcCardType.OrganizzeBalance -> {
+            WgcOrganizzeBalanceCard(
+                modifier = modifier,
+                monthLabel = title.ifBlank { "Maio 2026" },
+                balance = price.ifBlank { "R$ 14.850,00" },
+                income = subtitle.ifBlank { "R$ 8.200,00" },
+                expense = badgeText ?: "R$ 3.450,00"
+            )
+        }
+        WgcCardType.OrganizzeCreditCard -> {
+            WgcOrganizzeCreditCardRow(
+                modifier = modifier,
+                bankName = title.ifBlank { "Nubank Mastercard" },
+                lastDigits = subtitle.ifBlank { "•••• 8421" },
+                currentInvoice = price.ifBlank { "R$ 1.840,50" },
+                onClick = onClick
+            )
+        }
+        WgcCardType.OrganizzeTransaction -> {
+            WgcOrganizzeTransactionItem(
+                modifier = modifier,
+                title = title.ifBlank { "Lançamento" },
+                category = subtitle.ifBlank { "Geral" },
+                amount = price.ifBlank { "R$ 0,00" },
                 onClick = onClick
             )
         }

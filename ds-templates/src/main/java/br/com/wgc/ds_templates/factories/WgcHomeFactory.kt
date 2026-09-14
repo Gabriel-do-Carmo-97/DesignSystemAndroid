@@ -68,6 +68,12 @@ fun WgcHomeFactory(
             WgcBrand.Shoppe -> br.com.wgc.ds_templates.screens.shoppe.home.WgcShoppeHomeScreenTemplate()
             WgcBrand.Kutuku -> br.com.wgc.ds_templates.screens.kutuku.home.WgcKutukuHomeScreen()
             WgcBrand.Clothee -> br.com.wgc.ds_templates.screens.clothee.home.WgcClotheeHomeTemplate()
+            WgcBrand.Laza -> br.com.wgc.ds_templates.screens.laza.home.WgcLazaHomeTemplate()
+            WgcBrand.Tassel -> br.com.wgc.ds_templates.screens.tassel.market.WgcTasselMarketTemplate()
+            WgcBrand.Shopper -> br.com.wgc.ds_templates.screens.shopper.home.WgcShopperHomeTemplate()
+            WgcBrand.Nexkart -> br.com.wgc.ds_templates.screens.nexkart.home.WgcNexkartHomeTemplate()
+            WgcBrand.ShopEase -> br.com.wgc.ds_templates.screens.shopease.home.WgcShopEaseHomeTemplate()
+            WgcBrand.Organizze -> br.com.wgc.ds_templates.screens.organizze.dashboard.WgcOrganizzeDashboardTemplate()
         }
         return
     }
