@@ -52,7 +52,12 @@ enum class WgcCardType {
     TasselProduct,
     TasselOrderTracker,
     ShopperProduct,
-    ShopperPromoBanner
+    ShopperPromoBanner,
+    NexkartProduct,
+    NexkartTopProduct,
+    NexkartCartItem,
+    ShopEaseProduct,
+    ShopEaseOfferBanner
 }
 
 /**
@@ -344,6 +349,57 @@ fun WgcCardFactory(
                 title = title,
                 subtitle = subtitle,
                 onButtonClick = onClick
+            )
+        }
+        WgcCardType.NexkartProduct -> {
+            WgcNexkartProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                tag = badgeText,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.NexkartTopProduct -> {
+            WgcNexkartTopProductRow(
+                modifier = modifier,
+                rank = 1,
+                title = title,
+                description = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.NexkartCartItem -> {
+            WgcNexkartCartItemRow(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopEaseProduct -> {
+            WgcShopEaseProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                discountBadge = badgeText?.takeIf { it.isNotBlank() },
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShopEaseOfferBanner -> {
+            WgcShopEaseOfferBanner(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                badgeText = badgeText ?: "FREE",
+                onApplyClick = onClick
             )
         }
     }

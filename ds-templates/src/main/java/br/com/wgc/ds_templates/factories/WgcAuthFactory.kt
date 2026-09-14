@@ -251,6 +251,26 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Nexkart -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.nexkart.onboarding.WgcNexkartOnboardingTemplate(
+                        onNextClick = onNavigateToLogin
+                    )
+                }
+            }
+            WgcBrand.ShopEase -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.shopease.onboarding.WgcShopEaseOnboardingTemplate(
+                        onNextClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

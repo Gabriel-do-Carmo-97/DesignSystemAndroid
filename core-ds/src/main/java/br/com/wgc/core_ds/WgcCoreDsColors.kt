@@ -129,5 +129,45 @@ object WgcCoreDsColors {
     val shopperSaleOrangeText = Color.parseColor("#FF9800")
     val shopperSuccessGreen = Color.parseColor("#00966B")
     val shopperGold = Color.parseColor("#FFC107")
+
+    // --- 11. CORES BRAND NEXKART (ROYAL BLUE PREMIUM ECOMMERCE) ---
+    val nexkartPrimary = Color.parseColor("#2D60FF")
+    val nexkartPrimaryLight = Color.parseColor("#F0F4FF")
+    val nexkartPrimaryDark = Color.parseColor("#1A46D6")
+    val nexkartAccentPink = Color.parseColor("#FF3B6A")
+    val nexkartDark = Color.parseColor("#1A1D26")
+    val nexkartSecondaryText = Color.parseColor("#8C91A0")
+    val nexkartBackground = Color.WHITE
+    val nexkartSurface = Color.parseColor("#F8F9FD")
+    val nexkartDarkBackground = Color.parseColor("#12141D")
+    val nexkartDarkSurface = Color.parseColor("#1E2230")
+    val nexkartBorder = Color.parseColor("#E8ECF4")
+    val nexkartCatBeauty = Color.parseColor("#FFE5EC")
+    val nexkartCatGadgets = Color.parseColor("#FFF3D6")
+    val nexkartCatGames = Color.parseColor("#D8F8EE")
+    val nexkartCatCine = Color.parseColor("#FFEAD8")
+    val nexkartCatFashion = Color.parseColor("#E6F0FF")
+    val nexkartGold = Color.parseColor("#FFB800")
+    val nexkartSuccessGreen = Color.parseColor("#34A853")
+    val nexkartAlertRed = Color.parseColor("#FF3B6A")
+
+    // --- 12. CORES BRAND SHOPEASE (SUNSET ORANGE ECOMMERCE UI KIT) ---
+    val shopEasePrimary = Color.parseColor("#FF8C42")
+    val shopEasePrimaryDark = Color.parseColor("#E66A1F")
+    val shopEasePrimaryLight = Color.parseColor("#FFF3EC")
+    val shopEaseSecondary = Color.parseColor("#FFA07A")
+    val shopEasePeachBg = Color.parseColor("#FFDFC7")
+    val shopEaseDark = Color.parseColor("#2B2B2B")
+    val shopEaseSecondaryText = Color.parseColor("#757575")
+    val shopEaseBackground = Color.WHITE
+    val shopEaseSurface = Color.parseColor("#F9F9FB")
+    val shopEaseBorder = Color.parseColor("#EAEAEA")
+    val shopEaseSuccessGreen = Color.parseColor("#2ECC71")
+    val shopEaseCardRed = Color.parseColor("#FFEBEE")
+    val shopEaseCardPurple = Color.parseColor("#F3E5F5")
+    val shopEaseCardGreen = Color.parseColor("#E8F5E9")
+    val shopEaseCardOrange = Color.parseColor("#FFF3E0")
+    val shopEaseCardBlue = Color.parseColor("#E3F2FD")
 }
+
 

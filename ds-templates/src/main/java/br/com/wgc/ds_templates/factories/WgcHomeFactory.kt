@@ -70,6 +70,8 @@ fun WgcHomeFactory(
             WgcBrand.Clothee -> br.com.wgc.ds_templates.screens.clothee.home.WgcClotheeHomeTemplate()
             WgcBrand.Tassel -> br.com.wgc.ds_templates.screens.tassel.market.WgcTasselMarketTemplate()
             WgcBrand.Shopper -> br.com.wgc.ds_templates.screens.shopper.home.WgcShopperHomeTemplate()
+            WgcBrand.Nexkart -> br.com.wgc.ds_templates.screens.nexkart.home.WgcNexkartHomeTemplate()
+            WgcBrand.ShopEase -> br.com.wgc.ds_templates.screens.shopease.home.WgcShopEaseHomeTemplate()
         }
         return
     }
