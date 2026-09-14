@@ -84,5 +84,15 @@ enum class WgcBrand(
         brandName = "Shopper",
         brandLogoText = "Shopper",
         primaryColor = Color(0xFF00966B)
+    ),
+    Nexkart(
+        brandName = "Nexkart",
+        brandLogoText = "Nexkart",
+        primaryColor = Color(0xFF2D60FF)
+    ),
+    ShopEase(
+        brandName = "ShopEase",
+        brandLogoText = "ShopEase",
+        primaryColor = Color(0xFFFF8C42)
     )
 }
