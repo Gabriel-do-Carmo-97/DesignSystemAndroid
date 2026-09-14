@@ -67,6 +67,7 @@ fun WgcHomeFactory(
             WgcBrand.Stylish -> br.com.wgc.ds_templates.screens.stylish.home.WgcStylishHomeScreenTemplate()
             WgcBrand.Shoppe -> br.com.wgc.ds_templates.screens.shoppe.home.WgcShoppeHomeScreenTemplate()
             WgcBrand.Kutuku -> br.com.wgc.ds_templates.screens.kutuku.home.WgcKutukuHomeScreen()
+            WgcBrand.Clothee -> br.com.wgc.ds_templates.screens.clothee.home.WgcClotheeHomeTemplate()
         }
         return
     }

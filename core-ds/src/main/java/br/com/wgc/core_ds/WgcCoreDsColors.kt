@@ -79,4 +79,18 @@ object WgcCoreDsColors {
     val kutukuBorder = Color.parseColor("#E8E8EE")
     val kutukuGold = Color.parseColor("#F1B11C")
     val kutukuAlertRed = Color.parseColor("#E74C3C")
+
+    // --- 8. CORES BRAND CLOTHEE (SPORTSWEAR / STREETWEAR STORE) ---
+    val clotheePrimary = Color.parseColor("#8E6CEF")
+    val clotheePrimaryLight = Color.parseColor("#F4F0FF")
+    val clotheeDark = Color.parseColor("#272727")
+    val clotheeSecondaryText = Color.parseColor("#8E8E93")
+    val clotheeBackground = Color.WHITE
+    val clotheeSurface = Color.parseColor("#F4F4F4")
+    val clotheeDarkBackground = Color.parseColor("#1D182A")
+    val clotheeDarkSurface = Color.parseColor("#272239")
+    val clotheeBorder = Color.parseColor("#E4E4E7")
+    val clotheeAlertRed = Color.parseColor("#FA3636")
+    val clotheeSuccessGreen = Color.parseColor("#2ECC71")
 }
+
