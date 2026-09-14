@@ -67,7 +67,9 @@ enum class WgcCardType {
     OrganizzeTransaction,
     QuintoAndarProperty,
     VivaRealProperty,
-    ZapProperty
+    ZapProperty,
+    SmartFitWorkout,
+    SmartFitCrowd
 }
 
 /**
@@ -511,6 +513,28 @@ fun WgcCardFactory(
                 advertiserName = "Zap Prime Imóveis",
                 hasVirtualTour = true,
                 onCardClick = onClick
+            )
+        }
+        WgcCardType.SmartFitWorkout -> {
+            WgcSmartFitWorkoutCard(
+                modifier = modifier,
+                exerciseName = title.ifBlank { "Supino Reto com Barra" },
+                targetMuscle = subtitle.ifBlank { "Peitoral Maior" },
+                setsAndReps = "4 séries × 10 reps",
+                weightKg = price.ifBlank { "32 kg" },
+                isCompleted = false,
+                onClick = onClick
+            )
+        }
+        WgcCardType.SmartFitCrowd -> {
+            WgcSmartFitUnitCrowdCard(
+                modifier = modifier,
+                unitName = title.ifBlank { "Smart Fit - Paulista" },
+                address = subtitle.ifBlank { "Av. Paulista, 2064 • 350m" },
+                operatingHours = "06:00 às 23:00",
+                crowdLevel = WgcSmartFitCrowdLevel.LOW,
+                crowdPercentage = 30,
+                onClick = onClick
             )
         }
     }

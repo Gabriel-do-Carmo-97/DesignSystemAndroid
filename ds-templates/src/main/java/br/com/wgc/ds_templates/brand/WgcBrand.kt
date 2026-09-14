@@ -119,5 +119,10 @@ enum class WgcBrand(
         brandName = "Zap Imóveis",
         brandLogoText = "ZAP",
         primaryColor = Color(0xFF002F6C)
+    ),
+    SmartFit(
+        brandName = "Smart Fit",
+        brandLogoText = "SF",
+        primaryColor = Color(0xFFFFB800)
     )
 }
