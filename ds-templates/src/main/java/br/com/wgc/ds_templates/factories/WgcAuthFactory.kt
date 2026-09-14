@@ -271,6 +271,17 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Organizze -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.organizze.onboarding.WgcOrganizzeOnboardingTemplate(
+                        onGetStartedClick = onNavigateToRegister,
+                        onLoginClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

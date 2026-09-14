@@ -72,6 +72,7 @@ fun WgcHomeFactory(
             WgcBrand.Shopper -> br.com.wgc.ds_templates.screens.shopper.home.WgcShopperHomeTemplate()
             WgcBrand.Nexkart -> br.com.wgc.ds_templates.screens.nexkart.home.WgcNexkartHomeTemplate()
             WgcBrand.ShopEase -> br.com.wgc.ds_templates.screens.shopease.home.WgcShopEaseHomeTemplate()
+            WgcBrand.Organizze -> br.com.wgc.ds_templates.screens.organizze.dashboard.WgcOrganizzeDashboardTemplate()
         }
         return
     }

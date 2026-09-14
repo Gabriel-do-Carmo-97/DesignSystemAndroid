@@ -57,7 +57,10 @@ enum class WgcCardType {
     NexkartTopProduct,
     NexkartCartItem,
     ShopEaseProduct,
-    ShopEaseOfferBanner
+    ShopEaseOfferBanner,
+    OrganizzeBalance,
+    OrganizzeCreditCard,
+    OrganizzeTransaction
 }
 
 /**
@@ -400,6 +403,33 @@ fun WgcCardFactory(
                 subtitle = subtitle,
                 badgeText = badgeText ?: "FREE",
                 onApplyClick = onClick
+            )
+        }
+        WgcCardType.OrganizzeBalance -> {
+            WgcOrganizzeBalanceCard(
+                modifier = modifier,
+                monthLabel = title.ifBlank { "Maio 2026" },
+                balance = price.ifBlank { "R$ 14.850,00" },
+                income = subtitle.ifBlank { "R$ 8.200,00" },
+                expense = badgeText ?: "R$ 3.450,00"
+            )
+        }
+        WgcCardType.OrganizzeCreditCard -> {
+            WgcOrganizzeCreditCardRow(
+                modifier = modifier,
+                bankName = title.ifBlank { "Nubank Mastercard" },
+                lastDigits = subtitle.ifBlank { "•••• 8421" },
+                currentInvoice = price.ifBlank { "R$ 1.840,50" },
+                onClick = onClick
+            )
+        }
+        WgcCardType.OrganizzeTransaction -> {
+            WgcOrganizzeTransactionItem(
+                modifier = modifier,
+                title = title.ifBlank { "Lançamento" },
+                category = subtitle.ifBlank { "Geral" },
+                amount = price.ifBlank { "R$ 0,00" },
+                onClick = onClick
             )
         }
     }
