@@ -46,6 +46,16 @@ object WgcCoreDsColors {
     val stylishLightGray = Color.parseColor("#F9F9F9")
     val stylishBorderGray = Color.parseColor("#A8A8A9")
 
+    // --- 5.1 CORES BRAND SHOPPE (FASHION STORE) ---
+    val shoppePrimary = Color.parseColor("#004CFF")
+    val shoppePrimaryLight = Color.parseColor("#DFE9FF")
+    val shoppeDark = Color.parseColor("#202020")
+    val shoppeSecondaryText = Color.parseColor("#707070")
+    val shoppeBackground = Color.parseColor("#F5F5F5")
+    val shoppeGold = Color.parseColor("#F1B11C")
+    val shoppeBorder = Color.parseColor("#D2D2D2")
+    val shoppeAlertRed = Color.parseColor("#FFEBEB")
+
     // --- 6. TOKENS SEMÂNTICOS ---
     val primary = orange500
     val secondary = white
