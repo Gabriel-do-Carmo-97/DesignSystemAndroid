@@ -44,7 +44,10 @@ enum class WgcCardType {
     ShoppeFlashSale,
     KutukuProduct,
     KutukuCategory,
-    KutukuCartItem
+    KutukuCartItem,
+    ClotheeProduct,
+    ClotheeCategory,
+    ClotheeCartItem
 }
 
 /**
@@ -265,6 +268,33 @@ fun WgcCardFactory(
                 modifier = modifier,
                 title = title,
                 discountTag = subtitle
+            )
+        }
+        WgcCardType.ClotheeProduct -> {
+            WgcClotheeProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                originalPrice = subtitle.takeIf { it.isNotBlank() },
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.ClotheeCategory -> {
+            WgcClotheeCategoryAvatar(
+                modifier = modifier,
+                name = title,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.ClotheeCartItem -> {
+            WgcClotheeCartItemCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
             )
         }
     }

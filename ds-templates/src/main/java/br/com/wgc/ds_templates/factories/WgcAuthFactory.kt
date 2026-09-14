@@ -210,6 +210,25 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Clothee -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.clothee.auth.WgcClotheeSignInTemplate(
+                        onContinueClick = onNavigateToRegister,
+                        onCreateAccountClick = onNavigateToRegister,
+                        onForgotPasswordClick = onNavigateToResetPassword
+                    )
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.clothee.auth.WgcClotheeSignInTemplate(
+                        onContinueClick = onNavigateToLogin,
+                        onCreateAccountClick = onNavigateToLogin,
+                        onForgotPasswordClick = onNavigateToResetPassword
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.clothee.auth.WgcClotheeForgotPasswordTemplate(
+                        onContinueClick = onNavigateToLogin,
+                        onBackClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }
