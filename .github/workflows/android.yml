@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    types: [opened, edited, synchronize, reopened]
 
 permissions:
   contents: write
@@ -30,6 +31,9 @@ jobs:
             docs
             test
             chore
+            ci
+            build
+            perf
           requireScope: false
 
   # --- 2. DETECTAR MÓDULOS ALTERADOS ---
@@ -109,6 +113,12 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
       - name: Run Detekt on ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:detekt
+      - name: Upload Detekt Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: detekt-reports-${{ matrix.module }}
+          path: ${{ matrix.module }}/build/reports/detekt/
 
   # --- 5. TESTES HIPERGRANULARES: TESTES UNITÁRIOS POR MÓDULO (PARALELO) ---
   unit-tests-matrix:
@@ -133,6 +143,12 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
       - name: Run Unit Tests for ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:testDebugUnitTest
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.module }}
+          path: ${{ matrix.module }}/build/reports/tests/testDebugUnitTest/
 
   # --- 6. REGRESSÃO VISUAL: SCREENSHOT TESTS ---
   screenshot-tests:
@@ -150,6 +166,13 @@ jobs:
       - name: Validate Screenshot Previews Regression
         continue-on-error: true
         run: ./gradlew validateDebugScreenshotTest
+      - name: Upload Screenshot Test Reports & Diffs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshot-test-reports
+          path: app/build/reports/screenshotTest/
+          if-no-files-found: ignore
 
   # --- 7. BUILD HIPERGRANULAR: ASSEMBLE RELEASE POR BIBLIOTECA (PARALELO) ---
   build-aars-matrix:
