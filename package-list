@@ -105,6 +105,12 @@ br.com.wgc.ds_templates.screens.organizze.onboarding
 br.com.wgc.ds_templates.screens.organizze.reports
 br.com.wgc.ds_templates.screens.organizze.transactions
 br.com.wgc.ds_templates.screens.profile
+br.com.wgc.ds_templates.screens.quintoandar.detail
+br.com.wgc.ds_templates.screens.quintoandar.favorites
+br.com.wgc.ds_templates.screens.quintoandar.home
+br.com.wgc.ds_templates.screens.quintoandar.model
+br.com.wgc.ds_templates.screens.quintoandar.profile
+br.com.wgc.ds_templates.screens.quintoandar.schedule
 br.com.wgc.ds_templates.screens.register.address.model
 br.com.wgc.ds_templates.screens.register.address.screen
 br.com.wgc.ds_templates.screens.register.address.state
