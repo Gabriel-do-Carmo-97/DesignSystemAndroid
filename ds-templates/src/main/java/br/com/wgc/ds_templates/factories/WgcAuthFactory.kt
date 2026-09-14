@@ -175,6 +175,22 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Shoppe -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.shoppe.auth.WgcShoppeLoginScreenTemplate(
+                        onContinueClick = onNavigateToRegister,
+                        onCreateAccountClick = onNavigateToRegister
+                    )
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.shoppe.auth.WgcShoppeStartScreenTemplate(
+                        onGetStartedClick = onNavigateToRegister,
+                        onLoginClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.shoppe.auth.WgcShoppeOtpRecoveryScreenTemplate(
+                        onSubmitClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

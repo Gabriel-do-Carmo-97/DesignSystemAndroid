@@ -37,7 +37,11 @@ enum class WgcCardType {
     EcommerceProduct,
     DealOfTheDay,
     Address,
-    PaymentMethod
+    PaymentMethod,
+    ShoppeProduct,
+    ShoppeOrderStatus,
+    ShoppeVoucher,
+    ShoppeFlashSale
 }
 
 /**
@@ -199,6 +203,36 @@ fun WgcCardFactory(
                 subtitle = subtitle,
                 isSelected = true,
                 onSelect = onClick
+            )
+        }
+        WgcCardType.ShoppeProduct -> {
+            WgcShoppeProductCard(
+                modifier = modifier,
+                title = title,
+                category = subtitle,
+                price = price,
+                imageUrl = imageUrl ?: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600",
+                onClick = onClick
+            )
+        }
+        WgcCardType.ShoppeOrderStatus -> {
+            WgcShoppeOrderStatusRow(
+                modifier = modifier
+            )
+        }
+        WgcCardType.ShoppeVoucher -> {
+            WgcShoppeVoucherCard(
+                modifier = modifier,
+                discountTitle = title,
+                minSpend = subtitle,
+                onCollectClick = onClick
+            )
+        }
+        WgcCardType.ShoppeFlashSale -> {
+            WgcShoppeFlashSaleBanner(
+                modifier = modifier,
+                title = title,
+                discountTag = subtitle
             )
         }
     }
