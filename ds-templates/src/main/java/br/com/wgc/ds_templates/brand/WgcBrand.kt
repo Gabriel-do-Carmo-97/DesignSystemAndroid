@@ -114,5 +114,10 @@ enum class WgcBrand(
         brandName = "Viva Real",
         brandLogoText = "Viva Real",
         primaryColor = Color(0xFF1C9963)
+    ),
+    Zap(
+        brandName = "Zap Imóveis",
+        brandLogoText = "ZAP",
+        primaryColor = Color(0xFF002F6C)
     )
 }

@@ -66,7 +66,8 @@ enum class WgcCardType {
     OrganizzeCreditCard,
     OrganizzeTransaction,
     QuintoAndarProperty,
-    VivaRealProperty
+    VivaRealProperty,
+    ZapProperty
 }
 
 /**
@@ -489,6 +490,27 @@ fun WgcCardFactory(
                 agencyName = "Lopes Prime",
                 badgeText = badgeText ?: "Super Destaque",
                 onClick = onClick
+            )
+        }
+        WgcCardType.ZapProperty -> {
+            WgcZapPropertyCard(
+                modifier = modifier,
+                title = title.ifBlank { "Apartamento Alto Padrão com Varanda Gourmet" },
+                neighborhood = subtitle.ifBlank { "Itaim Bibi" },
+                address = "Rua Joaquim Floriano, 900",
+                price = price.ifBlank { "R$ 1.850.000" },
+                pricePerSquareMeter = "R$ 13.703/m²",
+                condoAndIptu = "Condomínio R$ 1.650 • IPTU R$ 680",
+                areaM2 = 135,
+                bedrooms = 3,
+                suites = 2,
+                bathrooms = 4,
+                parkingSpaces = 2,
+                fipeStatus = WgcZapFipeStatus.BELOW_AVERAGE,
+                badgeText = badgeText ?: "Super Destaque",
+                advertiserName = "Zap Prime Imóveis",
+                hasVirtualTour = true,
+                onCardClick = onClick
             )
         }
     }

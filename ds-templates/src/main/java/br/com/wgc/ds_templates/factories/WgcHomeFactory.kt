@@ -76,6 +76,7 @@ fun WgcHomeFactory(
             WgcBrand.Organizze -> br.com.wgc.ds_templates.screens.organizze.dashboard.WgcOrganizzeDashboardTemplate()
             WgcBrand.QuintoAndar -> br.com.wgc.ds_templates.screens.quintoandar.home.WgcQuintoAndarHomeTemplate()
             WgcBrand.VivaReal -> br.com.wgc.ds_templates.screens.vivareal.home.WgcVivaRealHomeTemplate()
+            WgcBrand.Zap -> br.com.wgc.ds_templates.screens.zap.home.WgcZapHomeTemplate()
         }
         return
     }

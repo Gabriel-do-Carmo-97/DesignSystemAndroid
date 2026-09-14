@@ -304,6 +304,17 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Zap -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.zap.profile.WgcZapProfileTemplate(
+                        onAnnouncePropertyClick = onNavigateToRegister,
+                        onMyPropertiesClick = onNavigateToLogin
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
