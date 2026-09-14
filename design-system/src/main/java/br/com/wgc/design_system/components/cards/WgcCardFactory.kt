@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.components.buttons.WgcLazaBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.ifood.WgcIFoodRestaurantCard
 
@@ -47,7 +48,10 @@ enum class WgcCardType {
     KutukuCartItem,
     ClotheeProduct,
     ClotheeCategory,
-    ClotheeCartItem
+    ClotheeCartItem,
+    LazaProduct,
+    LazaBrand,
+    LazaCartItem
 }
 
 /**
@@ -293,6 +297,34 @@ fun WgcCardFactory(
                 modifier = modifier,
                 title = title,
                 price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaProduct -> {
+            WgcLazaProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                subtitle = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaBrand -> {
+            WgcLazaBrandPill(
+                modifier = modifier,
+                brandName = title,
+                logoUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.LazaCartItem -> {
+            WgcLazaCartItemRow(
+                modifier = modifier,
+                title = title,
+                price = price,
+                taxInfo = subtitle,
                 imageUrl = imageUrl,
                 onClick = onClick
             )

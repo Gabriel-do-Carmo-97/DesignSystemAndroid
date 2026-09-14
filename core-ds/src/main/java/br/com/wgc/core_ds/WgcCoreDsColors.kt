@@ -92,5 +92,22 @@ object WgcCoreDsColors {
     val clotheeBorder = Color.parseColor("#E4E4E7")
     val clotheeAlertRed = Color.parseColor("#FA3636")
     val clotheeSuccessGreen = Color.parseColor("#2ECC71")
+
+    // --- 9. CORES BRAND LAZA (STREETWEAR & BRAND STORE) ---
+    val lazaPrimary = Color.parseColor("#9775FA")
+    val lazaPrimaryLight = Color.parseColor("#F4F0FF")
+    val lazaDark = Color.parseColor("#1D1E20")
+    val lazaSecondaryText = Color.parseColor("#8F959E")
+    val lazaBackground = Color.WHITE
+    val lazaSurface = Color.parseColor("#F5F6FA")
+    val lazaDarkBackground = Color.parseColor("#1B262C")
+    val lazaDarkSurface = Color.parseColor("#29363D")
+    val lazaBorder = Color.parseColor("#E7E8EB")
+    val lazaAlertRed = Color.parseColor("#EA4335")
+    val lazaSuccessGreen = Color.parseColor("#34A853")
+    val lazaGold = Color.parseColor("#FF7043")
+    val lazaFacebook = Color.parseColor("#4267B2")
+    val lazaTwitter = Color.parseColor("#1DA1F2")
+    val lazaGoogle = Color.parseColor("#EA4335")
 }
 
