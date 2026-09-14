@@ -29,4 +29,15 @@ object WgcCoreDsBorderRadius {
 
     /** 999px */
     const val circular999 = 999.0
+
+    // Ergonomic standard aliases
+    const val none = none0
+    const val xs = xs2
+    const val sm = sm4
+    const val md = md8
+    const val lg = lg12
+    const val xl = xl16
+    const val sl = sl18
+    const val xxl = xxl24
+    const val circular = circular999
 }

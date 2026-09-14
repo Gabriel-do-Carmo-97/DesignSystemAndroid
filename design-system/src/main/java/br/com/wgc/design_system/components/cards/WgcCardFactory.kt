@@ -33,7 +33,11 @@ import br.com.wgc.design_system.components.ifood.WgcIFoodRestaurantCard
 enum class WgcCardType {
     ProductDetail,
     RestaurantCard,
-    StatusCard
+    StatusCard,
+    EcommerceProduct,
+    DealOfTheDay,
+    Address,
+    PaymentMethod
 }
 
 /**
@@ -161,6 +165,41 @@ fun WgcCardFactory(
                     actionSlot?.invoke()
                 }
             }
+        }
+        WgcCardType.EcommerceProduct -> {
+            WgcEcommerceProductCard(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.DealOfTheDay -> {
+            WgcDealOfTheDayCard(
+                modifier = modifier,
+                title = title,
+                remainingTime = subtitle,
+                onViewAllClick = onClick
+            )
+        }
+        WgcCardType.Address -> {
+            WgcAddressCard(
+                modifier = modifier,
+                title = title,
+                address = subtitle,
+                onChangeClick = onClick
+            )
+        }
+        WgcCardType.PaymentMethod -> {
+            WgcPaymentMethodRadioCard(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                isSelected = true,
+                onSelect = onClick
+            )
         }
     }
 }

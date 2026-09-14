@@ -34,11 +34,17 @@ object WgcCoreDsColors {
     val mercadoLivreGreen = Color.parseColor("#00A650")
     val mercadoLivreBgGray = Color.parseColor("#EBEBEB")
 
-    // --- 5. NOVAS BRANDS (SHOPEE, UBER, ALIEXPRESS) ---
+    // --- 5. NOVAS BRANDS (SHOPEE, UBER, ALIEXPRESS, STYLISH) ---
     val shopeeOrange = Color.parseColor("#EE4D2D")
     val uberBlack = Color.parseColor("#111111")
     val aliExpressRed = Color.parseColor("#FF4747")
     val aliExpressOrange = Color.parseColor("#FF6E00")
+    val stylishPink = Color.parseColor("#F83758")
+    val stylishBlue = Color.parseColor("#4392F9")
+    val stylishDark = Color.parseColor("#17223B")
+    val stylishGold = Color.parseColor("#EDB310")
+    val stylishLightGray = Color.parseColor("#F9F9F9")
+    val stylishBorderGray = Color.parseColor("#A8A8A9")
 
     // --- 6. TOKENS SEMÂNTICOS ---
     val primary = orange500
