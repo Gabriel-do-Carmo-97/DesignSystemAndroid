@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.coil.compose)
     implementation(libs.kotlinx.serialization.core)
+    implementation(libs.coil.compose)
 
     testImplementation(libs.mockk)
     androidTestImplementation( libs.mockk.android)
