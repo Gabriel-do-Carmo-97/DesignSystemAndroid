@@ -57,4 +57,16 @@ object WgcCoreDsColors {
 
     val textPrimary = grey900
     val textSecondary = Color.parseColor("#757575")
+
+    // --- 7. CORES BRAND KUTUKU (LUXURY / ACCESSORIES) ---
+    val kutukuPrimary = Color.parseColor("#514EB7")
+    val kutukuPrimaryLight = Color.parseColor("#EAE9FB")
+    val kutukuSecondary = Color.parseColor("#C4C3FF")
+    val kutukuDark = Color.parseColor("#101010")
+    val kutukuSecondaryText = Color.parseColor("#707070")
+    val kutukuBackground = Color.parseColor("#FBFBFC")
+    val kutukuSurface = Color.WHITE
+    val kutukuBorder = Color.parseColor("#E8E8EE")
+    val kutukuGold = Color.parseColor("#F1B11C")
+    val kutukuAlertRed = Color.parseColor("#E74C3C")
 }

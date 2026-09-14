@@ -175,6 +175,25 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Kutuku -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.kutuku.auth.WgcKutukuLoginScreen(
+                        onSignInClick = onNavigateToRegister,
+                        onSignUpClick = onNavigateToRegister,
+                        onForgotPasswordClick = onNavigateToResetPassword
+                    )
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.kutuku.auth.WgcKutukuLoginScreen(
+                        onSignInClick = onNavigateToLogin,
+                        onSignUpClick = onNavigateToLogin,
+                        onForgotPasswordClick = onNavigateToResetPassword
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.kutuku.auth.WgcKutukuOnboardingScreen(
+                        onGetStartedClick = onNavigateToLogin,
+                        onSignInClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

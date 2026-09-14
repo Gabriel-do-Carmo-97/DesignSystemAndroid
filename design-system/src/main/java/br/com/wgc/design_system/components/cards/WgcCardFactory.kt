@@ -37,7 +37,10 @@ enum class WgcCardType {
     EcommerceProduct,
     DealOfTheDay,
     Address,
-    PaymentMethod
+    PaymentMethod,
+    KutukuProduct,
+    KutukuCategory,
+    KutukuCartItem
 }
 
 /**
@@ -199,6 +202,35 @@ fun WgcCardFactory(
                 subtitle = subtitle,
                 isSelected = true,
                 onSelect = onClick
+            )
+        }
+        WgcCardType.KutukuProduct -> {
+            WgcKutukuProductCard(
+                modifier = modifier,
+                title = title,
+                subtitle = subtitle,
+                price = price,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.KutukuCategory -> {
+            WgcKutukuCategoryCard(
+                modifier = modifier,
+                title = title,
+                productCountText = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.KutukuCartItem -> {
+            WgcKutukuCartItemRow(
+                modifier = modifier,
+                title = title,
+                colorVariant = subtitle,
+                price = price,
+                quantity = 1,
+                imageUrl = imageUrl
             )
         }
     }

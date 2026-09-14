@@ -111,12 +111,16 @@ fun DesignSystemCatalogApp() {
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
 
     val primaryTabs = listOf(
+        "👜 Kutuku (Luxury Store)",
         "🛍️ Stylish (16 Telas Figma)",
         "🎨 Figma (3 Templates)",
         "🧩 Componentes (:design-system)",
         "📱 Templates (:ds-templates)",
         "🏭 Fábricas & Slots"
     )
+
+    val kutukuScreens = br.com.wgc.ds_templates.factories.WgcKutukuScreen.entries
+    var selectedKutukuScreenIndex by remember { mutableIntStateOf(2) } // Default: Home
 
     val stylishScreens = br.com.wgc.ds_templates.factories.WgcStylishScreen.entries
     var selectedStylishScreenIndex by remember { mutableIntStateOf(8) } // Default: Home
@@ -161,6 +165,17 @@ fun DesignSystemCatalogApp() {
 
         when (primarySection) {
             0 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedKutukuScreenIndex) {
+                    kutukuScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedKutukuScreenIndex == index,
+                            onClick = { selectedKutukuScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            1 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedStylishScreenIndex) {
                     stylishScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -171,7 +186,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            1 -> {
+            2 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
                     figmaSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -182,7 +197,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            2 -> {
+            3 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
                     componentSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -193,7 +208,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            3 -> {
+            4 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
                     templateSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -204,7 +219,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            4 -> {
+            5 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
                     factorySubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -220,6 +235,15 @@ fun DesignSystemCatalogApp() {
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             when (primarySection) {
                 0 -> {
+                    val currentScreen = kutukuScreens[selectedKutukuScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcKutukuFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedKutukuScreenIndex = kutukuScreens.indexOf(targetScreen)
+                        }
+                    )
+                }
+                1 -> {
                     val currentScreen = stylishScreens[selectedStylishScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcStylishFactory(
                         screen = currentScreen,
@@ -228,14 +252,14 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                1 -> {
+                2 -> {
                     when (selectedFigmaSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
                         2 -> WgcKlokAuthScreenTemplate()
                     }
                 }
-                2 -> {
+                3 -> {
                     when (selectedComponentSubTab) {
                         0 -> WgcClassicButtonCatalogSection()
                         1 -> WgcSecondaryClassicButtonCatalogSection()
@@ -258,7 +282,7 @@ fun DesignSystemCatalogApp() {
                         18 -> WgcPillTabSwitchCatalogSection()
                     }
                 }
-                3 -> {
+                4 -> {
                     when (selectedTemplateSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -277,7 +301,7 @@ fun DesignSystemCatalogApp() {
                         14 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
                     }
                 }
-                4 -> {
+                5 -> {
                     WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
                 }
             }
