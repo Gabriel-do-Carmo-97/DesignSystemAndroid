@@ -124,5 +124,10 @@ enum class WgcBrand(
         brandName = "Smart Fit",
         brandLogoText = "SF",
         primaryColor = Color(0xFFFFB800)
+    ),
+    Wellhub(
+        brandName = "Wellhub (Gympass)",
+        brandLogoText = "WH",
+        primaryColor = Color(0xFFFF4338)
     )
 }

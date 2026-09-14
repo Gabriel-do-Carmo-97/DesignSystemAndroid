@@ -285,4 +285,27 @@ object WgcCoreDsColors {
     val smartfitTextInverse = Color.parseColor("#000000")
     val smartfitCardPlaceholder = Color.parseColor("#242424")
     val smartfitAccentCyan = Color.parseColor("#00E5FF")
+
+    // --- GYMPASS / WELLHUB TOKENS (CATEGORIA 2: ACADEMIA & FITNESS) ---
+    val wellhubCoral = Color.parseColor("#FF4338") // Coral vibrante Wellhub
+    val wellhubCoralDark = Color.parseColor("#E0342A")
+    val wellhubCoralLight = Color.parseColor("#FFF0EE")
+    val wellhubForest = Color.parseColor("#00382B") // Verde escuro corporativo Wellhub
+    val wellhubForestDark = Color.parseColor("#00261D")
+    val wellhubForestLight = Color.parseColor("#E6F2EE")
+    val wellhubCreamBg = Color.parseColor("#FBF9F6") // Fundo suave editorial
+    val wellhubSurface = Color.WHITE
+    val wellhubDark = Color.parseColor("#1A1A1A")
+    val wellhubSecondaryText = Color.parseColor("#6B7280")
+    val wellhubBorder = Color.parseColor("#E5E7EB")
+    val wellhubPlaceholder = Color.parseColor("#E2E8F0")
+    val wellhubTierStarter = Color.parseColor("#4B5563")
+    val wellhubTierBasic = Color.parseColor("#0284C7")
+    val wellhubTierSilver = Color.parseColor("#6B7280")
+    val wellhubTierGold = Color.parseColor("#D97706")
+    val wellhubTierPlatinum = Color.parseColor("#6366F1")
+    val wellhubTierDiamond = Color.parseColor("#059669")
+    val wellhubCheckInGreen = Color.parseColor("#10B981")
+    val wellhubCheckInGreenLight = Color.parseColor("#E6F9F2")
+    val wellhubCheckInTimer = Color.parseColor("#F59E0B")
 }
