@@ -282,6 +282,17 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.QuintoAndar -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.quintoandar.profile.WgcQuintoAndarProfileTemplate(
+                        onMyVisitsClick = onNavigateToLogin,
+                        onMyProposalsClick = onNavigateToRegister
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
