@@ -109,5 +109,10 @@ enum class WgcBrand(
         brandName = "QuintoAndar",
         brandLogoText = "QuintoAndar",
         primaryColor = Color(0xFF1C2A44)
+    ),
+    VivaReal(
+        brandName = "Viva Real",
+        brandLogoText = "Viva Real",
+        primaryColor = Color(0xFF1C9963)
     )
 }
