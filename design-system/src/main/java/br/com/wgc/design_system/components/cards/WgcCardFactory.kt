@@ -48,6 +48,7 @@ enum class WgcCardType {
     KutukuCartItem,
     ClotheeProduct,
     ClotheeCategory,
+    ClotheeCartItem,
     LazaProduct,
     LazaBrand,
     LazaCartItem,

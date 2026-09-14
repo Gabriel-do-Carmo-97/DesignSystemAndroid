@@ -187,8 +187,10 @@ object WgcCoreDsColors {
     val shopEaseCardBlue = Color.parseColor("#E3F2FD")
 
     // --- 14. CORES BRAND ORGANIZZE (PERSONAL FINANCE SUITE) ---
-    val organizzePrimary = Color.parseColor("#2ECC71")
-    val organizzePrimaryLight = Color.parseColor("#EAFDF2")
+    val organizzePrimary = Color.parseColor("#00A389")
+    val organizzePrimaryDark = Color.parseColor("#007E6A")
+    val organizzePrimaryLight = Color.parseColor("#E0F5F1")
+    val organizzeSecondary = Color.parseColor("#1ABC9C")
     val organizzeExpenseRed = Color.parseColor("#E74C3C")
     val organizzeExpenseRedLight = Color.parseColor("#FDEDEC")
     val organizzeIncomeGreen = Color.parseColor("#2ECC71")
