@@ -229,6 +229,18 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Tassel -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.tassel.profile.WgcTasselProfileTemplate(
+                        onBackClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.tassel.profile.WgcTasselProfileTemplate(
+                        onBackClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }

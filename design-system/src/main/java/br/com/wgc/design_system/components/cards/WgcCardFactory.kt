@@ -47,7 +47,10 @@ enum class WgcCardType {
     KutukuCartItem,
     ClotheeProduct,
     ClotheeCategory,
-    ClotheeCartItem
+    ClotheeCartItem,
+    TasselCollection,
+    TasselProduct,
+    TasselOrderTracker
 }
 
 /**
@@ -295,6 +298,32 @@ fun WgcCardFactory(
                 price = price,
                 imageUrl = imageUrl,
                 onClick = onClick
+            )
+        }
+        WgcCardType.TasselCollection -> {
+            WgcTasselCollectionCard(
+                modifier = modifier,
+                title = title,
+                onClick = onClick
+            )
+        }
+        WgcCardType.TasselProduct -> {
+            WgcTasselProductCard(
+                modifier = modifier,
+                title = title,
+                price = price,
+                brand = subtitle,
+                imageUrl = imageUrl,
+                onClick = onClick
+            )
+        }
+        WgcCardType.TasselOrderTracker -> {
+            WgcTasselOrderTrackerCard(
+                modifier = modifier,
+                productTitle = title,
+                productDetails = subtitle,
+                productImageUrl = imageUrl,
+                onMoreInfoClick = onClick
             )
         }
     }

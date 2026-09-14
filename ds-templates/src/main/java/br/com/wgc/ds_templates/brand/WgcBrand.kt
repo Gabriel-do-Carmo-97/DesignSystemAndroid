@@ -74,5 +74,10 @@ enum class WgcBrand(
         brandName = "Clothee",
         brandLogoText = "Clothee",
         primaryColor = Color(0xFF8E6CEF)
+    ),
+    Tassel(
+        brandName = "Tassel",
+        brandLogoText = "Tassel",
+        primaryColor = Color(0xFF4D38DC)
     )
 }

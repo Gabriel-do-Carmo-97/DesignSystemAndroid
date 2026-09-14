@@ -92,5 +92,24 @@ object WgcCoreDsColors {
     val clotheeBorder = Color.parseColor("#E4E4E7")
     val clotheeAlertRed = Color.parseColor("#FA3636")
     val clotheeSuccessGreen = Color.parseColor("#2ECC71")
+
+    // --- 9. CORES BRAND TASSEL (MINIMALIST MULTI-BRAND ECOMMERCE) ---
+    val tasselPrimary = Color.parseColor("#4D38DC")
+    val tasselPrimaryLight = Color.parseColor("#F0EFFF")
+    val tasselDark = Color.parseColor("#1B1B1E")
+    val tasselSecondaryText = Color.parseColor("#7C7C8A")
+    val tasselBackground = Color.WHITE
+    val tasselSurface = Color.parseColor("#F4F4F6")
+    val tasselDarkBackground = Color.parseColor("#121214")
+    val tasselDarkSurface = Color.parseColor("#1E1E24")
+    val tasselBorder = Color.parseColor("#E5E5EA")
+    val tasselSalePink = Color.parseColor("#FFF0F0")
+    val tasselSalePinkText = Color.parseColor("#FF5A5F")
+    val tasselNewInPurple = Color.parseColor("#F0EFFF")
+    val tasselNewInPurpleText = Color.parseColor("#4D38DC")
+    val tasselSuccessGreen = Color.parseColor("#2ECC71")
+    val tasselAlertRed = Color.parseColor("#FA3636")
+    val tasselGold = Color.parseColor("#FFB800")
+    val tasselDenimBlue = Color.parseColor("#4A90E2")
 }
 
