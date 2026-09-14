@@ -37,8 +37,10 @@ br.com.wgc.design_system.components.sections.items.category
 br.com.wgc.design_system.components.sections.items.product
 br.com.wgc.design_system.components.sections.product
 br.com.wgc.design_system.components.sections.type
+br.com.wgc.design_system.components.stepper
 br.com.wgc.design_system.components.story
 br.com.wgc.design_system.components.tooltip
+br.com.wgc.design_system.components.tracking
 br.com.wgc.design_system.mock
 br.com.wgc.design_system.previews
 module:ds-templates
@@ -55,6 +57,14 @@ br.com.wgc.ds_templates.screens.home.ecommerce
 br.com.wgc.ds_templates.screens.home.fintech
 br.com.wgc.ds_templates.screens.ifood
 br.com.wgc.ds_templates.screens.ifood.auth
+br.com.wgc.ds_templates.screens.kutuku.auth
+br.com.wgc.ds_templates.screens.kutuku.chat
+br.com.wgc.ds_templates.screens.kutuku.checkout
+br.com.wgc.ds_templates.screens.kutuku.home
+br.com.wgc.ds_templates.screens.kutuku.model
+br.com.wgc.ds_templates.screens.kutuku.product
+br.com.wgc.ds_templates.screens.kutuku.profile
+br.com.wgc.ds_templates.screens.kutuku.tracking
 br.com.wgc.ds_templates.screens.login.screen
 br.com.wgc.ds_templates.screens.login.state
 br.com.wgc.ds_templates.screens.login.viewmodel
