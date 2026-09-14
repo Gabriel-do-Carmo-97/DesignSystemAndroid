@@ -64,7 +64,8 @@ enum class WgcCardType {
     ShopEaseOfferBanner,
     OrganizzeBalance,
     OrganizzeCreditCard,
-    OrganizzeTransaction
+    OrganizzeTransaction,
+    QuintoAndarProperty
 }
 
 /**
@@ -461,6 +462,18 @@ fun WgcCardFactory(
                 title = title.ifBlank { "Lançamento" },
                 category = subtitle.ifBlank { "Geral" },
                 amount = price.ifBlank { "R$ 0,00" },
+                onClick = onClick
+            )
+        }
+        WgcCardType.QuintoAndarProperty -> {
+            WgcQuintoAndarPropertyCard(
+                modifier = modifier,
+                title = title.ifBlank { "Apartamento para alugar" },
+                neighborhood = subtitle.ifBlank { "Pinheiros" },
+                address = "Rua Mourato Coelho, 700",
+                price = price.ifBlank { "R$ 3.200 /mês" },
+                totalPrice = "Total R$ 4.050 /mês",
+                badgeText = badgeText ?: "Sem Fiador",
                 onClick = onClick
             )
         }

@@ -104,5 +104,10 @@ enum class WgcBrand(
         brandName = "Organizze",
         brandLogoText = "Organizze",
         primaryColor = Color(0xFF2ECC71)
+    ),
+    QuintoAndar(
+        brandName = "QuintoAndar",
+        brandLogoText = "QuintoAndar",
+        primaryColor = Color(0xFF1C2A44)
     )
 }

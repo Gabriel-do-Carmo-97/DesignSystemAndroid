@@ -206,4 +206,22 @@ object WgcCoreDsColors {
     val organizzeCardItau = Color.parseColor("#EC7000")
     val organizzeCardInter = Color.parseColor("#FF7A00")
     val organizzeWarningYellow = Color.parseColor("#F39C12")
+
+    // QuintoAndar Real Estate Tokens
+    val quintoAndarPrimary = Color.parseColor("#1C2A44")
+    val quintoAndarPrimaryDark = Color.parseColor("#0C182B")
+    val quintoAndarPrimaryLight = Color.parseColor("#E8EEF5")
+    val quintoAndarYellow = Color.parseColor("#FFD200")
+    val quintoAndarYellowDark = Color.parseColor("#E6BC00")
+    val quintoAndarYellowLight = Color.parseColor("#FFF9D6")
+    val quintoAndarCoral = Color.parseColor("#FF5A5F")
+    val quintoAndarCoralLight = Color.parseColor("#FFEBEB")
+    val quintoAndarGreen = Color.parseColor("#00875A")
+    val quintoAndarGreenLight = Color.parseColor("#E3FCEF")
+    val quintoAndarDark = Color.parseColor("#1C2A44")
+    val quintoAndarSecondaryText = Color.parseColor("#687182")
+    val quintoAndarBackground = Color.parseColor("#F7F8FA")
+    val quintoAndarSurface = Color.WHITE
+    val quintoAndarBorder = Color.parseColor("#E2E8F0")
+    val quintoAndarCardPlaceholder = Color.parseColor("#CBD5E1")
 }
