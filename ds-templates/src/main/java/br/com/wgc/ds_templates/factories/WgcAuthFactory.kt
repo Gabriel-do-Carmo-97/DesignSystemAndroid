@@ -38,6 +38,9 @@ import br.com.wgc.ds_templates.screens.mercadolivre.auth.WgcMercadoLivreResetPas
 import br.com.wgc.ds_templates.screens.nineninefood.auth.FakeNineNineAuthViewModel
 import br.com.wgc.ds_templates.screens.nineninefood.auth.WgcNineNineLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.nineninefood.auth.WgcNineNineRegisterScreenTemplate
+import br.com.wgc.ds_templates.screens.stylish.auth.WgcStylishForgotPasswordScreenTemplate
+import br.com.wgc.ds_templates.screens.stylish.auth.WgcStylishLoginScreenTemplate
+import br.com.wgc.ds_templates.screens.stylish.auth.WgcStylishRegisterScreenTemplate
 import br.com.wgc.ds_templates.screens.nineninefood.auth.WgcNineNineResetPasswordScreenTemplate
 import br.com.wgc.ds_templates.screens.shopee.auth.FakeShopeeAuthViewModel
 import br.com.wgc.ds_templates.screens.shopee.auth.WgcShopeeLoginScreenTemplate
@@ -153,6 +156,24 @@ fun WgcAuthFactory(
                 WgcSplitCardAuthScreenTemplate(
                     onNavigateToForgotPassword = onNavigateToResetPassword
                 )
+            }
+            WgcBrand.Stylish -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> WgcStylishLoginScreenTemplate(
+                        onLoginClick = onNavigateToRegister,
+                        onForgotPasswordClick = onNavigateToResetPassword,
+                        onSignUpClick = onNavigateToRegister
+                    )
+                    WgcAuthFlow.Register -> WgcStylishRegisterScreenTemplate(
+                        onCreateAccountClick = onNavigateToLogin,
+                        onSignInClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> WgcStylishForgotPasswordScreenTemplate(
+                        onSubmitClick = onNavigateToLogin,
+                        onBackToLoginClick = onNavigateToLogin
+                    )
+                }
             }
         }
         return

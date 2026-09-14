@@ -64,6 +64,7 @@ fun WgcHomeFactory(
             WgcBrand.Klok,
             WgcBrand.CleanWave,
             WgcBrand.SplitCard -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
+            WgcBrand.Stylish -> br.com.wgc.ds_templates.screens.stylish.home.WgcStylishHomeScreenTemplate()
         }
         return
     }

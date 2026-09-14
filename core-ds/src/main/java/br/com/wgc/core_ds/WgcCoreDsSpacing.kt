@@ -36,4 +36,16 @@ object WgcCoreDsSpacing {
 
     /** 80px */
     const val giant80 = 80.0
+
+    // Ergonomic standard aliases
+    const val none = none0
+    const val xxxs = xxxs2
+    const val xxs = xxs4
+    const val xs = xs8
+    const val sm = sm12
+    const val md = md16
+    const val lg = lg24
+    const val xl = xl32
+    const val xxl = xxl40
+    const val xxxl = xxxl48
 }

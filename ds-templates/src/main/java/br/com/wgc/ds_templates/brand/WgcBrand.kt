@@ -54,5 +54,10 @@ enum class WgcBrand(
         brandName = "Split Card",
         brandLogoText = "Split",
         primaryColor = Color(0xFF0288D1)
+    ),
+    Stylish(
+        brandName = "Stylish",
+        brandLogoText = "Stylish",
+        primaryColor = Color(0xFFF83758)
     )
 }
