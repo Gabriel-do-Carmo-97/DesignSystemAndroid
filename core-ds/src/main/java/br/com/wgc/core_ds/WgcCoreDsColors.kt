@@ -93,7 +93,24 @@ object WgcCoreDsColors {
     val clotheeAlertRed = Color.parseColor("#FA3636")
     val clotheeSuccessGreen = Color.parseColor("#2ECC71")
 
-    // --- 9. CORES BRAND TASSEL (MINIMALIST MULTI-BRAND ECOMMERCE) ---
+    // --- 9. CORES BRAND LAZA (STREETWEAR & BRAND STORE) ---
+    val lazaPrimary = Color.parseColor("#9775FA")
+    val lazaPrimaryLight = Color.parseColor("#F4F0FF")
+    val lazaDark = Color.parseColor("#1D1E20")
+    val lazaSecondaryText = Color.parseColor("#8F959E")
+    val lazaBackground = Color.WHITE
+    val lazaSurface = Color.parseColor("#F5F6FA")
+    val lazaDarkBackground = Color.parseColor("#1B262C")
+    val lazaDarkSurface = Color.parseColor("#29363D")
+    val lazaBorder = Color.parseColor("#E7E8EB")
+    val lazaAlertRed = Color.parseColor("#EA4335")
+    val lazaSuccessGreen = Color.parseColor("#34A853")
+    val lazaGold = Color.parseColor("#FF7043")
+    val lazaFacebook = Color.parseColor("#4267B2")
+    val lazaTwitter = Color.parseColor("#1DA1F2")
+    val lazaGoogle = Color.parseColor("#EA4335")
+
+    // --- 10. CORES BRAND TASSEL (MINIMALIST MULTI-BRAND ECOMMERCE) ---
     val tasselPrimary = Color.parseColor("#4D38DC")
     val tasselPrimaryLight = Color.parseColor("#F0EFFF")
     val tasselDark = Color.parseColor("#1B1B1E")
@@ -112,7 +129,7 @@ object WgcCoreDsColors {
     val tasselGold = Color.parseColor("#FFB800")
     val tasselDenimBlue = Color.parseColor("#4A90E2")
 
-    // --- 10. CORES BRAND SHOPPER (EMERALD GREEN MODERN ECOMMERCE) ---
+    // --- 11. CORES BRAND SHOPPER (EMERALD GREEN MODERN ECOMMERCE) ---
     val shopperPrimary = Color.parseColor("#00966B")
     val shopperPrimaryDark = Color.parseColor("#007A56")
     val shopperPrimaryLight = Color.parseColor("#E6F7F2")
@@ -130,7 +147,7 @@ object WgcCoreDsColors {
     val shopperSuccessGreen = Color.parseColor("#00966B")
     val shopperGold = Color.parseColor("#FFC107")
 
-    // --- 11. CORES BRAND NEXKART (ROYAL BLUE PREMIUM ECOMMERCE) ---
+    // --- 12. CORES BRAND NEXKART (ROYAL BLUE PREMIUM ECOMMERCE) ---
     val nexkartPrimary = Color.parseColor("#2D60FF")
     val nexkartPrimaryLight = Color.parseColor("#F0F4FF")
     val nexkartPrimaryDark = Color.parseColor("#1A46D6")
@@ -151,7 +168,7 @@ object WgcCoreDsColors {
     val nexkartSuccessGreen = Color.parseColor("#34A853")
     val nexkartAlertRed = Color.parseColor("#FF3B6A")
 
-    // --- 12. CORES BRAND SHOPEASE (SUNSET ORANGE ECOMMERCE UI KIT) ---
+    // --- 13. CORES BRAND SHOPEASE (SUNSET ORANGE ECOMMERCE UI KIT) ---
     val shopEasePrimary = Color.parseColor("#FF8C42")
     val shopEasePrimaryDark = Color.parseColor("#E66A1F")
     val shopEasePrimaryLight = Color.parseColor("#FFF3EC")
@@ -169,11 +186,9 @@ object WgcCoreDsColors {
     val shopEaseCardOrange = Color.parseColor("#FFF3E0")
     val shopEaseCardBlue = Color.parseColor("#E3F2FD")
 
-    // --- 13. CORES BRAND ORGANIZZE (CONTROLE FINANCEIRO PESSOAL) ---
-    val organizzePrimary = Color.parseColor("#00A389")
-    val organizzePrimaryDark = Color.parseColor("#007E6A")
-    val organizzePrimaryLight = Color.parseColor("#E0F5F1")
-    val organizzeSecondary = Color.parseColor("#1ABC9C")
+    // --- 14. CORES BRAND ORGANIZZE (PERSONAL FINANCE SUITE) ---
+    val organizzePrimary = Color.parseColor("#2ECC71")
+    val organizzePrimaryLight = Color.parseColor("#EAFDF2")
     val organizzeExpenseRed = Color.parseColor("#E74C3C")
     val organizzeExpenseRedLight = Color.parseColor("#FDEDEC")
     val organizzeIncomeGreen = Color.parseColor("#2ECC71")
@@ -190,5 +205,3 @@ object WgcCoreDsColors {
     val organizzeCardInter = Color.parseColor("#FF7A00")
     val organizzeWarningYellow = Color.parseColor("#F39C12")
 }
-
-

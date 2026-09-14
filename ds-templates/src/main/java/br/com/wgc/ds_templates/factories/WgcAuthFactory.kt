@@ -282,6 +282,22 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.Laza -> {
+                when (flow) {
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
+                        onEmailSignInClick = onNavigateToRegister,
+                        onCreateAccountClick = onNavigateToRegister
+                    )
+                    WgcAuthFlow.Register -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaEmailSignInTemplate(
+                        onSignInClick = onNavigateToLogin
+                    )
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaIntroScreenTemplate(
+                        onGetStartedClick = onNavigateToLogin,
+                        onSkipClick = onNavigateToLogin
+                    )
+                }
+            }
         }
         return
     }
