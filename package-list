@@ -49,6 +49,15 @@ br.com.wgc.ds_templates.ecommerces.v1
 br.com.wgc.ds_templates.factories
 br.com.wgc.ds_templates.screens.aliexpress.auth
 br.com.wgc.ds_templates.screens.cart
+br.com.wgc.ds_templates.screens.clothee.auth
+br.com.wgc.ds_templates.screens.clothee.cart
+br.com.wgc.ds_templates.screens.clothee.categories
+br.com.wgc.ds_templates.screens.clothee.checkout
+br.com.wgc.ds_templates.screens.clothee.home
+br.com.wgc.ds_templates.screens.clothee.model
+br.com.wgc.ds_templates.screens.clothee.product
+br.com.wgc.ds_templates.screens.clothee.profile
+br.com.wgc.ds_templates.screens.clothee.tracking
 br.com.wgc.ds_templates.screens.common.auth
 br.com.wgc.ds_templates.screens.community.klok
 br.com.wgc.ds_templates.screens.community.split
