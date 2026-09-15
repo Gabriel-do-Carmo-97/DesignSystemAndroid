@@ -139,5 +139,10 @@ enum class WgcBrand(
         brandName = "Clube Extra",
         brandLogoText = "Extra",
         primaryColor = Color(0xFFE30613)
+    ),
+    PaoDeAcucar(
+        brandName = "Pão de Açúcar Mais",
+        brandLogoText = "PDA",
+        primaryColor = Color(0xFF006837)
     )
 }

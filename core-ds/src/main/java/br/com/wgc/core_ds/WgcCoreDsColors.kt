@@ -348,6 +348,27 @@ object WgcCoreDsColors {
     val extraPlaceholder = Color.parseColor("#E2E8F0")
     val extraSuccessGreen = Color.parseColor("#00875A")
     val extraSuccessGreenLight = Color.parseColor("#E3FCEF")
+
+    // --- PÃO DE AÇÚCAR MAIS TOKENS (CATEGORIA 3: SUPERMERCADO & VAREJO ALIMENTAR) ---
+    val pdaGreen = Color.parseColor("#006837") // Verde Clássico Pão de Açúcar
+    val pdaGreenDark = Color.parseColor("#004D26") // Verde Escuro Floresta
+    val pdaGreenLight = Color.parseColor("#E8F5E9") // Verde Claro Suave
+    val pdaGold = Color.parseColor("#C5A059") // Dourado Cliente Mais Black/Gold
+    val pdaGoldDark = Color.parseColor("#9E7D3B")
+    val pdaGoldLight = Color.parseColor("#FDF8ED")
+    val pdaWineRed = Color.parseColor("#8E1B32") // Vinho Adega Pão de Açúcar
+    val pdaWineRedDark = Color.parseColor("#630E20")
+    val pdaWineRedLight = Color.parseColor("#F9EBEF")
+    val pdaOrangeOrganic = Color.parseColor("#E67E22") // Laranja Orgânicos & Saudáveis
+    val pdaOrangeOrganicLight = Color.parseColor("#FDF2E9")
+    val pdaBackground = Color.parseColor("#FBFBF8") // Fundo creme orgânico sofisticado
+    val pdaSurface = Color.WHITE
+    val pdaTextPrimary = Color.parseColor("#1C2826")
+    val pdaTextSecondary = Color.parseColor("#607274")
+    val pdaBorder = Color.parseColor("#E2E7E4")
+    val pdaPlaceholder = Color.parseColor("#CBD5E1")
+    val pdaSuccessGreen = Color.parseColor("#2E7D32")
+    val pdaSuccessGreenLight = Color.parseColor("#E8F5E9")
 }
 
 

@@ -75,7 +75,10 @@ enum class WgcCardType {
     NtcWorkout,
     NtcProgram,
     ExtraProduct,
-    ExtraCoupon
+    ExtraCoupon,
+    PdaProduct,
+    PdaWine,
+    PdaLoyalty
 }
 
 /**
@@ -616,6 +619,48 @@ fun WgcCardFactory(
                 limitCondition = "Limite de 4 unidades por CPF",
                 validUntil = "Válido até domingo, 21/09",
                 isActivated = true,
+                onClick = onClick
+            )
+        }
+        WgcCardType.PdaProduct -> {
+            WgcPdaProductCard(
+                modifier = modifier,
+                title = title.ifBlank { "Azeite Taeq Orgânico Extra Virgem" },
+                brandOrOrigin = subtitle.ifBlank { "Taeq Orgânico" },
+                unit = "500ml",
+                originalPrice = 49.90,
+                clienteMaisPrice = 39.90,
+                badgeText = badgeText ?: "100% Orgânico",
+                isOrganic = true,
+                quantity = 1,
+                onClick = onClick
+            )
+        }
+        WgcCardType.PdaWine -> {
+            WgcPdaSommelierWineCard(
+                modifier = modifier,
+                wineName = title.ifBlank { "Marqués de Riscal Gran Reserva Rioja" },
+                countryOrigin = subtitle.ifBlank { "Espanha • D.O.Ca Rioja" },
+                grape = "Tempranillo, Graciano",
+                vintage = "Safra 2018",
+                rating = 4.4,
+                sommelierPoints = 94,
+                pairingTip = "Carnes nobres grelhadas e queijos curados.",
+                servingTemp = "16°C a 18°C",
+                price = 289.90,
+                clienteMaisPrice = 229.90,
+                quantity = 0,
+                onClick = onClick
+            )
+        }
+        WgcCardType.PdaLoyalty -> {
+            WgcPdaClienteMaisLoyaltyCard(
+                modifier = modifier,
+                clientName = title.ifBlank { "Gabriel do Carmo" },
+                cpfMasked = subtitle.ifBlank { "***.458.918-**" },
+                tier = badgeText ?: "Cliente Mais Black",
+                stilloCoins = 2840,
+                monthlySavings = 428.50,
                 onClick = onClick
             )
         }
