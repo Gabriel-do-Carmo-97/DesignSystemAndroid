@@ -328,5 +328,26 @@ object WgcCoreDsColors {
     val ntcPurple = Color.parseColor("#9D4EDD") // Destaque para Recuperação e Mindfulness
     val ntcPlaceholder = Color.parseColor("#242426")
     val ntcStreakGold = Color.parseColor("#FFD700") // Medalhas e sequências
+
+    // --- CLUBE EXTRA TOKENS (CATEGORIA 3: SUPERMERCADO & VAREJO ALIMENTAR) ---
+    val extraRed = Color.parseColor("#E30613") // Vermelho principal Clube Extra
+    val extraRedDark = Color.parseColor("#B8000B")
+    val extraRedLight = Color.parseColor("#FEEBEB")
+    val extraBlue = Color.parseColor("#002B7F") // Azul corporativo de destaque GPA
+    val extraBlueDark = Color.parseColor("#001D59")
+    val extraBlueLight = Color.parseColor("#EBF1FB")
+    val extraYellow = Color.parseColor("#FFD100") // Amarelo de ofertas "Meu Desconto"
+    val extraYellowLight = Color.parseColor("#FFFBE6")
+    val extraOrange = Color.parseColor("#FF6E00") // Laranja de fidelidade "Juntou Ganhou"
+    val extraOrangeLight = Color.parseColor("#FFF0E5")
+    val extraBackground = Color.parseColor("#F6F7F9")
+    val extraSurface = Color.WHITE
+    val extraDark = Color.parseColor("#1A1A1A")
+    val extraSecondaryText = Color.parseColor("#6E7787")
+    val extraBorder = Color.parseColor("#E5E7EB")
+    val extraPlaceholder = Color.parseColor("#E2E8F0")
+    val extraSuccessGreen = Color.parseColor("#00875A")
+    val extraSuccessGreenLight = Color.parseColor("#E3FCEF")
 }
+
 

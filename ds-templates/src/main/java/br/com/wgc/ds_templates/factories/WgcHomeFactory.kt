@@ -80,6 +80,7 @@ fun WgcHomeFactory(
             WgcBrand.SmartFit -> WgcSmartFitFactory.Screen(WgcSmartFitScreen.Home)
             WgcBrand.Wellhub -> WgcWellhubFactory.Screen(WgcWellhubScreen.Home)
             WgcBrand.NikeTrainingClub -> WgcNtcFactory(screen = WgcNtcScreen.HOME)
+            WgcBrand.ClubeExtra -> WgcExtraFactory(screen = WgcExtraScreen.HOME)
         }
         return
     }

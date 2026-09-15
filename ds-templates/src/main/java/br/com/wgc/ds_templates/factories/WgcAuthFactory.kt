@@ -349,6 +349,17 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.ClubeExtra -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.extra.discounts.WgcExtraDiscountsTemplate(
+                        coupons = br.com.wgc.ds_templates.screens.extra.model.ExtraMockData.mockCoupons,
+                        userCpfMasked = br.com.wgc.ds_templates.screens.extra.model.ExtraMockData.mockUser.cpfMasked
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(

@@ -134,5 +134,10 @@ enum class WgcBrand(
         brandName = "Nike Training Club",
         brandLogoText = "NTC",
         primaryColor = Color(0xFFD0FF00)
+    ),
+    ClubeExtra(
+        brandName = "Clube Extra",
+        brandLogoText = "Extra",
+        primaryColor = Color(0xFFE30613)
     )
 }

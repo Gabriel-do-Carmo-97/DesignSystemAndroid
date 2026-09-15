@@ -73,7 +73,9 @@ enum class WgcCardType {
     WellhubGym,
     WellhubCheckIn,
     NtcWorkout,
-    NtcProgram
+    NtcProgram,
+    ExtraProduct,
+    ExtraCoupon
 }
 
 /**
@@ -590,6 +592,31 @@ fun WgcCardFactory(
                 isEnrolled = true,
                 onClick = onClick,
                 onActionClick = onClick
+            )
+        }
+        WgcCardType.ExtraProduct -> {
+            WgcExtraProductCard(
+                modifier = modifier,
+                name = title.ifBlank { "Azeite de Oliva Extra Virgem Borges" },
+                unitDescription = subtitle.ifBlank { "Vidro 500ml" },
+                regularPrice = "R$ 42,90",
+                clubPrice = price.ifBlank { "R$ 31,90" },
+                discountPercentage = badgeText ?: "25%",
+                isDiscountActivated = true,
+                quantityInCart = 1,
+                onClick = onClick
+            )
+        }
+        WgcCardType.ExtraCoupon -> {
+            WgcExtraDiscountCouponCard(
+                modifier = modifier,
+                title = title.ifBlank { "30% de desconto em Sabão Líquido Ariel" },
+                category = subtitle.ifBlank { "Higiene & Limpeza" },
+                discountBadge = badgeText ?: "30% OFF",
+                limitCondition = "Limite de 4 unidades por CPF",
+                validUntil = "Válido até domingo, 21/09",
+                isActivated = true,
+                onClick = onClick
             )
         }
     }
