@@ -81,7 +81,32 @@ enum class WgcCardType {
     PdaLoyalty,
     CarrefourProduct,
     CarrefourNutriScore,
-    CarrefourMeuCard
+    CarrefourMeuCard,
+    DrogaRaiaProduct,
+    DrogaRaiaPrescription,
+    DrogaRaiaSubscription,
+    DrogasilVaccine,
+    DrogasilLoyalty,
+    PagueMenosClinic,
+    PagueMenosConvenio,
+    NubankAccount,
+    InterSuperApp,
+    C6Carbon,
+    MobilityRide,
+    TravelStay,
+    StreamingMedia,
+    EducationCourse,
+    MessagingConversation,
+    GameStore,
+    ProductivityTask,
+    FastFoodMeal,
+    LogisticsPackage,
+    FashionItem,
+    BeautyCosmetic,
+    PetCare,
+    HomeImprovement,
+    NewsHeadline,
+    GovDigitalDocument
 }
 
 /**
@@ -696,6 +721,230 @@ fun WgcCardFactory(
                 coinsBalance = 380,
                 bestPurchaseDay = 15,
                 onClick = onClick
+            )
+        }
+        WgcCardType.DrogaRaiaProduct -> {
+            WgcDrogaRaiaProductCard(
+                modifier = modifier,
+                title = title.ifBlank { "Dipirona Monoidratada 500mg/mL" },
+                laboratory = subtitle.ifBlank { "EMS Genéricos" },
+                presentation = "Frasco Gotas 20mL",
+                price = 14.50,
+                onCardClick = onClick
+            )
+        }
+        WgcCardType.DrogaRaiaPrescription -> {
+            WgcDrogaRaiaPrescriptionCard(
+                modifier = modifier,
+                onUploadPrescription = onClick
+            )
+        }
+        WgcCardType.DrogaRaiaSubscription -> {
+            WgcDrogaRaiaSubscriptionCard(
+                modifier = modifier,
+                medicineName = title.ifBlank { "Losartana Potássica 50mg" },
+                dosageFrequency = subtitle.ifBlank { "1 comprimido ao dia" },
+                nextDeliveryDate = "05/10/2026",
+                monthlyPrice = 18.90,
+                onManageClick = onClick
+            )
+        }
+        WgcCardType.DrogasilVaccine -> {
+            WgcDrogasilVaccineCard(
+                modifier = modifier,
+                vaccineName = title.ifBlank { "Vacina Gripe Tetravalente" },
+                targetAudience = subtitle.ifBlank { "Adultos e Crianças" },
+                price = 79.90,
+                onScheduleClick = onClick
+            )
+        }
+        WgcCardType.DrogasilLoyalty -> {
+            WgcDrogasilLoyaltyCard(
+                modifier = modifier,
+                userName = title.ifBlank { "Mariana Alves" },
+                cpfMasked = subtitle.ifBlank { "123.***.***-00" },
+                pointsBalance = 420,
+                onShowBarcodeClick = onClick
+            )
+        }
+        WgcCardType.PagueMenosClinic -> {
+            WgcPagueMenosClinicCard(
+                modifier = modifier,
+                serviceTitle = title.ifBlank { "Aferição de Pressão + Bioimpedância" },
+                description = subtitle.ifBlank { "Sala exclusiva climatizada" },
+                price = 0.0,
+                estimatedDuration = "15 min",
+                onBookClick = onClick
+            )
+        }
+        WgcCardType.PagueMenosConvenio -> {
+            WgcPagueMenosConvenioCard(
+                modifier = modifier,
+                convenioName = title.ifBlank { "Bradesco Saúde / Orizon" },
+                cardNumberMasked = subtitle.ifBlank { "9874 **** **** 1029" },
+                discountPercentage = 45,
+                onManageConvenio = onClick
+            )
+        }
+        WgcCardType.NubankAccount -> {
+            WgcNubankAccountCard(
+                modifier = modifier,
+                balance = 3450.75,
+                onClick = onClick
+            )
+        }
+        WgcCardType.InterSuperApp -> {
+            WgcInterSuperAppCard(
+                modifier = modifier,
+                partnerStore = title.ifBlank { "Magalu" },
+                offerTitle = subtitle.ifBlank { "Smartphones e Informática" },
+                cashbackPercentage = 8,
+                onShopClick = onClick
+            )
+        }
+        WgcCardType.C6Carbon -> {
+            WgcC6CarbonCard(
+                modifier = modifier,
+                holderName = title.ifBlank { "Lucas Ferreira" },
+                cardLastDigits = subtitle.ifBlank { "8832" },
+                atomosPoints = 14250
+            )
+        }
+        WgcCardType.MobilityRide -> {
+            WgcMobilityRideCard(
+                modifier = modifier,
+                categoryName = title.ifBlank { "99Pop Express" },
+                estimatedTime = subtitle.ifBlank { "4 min" },
+                price = 19.80,
+                onSelectRide = onClick
+            )
+        }
+        WgcCardType.TravelStay -> {
+            WgcTravelStayCard(
+                modifier = modifier,
+                title = title.ifBlank { "Flat Design em Copacabana" },
+                location = subtitle.ifBlank { "Rio de Janeiro" },
+                rating = 4.95,
+                nightPrice = 280.0,
+                onBookClick = onClick
+            )
+        }
+        WgcCardType.StreamingMedia -> {
+            WgcStreamingMediaCard(
+                modifier = modifier,
+                title = title.ifBlank { "Bohemian Rhapsody" },
+                artistOrCreator = subtitle.ifBlank { "Queen" },
+                duration = "5:55",
+                onPlayClick = onClick
+            )
+        }
+        WgcCardType.EducationCourse -> {
+            WgcEducationCourseCard(
+                modifier = modifier,
+                courseTitle = title.ifBlank { "Android Jetpack Compose do Zero ao Avançado" },
+                instructorOrTrack = subtitle.ifBlank { "Formação Mobile Master" },
+                progressPercentage = 0.65f,
+                onContinueClick = onClick
+            )
+        }
+        WgcCardType.MessagingConversation -> {
+            WgcMessagingConversationCard(
+                modifier = modifier,
+                contactName = title.ifBlank { "Gabriel do Carmo" },
+                lastMessage = subtitle.ifBlank { "Componentes e templates aprovados!" },
+                timestamp = "14:32",
+                unreadCount = 2
+            )
+        }
+        WgcCardType.GameStore -> {
+            WgcGameStoreCard(
+                modifier = modifier,
+                gameTitle = title.ifBlank { "Cyberpunk 2077: Phantom Liberty" },
+                genre = subtitle.ifBlank { "RPG / Ação" },
+                price = 119.90,
+                discountPercentage = 40,
+                onBuyClick = onClick
+            )
+        }
+        WgcCardType.ProductivityTask -> {
+            WgcProductivityTaskCard(
+                modifier = modifier,
+                taskTitle = title.ifBlank { "Refatorar Módulo de Pagamento" },
+                tag = subtitle.ifBlank { "Design System" },
+                dueDate = "Amanhã"
+            )
+        }
+        WgcCardType.FastFoodMeal -> {
+            WgcFastFoodMealCard(
+                modifier = modifier,
+                comboName = title.ifBlank { "Big Mac Combo Clássico" },
+                description = subtitle.ifBlank { "Com Batata Grande e Refrigerante Refill" },
+                price = 36.90,
+                onAddMeal = onClick
+            )
+        }
+        WgcCardType.LogisticsPackage -> {
+            WgcLogisticsPackageCard(
+                modifier = modifier,
+                trackingCode = title.ifBlank { "BR982347102SP" },
+                statusText = subtitle.ifBlank { "Objeto em trânsito para entrega rápida" },
+                deliveryDate = "Hoje até às 18h"
+            )
+        }
+        WgcCardType.FashionItem -> {
+            WgcFashionItemCard(
+                modifier = modifier,
+                brandName = title.ifBlank { "Renner Premium" },
+                itemTitle = subtitle.ifBlank { "Jaqueta Corta-Vento Street Casual" },
+                price = 199.90,
+                installments = "5x de R$ 39,98 sem juros",
+                onBuy = onClick
+            )
+        }
+        WgcCardType.BeautyCosmetic -> {
+            WgcBeautyCosmeticCard(
+                modifier = modifier,
+                perfumeOrBrand = title.ifBlank { "Malbec Gold Desodorante Colônia" },
+                productName = subtitle.ifBlank { "Fragrância Amadeirada Intensa" },
+                volume = "100ml",
+                price = 219.90,
+                onAdd = onClick
+            )
+        }
+        WgcCardType.PetCare -> {
+            WgcPetCareCard(
+                modifier = modifier,
+                petProductTitle = title.ifBlank { "Ração Premier Formula Cães Adultos" },
+                weightOrSize = subtitle.ifBlank { "15kg" },
+                subscriberPrice = 249.90,
+                regularPrice = 289.90,
+                onSubscribeClick = onClick
+            )
+        }
+        WgcCardType.HomeImprovement -> {
+            WgcHomeImprovementCard(
+                modifier = modifier,
+                department = title.ifBlank { "Ferramentas Elétricas" },
+                productName = subtitle.ifBlank { "Furadeira e Parafusadeira de Impacto Bivolt" },
+                price = 349.90,
+                onAddToCart = onClick
+            )
+        }
+        WgcCardType.NewsHeadline -> {
+            WgcNewsHeadlineCard(
+                modifier = modifier,
+                editoria = title.ifBlank { "Tecnologia & Inovação" },
+                headline = subtitle.ifBlank { "Novo Design System Android atinge 100% de conformidade com tokens e zero valores mágicos" },
+                publishedTime = "Há 5 minutos"
+            )
+        }
+        WgcCardType.GovDigitalDocument -> {
+            WgcGovDigitalDocumentCard(
+                modifier = modifier,
+                documentTitle = title.ifBlank { "Carteira Nacional de Habilitação (CNH-e)" },
+                citizenName = subtitle.ifBlank { "Gabriel do Carmo" },
+                documentNumberMasked = "058.***.***-91",
+                securityLevel = "Nível Ouro"
             )
         }
     }

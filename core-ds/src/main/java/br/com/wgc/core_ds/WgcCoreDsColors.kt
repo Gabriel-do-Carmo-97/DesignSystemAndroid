@@ -392,6 +392,169 @@ object WgcCoreDsColors {
     val carrefourNutriScoreC = Color.parseColor("#FECB02") // Amarelo
     val carrefourNutriScoreD = Color.parseColor("#EE8100") // Laranja
     val carrefourNutriScoreE = Color.parseColor("#E63E11") // Vermelho
+
+    // --- DROGA RAIA TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val drogaRaiaRed = Color.parseColor("#C8102E") // Vermelho Raia Oficial
+    val drogaRaiaRedDark = Color.parseColor("#960B21")
+    val drogaRaiaRedLight = Color.parseColor("#FCECEF")
+    val drogaRaiaNavy = Color.parseColor("#0C2340") // Azul Marinho Corporativo
+    val drogaRaiaNavyDark = Color.parseColor("#061324")
+    val drogaRaiaNavyLight = Color.parseColor("#E8EDF3")
+    val drogaRaiaGreen = Color.parseColor("#008559") // Verde Saúde / Suplementos
+    val drogaRaiaGreenLight = Color.parseColor("#E6F5F0")
+    val drogaRaiaPrescriptionYellow = Color.parseColor("#FFB81C") // Alerta de Retenção de Receita
+    val drogaRaiaPrescriptionYellowLight = Color.parseColor("#FFF8E7")
+    val drogaRaiaBackground = Color.parseColor("#F8F9FA")
+    val drogaRaiaSurface = Color.WHITE
+    val drogaRaiaTextPrimary = Color.parseColor("#1B2A4A")
+    val drogaRaiaTextSecondary = Color.parseColor("#5A6B82")
+    val drogaRaiaBorder = Color.parseColor("#E2E8F0")
+    val drogaRaiaPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- DROGASIL TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val drogasilRed = Color.parseColor("#E30613") // Vermelho Cruz Drogasil
+    val drogasilRedDark = Color.parseColor("#AD040E")
+    val drogasilRedLight = Color.parseColor("#FDE8E9")
+    val drogasilBlue = Color.parseColor("#004B87") // Azul Cuidados & Exames
+    val drogasilBlueLight = Color.parseColor("#E6F0F8")
+    val drogasilGold = Color.parseColor("#D4AF37") // Cartão Vantagens Fidelidade
+    val drogasilGoldLight = Color.parseColor("#FDF9EB")
+    val drogasilVaccineGreen = Color.parseColor("#008060") // Agendamento de Vacinas
+    val drogasilVaccineGreenLight = Color.parseColor("#E6F4EF")
+    val drogasilBackground = Color.parseColor("#F7F8FA")
+    val drogasilSurface = Color.WHITE
+    val drogasilTextPrimary = Color.parseColor("#212529")
+    val drogasilTextSecondary = Color.parseColor("#6C757D")
+    val drogasilBorder = Color.parseColor("#E9ECEF")
+    val drogasilPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- PAGUE MENOS TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val pagueMenosGreen = Color.parseColor("#00A859") // Verde Vibrante Pague Menos
+    val pagueMenosGreenDark = Color.parseColor("#007A40")
+    val pagueMenosGreenLight = Color.parseColor("#E6F7EF")
+    val pagueMenosBlue = Color.parseColor("#003399") // Azul Corporativo Forte
+    val pagueMenosBlueDark = Color.parseColor("#002266")
+    val pagueMenosBlueLight = Color.parseColor("#E8EEF8")
+    val pagueMenosOrange = Color.parseColor("#F58220") // Laranja Sempre Bem
+    val pagueMenosOrangeLight = Color.parseColor("#FEF3E9")
+    val pagueMenosClinicTeal = Color.parseColor("#00838F") // Clinic Farma
+    val pagueMenosClinicTealLight = Color.parseColor("#E0F2F1")
+    val pagueMenosBackground = Color.parseColor("#F4F7F6")
+    val pagueMenosSurface = Color.WHITE
+    val pagueMenosTextPrimary = Color.parseColor("#1A2B3C")
+    val pagueMenosTextSecondary = Color.parseColor("#5B6B7C")
+    val pagueMenosBorder = Color.parseColor("#E0E6ED")
+    val pagueMenosPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- NUBANK TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val nubankPurple = Color.parseColor("#820AD1") // Roxo Nubank Oficial
+    val nubankPurpleDark = Color.parseColor("#5A0594")
+    val nubankPurpleLight = Color.parseColor("#F4EAFB")
+    val nubankBackground = Color.parseColor("#F5F5F5")
+    val nubankSurface = Color.WHITE
+    val nubankTextPrimary = Color.parseColor("#111111")
+    val nubankTextSecondary = Color.parseColor("#767676")
+    val nubankBorder = Color.parseColor("#E5E5E5")
+    val nubankMoneyGreen = Color.parseColor("#00875A")
+
+    // --- INTER TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val interOrange = Color.parseColor("#FF7A00") // Laranja Oficial Banco Inter
+    val interOrangeDark = Color.parseColor("#CC6200")
+    val interOrangeLight = Color.parseColor("#FFF2E6")
+    val interBackground = Color.parseColor("#F5F6F8")
+    val interSurface = Color.WHITE
+    val interTextPrimary = Color.parseColor("#1F2D3D")
+    val interTextSecondary = Color.parseColor("#8492A6")
+    val interBorder = Color.parseColor("#E0E6ED")
+    val interGoldCashback = Color.parseColor("#F7BA2A")
+
+    // --- C6 BANK TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val c6Carbon = Color.parseColor("#242424") // Carbon C6 Bank
+    val c6CarbonDark = Color.parseColor("#141414")
+    val c6CarbonLight = Color.parseColor("#EAEAEA")
+    val c6Yellow = Color.parseColor("#FFD100") // Amarelo Átomos Pontos C6
+    val c6YellowLight = Color.parseColor("#FFFBE6")
+    val c6Background = Color.parseColor("#121212")
+    val c6Surface = Color.parseColor("#1E1E1E")
+    val c6TextPrimary = Color.WHITE
+    val c6TextSecondary = Color.parseColor("#A0A0A0")
+    val c6Border = Color.parseColor("#2D2D2D")
+
+    // --- CATEGORIA 6: MOBILIDADE & TRANSPORTE ---
+    val mobilityYellow99 = Color.parseColor("#FFC800")
+    val inDriveGreen = Color.parseColor("#29B75F")
+    val clickBusBlue = Color.parseColor("#0054A6")
+
+    // --- CATEGORIA 7: VIAGEM & TURISMO ---
+    val decolarRed = Color.parseColor("#E6004C")
+    val airbnbCoral = Color.parseColor("#FF5A5F")
+    val bookingNavy = Color.parseColor("#003580")
+
+    // --- CATEGORIA 8: STREAMING DE VÍDEO & MÚSICA ---
+    val netflixRed = Color.parseColor("#E50914")
+    val spotifyGreen = Color.parseColor("#1DB954")
+    val globoplaySalmon = Color.parseColor("#FF5028")
+
+    // --- CATEGORIA 9: EDUCAÇÃO & CURSOS ONLINE ---
+    val duolingoGreen = Color.parseColor("#58CC02")
+    val aluraBlue = Color.parseColor("#0070F3")
+    val udemyPurple = Color.parseColor("#A435F0")
+
+    // --- CATEGORIA 10: MENSAGERIA & REDES SOCIAIS ---
+    val whatsAppGreen = Color.parseColor("#25D366")
+    val telegramBlue = Color.parseColor("#24A1DE")
+    val pinterestRed = Color.parseColor("#E60023")
+
+    // --- CATEGORIA 11: GAMES & ENTRETENIMENTO ---
+    val steamNavy = Color.parseColor("#171A21")
+    val twitchPurple = Color.parseColor("#9146FF")
+    val discordBlurple = Color.parseColor("#5865F2")
+
+    // --- CATEGORIA 12: PRODUTIVIDADE & TRABALHO ---
+    val notionDark = Color.parseColor("#2F3437")
+    val trelloBlue = Color.parseColor("#0079BF")
+    val slackAubergine = Color.parseColor("#4A154B")
+
+    // --- CATEGORIA 13: DELIVERY & RESTAURANTES ---
+    val mcdonaldsYellow = Color.parseColor("#FFBC0D")
+    val mcdonaldsRed = Color.parseColor("#DA291C")
+    val burgerKingFlame = Color.parseColor("#D62300")
+    val dominosBlue = Color.parseColor("#006491")
+
+    // --- CATEGORIA 14: CARONA & LOGÍSTICA ---
+    val blablacarBlue = Color.parseColor("#00AFF5")
+    val loggiBlue = Color.parseColor("#0073FF")
+    val lalamoveOrange = Color.parseColor("#FF6600")
+
+    // --- CATEGORIA 15: VESTUÁRIO & MODA NACIONAL ---
+    val rennerRed = Color.parseColor("#C8102E")
+    val ceaBlue = Color.parseColor("#003882")
+    val riachueloGreen = Color.parseColor("#00965E")
+
+    // --- CATEGORIA 16: BELEZA, PERFUMARIA & COSMÉTICOS ---
+    val boticarioGreen = Color.parseColor("#00573D")
+    val naturaOrange = Color.parseColor("#FF6A13")
+    val sephoraBlack = Color.parseColor("#000000")
+
+    // --- CATEGORIA 17: PET SHOP & VETERINÁRIA ---
+    val petzYellow = Color.parseColor("#FED100")
+    val petzBlue = Color.parseColor("#004A97")
+    val cobasiBlue = Color.parseColor("#0071CE")
+    val zeedogSkull = Color.parseColor("#111111")
+
+    // --- CATEGORIA 18: CASA, CONSTRUÇÃO & DECORAÇÃO ---
+    val leroyGreen = Color.parseColor("#78BE20")
+    val tokstokYellow = Color.parseColor("#FFCC00")
+    val madeiraOrange = Color.parseColor("#FF5C00")
+
+    // --- CATEGORIA 19: NOTÍCIAS & MÍDIA ---
+    val g1Red = Color.parseColor("#C4170C")
+    val uolOrange = Color.parseColor("#FF6600")
+    val exameBlue = Color.parseColor("#003F7F")
+
+    // --- CATEGORIA 20: GOVERNO & CIDADANIA DIGITAL ---
+    val govBlue = Color.parseColor("#003399")
+    val govYellow = Color.parseColor("#FFCC00")
+    val cdtGreen = Color.parseColor("#008037")
+    val ctpsBlue = Color.parseColor("#005CA9")
 }
-
-

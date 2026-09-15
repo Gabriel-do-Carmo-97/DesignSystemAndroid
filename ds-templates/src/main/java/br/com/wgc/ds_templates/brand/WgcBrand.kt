@@ -149,5 +149,110 @@ enum class WgcBrand(
         brandName = "Carrefour Brasil",
         brandLogoText = "CRF",
         primaryColor = Color(0xFF00387B)
+    ),
+    DrogaRaia(
+        brandName = "Droga Raia",
+        brandLogoText = "Raia",
+        primaryColor = Color(0xFFC8102E)
+    ),
+    Drogasil(
+        brandName = "Drogasil",
+        brandLogoText = "Drogasil",
+        primaryColor = Color(0xFFE30613)
+    ),
+    PagueMenos(
+        brandName = "Pague Menos",
+        brandLogoText = "PGM",
+        primaryColor = Color(0xFF00A859)
+    ),
+    Nubank(
+        brandName = "Nubank",
+        brandLogoText = "Nu",
+        primaryColor = Color(0xFF820AD1)
+    ),
+    BancoInter(
+        brandName = "Inter",
+        brandLogoText = "Inter",
+        primaryColor = Color(0xFFFF7A00)
+    ),
+    C6Bank(
+        brandName = "C6 Bank",
+        brandLogoText = "C6",
+        primaryColor = Color(0xFF242424)
     )
+
+    // Cat 6: Mobilidade
+    NinetyNine("99", "99", Color(0xFFFFC800)),
+    InDrive("inDrive", "inDrive", Color(0xFF29B75F)),
+    ClickBus("ClickBus", "ClickBus", Color(0xFF0054A6)),
+
+    // Cat 7: Viagem
+    Decolar("Decolar", "Decolar", Color(0xFFE6004C)),
+    Airbnb("Airbnb", "Airbnb", Color(0xFFFF5A5F)),
+    Booking("Booking.com", "Booking", Color(0xFF003580)),
+
+    // Cat 8: Streaming
+    Netflix("Netflix", "Netflix", Color(0xFFE50914)),
+    Spotify("Spotify", "Spotify", Color(0xFF1DB954)),
+    Globoplay("Globoplay", "Globoplay", Color(0xFFFF5028)),
+
+    // Cat 9: Educação
+    Duolingo("Duolingo", "Duolingo", Color(0xFF58CC02)),
+    Alura("Alura", "Alura", Color(0xFF0070F3)),
+    Udemy("Udemy", "Udemy", Color(0xFFA435F0)),
+
+    // Cat 10: Social
+    WhatsApp("WhatsApp", "WA", Color(0xFF25D366)),
+    Telegram("Telegram", "TG", Color(0xFF24A1DE)),
+    Pinterest("Pinterest", "Pin", Color(0xFFE60023)),
+
+    // Cat 11: Games
+    Steam("Steam", "Steam", Color(0xFF171A21)),
+    Twitch("Twitch", "Twitch", Color(0xFF9146FF)),
+    Discord("Discord", "Discord", Color(0xFF5865F2)),
+
+    // Cat 12: Produtividade
+    Notion("Notion", "Notion", Color(0xFF2F3437)),
+    Trello("Trello", "Trello", Color(0xFF0079BF)),
+    Slack("Slack", "Slack", Color(0xFF4A154B)),
+
+    // Cat 13: Delivery
+    McDonalds("McDonald's", "McD", Color(0xFFFFBC0D)),
+    BurgerKing("Burger King", "BK", Color(0xFFD62300)),
+    Dominos("Domino's Pizza", "Domino's", Color(0xFF006491)),
+
+    // Cat 14: Logística
+    BlaBlaCar("BlaBlaCar", "BlaBla", Color(0xFF00AFF5)),
+    Loggi("Loggi", "Loggi", Color(0xFF0073FF)),
+    Lalamove("Lalamove", "Lalamove", Color(0xFFFF6600)),
+
+    // Cat 15: Vestuário
+    Renner("Lojas Renner", "Renner", Color(0xFFC8102E)),
+    CeA("C&A", "C&A", Color(0xFF003882)),
+    Riachuelo("Riachuelo", "RCHLO", Color(0xFF00965E)),
+
+    // Cat 16: Beleza
+    Boticario("O Boticário", "Boticário", Color(0xFF00573D)),
+    Natura("Natura", "Natura", Color(0xFFFF6A13)),
+    Sephora("Sephora", "Sephora", Color(0xFF000000)),
+
+    // Cat 17: Pet Shop
+    Petz("Petz", "Petz", Color(0xFFFED100)),
+    Cobasi("Cobasi", "Cobasi", Color(0xFF0071CE)),
+    ZeeDog("Zee.Dog", "Zee", Color(0xFF111111)),
+
+    // Cat 18: Casa & Construção
+    LeroyMerlin("Leroy Merlin", "Leroy", Color(0xFF78BE20)),
+    TokStok("Tok&Stok", "Tok&Stok", Color(0xFFFFCC00)),
+    MadeiraMadeira("MadeiraMadeira", "Madeira", Color(0xFFFF5C00)),
+
+    // Cat 19: Notícias
+    G1("G1", "G1", Color(0xFFC4170C)),
+    UOL("UOL", "UOL", Color(0xFFFF6600)),
+    Exame("Exame", "Exame", Color(0xFF003F7F)),
+
+    // Cat 20: Governo
+    GovBr("Gov.br", "Gov.br", Color(0xFF003399)),
+    CDT("CDT Trânsito", "CDT", Color(0xFF008037)),
+    CTPS("CTPS Digital", "CTPS", Color(0xFF005CA9))
 }
