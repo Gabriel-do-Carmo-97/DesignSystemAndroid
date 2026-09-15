@@ -117,6 +117,7 @@ fun DesignSystemCatalogApp() {
         "🏋️ Smart Fit (Treinos, Lotação & Acesso)",
         "💪 Wellhub / Gympass (Redes, Check-in & Planos)",
         "⚡ Nike Training Club (Treinos, Player & Metas)",
+        "🛒 Clube Extra (Supermercado & Meus Descontos)",
         "💰 Organizze (Controle Financeiro)",
         "🛍️ Laza (Streetwear Suite)",
         "🌅 ShopEase (Sunset Orange Store)",
@@ -150,6 +151,9 @@ fun DesignSystemCatalogApp() {
 
     val ntcScreens = br.com.wgc.ds_templates.factories.WgcNtcScreen.entries
     var selectedNtcScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+
+    val extraScreens = br.com.wgc.ds_templates.factories.WgcExtraScreen.entries
+    var selectedExtraScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
     val organizzeScreens = br.com.wgc.ds_templates.factories.WgcOrganizzeScreen.entries
     var selectedOrganizzeScreenIndex by remember { mutableIntStateOf(0) } // Default: Dashboard
@@ -287,6 +291,17 @@ fun DesignSystemCatalogApp() {
                 }
             }
             6 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedExtraScreenIndex) {
+                    extraScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedExtraScreenIndex == index,
+                            onClick = { selectedExtraScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            7 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedOrganizzeScreenIndex) {
                     organizzeScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -297,7 +312,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            7 -> {
+            8 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedLazaScreenIndex) {
                     lazaScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -308,7 +323,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            8 -> {
+            9 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedShopEaseScreenIndex) {
                     shopEaseScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -319,7 +334,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            9 -> {
+            10 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedNexkartScreenIndex) {
                     nexkartScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -330,7 +345,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            10 -> {
+            11 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedShopperScreenIndex) {
                     shopperScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -341,7 +356,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            11 -> {
+            12 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedTasselScreenIndex) {
                     tasselScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -352,7 +367,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            12 -> {
+            13 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedClotheeScreenIndex) {
                     clotheeScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -363,7 +378,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            13 -> {
+            14 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedKutukuScreenIndex) {
                     kutukuScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -374,7 +389,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            14 -> {
+            15 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedShoppeScreenIndex) {
                     shoppeScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -385,7 +400,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            15 -> {
+            16 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedStylishScreenIndex) {
                     stylishScreens.forEachIndexed { index, screen ->
                         Tab(
@@ -396,7 +411,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            16 -> {
+            17 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
                     figmaSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -407,7 +422,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            17 -> {
+            18 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
                     componentSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -418,7 +433,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            18 -> {
+            19 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
                     templateSubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -429,7 +444,7 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
-            19 -> {
+            20 -> {
                 PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
                     factorySubTabs.forEachIndexed { index, title ->
                         Tab(
@@ -501,6 +516,16 @@ fun DesignSystemCatalogApp() {
                     )
                 }
                 6 -> {
+                    val currentScreen = extraScreens[selectedExtraScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcExtraFactory(
+                        screen = currentScreen,
+                        onNavigateToDiscounts = { selectedExtraScreenIndex = 1 },
+                        onNavigateToFlyer = { selectedExtraScreenIndex = 2 },
+                        onNavigateToCart = { selectedExtraScreenIndex = 3 },
+                        onNavigateToLoyalty = { selectedExtraScreenIndex = 4 }
+                    )
+                }
+                7 -> {
                     val currentScreen = organizzeScreens[selectedOrganizzeScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcOrganizzeFactory(
                         screen = currentScreen,
@@ -509,7 +534,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                7 -> {
+                8 -> {
                     val currentScreen = lazaScreens[selectedLazaScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcLazaFactory(
                         screen = currentScreen,
@@ -518,7 +543,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                8 -> {
+                9 -> {
                     val currentScreen = shopEaseScreens[selectedShopEaseScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcShopEaseFactory(
                         screen = currentScreen,
@@ -530,7 +555,7 @@ fun DesignSystemCatalogApp() {
                         onBackClick = { selectedShopEaseScreenIndex = 1 }
                     )
                 }
-                9 -> {
+                10 -> {
                     val currentScreen = nexkartScreens[selectedNexkartScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcNexkartFactory(
                         screen = currentScreen,
@@ -539,7 +564,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                10 -> {
+                11 -> {
                     val currentScreen = shopperScreens[selectedShopperScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcShopperFactory(
                         screen = currentScreen,
@@ -550,7 +575,7 @@ fun DesignSystemCatalogApp() {
                         onBackClick = { selectedShopperScreenIndex = 1 }
                     )
                 }
-                11 -> {
+                12 -> {
                     val currentScreen = tasselScreens[selectedTasselScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcTasselFactory(
                         screen = currentScreen,
@@ -559,7 +584,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                12 -> {
+                13 -> {
                     val currentScreen = clotheeScreens[selectedClotheeScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcClotheeFactory(
                         screen = currentScreen,
@@ -568,7 +593,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                13 -> {
+                14 -> {
                     val currentScreen = kutukuScreens[selectedKutukuScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcKutukuFactory(
                         screen = currentScreen,
@@ -577,7 +602,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                14 -> {
+                15 -> {
                     val currentScreen = shoppeScreens[selectedShoppeScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcShoppeFactory(
                         screen = currentScreen,
@@ -586,7 +611,7 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                15 -> {
+                16 -> {
                     val currentScreen = stylishScreens[selectedStylishScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcStylishFactory(
                         screen = currentScreen,
@@ -595,14 +620,14 @@ fun DesignSystemCatalogApp() {
                         }
                     )
                 }
-                16 -> {
+                17 -> {
                     when (selectedFigmaSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
                         2 -> WgcKlokAuthScreenTemplate()
                     }
                 }
-                17 -> {
+                18 -> {
                     when (selectedComponentSubTab) {
                         0 -> WgcClassicButtonCatalogSection()
                         1 -> WgcSecondaryClassicButtonCatalogSection()
@@ -625,7 +650,7 @@ fun DesignSystemCatalogApp() {
                         18 -> WgcPillTabSwitchCatalogSection()
                     }
                 }
-                18 -> {
+                19 -> {
                     when (selectedTemplateSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -642,7 +667,7 @@ fun DesignSystemCatalogApp() {
                         12 -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel())
                     }
                 }
-                19 -> {
+                20 -> {
                     WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
                 }
             }
