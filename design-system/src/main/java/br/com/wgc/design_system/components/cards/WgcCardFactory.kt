@@ -71,7 +71,9 @@ enum class WgcCardType {
     SmartFitWorkout,
     SmartFitCrowd,
     WellhubGym,
-    WellhubCheckIn
+    WellhubCheckIn,
+    NtcWorkout,
+    NtcProgram
 }
 
 /**
@@ -561,6 +563,33 @@ fun WgcCardFactory(
                 tokenCode = price.ifBlank { "WH-94821" },
                 validUntil = "23:59 de hoje",
                 onCopyToken = onClick
+            )
+        }
+        WgcCardType.NtcWorkout -> {
+            WgcNtcWorkoutCard(
+                modifier = modifier,
+                title = title.ifBlank { "Queima Metabólica Rápida" },
+                trainerName = subtitle.ifBlank { "Kirsty Godso" },
+                category = WgcNtcWorkoutCategory.HIIT,
+                durationMinutes = 20,
+                intensity = WgcNtcWorkoutIntensity.HIGH,
+                equipment = badgeText ?: "Sem equipamentos",
+                onClick = onClick
+            )
+        }
+        WgcCardType.NtcProgram -> {
+            WgcNtcProgramCard(
+                modifier = modifier,
+                title = title.ifBlank { "4 Semanas para Força Funcional" },
+                goal = subtitle.ifBlank { "Resistência muscular e queima calórica" },
+                trainerName = "Betina Gozo",
+                totalWeeks = 4,
+                currentWeek = 2,
+                completedWorkouts = 6,
+                totalWorkouts = 16,
+                isEnrolled = true,
+                onClick = onClick,
+                onActionClick = onClick
             )
         }
     }

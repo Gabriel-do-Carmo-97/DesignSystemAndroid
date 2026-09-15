@@ -339,6 +339,16 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.NikeTrainingClub -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.ntc.activity.WgcNtcActivityTemplate(
+                        stats = br.com.wgc.ds_templates.screens.ntc.model.NtcMockData.mockStats
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(

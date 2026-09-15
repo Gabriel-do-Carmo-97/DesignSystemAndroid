@@ -308,4 +308,25 @@ object WgcCoreDsColors {
     val wellhubCheckInGreen = Color.parseColor("#10B981")
     val wellhubCheckInGreenLight = Color.parseColor("#E6F9F2")
     val wellhubCheckInTimer = Color.parseColor("#F59E0B")
+
+    // --- NIKE TRAINING CLUB (NTC) TOKENS (CATEGORIA 2: ACADEMIA & FITNESS) ---
+    val ntcBlack = Color.parseColor("#111111") // Fundo escuro premium NTC
+    val ntcDarkGray = Color.parseColor("#1C1C1E") // Superfície de cards NTC
+    val ntcMediumGray = Color.parseColor("#2C2C2E") // Bordas e divisores
+    val ntcLightGray = Color.parseColor("#3A3A3C") // Elementos secundários inativos
+    val ntcVolt = Color.parseColor("#D0FF00") // Amarelo Volt elétrico icônico da Nike
+    val ntcVoltDark = Color.parseColor("#A6CC00")
+    val ntcVoltGlow = Color.parseColor("#263300") // Fundo sutil com matiz Volt
+    val ntcWhite = Color.parseColor("#FFFFFF") // Texto principal de alto contraste
+    val ntcSecondaryText = Color.parseColor("#8E8E93") // Texto secundário acinzentado
+    val ntcOrange = Color.parseColor("#FF5722") // Destaque para treinos HIIT/Queima intensa
+    val ntcOrangeDark = Color.parseColor("#D84315")
+    val ntcOrangeLight = Color.parseColor("#3E1C12")
+    val ntcBlue = Color.parseColor("#00A3FF") // Destaque para treinos de Mobilidade/Yoga
+    val ntcBlueDark = Color.parseColor("#0077B6")
+    val ntcBlueLight = Color.parseColor("#0D2838")
+    val ntcPurple = Color.parseColor("#9D4EDD") // Destaque para Recuperação e Mindfulness
+    val ntcPlaceholder = Color.parseColor("#242426")
+    val ntcStreakGold = Color.parseColor("#FFD700") // Medalhas e sequências
 }
+

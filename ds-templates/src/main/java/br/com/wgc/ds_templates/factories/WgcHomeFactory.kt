@@ -79,6 +79,7 @@ fun WgcHomeFactory(
             WgcBrand.Zap -> br.com.wgc.ds_templates.screens.zap.home.WgcZapHomeTemplate()
             WgcBrand.SmartFit -> WgcSmartFitFactory.Screen(WgcSmartFitScreen.Home)
             WgcBrand.Wellhub -> WgcWellhubFactory.Screen(WgcWellhubScreen.Home)
+            WgcBrand.NikeTrainingClub -> WgcNtcFactory(screen = WgcNtcScreen.HOME)
         }
         return
     }
