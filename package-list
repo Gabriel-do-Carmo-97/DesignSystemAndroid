@@ -117,6 +117,12 @@ br.com.wgc.ds_templates.screens.organizze.model
 br.com.wgc.ds_templates.screens.organizze.onboarding
 br.com.wgc.ds_templates.screens.organizze.reports
 br.com.wgc.ds_templates.screens.organizze.transactions
+br.com.wgc.ds_templates.screens.pda.adega
+br.com.wgc.ds_templates.screens.pda.cart
+br.com.wgc.ds_templates.screens.pda.discounts
+br.com.wgc.ds_templates.screens.pda.home
+br.com.wgc.ds_templates.screens.pda.model
+br.com.wgc.ds_templates.screens.pda.profile
 br.com.wgc.ds_templates.screens.profile
 br.com.wgc.ds_templates.screens.quintoandar.detail
 br.com.wgc.ds_templates.screens.quintoandar.favorites
