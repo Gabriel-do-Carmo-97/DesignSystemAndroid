@@ -1,6 +1,5 @@
-﻿plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+plugins {
+    id("wgc.android.library")
     alias(libs.plugins.kotlin.compose)
     id("maven-publish")
     alias(libs.plugins.jetbrains.kotlin.serialization)
@@ -8,13 +7,6 @@
 
 android {
     namespace = "br.com.wgc.ds_navigation_flows"
-    compileSdk = 37
-
-    defaultConfig {
-        minSdk = 29
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
 
     buildTypes {
         release {
@@ -25,25 +17,11 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
-        }
-    }
     buildFeatures {
         compose = true
     }
     publishing {
         singleVariant("release")
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
-        }
     }
 }
 
