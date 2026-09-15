@@ -360,6 +360,16 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            WgcBrand.PaoDeAcucar -> {
+                when (flow) {
+                    WgcAuthFlow.Login,
+                    WgcAuthFlow.Register,
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.pda.profile.WgcPdaClienteMaisProfileTemplate(
+                        userProfile = br.com.wgc.ds_templates.screens.pda.model.PdaMockData.defaultUser
+                    )
+                }
+            }
             WgcBrand.Laza -> {
                 when (flow) {
                     WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
