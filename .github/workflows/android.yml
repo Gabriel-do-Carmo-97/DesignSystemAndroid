@@ -41,7 +41,8 @@ jobs:
     name: 🔍 Detect Changed Modules
     runs-on: ubuntu-latest
     outputs:
-      any_changed: ${{ steps.changed_modules.outputs.core_ds_any_changed == 'true' || steps.changed_modules.outputs.design_system_any_changed == 'true' || steps.changed_modules.outputs.ds_templates_any_changed == 'true' || steps.changed_modules.outputs.ds_navigation_flows_any_changed == 'true' || steps.changed_modules.outputs.app_any_changed == 'true' }}
+      any_changed: ${{ steps.changed_modules.outputs.build_logic_any_changed == 'true' || steps.changed_modules.outputs.core_ds_any_changed == 'true' || steps.changed_modules.outputs.design_system_any_changed == 'true' || steps.changed_modules.outputs.ds_templates_any_changed == 'true' || steps.changed_modules.outputs.ds_navigation_flows_any_changed == 'true' || steps.changed_modules.outputs.app_any_changed == 'true' }}
+      build_logic: ${{ steps.changed_modules.outputs.build_logic_any_changed }}
       core_ds: ${{ steps.changed_modules.outputs.core_ds_any_changed }}
       design_system: ${{ steps.changed_modules.outputs.design_system_any_changed }}
       ds_templates: ${{ steps.changed_modules.outputs.ds_templates_any_changed }}
@@ -56,6 +57,8 @@ jobs:
         uses: tj-actions/changed-files@v47
         with:
           files_yaml: |
+            build_logic:
+              - build-logic/**
             core_ds:
               - core-ds/**
             design_system:
