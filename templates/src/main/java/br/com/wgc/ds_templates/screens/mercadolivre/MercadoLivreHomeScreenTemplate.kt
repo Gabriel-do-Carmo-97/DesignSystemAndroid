@@ -17,7 +17,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.mercadolivre.*
+import br.com.wgc.design_system.components.cards.WgcPromotionalProductCard
+import br.com.wgc.design_system.components.navigation.WgcMarketplaceSearchHeaderBar
+import br.com.wgc.design_system.components.sections.WgcDepartmentCategoryGrid
+import br.com.wgc.design_system.components.sections.WgcSquareCategoryItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -35,12 +38,12 @@ data class MercadoLivreProduct(
 data class MercadoLivreHomeUiState(
     val address: String = "Enviar para Gabriel - Rua Augusta 1000",
     val searchQuery: String = "",
-    val categories: List<WgcMercadoLivreCategoryItem> = listOf(
-        WgcMercadoLivreCategoryItem("1", "Ofertas", "⚡", Color(0xFFFFF9C4)),
-        WgcMercadoLivreCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        WgcMercadoLivreCategoryItem("3", "Meli+", "⭐", Color(0xFFE8EAF6)),
-        WgcMercadoLivreCategoryItem("4", "Moda", "👕", Color(0xFFF3E5F5)),
-        WgcMercadoLivreCategoryItem("5", "Veículos", "🚗", Color(0xFFE0F2F1))
+    val categories: List<WgcSquareCategoryItem> = listOf(
+        WgcSquareCategoryItem("1", "Ofertas", "⚡", Color(0xFFFFF9C4)),
+        WgcSquareCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
+        WgcSquareCategoryItem("3", "Meli+", "⭐", Color(0xFFE8EAF6)),
+        WgcSquareCategoryItem("4", "Moda", "👕", Color(0xFFF3E5F5)),
+        WgcSquareCategoryItem("5", "Veículos", "🚗", Color(0xFFE0F2F1))
     ),
     val products: List<MercadoLivreProduct> = listOf(
         MercadoLivreProduct("1", "Smart TV 50\" 4K UHD Samsung", "R$ 2.499", "R$ 1.899", "24% OFF", "em 10x R$ 189,90 sem juros"),
@@ -91,7 +94,7 @@ fun MercadoLivreHomeScreenContent(
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            WgcMercadoLivreHeader(
+            WgcMarketplaceSearchHeaderBar(
                 address = state.address,
                 searchQuery = state.searchQuery,
                 onAddressClick = onAddressClick,
@@ -99,7 +102,7 @@ fun MercadoLivreHomeScreenContent(
                 onCartClick = onCartClick
             )
 
-            WgcMercadoLivreCategoryGrid(categories = state.categories)
+            WgcDepartmentCategoryGrid(categories = state.categories)
 
             PaddingBox {
                 Card(
@@ -143,7 +146,7 @@ fun MercadoLivreHomeScreenContent(
                 horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
             ) {
                 items(state.products, key = { it.id }) { product ->
-                    WgcMercadoLivreProductCard(
+                    WgcPromotionalProductCard(
                         title = product.title,
                         originalPrice = product.originalPrice,
                         currentPrice = product.currentPrice,

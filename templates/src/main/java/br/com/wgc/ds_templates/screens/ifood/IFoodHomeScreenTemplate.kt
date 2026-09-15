@@ -14,7 +14,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.ifood.*
+import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
+import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
+import br.com.wgc.design_system.components.navigation.WgcFloatingCartSummaryBar
+import br.com.wgc.design_system.components.sections.WgcCircularCategoryItem
+import br.com.wgc.design_system.components.sections.WgcCircularCategoryRow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -33,12 +37,12 @@ data class IFoodRestaurant(
 data class IFoodHomeUiState(
     val address: String = "Rua Augusta, 1000 - Consolação",
     val searchQuery: String = "",
-    val categories: List<WgcIFoodCategoryItem> = listOf(
-        WgcIFoodCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
-        WgcIFoodCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        WgcIFoodCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
-        WgcIFoodCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
-        WgcIFoodCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
+    val categories: List<WgcCircularCategoryItem> = listOf(
+        WgcCircularCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
     ),
     val restaurants: List<IFoodRestaurant> = listOf(
         IFoodRestaurant("1", "Mcdonald's", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
@@ -88,10 +92,10 @@ fun IFoodHomeScreenContent(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
             if (state.hasCartItems) {
-                WgcIFoodStickyCartBar(
+                WgcFloatingCartSummaryBar(
                     itemCount = state.cartItemCount,
                     totalPrice = state.cartTotal,
-                    restaurantName = state.cartRestaurantName,
+                    establishmentName = state.cartRestaurantName,
                     onClick = onCartClick
                 )
             }
@@ -106,7 +110,7 @@ fun IFoodHomeScreenContent(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             Surface(color = MaterialTheme.colorScheme.surface) {
-                WgcIFoodAddressHeader(
+                WgcAddressHeaderBar(
                     address = state.address,
                     searchQuery = state.searchQuery,
                     onAddressClick = onAddressClick,
@@ -114,7 +118,7 @@ fun IFoodHomeScreenContent(
                 )
             }
 
-            WgcIFoodCategoryGrid(categories = state.categories)
+            WgcCircularCategoryRow(categories = state.categories)
 
             PaddingBox {
                 Card(
@@ -145,14 +149,14 @@ fun IFoodHomeScreenContent(
                 verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
             ) {
                 state.restaurants.forEach { restaurant ->
-                    WgcIFoodRestaurantCard(
+                    WgcMerchantListingCard(
                         name = restaurant.name,
                         rating = restaurant.rating,
                         category = restaurant.category,
                         distance = restaurant.distance,
                         deliveryTime = restaurant.deliveryTime,
                         deliveryFee = restaurant.deliveryFee,
-                        isSuperRestaurant = restaurant.isSuper
+                        isFeatured = restaurant.isSuper
                     )
                 }
             }

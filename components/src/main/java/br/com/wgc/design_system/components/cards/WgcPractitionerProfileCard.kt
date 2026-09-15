@@ -37,7 +37,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
-fun WgcDoctoraliaSpecialistCard(
+fun WgcPractitionerProfileCard(
     doctorName: String,
     crm: String,
     specialty: String,
@@ -67,33 +67,61 @@ fun WgcDoctoraliaSpecialistCard(
                         imageVector = Icons.Default.Person,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.doctoraliaGreen),
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                 }
-                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.md16.dp))
-                Column(modifier = Modifier.weight(1f)) {
+                Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.sm12.dp))
+                Column {
                     Text(text = doctorName, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                    Text(text = "$specialty • $crm", fontSize = 13.sp, color = Color.Gray)
+                    Text(text = "$specialty • $crm", fontSize = 12.sp, color = Color.Gray)
                 }
             }
+
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = null,
+                    tint = Color(0xFFFFB800),
+                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                )
+                Text(
+                    text = " $rating ($reviewsCount opiniões)",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.DarkGray
+                )
+            }
+
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.tokstokYellow), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
-                    Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxxs2.dp))
-                    Text(text = "$rating ($reviewsCount opiniões)", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                Column {
+                    Text(text = "Consulta presencial", fontSize = 12.sp, color = Color.Gray)
+                    Text(
+                        text = "R$ " + String.format("%.2f", consultationFee),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = Color(WgcCoreDsColors.doctoraliaGreen)
+                    )
                 }
-                Text(text = "R$ " + String.format("%.2f", consultationFee), fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(WgcCoreDsColors.doctoraliaNavy))
+                Text(
+                    text = "Disponível: $nextSlot",
+                    fontSize = 12.sp,
+                    color = Color(0xFF00875A),
+                    fontWeight = FontWeight.Bold
+                )
             }
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-            Text(text = "Próximo horário: $nextSlot", fontSize = 12.sp, color = Color(WgcCoreDsColors.doctoraliaGreen), fontWeight = FontWeight.Medium)
+
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+
             WgcClassicButton(
-                textButton = "Agendar Telemedicina",
+                textButton = "Agendar Consulta",
                 onClick = onBookClick,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -103,8 +131,8 @@ fun WgcDoctoraliaSpecialistCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcDoctoraliaSpecialistCardPreview() {
-    WgcDoctoraliaSpecialistCard(
+private fun WgcPractitionerProfileCardPreview() {
+    WgcPractitionerProfileCard(
         doctorName = "Dra. Juliana Mendes",
         crm = "CRM-SP 148.920",
         specialty = "Dermatologia",

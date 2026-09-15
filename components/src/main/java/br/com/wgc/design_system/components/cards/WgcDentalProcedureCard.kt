@@ -35,7 +35,7 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcDentiCareToothCard(
+fun WgcDentalProcedureCard(
     toothNumber: Int,
     toothName: String,
     statusText: String,
@@ -88,8 +88,8 @@ fun WgcDentiCareToothCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcDentiCareToothCardPreview() {
-    WgcDentiCareToothCard(
+private fun WgcDentalProcedureCardPreview() {
+    WgcDentalProcedureCard(
         toothNumber = 16,
         toothName = "Primeiro Molar Superior D",
         statusText = "Restauração Estética",

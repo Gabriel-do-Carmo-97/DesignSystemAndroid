@@ -26,7 +26,7 @@ import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcWebmotorsCarCard(
+fun WgcAutomotiveVehicleCard(
     makeModel: String,
     version: String,
     yearModel: String,
@@ -78,8 +78,8 @@ fun WgcWebmotorsCarCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcWebmotorsCarCardPreview() {
-    WgcWebmotorsCarCard(
+private fun WgcAutomotiveVehicleCardPreview() {
+    WgcAutomotiveVehicleCard(
         makeModel = "Honda Civic Touring",
         version = "2.0 Turbo 16V CVT",
         yearModel = "2024/2024",

@@ -21,7 +21,7 @@ import br.com.wgc.design_system.components.cards.WgcCardFactory
 import br.com.wgc.design_system.components.cards.WgcCardType
 import br.com.wgc.design_system.components.fields.WgcFieldFactory
 import br.com.wgc.design_system.components.fields.WgcFieldType
-import br.com.wgc.design_system.components.ifood.WgcIFoodAddressHeader
+import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
 import br.com.wgc.design_system.components.navigation.WgcMenuFactory
 import br.com.wgc.design_system.components.navigation.WgcMenuType
 import br.com.wgc.ds_templates.brand.WgcBrand
@@ -97,7 +97,7 @@ fun WgcHomeFactory(
                     color = MaterialTheme.colorScheme.surface,
                     tonalElevation = 2.dp
                 ) {
-                    WgcIFoodAddressHeader(
+                    WgcAddressHeaderBar(
                         address = "Endereço Principal - ${brand.brandName}",
                         searchQuery = "",
                         onAddressClick = {},

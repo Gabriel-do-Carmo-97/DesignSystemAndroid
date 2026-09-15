@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.nineninefood
+﻿package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,14 +13,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**
- * Barra de Carrinho Flutuante da 99Food (WgcNineNineStickyCartBar) na cor Azul Escuro (#0B2545).
+ * Barra Flutuante de Resumo de Carrinho / Checkout (WgcFloatingCartSummaryBar).
  */
 @Composable
-fun WgcNineNineStickyCartBar(
+fun WgcFloatingCartSummaryBar(
     modifier: Modifier = Modifier,
-    itemCount: Int = 3,
-    totalPrice: String = "R$ 62,50",
-    restaurantName: String = "Pizza Hut",
+    itemCount: Int = 2,
+    totalPrice: String = "R$ 48,90",
+    establishmentName: String = "Estabelecimento Parceiro",
+    containerColor: Color = MaterialTheme.colorScheme.primary,
     onClick: () -> Unit = {}
 ) {
     Surface(
@@ -28,7 +29,7 @@ fun WgcNineNineStickyCartBar(
             .fillMaxWidth()
             .padding(WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(12.dp),
-        color = Color(0xFF0B2545),
+        color = containerColor,
         shadowElevation = 8.dp
     ) {
         Button(
@@ -56,17 +57,12 @@ fun WgcNineNineStickyCartBar(
                     }
 
                     Column {
-                        Text(text = "Ver Sacola 99Food", color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                        Text(text = restaurantName, color = Color.White.copy(alpha = 0.8f), style = MaterialTheme.typography.labelSmall)
+                        Text(text = "Ver Carrinho", color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Text(text = establishmentName, color = Color.White.copy(alpha = 0.8f), style = MaterialTheme.typography.labelSmall)
                     }
                 }
 
-                Text(
-                    text = totalPrice,
-                    color = Color.White,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
+                Text(text = totalPrice, color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             }
         }
     }
@@ -74,8 +70,12 @@ fun WgcNineNineStickyCartBar(
 
 @WgcComponentPreviews
 @Composable
-private fun WgcNineNineStickyCartBarPreview() {
+private fun WgcFloatingCartSummaryBarPreview() {
     MaterialTheme {
-        WgcNineNineStickyCartBar()
+        WgcFloatingCartSummaryBar(
+            itemCount = 3,
+            totalPrice = "R$ 72,50",
+            establishmentName = "Loja Central"
+        )
     }
 }

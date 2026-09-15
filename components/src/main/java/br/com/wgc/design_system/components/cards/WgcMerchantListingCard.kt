@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.nineninefood
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,17 +17,19 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
 /**
- * Card Oficial de Restaurante da 99Food (WgcNineNineRestaurantCard) com selo Azul Escuro (#0B2545).
+ * Card Descritivo de Estabelecimento Comercial / Restaurante (WgcMerchantListingCard).
  */
 @Composable
-fun WgcNineNineRestaurantCard(
+fun WgcMerchantListingCard(
     modifier: Modifier = Modifier,
     name: String,
-    rating: String = "4.9",
-    category: String = "Pizzaria",
-    deliveryTime: String = "15-25 min",
+    rating: String = "4.8",
+    category: String = "Lanches",
+    distance: String = "1.2 km",
+    deliveryTime: String = "20-30 min",
     deliveryFee: String = "Grátis",
-    discountTag: String = "R$ 10 OFF",
+    isFeatured: Boolean = true,
+    accentColor: Color = Color(0xFFEA1D2C),
     onClick: () -> Unit = {}
 ) {
     Card(
@@ -60,17 +62,19 @@ fun WgcNineNineRestaurantCard(
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold
                     )
-                    Surface(
-                        color = Color(0xFF0B2545),
-                        shape = RoundedCornerShape(4.dp)
-                    ) {
-                        Text(
-                            text = "99Club",
-                            color = Color.White,
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
-                        )
+                    if (isFeatured) {
+                        Surface(
+                            color = accentColor.copy(alpha = 0.1f),
+                            shape = RoundedCornerShape(4.dp)
+                        ) {
+                            Text(
+                                text = "★ Super",
+                                color = accentColor,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+                            )
+                        }
                     }
                 }
 
@@ -85,35 +89,28 @@ fun WgcNineNineRestaurantCard(
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
-                        text = "$rating • $category",
+                        text = rating,
                         style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFFFFC107)
                     )
+                    Text(text = "•", style = MaterialTheme.typography.bodySmall)
+                    Text(text = category, style = MaterialTheme.typography.bodySmall)
+                    Text(text = "•", style = MaterialTheme.typography.bodySmall)
+                    Text(text = distance, style = MaterialTheme.typography.bodySmall)
                 }
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
+                    Text(text = deliveryTime, style = MaterialTheme.typography.bodySmall)
+                    Text(text = "•", style = MaterialTheme.typography.bodySmall)
                     Text(
-                        text = "$deliveryTime • $deliveryFee",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = if (deliveryFee.lowercase() == "grátis") Color(0xFF00A251) else MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontWeight = FontWeight.SemiBold
+                        text = deliveryFee,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(0xFF00A650) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
-
-                    Surface(
-                        color = Color(0xFF00A251).copy(alpha = 0.1f),
-                        shape = RoundedCornerShape(4.dp)
-                    ) {
-                        Text(
-                            text = discountTag,
-                            color = Color(0xFF00A251),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
-                        )
-                    }
                 }
             }
         }
@@ -122,14 +119,14 @@ fun WgcNineNineRestaurantCard(
 
 @WgcComponentPreviews
 @Composable
-private fun WgcNineNineRestaurantCardPreview() {
+private fun WgcMerchantListingCardPreview() {
     MaterialTheme {
         Column(
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            WgcNineNineRestaurantCard(name = "Pizza Hut", rating = "4.9")
-            WgcNineNineRestaurantCard(name = "Habib's", rating = "4.6", deliveryFee = "R$ 4,99", discountTag = "Frete Grátis")
+            WgcMerchantListingCard(name = "Burger House", rating = "4.8", deliveryFee = "Grátis")
+            WgcMerchantListingCard(name = "Pizza Prime", rating = "4.9", deliveryFee = "R$ 7,99", isFeatured = false)
         }
     }
 }

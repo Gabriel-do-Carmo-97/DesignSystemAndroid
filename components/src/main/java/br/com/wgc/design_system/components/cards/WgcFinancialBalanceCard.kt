@@ -32,7 +32,7 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcNubankAccountCard(
+fun WgcFinancialBalanceCard(
     balance: Double,
     modifier: Modifier = Modifier,
     isBalanceVisible: Boolean = true,
@@ -85,6 +85,6 @@ fun WgcNubankAccountCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcNubankAccountCardPreview() {
-    WgcNubankAccountCard(balance = 3450.75)
+private fun WgcFinancialBalanceCardPreview() {
+    WgcFinancialBalanceCard(balance = 3450.75)
 }

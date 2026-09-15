@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.mercadolivre
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -16,10 +16,10 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
 /**
- * Card Oficial de Produto do Mercado Livre (WgcMercadoLivreProductCard) com desconto Verde (#00A650) e badge "Frete Grátis⚡".
+ * Card Promocional de Produto em Marketplace (WgcPromotionalProductCard).
  */
 @Composable
-fun WgcMercadoLivreProductCard(
+fun WgcPromotionalProductCard(
     modifier: Modifier = Modifier,
     title: String,
     originalPrice: String = "R$ 1.999",
@@ -27,6 +27,7 @@ fun WgcMercadoLivreProductCard(
     discountPercent: String = "25% OFF",
     installments: String = "em 10x R$ 149,90 sem juros",
     isFreeShipping: Boolean = true,
+    accentColor: Color = Color(0xFF00A650),
     onClick: () -> Unit = {}
 ) {
     Card(
@@ -34,7 +35,7 @@ fun WgcMercadoLivreProductCard(
             .width(180.dp)
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
@@ -54,16 +55,18 @@ fun WgcMercadoLivreProductCard(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 maxLines = 2,
-                color = Color(0xFF333333)
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             Column {
-                Text(
-                    text = originalPrice,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = Color.Gray,
-                    textDecoration = TextDecoration.LineThrough
-                )
+                if (originalPrice.isNotBlank()) {
+                    Text(
+                        text = originalPrice,
+                        style = MaterialTheme.typography.labelSmall,
+                        textDecoration = TextDecoration.LineThrough,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -72,36 +75,33 @@ fun WgcMercadoLivreProductCard(
                     Text(
                         text = currentPrice,
                         style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF333333)
+                        fontWeight = FontWeight.Bold
                     )
+                    if (discountPercent.isNotBlank()) {
+                        Text(
+                            text = discountPercent,
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = accentColor
+                        )
+                    }
+                }
+
+                if (installments.isNotBlank()) {
                     Text(
-                        text = discountPercent,
+                        text = installments,
                         style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF00A650)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
-                Text(
-                    text = installments,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = Color(0xFF00A650),
-                    fontWeight = FontWeight.Medium
-                )
-            }
-
-            if (isFreeShipping) {
-                Surface(
-                    color = Color(0xFF00A650).copy(alpha = 0.1f),
-                    shape = RoundedCornerShape(4.dp)
-                ) {
+                if (isFreeShipping) {
+                    Spacer(modifier = Modifier.height(2.dp))
                     Text(
-                        text = "Frete Grátis⚡",
-                        color = Color(0xFF00A650),
+                        text = "Frete Grátis ⚡",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                        color = accentColor
                     )
                 }
             }
@@ -111,11 +111,15 @@ fun WgcMercadoLivreProductCard(
 
 @WgcComponentPreviews
 @Composable
-private fun WgcMercadoLivreProductCardPreview() {
+private fun WgcPromotionalProductCardPreview() {
     MaterialTheme {
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            WgcMercadoLivreProductCard(title = "Smart TV 50\" 4K UHD")
-            WgcMercadoLivreProductCard(title = "Smartphone 128GB 5G", originalPrice = "R$ 2.499", currentPrice = "R$ 1.899")
-        }
+        WgcPromotionalProductCard(
+            title = "Smartphone Top 128GB 5G Preto",
+            originalPrice = "R$ 2.499",
+            currentPrice = "R$ 1.899",
+            discountPercent = "24% OFF",
+            installments = "10x R$ 189,90 sem juros",
+            isFreeShipping = true
+        )
     }
 }

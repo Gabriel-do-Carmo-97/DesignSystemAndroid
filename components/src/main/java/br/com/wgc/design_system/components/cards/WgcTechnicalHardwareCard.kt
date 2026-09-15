@@ -26,16 +26,17 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
-fun WgcKaBuMHardwareCard(
+fun WgcTechnicalHardwareCard(
     category: String,
     name: String,
     originalPrice: Double,
-    ninjaPrice: Double,
+    discountPrice: Double,
     socket: String,
     tdpWatts: Int,
     benchmarkScore: Int,
     modifier: Modifier = Modifier,
-    onBuyNinjaClick: () -> Unit = {}
+    buttonText: String = "Comprar",
+    onBuyClick: () -> Unit = {}
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -49,7 +50,7 @@ fun WgcKaBuMHardwareCard(
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(text = "De R$ " + String.format("%.2f", originalPrice), fontSize = 12.sp, color = Color.Gray)
             Text(
-                text = "Por R$ " + String.format("%.2f", ninjaPrice) + " no PIX",
+                text = "Por R$ " + String.format("%.2f", discountPrice) + " no PIX",
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
                 color = Color(WgcCoreDsColors.kabumOrange)
@@ -58,8 +59,8 @@ fun WgcKaBuMHardwareCard(
             Text(text = "Socket: $socket • TDP: ${tdpWatts}W • Score: $benchmarkScore pts", fontSize = 12.sp, color = Color.DarkGray)
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
             WgcClassicButton(
-                textButton = "Comprar Ninja",
-                onClick = onBuyNinjaClick,
+                textButton = buttonText,
+                onClick = onBuyClick,
                 modifier = Modifier.fillMaxWidth()
             )
         }
@@ -68,12 +69,12 @@ fun WgcKaBuMHardwareCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcKaBuMHardwareCardPreview() {
-    WgcKaBuMHardwareCard(
+private fun WgcTechnicalHardwareCardPreview() {
+    WgcTechnicalHardwareCard(
         category = "Placa de Vídeo (GPU)",
         name = "RTX 4070 Super 12GB GDDR6X",
         originalPrice = 4599.90,
-        ninjaPrice = 3999.99,
+        discountPrice = 3999.99,
         socket = "PCIe 4.0 16x",
         tdpWatts = 220,
         benchmarkScore = 21450

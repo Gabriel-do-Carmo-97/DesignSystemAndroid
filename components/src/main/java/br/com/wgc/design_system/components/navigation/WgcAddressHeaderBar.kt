@@ -1,11 +1,10 @@
-package br.com.wgc.design_system.components.ifood
+﻿package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,13 +17,15 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
 /**
- * Cabeçalho de Endereço e Pesquisa oficial do iFood (WgcIFoodAddressHeader).
+ * Barra Superior de Endereço e Pesquisa (WgcAddressHeaderBar).
  */
 @Composable
-fun WgcIFoodAddressHeader(
+fun WgcAddressHeaderBar(
     modifier: Modifier = Modifier,
     address: String = "Rua Augusta, 1000",
     searchQuery: String = "",
+    searchPlaceholder: String = "Buscar itens ou lojas",
+    accentColor: Color = MaterialTheme.colorScheme.primary,
     onAddressClick: () -> Unit = {},
     onSearchQueryChange: (String) -> Unit = {},
     onNotificationClick: () -> Unit = {}
@@ -52,7 +53,7 @@ fun WgcIFoodAddressHeader(
                 Icon(
                     imageVector = Icons.Default.KeyboardArrowDown,
                     contentDescription = "Selecionar endereço",
-                    tint = Color(0xFFEA1D2C)
+                    tint = accentColor
                 )
             }
 
@@ -60,7 +61,7 @@ fun WgcIFoodAddressHeader(
                 Icon(
                     imageVector = Icons.Default.Notifications,
                     contentDescription = "Notificações",
-                    tint = Color(0xFFEA1D2C)
+                    tint = accentColor
                 )
             }
         }
@@ -68,16 +69,21 @@ fun WgcIFoodAddressHeader(
         SearchTextField(
             value = searchQuery,
             onValueChange = onSearchQueryChange,
-            label = "Item ou restaurante",
-            leadingIcon = Icons.Default.Search
+            label = searchPlaceholder
         )
     }
 }
 
 @WgcComponentPreviews
 @Composable
-private fun WgcIFoodAddressHeaderPreview() {
+private fun WgcAddressHeaderBarPreview() {
     MaterialTheme {
-        WgcIFoodAddressHeader(address = "Av. Paulista, 1500 - São Paulo, SP")
+        WgcAddressHeaderBar(
+            address = "Av. Paulista, 1000",
+            searchQuery = "",
+            onAddressClick = {},
+            onSearchQueryChange = {},
+            onNotificationClick = {}
+        )
     }
 }

@@ -26,7 +26,6 @@ import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcLazaBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
-import br.com.wgc.design_system.components.ifood.WgcIFoodRestaurantCard
 
 /**
  * Variantes de cards suportadas pela WgcCardFactory.
@@ -179,7 +178,7 @@ fun WgcCardFactory(
             }
         }
         WgcCardType.RestaurantCard -> {
-            WgcIFoodRestaurantCard(
+            WgcMerchantListingCard(
                 modifier = modifier,
                 name = title,
                 rating = badgeText ?: "4.8",
@@ -787,7 +786,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.NubankAccount -> {
-            WgcNubankAccountCard(
+            WgcFinancialBalanceCard(
                 modifier = modifier,
                 balance = 3450.75,
                 onClick = onClick
@@ -803,7 +802,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.C6Carbon -> {
-            WgcC6CarbonCard(
+            WgcPlasticCreditCard(
                 modifier = modifier,
                 holderName = title.ifBlank { "Lucas Ferreira" },
                 cardLastDigits = subtitle.ifBlank { "8832" },

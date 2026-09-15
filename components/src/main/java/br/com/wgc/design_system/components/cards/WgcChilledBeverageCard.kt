@@ -35,7 +35,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
-fun WgcZeDeliveryDrinkCard(
+fun WgcChilledBeverageCard(
     drinkName: String,
     volume: String,
     temperatureText: String,
@@ -88,8 +88,8 @@ fun WgcZeDeliveryDrinkCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcZeDeliveryDrinkCardPreview() {
-    WgcZeDeliveryDrinkCard(
+private fun WgcChilledBeverageCardPreview() {
+    WgcChilledBeverageCard(
         drinkName = "Cerveja Spaten 600ml",
         volume = "600ml",
         temperatureText = "Estupidamente Gelada",

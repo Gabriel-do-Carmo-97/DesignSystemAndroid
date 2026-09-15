@@ -1,6 +1,5 @@
-package br.com.wgc.design_system.components.mercadolivre
+package br.com.wgc.design_system.components.navigation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -20,13 +19,15 @@ import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
 /**
- * Cabeçalho Amarelo Oficial do Mercado Livre (#FFE600) com Busca e Barra de Endereço (WgcMercadoLivreHeader).
+ * Cabeçalho de Marketplace com Busca, Localização e Ações Rápidas (WgcMarketplaceSearchHeaderBar).
  */
 @Composable
-fun WgcMercadoLivreHeader(
+fun WgcMarketplaceSearchHeaderBar(
     modifier: Modifier = Modifier,
-    address: String = "Enviar para Gabriel - Rua Augusta 1000",
+    address: String = "Enviar para Cliente - Av. Central, 1000",
     searchQuery: String = "",
+    searchPlaceholder: String = "Buscar produtos, marcas e mais...",
+    headerColor: Color = Color(0xFFFFE600),
     onAddressClick: () -> Unit = {},
     onSearchQueryChange: (String) -> Unit = {},
     onCartClick: () -> Unit = {},
@@ -34,7 +35,7 @@ fun WgcMercadoLivreHeader(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        color = Color(0xFFFFE600)
+        color = headerColor
     ) {
         Column(
             modifier = Modifier
@@ -51,7 +52,7 @@ fun WgcMercadoLivreHeader(
                     SearchTextField(
                         value = searchQuery,
                         onValueChange = onSearchQueryChange,
-                        label = "Buscar no Mercado Livre",
+                        label = searchPlaceholder,
                         leadingIcon = Icons.Default.Search
                     )
                 }
@@ -60,7 +61,7 @@ fun WgcMercadoLivreHeader(
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notificações",
-                        tint = Color(0xFF3E3E3E)
+                        tint = Color(0xFF333333)
                     )
                 }
 
@@ -68,30 +69,30 @@ fun WgcMercadoLivreHeader(
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = "Carrinho",
-                        tint = Color(0xFF3E3E3E)
+                        tint = Color(0xFF333333)
                     )
                 }
             }
 
             Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable(onClick = onAddressClick)
-                    .padding(vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    .padding(bottom = WgcCoreDsSpacing.xxs4.dp)
             ) {
                 Icon(
                     imageVector = Icons.Default.LocationOn,
                     contentDescription = null,
-                    tint = Color(0xFF3E3E3E),
-                    modifier = Modifier.size(16.dp)
+                    modifier = Modifier.size(16.dp),
+                    tint = Color(0xFF333333)
                 )
                 Text(
                     text = address,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF3E3E3E),
-                    fontWeight = FontWeight.Normal
+                    color = Color(0xFF333333),
+                    fontWeight = FontWeight.Medium
                 )
             }
         }
@@ -100,8 +101,15 @@ fun WgcMercadoLivreHeader(
 
 @WgcComponentPreviews
 @Composable
-private fun WgcMercadoLivreHeaderPreview() {
+private fun WgcMarketplaceSearchHeaderBarPreview() {
     MaterialTheme {
-        WgcMercadoLivreHeader()
+        WgcMarketplaceSearchHeaderBar(
+            address = "Enviar para Gabriel - São Paulo, SP",
+            searchQuery = "",
+            onAddressClick = {},
+            onSearchQueryChange = {},
+            onCartClick = {},
+            onNotificationClick = {}
+        )
     }
 }

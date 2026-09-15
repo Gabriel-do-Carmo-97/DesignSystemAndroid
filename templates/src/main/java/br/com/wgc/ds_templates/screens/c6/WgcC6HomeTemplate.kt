@@ -18,7 +18,7 @@ import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcC6CarbonCard
+import br.com.wgc.design_system.components.cards.WgcPlasticCreditCard
 
 @Composable
 fun WgcC6HomeTemplate(
@@ -52,7 +52,7 @@ fun WgcC6HomeTemplate(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             item {
-                WgcC6CarbonCard(
+                WgcPlasticCreditCard(
                     cardHolder = "GABRIEL CARMO",
                     invoiceAmount = 3450.00
                 )

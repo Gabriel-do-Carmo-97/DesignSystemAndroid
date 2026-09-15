@@ -32,7 +32,7 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcC6CarbonCard(
+fun WgcPlasticCreditCard(
     holderName: String,
     cardLastDigits: String,
     atomosPoints: Int,
@@ -120,22 +120,21 @@ fun WgcC6CarbonCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcC6CarbonCardPreview() {
-    WgcC6CarbonCard(
+private fun WgcPlasticCreditCardPreview() {
+    WgcPlasticCreditCard(
         holderName = "Lucas Ferreira",
         cardLastDigits = "8832",
         atomosPoints = 14250
     )
 }
 
-
 @Composable
-fun WgcC6CarbonCard(
+fun WgcPlasticCreditCard(
     cardHolder: String,
     invoiceAmount: Double,
     modifier: Modifier = Modifier
 ) {
-    WgcC6CarbonCard(
+    WgcPlasticCreditCard(
         holderName = cardHolder,
         cardLastDigits = "7412",
         atomosPoints = (invoiceAmount * 2.5).toInt(),

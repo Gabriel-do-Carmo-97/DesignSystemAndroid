@@ -36,14 +36,18 @@ import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
 import br.com.wgc.design_system.components.fields.WgcFieldFactory
 import br.com.wgc.design_system.components.fields.WgcFieldType
-import br.com.wgc.design_system.components.ifood.*
+import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
+import br.com.wgc.design_system.components.cards.WgcPromotionalProductCard
+import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
+import br.com.wgc.design_system.components.navigation.WgcFloatingCartSummaryBar
+import br.com.wgc.design_system.components.navigation.WgcMarketplaceSearchHeaderBar
+import br.com.wgc.design_system.components.sections.WgcCircularCategoryRow
+import br.com.wgc.design_system.components.sections.WgcDepartmentCategoryGrid
 import br.com.wgc.design_system.components.inputs.WgcSlider
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
-import br.com.wgc.design_system.components.mercadolivre.*
 import br.com.wgc.design_system.components.navigation.WgcMenuFactory
 import br.com.wgc.design_system.components.navigation.WgcMenuType
-import br.com.wgc.design_system.components.nineninefood.*
 import br.com.wgc.design_system.components.radio.WgcRadioButton
 import br.com.wgc.design_system.components.story.StoryState
 import br.com.wgc.design_system.components.story.StoryTrayItem
@@ -419,7 +423,7 @@ fun DesignSystemCatalogApp() {
     val componentSubTabs = listOf(
         "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
-        "WgcStoryAvatar", "WgcStoryTray", "WgcIFoodComponents", "WgcNineNineComponents", "WgcMercadoLivreComponents",
+        "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
         "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch"
     )
 
@@ -1841,9 +1845,9 @@ fun DesignSystemCatalogApp() {
                         10 -> WgcListItemCatalogSection()
                         11 -> WgcStoryAvatarCatalogSection()
                         12 -> WgcStoryTrayCatalogSection()
-                        13 -> WgcIFoodComponentsCatalogSection()
-                        14 -> WgcNineNineComponentsCatalogSection()
-                        15 -> WgcMercadoLivreComponentsCatalogSection()
+                        13 -> WgcDeliveryComponentsCatalogSection()
+                        14 -> WgcFoodListingComponentsCatalogSection()
+                        15 -> WgcMarketplaceComponentsCatalogSection()
                         16 -> WgcBiometricButtonCatalogSection()
                         17 -> WgcSocialLoginPillCatalogSection()
                         18 -> WgcPillTabSwitchCatalogSection()
@@ -2069,34 +2073,34 @@ fun WgcStoryTrayCatalogSection() {
 }
 
 @Composable
-fun WgcIFoodComponentsCatalogSection() {
+fun WgcDeliveryComponentsCatalogSection() {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text("Componentes iFood", style = MaterialTheme.typography.titleLarge)
-        WgcIFoodAddressHeader()
-        WgcIFoodCategoryGrid()
-        WgcIFoodRestaurantCard(name = "McDonald's", rating = "4.8", deliveryFee = "Grátis")
-        WgcIFoodStickyCartBar()
+        Text("Componentes de Delivery", style = MaterialTheme.typography.titleLarge)
+        WgcAddressHeaderBar()
+        WgcCircularCategoryRow()
+        WgcMerchantListingCard(name = "McDonald's", rating = "4.8", deliveryFee = "Grátis")
+        WgcFloatingCartSummaryBar()
     }
 }
 
 @Composable
-fun WgcNineNineComponentsCatalogSection() {
+fun WgcFoodListingComponentsCatalogSection() {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text("Componentes 99Food", style = MaterialTheme.typography.titleLarge)
-        WgcNineNineAddressHeader()
-        WgcNineNineCategoryGrid()
-        WgcNineNineRestaurantCard(name = "Pizza Hut", rating = "4.9")
-        WgcNineNineStickyCartBar()
+        Text("Componentes de Estabelecimentos", style = MaterialTheme.typography.titleLarge)
+        WgcAddressHeaderBar()
+        WgcDepartmentCategoryGrid()
+        WgcMerchantListingCard(name = "Pizza Hut", rating = "4.9")
+        WgcFloatingCartSummaryBar()
     }
 }
 
 @Composable
-fun WgcMercadoLivreComponentsCatalogSection() {
+fun WgcMarketplaceComponentsCatalogSection() {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text("Componentes Mercado Livre", style = MaterialTheme.typography.titleLarge)
-        WgcMercadoLivreHeader()
-        WgcMercadoLivreCategoryGrid()
-        WgcMercadoLivreProductCard(title = "Smart TV 50\" 4K")
+        Text("Componentes de Marketplace", style = MaterialTheme.typography.titleLarge)
+        WgcMarketplaceSearchHeaderBar()
+        WgcDepartmentCategoryGrid()
+        WgcPromotionalProductCard(title = "Smart TV 50\" 4K")
     }
 }
 

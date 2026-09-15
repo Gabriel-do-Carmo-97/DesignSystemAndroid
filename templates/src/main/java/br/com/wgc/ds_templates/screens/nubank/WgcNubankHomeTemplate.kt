@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNubankAccountCard
+import br.com.wgc.design_system.components.cards.WgcFinancialBalanceCard
 import br.com.wgc.design_system.components.cards.WgcNubankCreditCard
 import br.com.wgc.design_system.components.cards.WgcNubankPixActionItem
 
@@ -74,7 +74,7 @@ fun WgcNubankHomeTemplate(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             item {
-                WgcNubankAccountCard(balance = 5420.75)
+                WgcFinancialBalanceCard(balance = 5420.75)
             }
 
             item {
