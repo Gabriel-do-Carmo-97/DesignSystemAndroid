@@ -1193,6 +1193,68 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                         }
                     } else null
                 )
+
+                Text("4. Droga Raia (Farmácia & Prescrição):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.DrogaRaiaProduct)
+                WgcCardFactory(type = WgcCardType.DrogaRaiaPrescription)
+
+                Text("5. Drogasil (Vacinas & Fidelidade):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.DrogasilVaccine)
+                WgcCardFactory(type = WgcCardType.DrogasilLoyalty)
+
+                Text("6. Pague Menos (Clinic Farma & Convênio):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.PagueMenosClinic)
+                WgcCardFactory(type = WgcCardType.PagueMenosConvenio)
+
+                Text("7. Nubank / Inter / C6 Bank (FinTech):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.NubankAccount)
+                WgcCardFactory(type = WgcCardType.InterSuperApp)
+                WgcCardFactory(type = WgcCardType.C6Carbon)
+
+                Text("8. Mobilidade (99 / inDrive / ClickBus):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.MobilityRide)
+
+                Text("9. Viagem & Hospedagem (Airbnb / Decolar):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.TravelStay)
+
+                Text("10. Streaming (Spotify / Netflix):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.StreamingMedia)
+
+                Text("11. Educação (Duolingo / Alura):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.EducationCourse)
+
+                Text("12. Mensageria & Redes (WhatsApp / Telegram):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.MessagingConversation)
+
+                Text("13. Games (Steam / Twitch):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.GameStore)
+
+                Text("14. Produtividade (Notion / Trello):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.ProductivityTask)
+
+                Text("15. Fast Food & Delivery (McDonald's / BK):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.FastFoodMeal)
+
+                Text("16. Logística & Rastreio (Loggi / Lalamove):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.LogisticsPackage)
+
+                Text("17. Vestuário & Moda (Renner / C&A):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.FashionItem)
+
+                Text("18. Beleza & Cosméticos (O Boticário / Sephora):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.BeautyCosmetic)
+
+                Text("19. Pet Shop & Cuidados (Petz / Cobasi):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.PetCare)
+
+                Text("20. Casa & Construção (Leroy Merlin / Tok&Stok):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.HomeImprovement)
+
+                Text("21. Notícias & Mídia (G1 / UOL):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.NewsHeadline)
+
+                Text("22. Governo Digital & Cidadania (Gov.br / CDT):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.GovDigitalDocument)
             }
             4 -> {
                 var authBrandIndex by remember { mutableIntStateOf(0) }

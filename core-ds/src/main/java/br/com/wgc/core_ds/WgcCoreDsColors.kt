@@ -479,6 +479,82 @@ object WgcCoreDsColors {
     val c6TextPrimary = Color.WHITE
     val c6TextSecondary = Color.parseColor("#A0A0A0")
     val c6Border = Color.parseColor("#2D2D2D")
+
+    // --- CATEGORIA 6: MOBILIDADE & TRANSPORTE ---
+    val mobilityYellow99 = Color.parseColor("#FFC800")
+    val inDriveGreen = Color.parseColor("#29B75F")
+    val clickBusBlue = Color.parseColor("#0054A6")
+
+    // --- CATEGORIA 7: VIAGEM & TURISMO ---
+    val decolarRed = Color.parseColor("#E6004C")
+    val airbnbCoral = Color.parseColor("#FF5A5F")
+    val bookingNavy = Color.parseColor("#003580")
+
+    // --- CATEGORIA 8: STREAMING DE VÍDEO & MÚSICA ---
+    val netflixRed = Color.parseColor("#E50914")
+    val spotifyGreen = Color.parseColor("#1DB954")
+    val globoplaySalmon = Color.parseColor("#FF5028")
+
+    // --- CATEGORIA 9: EDUCAÇÃO & CURSOS ONLINE ---
+    val duolingoGreen = Color.parseColor("#58CC02")
+    val aluraBlue = Color.parseColor("#0070F3")
+    val udemyPurple = Color.parseColor("#A435F0")
+
+    // --- CATEGORIA 10: MENSAGERIA & REDES SOCIAIS ---
+    val whatsAppGreen = Color.parseColor("#25D366")
+    val telegramBlue = Color.parseColor("#24A1DE")
+    val pinterestRed = Color.parseColor("#E60023")
+
+    // --- CATEGORIA 11: GAMES & ENTRETENIMENTO ---
+    val steamNavy = Color.parseColor("#171A21")
+    val twitchPurple = Color.parseColor("#9146FF")
+    val discordBlurple = Color.parseColor("#5865F2")
+
+    // --- CATEGORIA 12: PRODUTIVIDADE & TRABALHO ---
+    val notionDark = Color.parseColor("#2F3437")
+    val trelloBlue = Color.parseColor("#0079BF")
+    val slackAubergine = Color.parseColor("#4A154B")
+
+    // --- CATEGORIA 13: DELIVERY & RESTAURANTES ---
+    val mcdonaldsYellow = Color.parseColor("#FFBC0D")
+    val mcdonaldsRed = Color.parseColor("#DA291C")
+    val burgerKingFlame = Color.parseColor("#D62300")
+    val dominosBlue = Color.parseColor("#006491")
+
+    // --- CATEGORIA 14: CARONA & LOGÍSTICA ---
+    val blablacarBlue = Color.parseColor("#00AFF5")
+    val loggiBlue = Color.parseColor("#0073FF")
+    val lalamoveOrange = Color.parseColor("#FF6600")
+
+    // --- CATEGORIA 15: VESTUÁRIO & MODA NACIONAL ---
+    val rennerRed = Color.parseColor("#C8102E")
+    val ceaBlue = Color.parseColor("#003882")
+    val riachueloGreen = Color.parseColor("#00965E")
+
+    // --- CATEGORIA 16: BELEZA, PERFUMARIA & COSMÉTICOS ---
+    val boticarioGreen = Color.parseColor("#00573D")
+    val naturaOrange = Color.parseColor("#FF6A13")
+    val sephoraBlack = Color.parseColor("#000000")
+
+    // --- CATEGORIA 17: PET SHOP & VETERINÁRIA ---
+    val petzYellow = Color.parseColor("#FED100")
+    val petzBlue = Color.parseColor("#004A97")
+    val cobasiBlue = Color.parseColor("#0071CE")
+    val zeedogSkull = Color.parseColor("#111111")
+
+    // --- CATEGORIA 18: CASA, CONSTRUÇÃO & DECORAÇÃO ---
+    val leroyGreen = Color.parseColor("#78BE20")
+    val tokstokYellow = Color.parseColor("#FFCC00")
+    val madeiraOrange = Color.parseColor("#FF5C00")
+
+    // --- CATEGORIA 19: NOTÍCIAS & MÍDIA ---
+    val g1Red = Color.parseColor("#C4170C")
+    val uolOrange = Color.parseColor("#FF6600")
+    val exameBlue = Color.parseColor("#003F7F")
+
+    // --- CATEGORIA 20: GOVERNO & CIDADANIA DIGITAL ---
+    val govBlue = Color.parseColor("#003399")
+    val govYellow = Color.parseColor("#FFCC00")
+    val cdtGreen = Color.parseColor("#008037")
+    val ctpsBlue = Color.parseColor("#005CA9")
 }
-
-
