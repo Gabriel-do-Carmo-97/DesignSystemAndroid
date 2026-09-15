@@ -392,6 +392,59 @@ object WgcCoreDsColors {
     val carrefourNutriScoreC = Color.parseColor("#FECB02") // Amarelo
     val carrefourNutriScoreD = Color.parseColor("#EE8100") // Laranja
     val carrefourNutriScoreE = Color.parseColor("#E63E11") // Vermelho
+
+    // --- DROGA RAIA TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val drogaRaiaRed = Color.parseColor("#C8102E") // Vermelho Raia Oficial
+    val drogaRaiaRedDark = Color.parseColor("#960B21")
+    val drogaRaiaRedLight = Color.parseColor("#FCECEF")
+    val drogaRaiaNavy = Color.parseColor("#0C2340") // Azul Marinho Corporativo
+    val drogaRaiaNavyDark = Color.parseColor("#061324")
+    val drogaRaiaNavyLight = Color.parseColor("#E8EDF3")
+    val drogaRaiaGreen = Color.parseColor("#008559") // Verde Saúde / Suplementos
+    val drogaRaiaGreenLight = Color.parseColor("#E6F5F0")
+    val drogaRaiaPrescriptionYellow = Color.parseColor("#FFB81C") // Alerta de Retenção de Receita
+    val drogaRaiaPrescriptionYellowLight = Color.parseColor("#FFF8E7")
+    val drogaRaiaBackground = Color.parseColor("#F8F9FA")
+    val drogaRaiaSurface = Color.WHITE
+    val drogaRaiaTextPrimary = Color.parseColor("#1B2A4A")
+    val drogaRaiaTextSecondary = Color.parseColor("#5A6B82")
+    val drogaRaiaBorder = Color.parseColor("#E2E8F0")
+    val drogaRaiaPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- DROGASIL TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val drogasilRed = Color.parseColor("#E30613") // Vermelho Cruz Drogasil
+    val drogasilRedDark = Color.parseColor("#AD040E")
+    val drogasilRedLight = Color.parseColor("#FDE8E9")
+    val drogasilBlue = Color.parseColor("#004B87") // Azul Cuidados & Exames
+    val drogasilBlueLight = Color.parseColor("#E6F0F8")
+    val drogasilGold = Color.parseColor("#D4AF37") // Cartão Vantagens Fidelidade
+    val drogasilGoldLight = Color.parseColor("#FDF9EB")
+    val drogasilVaccineGreen = Color.parseColor("#008060") // Agendamento de Vacinas
+    val drogasilVaccineGreenLight = Color.parseColor("#E6F4EF")
+    val drogasilBackground = Color.parseColor("#F7F8FA")
+    val drogasilSurface = Color.WHITE
+    val drogasilTextPrimary = Color.parseColor("#212529")
+    val drogasilTextSecondary = Color.parseColor("#6C757D")
+    val drogasilBorder = Color.parseColor("#E9ECEF")
+    val drogasilPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- PAGUE MENOS TOKENS (CATEGORIA 4: FARMÁCIA & SAÚDE) ---
+    val pagueMenosGreen = Color.parseColor("#00A859") // Verde Vibrante Pague Menos
+    val pagueMenosGreenDark = Color.parseColor("#007A40")
+    val pagueMenosGreenLight = Color.parseColor("#E6F7EF")
+    val pagueMenosBlue = Color.parseColor("#003399") // Azul Corporativo Forte
+    val pagueMenosBlueDark = Color.parseColor("#002266")
+    val pagueMenosBlueLight = Color.parseColor("#E8EEF8")
+    val pagueMenosOrange = Color.parseColor("#F58220") // Laranja Sempre Bem
+    val pagueMenosOrangeLight = Color.parseColor("#FEF3E9")
+    val pagueMenosClinicTeal = Color.parseColor("#00838F") // Clinic Farma
+    val pagueMenosClinicTealLight = Color.parseColor("#E0F2F1")
+    val pagueMenosBackground = Color.parseColor("#F4F7F6")
+    val pagueMenosSurface = Color.WHITE
+    val pagueMenosTextPrimary = Color.parseColor("#1A2B3C")
+    val pagueMenosTextSecondary = Color.parseColor("#5B6B7C")
+    val pagueMenosBorder = Color.parseColor("#E0E6ED")
+    val pagueMenosPlaceholder = Color.parseColor("#CBD5E1")
 }
 
 

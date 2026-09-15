@@ -149,5 +149,20 @@ enum class WgcBrand(
         brandName = "Carrefour Brasil",
         brandLogoText = "CRF",
         primaryColor = Color(0xFF00387B)
+    ),
+    DrogaRaia(
+        brandName = "Droga Raia",
+        brandLogoText = "Raia",
+        primaryColor = Color(0xFFC8102E)
+    ),
+    Drogasil(
+        brandName = "Drogasil",
+        brandLogoText = "Drogasil",
+        primaryColor = Color(0xFFE30613)
+    ),
+    PagueMenos(
+        brandName = "Pague Menos",
+        brandLogoText = "PGM",
+        primaryColor = Color(0xFF00A859)
     )
 }
