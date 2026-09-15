@@ -36,47 +36,31 @@ fun WgcDrogasilFactory(
     screen: WgcDrogasilScreen = WgcDrogasilScreen.HOME,
     onNavigate: (WgcDrogasilScreen) -> Unit = {}
 ) {
-    Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogasilBackground)
-    ) { padding ->
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            item {
-                WgcDrogasilLoyaltyCard(
-                    userName = "Mariana Alves",
-                    cpfMasked = "123.***.***-00",
-                    pointsBalance = 420
-                )
-            }
-            item {
-                Text(
-                    text = "Vacinas e Serviços Farmacêuticos",
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.drogasilTextPrimary)
-                )
-            }
-            item {
-                WgcDrogasilVaccineCard(
-                    vaccineName = "Vacina Gripe Tetravalente",
-                    targetAudience = "Adultos e Crianças a partir de 6 meses",
-                    price = 79.90
-                )
-            }
-            item {
-                WgcDrogasilVaccineCard(
-                    vaccineName = "Teste Rápido Dengue Igg/Igm",
-                    targetAudience = "Resultado em até 15 minutos na farmácia",
-                    price = 49.90,
-                    nextAvailableSlot = "Disponível agora"
-                )
-            }
+    when (screen) {
+        WgcDrogasilScreen.HOME -> {
+            br.com.wgc.ds_templates.screens.drogasil.home.WgcDrogasilHomeTemplate(
+                modifier = modifier
+            )
+        }
+        WgcDrogasilScreen.VACCINES -> {
+            br.com.wgc.ds_templates.screens.drogasil.vaccines.WgcDrogasilVaccinesTemplate(
+                modifier = modifier
+            )
+        }
+        WgcDrogasilScreen.LOYALTY -> {
+            br.com.wgc.ds_templates.screens.drogasil.profile.WgcDrogasilProfileTemplate(
+                modifier = modifier
+            )
+        }
+        WgcDrogasilScreen.CART -> {
+            br.com.wgc.ds_templates.screens.drogasil.cart.WgcDrogasilCartTemplate(
+                modifier = modifier
+            )
+        }
+        WgcDrogasilScreen.PROFILE -> {
+            br.com.wgc.ds_templates.screens.drogasil.profile.WgcDrogasilProfileTemplate(
+                modifier = modifier
+            )
         }
     }
 }

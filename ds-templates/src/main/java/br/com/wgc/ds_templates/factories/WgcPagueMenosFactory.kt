@@ -33,48 +33,31 @@ fun WgcPagueMenosFactory(
     screen: WgcPagueMenosScreen = WgcPagueMenosScreen.HOME,
     onNavigate: (WgcPagueMenosScreen) -> Unit = {}
 ) {
-    Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pagueMenosBackground)
-    ) { padding ->
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            item {
-                WgcPagueMenosConvenioCard(
-                    convenioName = "Bradesco Saúde / Orizon",
-                    cardNumberMasked = "9874 **** **** 1029",
-                    discountPercentage = 45
-                )
-            }
-            item {
-                Text(
-                    text = "Clinic Farma • Salas de Atendimento",
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
-                )
-            }
-            item {
-                WgcPagueMenosClinicCard(
-                    serviceTitle = "Aferição de Pressão + Bioimpedância",
-                    description = "Acompanhamento profissional com farmacêutico em sala exclusiva climatizada.",
-                    price = 0.0,
-                    estimatedDuration = "15 min"
-                )
-            }
-            item {
-                WgcPagueMenosClinicCard(
-                    serviceTitle = "Aplicação de Injetáveis",
-                    description = "Com apresentação da prescrição médica válida.",
-                    price = 12.0,
-                    estimatedDuration = "10 min"
-                )
-            }
+    when (screen) {
+        WgcPagueMenosScreen.HOME -> {
+            br.com.wgc.ds_templates.screens.paguemenos.home.WgcPagueMenosHomeTemplate(
+                modifier = modifier
+            )
+        }
+        WgcPagueMenosScreen.CLINIC -> {
+            br.com.wgc.ds_templates.screens.paguemenos.clinic.WgcPagueMenosClinicTemplate(
+                modifier = modifier
+            )
+        }
+        WgcPagueMenosScreen.CONVENIO -> {
+            br.com.wgc.ds_templates.screens.paguemenos.profile.WgcPagueMenosProfileTemplate(
+                modifier = modifier
+            )
+        }
+        WgcPagueMenosScreen.CART -> {
+            br.com.wgc.ds_templates.screens.paguemenos.cart.WgcPagueMenosCartTemplate(
+                modifier = modifier
+            )
+        }
+        WgcPagueMenosScreen.PROFILE -> {
+            br.com.wgc.ds_templates.screens.paguemenos.profile.WgcPagueMenosProfileTemplate(
+                modifier = modifier
+            )
         }
     }
 }

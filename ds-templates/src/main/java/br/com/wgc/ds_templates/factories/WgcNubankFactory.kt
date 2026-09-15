@@ -1,44 +1,40 @@
 package br.com.wgc.ds_templates.factories
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
-import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.components.cards.WgcNubankAccountCard
+import br.com.wgc.ds_templates.screens.nubank.*
 
 enum class WgcNubankScreen {
     HOME,
+    PIX,
     CARDS,
-    INVESTMENTS
+    INVESTMENTS,
+    PROFILE
 }
 
 @Composable
 fun WgcNubankFactory(
-    modifier: Modifier = Modifier,
-    screen: WgcNubankScreen = WgcNubankScreen.HOME
+    screen: WgcNubankScreen = WgcNubankScreen.HOME,
+    onNavigateScreen: (WgcNubankScreen) -> Unit = {},
+    modifier: Modifier = Modifier
 ) {
-    Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.nubankBackground)
-    ) { padding ->
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            item {
-                WgcNubankAccountCard(balance = 4850.25)
-            }
-        }
+    when (screen) {
+        WgcNubankScreen.HOME -> WgcNubankHomeTemplate(
+            onPixClick = { onNavigateScreen(WgcNubankScreen.PIX) },
+            onCreditCardClick = { onNavigateScreen(WgcNubankScreen.CARDS) },
+            modifier = modifier
+        )
+        WgcNubankScreen.PIX -> WgcNubankPixTemplate(
+            modifier = modifier
+        )
+        WgcNubankScreen.CARDS -> WgcNubankCardTemplate(
+            modifier = modifier
+        )
+        WgcNubankScreen.INVESTMENTS -> WgcNubankInvestTemplate(
+            modifier = modifier
+        )
+        WgcNubankScreen.PROFILE -> WgcNubankProfileTemplate(
+            modifier = modifier
+        )
     }
 }

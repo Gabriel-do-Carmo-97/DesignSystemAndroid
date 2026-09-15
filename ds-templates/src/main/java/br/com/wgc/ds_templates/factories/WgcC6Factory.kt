@@ -1,48 +1,33 @@
 package br.com.wgc.ds_templates.factories
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcC6CarbonCard
+import br.com.wgc.ds_templates.screens.c6.*
 
 enum class WgcC6Screen {
     HOME,
     CARBON,
-    ATOMOS
+    ATOMOS,
+    GLOBAL,
+    PROFILE
 }
 
 @Composable
 fun WgcC6Factory(
-    modifier: Modifier = Modifier,
-    screen: WgcC6Screen = WgcC6Screen.HOME
+    screen: WgcC6Screen = WgcC6Screen.HOME,
+    onNavigateScreen: (WgcC6Screen) -> Unit = {},
+    modifier: Modifier = Modifier
 ) {
-    Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background)
-    ) { padding ->
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            item {
-                WgcC6CarbonCard(
-                    holderName = "Lucas Ferreira",
-                    cardLastDigits = "8832",
-                    atomosPoints = 14250
-                )
-            }
-        }
+    when (screen) {
+        WgcC6Screen.HOME -> WgcC6HomeTemplate(
+            onCarbonClick = { onNavigateScreen(WgcC6Screen.CARBON) },
+            onAtomosClick = { onNavigateScreen(WgcC6Screen.ATOMOS) },
+            onGlobalClick = { onNavigateScreen(WgcC6Screen.GLOBAL) },
+            modifier = modifier
+        )
+        WgcC6Screen.CARBON -> WgcC6CarbonTemplate(modifier = modifier)
+        WgcC6Screen.ATOMOS -> WgcC6AtomosTemplate(modifier = modifier)
+        WgcC6Screen.GLOBAL -> WgcC6GlobalTemplate(modifier = modifier)
+        WgcC6Screen.PROFILE -> WgcC6ProfileTemplate(modifier = modifier)
     }
 }

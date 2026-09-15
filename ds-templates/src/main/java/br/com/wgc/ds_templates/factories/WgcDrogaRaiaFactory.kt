@@ -29,11 +29,7 @@ fun WgcDrogaRaiaFactory(
     onTalkToPharmacist: () -> Unit = {}
 ) {
     when (screen) {
-        WgcDrogaRaiaScreen.HOME,
-        WgcDrogaRaiaScreen.PRESCRIPTIONS,
-        WgcDrogaRaiaScreen.SUBSCRIPTION,
-        WgcDrogaRaiaScreen.CART,
-        WgcDrogaRaiaScreen.PROFILE -> {
+        WgcDrogaRaiaScreen.HOME -> {
             WgcDrogaRaiaHomeTemplate(
                 modifier = modifier,
                 userProfile = userProfile,
@@ -43,6 +39,37 @@ fun WgcDrogaRaiaFactory(
                 onProductClick = onProductClick,
                 onUploadPrescription = onUploadPrescription,
                 onTalkToPharmacist = onTalkToPharmacist
+            )
+        }
+        WgcDrogaRaiaScreen.PRESCRIPTIONS -> {
+            br.com.wgc.ds_templates.screens.drogaraia.prescriptions.WgcDrogaRaiaPrescriptionTemplate(
+                modifier = modifier,
+                activeTab = activeTab,
+                onTabSelected = onTabSelected,
+                onUploadClick = onUploadPrescription,
+                onConsultPharmacist = onTalkToPharmacist
+            )
+        }
+        WgcDrogaRaiaScreen.SUBSCRIPTION -> {
+            br.com.wgc.ds_templates.screens.drogaraia.subscription.WgcDrogaRaiaSubscriptionTemplate(
+                modifier = modifier,
+                activeTab = activeTab,
+                onTabSelected = onTabSelected
+            )
+        }
+        WgcDrogaRaiaScreen.CART -> {
+            br.com.wgc.ds_templates.screens.drogaraia.cart.WgcDrogaRaiaCartTemplate(
+                modifier = modifier,
+                activeTab = activeTab,
+                onTabSelected = onTabSelected
+            )
+        }
+        WgcDrogaRaiaScreen.PROFILE -> {
+            br.com.wgc.ds_templates.screens.drogaraia.profile.WgcDrogaRaiaProfileTemplate(
+                modifier = modifier,
+                userProfile = userProfile,
+                activeTab = activeTab,
+                onTabSelected = onTabSelected
             )
         }
     }
