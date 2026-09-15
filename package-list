@@ -63,6 +63,12 @@ br.com.wgc.ds_templates.screens.common.auth
 br.com.wgc.ds_templates.screens.community.klok
 br.com.wgc.ds_templates.screens.community.split
 br.com.wgc.ds_templates.screens.community.wave
+br.com.wgc.ds_templates.screens.extra.cart
+br.com.wgc.ds_templates.screens.extra.discounts
+br.com.wgc.ds_templates.screens.extra.flyer
+br.com.wgc.ds_templates.screens.extra.home
+br.com.wgc.ds_templates.screens.extra.loyalty
+br.com.wgc.ds_templates.screens.extra.model
 br.com.wgc.ds_templates.screens.home.ecommerce
 br.com.wgc.ds_templates.screens.home.fintech
 br.com.wgc.ds_templates.screens.ifood
