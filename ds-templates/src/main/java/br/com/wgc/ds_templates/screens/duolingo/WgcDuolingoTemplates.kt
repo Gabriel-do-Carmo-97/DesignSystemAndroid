@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -27,18 +26,18 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.duolingoGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Duolingo • Inglês", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Duolingo • Inglês", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
                 Text("🔥 42 dias de ofensiva • 💎 1.250 gemas", color = Color.White.copy(alpha = 0.9f))
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(DuolingoMockData.sampleLessons) { lesson ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                         Column {
-                            Text(lesson.title, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.body1.sp)
-                            Text("Nível ${lesson.level} • +${lesson.xp} XP", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(lesson.title, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                            Text("Nível ${lesson.level} • +${lesson.xp} XP", color = Color.Gray, fontSize = 14.sp.sp)
                         }
                         Icon(
                             if (lesson.isCompleted) Icons.Default.CheckCircle else Icons.Default.Lock,
@@ -56,7 +55,7 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Desafio de Pronúncia & Escuta", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Desafio de Pronúncia & Escuta", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -65,7 +64,7 @@ fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Divisão Diamante • Ligas Semanais", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Divisão Diamante • Ligas Semanais", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -74,7 +73,7 @@ fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Loja de Gemas & Bloqueio de Ofensiva", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Loja de Gemas & Bloqueio de Ofensiva", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -83,7 +82,7 @@ fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Estudante & Conquistas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil do Estudante & Conquistas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

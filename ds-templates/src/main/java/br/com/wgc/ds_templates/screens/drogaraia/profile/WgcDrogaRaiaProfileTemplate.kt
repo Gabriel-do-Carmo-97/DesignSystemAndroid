@@ -45,7 +45,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
@@ -89,7 +88,7 @@ fun WgcDrogaRaiaProfileTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
                 ) {
@@ -114,7 +113,7 @@ fun WgcDrogaRaiaProfileTemplate(
 private fun ProfileHeaderCard(userProfile: DrogaRaiaUserProfile) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaNavy)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -144,13 +143,13 @@ private fun ProfileHeaderCard(userProfile: DrogaRaiaUserProfile) {
             Column {
                 Text(
                     text = userProfile.name,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaSurface)
                 )
                 Text(
                     text = "CPF: ${userProfile.cpfMasked}",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaSurface).copy(alpha = 0.8f)
                 )
             }
@@ -162,7 +161,7 @@ private fun ProfileHeaderCard(userProfile: DrogaRaiaUserProfile) {
 private fun RaiaPointsCard(points: Int) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaRed)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -184,12 +183,12 @@ private fun RaiaPointsCard(points: Int) {
                 Column {
                     Text(
                         text = "Programa Sua Farmácia",
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaSurface).copy(alpha = 0.85f)
                     )
                     Text(
                         text = "$points pontos disponíveis",
-                        fontSize = WgcCoreDsFontSize.lg18.sp,
+                        fontSize = 16.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogaRaiaSurface)
                     )
@@ -223,7 +222,7 @@ private fun ProfileOptionItem(icon: ImageVector, title: String) {
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
         Text(
             text = title,
-            fontSize = WgcCoreDsFontSize.sm14.sp,
+            fontSize = 12.sp.sp,
             fontWeight = FontWeight.Medium,
             color = Color(WgcCoreDsColors.drogaRaiaTextPrimary),
             modifier = Modifier.weight(1f)

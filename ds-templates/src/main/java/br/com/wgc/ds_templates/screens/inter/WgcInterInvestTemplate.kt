@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,7 +41,7 @@ fun WgcInterInvestTemplate(
             items(InterMockData.sampleInvestments) { item ->
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Row(
@@ -51,8 +50,8 @@ fun WgcInterInvestTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(item.name, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.body1.sp)
-                            Text("${item.type} • Mínimo R$ ${"%,.2f".format(item.minimumAmount)}", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                            Text("${item.type} • Mínimo R$ ${"%,.2f".format(item.minimumAmount)}", color = Color.Gray, fontSize = 14.sp.sp)
                         }
                         Text(item.profitability, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.interPrimary))
                     }

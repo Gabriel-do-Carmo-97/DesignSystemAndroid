@@ -39,7 +39,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -77,7 +76,7 @@ fun WgcDrogaRaiaCartTemplate(
             item {
                 Text(
                     text = "Sua Sacola (2 itens)",
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
@@ -114,7 +113,7 @@ fun WgcDrogaRaiaCartTemplate(
 private fun DeliverySelectorCard() {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -134,13 +133,13 @@ private fun DeliverySelectorCard() {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "Retire em 15 min na Raia Pinheiros",
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
                 Text(
                     text = "Grátis • Rua Teodoro Sampaio, 1800",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }
@@ -158,7 +157,7 @@ private fun CartItemCard(
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -171,26 +170,26 @@ private fun CartItemCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = title,
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
                 Text(
                     text = laboratory,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
                 if (requiresPrescription) {
                     Text(
                         text = "Receita retida no momento da entrega",
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 9.sp.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaRed),
                         fontWeight = FontWeight.Bold
                     )
                 }
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaNavy)
                 )
@@ -207,7 +206,7 @@ private fun CartItemCard(
                 }
                 Text(
                     text = quantity.toString(),
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
                 )
@@ -229,8 +228,8 @@ private fun CartBottomBar(total: Double, onCheckout: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(
-            topStart = WgcCoreDsBorderRadius.md16.dp,
-            topEnd = WgcCoreDsBorderRadius.md16.dp,
+            topStart = WgcCoreDsBorderRadius.xl16.dp,
+            topEnd = WgcCoreDsBorderRadius.xl16.dp,
             bottomStart = WgcCoreDsBorderRadius.none0.dp,
             bottomEnd = WgcCoreDsBorderRadius.none0.dp
         ),
@@ -247,12 +246,12 @@ private fun CartBottomBar(total: Double, onCheckout: () -> Unit) {
             Column {
                 Text(
                     text = "Total:",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
                 Text(
                     text = "R$ " + String.format("%.2f", total),
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaNavy)
                 )

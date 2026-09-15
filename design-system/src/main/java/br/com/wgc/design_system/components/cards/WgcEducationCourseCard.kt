@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -38,20 +37,20 @@ fun WgcEducationCourseCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Text(
                 text = instructorOrTrack,
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.aluraBlue),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = courseTitle,
-                fontSize = WgcCoreDsFontSize.md16.sp,
+                fontSize = 14.sp.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -62,7 +61,7 @@ fun WgcEducationCourseCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s6.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)),
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
                 color = Color(WgcCoreDsColors.duolingoGreen),
                 trackColor = Color.LightGray
             )
@@ -72,7 +71,7 @@ fun WgcEducationCourseCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = "${(progressPercentage * 100).toInt()}% Concluído",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 14.sp.sp,
                     color = Color.Gray,
                     modifier = Modifier.weight(1f)
                 )

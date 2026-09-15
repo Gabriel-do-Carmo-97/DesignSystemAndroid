@@ -37,7 +37,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -75,7 +74,7 @@ fun WgcDrogasilHomeTemplate(
             item {
                 Text(
                     text = "Ofertas Vizinhas da Semana",
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
+                    fontSize = 16.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
@@ -94,20 +93,20 @@ private fun DrogasilHeader() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(WgcCoreDsColors.drogasilRed), RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp))
+                .background(Color(WgcCoreDsColors.drogasilRed), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                 .padding(WgcCoreDsSpacing.md16.dp)
         ) {
             Column {
                 Text(
                     text = "Drogasil • Sua Farmácia Vizinha",
                     color = Color(WgcCoreDsColors.drogasilSurface),
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Entrega grátis e expressa pelo farmacêutico vizinho",
                     color = Color(WgcCoreDsColors.drogasilSurface).copy(alpha = 0.85f),
-                    fontSize = WgcCoreDsFontSize.xs12.sp
+                    fontSize = 10.sp.sp
                 )
             }
         }
@@ -118,7 +117,7 @@ private fun DrogasilHeader() {
 private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -129,26 +128,26 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = offer.discountTag,
-                    fontSize = WgcCoreDsFontSize.xxs10.sp,
+                    fontSize = 9.sp.sp,
                     color = Color(WgcCoreDsColors.drogasilRed),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
                 Text(
                     text = offer.laboratory,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogasilTextSecondary)
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (offer.originalPrice != null) {
                         Text(
                             text = "R$ " + String.format("%.2f", offer.originalPrice),
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 10.sp.sp,
                             color = Color(WgcCoreDsColors.drogasilTextSecondary),
                             textDecoration = TextDecoration.LineThrough
                         )
@@ -156,7 +155,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                     }
                     Text(
                         text = "R$ " + String.format("%.2f", offer.price),
-                        fontSize = WgcCoreDsFontSize.md16.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogasilRed)
                     )

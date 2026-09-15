@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -43,7 +42,7 @@ fun WgcNubankAccountCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.nubankSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.nubankBorder))
@@ -60,7 +59,7 @@ fun WgcNubankAccountCard(
             ) {
                 Text(
                     text = "Conta",
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.nubankTextPrimary)
                 )
@@ -76,7 +75,7 @@ fun WgcNubankAccountCard(
 
             Text(
                 text = if (isBalanceVisible) "R$ " + String.format("%.2f", balance) else "••••",
-                fontSize = WgcCoreDsFontSize.xl22.sp,
+                fontSize = 14.sp.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.nubankTextPrimary)
             )

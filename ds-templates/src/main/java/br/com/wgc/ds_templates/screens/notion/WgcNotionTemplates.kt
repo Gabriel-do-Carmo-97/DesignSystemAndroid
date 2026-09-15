@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,19 +22,19 @@ fun WgcNotionWorkspaceTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.notionBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Notion • Workspace", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Notion • Workspace", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(NotionMockData.sampleDocs) { doc ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(doc.icon, fontSize = WgcCoreDsFontSize.h3.sp)
+                        Text(doc.icon, fontSize = 14.sp.sp)
                         Spacer(Modifier.width(WgcCoreDsSpacing.sm12.dp))
                         Column {
                             Text(doc.title, fontWeight = FontWeight.Bold)
-                            Text(doc.workspace, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(doc.workspace, color = Color.Gray, fontSize = 14.sp.sp)
                         }
                     }
                 }
@@ -48,7 +47,7 @@ fun WgcNotionWorkspaceTemplate(modifier: Modifier = Modifier) {
 fun WgcNotionKanbanTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Quadro Kanban • Visualização em Colunas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Quadro Kanban • Visualização em Colunas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -57,7 +56,7 @@ fun WgcNotionKanbanTemplate(modifier: Modifier = Modifier) {
 fun WgcNotionEditorTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Editor de Blocos & Rich Text", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Editor de Blocos & Rich Text", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -66,7 +65,7 @@ fun WgcNotionEditorTemplate(modifier: Modifier = Modifier) {
 fun WgcNotionHistoryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Edições & Compartilhamento", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Histórico de Edições & Compartilhamento", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -75,7 +74,7 @@ fun WgcNotionHistoryTemplate(modifier: Modifier = Modifier) {
 fun WgcNotionProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Notion & Configuração do Time", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil do Notion & Configuração do Time", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,7 +42,7 @@ fun WgcC6AtomosTemplate(
             items(C6MockData.sampleRewards) { reward ->
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
                 ) {
                     Row(
@@ -52,8 +51,8 @@ fun WgcC6AtomosTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(reward.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = WgcCoreDsFontSize.body1.sp)
-                            Text(reward.category, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(reward.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp.sp)
+                            Text(reward.category, color = Color.Gray, fontSize = 14.sp.sp)
                         }
                         Text("${reward.pointsRequired} pts", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.c6Yellow))
                     }

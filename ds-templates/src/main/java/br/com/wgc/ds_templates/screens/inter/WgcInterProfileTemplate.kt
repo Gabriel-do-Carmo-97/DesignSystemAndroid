@@ -37,7 +37,7 @@ fun WgcInterProfileTemplate(
         ) {
             Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {

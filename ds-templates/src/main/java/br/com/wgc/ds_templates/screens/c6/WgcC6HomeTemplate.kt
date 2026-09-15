@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcC6CarbonCard
@@ -39,12 +38,12 @@ fun WgcC6HomeTemplate(
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text("C6 Bank", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                    Text("C6 Bank", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                     Icon(Icons.Default.AccountCircle, contentDescription = null, tint = Color.White)
                 }
                 Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                Text("Saldo disponível", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
-                Text("R$ 18.340,90", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h1.sp)
+                Text("Saldo disponível", color = Color.Gray, fontSize = 14.sp.sp)
+                Text("R$ 18.340,90", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
             }
         }
     ) { padding ->
@@ -63,17 +62,17 @@ fun WgcC6HomeTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                        Text("Pontos Átomos", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
-                        Text("48.500 pts", color = Color(WgcCoreDsColors.c6Yellow), fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h2.sp)
-                        Text("Seus pontos nunca expiram!", color = Color.White, fontSize = WgcCoreDsFontSize.body2.sp)
+                        Text("Pontos Átomos", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("48.500 pts", color = Color(WgcCoreDsColors.c6Yellow), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
+                        Text("Seus pontos nunca expiram!", color = Color.White, fontSize = 14.sp.sp)
                         Button(
                             onClick = onAtomosClick,
                             colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.c6Yellow)),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Text("Ver Catálogo Átomos", color = Color.Black, fontWeight = FontWeight.Bold)
                         }

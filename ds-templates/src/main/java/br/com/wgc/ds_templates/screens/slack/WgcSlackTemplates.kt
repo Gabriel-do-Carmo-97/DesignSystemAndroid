@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.slackAubergine)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("WGC Engineering • Slack", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("WGC Engineering • Slack", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(SlackMockData.sampleChannels) { ch ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(ch.name, fontWeight = FontWeight.Bold)
-                        Text(ch.topic, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(ch.topic, color = Color.Gray, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -44,7 +43,7 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Threads & Respostas de Mensagens", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Threads & Respostas de Mensagens", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -53,7 +52,7 @@ fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Diretas e Menções (@)", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Mensagens Diretas e Menções (@)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -62,7 +61,7 @@ fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Busca em Mensagens & Arquivos", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Busca em Mensagens & Arquivos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -71,7 +70,7 @@ fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Status de Presença • 💬 Focado", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Meu Status de Presença • 💬 Focado", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

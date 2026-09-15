@@ -107,7 +107,7 @@ fun WgcKutukuCartScreen(
                         modifier = Modifier
                             .height(52.dp)
                             .width(160.dp),
-                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(WgcCoreDsColors.kutukuPrimary)
                         )
@@ -245,7 +245,7 @@ fun WgcKutukuPaymentScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(56.dp),
-                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(WgcCoreDsColors.kutukuPrimary)
                         )

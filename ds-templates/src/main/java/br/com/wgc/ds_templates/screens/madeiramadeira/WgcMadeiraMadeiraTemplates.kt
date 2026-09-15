@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcMadeiraMadeiraHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.madeiramadeiraOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("MadeiraMadeira • Tudo para sua Casa", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("MadeiraMadeira • Tudo para sua Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(MadeiraMadeiraMockData.sampleProducts) { prod ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(prod.title, fontWeight = FontWeight.Bold)
-                        Text(prod.discount, color = Color(WgcCoreDsColors.madeiramadeiraOrange), fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(prod.discount, color = Color(WgcCoreDsColors.madeiramadeiraOrange), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                         Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -45,7 +44,7 @@ fun WgcMadeiraMadeiraHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcMadeiraMadeiraPlannedTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ambientes Planejados Direto de Fábrica", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Ambientes Planejados Direto de Fábrica", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcMadeiraMadeiraPlannedTemplate(modifier: Modifier = Modifier) {
 fun WgcMadeiraMadeiraShippingTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ofertas com Frete Grátis Sul & Sudeste", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Ofertas com Frete Grátis Sul & Sudeste", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcMadeiraMadeiraShippingTemplate(modifier: Modifier = Modifier) {
 fun WgcMadeiraMadeiraCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Móveis & Decoração", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Carrinho de Móveis & Decoração", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcMadeiraMadeiraCartTemplate(modifier: Modifier = Modifier) {
 fun WgcMadeiraMadeiraProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meus Pedidos & Rastreio de Transportadora", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Meus Pedidos & Rastreio de Transportadora", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

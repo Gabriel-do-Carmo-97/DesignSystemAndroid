@@ -38,7 +38,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -75,13 +74,13 @@ fun WgcDrogaRaiaPrescriptionTemplate(
             item {
                 Text(
                     text = "Receitas Médicas & Prescrições",
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
                 Text(
                     text = "Envie receitas digitais (CFM / Memed) ou fotos de receitas físicas",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }
@@ -96,7 +95,7 @@ fun WgcDrogaRaiaPrescriptionTemplate(
             item {
                 Text(
                     text = "Minhas Receitas Ativas",
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
@@ -135,7 +134,7 @@ private fun PrescriptionItemCard(
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -159,7 +158,7 @@ private fun PrescriptionItemCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = doctorName,
-                        fontSize = WgcCoreDsFontSize.sm14.sp,
+                        fontSize = 12.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                     )
@@ -175,7 +174,7 @@ private fun PrescriptionItemCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = status,
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 9.sp.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaGreen),
                         fontWeight = FontWeight.Bold
                     )
@@ -186,7 +185,7 @@ private fun PrescriptionItemCard(
 
             Text(
                 text = "$medicinesCount medicamento(s) prescrito(s) • Emitida em $issueDate • Válida até $validUntil",
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 10.sp.sp,
                 color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
             )
 

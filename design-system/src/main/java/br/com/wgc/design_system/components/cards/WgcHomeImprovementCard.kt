@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
@@ -34,20 +33,20 @@ fun WgcHomeImprovementCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Text(
                 text = department.uppercase(),
-                fontSize = WgcCoreDsFontSize.xxs10.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.leroyGreen),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = productName,
-                fontSize = WgcCoreDsFontSize.md16.sp,
+                fontSize = 14.sp.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -59,7 +58,7 @@ fun WgcHomeImprovementCard(
             ) {
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
                     modifier = Modifier.weight(1f)

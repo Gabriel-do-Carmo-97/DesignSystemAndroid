@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.zeedogBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("ZEE.DOG • Design & Conexão", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("ZEE.DOG • Design & Conexão", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(ZeeDogMockData.sampleProducts) { item ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        Text(item.category, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(item.category, color = Color.Gray, fontSize = 14.sp.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -45,7 +44,7 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Zee.Dog Kitchen • Alimentação Natural Completa", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Zee.Dog Kitchen • Alimentação Natural Completa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Coleiras, Guias & Conectores", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Coleiras, Guias & Conectores", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho Zee.Dog", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Carrinho Zee.Dog", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Zee.Club", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Zee.Club", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

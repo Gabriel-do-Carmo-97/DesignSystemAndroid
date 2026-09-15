@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcCeaHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.ceaRed)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("C&A Brasil • Muito Eu", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("C&A Brasil • Muito Eu", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(CeaMockData.sampleLooks) { look ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(look.title, fontWeight = FontWeight.Bold)
-                        Text(look.collection, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(look.collection, color = Color.Gray, fontSize = 14.sp.sp)
                         Text("R$ ${"%,.2f".format(look.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -45,7 +44,7 @@ fun WgcCeaHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcCeaClubeTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("C&A&VC Clube de Vantagens", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("C&A&VC Clube de Vantagens", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcCeaClubeTemplate(modifier: Modifier = Modifier) {
 fun WgcCeaSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Busca Visual & Filtros por Tamanho", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Busca Visual & Filtros por Tamanho", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcCeaSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcCeaBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Compras C&A", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Sacola de Compras C&A", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcCeaBagTemplate(modifier: Modifier = Modifier) {
 fun WgcCeaProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil C&A & Cartão C&A Pay", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil C&A & Cartão C&A Pay", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

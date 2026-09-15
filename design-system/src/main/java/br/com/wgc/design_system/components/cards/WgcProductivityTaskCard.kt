@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -37,7 +36,7 @@ fun WgcProductivityTaskCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color.LightGray)
@@ -53,7 +52,7 @@ fun WgcProductivityTaskCard(
                 Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
                 Text(
                     text = taskTitle,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -63,13 +62,13 @@ fun WgcProductivityTaskCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = tag,
-                    fontSize = WgcCoreDsFontSize.xxs10.sp,
+                    fontSize = 14.sp.sp,
                     color = Color.DarkGray,
                     modifier = Modifier.weight(1f)
                 )
                 Text(
                     text = "Vence em: $dueDate",
-                    fontSize = WgcCoreDsFontSize.xxs10.sp,
+                    fontSize = 14.sp.sp,
                     color = Color.Red
                 )
             }

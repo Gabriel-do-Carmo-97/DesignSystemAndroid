@@ -108,7 +108,7 @@ fun WgcShoppeVisualSearchScreenTemplate(
                         modifier = Modifier
                             .align(Alignment.BottomCenter)
                             .padding(bottom = WgcCoreDsSpacing.md.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                             .background(Color(WgcCoreDsColors.shoppePrimary))
                             .padding(horizontal = WgcCoreDsSpacing.md.dp, vertical = WgcCoreDsSpacing.xs.dp)
                     ) {

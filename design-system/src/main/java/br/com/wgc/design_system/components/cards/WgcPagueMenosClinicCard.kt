@@ -33,7 +33,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -49,7 +48,7 @@ fun WgcPagueMenosClinicCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pagueMenosBorder))
@@ -68,7 +67,7 @@ fun WgcPagueMenosClinicCard(
                     Box(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                             .background(Color(WgcCoreDsColors.pagueMenosClinicTealLight)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -83,13 +82,13 @@ fun WgcPagueMenosClinicCard(
                     Column {
                         Text(
                             text = "Clinic Farma • Pague Menos",
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 14.sp.sp,
                             color = Color(WgcCoreDsColors.pagueMenosClinicTeal),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = serviceTitle,
-                            fontSize = WgcCoreDsFontSize.md16.sp,
+                            fontSize = 14.sp.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                         )
@@ -98,7 +97,7 @@ fun WgcPagueMenosClinicCard(
 
                 Text(
                     text = if (price > 0) "R$ " + String.format("%.2f", price) else "Gratuito",
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosGreen)
                 )
@@ -108,7 +107,7 @@ fun WgcPagueMenosClinicCard(
 
             Text(
                 text = description,
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
             )
 
@@ -129,7 +128,7 @@ fun WgcPagueMenosClinicCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = estimatedDuration,
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 14.sp.sp,
                         color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                     )
                 }

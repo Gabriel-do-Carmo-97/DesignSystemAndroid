@@ -47,7 +47,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -113,7 +112,7 @@ fun WgcCarrefourCouponsTemplate(
                             label = {
                                 Text(
                                     text = category,
-                                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                                    fontSize = 12.sp.sp,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                                 )
                             },
@@ -123,7 +122,7 @@ fun WgcCarrefourCouponsTemplate(
                                 containerColor = Color(WgcCoreDsColors.carrefourSurface),
                                 labelColor = Color(WgcCoreDsColors.carrefourTextPrimary)
                             ),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         )
                     }
                 }
@@ -154,7 +153,7 @@ private fun MeuCarrefourHeaderCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(WgcCoreDsSpacing.md16.dp),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourBlue)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -180,12 +179,12 @@ private fun MeuCarrefourHeaderCard(
                         Text(
                             text = "Minhas Moedas",
                             color = Color(WgcCoreDsColors.carrefourSurface).copy(alpha = 0.85f),
-                            fontSize = WgcCoreDsFontSize.xs12.sp
+                            fontSize = 10.sp.sp
                         )
                         Text(
                             text = "$coinsBalance moedas",
                             color = Color(WgcCoreDsColors.carrefourSurface),
-                            fontSize = WgcCoreDsFontSize.xl20.sp,
+                            fontSize = 18.sp.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -216,7 +215,7 @@ private fun MissionsProgressCard() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -240,14 +239,14 @@ private fun MissionsProgressCard() {
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Missão do Mês: Gaste R$ 300",
-                        fontSize = WgcCoreDsFontSize.sm14.sp,
+                        fontSize = 12.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourTextPrimary)
                     )
                 }
                 Text(
                     text = "R$ 210 / 300",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = Color(WgcCoreDsColors.carrefourBlue)
                 )
@@ -260,7 +259,7 @@ private fun MissionsProgressCard() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s8.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)),
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
                 color = Color(WgcCoreDsColors.carrefourRed),
                 trackColor = Color(WgcCoreDsColors.carrefourBorder)
             )
@@ -269,7 +268,7 @@ private fun MissionsProgressCard() {
 
             Text(
                 text = "Complete para desbloquear 50 moedas extras e desconto de 15% na padaria!",
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 10.sp.sp,
                 color = Color(WgcCoreDsColors.carrefourTextSecondary)
             )
         }
@@ -285,7 +284,7 @@ private fun CouponRowCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -298,7 +297,7 @@ private fun CouponRowCard(
             Box(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color(WgcCoreDsColors.carrefourBlueLight)),
                 contentAlignment = Alignment.Center
             ) {
@@ -315,19 +314,19 @@ private fun CouponRowCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = coupon.title,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.carrefourTextPrimary)
                 )
                 Text(
                     text = coupon.description,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.carrefourTextSecondary)
                 )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "Válido até " + coupon.validUntil,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.carrefourRed),
                     fontWeight = FontWeight.Medium
                 )
@@ -346,7 +345,7 @@ private fun CouponRowCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "Ativo",
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourNutriScoreA)
                     )

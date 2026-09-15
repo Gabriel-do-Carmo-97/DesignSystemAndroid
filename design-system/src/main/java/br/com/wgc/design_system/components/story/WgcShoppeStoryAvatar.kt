@@ -80,7 +80,7 @@ fun WgcShoppeStoryAvatar(
                 Box(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                         .background(Color(WgcCoreDsColors.red500))
                         .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
                 ) {

@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -47,7 +46,7 @@ fun WgcNubankProfileTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(
@@ -63,9 +62,9 @@ fun WgcNubankProfileTemplate(
                         ) {
                             Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(WgcCoreDsSize.s60.dp), tint = Color(WgcCoreDsColors.nubankPrimary))
                         }
-                        Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
-                        Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = WgcCoreDsFontSize.body2.sp)
-                        Text("Banco 0260 - Nu Pagamentos S.A.", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("Banco 0260 - Nu Pagamentos S.A.", color = Color.Gray, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -73,7 +72,7 @@ fun WgcNubankProfileTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
@@ -99,7 +98,7 @@ fun WgcNubankProfileTemplate(
                 OutlinedButton(
                     onClick = onLogoutClick,
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                 ) {
                     Icon(Icons.Default.ExitToApp, contentDescription = null)
                     Spacer(Modifier.width(WgcCoreDsSpacing.xs8.dp))

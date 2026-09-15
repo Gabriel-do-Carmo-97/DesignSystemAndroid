@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcBurgerKingMenuTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.burgerkingBrown)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Burger King • Grelhado no Fogo", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Burger King • Grelhado no Fogo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(BurgerKingMockData.sampleMenu) { item ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        if (item.fireGrilled) Text("🔥 Grelhado no Fogo de Verdade", color = Color(WgcCoreDsColors.burgerkingOrange), fontSize = WgcCoreDsFontSize.caption.sp)
+                        if (item.fireGrilled) Text("🔥 Grelhado no Fogo de Verdade", color = Color(WgcCoreDsColors.burgerkingOrange), fontSize = 14.sp.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -45,7 +44,7 @@ fun WgcBurgerKingMenuTemplate(modifier: Modifier = Modifier) {
 fun WgcBurgerKingClubeTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube BK • Seus Pontos & Descontos", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Clube BK • Seus Pontos & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcBurgerKingClubeTemplate(modifier: Modifier = Modifier) {
 fun WgcBurgerKingCouponsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Cupons Exclusivos do App BK", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Cupons Exclusivos do App BK", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcBurgerKingCouponsTemplate(modifier: Modifier = Modifier) {
 fun WgcBurgerKingBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Pedidos BK", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Sacola de Pedidos BK", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcBurgerKingBagTemplate(modifier: Modifier = Modifier) {
 fun WgcBurgerKingProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Burger King", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Burger King", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

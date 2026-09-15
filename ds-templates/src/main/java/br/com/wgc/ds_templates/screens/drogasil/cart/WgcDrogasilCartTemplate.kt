@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
@@ -45,7 +44,7 @@ fun WgcDrogasilCartTemplate(
             item {
                 Text(
                     text = "Sacola Drogasil (1 item)",
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
@@ -54,20 +53,20 @@ fun WgcDrogasilCartTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(
                             text = "Protetor Solar Facial FPS 60",
-                            fontSize = WgcCoreDsFontSize.sm14.sp,
+                            fontSize = 12.sp.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogasilTextPrimary)
                         )
                         Text(
                             text = "1 unidade • R$ 79,90",
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 10.sp.sp,
                             color = Color(WgcCoreDsColors.drogasilTextSecondary)
                         )
                     }

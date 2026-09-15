@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -32,7 +31,7 @@ fun WgcNoveNoveRideCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth().clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = if (isSelected) Color(WgcCoreDsColors.novenoveYellow).copy(alpha = 0.15f) else Color.White),
         border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.novenoveYellow)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gray200))
     ) {
@@ -44,14 +43,14 @@ fun WgcNoveNoveRideCard(
             Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp), verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.novenoveYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))
                 Column {
-                    Text(name, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.body1.sp)
-                    Text("Chega em $eta", fontSize = WgcCoreDsFontSize.caption.sp, color = Color.Gray)
+                    Text(name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("Chega em $eta", fontSize = 14.sp.sp, color = Color.Gray)
                     discount?.let {
-                        Text(it, fontSize = WgcCoreDsFontSize.caption.sp, color = Color(0xFF2E7D32), fontWeight = FontWeight.SemiBold)
+                        Text(it, fontSize = 14.sp.sp, color = Color(0xFF2E7D32), fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
-            Text("R$ ${"%,.2f".format(price)}", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("R$ ${"%,.2f".format(price)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
         }
     }
 }

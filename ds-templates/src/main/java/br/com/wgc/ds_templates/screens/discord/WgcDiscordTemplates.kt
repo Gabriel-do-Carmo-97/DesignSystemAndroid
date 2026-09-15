@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -24,16 +23,16 @@ fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
         containerColor = Color(0xFF313338),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.discordBlurple)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Discord", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h2.sp, color = Color.White)
+                Text("Discord", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(DiscordMockData.sampleServers) { srv ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2B2D31))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2B2D31))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(srv.name, fontWeight = FontWeight.Bold, color = Color.White)
-                        Text("${srv.channelsCount} canais • 🟢 ${srv.activeUsers} online", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("${srv.channelsCount} canais • 🟢 ${srv.activeUsers} online", color = Color.Gray, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -45,7 +44,7 @@ fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
 fun WgcDiscordVoiceTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF313338)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Canais de Voz & Screen Share", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Canais de Voz & Screen Share", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcDiscordVoiceTemplate(modifier: Modifier = Modifier) {
 fun WgcDiscordDirectTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF313338)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Diretas (DMs)", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Mensagens Diretas (DMs)", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcDiscordDirectTemplate(modifier: Modifier = Modifier) {
 fun WgcDiscordExploreTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF313338)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Descubra Servidores Públicos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Descubra Servidores Públicos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcDiscordExploreTemplate(modifier: Modifier = Modifier) {
 fun WgcDiscordProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF313338)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Discord Nitro", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Discord Nitro", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

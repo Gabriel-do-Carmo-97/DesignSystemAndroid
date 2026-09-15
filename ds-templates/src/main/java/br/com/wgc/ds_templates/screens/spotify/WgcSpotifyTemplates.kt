@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -24,20 +23,20 @@ fun WgcSpotifyHomeTemplate(modifier: Modifier = Modifier) {
         containerColor = Color(0xFF121212),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(0xFF121212)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Boa tarde", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h2.sp, color = Color.White)
+                Text("Boa tarde", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-            item { Text("Tocadas recentemente", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp) }
+            item { Text("Tocadas recentemente", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp) }
             items(SpotifyMockData.sampleTracks) { track ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF282828))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF282828))) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                         Column {
                             Text(track.title, fontWeight = FontWeight.Bold, color = Color.White)
-                            Text(track.artist, color = Color.LightGray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(track.artist, color = Color.LightGray, fontSize = 14.sp.sp)
                         }
-                        Text(track.duration, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(track.duration, color = Color.Gray, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -49,7 +48,7 @@ fun WgcSpotifyHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcSpotifySearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF121212)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Buscar Músicas, Podcasts & Playlists", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Buscar Músicas, Podcasts & Playlists", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -58,7 +57,7 @@ fun WgcSpotifySearchTemplate(modifier: Modifier = Modifier) {
 fun WgcSpotifyLibraryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF121212)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sua Biblioteca & Playlists Curtidas", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Sua Biblioteca & Playlists Curtidas", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -67,7 +66,7 @@ fun WgcSpotifyLibraryTemplate(modifier: Modifier = Modifier) {
 fun WgcSpotifyPlayerTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF121212)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player em Reprodução • Letras em Tempo Real", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Player em Reprodução • Letras em Tempo Real", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -76,7 +75,7 @@ fun WgcSpotifyPlayerTemplate(modifier: Modifier = Modifier) {
 fun WgcSpotifyProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF121212)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Spotify Premium Familiar", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Spotify Premium Familiar", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

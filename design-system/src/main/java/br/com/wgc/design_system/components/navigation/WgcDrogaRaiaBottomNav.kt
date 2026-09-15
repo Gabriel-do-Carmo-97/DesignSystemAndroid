@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 
 enum class DrogaRaiaNavTab(val title: String, val icon: ImageVector) {
@@ -82,7 +81,7 @@ fun WgcDrogaRaiaBottomNav(
                 label = {
                     Text(
                         text = tab.title,
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 9.sp.sp,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                     )
                 },

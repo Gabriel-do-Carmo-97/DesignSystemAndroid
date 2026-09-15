@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -25,22 +24,22 @@ fun WgcInDriveNegotiateTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.indriveGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("inDrive • Você decide o preço", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("inDrive • Você decide o preço", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
                 Text("Sua oferta: R$ 20,00", color = Color.White.copy(alpha = 0.9f))
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-            item { Text("Motoristas oferecendo lances:", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp) }
+            item { Text("Motoristas oferecendo lances:", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp) }
             items(InDriveMockData.sampleOffers) { offer ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                         Column {
                             Text(offer.driverName, fontWeight = FontWeight.Bold)
-                            Text("${offer.carModel} • ⭐ ${offer.rating}", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
-                            Text(offer.distance, color = Color.DarkGray, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text("${offer.carModel} • ⭐ ${offer.rating}", color = Color.Gray, fontSize = 14.sp.sp)
+                            Text(offer.distance, color = Color.DarkGray, fontSize = 14.sp.sp)
                         }
-                        Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.indriveGreen)), shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)) {
+                        Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.indriveGreen)), shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)) {
                             Text("Aceitar R$ ${"%,.2f".format(offer.proposedPrice)}", color = Color.White, fontWeight = FontWeight.Bold)
                         }
                     }
@@ -54,7 +53,7 @@ fun WgcInDriveNegotiateTemplate(modifier: Modifier = Modifier) {
 fun WgcInDriveIntercityTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
-            Text("Viagens Interurbanas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Viagens Interurbanas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
             Text("Viaje de uma cidade para outra pelo preço que você negociar.", color = Color.Gray)
         }
     }
@@ -64,7 +63,7 @@ fun WgcInDriveIntercityTemplate(modifier: Modifier = Modifier) {
 fun WgcInDriveBidsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Lances & Negociações", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Histórico de Lances & Negociações", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -73,7 +72,7 @@ fun WgcInDriveBidsTemplate(modifier: Modifier = Modifier) {
 fun WgcInDriveRatingsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Avaliações e Confiança", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Minhas Avaliações e Confiança", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -82,7 +81,7 @@ fun WgcInDriveRatingsTemplate(modifier: Modifier = Modifier) {
 fun WgcInDriveProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Usuário inDrive", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil do Usuário inDrive", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

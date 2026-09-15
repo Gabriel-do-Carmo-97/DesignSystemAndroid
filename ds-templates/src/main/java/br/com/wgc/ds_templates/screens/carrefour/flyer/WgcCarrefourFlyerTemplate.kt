@@ -40,7 +40,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -103,7 +102,7 @@ private fun FlyerHeaderBanner(
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourRed)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -123,7 +122,7 @@ private fun FlyerHeaderBanner(
                 Text(
                     text = "TABLOIDE DIGITAL CARREFOUR",
                     color = Color(WgcCoreDsColors.carrefourSurface),
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -141,7 +140,7 @@ private fun FlyerHeaderBanner(
                 Text(
                     text = storeName,
                     color = Color(WgcCoreDsColors.carrefourSurface),
-                    fontSize = WgcCoreDsFontSize.sm14.sp
+                    fontSize = 12.sp.sp
                 )
             }
 
@@ -150,7 +149,7 @@ private fun FlyerHeaderBanner(
             Text(
                 text = validity,
                 color = Color(WgcCoreDsColors.carrefourYellow),
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 10.sp.sp,
                 fontWeight = FontWeight.SemiBold
             )
         }
@@ -164,7 +163,7 @@ private fun FlyerOfferGridItem(
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -177,7 +176,7 @@ private fun FlyerOfferGridItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s100.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color(WgcCoreDsColors.carrefourPlaceholder)),
                 contentAlignment = Alignment.TopEnd
             ) {
@@ -194,7 +193,7 @@ private fun FlyerOfferGridItem(
                     Text(
                         text = offer.discountBadge,
                         color = Color(WgcCoreDsColors.carrefourSurface),
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -204,7 +203,7 @@ private fun FlyerOfferGridItem(
 
             Text(
                 text = offer.title,
-                fontSize = WgcCoreDsFontSize.sm14.sp,
+                fontSize = 12.sp.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.carrefourTextPrimary),
                 maxLines = 2
@@ -214,14 +213,14 @@ private fun FlyerOfferGridItem(
 
             Text(
                 text = "De R$ " + String.format("%.2f", offer.originalPrice),
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 10.sp.sp,
                 color = Color(WgcCoreDsColors.carrefourTextSecondary),
                 textDecoration = TextDecoration.LineThrough
             )
 
             Text(
                 text = "R$ " + String.format("%.2f", offer.promoPrice),
-                fontSize = WgcCoreDsFontSize.lg18.sp,
+                fontSize = 16.sp.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.carrefourRed)
             )

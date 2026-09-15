@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -39,7 +38,7 @@ fun WgcGameStoreCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.steamNavy)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -48,7 +47,7 @@ fun WgcGameStoreCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s100.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color.DarkGray)
             )
 
@@ -56,13 +55,13 @@ fun WgcGameStoreCard(
 
             Text(
                 text = genre.uppercase(),
-                fontSize = WgcCoreDsFontSize.xxs10.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.twitchPurple),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = gameTitle,
-                fontSize = WgcCoreDsFontSize.md16.sp,
+                fontSize = 14.sp.sp,
                 color = Color.White,
                 fontWeight = FontWeight.Bold
             )
@@ -83,7 +82,7 @@ fun WgcGameStoreCard(
                         Text(
                             text = "-$discountPercentage%",
                             color = Color.White,
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 14.sp.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -92,7 +91,7 @@ fun WgcGameStoreCard(
 
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.White,
                     modifier = Modifier.weight(1f)

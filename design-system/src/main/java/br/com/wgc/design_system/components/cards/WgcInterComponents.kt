@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -38,7 +37,7 @@ fun WgcInterActionItem(
         Box(
             modifier = Modifier
                 .size(WgcCoreDsSize.s56.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                 .background(Color(WgcCoreDsColors.gray100)),
             contentAlignment = Alignment.Center
         ) {
@@ -51,7 +50,7 @@ fun WgcInterActionItem(
         }
         Text(
             text = label,
-            fontSize = WgcCoreDsFontSize.caption.sp,
+            fontSize = 14.sp.sp,
             fontWeight = FontWeight.Medium,
             color = Color.Black
         )
@@ -68,7 +67,7 @@ fun WgcInterCashbackBanner(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.s2.dp)
     ) {
@@ -77,26 +76,26 @@ fun WgcInterCashbackBanner(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs4.dp)) {
-                Text(storeName, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
-                Text(description, fontSize = WgcCoreDsFontSize.body2.sp, color = Color.Gray)
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+                Text(storeName, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text(description, fontSize = 14.sp.sp, color = Color.Gray)
                 Surface(
                     color = Color(WgcCoreDsColors.interPrimary).copy(alpha = 0.1f),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp)
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                 ) {
                     Text(
                         cashback,
-                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xs4.dp),
+                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
                         color = Color(WgcCoreDsColors.interPrimary),
                         fontWeight = FontWeight.Bold,
-                        fontSize = WgcCoreDsFontSize.caption.sp
+                        fontSize = 14.sp.sp
                     )
                 }
             }
             Button(
                 onClick = onShopClick,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.interPrimary)),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
             ) {
                 Text("Ir à Loja", color = Color.White, fontWeight = FontWeight.Bold)
             }

@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -24,16 +23,16 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
         containerColor = Color(0xFF0E0E10),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.twitchPurple)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Twitch • Ao Vivo Agora", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Twitch • Ao Vivo Agora", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(TwitchMockData.sampleLive) { stream ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1F1F23))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1F1F23))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(stream.streamer, fontWeight = FontWeight.Bold, color = Color.White)
-                        Text("${stream.game} • 🔴 ${stream.viewers} espectadores", color = Color.LightGray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("${stream.game} • 🔴 ${stream.viewers} espectadores", color = Color.LightGray, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -45,7 +44,7 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
 fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Explorar Categorias & Games", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Explorar Categorias & Games", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) {
 fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chat da Transmissão & Emotes WGC", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Chat da Transmissão & Emotes WGC", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) {
 fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Inscrições Prime & Bits", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Inscrições Prime & Bits", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) {
 fun WgcTwitchProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Painel de Criador de Conteúdo", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Painel de Criador de Conteúdo", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

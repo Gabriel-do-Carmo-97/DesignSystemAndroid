@@ -100,7 +100,7 @@ fun WgcShoppeVoucherCard(
                     containerColor = if (isCollected) Color(WgcCoreDsColors.shoppeBackground) else Color(WgcCoreDsColors.shoppePrimary),
                     contentColor = if (isCollected) Color(WgcCoreDsColors.shoppeSecondaryText) else Color.White
                 ),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 enabled = !isCollected
             ) {
                 Text(

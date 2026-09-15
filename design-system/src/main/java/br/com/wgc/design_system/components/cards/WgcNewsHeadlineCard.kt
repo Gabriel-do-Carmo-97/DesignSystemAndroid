@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -31,28 +30,28 @@ fun WgcNewsHeadlineCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Text(
                 text = editoria.uppercase(),
-                fontSize = WgcCoreDsFontSize.xxs10.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.g1Red),
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
             Text(
                 text = headline,
-                fontSize = WgcCoreDsFontSize.md16.sp,
+                fontSize = 14.sp.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(
                 text = publishedTime,
-                fontSize = WgcCoreDsFontSize.xxs10.sp,
+                fontSize = 14.sp.sp,
                 color = Color.Gray
             )
         }

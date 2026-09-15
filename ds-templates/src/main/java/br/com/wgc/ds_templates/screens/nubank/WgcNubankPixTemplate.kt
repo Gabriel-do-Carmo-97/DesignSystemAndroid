@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -46,16 +45,16 @@ fun WgcNubankPixTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-                        Text("Envie ou Receba em segundos", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                        Text("Envie ou Receba em segundos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                         Button(
                             onClick = onSendPixClick,
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.nubankPrimary)),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Text("Transferir com Chave Pix", fontWeight = FontWeight.Bold, color = Color.White)
                         }
@@ -64,13 +63,13 @@ fun WgcNubankPixTemplate(
             }
 
             item {
-                Text("Histórico Recente", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                Text("Histórico Recente", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
             }
 
             items(NubankMockData.sampleTransactions) { tx ->
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Row(
@@ -79,8 +78,8 @@ fun WgcNubankPixTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(tx.title, fontWeight = FontWeight.SemiBold, fontSize = WgcCoreDsFontSize.body1.sp)
-                            Text("${tx.category} • ${tx.date}", fontSize = WgcCoreDsFontSize.caption.sp, color = Color.Gray)
+                            Text(tx.title, fontWeight = FontWeight.SemiBold, fontSize = 14.sp.sp)
+                            Text("${tx.category} • ${tx.date}", fontSize = 14.sp.sp, color = Color.Gray)
                         }
                         Text(
                             text = "${if (tx.isPositive) "+" else "-"} R$ ${"%,.2f".format(tx.amount)}",

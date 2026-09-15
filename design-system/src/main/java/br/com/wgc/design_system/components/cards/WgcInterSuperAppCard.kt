@@ -31,7 +31,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -46,7 +45,7 @@ fun WgcInterSuperAppCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.interSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.interBorder))
@@ -60,7 +59,7 @@ fun WgcInterSuperAppCard(
             Box(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color(WgcCoreDsColors.interOrangeLight)),
                 contentAlignment = Alignment.Center
             ) {
@@ -77,19 +76,19 @@ fun WgcInterSuperAppCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "Inter Shop • $partnerStore",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 14.sp.sp,
                     color = Color(WgcCoreDsColors.interOrange),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offerTitle,
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.interTextPrimary)
                 )
                 Text(
                     text = "$cashbackPercentage% de Cashback na conta",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 14.sp.sp,
                     color = Color(WgcCoreDsColors.interTextSecondary)
                 )
             }

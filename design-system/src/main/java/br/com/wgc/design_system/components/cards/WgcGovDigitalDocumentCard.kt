@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -38,7 +37,7 @@ fun WgcGovDigitalDocumentCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.govBlue)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -58,13 +57,13 @@ fun WgcGovDigitalDocumentCard(
                     Text(
                         text = documentTitle,
                         color = Color.White,
-                        fontSize = WgcCoreDsFontSize.md16.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = citizenName,
                         color = Color.White.copy(alpha = 0.85f),
-                        fontSize = WgcCoreDsFontSize.xs12.sp
+                        fontSize = 14.sp.sp
                     )
                 }
 
@@ -79,7 +78,7 @@ fun WgcGovDigitalDocumentCard(
                     Text(
                         text = securityLevel,
                         color = Color(WgcCoreDsColors.govYellow),
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }

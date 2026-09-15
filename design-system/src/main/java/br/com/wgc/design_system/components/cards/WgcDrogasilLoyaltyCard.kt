@@ -31,7 +31,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -46,7 +45,7 @@ fun WgcDrogasilLoyaltyCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilRed)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -64,19 +63,19 @@ fun WgcDrogasilLoyaltyCard(
                     Text(
                         text = "Cartão de Vantagens",
                         color = Color(WgcCoreDsColors.drogasilGold),
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = userName,
                         color = Color(WgcCoreDsColors.drogasilSurface),
-                        fontSize = WgcCoreDsFontSize.lg18.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "CPF: $cpfMasked",
                         color = Color(WgcCoreDsColors.drogasilSurface).copy(alpha = 0.85f),
-                        fontSize = WgcCoreDsFontSize.xs12.sp
+                        fontSize = 14.sp.sp
                     )
                 }
 
@@ -112,7 +111,7 @@ fun WgcDrogasilLoyaltyCard(
                 Text(
                     text = "$pointsBalance Pontos acumulados",
                     color = Color(WgcCoreDsColors.drogasilSurface),
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }

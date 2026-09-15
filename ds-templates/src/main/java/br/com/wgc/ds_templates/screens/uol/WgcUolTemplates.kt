@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,15 +22,15 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.uolYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("UOL • O Melhor Conteúdo", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.Black)
+                Text("UOL • O Melhor Conteúdo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.Black)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(UolMockData.sampleNews) { item ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.author, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(item.author, color = Color.Gray, fontSize = 14.sp.sp)
                         Text(item.headline, fontWeight = FontWeight.Bold)
                     }
                 }
@@ -44,7 +43,7 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Economia & Cotações em Tempo Real", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("UOL Economia & Cotações em Tempo Real", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -53,7 +52,7 @@ fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) {
 fun WgcUolSportsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Esporte • Placar ao Vivo", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("UOL Esporte • Placar ao Vivo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -62,7 +61,7 @@ fun WgcUolSportsTemplate(modifier: Modifier = Modifier) {
 fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Colunistas & Opinião UOL", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Colunistas & Opinião UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -71,7 +70,7 @@ fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) {
 fun WgcUolProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Conta UOL & Clube UOL", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Conta UOL & Clube UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

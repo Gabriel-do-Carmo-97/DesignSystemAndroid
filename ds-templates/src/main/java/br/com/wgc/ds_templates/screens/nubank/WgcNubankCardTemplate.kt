@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcNubankCreditCard
 
@@ -53,18 +52,18 @@ fun WgcNubankCardTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
-                        Text("Cartão Virtual", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
-                        Text("Crie cartões temporários para compras online seguras.", color = Color.Gray, fontSize = WgcCoreDsFontSize.body2.sp)
+                        Text("Cartão Virtual", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text("Crie cartões temporários para compras online seguras.", color = Color.Gray, fontSize = 14.sp.sp)
                         OutlinedButton(
                             onClick = onAdjustLimitClick,
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Icon(Icons.Default.Lock, contentDescription = null)
                             Spacer(Modifier.width(WgcCoreDsSpacing.xs8.dp))

@@ -11,7 +11,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -38,13 +37,13 @@ fun WgcC6GlobalTemplate(
         ) {
             Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Saldo em Dólar Comercial", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
-                    Text("US$ 2.450,00", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h1.sp)
-                    Text("Cotação Comercial 24h • Spread a partir de 1%", color = Color.Gray, fontSize = WgcCoreDsFontSize.body2.sp)
+                    Text("Saldo em Dólar Comercial", color = Color.Gray, fontSize = 14.sp.sp)
+                    Text("US$ 2.450,00", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
+                    Text("Cotação Comercial 24h • Spread a partir de 1%", color = Color.Gray, fontSize = 14.sp.sp)
                 }
             }
         }

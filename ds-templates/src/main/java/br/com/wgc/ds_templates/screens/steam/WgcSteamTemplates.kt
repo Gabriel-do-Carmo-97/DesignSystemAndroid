@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -24,13 +23,13 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
         containerColor = Color(WgcCoreDsColors.steamDark),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.steamBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("STEAM • Promoção de Fim de Semana", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("STEAM • Promoção de Fim de Semana", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(SteamMockData.sampleGames) { game ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2A475E))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2A475E))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(game.title, fontWeight = FontWeight.Bold, color = Color.White)
                         Text("${game.discount} • R$ ${"%,.2f".format(game.price)}", color = Color(0xFF66C0F4), fontWeight = FontWeight.Bold)
@@ -45,7 +44,7 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
 fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Biblioteca de Jogos Instalados", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Biblioteca de Jogos Instalados", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) {
 fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Central da Comunidade & Fóruns", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Central da Comunidade & Fóruns", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) {
 fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Lista de Desejos & Carrinho", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Lista de Desejos & Carrinho", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) {
 fun WgcSteamProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Steam • Nível 45 & Insígnias", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Steam • Nível 45 & Insígnias", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

@@ -36,7 +36,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -75,13 +74,13 @@ fun WgcDrogaRaiaSubscriptionTemplate(
             item {
                 Text(
                     text = "Sua Assinatura & Tratamento Contínuo",
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
                 Text(
                     text = "Receba seus medicamentos na data certa com 10% de desconto e frete grátis",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }
@@ -124,7 +123,7 @@ fun WgcDrogaRaiaSubscriptionTemplate(
 private fun SubscriptionBenefitBanner() {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaGreenLight)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.none0.dp)
     ) {
@@ -144,13 +143,13 @@ private fun SubscriptionBenefitBanner() {
             Column {
                 Text(
                     text = "Vantagens da Assinatura Raia",
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaGreen)
                 )
                 Text(
                     text = "Cancele ou pause quando quiser sem nenhuma taxa adicional.",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }

@@ -33,7 +33,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -49,7 +48,7 @@ fun WgcDrogasilVaccineCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogasilBorder))
@@ -68,7 +67,7 @@ fun WgcDrogasilVaccineCard(
                     Box(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                             .background(Color(WgcCoreDsColors.drogasilVaccineGreenLight)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -83,13 +82,13 @@ fun WgcDrogasilVaccineCard(
                     Column {
                         Text(
                             text = "Serviços Farmacêuticos",
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 14.sp.sp,
                             color = Color(WgcCoreDsColors.drogasilVaccineGreen),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = vaccineName,
-                            fontSize = WgcCoreDsFontSize.md16.sp,
+                            fontSize = 14.sp.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogasilTextPrimary)
                         )
@@ -98,7 +97,7 @@ fun WgcDrogasilVaccineCard(
 
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilRed)
                 )
@@ -108,7 +107,7 @@ fun WgcDrogasilVaccineCard(
 
             Text(
                 text = "Público: $targetAudience",
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 14.sp.sp,
                 color = Color(WgcCoreDsColors.drogasilTextSecondary)
             )
 
@@ -129,7 +128,7 @@ fun WgcDrogasilVaccineCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = nextAvailableSlot,
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 14.sp.sp,
                         color = Color(WgcCoreDsColors.drogasilBlue),
                         fontWeight = FontWeight.SemiBold
                     )

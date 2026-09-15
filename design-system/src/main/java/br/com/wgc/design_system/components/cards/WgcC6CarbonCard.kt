@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -41,7 +40,7 @@ fun WgcC6CarbonCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -66,7 +65,7 @@ fun WgcC6CarbonCard(
                     Text(
                         text = "C6 Carbon Mastercard Black",
                         color = Color(WgcCoreDsColors.c6TextPrimary),
-                        fontSize = WgcCoreDsFontSize.md16.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -74,7 +73,7 @@ fun WgcC6CarbonCard(
                 Text(
                     text = "•••• $cardLastDigits",
                     color = Color(WgcCoreDsColors.c6TextSecondary),
-                    fontSize = WgcCoreDsFontSize.sm14.sp
+                    fontSize = 14.sp.sp
                 )
             }
 
@@ -88,12 +87,12 @@ fun WgcC6CarbonCard(
                 Column {
                     Text(
                         text = "Titular",
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 14.sp.sp,
                         color = Color(WgcCoreDsColors.c6TextSecondary)
                     )
                     Text(
                         text = holderName.uppercase(),
-                        fontSize = WgcCoreDsFontSize.sm14.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.c6TextPrimary)
                     )
@@ -109,7 +108,7 @@ fun WgcC6CarbonCard(
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "$atomosPoints Átomos",
-                        fontSize = WgcCoreDsFontSize.sm14.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.c6Yellow)
                     )

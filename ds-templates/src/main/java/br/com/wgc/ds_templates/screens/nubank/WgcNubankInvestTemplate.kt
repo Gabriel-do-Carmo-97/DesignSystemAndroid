@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcNubankCaixinhaCard
 
@@ -45,20 +44,20 @@ fun WgcNubankInvestTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
-                        Text("Total guardado em Caixinhas", fontSize = WgcCoreDsFontSize.caption.sp, color = Color.Gray)
-                        Text("R$ 35.651,30", fontSize = WgcCoreDsFontSize.h1.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
+                        Text("Total guardado em Caixinhas", fontSize = 14.sp.sp, color = Color.Gray)
+                        Text("R$ 35.651,30", fontSize = 14.sp.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
                         Button(
                             onClick = onCreateCaixinhaClick,
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.nubankPrimary)),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Icon(Icons.Default.Add, contentDescription = null, tint = Color.White)
                             Spacer(Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -69,7 +68,7 @@ fun WgcNubankInvestTemplate(
             }
 
             item {
-                Text("Minhas Caixinhas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                Text("Minhas Caixinhas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
             }
 
             items(NubankMockData.sampleCaixinhas) { caixinha ->

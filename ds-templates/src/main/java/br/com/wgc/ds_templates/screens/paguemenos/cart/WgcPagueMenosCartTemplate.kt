@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
@@ -43,7 +42,7 @@ fun WgcPagueMenosCartTemplate(
             item {
                 Text(
                     text = "Cesta de Compras Pague Menos",
-                    fontSize = WgcCoreDsFontSize.xl20.sp,
+                    fontSize = 18.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
@@ -52,20 +51,20 @@ fun WgcPagueMenosCartTemplate(
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(
                             text = "Shampoo Anticaspa Clear Men",
-                            fontSize = WgcCoreDsFontSize.sm14.sp,
+                            fontSize = 12.sp.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                         )
                         Text(
                             text = "1 unidade • R$ 22,90",
-                            fontSize = WgcCoreDsFontSize.xs12.sp,
+                            fontSize = 10.sp.sp,
                             color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                         )
                     }

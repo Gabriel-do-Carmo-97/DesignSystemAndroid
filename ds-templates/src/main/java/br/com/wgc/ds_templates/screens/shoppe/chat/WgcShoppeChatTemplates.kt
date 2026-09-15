@@ -121,7 +121,7 @@ fun WgcShoppeChatScreenTemplate(
                         onValueChange = { inputText = it },
                         placeholder = { Text("Type your message...") },
                         modifier = Modifier.weight(1f),
-                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp)
+                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                     )
                     IconButton(
                         onClick = {

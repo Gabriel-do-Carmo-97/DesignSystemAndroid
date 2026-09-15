@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,17 +22,17 @@ fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.sephoraBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("SEPHORA • Exclusividades & Makes", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("SEPHORA • Exclusividades & Makes", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(SephoraMockData.sampleProducts) { item ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.brand, fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text(item.brand, fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp.sp)
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        Text("+${item.pointsReward} Beauty Club pts", color = Color(0xFFE91E63), fontWeight = FontWeight.SemiBold, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("+${item.pointsReward} Beauty Club pts", color = Color(0xFFE91E63), fontWeight = FontWeight.SemiBold, fontSize = 14.sp.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -46,7 +45,7 @@ fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcSephoraClubTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Beauty Club • Resgate de Miniaturas de Luxo", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Beauty Club • Resgate de Miniaturas de Luxo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -55,7 +54,7 @@ fun WgcSephoraClubTemplate(modifier: Modifier = Modifier) {
 fun WgcSephoraTutorialsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Tutoriais de Maquiagem & Reviews Reais", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Tutoriais de Maquiagem & Reviews Reais", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -64,7 +63,7 @@ fun WgcSephoraTutorialsTemplate(modifier: Modifier = Modifier) {
 fun WgcSephoraBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola Sephora • Escolha até 3 Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Sacola Sephora • Escolha até 3 Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -73,7 +72,7 @@ fun WgcSephoraBagTemplate(modifier: Modifier = Modifier) {
 fun WgcSephoraProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Beauty Pass & Histórico", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Beauty Pass & Histórico", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

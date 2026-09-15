@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -39,7 +38,7 @@ fun WgcMessagingConversationCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -58,7 +57,7 @@ fun WgcMessagingConversationCard(
                     text = contactName.take(1),
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
-                    fontSize = WgcCoreDsFontSize.lg18.sp
+                    fontSize = 14.sp.sp
                 )
             }
 
@@ -67,12 +66,12 @@ fun WgcMessagingConversationCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = contactName,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = lastMessage,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 14.sp.sp,
                     color = Color.Gray,
                     maxLines = 1
                 )
@@ -81,7 +80,7 @@ fun WgcMessagingConversationCard(
             Column(horizontalAlignment = Alignment.End) {
                 Text(
                     text = timestamp,
-                    fontSize = WgcCoreDsFontSize.xxs10.sp,
+                    fontSize = 14.sp.sp,
                     color = Color.Gray
                 )
                 if (unreadCount > 0) {
@@ -94,7 +93,7 @@ fun WgcMessagingConversationCard(
                         Text(
                             text = unreadCount.toString(),
                             color = Color.White,
-                            fontSize = WgcCoreDsFontSize.xxs10.sp,
+                            fontSize = 14.sp.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }

@@ -163,7 +163,7 @@ fun WgcStylishOnboardingScreenTemplate(
                             modifier = Modifier
                                 .height(8.dp)
                                 .width(if (isCurrent) 28.dp else 8.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
                                     if (isCurrent) Color(WgcCoreDsColors.stylishDark)
                                     else Color(WgcCoreDsColors.stylishBorderGray).copy(alpha = 0.4f)

@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
@@ -23,16 +22,16 @@ fun WgcLalamoveQuoteTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.lalamoveOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Lalamove • Cotação de Frete & Carretos", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Lalamove • Cotação de Frete & Carretos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(LalamoveMockData.sampleVehicles) { veh ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(veh.type, fontWeight = FontWeight.Bold)
-                        Text("Capacidade até ${veh.capacityKg}kg", color = Color.Gray, fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("Capacidade até ${veh.capacityKg}kg", color = Color.Gray, fontSize = 14.sp.sp)
                         Text("A partir de R$ ${"%,.2f".format(veh.basePrice)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.lalamoveOrange))
                     }
                 }
@@ -45,7 +44,7 @@ fun WgcLalamoveQuoteTemplate(modifier: Modifier = Modifier) {
 fun WgcLalamoveRouteTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Rota com Múltiplas Paradas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Rota com Múltiplas Paradas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -54,7 +53,7 @@ fun WgcLalamoveRouteTemplate(modifier: Modifier = Modifier) {
 fun WgcLalamoveTrackingTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Rastreamento ao Vivo do Motorista Parceiro", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Rastreamento ao Vivo do Motorista Parceiro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -63,7 +62,7 @@ fun WgcLalamoveTrackingTemplate(modifier: Modifier = Modifier) {
 fun WgcLalamoveOrdersTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Pedidos de Entrega", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Histórico de Pedidos de Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -72,7 +71,7 @@ fun WgcLalamoveOrdersTemplate(modifier: Modifier = Modifier) {
 fun WgcLalamoveProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Lalamove & Conta Corporativa", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil Lalamove & Conta Corporativa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

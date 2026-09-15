@@ -18,7 +18,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcNubankAccountCard
@@ -65,7 +64,7 @@ fun WgcNubankHomeTemplate(
                     }
                 }
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
-                Text("Olá, Gabriel", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                Text("Olá, Gabriel", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             }
         }

@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -25,21 +24,21 @@ fun WgcClickBusSearchTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.clickbusGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Passagens Rodoviárias • ClickBus", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp, color = Color.White)
+                Text("Passagens Rodoviárias • ClickBus", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
                 Text("São Paulo (Tietê) ➔ Rio de Janeiro (Novo Rio)", color = Color.White.copy(alpha = 0.9f))
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(ClickBusMockData.sampleTrips) { trip ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                         Column {
                             Text(trip.company, fontWeight = FontWeight.Bold)
                             Text("${trip.departureTime} ➔ ${trip.arrivalTime}", color = Color.DarkGray)
-                            Text(trip.seatType, color = Color(WgcCoreDsColors.clickbusGreen), fontWeight = FontWeight.SemiBold, fontSize = WgcCoreDsFontSize.caption.sp)
+                            Text(trip.seatType, color = Color(WgcCoreDsColors.clickbusGreen), fontWeight = FontWeight.SemiBold, fontSize = 14.sp.sp)
                         }
-                        Text("R$ ${"%,.2f".format(trip.price)}", fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h3.sp)
+                        Text("R$ ${"%,.2f".format(trip.price)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
                     }
                 }
             }
@@ -51,7 +50,7 @@ fun WgcClickBusSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcClickBusSeatsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Seleção de Poltronas", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Seleção de Poltronas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -60,7 +59,7 @@ fun WgcClickBusSeatsTemplate(modifier: Modifier = Modifier) {
 fun WgcClickBusTicketsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meus Bilhetes de Embarque", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Meus Bilhetes de Embarque", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -69,7 +68,7 @@ fun WgcClickBusTicketsTemplate(modifier: Modifier = Modifier) {
 fun WgcClickBusCheckoutTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Checkout & Pagamento Seguro", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Checkout & Pagamento Seguro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }
@@ -78,7 +77,7 @@ fun WgcClickBusCheckoutTemplate(modifier: Modifier = Modifier) {
 fun WgcClickBusProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil de Passageiro", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+            Text("Perfil de Passageiro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
         }
     }
 }

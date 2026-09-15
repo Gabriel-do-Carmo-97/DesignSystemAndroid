@@ -38,7 +38,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcDrogaRaiaPrescriptionCard
@@ -102,7 +101,7 @@ fun WgcDrogaRaiaHomeTemplate(
             item {
                 Text(
                     text = "Mais Vendidos e Cuidados Pessoais",
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
+                    fontSize = 16.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary),
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
@@ -155,7 +154,7 @@ private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
                     Text(
                         text = "Entregar em: ${userProfile.address}",
                         color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         fontWeight = FontWeight.Medium,
                         maxLines = 1
                     )
@@ -171,7 +170,7 @@ private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
                 placeholder = {
                     Text(
                         text = "Buscar medicamentos, cosméticos, marcas...",
-                        fontSize = WgcCoreDsFontSize.sm14.sp
+                        fontSize = 12.sp.sp
                     )
                 },
                 leadingIcon = {
@@ -182,7 +181,7 @@ private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 },
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.full9999.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedContainerColor = Color(WgcCoreDsColors.drogaRaiaSurface),
                     unfocusedContainerColor = Color(WgcCoreDsColors.drogaRaiaSurface),
@@ -202,7 +201,7 @@ private fun RaiaFastDeliveryBanner() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaNavy)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -223,13 +222,13 @@ private fun RaiaFastDeliveryBanner() {
                 Text(
                     text = "Entrega Rápida em até 1 hora",
                     color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Ou retire grátis em qualquer farmácia Raia em 15 minutos",
                     color = Color(WgcCoreDsColors.drogaRaiaSurface).copy(alpha = 0.85f),
-                    fontSize = WgcCoreDsFontSize.xs12.sp
+                    fontSize = 10.sp.sp
                 )
             }
         }

@@ -16,7 +16,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcInterActionItem
@@ -44,15 +43,15 @@ fun WgcInterHomeTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Inter Super App", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                    Text("Inter Super App", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                     Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
                         Icon(Icons.Default.Notifications, contentDescription = null, tint = Color.White)
                         Icon(Icons.Default.AccountCircle, contentDescription = null, tint = Color.White)
                     }
                 }
                 Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                Text("Saldo em conta", color = Color.White.copy(alpha = 0.8f), fontSize = WgcCoreDsFontSize.caption.sp)
-                Text("R$ 12.890,40", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = WgcCoreDsFontSize.h1.sp)
+                Text("Saldo em conta", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
+                Text("R$ 12.890,40", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
             }
         }
     ) { padding ->
@@ -75,7 +74,7 @@ fun WgcInterHomeTemplate(
             }
 
             item {
-                Text("Destaques do Inter Shop", fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                Text("Destaques do Inter Shop", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
             }
 
             item {

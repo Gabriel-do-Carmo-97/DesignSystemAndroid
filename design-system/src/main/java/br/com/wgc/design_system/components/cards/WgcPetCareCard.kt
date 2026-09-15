@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -42,7 +41,7 @@ fun WgcPetCareCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -56,14 +55,14 @@ fun WgcPetCareCard(
                 )
                 Text(
                     text = petProductTitle,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
 
             Text(
                 text = "Embalagem: $weightOrSize",
-                fontSize = WgcCoreDsFontSize.xs12.sp,
+                fontSize = 14.sp.sp,
                 color = Color.Gray
             )
 
@@ -76,13 +75,13 @@ fun WgcPetCareCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = "R$ " + String.format("%.2f", subscriberPrice),
-                        fontSize = WgcCoreDsFontSize.lg18.sp,
+                        fontSize = 14.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.petzBlue)
                     )
                     Text(
                         text = "Preço Assinante Petz",
-                        fontSize = WgcCoreDsFontSize.xxs10.sp,
+                        fontSize = 14.sp.sp,
                         color = Color.DarkGray,
                         fontWeight = FontWeight.SemiBold
                     )

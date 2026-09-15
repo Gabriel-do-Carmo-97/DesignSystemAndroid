@@ -132,7 +132,7 @@ fun WgcKutukuOnboardingScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(WgcCoreDsColors.kutukuPrimary)
                 )
@@ -294,7 +294,7 @@ fun WgcKutukuLoginScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(WgcCoreDsColors.kutukuPrimary)
             )
@@ -325,7 +325,7 @@ fun WgcKutukuLoginScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.outlinedButtonColors(
                 contentColor = Color(WgcCoreDsColors.kutukuDark)
             )
@@ -340,7 +340,7 @@ fun WgcKutukuLoginScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.outlinedButtonColors(
                 contentColor = Color(WgcCoreDsColors.kutukuDark)
             )

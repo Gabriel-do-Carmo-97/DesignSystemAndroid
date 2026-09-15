@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -42,7 +41,7 @@ fun WgcStreamingMediaCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -53,7 +52,7 @@ fun WgcStreamingMediaCard(
             Box(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color.DarkGray)
             )
 
@@ -63,13 +62,13 @@ fun WgcStreamingMediaCard(
                 Text(
                     text = title,
                     color = Color.White,
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "$artistOrCreator • $duration",
                     color = Color.LightGray,
-                    fontSize = WgcCoreDsFontSize.xs12.sp
+                    fontSize = 14.sp.sp
                 )
             }
 

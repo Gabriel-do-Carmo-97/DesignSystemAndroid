@@ -97,7 +97,7 @@ fun WgcKutukuProductDetailScreen(
                         modifier = Modifier
                             .height(56.dp)
                             .width(180.dp),
-                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(WgcCoreDsColors.kutukuPrimary)
                         )

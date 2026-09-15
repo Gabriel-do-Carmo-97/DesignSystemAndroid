@@ -192,7 +192,7 @@ fun WgcKutukuOrderTrackingScreen(
                     modifier = Modifier
                         .width(48.dp)
                         .height(4.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                         .background(Color(WgcCoreDsColors.kutukuBorder))
                 )
 
@@ -306,7 +306,7 @@ fun WgcKutukuOrderTrackingScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(56.dp),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                     border = BorderStroke(1.5.dp, Color(WgcCoreDsColors.kutukuPrimary))
                 ) {
                     Text(

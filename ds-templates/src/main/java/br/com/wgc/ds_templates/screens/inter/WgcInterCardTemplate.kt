@@ -11,7 +11,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -38,16 +37,16 @@ fun WgcInterCardTemplate(
         ) {
             Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.interPrimary))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Inter Black Mastercard", color = Color.White, fontWeight = FontWeight.Bold, fontSize = WgcCoreDsFontSize.h3.sp)
+                    Text("Inter Black Mastercard", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
                     Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                    Text("•••• •••• •••• 8832", color = Color.White, fontSize = WgcCoreDsFontSize.h2.sp, fontWeight = FontWeight.SemiBold)
+                    Text("•••• •••• •••• 8832", color = Color.White, fontSize = 14.sp.sp, fontWeight = FontWeight.SemiBold)
                     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("Validade: 12/31", color = Color.White.copy(alpha = 0.8f), fontSize = WgcCoreDsFontSize.caption.sp)
-                        Text("CVV: •••", color = Color.White.copy(alpha = 0.8f), fontSize = WgcCoreDsFontSize.caption.sp)
+                        Text("Validade: 12/31", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
+                        Text("CVV: •••", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
                     }
                 }
             }

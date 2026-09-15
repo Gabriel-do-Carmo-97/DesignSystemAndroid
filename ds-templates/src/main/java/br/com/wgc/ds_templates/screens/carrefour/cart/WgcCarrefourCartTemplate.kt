@@ -41,7 +41,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -131,7 +130,7 @@ private fun CartHeaderInfo(itemCount: Int) {
     ) {
         Text(
             text = "Meu Carrinho ($itemCount itens)",
-            fontSize = WgcCoreDsFontSize.xl20.sp,
+            fontSize = 18.sp.sp,
             fontWeight = FontWeight.Bold,
             color = Color(WgcCoreDsColors.carrefourTextPrimary)
         )
@@ -146,7 +145,7 @@ private fun CartItemRow(
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -159,7 +158,7 @@ private fun CartItemRow(
             Box(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s64.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(Color(WgcCoreDsColors.carrefourPlaceholder))
             )
 
@@ -168,21 +167,21 @@ private fun CartItemRow(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = cartItem.product.title,
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.carrefourTextPrimary),
                     maxLines = 2
                 )
                 Text(
                     text = "R$ " + String.format("%.2f", cartItem.product.price),
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = Color(WgcCoreDsColors.carrefourTextSecondary)
                 )
                 if (cartItem.product.carrefourCardPrice != null) {
                     Text(
                         text = "R$ " + String.format("%.2f", cartItem.product.carrefourCardPrice) + " no Cartão Carrefour",
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         color = Color(WgcCoreDsColors.carrefourBlue),
                         fontWeight = FontWeight.Bold
                     )
@@ -212,7 +211,7 @@ private fun CartItemRow(
 
                 Text(
                     text = cartItem.quantity.toString(),
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
                 )
@@ -241,7 +240,7 @@ private fun CartaoCarrefourInstallmentSimulator(
     val installmentVal = total / maxInstallments
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourBlueLight)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.none0.dp)
     ) {
@@ -261,13 +260,13 @@ private fun CartaoCarrefourInstallmentSimulator(
             Column {
                 Text(
                     text = "Com Cartão Carrefour parcele em até:",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.carrefourBlueDark),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = "${maxInstallments}x de R$ " + String.format("%.2f", installmentVal) + " sem juros",
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.carrefourBlue)
                 )
@@ -280,7 +279,7 @@ private fun CartaoCarrefourInstallmentSimulator(
 private fun DeliveryTypeCard() {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -300,13 +299,13 @@ private fun DeliveryTypeCard() {
             Column {
                 Text(
                     text = "Entrega Expressa Carrefour",
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.carrefourTextPrimary)
                 )
                 Text(
                     text = "Receba em até 2 horas na sua casa",
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.carrefourTextSecondary)
                 )
             }
@@ -324,8 +323,8 @@ private fun CartSummaryBottomBar(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(
-            topStart = WgcCoreDsBorderRadius.md16.dp,
-            topEnd = WgcCoreDsBorderRadius.md16.dp,
+            topStart = WgcCoreDsBorderRadius.xl16.dp,
+            topEnd = WgcCoreDsBorderRadius.xl16.dp,
             bottomStart = WgcCoreDsBorderRadius.none0.dp,
             bottomEnd = WgcCoreDsBorderRadius.none0.dp
         ),
@@ -344,13 +343,13 @@ private fun CartSummaryBottomBar(
                 ) {
                     Text(
                         text = "Economia Cartão Carrefour:",
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         color = Color(WgcCoreDsColors.carrefourNutriScoreA),
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "- R$ " + String.format("%.2f", economy),
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         color = Color(WgcCoreDsColors.carrefourNutriScoreA),
                         fontWeight = FontWeight.Bold
                     )
@@ -366,12 +365,12 @@ private fun CartSummaryBottomBar(
                 Column {
                     Text(
                         text = "Total:",
-                        fontSize = WgcCoreDsFontSize.xs12.sp,
+                        fontSize = 10.sp.sp,
                         color = Color(WgcCoreDsColors.carrefourTextSecondary)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", total),
-                        fontSize = WgcCoreDsFontSize.xl20.sp,
+                        fontSize = 18.sp.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourTextPrimary)
                     )

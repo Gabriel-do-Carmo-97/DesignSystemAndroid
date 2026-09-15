@@ -27,7 +27,6 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsFontSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.cards.WgcPagueMenosConvenioCard
@@ -64,7 +63,7 @@ fun WgcPagueMenosHomeTemplate(
             item {
                 Text(
                     text = "Destaques Sempre Bem",
-                    fontSize = WgcCoreDsFontSize.lg18.sp,
+                    fontSize = 16.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
@@ -82,20 +81,20 @@ private fun PagueMenosBanner() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.pagueMenosGreen), RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp))
+            .background(Color(WgcCoreDsColors.pagueMenosGreen), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Column {
             Text(
                 text = "Pague Menos • Sempre Bem",
                 color = Color(WgcCoreDsColors.pagueMenosSurface),
-                fontSize = WgcCoreDsFontSize.md16.sp,
+                fontSize = 14.sp.sp,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = "Economia de verdade em medicamentos e cosméticos",
                 color = Color(WgcCoreDsColors.pagueMenosSurface).copy(alpha = 0.85f),
-                fontSize = WgcCoreDsFontSize.xs12.sp
+                fontSize = 10.sp.sp
             )
         }
     }
@@ -105,7 +104,7 @@ private fun PagueMenosBanner() {
 private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
     ) {
@@ -116,24 +115,24 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "${offer.discountPercent}% OFF",
-                    fontSize = WgcCoreDsFontSize.xxs10.sp,
+                    fontSize = 9.sp.sp,
                     color = Color(WgcCoreDsColors.pagueMenosGreen),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
-                    fontSize = WgcCoreDsFontSize.sm14.sp,
+                    fontSize = 12.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
                 Text(
                     text = offer.brand,
-                    fontSize = WgcCoreDsFontSize.xs12.sp,
+                    fontSize = 10.sp.sp,
                     color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                 )
                 Text(
                     text = "R$ " + String.format("%.2f", offer.price),
-                    fontSize = WgcCoreDsFontSize.md16.sp,
+                    fontSize = 14.sp.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosBlue)
                 )
