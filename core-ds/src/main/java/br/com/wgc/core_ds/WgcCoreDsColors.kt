@@ -599,4 +599,32 @@ object WgcCoreDsColors {
     val decolarBlue = Color.parseColor("#003580")
     val decolarPurple = Color.parseColor("#432874")
     val dominosRed = Color.parseColor("#E31837")
+
+    // --- NOVAS SUÍTES FIGMA (ODONTO, TELEMEDICINA, ZÉ DELIVERY, WEBMOTORS, KABUM) ---
+    // 1. Odontologia (DentiCare / OdontoPrev)
+    val dentiCareTeal = Color.parseColor("#00A8B5")
+    val dentiCareTealLight = Color.parseColor("#E0F7FA")
+    val dentiCareDark = Color.parseColor("#004D54")
+
+    // 2. Telemedicina (Doctoralia / Dr. Consulta)
+    val doctoraliaGreen = Color.parseColor("#00B39B")
+    val doctoraliaNavy = Color.parseColor("#002B49")
+    val doctoraliaGreenLight = Color.parseColor("#E6F8F5")
+
+    // 3. Drinks Delivery (Zé Delivery)
+    val zeDeliveryYellow = Color.parseColor("#FFCC00")
+    val zeDeliveryDark = Color.parseColor("#111111")
+    val zeDeliveryRed = Color.parseColor("#E31837")
+
+    // 4. Automotivo & Car Marketplace (Webmotors / iCarros)
+    val webmotorsRed = Color.parseColor("#E6192E")
+    val webmotorsDark = Color.parseColor("#1A1D20")
+    val webmotorsGray = Color.parseColor("#2C3238")
+    val webmotorsGreen = Color.parseColor("#00A868")
+
+    // 5. Eletrônicos & Hardware Specs (KaBuM! / Hardware)
+    val kabumOrange = Color.parseColor("#FF6500")
+    val kabumNavy = Color.parseColor("#002B49")
+    val kabumOrangeLight = Color.parseColor("#FFF0E6")
+    val kabumNinjaBlack = Color.parseColor("#121212")
 }
