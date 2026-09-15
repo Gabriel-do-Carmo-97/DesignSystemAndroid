@@ -41,12 +41,12 @@ jobs:
     name: 🔍 Detect Changed Modules
     runs-on: ubuntu-latest
     outputs:
-      any_changed: ${{ steps.changed_modules.outputs.build_logic_any_changed == 'true' || steps.changed_modules.outputs.core_ds_any_changed == 'true' || steps.changed_modules.outputs.design_system_any_changed == 'true' || steps.changed_modules.outputs.ds_templates_any_changed == 'true' || steps.changed_modules.outputs.ds_navigation_flows_any_changed == 'true' || steps.changed_modules.outputs.app_any_changed == 'true' }}
+      any_changed: ${{ steps.changed_modules.outputs.build_logic_any_changed == 'true' || steps.changed_modules.outputs.core_any_changed == 'true' || steps.changed_modules.outputs.components_any_changed == 'true' || steps.changed_modules.outputs.templates_any_changed == 'true' || steps.changed_modules.outputs.navigation_flows_any_changed == 'true' || steps.changed_modules.outputs.app_any_changed == 'true' }}
       build_logic: ${{ steps.changed_modules.outputs.build_logic_any_changed }}
-      core_ds: ${{ steps.changed_modules.outputs.core_ds_any_changed }}
-      design_system: ${{ steps.changed_modules.outputs.design_system_any_changed }}
-      ds_templates: ${{ steps.changed_modules.outputs.ds_templates_any_changed }}
-      ds_navigation_flows: ${{ steps.changed_modules.outputs.ds_navigation_flows_any_changed }}
+      core: ${{ steps.changed_modules.outputs.core_any_changed }}
+      components: ${{ steps.changed_modules.outputs.components_any_changed }}
+      templates: ${{ steps.changed_modules.outputs.templates_any_changed }}
+      navigation_flows: ${{ steps.changed_modules.outputs.navigation_flows_any_changed }}
       app: ${{ steps.changed_modules.outputs.app_any_changed }}
     steps:
       - uses: actions/checkout@v4
@@ -59,14 +59,14 @@ jobs:
           files_yaml: |
             build_logic:
               - build-logic/**
-            core_ds:
-              - core-ds/**
-            design_system:
-              - design-system/**
-            ds_templates:
-              - ds-templates/**
-            ds_navigation_flows:
-              - ds-navigation-flows/**
+            core:
+              - core/**
+            components:
+              - components/**
+            templates:
+              - templates/**
+            navigation_flows:
+              - navigation-flows/**
             app:
               - app/**
 
@@ -101,14 +101,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - module: "core-ds"
-            filter: "core_ds"
-          - module: "design-system"
-            filter: "design_system"
-          - module: "ds-templates"
-            filter: "ds_templates"
-          - module: "ds-navigation-flows"
-            filter: "ds_navigation_flows"
+          - module: "core"
+            filter: "core"
+          - module: "components"
+            filter: "components"
+          - module: "templates"
+            filter: "templates"
+          - module: "navigation-flows"
+            filter: "navigation_flows"
           - module: "app"
             filter: "app"
     steps:
@@ -137,10 +137,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - module: "core-ds"
-          - module: "design-system"
-          - module: "ds-templates"
-          - module: "ds-navigation-flows"
+          - module: "core"
+          - module: "components"
+          - module: "templates"
+          - module: "navigation-flows"
           - module: "app"
     steps:
       - uses: actions/checkout@v4
@@ -192,18 +192,18 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - module: "core-ds"
+          - module: "core"
             task: "assembleRelease"
-            artifact_path: "core-ds/build/outputs/aar/core-ds-release.aar"
-          - module: "design-system"
+            artifact_path: "core/build/outputs/aar/core-release.aar"
+          - module: "components"
             task: "assembleRelease"
-            artifact_path: "design-system/build/outputs/aar/design-system-release.aar"
-          - module: "ds-templates"
+            artifact_path: "components/build/outputs/aar/components-release.aar"
+          - module: "templates"
             task: "assembleRelease"
-            artifact_path: "ds-templates/build/outputs/aar/ds-templates-release.aar"
-          - module: "ds-navigation-flows"
+            artifact_path: "templates/build/outputs/aar/templates-release.aar"
+          - module: "navigation-flows"
             task: "assembleRelease"
-            artifact_path: "ds-navigation-flows/build/outputs/aar/ds-navigation-flows-release.aar"
+            artifact_path: "navigation-flows/build/outputs/aar/navigation-flows-release.aar"
     steps:
       - uses: actions/checkout@v4
       - run: chmod +x gradlew
@@ -275,22 +275,22 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - module: "core-ds"
-            key: "core_ds"
-            env_name: "core-ds"
-            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/core-ds/"
-          - module: "design-system"
-            key: "design_system"
-            env_name: "design-system"
-            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/design-system/"
-          - module: "ds-templates"
-            key: "ds_templates"
-            env_name: "ds-templates"
-            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-templates/"
-          - module: "ds-navigation-flows"
-            key: "ds_navigation_flows"
-            env_name: "ds-navigation-flows"
-            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-navigation-flows/"
+          - module: "core"
+            key: "core"
+            env_name: "core"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/core/"
+          - module: "components"
+            key: "components"
+            env_name: "components"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/components/"
+          - module: "templates"
+            key: "templates"
+            env_name: "templates"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/templates/"
+          - module: "navigation-flows"
+            key: "navigation_flows"
+            env_name: "navigation-flows"
+            doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/navigation-flows/"
     runs-on: ubuntu-latest
     environment:
       name: ${{ matrix.env_name }}
@@ -325,32 +325,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download core-ds AAR
+      - name: Download core AAR
         uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          name: aar-core-ds
+          name: aar-core
           path: release-aars/
 
-      - name: Download design-system AAR
+      - name: Download components AAR
         uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          name: aar-design-system
+          name: aar-components
           path: release-aars/
 
-      - name: Download ds-templates AAR
+      - name: Download templates AAR
         uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          name: aar-ds-templates
+          name: aar-templates
           path: release-aars/
 
-      - name: Download ds-navigation-flows AAR
+      - name: Download navigation-flows AAR
         uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          name: aar-ds-navigation-flows
+          name: aar-navigation-flows
           path: release-aars/
 
       - name: Configure GitHub Access
