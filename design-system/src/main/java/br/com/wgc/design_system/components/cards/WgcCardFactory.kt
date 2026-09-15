@@ -78,7 +78,10 @@ enum class WgcCardType {
     ExtraCoupon,
     PdaProduct,
     PdaWine,
-    PdaLoyalty
+    PdaLoyalty,
+    CarrefourProduct,
+    CarrefourNutriScore,
+    CarrefourMeuCard
 }
 
 /**
@@ -661,6 +664,37 @@ fun WgcCardFactory(
                 tier = badgeText ?: "Cliente Mais Black",
                 stilloCoins = 2840,
                 monthlySavings = 428.50,
+                onClick = onClick
+            )
+        }
+        WgcCardType.CarrefourProduct -> {
+            WgcCarrefourProductCard(
+                modifier = modifier,
+                title = title.ifBlank { "Arroz Tipo 1 Carrefour Classic 5kg" },
+                brandLine = subtitle.ifBlank { "Carrefour Classic" },
+                unit = "5kg",
+                regularPrice = 32.90,
+                cardCarrefourPrice = 28.90,
+                nutriScore = badgeText ?: "A",
+                quantity = 1,
+                onClick = onClick
+            )
+        }
+        WgcCardType.CarrefourNutriScore -> {
+            WgcCarrefourNutriScoreCard(
+                modifier = modifier,
+                currentScore = badgeText ?: "A",
+                onClick = onClick
+            )
+        }
+        WgcCardType.CarrefourMeuCard -> {
+            WgcCarrefourMeuCard(
+                modifier = modifier,
+                holderName = title.ifBlank { "Gabriel do Carmo" },
+                cardLastDigits = subtitle.ifBlank { "8412" },
+                availableLimit = 4250.00,
+                coinsBalance = 380,
+                bestPurchaseDay = 15,
                 onClick = onClick
             )
         }
