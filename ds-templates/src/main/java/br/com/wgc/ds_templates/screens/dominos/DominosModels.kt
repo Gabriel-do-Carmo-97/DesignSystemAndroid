@@ -1,6 +1,7 @@
 package br.com.wgc.ds_templates.screens.dominos
 
-data class DominoPizza(val id: String, val name: String, val ingredients: String, val price: Double)
+data class DominosPizza(val id: String, val name: String, val ingredients: String, val price: Double)
+typealias DominoPizza = DominosPizza
 
 object DominosMockData {
     val samplePizzas = listOf(

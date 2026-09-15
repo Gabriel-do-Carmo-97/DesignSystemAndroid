@@ -379,7 +379,7 @@ private fun CartSummaryBottomBar(
                     textButton = "Fechar Pedido",
                     onClick = onCheckout
                     )
-                )
+                
             }
         }
     }

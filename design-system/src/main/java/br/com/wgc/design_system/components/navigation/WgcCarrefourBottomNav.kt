@@ -27,6 +27,14 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 /**
  * Itens da barra de navegação inferior do Carrefour Brasil.
  */
+enum class CarrefourNavTab {
+    HOME,
+    COUPONS,
+    FLYER,
+    CART,
+    MEU_CARREFOUR
+}
+
 enum class WgcCarrefourNavItem(val label: String, val icon: ImageVector) {
     HOME("Início", Icons.Default.Home),
     COUPONS("Cupons", Icons.Default.LocalOffer),
@@ -88,3 +96,34 @@ private fun WgcCarrefourBottomNavPreview() {
         onItemSelected = {}
     )
 }
+
+@Composable
+fun WgcCarrefourBottomNav(
+    selectedTab: CarrefourNavTab,
+    onTabSelected: (CarrefourNavTab) -> Unit,
+    modifier: Modifier = Modifier,
+    cartBadgeCount: Int = 0
+) {
+    val selectedIndex = when (selectedTab) {
+        CarrefourNavTab.HOME -> 0
+        CarrefourNavTab.COUPONS -> 1
+        CarrefourNavTab.FLYER -> 2
+        CarrefourNavTab.CART -> 3
+        CarrefourNavTab.MEU_CARREFOUR -> 4
+    }
+    WgcCarrefourBottomNav(
+        selectedItem = selectedIndex,
+        onItemSelected = { idx ->
+            val tab = when (idx) {
+                0 -> CarrefourNavTab.HOME
+                1 -> CarrefourNavTab.COUPONS
+                2 -> CarrefourNavTab.FLYER
+                3 -> CarrefourNavTab.CART
+                else -> CarrefourNavTab.MEU_CARREFOUR
+            }
+            onTabSelected(tab)
+        },
+        modifier = modifier
+    )
+}
+

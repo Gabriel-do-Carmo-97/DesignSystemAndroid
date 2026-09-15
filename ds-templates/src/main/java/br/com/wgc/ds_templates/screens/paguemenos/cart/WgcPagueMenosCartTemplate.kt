@@ -74,7 +74,7 @@ fun WgcPagueMenosCartTemplate(
                     textButton = "Concluir Compra • R$ 22,90",
                     onClick = onCheckout,
                     modifier = Modifier.fillMaxWidth()
-                    )
+                    
                 )
             }
         }

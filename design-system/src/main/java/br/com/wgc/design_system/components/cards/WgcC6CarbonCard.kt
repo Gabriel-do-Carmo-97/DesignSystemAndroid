@@ -127,3 +127,18 @@ private fun WgcC6CarbonCardPreview() {
         atomosPoints = 14250
     )
 }
+
+
+@Composable
+fun WgcC6CarbonCard(
+    cardHolder: String,
+    invoiceAmount: Double,
+    modifier: Modifier = Modifier
+) {
+    WgcC6CarbonCard(
+        holderName = cardHolder,
+        cardLastDigits = "7412",
+        atomosPoints = (invoiceAmount * 2.5).toInt(),
+        modifier = modifier
+    )
+}

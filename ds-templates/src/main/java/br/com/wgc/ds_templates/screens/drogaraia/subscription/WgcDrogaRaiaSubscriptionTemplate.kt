@@ -101,16 +101,7 @@ fun WgcDrogaRaiaSubscriptionTemplate(
                 WgcClassicButton(
                     textButton = "Adicionar Novo Medicamento à Assinatura",
                     onClick = onAddNewSubscription,
-                    modifier = Modifier.fillMaxWidth(),
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.Add,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogaRaiaSurface),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                    }
-                    )
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
         }

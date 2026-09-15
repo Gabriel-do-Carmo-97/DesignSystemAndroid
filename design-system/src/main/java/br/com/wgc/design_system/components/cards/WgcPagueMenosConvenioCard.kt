@@ -110,7 +110,7 @@ fun WgcPagueMenosConvenioCard(
                 textButton = "Alterar",
                 onClick = onManageConvenio
                 )
-            )
+            
         }
     }
 }

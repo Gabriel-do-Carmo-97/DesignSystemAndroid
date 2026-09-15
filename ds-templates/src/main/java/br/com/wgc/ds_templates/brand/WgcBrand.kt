@@ -179,7 +179,7 @@ enum class WgcBrand(
         brandName = "C6 Bank",
         brandLogoText = "C6",
         primaryColor = Color(0xFF242424)
-    )
+    ),
 
     // Cat 6: Mobilidade
     NinetyNine("99", "99", Color(0xFFFFC800)),

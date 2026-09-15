@@ -137,7 +137,7 @@ fun WgcDrogaRaiaSubscriptionCard(
                 textButton = "Gerenciar Assinatura",
                 onClick = onManageClick,
                 modifier = Modifier.fillMaxWidth()
-                )
+                
             )
         }
     }

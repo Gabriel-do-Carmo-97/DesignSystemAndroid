@@ -83,7 +83,7 @@ fun WgcNubankHomeTemplate(
                     horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
                 ) {
                     WgcNubankPixActionItem(Icons.Default.QrCode, "Área Pix", onPixClick)
-                    WgcNubankPixActionItem(Icons.Default.BarcodeReader, "Pagar", onPayClick)
+                    WgcNubankPixActionItem(Icons.Default.Receipt, "Pagar", onPayClick)
                     WgcNubankPixActionItem(Icons.Default.ArrowUpward, "Transferir", onTransferClick)
                     WgcNubankPixActionItem(Icons.Default.ArrowDownward, "Depositar", onDepositClick)
                     WgcNubankPixActionItem(Icons.Default.PhoneAndroid, "Recarga", {})

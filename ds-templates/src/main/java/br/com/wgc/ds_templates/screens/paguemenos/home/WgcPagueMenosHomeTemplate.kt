@@ -140,7 +140,7 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
                 textButton = "Comprar",
                 onClick = onBuy
                 )
-            )
+            
         }
     }
 }

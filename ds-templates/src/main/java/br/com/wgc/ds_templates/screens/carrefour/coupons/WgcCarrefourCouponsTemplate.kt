@@ -190,16 +190,7 @@ private fun MeuCarrefourHeaderCard(
 
                 WgcClassicButton(
                     textButton = "QR no Caixa",
-                    onClick = onViewCashierCode,
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.QrCode,
-                            contentDescription = "QR Code",
-                            tint = Color(WgcCoreDsColors.carrefourBlue),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                    }
-                    )
+                    onClick = onViewCashierCode
                 )
             }
         }
@@ -352,7 +343,7 @@ private fun CouponRowCard(
                     textButton = "Ativar",
                     onClick = onActivate
                     )
-                )
+                
             }
         }
     }

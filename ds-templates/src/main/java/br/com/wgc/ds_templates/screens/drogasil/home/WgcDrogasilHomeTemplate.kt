@@ -164,7 +164,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                 textButton = "Comprar",
                 onClick = onBuy
                 )
-            )
+            
         }
     }
 }

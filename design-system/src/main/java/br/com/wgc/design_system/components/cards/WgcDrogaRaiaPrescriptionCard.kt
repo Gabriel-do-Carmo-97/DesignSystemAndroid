@@ -100,31 +100,13 @@ fun WgcDrogaRaiaPrescriptionCard(
                 WgcClassicButton(
                     textButton = "Enviar Receita",
                     onClick = onUploadPrescription,
-                    modifier = Modifier.weight(1f),
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.FileUpload,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogaRaiaSurface),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                    }
-                    )
+                    modifier = Modifier.weight(1f)
                 )
 
                 WgcClassicButton(
                     textButton = "Farmacêutico",
                     onClick = onTalkToPharmacist,
-                    modifier = Modifier.weight(1f),
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.SupportAgent,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogaRaiaNavy),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                    }
-                    )
+                    modifier = Modifier.weight(1f)
                 )
             }
         }
