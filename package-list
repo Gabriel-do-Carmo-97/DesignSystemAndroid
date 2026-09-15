@@ -4,9 +4,7 @@ $dokka.linkExtension:html
 module:app
 br.com.wgc.design_system_wgc
 br.com.wgc.design_system_wgc.ui.theme
-module:core-ds
-br.com.wgc.core_ds
-module:design-system
+module:components
 br.com.wgc.design_system.commons
 br.com.wgc.design_system.components.alert
 br.com.wgc.design_system.components.auth
@@ -44,9 +42,11 @@ br.com.wgc.design_system.components.tooltip
 br.com.wgc.design_system.components.tracking
 br.com.wgc.design_system.mock
 br.com.wgc.design_system.previews
-module:ds-navigation-flows
+module:core
+br.com.wgc.core_ds
+module:navigation-flows
 br.com.wgc.ds_navigation_flows
-module:ds-templates
+module:templates
 br.com.wgc.ds_templates.brand
 br.com.wgc.ds_templates.ecommerces.v1
 br.com.wgc.ds_templates.factories
