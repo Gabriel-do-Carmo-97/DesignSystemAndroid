@@ -22,6 +22,7 @@ br.com.wgc.design_system.components.dialogs
 br.com.wgc.design_system.components.feedback
 br.com.wgc.design_system.components.fields
 br.com.wgc.design_system.components.filter
+br.com.wgc.design_system.components.fitness
 br.com.wgc.design_system.components.ifood
 br.com.wgc.design_system.components.images
 br.com.wgc.design_system.components.inputs
@@ -97,6 +98,12 @@ br.com.wgc.ds_templates.screens.nexkart.product
 br.com.wgc.ds_templates.screens.nexkart.profile
 br.com.wgc.ds_templates.screens.nineninefood
 br.com.wgc.ds_templates.screens.nineninefood.auth
+br.com.wgc.ds_templates.screens.ntc.activity
+br.com.wgc.ds_templates.screens.ntc.detail
+br.com.wgc.ds_templates.screens.ntc.home
+br.com.wgc.ds_templates.screens.ntc.model
+br.com.wgc.ds_templates.screens.ntc.player
+br.com.wgc.ds_templates.screens.ntc.programs
 br.com.wgc.ds_templates.screens.organizze.cards
 br.com.wgc.ds_templates.screens.organizze.dashboard
 br.com.wgc.ds_templates.screens.organizze.entry
