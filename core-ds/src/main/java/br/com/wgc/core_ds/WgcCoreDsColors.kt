@@ -369,6 +369,29 @@ object WgcCoreDsColors {
     val pdaPlaceholder = Color.parseColor("#CBD5E1")
     val pdaSuccessGreen = Color.parseColor("#2E7D32")
     val pdaSuccessGreenLight = Color.parseColor("#E8F5E9")
+
+    // --- CARREFOUR BRASIL TOKENS (CATEGORIA 3: SUPERMERCADO & VAREJO ALIMENTAR) ---
+    val carrefourBlue = Color.parseColor("#00387B") // Azul Corporativo Carrefour
+    val carrefourBlueDark = Color.parseColor("#00204A")
+    val carrefourBlueLight = Color.parseColor("#E8EFF8")
+    val carrefourRed = Color.parseColor("#ED1C24") // Vermelho Losango Carrefour
+    val carrefourRedDark = Color.parseColor("#B80D14")
+    val carrefourRedLight = Color.parseColor("#FDE8E9")
+    val carrefourYellow = Color.parseColor("#F8B600") // Amarelo de Ofertas & Posto
+    val carrefourOrange = Color.parseColor("#FF6E00")
+    val carrefourBackground = Color.parseColor("#F5F6F9")
+    val carrefourSurface = Color.WHITE
+    val carrefourTextPrimary = Color.parseColor("#1D232C")
+    val carrefourTextSecondary = Color.parseColor("#6C757D")
+    val carrefourBorder = Color.parseColor("#E4E7EB")
+    val carrefourPlaceholder = Color.parseColor("#CBD5E1")
+
+    // Escala Nutri-Score Oficial (Classificação Internacional A-E adotada pelo Carrefour)
+    val carrefourNutriScoreA = Color.parseColor("#038141") // Verde Escuro - Altamente Saudável
+    val carrefourNutriScoreB = Color.parseColor("#85BB2F") // Verde Claro
+    val carrefourNutriScoreC = Color.parseColor("#FECB02") // Amarelo
+    val carrefourNutriScoreD = Color.parseColor("#EE8100") // Laranja
+    val carrefourNutriScoreE = Color.parseColor("#E63E11") // Vermelho
 }
 
 
