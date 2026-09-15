@@ -74,7 +74,6 @@ fun WgcNtcWorkoutPlayerTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.ntcBlack),
         topBar = {
             Row(
                 modifier = Modifier
@@ -268,9 +267,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                         .height(WgcCoreDsSize.s52.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.ntcVolt),
-                        contentColor = Color(WgcCoreDsColors.ntcBlack)
-                    )
+                        containerColor = Color(WgcCoreDsColors.ntcVolt))
                 ) {
                     Text(
                         text = "CONCLUIR TREINO",

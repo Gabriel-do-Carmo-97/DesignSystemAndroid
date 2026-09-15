@@ -22,7 +22,7 @@ fun WgcPetzHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.petzYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Petz • Seu Pet Shop Completo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.Black)
+                Text("Petz • Seu Pet Shop Completo", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
             }
         }
     ) { padding ->
@@ -31,9 +31,9 @@ fun WgcPetzHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
-                        Text(item.category, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.category, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.SemiBold)
-                        Text("Com Assinatura Petz: R$ ${"%,.2f".format(item.subscriptionPrice)}", color = Color(WgcCoreDsColors.petzBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text("Com Assinatura Petz: R$ ${"%,.2f".format(item.subscriptionPrice)}", color = Color(WgcCoreDsColors.petzBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     }
                 }
             }
@@ -45,7 +45,7 @@ fun WgcPetzHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcPetzSubscriptionTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Assinatura Petz • 10% OFF em Todas as Entregas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Assinatura Petz • 10% OFF em Todas as Entregas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -54,7 +54,7 @@ fun WgcPetzSubscriptionTemplate(modifier: Modifier = Modifier) {
 fun WgcPetzClinicTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Centro Veterinário Seres & Banho/Tosa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Centro Veterinário Seres & Banho/Tosa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -63,7 +63,7 @@ fun WgcPetzClinicTemplate(modifier: Modifier = Modifier) {
 fun WgcPetzCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Compras Petz", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho de Compras Petz", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -72,7 +72,7 @@ fun WgcPetzCartTemplate(modifier: Modifier = Modifier) {
 fun WgcPetzProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil dos Meus Pets (Bob & Luna)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil dos Meus Pets (Bob & Luna)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

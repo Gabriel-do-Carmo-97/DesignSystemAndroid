@@ -26,7 +26,7 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.duolingoGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Duolingo • Inglês", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Duolingo • Inglês", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
                 Text("🔥 42 dias de ofensiva • 💎 1.250 gemas", color = Color.White.copy(alpha = 0.9f))
             }
         }
@@ -36,8 +36,8 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                         Column {
-                            Text(lesson.title, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                            Text("Nível ${lesson.level} • +${lesson.xp} XP", color = Color.Gray, fontSize = 14.sp.sp)
+                            Text(lesson.title, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                            Text("Nível ${lesson.level} • +${lesson.xp} XP", color = Color.Gray, fontSize = 14.sp)
                         }
                         Icon(
                             if (lesson.isCompleted) Icons.Default.CheckCircle else Icons.Default.Lock,
@@ -55,7 +55,7 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Desafio de Pronúncia & Escuta", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Desafio de Pronúncia & Escuta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -64,7 +64,7 @@ fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Divisão Diamante • Ligas Semanais", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Divisão Diamante • Ligas Semanais", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -73,7 +73,7 @@ fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Loja de Gemas & Bloqueio de Ofensiva", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Loja de Gemas & Bloqueio de Ofensiva", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -82,7 +82,7 @@ fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) {
 fun WgcDuolingoProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Estudante & Conquistas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Estudante & Conquistas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

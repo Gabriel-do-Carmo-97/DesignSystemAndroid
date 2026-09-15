@@ -150,9 +150,7 @@ fun WgcLazaOrderConfirmedTemplate(
                     .height(WgcCoreDsSize.s52.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.lazaSurface),
-                    contentColor = Color(WgcCoreDsColors.lazaDark)
-                )
+                    containerColor = Color(WgcCoreDsColors.lazaSurface))
             ) {
                 Text(
                     text = "Go to Orders",

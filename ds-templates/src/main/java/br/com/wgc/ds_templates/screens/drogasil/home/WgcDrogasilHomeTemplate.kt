@@ -51,9 +51,7 @@ fun WgcDrogasilHomeTemplate(
     onOfferClick: (DrogasilOffer) -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogasilBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -74,7 +72,7 @@ fun WgcDrogasilHomeTemplate(
             item {
                 Text(
                     text = "Ofertas Vizinhas da Semana",
-                    fontSize = 16.sp.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
@@ -100,13 +98,13 @@ private fun DrogasilHeader() {
                 Text(
                     text = "Drogasil • Sua Farmácia Vizinha",
                     color = Color(WgcCoreDsColors.drogasilSurface),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Entrega grátis e expressa pelo farmacêutico vizinho",
                     color = Color(WgcCoreDsColors.drogasilSurface).copy(alpha = 0.85f),
-                    fontSize = 10.sp.sp
+                    fontSize = 10.sp
                 )
             }
         }
@@ -119,7 +117,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -128,26 +126,26 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = offer.discountTag,
-                    fontSize = 9.sp.sp,
+                    fontSize = 9.sp,
                     color = Color(WgcCoreDsColors.drogasilRed),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
                 Text(
                     text = offer.laboratory,
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.drogasilTextSecondary)
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (offer.originalPrice != null) {
                         Text(
                             text = "R$ " + String.format("%.2f", offer.originalPrice),
-                            fontSize = 10.sp.sp,
+                            fontSize = 10.sp,
                             color = Color(WgcCoreDsColors.drogasilTextSecondary),
                             textDecoration = TextDecoration.LineThrough
                         )
@@ -155,7 +153,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                     }
                     Text(
                         text = "R$ " + String.format("%.2f", offer.price),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogasilRed)
                     )
@@ -163,10 +161,9 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
             }
 
             WgcClassicButton(
-                text = "Comprar",
-                onClick = onBuy,
-                containerColor = Color(WgcCoreDsColors.drogasilRed),
-                contentColor = Color(WgcCoreDsColors.drogasilSurface)
+                textButton = "Comprar",
+                onClick = onBuy
+                )
             )
         }
     }

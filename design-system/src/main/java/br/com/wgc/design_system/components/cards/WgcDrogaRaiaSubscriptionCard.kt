@@ -51,7 +51,7 @@ fun WgcDrogaRaiaSubscriptionCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogaRaiaBorder))
     ) {
         Column(
@@ -83,13 +83,13 @@ fun WgcDrogaRaiaSubscriptionCard(
                     Column {
                         Text(
                             text = "Assinatura Raia Ativa",
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             color = Color(WgcCoreDsColors.drogaRaiaGreen),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = medicineName,
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                         )
@@ -98,7 +98,7 @@ fun WgcDrogaRaiaSubscriptionCard(
 
                 Text(
                     text = "R$ " + String.format("%.2f", monthlyPrice) + "/mês",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaNavy)
                 )
@@ -119,13 +119,13 @@ fun WgcDrogaRaiaSubscriptionCard(
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "Frequência: $dosageFrequency",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = "Próxima Entrega: $nextDeliveryDate",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaRed),
                     fontWeight = FontWeight.SemiBold
                 )
@@ -134,11 +134,10 @@ fun WgcDrogaRaiaSubscriptionCard(
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
 
             WgcClassicButton(
-                text = "Gerenciar Assinatura",
+                textButton = "Gerenciar Assinatura",
                 onClick = onManageClick,
-                modifier = Modifier.fillMaxWidth(),
-                containerColor = Color(WgcCoreDsColors.drogaRaiaNavy),
-                contentColor = Color(WgcCoreDsColors.drogaRaiaSurface)
+                modifier = Modifier.fillMaxWidth()
+                )
             )
         }
     }

@@ -23,17 +23,17 @@ fun WgcNetflixHomeTemplate(modifier: Modifier = Modifier) {
         containerColor = Color.Black,
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color.Black).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("NETFLIX", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color(WgcCoreDsColors.netflixRed))
+                Text("NETFLIX", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color(WgcCoreDsColors.netflixRed))
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
-            item { Text("Top 10 Séries Hoje no Brasil", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp) }
+            item { Text("Top 10 Séries Hoje no Brasil", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp) }
             items(NetflixMockData.sampleTop10) { show ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
-                        Text(show.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp.sp)
-                        Text("${show.matchPercentage} • ${show.maturity} • ${show.genre}", color = Color(0xFF46D369), fontSize = 14.sp.sp)
+                        Text(show.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp)
+                        Text("${show.matchPercentage} • ${show.maturity} • ${show.genre}", color = Color(0xFF46D369), fontSize = 14.sp)
                     }
                 }
             }
@@ -45,7 +45,7 @@ fun WgcNetflixHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcNetflixTrailerTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player & Previews de Séries", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Player & Previews de Séries", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -54,7 +54,7 @@ fun WgcNetflixTrailerTemplate(modifier: Modifier = Modifier) {
 fun WgcNetflixMyListTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Lista & Títulos Salvos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Minha Lista & Títulos Salvos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -63,7 +63,7 @@ fun WgcNetflixMyListTemplate(modifier: Modifier = Modifier) {
 fun WgcNetflixNewsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Novidades & Em Breve", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Novidades & Em Breve", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -72,7 +72,7 @@ fun WgcNetflixNewsTemplate(modifier: Modifier = Modifier) {
 fun WgcNetflixProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Quem está assistindo? • Perfis", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Quem está assistindo? • Perfis", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

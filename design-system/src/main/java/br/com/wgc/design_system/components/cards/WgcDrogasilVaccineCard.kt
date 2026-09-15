@@ -50,7 +50,7 @@ fun WgcDrogasilVaccineCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogasilBorder))
     ) {
         Column(
@@ -82,13 +82,13 @@ fun WgcDrogasilVaccineCard(
                     Column {
                         Text(
                             text = "Serviços Farmacêuticos",
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             color = Color(WgcCoreDsColors.drogasilVaccineGreen),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = vaccineName,
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogasilTextPrimary)
                         )
@@ -97,7 +97,7 @@ fun WgcDrogasilVaccineCard(
 
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilRed)
                 )
@@ -107,7 +107,7 @@ fun WgcDrogasilVaccineCard(
 
             Text(
                 text = "Público: $targetAudience",
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color(WgcCoreDsColors.drogasilTextSecondary)
             )
 
@@ -128,17 +128,16 @@ fun WgcDrogasilVaccineCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = nextAvailableSlot,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.drogasilBlue),
                         fontWeight = FontWeight.SemiBold
                     )
                 }
 
                 WgcClassicButton(
-                    text = "Agendar",
-                    onClick = onScheduleClick,
-                    containerColor = Color(WgcCoreDsColors.drogasilRed),
-                    contentColor = Color(WgcCoreDsColors.drogasilSurface)
+                    textButton = "Agendar",
+                    onClick = onScheduleClick
+                    )
                 )
             }
         }

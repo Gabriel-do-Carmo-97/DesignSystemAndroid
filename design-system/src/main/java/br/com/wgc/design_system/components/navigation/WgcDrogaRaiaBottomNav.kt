@@ -44,8 +44,7 @@ fun WgcDrogaRaiaBottomNav(
 ) {
     NavigationBar(
         modifier = modifier.background(Color(WgcCoreDsColors.drogaRaiaSurface)),
-        containerColor = Color(WgcCoreDsColors.drogaRaiaSurface),
-        tonalElevation = WgcCoreDsElevation.sm4.dp
+        tonalElevation = WgcCoreDsElevation.level3.dp
     ) {
         DrogaRaiaNavTab.entries.forEach { tab ->
             val isSelected = selectedTab == tab
@@ -57,9 +56,7 @@ fun WgcDrogaRaiaBottomNav(
                         BadgedBox(
                             badge = {
                                 Badge(
-                                    containerColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                                    contentColor = Color(WgcCoreDsColors.drogaRaiaSurface)
-                                ) {
+                                    containerColor = Color(WgcCoreDsColors.drogaRaiaRed)) {
                                     Text(text = cartBadgeCount.toString())
                                 }
                             }
@@ -81,7 +78,7 @@ fun WgcDrogaRaiaBottomNav(
                 label = {
                     Text(
                         text = tab.title,
-                        fontSize = 9.sp.sp,
+                        fontSize = 9.sp,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                     )
                 },

@@ -50,7 +50,7 @@ fun WgcInterActionItem(
         }
         Text(
             text = label,
-            fontSize = 14.sp.sp,
+            fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             color = Color.Black
         )
@@ -77,8 +77,8 @@ fun WgcInterCashbackBanner(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
-                Text(storeName, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                Text(description, fontSize = 14.sp.sp, color = Color.Gray)
+                Text(storeName, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Text(description, fontSize = 14.sp, color = Color.Gray)
                 Surface(
                     color = Color(WgcCoreDsColors.interPrimary).copy(alpha = 0.1f),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
@@ -88,7 +88,7 @@ fun WgcInterCashbackBanner(
                         modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
                         color = Color(WgcCoreDsColors.interPrimary),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp.sp
+                        fontSize = 14.sp
                     )
                 }
             }

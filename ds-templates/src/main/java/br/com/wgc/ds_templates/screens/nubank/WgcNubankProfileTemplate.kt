@@ -62,9 +62,9 @@ fun WgcNubankProfileTemplate(
                         ) {
                             Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(WgcCoreDsSize.s60.dp), tint = Color(WgcCoreDsColors.nubankPrimary))
                         }
-                        Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = 14.sp.sp)
-                        Text("Banco 0260 - Nu Pagamentos S.A.", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = 14.sp)
+                        Text("Banco 0260 - Nu Pagamentos S.A.", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }

@@ -51,10 +51,7 @@ fun WgcPdaBottomNav(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
             color = Color(WgcCoreDsColors.pdaBorder)
-        ),
-        containerColor = Color(WgcCoreDsColors.pdaSurface),
-        contentColor = Color(WgcCoreDsColors.pdaGreenDark)
-    ) {
+        )) {
         WgcPdaNavItem.entries.forEachIndexed { index, item ->
             val isSelected = selectedItem == index
             NavigationBarItem(

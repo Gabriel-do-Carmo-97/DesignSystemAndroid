@@ -47,7 +47,7 @@ fun WgcDrogaRaiaPrescriptionCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaNavyLight)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.none0.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogaRaiaBorder))
     ) {
         Column(
@@ -79,13 +79,13 @@ fun WgcDrogaRaiaPrescriptionCard(
                 Column {
                     Text(
                         text = "Enviar Receita Médica Digital",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogaRaiaNavyDark)
                     )
                     Text(
                         text = "PDF, foto de receita ou link SMS com certificado",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                     )
                 }
@@ -98,7 +98,7 @@ fun WgcDrogaRaiaPrescriptionCard(
                 horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
             ) {
                 WgcClassicButton(
-                    text = "Enviar Receita",
+                    textButton = "Enviar Receita",
                     onClick = onUploadPrescription,
                     modifier = Modifier.weight(1f),
                     leadingIcon = {
@@ -108,13 +108,12 @@ fun WgcDrogaRaiaPrescriptionCard(
                             tint = Color(WgcCoreDsColors.drogaRaiaSurface),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
-                    },
-                    containerColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                    contentColor = Color(WgcCoreDsColors.drogaRaiaSurface)
+                    }
+                    )
                 )
 
                 WgcClassicButton(
-                    text = "Farmacêutico",
+                    textButton = "Farmacêutico",
                     onClick = onTalkToPharmacist,
                     modifier = Modifier.weight(1f),
                     leadingIcon = {
@@ -124,9 +123,8 @@ fun WgcDrogaRaiaPrescriptionCard(
                             tint = Color(WgcCoreDsColors.drogaRaiaNavy),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
-                    },
-                    containerColor = Color(WgcCoreDsColors.drogaRaiaSurface),
-                    contentColor = Color(WgcCoreDsColors.drogaRaiaNavy)
+                    }
+                    )
                 )
             }
         }

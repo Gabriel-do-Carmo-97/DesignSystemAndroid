@@ -49,7 +49,7 @@ fun WgcPagueMenosConvenioCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosBlueLight)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.none0.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pagueMenosBorder))
     ) {
         Row(
@@ -79,7 +79,7 @@ fun WgcPagueMenosConvenioCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
                         text = convenioName,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.pagueMenosBlueDark)
                     )
@@ -95,22 +95,21 @@ fun WgcPagueMenosConvenioCard(
                 }
                 Text(
                     text = "Carteirinha: $cardNumberMasked",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                 )
                 Text(
                     text = "Até $discountPercentage% de desconto em medicamentos",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.pagueMenosGreen),
                     fontWeight = FontWeight.Bold
                 )
             }
 
             WgcClassicButton(
-                text = "Alterar",
-                onClick = onManageConvenio,
-                containerColor = Color(WgcCoreDsColors.pagueMenosSurface),
-                contentColor = Color(WgcCoreDsColors.pagueMenosBlue)
+                textButton = "Alterar",
+                onClick = onManageConvenio
+                )
             )
         }
     }

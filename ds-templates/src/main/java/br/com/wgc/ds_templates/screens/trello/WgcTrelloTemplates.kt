@@ -22,7 +22,7 @@ fun WgcTrelloBoardTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.trelloBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Trello • Quadro de Engenharia", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Trello • Quadro de Engenharia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcTrelloBoardTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(card.title, fontWeight = FontWeight.Bold)
-                        Text("${card.list} • Checklist: ${card.checklistCount}", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("${card.list} • Checklist: ${card.checklistCount}", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -43,7 +43,7 @@ fun WgcTrelloBoardTemplate(modifier: Modifier = Modifier) {
 fun WgcTrelloCardDetailTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Detalhes do Cartão & Checklist", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Detalhes do Cartão & Checklist", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcTrelloCardDetailTemplate(modifier: Modifier = Modifier) {
 fun WgcTrelloCalendarTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Visualização em Calendário & Prazos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Visualização em Calendário & Prazos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcTrelloCalendarTemplate(modifier: Modifier = Modifier) {
 fun WgcTrelloPowerupsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Power-Ups & Automações Butler", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Power-Ups & Automações Butler", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcTrelloPowerupsTemplate(modifier: Modifier = Modifier) {
 fun WgcTrelloProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Membro & Quadros Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Membro & Quadros Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

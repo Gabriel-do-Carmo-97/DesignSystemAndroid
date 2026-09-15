@@ -27,9 +27,7 @@ fun WgcPagueMenosClinicTemplate(
     services: List<ClinicService> = PagueMenosMockData.clinicServices
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pagueMenosBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -38,13 +36,13 @@ fun WgcPagueMenosClinicTemplate(
             item {
                 Text(
                     text = "Consultório Clinic Farma",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
                 Text(
                     text = "Acompanhamento de saúde com farmacêuticos especialistas",
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                 )
             }

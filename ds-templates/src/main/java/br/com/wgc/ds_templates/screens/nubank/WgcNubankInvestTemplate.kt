@@ -51,8 +51,8 @@ fun WgcNubankInvestTemplate(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
-                        Text("Total guardado em Caixinhas", fontSize = 14.sp.sp, color = Color.Gray)
-                        Text("R$ 35.651,30", fontSize = 14.sp.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
+                        Text("Total guardado em Caixinhas", fontSize = 14.sp, color = Color.Gray)
+                        Text("R$ 35.651,30", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
                         Button(
                             onClick = onCreateCaixinhaClick,
                             modifier = Modifier.fillMaxWidth(),
@@ -68,7 +68,7 @@ fun WgcNubankInvestTemplate(
             }
 
             item {
-                Text("Minhas Caixinhas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text("Minhas Caixinhas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             }
 
             items(NubankMockData.sampleCaixinhas) { caixinha ->

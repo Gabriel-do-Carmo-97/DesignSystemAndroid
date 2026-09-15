@@ -47,7 +47,7 @@ fun WgcDrogasilLoyaltyCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilRed)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -63,24 +63,24 @@ fun WgcDrogasilLoyaltyCard(
                     Text(
                         text = "Cartão de Vantagens",
                         color = Color(WgcCoreDsColors.drogasilGold),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = userName,
                         color = Color(WgcCoreDsColors.drogasilSurface),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "CPF: $cpfMasked",
                         color = Color(WgcCoreDsColors.drogasilSurface).copy(alpha = 0.85f),
-                        fontSize = 14.sp.sp
+                        fontSize = 14.sp
                     )
                 }
 
                 WgcClassicButton(
-                    text = "Código Caixa",
+                    textButton = "Código Caixa",
                     onClick = onShowBarcodeClick,
                     leadingIcon = {
                         Icon(
@@ -89,9 +89,8 @@ fun WgcDrogasilLoyaltyCard(
                             tint = Color(WgcCoreDsColors.drogasilRed),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
-                    },
-                    containerColor = Color(WgcCoreDsColors.drogasilSurface),
-                    contentColor = Color(WgcCoreDsColors.drogasilRed)
+                    }
+                    )
                 )
             }
 
@@ -111,7 +110,7 @@ fun WgcDrogasilLoyaltyCard(
                 Text(
                     text = "$pointsBalance Pontos acumulados",
                     color = Color(WgcCoreDsColors.drogasilSurface),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }

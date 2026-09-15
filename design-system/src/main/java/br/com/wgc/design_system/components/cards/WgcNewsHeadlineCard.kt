@@ -32,26 +32,26 @@ fun WgcNewsHeadlineCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Text(
                 text = editoria.uppercase(),
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color(WgcCoreDsColors.g1Red),
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
             Text(
                 text = headline,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(
                 text = publishedTime,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color.Gray
             )
         }

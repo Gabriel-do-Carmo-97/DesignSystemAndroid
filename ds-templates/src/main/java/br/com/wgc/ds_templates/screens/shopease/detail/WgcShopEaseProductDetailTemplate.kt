@@ -95,9 +95,7 @@ fun WgcShopEaseProductDetailTemplate(
                             .weight(1f)
                             .height(WgcCoreDsSize.s48.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.shopEasePrimaryLight),
-                            contentColor = Color(WgcCoreDsColors.shopEasePrimaryDark)
-                        ),
+                            containerColor = Color(WgcCoreDsColors.shopEasePrimaryLight)),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                     ) {
                         Text(

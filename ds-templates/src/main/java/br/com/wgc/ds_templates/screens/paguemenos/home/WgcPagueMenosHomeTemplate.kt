@@ -40,9 +40,7 @@ fun WgcPagueMenosHomeTemplate(
     onOfferClick: (PagueMenosOffer) -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pagueMenosBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -63,7 +61,7 @@ fun WgcPagueMenosHomeTemplate(
             item {
                 Text(
                     text = "Destaques Sempre Bem",
-                    fontSize = 16.sp.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
@@ -88,13 +86,13 @@ private fun PagueMenosBanner() {
             Text(
                 text = "Pague Menos • Sempre Bem",
                 color = Color(WgcCoreDsColors.pagueMenosSurface),
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = "Economia de verdade em medicamentos e cosméticos",
                 color = Color(WgcCoreDsColors.pagueMenosSurface).copy(alpha = 0.85f),
-                fontSize = 10.sp.sp
+                fontSize = 10.sp
             )
         }
     }
@@ -106,7 +104,7 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -115,34 +113,33 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "${offer.discountPercent}% OFF",
-                    fontSize = 9.sp.sp,
+                    fontSize = 9.sp,
                     color = Color(WgcCoreDsColors.pagueMenosGreen),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
                 Text(
                     text = offer.brand,
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                 )
                 Text(
                     text = "R$ " + String.format("%.2f", offer.price),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosBlue)
                 )
             }
 
             WgcClassicButton(
-                text = "Comprar",
-                onClick = onBuy,
-                containerColor = Color(WgcCoreDsColors.pagueMenosGreen),
-                contentColor = Color(WgcCoreDsColors.pagueMenosSurface)
+                textButton = "Comprar",
+                onClick = onBuy
+                )
             )
         }
     }

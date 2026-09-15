@@ -78,7 +78,6 @@ fun WgcVivaRealPropertyDetailTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.vivaRealBackground),
         bottomBar = {
             if (bottomBarSlot != null) {
                 bottomBarSlot()

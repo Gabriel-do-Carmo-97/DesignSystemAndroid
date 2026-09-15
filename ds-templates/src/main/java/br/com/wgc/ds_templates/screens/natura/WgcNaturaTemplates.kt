@@ -22,7 +22,7 @@ fun WgcNaturaHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.naturaOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Natura • Bem Estar Bem", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Natura • Bem Estar Bem", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcNaturaHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(prod.name, fontWeight = FontWeight.Bold)
-                        Text("${prod.line} ${if (prod.refillAvailable) "• ♻️ Refil Disponível" else ""}", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("${prod.line} ${if (prod.refillAvailable) "• ♻️ Refil Disponível" else ""}", color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcNaturaHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcNaturaConsultantTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Espaço da Consultora Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Espaço da Consultora Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcNaturaConsultantTemplate(modifier: Modifier = Modifier) {
 fun WgcNaturaRefillsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Refis & Sustentabilidade Amazônia", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Refis & Sustentabilidade Amazônia", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcNaturaRefillsTemplate(modifier: Modifier = Modifier) {
 fun WgcNaturaBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Compras Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Sacola de Compras Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcNaturaBagTemplate(modifier: Modifier = Modifier) {
 fun WgcNaturaProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil Natura & Pontos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu Perfil Natura & Pontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

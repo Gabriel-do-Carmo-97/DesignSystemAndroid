@@ -22,7 +22,7 @@ fun WgcDominosBuildTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.dominosBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Domino's Pizza • Monte sua Pizza", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Domino's Pizza • Monte sua Pizza", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,8 +30,8 @@ fun WgcDominosBuildTemplate(modifier: Modifier = Modifier) {
             items(DominosMockData.samplePizzas) { pizza ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(pizza.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text(pizza.ingredients, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(pizza.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(pizza.ingredients, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(pizza.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.dominosRed))
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcDominosBuildTemplate(modifier: Modifier = Modifier) {
 fun WgcDominosTrackerTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Pizza Tracker • Acompanhe o Forno e a Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Pizza Tracker • Acompanhe o Forno e a Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcDominosTrackerTemplate(modifier: Modifier = Modifier) {
 fun WgcDominosOffersTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ofertas 2 por 1 • Terça em Dobro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Ofertas 2 por 1 • Terça em Dobro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcDominosOffersTemplate(modifier: Modifier = Modifier) {
 fun WgcDominosCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Pedidos Domino's", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho de Pedidos Domino's", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcDominosCartTemplate(modifier: Modifier = Modifier) {
 fun WgcDominosProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Domino's & Endereços de Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Domino's & Endereços de Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

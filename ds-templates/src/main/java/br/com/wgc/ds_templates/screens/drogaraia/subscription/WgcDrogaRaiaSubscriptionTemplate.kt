@@ -55,7 +55,6 @@ fun WgcDrogaRaiaSubscriptionTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogaRaiaBackground),
         bottomBar = {
             WgcDrogaRaiaBottomNav(
                 selectedTab = activeTab,
@@ -74,13 +73,13 @@ fun WgcDrogaRaiaSubscriptionTemplate(
             item {
                 Text(
                     text = "Sua Assinatura & Tratamento Contínuo",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
                 )
                 Text(
                     text = "Receba seus medicamentos na data certa com 10% de desconto e frete grátis",
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }
@@ -100,7 +99,7 @@ fun WgcDrogaRaiaSubscriptionTemplate(
 
             item {
                 WgcClassicButton(
-                    text = "Adicionar Novo Medicamento à Assinatura",
+                    textButton = "Adicionar Novo Medicamento à Assinatura",
                     onClick = onAddNewSubscription,
                     modifier = Modifier.fillMaxWidth(),
                     leadingIcon = {
@@ -110,9 +109,8 @@ fun WgcDrogaRaiaSubscriptionTemplate(
                             tint = Color(WgcCoreDsColors.drogaRaiaSurface),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
-                    },
-                    containerColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                    contentColor = Color(WgcCoreDsColors.drogaRaiaSurface)
+                    }
+                    )
                 )
             }
         }
@@ -125,7 +123,7 @@ private fun SubscriptionBenefitBanner() {
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaGreenLight)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.none0.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp)
     ) {
         Row(
             modifier = Modifier
@@ -143,13 +141,13 @@ private fun SubscriptionBenefitBanner() {
             Column {
                 Text(
                     text = "Vantagens da Assinatura Raia",
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaGreen)
                 )
                 Text(
                     text = "Cancele ou pause quando quiser sem nenhuma taxa adicional.",
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                 )
             }

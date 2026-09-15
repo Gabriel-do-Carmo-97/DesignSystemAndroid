@@ -38,7 +38,7 @@ fun WgcProductivityTaskCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color.LightGray)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
@@ -52,7 +52,7 @@ fun WgcProductivityTaskCard(
                 Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
                 Text(
                     text = taskTitle,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -62,13 +62,13 @@ fun WgcProductivityTaskCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = tag,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.DarkGray,
                     modifier = Modifier.weight(1f)
                 )
                 Text(
                     text = "Vence em: $dueDate",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Red
                 )
             }

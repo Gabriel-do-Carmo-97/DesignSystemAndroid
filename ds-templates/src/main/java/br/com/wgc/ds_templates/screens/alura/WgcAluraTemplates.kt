@@ -22,7 +22,7 @@ fun WgcAluraHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.aluraBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Alura • Cursos de Tecnologia", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Alura • Cursos de Tecnologia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,8 +30,8 @@ fun WgcAluraHomeTemplate(modifier: Modifier = Modifier) {
             items(AluraMockData.sampleCourses) { course ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
-                        Text(course.title, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("${course.track} • ${course.durationHours}h • Progresso: ${course.progressPercent}%", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(course.title, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("${course.track} • ${course.durationHours}h • Progresso: ${course.progressPercent}%", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -43,7 +43,7 @@ fun WgcAluraHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcAluraPlayerTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player de Videoaula & Transcrição", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Player de Videoaula & Transcrição", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcAluraPlayerTemplate(modifier: Modifier = Modifier) {
 fun WgcAluraCareerTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Carreira Tech & Formações", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Minha Carreira Tech & Formações", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcAluraCareerTemplate(modifier: Modifier = Modifier) {
 fun WgcAluraForumTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Fórum Alura & Dúvidas dos Alunos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Fórum Alura & Dúvidas dos Alunos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcAluraForumTemplate(modifier: Modifier = Modifier) {
 fun WgcAluraProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Alura & Certificados", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Alura & Certificados", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

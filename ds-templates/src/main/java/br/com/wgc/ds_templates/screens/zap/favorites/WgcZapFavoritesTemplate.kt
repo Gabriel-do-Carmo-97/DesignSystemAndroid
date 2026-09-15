@@ -72,7 +72,6 @@ fun WgcZapFavoritesTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.zapBackground),
         topBar = {
             Column(
                 modifier = Modifier

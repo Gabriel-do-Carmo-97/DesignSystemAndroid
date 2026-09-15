@@ -85,7 +85,6 @@ fun WgcPdaGourmetCartTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pdaBackground),
         bottomBar = {
             footerSlot?.invoke() ?: WgcPdaBottomNav(
                 selectedItem = selectedNavIndex,

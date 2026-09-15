@@ -22,7 +22,7 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.boticarioGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("O Boticário • Perfumaria & Cuidados", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("O Boticário • Perfumaria & Cuidados", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(prod.name, fontWeight = FontWeight.Bold)
-                        Text(prod.line, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(prod.line, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.boticarioGreen))
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcBoticarioClubeTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube Viva O Boticário • Resgate de Prêmios", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Clube Viva O Boticário • Resgate de Prêmios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcBoticarioClubeTemplate(modifier: Modifier = Modifier) {
 fun WgcBoticarioDiagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Diagnóstico Facial & Dicas de Skincare", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Diagnóstico Facial & Dicas de Skincare", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcBoticarioDiagTemplate(modifier: Modifier = Modifier) {
 fun WgcBoticarioBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Beleza • Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Sacola de Beleza • Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcBoticarioBagTemplate(modifier: Modifier = Modifier) {
 fun WgcBoticarioProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil Viva O Boticário", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu Perfil Viva O Boticário", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

@@ -41,12 +41,12 @@ fun WgcInterCardTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.interPrimary))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Inter Black Mastercard", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("Inter Black Mastercard", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                    Text("•••• •••• •••• 8832", color = Color.White, fontSize = 14.sp.sp, fontWeight = FontWeight.SemiBold)
+                    Text("•••• •••• •••• 8832", color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
                     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("Validade: 12/31", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
-                        Text("CVV: •••", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
+                        Text("Validade: 12/31", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp)
+                        Text("CVV: •••", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp)
                     }
                 }
             }

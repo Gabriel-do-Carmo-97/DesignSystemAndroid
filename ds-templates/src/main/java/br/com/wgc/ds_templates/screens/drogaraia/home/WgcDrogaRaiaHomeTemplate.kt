@@ -61,7 +61,6 @@ fun WgcDrogaRaiaHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogaRaiaBackground),
         bottomBar = {
             WgcDrogaRaiaBottomNav(
                 selectedTab = activeTab,
@@ -101,7 +100,7 @@ fun WgcDrogaRaiaHomeTemplate(
             item {
                 Text(
                     text = "Mais Vendidos e Cuidados Pessoais",
-                    fontSize = 16.sp.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogaRaiaTextPrimary),
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
@@ -154,7 +153,7 @@ private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
                     Text(
                         text = "Entregar em: ${userProfile.address}",
                         color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                        fontSize = 10.sp.sp,
+                        fontSize = 10.sp,
                         fontWeight = FontWeight.Medium,
                         maxLines = 1
                     )
@@ -170,7 +169,7 @@ private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
                 placeholder = {
                     Text(
                         text = "Buscar medicamentos, cosméticos, marcas...",
-                        fontSize = 12.sp.sp
+                        fontSize = 12.sp
                     )
                 },
                 leadingIcon = {
@@ -203,7 +202,7 @@ private fun RaiaFastDeliveryBanner() {
             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaNavy)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier
@@ -222,13 +221,13 @@ private fun RaiaFastDeliveryBanner() {
                 Text(
                     text = "Entrega Rápida em até 1 hora",
                     color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Ou retire grátis em qualquer farmácia Raia em 15 minutos",
                     color = Color(WgcCoreDsColors.drogaRaiaSurface).copy(alpha = 0.85f),
-                    fontSize = 10.sp.sp
+                    fontSize = 10.sp
                 )
             }
         }

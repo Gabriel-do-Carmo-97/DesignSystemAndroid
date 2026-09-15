@@ -18,7 +18,6 @@ fun WgcC6CarbonTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background),
         topBar = {
             TopAppBar(
                 title = { Text("Cartão C6 Carbon Black", fontWeight = FontWeight.Bold) },

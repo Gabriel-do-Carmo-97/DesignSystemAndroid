@@ -39,7 +39,7 @@ fun WgcGovDigitalDocumentCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.govBlue)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Row(
@@ -57,13 +57,13 @@ fun WgcGovDigitalDocumentCard(
                     Text(
                         text = documentTitle,
                         color = Color.White,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = citizenName,
                         color = Color.White.copy(alpha = 0.85f),
-                        fontSize = 14.sp.sp
+                        fontSize = 14.sp
                     )
                 }
 
@@ -78,7 +78,7 @@ fun WgcGovDigitalDocumentCard(
                     Text(
                         text = securityLevel,
                         color = Color(WgcCoreDsColors.govYellow),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }

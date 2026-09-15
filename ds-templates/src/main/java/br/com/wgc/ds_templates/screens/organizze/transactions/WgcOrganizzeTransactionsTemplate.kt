@@ -87,11 +87,9 @@ fun WgcOrganizzeTransactionsTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.organizzeBackground),
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onNewTransactionClick,
-                containerColor = Color(WgcCoreDsColors.organizzePrimary),
                 contentColor = Color.White,
                 shape = CircleShape
             ) {

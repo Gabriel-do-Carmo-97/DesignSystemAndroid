@@ -67,7 +67,6 @@ fun WgcZapFipeZapCalculatorTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.zapBackground),
         topBar = {
             Row(
                 modifier = Modifier

@@ -78,7 +78,6 @@ fun WgcVivaRealProfileTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.vivaRealBackground),
         topBar = {
             if (topBarSlot != null) {
                 topBarSlot()

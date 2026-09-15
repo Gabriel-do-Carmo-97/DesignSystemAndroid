@@ -44,7 +44,7 @@ fun WgcTravelStayCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Box(
@@ -61,20 +61,20 @@ fun WgcTravelStayCard(
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.smartFitYellow),
+                    tint = Color(WgcCoreDsColors.uolYellow),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "$rating • $location",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray
                 )
             }
 
             Text(
                 text = title,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -86,18 +86,16 @@ fun WgcTravelStayCard(
             ) {
                 Text(
                     text = "R$ " + String.format("%.2f", nightPrice) + " /noite",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.airbnbCoral),
                     modifier = Modifier.weight(1f)
                 )
 
                 WgcClassicButton(
-                    text = "Reservar",
-                    onClick = onBookClick,
-                    containerColor = Color(WgcCoreDsColors.airbnbCoral),
-                    contentColor = Color.White
-                )
+                    textButton = "Reservar",
+                    onClick = onBookClick
+                    )
             }
         }
     }

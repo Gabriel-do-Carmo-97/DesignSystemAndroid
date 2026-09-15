@@ -118,9 +118,7 @@ fun WgcShopperSplashTemplate(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s56.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.White,
-                        contentColor = Color(WgcCoreDsColors.shopperPrimary)
-                    ),
+                        containerColor = Color.White),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                 ) {
                     Text(

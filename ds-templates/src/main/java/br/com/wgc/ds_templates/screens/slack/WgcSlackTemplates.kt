@@ -22,7 +22,7 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.slackAubergine)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("WGC Engineering • Slack", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("WGC Engineering • Slack", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(ch.name, fontWeight = FontWeight.Bold)
-                        Text(ch.topic, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(ch.topic, color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -43,7 +43,7 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Threads & Respostas de Mensagens", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Threads & Respostas de Mensagens", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Diretas e Menções (@)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Mensagens Diretas e Menções (@)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Busca em Mensagens & Arquivos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Busca em Mensagens & Arquivos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcSlackProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Status de Presença • 💬 Focado", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu Status de Presença • 💬 Focado", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

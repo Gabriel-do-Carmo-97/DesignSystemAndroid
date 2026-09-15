@@ -59,9 +59,7 @@ fun WgcLazaIntroScreenTemplate(
     onSkipClick: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.lazaPrimary)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()

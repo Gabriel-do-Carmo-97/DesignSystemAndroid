@@ -22,7 +22,7 @@ fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.ctpsBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Carteira de Trabalho Digital • CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Carteira de Trabalho Digital • CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -32,7 +32,7 @@ fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(c.company, fontWeight = FontWeight.Bold)
                         Text(c.role, color = Color.DarkGray)
-                        Text("Admissão: ${c.admissionDate} • ${if (c.isActive) "🟢 Contrato Ativo" else "Encerrado"}", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("Admissão: ${c.admissionDate} • ${if (c.isActive) "🟢 Contrato Ativo" else "Encerrado"}", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -44,7 +44,7 @@ fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
 fun WgcCtpsSalaryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Dados Salariais & Abono PIS", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Dados Salariais & Abono PIS", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcCtpsSalaryTemplate(modifier: Modifier = Modifier) {
 fun WgcCtpsBenefitsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Seguro-Desemprego & Benefícios do Trabalhador", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Seguro-Desemprego & Benefícios do Trabalhador", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcCtpsBenefitsTemplate(modifier: Modifier = Modifier) {
 fun WgcCtpsDeclarationsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Declarações de Vínculo & Anotações de Férias", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Declarações de Vínculo & Anotações de Férias", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcCtpsDeclarationsTemplate(modifier: Modifier = Modifier) {
 fun WgcCtpsProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Trabalhador CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Trabalhador CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

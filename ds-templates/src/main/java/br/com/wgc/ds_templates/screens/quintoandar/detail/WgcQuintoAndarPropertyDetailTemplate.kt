@@ -81,7 +81,6 @@ fun WgcQuintoAndarPropertyDetailTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.quintoAndarBackground),
         bottomBar = {
             if (bottomBarSlot != null) {
                 bottomBarSlot()
@@ -552,9 +551,7 @@ private fun QuintoAndarDetailBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow),
-                    contentColor = Color(WgcCoreDsColors.quintoAndarDark)
-                )
+                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow))
             ) {
                 Text(
                     text = "Agendar Visita",

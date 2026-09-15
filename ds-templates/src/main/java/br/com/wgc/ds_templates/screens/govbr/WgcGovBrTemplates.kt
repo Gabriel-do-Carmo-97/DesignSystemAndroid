@@ -22,7 +22,7 @@ fun WgcGovBrServicesTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.govbrBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("gov.br • Serviços ao Cidadão", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("gov.br • Serviços ao Cidadão", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
                 Text("Nível da Conta: 🥇 Ouro", color = Color(WgcCoreDsColors.govbrGold), fontWeight = FontWeight.Bold)
             }
         }
@@ -32,7 +32,7 @@ fun WgcGovBrServicesTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(svc.title, fontWeight = FontWeight.Bold)
-                        Text(svc.agency, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(svc.agency, color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -44,7 +44,7 @@ fun WgcGovBrServicesTemplate(modifier: Modifier = Modifier) {
 fun WgcGovBrCpfTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu CPF Digital & Situação Cadastral", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu CPF Digital & Situação Cadastral", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcGovBrCpfTemplate(modifier: Modifier = Modifier) {
 fun WgcGovBrSignTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Assinatura Eletrônica Gov.br de PDFs", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Assinatura Eletrônica Gov.br de PDFs", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcGovBrSignTemplate(modifier: Modifier = Modifier) {
 fun WgcGovBrNotificationsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Notificações Oficiais da União", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Notificações Oficiais da União", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcGovBrNotificationsTemplate(modifier: Modifier = Modifier) {
 fun WgcGovBrProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Cidadão • Nível Ouro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Cidadão • Nível Ouro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

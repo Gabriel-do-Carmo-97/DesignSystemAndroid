@@ -47,7 +47,7 @@ fun WgcInterSuperAppCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.interSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.interBorder))
     ) {
         Row(
@@ -76,28 +76,27 @@ fun WgcInterSuperAppCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "Inter Shop • $partnerStore",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.interOrange),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offerTitle,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.interTextPrimary)
                 )
                 Text(
                     text = "$cashbackPercentage% de Cashback na conta",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.interTextSecondary)
                 )
             }
 
             WgcClassicButton(
-                text = "Ativar",
-                onClick = onShopClick,
-                containerColor = Color(WgcCoreDsColors.interOrange),
-                contentColor = Color(WgcCoreDsColors.interSurface)
+                textButton = "Ativar",
+                onClick = onShopClick
+                )
             )
         }
     }

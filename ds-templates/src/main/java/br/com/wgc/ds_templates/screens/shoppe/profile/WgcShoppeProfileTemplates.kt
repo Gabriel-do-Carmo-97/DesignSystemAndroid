@@ -61,9 +61,7 @@ fun WgcShoppeProfileScreenTemplate(
     onShippingAddressClick: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.shoppeBackground)
-    ) { innerPadding ->
+        modifier = modifier.fillMaxSize()) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()

@@ -33,9 +33,7 @@ fun WgcDrogasilCartTemplate(
     onCheckout: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogasilBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -44,7 +42,7 @@ fun WgcDrogasilCartTemplate(
             item {
                 Text(
                     text = "Sacola Drogasil (1 item)",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
@@ -55,18 +53,18 @@ fun WgcDrogasilCartTemplate(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
-                    elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(
                             text = "Protetor Solar Facial FPS 60",
-                            fontSize = 12.sp.sp,
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogasilTextPrimary)
                         )
                         Text(
                             text = "1 unidade • R$ 79,90",
-                            fontSize = 10.sp.sp,
+                            fontSize = 10.sp,
                             color = Color(WgcCoreDsColors.drogasilTextSecondary)
                         )
                     }
@@ -75,11 +73,10 @@ fun WgcDrogasilCartTemplate(
 
             item {
                 WgcClassicButton(
-                    text = "Finalizar Pedido • R$ 79,90",
+                    textButton = "Finalizar Pedido • R$ 79,90",
                     onClick = onCheckout,
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = Color(WgcCoreDsColors.drogasilRed),
-                    contentColor = Color(WgcCoreDsColors.drogasilSurface)
+                    modifier = Modifier.fillMaxWidth()
+                    )
                 )
             }
         }

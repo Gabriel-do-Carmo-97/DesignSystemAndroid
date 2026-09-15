@@ -22,7 +22,7 @@ fun WgcWhatsAppChatsTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.whatsappGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("WhatsApp", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("WhatsApp", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,10 +31,10 @@ fun WgcWhatsAppChatsTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                         Column {
-                            Text(chat.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                            Text(chat.lastMessage, color = Color.Gray, fontSize = 14.sp.sp)
+                            Text(chat.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                            Text(chat.lastMessage, color = Color.Gray, fontSize = 14.sp)
                         }
-                        Text(chat.time, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(chat.time, color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -46,7 +46,7 @@ fun WgcWhatsAppChatsTemplate(modifier: Modifier = Modifier) {
 fun WgcWhatsAppStatusTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Atualizações de Status", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Atualizações de Status", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -55,7 +55,7 @@ fun WgcWhatsAppStatusTemplate(modifier: Modifier = Modifier) {
 fun WgcWhatsAppCallsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chamadas de Voz & Vídeo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Chamadas de Voz & Vídeo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -64,7 +64,7 @@ fun WgcWhatsAppCallsTemplate(modifier: Modifier = Modifier) {
 fun WgcWhatsAppCommunitiesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Comunidades & Avisos Oficiais", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Comunidades & Avisos Oficiais", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -73,7 +73,7 @@ fun WgcWhatsAppCommunitiesTemplate(modifier: Modifier = Modifier) {
 fun WgcWhatsAppSettingsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Configurações & Privacidade", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Configurações & Privacidade", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

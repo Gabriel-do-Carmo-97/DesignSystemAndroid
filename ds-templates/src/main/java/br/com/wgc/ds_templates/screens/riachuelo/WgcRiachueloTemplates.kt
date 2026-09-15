@@ -22,7 +22,7 @@ fun WgcRiachueloHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.riachueloDark)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Riachuelo • Moda e Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Riachuelo • Moda e Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcRiachueloHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
-                        Text(item.department, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.department, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcRiachueloHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcRiachueloMidwayTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Midway Financeira • Cartão RCHLO", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Midway Financeira • Cartão RCHLO", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcRiachueloMidwayTemplate(modifier: Modifier = Modifier) {
 fun WgcRiachueloDealsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ofertas da Semana & Liquidação", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Ofertas da Semana & Liquidação", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcRiachueloDealsTemplate(modifier: Modifier = Modifier) {
 fun WgcRiachueloBagTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Compras Riachuelo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Sacola de Compras Riachuelo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcRiachueloBagTemplate(modifier: Modifier = Modifier) {
 fun WgcRiachueloProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Cliente Riachuelo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Cliente Riachuelo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

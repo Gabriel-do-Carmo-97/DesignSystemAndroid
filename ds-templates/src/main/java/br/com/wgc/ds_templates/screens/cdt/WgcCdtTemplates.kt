@@ -20,7 +20,7 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.cdtGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Carteira Digital de Trânsito • CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Carteira Digital de Trânsito • CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -28,9 +28,9 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                     Text("CNH DIGITAL COM QR CODE", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.cdtGreen))
-                    Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Text("Categoria: AB • Validade: 14/09/2034", color = Color.DarkGray)
-                    Text("Documento Oficial Válido em Todo Território Nacional", color = Color.Gray, fontSize = 14.sp.sp)
+                    Text("Documento Oficial Válido em Todo Território Nacional", color = Color.Gray, fontSize = 14.sp)
                 }
             }
         }
@@ -41,7 +41,7 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
 fun WgcCdtCrlvTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("CRLV Digital (Documento do Veículo)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("CRLV Digital (Documento do Veículo)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -50,7 +50,7 @@ fun WgcCdtCrlvTemplate(modifier: Modifier = Modifier) {
 fun WgcCdtInfractionsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Infrações & 40% de Desconto no SNE", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Infrações & 40% de Desconto no SNE", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -59,7 +59,7 @@ fun WgcCdtInfractionsTemplate(modifier: Modifier = Modifier) {
 fun WgcCdtPointsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Pontuação • 0 Pontos (Sem Multas)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Histórico de Pontuação • 0 Pontos (Sem Multas)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -68,7 +68,7 @@ fun WgcCdtPointsTemplate(modifier: Modifier = Modifier) {
 fun WgcCdtProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Condutor CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil do Condutor CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

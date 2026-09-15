@@ -22,7 +22,7 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.loggiBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Loggi • Rastreamento Inteligente", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Loggi • Rastreamento Inteligente", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -32,7 +32,7 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(pkg.trackingCode, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.loggiBlue))
                         Text(pkg.status, fontWeight = FontWeight.SemiBold)
-                        Text("${pkg.destination} • Previsão: ${pkg.eta}", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("${pkg.destination} • Previsão: ${pkg.eta}", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -44,7 +44,7 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
 fun WgcLoggiSendTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Solicitar Envio de Pacote", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Solicitar Envio de Pacote", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcLoggiSendTemplate(modifier: Modifier = Modifier) {
 fun WgcLoggiDeliveriesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Entregas em Andamento", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Minhas Entregas em Andamento", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcLoggiDeliveriesTemplate(modifier: Modifier = Modifier) {
 fun WgcLoggiHistoryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico Completo de Envios", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Histórico Completo de Envios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcLoggiHistoryTemplate(modifier: Modifier = Modifier) {
 fun WgcLoggiProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil de Remetente / Empresa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil de Remetente / Empresa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

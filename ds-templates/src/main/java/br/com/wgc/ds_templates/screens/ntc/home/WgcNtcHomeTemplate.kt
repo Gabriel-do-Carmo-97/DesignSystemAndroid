@@ -80,7 +80,6 @@ fun WgcNtcHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.ntcBlack),
         bottomBar = {
             if (slotBottomNav != null) {
                 slotBottomNav()

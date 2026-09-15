@@ -40,7 +40,7 @@ fun WgcMessagingConversationCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -57,7 +57,7 @@ fun WgcMessagingConversationCard(
                     text = contactName.take(1),
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp.sp
+                    fontSize = 14.sp
                 )
             }
 
@@ -66,12 +66,12 @@ fun WgcMessagingConversationCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = contactName,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = lastMessage,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray,
                     maxLines = 1
                 )
@@ -80,7 +80,7 @@ fun WgcMessagingConversationCard(
             Column(horizontalAlignment = Alignment.End) {
                 Text(
                     text = timestamp,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray
                 )
                 if (unreadCount > 0) {
@@ -93,7 +93,7 @@ fun WgcMessagingConversationCard(
                         Text(
                             text = unreadCount.toString(),
                             color = Color.White,
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }

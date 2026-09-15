@@ -50,8 +50,8 @@ fun WgcInterInvestTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                            Text("${item.type} • Mínimo R$ ${"%,.2f".format(item.minimumAmount)}", color = Color.Gray, fontSize = 14.sp.sp)
+                            Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                            Text("${item.type} • Mínimo R$ ${"%,.2f".format(item.minimumAmount)}", color = Color.Gray, fontSize = 14.sp)
                         }
                         Text(item.profitability, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.interPrimary))
                     }

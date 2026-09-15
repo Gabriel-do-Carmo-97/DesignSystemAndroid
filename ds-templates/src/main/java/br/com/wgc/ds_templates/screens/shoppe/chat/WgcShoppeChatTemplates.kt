@@ -75,7 +75,6 @@ fun WgcShoppeChatScreenTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.shoppeBackground),
         topBar = {
             TopAppBar(
                 title = {

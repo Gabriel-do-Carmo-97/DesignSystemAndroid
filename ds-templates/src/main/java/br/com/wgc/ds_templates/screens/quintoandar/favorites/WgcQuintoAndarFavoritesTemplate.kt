@@ -80,7 +80,6 @@ fun WgcQuintoAndarFavoritesTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.quintoAndarBackground),
         topBar = {
             if (topBarSlot != null) {
                 topBarSlot()
@@ -242,9 +241,7 @@ private fun FavoritesEmptyState(
                 onClick = onExploreClick,
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow),
-                    contentColor = Color(WgcCoreDsColors.quintoAndarDark)
-                )
+                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow))
             ) {
                 Text(
                     text = "Explorar Imóveis",

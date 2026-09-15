@@ -42,7 +42,7 @@ fun WgcC6CarbonCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -65,7 +65,7 @@ fun WgcC6CarbonCard(
                     Text(
                         text = "C6 Carbon Mastercard Black",
                         color = Color(WgcCoreDsColors.c6TextPrimary),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -73,7 +73,7 @@ fun WgcC6CarbonCard(
                 Text(
                     text = "•••• $cardLastDigits",
                     color = Color(WgcCoreDsColors.c6TextSecondary),
-                    fontSize = 14.sp.sp
+                    fontSize = 14.sp
                 )
             }
 
@@ -87,12 +87,12 @@ fun WgcC6CarbonCard(
                 Column {
                     Text(
                         text = "Titular",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.c6TextSecondary)
                     )
                     Text(
                         text = holderName.uppercase(),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.c6TextPrimary)
                     )
@@ -108,7 +108,7 @@ fun WgcC6CarbonCard(
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "$atomosPoints Átomos",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.c6Yellow)
                     )

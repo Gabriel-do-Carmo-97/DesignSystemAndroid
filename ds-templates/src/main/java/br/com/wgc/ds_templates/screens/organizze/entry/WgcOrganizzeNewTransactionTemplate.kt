@@ -90,7 +90,6 @@ fun WgcOrganizzeNewTransactionTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.organizzeBackground),
         bottomBar = {
             Box(
                 modifier = Modifier

@@ -75,7 +75,7 @@ fun WgcDrogaRaiaProductCard(
             .clickable { onCardClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogaRaiaBorder))
     ) {
         Column(
@@ -103,7 +103,7 @@ fun WgcDrogaRaiaProductCard(
                             Text(
                                 text = "VENDA SOB PRESCRIÇÃO MÉDICA",
                                 color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -121,7 +121,7 @@ fun WgcDrogaRaiaProductCard(
                             Text(
                                 text = "TARJA PRETA - RETENÇÃO DE RECEITA",
                                 color = Color(WgcCoreDsColors.drogaRaiaSurface),
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -139,7 +139,7 @@ fun WgcDrogaRaiaProductCard(
                             Text(
                                 text = "MEDICAMENTO GENÉRICO (LEI 9.787/99)",
                                 color = Color(WgcCoreDsColors.drogaRaiaNavyDark),
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -157,7 +157,7 @@ fun WgcDrogaRaiaProductCard(
                             Text(
                                 text = "PRODUTO DE SAÚDE & BEM-ESTAR",
                                 color = Color(WgcCoreDsColors.drogaRaiaGreen),
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -204,20 +204,20 @@ fun WgcDrogaRaiaProductCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = laboratory,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaTextSecondary),
                         fontWeight = FontWeight.Medium
                     )
                     Text(
                         text = title,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogaRaiaTextPrimary),
                         maxLines = 2
                     )
                     Text(
                         text = presentation,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
                     )
                 }
@@ -243,7 +243,7 @@ fun WgcDrogaRaiaProductCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Apresente a receita no momento da entrega ou retirada",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.drogaRaiaNavyDark),
                         fontWeight = FontWeight.Medium
                     )
@@ -262,14 +262,14 @@ fun WgcDrogaRaiaProductCard(
                     if (originalPrice != null) {
                         Text(
                             text = "De R$ " + String.format("%.2f", originalPrice),
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             color = Color(WgcCoreDsColors.drogaRaiaTextSecondary),
                             textDecoration = TextDecoration.LineThrough
                         )
                     }
                     Text(
                         text = "R$ " + String.format("%.2f", price),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.drogaRaiaNavy)
                     )
@@ -278,14 +278,14 @@ fun WgcDrogaRaiaProductCard(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
                                 text = "R$ " + String.format("%.2f", raiaClientPrice),
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color(WgcCoreDsColors.drogaRaiaRed)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = "no Programa Raia",
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 color = Color(WgcCoreDsColors.drogaRaiaRed),
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -303,7 +303,7 @@ fun WgcDrogaRaiaProductCard(
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
                             Text(
                                 text = "Disponível na Assinatura (10% OFF)",
-                                fontSize = 14.sp.sp,
+                                fontSize = 14.sp,
                                 color = Color(WgcCoreDsColors.drogaRaiaGreen),
                                 fontWeight = FontWeight.Bold
                             )
@@ -333,7 +333,7 @@ fun WgcDrogaRaiaProductCard(
                         }
                         Text(
                             text = quantityInCart.toString(),
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.drogaRaiaNavy),
                             modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
@@ -352,10 +352,9 @@ fun WgcDrogaRaiaProductCard(
                     }
                 } else {
                     WgcClassicButton(
-                        text = "Comprar",
-                        onClick = { onQuantityChange(1) },
-                        containerColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                        contentColor = Color(WgcCoreDsColors.drogaRaiaSurface)
+                        textButton = "Comprar",
+                        onClick = { onQuantityChange(1) }
+                        )
                     )
                 }
             }

@@ -40,7 +40,7 @@ fun WgcFastFoodMealCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Box(
@@ -55,12 +55,12 @@ fun WgcFastFoodMealCard(
 
             Text(
                 text = comboName,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = description,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color.Gray
             )
 
@@ -72,17 +72,15 @@ fun WgcFastFoodMealCard(
             ) {
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.mcdonaldsRed),
                     modifier = Modifier.weight(1f)
                 )
                 WgcClassicButton(
-                    text = "Pedir Combo",
-                    onClick = onAddMeal,
-                    containerColor = Color(WgcCoreDsColors.mcdonaldsYellow),
-                    contentColor = Color.Black
-                )
+                    textButton = "Pedir Combo",
+                    onClick = onAddMeal
+                    )
             }
         }
     }

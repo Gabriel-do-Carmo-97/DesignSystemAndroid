@@ -22,7 +22,7 @@ fun WgcPinterestFeedTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.pinterestRed)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Pinterest • Inspirações para Você", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Pinterest • Inspirações para Você", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcPinterestFeedTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(pin.title, fontWeight = FontWeight.Bold)
-                        Text("${pin.author} • ${pin.saves} salvamentos", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("${pin.author} • ${pin.saves} salvamentos", color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -43,7 +43,7 @@ fun WgcPinterestFeedTemplate(modifier: Modifier = Modifier) {
 fun WgcPinterestSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Buscar Ideias & Tendências", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Buscar Ideias & Tendências", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcPinterestSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcPinterestCreateTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Criar Novo Pin & Pasta", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Criar Novo Pin & Pasta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcPinterestCreateTemplate(modifier: Modifier = Modifier) {
 fun WgcPinterestUpdatesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Atualizações de Inspiração", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Atualizações de Inspiração", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcPinterestUpdatesTemplate(modifier: Modifier = Modifier) {
 fun WgcPinterestProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil & Minhas Pastas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu Perfil & Minhas Pastas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

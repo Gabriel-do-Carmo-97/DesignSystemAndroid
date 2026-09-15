@@ -60,7 +60,6 @@ fun WgcCarrefourFlyerTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.carrefourBackground),
         bottomBar = {
             WgcCarrefourBottomNav(
                 selectedTab = activeTab,
@@ -104,7 +103,7 @@ private fun FlyerHeaderBanner(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourRed)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -122,7 +121,7 @@ private fun FlyerHeaderBanner(
                 Text(
                     text = "TABLOIDE DIGITAL CARREFOUR",
                     color = Color(WgcCoreDsColors.carrefourSurface),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -140,7 +139,7 @@ private fun FlyerHeaderBanner(
                 Text(
                     text = storeName,
                     color = Color(WgcCoreDsColors.carrefourSurface),
-                    fontSize = 12.sp.sp
+                    fontSize = 12.sp
                 )
             }
 
@@ -149,7 +148,7 @@ private fun FlyerHeaderBanner(
             Text(
                 text = validity,
                 color = Color(WgcCoreDsColors.carrefourYellow),
-                fontSize = 10.sp.sp,
+                fontSize = 10.sp,
                 fontWeight = FontWeight.SemiBold
             )
         }
@@ -165,7 +164,7 @@ private fun FlyerOfferGridItem(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -193,7 +192,7 @@ private fun FlyerOfferGridItem(
                     Text(
                         text = offer.discountBadge,
                         color = Color(WgcCoreDsColors.carrefourSurface),
-                        fontSize = 10.sp.sp,
+                        fontSize = 10.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -203,7 +202,7 @@ private fun FlyerOfferGridItem(
 
             Text(
                 text = offer.title,
-                fontSize = 12.sp.sp,
+                fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.carrefourTextPrimary),
                 maxLines = 2
@@ -213,14 +212,14 @@ private fun FlyerOfferGridItem(
 
             Text(
                 text = "De R$ " + String.format("%.2f", offer.originalPrice),
-                fontSize = 10.sp.sp,
+                fontSize = 10.sp,
                 color = Color(WgcCoreDsColors.carrefourTextSecondary),
                 textDecoration = TextDecoration.LineThrough
             )
 
             Text(
                 text = "R$ " + String.format("%.2f", offer.promoPrice),
-                fontSize = 16.sp.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.carrefourRed)
             )
@@ -228,7 +227,7 @@ private fun FlyerOfferGridItem(
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
 
             WgcClassicButton(
-                text = "Adicionar",
+                textButton = "Adicionar",
                 onClick = onAddToCart,
                 modifier = Modifier.fillMaxWidth(),
                 leadingIcon = {
@@ -238,9 +237,8 @@ private fun FlyerOfferGridItem(
                         tint = Color(WgcCoreDsColors.carrefourSurface),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
-                },
-                containerColor = Color(WgcCoreDsColors.carrefourBlue),
-                contentColor = Color(WgcCoreDsColors.carrefourSurface)
+                }
+                )
             )
         }
     }

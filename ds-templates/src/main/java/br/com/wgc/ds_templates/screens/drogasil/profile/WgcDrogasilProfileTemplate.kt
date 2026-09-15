@@ -23,9 +23,7 @@ fun WgcDrogasilProfileTemplate(
     modifier: Modifier = Modifier
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogasilBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -34,7 +32,7 @@ fun WgcDrogasilProfileTemplate(
             item {
                 Text(
                     text = "Meu Perfil Drogasil",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )

@@ -91,7 +91,6 @@ fun WgcStylishTrendingScreenTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.white),
         topBar = {
             Column(
                 modifier = Modifier

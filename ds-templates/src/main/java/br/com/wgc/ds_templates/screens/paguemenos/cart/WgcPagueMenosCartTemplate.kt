@@ -31,9 +31,7 @@ fun WgcPagueMenosCartTemplate(
     onCheckout: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pagueMenosBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -42,7 +40,7 @@ fun WgcPagueMenosCartTemplate(
             item {
                 Text(
                     text = "Cesta de Compras Pague Menos",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                 )
@@ -53,18 +51,18 @@ fun WgcPagueMenosCartTemplate(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
-                    elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(
                             text = "Shampoo Anticaspa Clear Men",
-                            fontSize = 12.sp.sp,
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                         )
                         Text(
                             text = "1 unidade • R$ 22,90",
-                            fontSize = 10.sp.sp,
+                            fontSize = 10.sp,
                             color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                         )
                     }
@@ -73,11 +71,10 @@ fun WgcPagueMenosCartTemplate(
 
             item {
                 WgcClassicButton(
-                    text = "Concluir Compra • R$ 22,90",
+                    textButton = "Concluir Compra • R$ 22,90",
                     onClick = onCheckout,
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = Color(WgcCoreDsColors.pagueMenosGreen),
-                    contentColor = Color(WgcCoreDsColors.pagueMenosSurface)
+                    modifier = Modifier.fillMaxWidth()
+                    )
                 )
             }
         }

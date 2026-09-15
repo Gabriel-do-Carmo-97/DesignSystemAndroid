@@ -48,10 +48,7 @@ fun WgcCarrefourBottomNav(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
             color = Color(WgcCoreDsColors.carrefourBorder)
-        ),
-        containerColor = Color(WgcCoreDsColors.carrefourSurface),
-        contentColor = Color(WgcCoreDsColors.carrefourBlue)
-    ) {
+        )) {
         WgcCarrefourNavItem.entries.forEachIndexed { index, item ->
             val isSelected = selectedItem == index
             NavigationBarItem(

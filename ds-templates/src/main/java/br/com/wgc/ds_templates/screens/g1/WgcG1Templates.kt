@@ -22,7 +22,7 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.g1Red)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("g1 • O Portal de Notícias da Globo", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
+                Text("g1 • O Portal de Notícias da Globo", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,9 +30,9 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
             items(G1MockData.sampleNews) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.section, color = Color(WgcCoreDsColors.g1Red), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text(item.headline, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text(item.publishedAgo, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.section, color = Color(WgcCoreDsColors.g1Red), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(item.headline, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(item.publishedAgo, color = Color.Gray, fontSize = 14.sp)
                     }
                 }
             }
@@ -44,7 +44,7 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
 fun WgcG1CategoriesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Categorias: Economia, Política, Tecnologia, Saúde", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Categorias: Economia, Política, Tecnologia, Saúde", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcG1CategoriesTemplate(modifier: Modifier = Modifier) {
 fun WgcG1FactCheckTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Fato ou Boato • Verificação de Notícias Falsas", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Fato ou Boato • Verificação de Notícias Falsas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcG1FactCheckTemplate(modifier: Modifier = Modifier) {
 fun WgcG1VideosTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Vídeos & Podcasts g1 (O Assunto)", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Vídeos & Podcasts g1 (O Assunto)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcG1VideosTemplate(modifier: Modifier = Modifier) {
 fun WgcG1ProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Notícias Salvas & Notificações de Plantão", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Notícias Salvas & Notificações de Plantão", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

@@ -22,7 +22,7 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.zeedogBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("ZEE.DOG • Design & Conexão", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
+                Text("ZEE.DOG • Design & Conexão", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        Text(item.category, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.category, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Zee.Dog Kitchen • Alimentação Natural Completa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Zee.Dog Kitchen • Alimentação Natural Completa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Coleiras, Guias & Conectores", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Coleiras, Guias & Conectores", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho Zee.Dog", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho Zee.Dog", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) {
 fun WgcZeeDogProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Zee.Club", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Zee.Club", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

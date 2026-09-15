@@ -20,10 +20,9 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.steamDark),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.steamBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("STEAM • Promoção de Fim de Semana", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("STEAM • Promoção de Fim de Semana", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -42,36 +41,36 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
 
 @Composable
 fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Biblioteca de Jogos Instalados", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Biblioteca de Jogos Instalados", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Central da Comunidade & Fóruns", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Central da Comunidade & Fóruns", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Lista de Desejos & Carrinho", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Lista de Desejos & Carrinho", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcSteamProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(WgcCoreDsColors.steamDark)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Steam • Nível 45 & Insígnias", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Steam • Nível 45 & Insígnias", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

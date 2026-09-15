@@ -84,7 +84,6 @@ fun WgcExtraHomeTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.extraBackground),
         bottomBar = {
             if (slotBottomNav != null) {
                 slotBottomNav()

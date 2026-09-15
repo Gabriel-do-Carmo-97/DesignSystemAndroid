@@ -20,10 +20,9 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(0xFF0E0E10),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.twitchPurple)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Twitch • Ao Vivo Agora", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Twitch • Ao Vivo Agora", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -32,7 +31,7 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1F1F23))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(stream.streamer, fontWeight = FontWeight.Bold, color = Color.White)
-                        Text("${stream.game} • 🔴 ${stream.viewers} espectadores", color = Color.LightGray, fontSize = 14.sp.sp)
+                        Text("${stream.game} • 🔴 ${stream.viewers} espectadores", color = Color.LightGray, fontSize = 14.sp)
                     }
                 }
             }
@@ -42,36 +41,36 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
 
 @Composable
 fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Explorar Categorias & Games", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Explorar Categorias & Games", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chat da Transmissão & Emotes WGC", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Chat da Transmissão & Emotes WGC", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Inscrições Prime & Bits", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Inscrições Prime & Bits", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
 
 @Composable
 fun WgcTwitchProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color(0xFF0E0E10)) { padding ->
+    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Painel de Criador de Conteúdo", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Painel de Criador de Conteúdo", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

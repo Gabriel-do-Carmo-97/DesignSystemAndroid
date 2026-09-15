@@ -73,7 +73,6 @@ fun WgcZapProfileTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.zapBackground),
         topBar = {
             Box(
                 modifier = Modifier

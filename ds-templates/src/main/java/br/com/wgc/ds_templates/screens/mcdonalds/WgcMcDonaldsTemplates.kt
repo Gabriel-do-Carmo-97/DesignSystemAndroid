@@ -22,7 +22,7 @@ fun WgcMcDonaldsMenuTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.mcdonaldsRed)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("McDonald's • Cardápio & Cupons", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.White)
+                Text("McDonald's • Cardápio & Cupons", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,8 +30,8 @@ fun WgcMcDonaldsMenuTemplate(modifier: Modifier = Modifier) {
             items(McDonaldsMockData.sampleMenu) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("Resgate com ${item.points} pts Meu Méqui", color = Color(WgcCoreDsColors.mcdonaldsYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("Resgate com ${item.points} pts Meu Méqui", color = Color(WgcCoreDsColors.mcdonaldsYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcMcDonaldsMenuTemplate(modifier: Modifier = Modifier) {
 fun WgcMcDonaldsCuponsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Cupons Exclusivos Méqui Sem Fila", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Cupons Exclusivos Méqui Sem Fila", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcMcDonaldsCuponsTemplate(modifier: Modifier = Modifier) {
 fun WgcMcDonaldsLoyaltyTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Méqui • Saldo de Pontos & Prêmios", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meu Méqui • Saldo de Pontos & Prêmios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcMcDonaldsLoyaltyTemplate(modifier: Modifier = Modifier) {
 fun WgcMcDonaldsCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Pedidos • Retirada no Balcão / Drive", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Sacola de Pedidos • Retirada no Balcão / Drive", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcMcDonaldsCartTemplate(modifier: Modifier = Modifier) {
 fun WgcMcDonaldsProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil & Restaurantes Favoritos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil & Restaurantes Favoritos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

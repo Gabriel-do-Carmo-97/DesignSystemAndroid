@@ -59,8 +59,8 @@ fun WgcNubankCardTemplate(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
-                        Text("Cartão Virtual", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("Crie cartões temporários para compras online seguras.", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text("Cartão Virtual", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("Crie cartões temporários para compras online seguras.", color = Color.Gray, fontSize = 14.sp)
                         OutlinedButton(
                             onClick = onAdjustLimitClick,
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)

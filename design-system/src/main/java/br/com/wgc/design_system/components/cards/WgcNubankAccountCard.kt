@@ -44,7 +44,7 @@ fun WgcNubankAccountCard(
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.nubankSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.nubankBorder))
     ) {
         Column(
@@ -59,7 +59,7 @@ fun WgcNubankAccountCard(
             ) {
                 Text(
                     text = "Conta",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.nubankTextPrimary)
                 )
@@ -75,7 +75,7 @@ fun WgcNubankAccountCard(
 
             Text(
                 text = if (isBalanceVisible) "R$ " + String.format("%.2f", balance) else "••••",
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.nubankTextPrimary)
             )

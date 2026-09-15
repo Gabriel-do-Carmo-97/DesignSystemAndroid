@@ -43,7 +43,7 @@ fun WgcPetCareCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -55,14 +55,14 @@ fun WgcPetCareCard(
                 )
                 Text(
                     text = petProductTitle,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
 
             Text(
                 text = "Embalagem: $weightOrSize",
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color.Gray
             )
 
@@ -75,24 +75,22 @@ fun WgcPetCareCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = "R$ " + String.format("%.2f", subscriberPrice),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.petzBlue)
                     )
                     Text(
                         text = "Preço Assinante Petz",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color.DarkGray,
                         fontWeight = FontWeight.SemiBold
                     )
                 }
 
                 WgcClassicButton(
-                    text = "Assinar",
-                    onClick = onSubscribeClick,
-                    containerColor = Color(WgcCoreDsColors.petzYellow),
-                    contentColor = Color.Black
-                )
+                    textButton = "Assinar",
+                    onClick = onSubscribeClick
+                    )
             }
         }
     }

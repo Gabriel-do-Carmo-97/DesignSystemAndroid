@@ -98,7 +98,6 @@ fun WgcShoppeHomeScreenTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.white),
         topBar = {
             topBarSlot?.invoke() ?: TopAppBar(
                 title = {

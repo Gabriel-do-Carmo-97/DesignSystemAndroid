@@ -50,7 +50,7 @@ fun WgcPagueMenosClinicCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pagueMenosBorder))
     ) {
         Column(
@@ -82,13 +82,13 @@ fun WgcPagueMenosClinicCard(
                     Column {
                         Text(
                             text = "Clinic Farma • Pague Menos",
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             color = Color(WgcCoreDsColors.pagueMenosClinicTeal),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = serviceTitle,
-                            fontSize = 14.sp.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
                         )
@@ -97,7 +97,7 @@ fun WgcPagueMenosClinicCard(
 
                 Text(
                     text = if (price > 0) "R$ " + String.format("%.2f", price) else "Gratuito",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pagueMenosGreen)
                 )
@@ -107,7 +107,7 @@ fun WgcPagueMenosClinicCard(
 
             Text(
                 text = description,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
             )
 
@@ -128,16 +128,15 @@ fun WgcPagueMenosClinicCard(
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = estimatedDuration,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
                     )
                 }
 
                 WgcClassicButton(
-                    text = "Agendar Sala",
-                    onClick = onBookClick,
-                    containerColor = Color(WgcCoreDsColors.pagueMenosGreen),
-                    contentColor = Color(WgcCoreDsColors.pagueMenosSurface)
+                    textButton = "Agendar Sala",
+                    onClick = onBookClick
+                    )
                 )
             }
         }

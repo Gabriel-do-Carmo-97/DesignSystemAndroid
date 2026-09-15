@@ -40,7 +40,7 @@ fun WgcFashionItemCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Box(
@@ -55,13 +55,13 @@ fun WgcFashionItemCard(
 
             Text(
                 text = brandName.uppercase(),
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color.Gray,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = itemTitle,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -74,23 +74,21 @@ fun WgcFashionItemCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = "R$ " + String.format("%.2f", price),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.rennerRed)
                     )
                     Text(
                         text = installments,
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         color = Color.Gray
                     )
                 }
 
                 WgcClassicButton(
-                    text = "Comprar",
-                    onClick = onBuy,
-                    containerColor = Color(WgcCoreDsColors.rennerRed),
-                    contentColor = Color.White
-                )
+                    textButton = "Comprar",
+                    onClick = onBuy
+                    )
             }
         }
     }

@@ -45,9 +45,7 @@ fun WgcClotheeOrderPlacedTemplate(
     customIllustrationSlot: (@Composable () -> Unit)? = null
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.clotheePrimary)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()

@@ -55,9 +55,7 @@ fun WgcOrganizzeReportsTemplate(
     onBackClick: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.organizzeBackground)
-    ) { paddingValues ->
+        modifier = modifier.fillMaxSize()) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()

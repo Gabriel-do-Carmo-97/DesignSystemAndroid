@@ -49,7 +49,7 @@ fun WgcNubankPixTemplate(
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-                        Text("Envie ou Receba em segundos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text("Envie ou Receba em segundos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Button(
                             onClick = onSendPixClick,
                             modifier = Modifier.fillMaxWidth(),
@@ -63,7 +63,7 @@ fun WgcNubankPixTemplate(
             }
 
             item {
-                Text("Histórico Recente", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text("Histórico Recente", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             }
 
             items(NubankMockData.sampleTransactions) { tx ->
@@ -78,8 +78,8 @@ fun WgcNubankPixTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(tx.title, fontWeight = FontWeight.SemiBold, fontSize = 14.sp.sp)
-                            Text("${tx.category} • ${tx.date}", fontSize = 14.sp.sp, color = Color.Gray)
+                            Text(tx.title, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                            Text("${tx.category} • ${tx.date}", fontSize = 14.sp, color = Color.Gray)
                         }
                         Text(
                             text = "${if (tx.isPositive) "+" else "-"} R$ ${"%,.2f".format(tx.amount)}",

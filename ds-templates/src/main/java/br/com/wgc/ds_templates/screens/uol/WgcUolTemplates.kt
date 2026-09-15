@@ -22,7 +22,7 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.uolYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("UOL • O Melhor Conteúdo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.Black)
+                Text("UOL • O Melhor Conteúdo", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
             }
         }
     ) { padding ->
@@ -30,7 +30,7 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
             items(UolMockData.sampleNews) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.author, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.author, color = Color.Gray, fontSize = 14.sp)
                         Text(item.headline, fontWeight = FontWeight.Bold)
                     }
                 }
@@ -43,7 +43,7 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Economia & Cotações em Tempo Real", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("UOL Economia & Cotações em Tempo Real", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) {
 fun WgcUolSportsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Esporte • Placar ao Vivo", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("UOL Esporte • Placar ao Vivo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcUolSportsTemplate(modifier: Modifier = Modifier) {
 fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Colunistas & Opinião UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Colunistas & Opinião UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) {
 fun WgcUolProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Conta UOL & Clube UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Conta UOL & Clube UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

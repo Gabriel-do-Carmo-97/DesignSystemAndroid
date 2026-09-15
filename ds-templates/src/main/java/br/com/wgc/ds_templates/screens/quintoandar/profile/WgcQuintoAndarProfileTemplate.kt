@@ -77,7 +77,6 @@ fun WgcQuintoAndarProfileTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.quintoAndarBackground),
         topBar = {
             if (topBarSlot != null) {
                 topBarSlot()

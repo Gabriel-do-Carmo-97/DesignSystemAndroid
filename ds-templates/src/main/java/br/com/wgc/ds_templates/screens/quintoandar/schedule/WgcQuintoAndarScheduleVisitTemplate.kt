@@ -101,7 +101,6 @@ fun WgcQuintoAndarScheduleVisitTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.quintoAndarBackground),
         topBar = {
             if (topBarSlot != null) {
                 topBarSlot()
@@ -573,9 +572,7 @@ private fun QuintoAndarScheduleBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow),
-                    contentColor = Color(WgcCoreDsColors.quintoAndarDark)
-                )
+                    containerColor = Color(WgcCoreDsColors.quintoAndarYellow))
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(

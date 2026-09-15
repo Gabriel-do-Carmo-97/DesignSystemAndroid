@@ -63,11 +63,9 @@ fun WgcOrganizzeCardsTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.organizzeBackground),
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAddCardClick,
-                containerColor = Color(WgcCoreDsColors.organizzePrimary),
                 contentColor = Color.White,
                 shape = CircleShape
             ) {

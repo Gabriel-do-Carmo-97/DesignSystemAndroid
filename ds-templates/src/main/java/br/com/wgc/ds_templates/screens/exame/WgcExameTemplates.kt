@@ -22,7 +22,7 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.exameBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("EXAME • Negócios, Economia & ESG", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("EXAME • Negócios, Economia & ESG", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,7 +30,7 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
             items(ExameMockData.sampleArticles) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.category, color = Color(WgcCoreDsColors.exameBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text(item.category, color = Color(WgcCoreDsColors.exameBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text(item.title, fontWeight = FontWeight.Bold)
                     }
                 }
@@ -43,7 +43,7 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcExameInvestTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Exame Invest • Cotações, FIIs & Análises", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Exame Invest • Cotações, FIIs & Análises", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -52,7 +52,7 @@ fun WgcExameInvestTemplate(modifier: Modifier = Modifier) {
 fun WgcExameEsgTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("ESG & Sustentabilidade Corporativa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("ESG & Sustentabilidade Corporativa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -61,7 +61,7 @@ fun WgcExameEsgTemplate(modifier: Modifier = Modifier) {
 fun WgcExameMagazineTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Edição Digital da Revista EXAME", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Edição Digital da Revista EXAME", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -70,7 +70,7 @@ fun WgcExameMagazineTemplate(modifier: Modifier = Modifier) {
 fun WgcExameProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil de Assinante Exame Pro", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil de Assinante Exame Pro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

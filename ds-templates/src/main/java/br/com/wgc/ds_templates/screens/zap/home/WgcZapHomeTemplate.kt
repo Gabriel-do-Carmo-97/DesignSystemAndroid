@@ -77,7 +77,6 @@ fun WgcZapHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.zapBackground),
         bottomBar = {
             WgcZapBottomNav(
                 selectedDestination = currentNavDestination,

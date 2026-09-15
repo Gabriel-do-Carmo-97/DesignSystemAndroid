@@ -78,7 +78,6 @@ fun WgcSmartFitHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.smartfitBlack),
         bottomBar = {
             if (slotBottomNav != null) {
                 slotBottomNav()

@@ -77,7 +77,6 @@ fun WgcPdaAdegaTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.pdaBackground),
         bottomBar = {
             footerSlot?.invoke() ?: WgcPdaBottomNav(
                 selectedItem = selectedNavIndex,

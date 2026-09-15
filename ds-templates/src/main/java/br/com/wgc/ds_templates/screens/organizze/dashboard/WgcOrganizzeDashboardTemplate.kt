@@ -95,7 +95,6 @@ fun WgcOrganizzeDashboardTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.organizzeBackground),
         bottomBar = {
             WgcOrganizzeBottomNav(
                 selectedItem = WgcOrganizzeNavItem.Dashboard,

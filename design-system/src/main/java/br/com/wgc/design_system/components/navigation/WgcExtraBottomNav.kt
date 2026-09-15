@@ -52,10 +52,7 @@ fun WgcExtraBottomNav(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
             color = Color(WgcCoreDsColors.extraBorder)
-        ),
-        containerColor = Color(WgcCoreDsColors.extraSurface),
-        contentColor = Color(WgcCoreDsColors.extraDark)
-    ) {
+        )) {
         WgcExtraNavItem.entries.forEach { item ->
             val isSelected = item == selectedItem
             NavigationBarItem(

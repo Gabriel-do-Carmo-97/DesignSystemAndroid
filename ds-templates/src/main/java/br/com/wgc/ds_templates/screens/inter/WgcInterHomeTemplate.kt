@@ -30,7 +30,6 @@ fun WgcInterHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.gray50),
         topBar = {
             Column(
                 modifier = Modifier
@@ -43,15 +42,15 @@ fun WgcInterHomeTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Inter Super App", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("Inter Super App", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
                         Icon(Icons.Default.Notifications, contentDescription = null, tint = Color.White)
                         Icon(Icons.Default.AccountCircle, contentDescription = null, tint = Color.White)
                     }
                 }
                 Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                Text("Saldo em conta", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp.sp)
-                Text("R$ 12.890,40", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
+                Text("Saldo em conta", color = Color.White.copy(alpha = 0.8f), fontSize = 14.sp)
+                Text("R$ 12.890,40", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
             }
         }
     ) { padding ->
@@ -74,7 +73,7 @@ fun WgcInterHomeTemplate(
             }
 
             item {
-                Text("Destaques do Inter Shop", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text("Destaques do Inter Shop", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             }
 
             item {

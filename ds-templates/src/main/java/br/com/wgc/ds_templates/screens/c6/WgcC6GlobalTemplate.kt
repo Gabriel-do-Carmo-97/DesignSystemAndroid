@@ -20,7 +20,6 @@ fun WgcC6GlobalTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background),
         topBar = {
             TopAppBar(
                 title = { Text("Conta Global Dólar & Euro", fontWeight = FontWeight.Bold) },
@@ -41,9 +40,9 @@ fun WgcC6GlobalTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Saldo em Dólar Comercial", color = Color.Gray, fontSize = 14.sp.sp)
-                    Text("US$ 2.450,00", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
-                    Text("Cotação Comercial 24h • Spread a partir de 1%", color = Color.Gray, fontSize = 14.sp.sp)
+                    Text("Saldo em Dólar Comercial", color = Color.Gray, fontSize = 14.sp)
+                    Text("US$ 2.450,00", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+                    Text("Cotação Comercial 24h • Spread a partir de 1%", color = Color.Gray, fontSize = 14.sp)
                 }
             }
         }

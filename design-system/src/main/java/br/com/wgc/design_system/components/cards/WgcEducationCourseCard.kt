@@ -39,18 +39,18 @@ fun WgcEducationCourseCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Text(
                 text = instructorOrTrack,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color(WgcCoreDsColors.aluraBlue),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = courseTitle,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -71,17 +71,15 @@ fun WgcEducationCourseCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = "${(progressPercentage * 100).toInt()}% Concluído",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray,
                     modifier = Modifier.weight(1f)
                 )
 
                 WgcClassicButton(
-                    text = "Continuar",
-                    onClick = onContinueClick,
-                    containerColor = Color(WgcCoreDsColors.duolingoGreen),
-                    contentColor = Color.White
-                )
+                    textButton = "Continuar",
+                    onClick = onContinueClick
+                    )
             }
         }
     }

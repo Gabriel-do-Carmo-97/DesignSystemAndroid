@@ -197,9 +197,7 @@ fun WgcTasselOrderTrackerCard(
                 .height(WgcCoreDsSize.s48.dp),
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(WgcCoreDsColors.tasselSurface),
-                contentColor = Color(WgcCoreDsColors.tasselDark)
-            )
+                containerColor = Color(WgcCoreDsColors.tasselSurface))
         ) {
             Text(
                 text = "Cancel order",

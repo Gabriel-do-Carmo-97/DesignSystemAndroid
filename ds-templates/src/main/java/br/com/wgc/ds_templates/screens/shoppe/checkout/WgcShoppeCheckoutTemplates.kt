@@ -77,7 +77,6 @@ fun WgcShoppeCartScreenTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.white),
         topBar = {
             TopAppBar(
                 title = { Text("Cart", fontWeight = FontWeight.Black) },

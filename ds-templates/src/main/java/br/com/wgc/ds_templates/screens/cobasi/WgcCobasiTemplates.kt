@@ -22,7 +22,7 @@ fun WgcCobasiHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.cobasiBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Cobasi • O Shopping do seu Animal", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Cobasi • O Shopping do seu Animal", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcCobasiHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
-                        Text(item.category, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.category, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcCobasiHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcCobasiAmigoTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Amigo Cobasi • Fidelidade & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Amigo Cobasi • Fidelidade & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcCobasiAmigoTemplate(modifier: Modifier = Modifier) {
 fun WgcCobasiProgramadaTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Compra Programada Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Compra Programada Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcCobasiProgramadaTemplate(modifier: Modifier = Modifier) {
 fun WgcCobasiCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Compras Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho de Compras Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcCobasiCartTemplate(modifier: Modifier = Modifier) {
 fun WgcCobasiProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carteira de Vacinação & Perfil do Pet", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carteira de Vacinação & Perfil do Pet", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

@@ -47,7 +47,7 @@ fun WgcMobilityRideCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier
@@ -75,12 +75,12 @@ fun WgcMobilityRideCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = categoryName,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Chegada estimada: $estimatedTime",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray
                 )
             }
@@ -88,15 +88,13 @@ fun WgcMobilityRideCard(
             Column(horizontalAlignment = Alignment.End) {
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 WgcClassicButton(
-                    text = "Pedir",
-                    onClick = onSelectRide,
-                    containerColor = Color(WgcCoreDsColors.mobilityYellow99),
-                    contentColor = Color.Black
-                )
+                    textButton = "Pedir",
+                    onClick = onSelectRide
+                    )
             }
         }
     }

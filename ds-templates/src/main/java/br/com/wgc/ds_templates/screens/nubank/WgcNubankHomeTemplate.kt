@@ -35,7 +35,6 @@ fun WgcNubankHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.gray50),
         topBar = {
             Column(
                 modifier = Modifier
@@ -64,7 +63,7 @@ fun WgcNubankHomeTemplate(
                     }
                 }
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
-                Text("Olá, Gabriel", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text("Olá, Gabriel", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             }
         }

@@ -29,7 +29,6 @@ fun WgcC6HomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background),
         topBar = {
             Column(
                 modifier = Modifier
@@ -38,12 +37,12 @@ fun WgcC6HomeTemplate(
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text("C6 Bank", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("C6 Bank", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Icon(Icons.Default.AccountCircle, contentDescription = null, tint = Color.White)
                 }
                 Spacer(Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                Text("Saldo disponível", color = Color.Gray, fontSize = 14.sp.sp)
-                Text("R$ 18.340,90", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                Text("Saldo disponível", color = Color.Gray, fontSize = 14.sp)
+                Text("R$ 18.340,90", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
             }
         }
     ) { padding ->
@@ -66,9 +65,9 @@ fun WgcC6HomeTemplate(
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                        Text("Pontos Átomos", color = Color.Gray, fontSize = 14.sp.sp)
-                        Text("48.500 pts", color = Color(WgcCoreDsColors.c6Yellow), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
-                        Text("Seus pontos nunca expiram!", color = Color.White, fontSize = 14.sp.sp)
+                        Text("Pontos Átomos", color = Color.Gray, fontSize = 14.sp)
+                        Text("48.500 pts", color = Color(WgcCoreDsColors.c6Yellow), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+                        Text("Seus pontos nunca expiram!", color = Color.White, fontSize = 14.sp)
                         Button(
                             onClick = onAtomosClick,
                             colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.c6Yellow)),

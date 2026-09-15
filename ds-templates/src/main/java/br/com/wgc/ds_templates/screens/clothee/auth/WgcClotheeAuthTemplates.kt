@@ -216,9 +216,7 @@ private fun ClotheeSocialButton(
             .height(52.dp),
         shape = RoundedCornerShape(100.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color(WgcCoreDsColors.clotheeSurface),
-            contentColor = Color(WgcCoreDsColors.clotheeDark)
-        )
+            containerColor = Color(WgcCoreDsColors.clotheeSurface))
     ) {
         Text(
             text = text,

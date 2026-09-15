@@ -55,9 +55,7 @@ fun WgcShoppeVisualSearchScreenTemplate(
     onBackClick: () -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.shoppeDark)
-    ) { innerPadding ->
+        modifier = modifier.fillMaxSize()) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()

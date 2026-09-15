@@ -19,7 +19,6 @@ fun WgcC6ProfileTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background),
         topBar = {
             TopAppBar(
                 title = { Text("Perfil & Segurança C6", fontWeight = FontWeight.Bold) },

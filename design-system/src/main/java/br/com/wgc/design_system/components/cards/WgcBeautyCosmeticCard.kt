@@ -40,7 +40,7 @@ fun WgcBeautyCosmeticCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
             Box(
@@ -55,13 +55,13 @@ fun WgcBeautyCosmeticCard(
 
             Text(
                 text = "$perfumeOrBrand • $volume",
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 color = Color(WgcCoreDsColors.boticarioGreen),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = productName,
-                fontSize = 14.sp.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
 
@@ -73,18 +73,16 @@ fun WgcBeautyCosmeticCard(
             ) {
                 Text(
                     text = "R$ " + String.format("%.2f", price),
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
                     modifier = Modifier.weight(1f)
                 )
 
                 WgcClassicButton(
-                    text = "Adicionar",
-                    onClick = onAdd,
-                    containerColor = Color(WgcCoreDsColors.boticarioGreen),
-                    contentColor = Color.White
-                )
+                    textButton = "Adicionar",
+                    onClick = onAdd
+                    )
             }
         }
     }

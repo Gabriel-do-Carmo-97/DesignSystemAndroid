@@ -26,9 +26,7 @@ fun WgcStreamingFactory(
     screen: WgcStreamingScreen = WgcStreamingScreen.SPOTIFY
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(0xFF121212)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),

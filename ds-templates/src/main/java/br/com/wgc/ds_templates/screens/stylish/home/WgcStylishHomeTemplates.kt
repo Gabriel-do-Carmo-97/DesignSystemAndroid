@@ -123,7 +123,6 @@ fun WgcStylishHomeScreenTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.white),
         topBar = {
             topBarSlot?.invoke() ?: Row(
                 modifier = Modifier

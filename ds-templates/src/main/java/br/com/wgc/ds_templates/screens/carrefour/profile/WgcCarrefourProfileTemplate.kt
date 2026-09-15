@@ -62,7 +62,6 @@ fun WgcCarrefourProfileTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.carrefourBackground),
         bottomBar = {
             WgcCarrefourBottomNav(
                 selectedTab = activeTab,
@@ -135,19 +134,19 @@ private fun ProfileHeaderSection(userProfile: CarrefourUserProfile) {
             Column {
                 Text(
                     text = userProfile.name,
-                    fontSize = 16.sp.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.carrefourSurface)
                 )
                 Text(
                     text = "Cliente " + userProfile.membershipLevel,
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     color = Color(WgcCoreDsColors.carrefourYellow),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = userProfile.email,
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.carrefourSurface).copy(alpha = 0.8f)
                 )
             }
@@ -163,7 +162,7 @@ private fun CashierIdentificationCard(cpf: String) {
             .padding(WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -173,7 +172,7 @@ private fun CashierIdentificationCard(cpf: String) {
         ) {
             Text(
                 text = "Identifique-se no Caixa para Descontos",
-                fontSize = 12.sp.sp,
+                fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(WgcCoreDsColors.carrefourTextPrimary)
             )
@@ -190,7 +189,7 @@ private fun CashierIdentificationCard(cpf: String) {
 
             Text(
                 text = "CPF: $cpf",
-                fontSize = 12.sp.sp,
+                fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = Color(WgcCoreDsColors.carrefourTextSecondary)
             )
@@ -206,7 +205,7 @@ private fun CardSummarySection(userProfile: CarrefourUserProfile) {
             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
             modifier = Modifier
@@ -228,7 +227,7 @@ private fun CardSummarySection(userProfile: CarrefourUserProfile) {
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Cartão Carrefour",
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourTextPrimary)
                     )
@@ -236,7 +235,7 @@ private fun CardSummarySection(userProfile: CarrefourUserProfile) {
 
                 Text(
                     text = "•••• " + userProfile.cardLastDigits,
-                    fontSize = 12.sp.sp,
+                    fontSize = 12.sp,
                     color = Color(WgcCoreDsColors.carrefourTextSecondary)
                 )
             }
@@ -250,12 +249,12 @@ private fun CardSummarySection(userProfile: CarrefourUserProfile) {
                 Column {
                     Text(
                         text = "Limite Disponível",
-                        fontSize = 10.sp.sp,
+                        fontSize = 10.sp,
                         color = Color(WgcCoreDsColors.carrefourTextSecondary)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", userProfile.availableLimit),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourBlue)
                     )
@@ -264,12 +263,12 @@ private fun CardSummarySection(userProfile: CarrefourUserProfile) {
                 Column {
                     Text(
                         text = "Fatura Aberta",
-                        fontSize = 10.sp.sp,
+                        fontSize = 10.sp,
                         color = Color(WgcCoreDsColors.carrefourTextSecondary)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", userProfile.invoiceAmount),
-                        fontSize = 14.sp.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carrefourRed)
                     )
@@ -290,7 +289,7 @@ private fun ProfileMenuOptions(onMenuItemClick: (String) -> Unit) {
             ),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carrefourSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
             ProfileMenuItem(
@@ -351,7 +350,7 @@ private fun ProfileMenuItem(
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
         Text(
             text = title,
-            fontSize = 12.sp.sp,
+            fontSize = 12.sp,
             fontWeight = FontWeight.Medium,
             color = Color(WgcCoreDsColors.carrefourTextPrimary),
             modifier = Modifier.weight(1f)

@@ -22,7 +22,7 @@ fun WgcUdemyExploreTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.udemyPurple)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Udemy • Mais de 200.000 Cursos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Udemy • Mais de 200.000 Cursos", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,8 +30,8 @@ fun WgcUdemyExploreTemplate(modifier: Modifier = Modifier) {
             items(UdemyMockData.sampleCourses) { course ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
-                        Text(course.title, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("${course.instructor} • ⭐ ${course.rating}", color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(course.title, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("${course.instructor} • ⭐ ${course.rating}", color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(course.price)}", fontWeight = FontWeight.ExtraBold, color = Color.Black)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcUdemyExploreTemplate(modifier: Modifier = Modifier) {
 fun WgcUdemyCourseDetailTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Conteúdo do Curso & Módulos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Conteúdo do Curso & Módulos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcUdemyCourseDetailTemplate(modifier: Modifier = Modifier) {
 fun WgcUdemyMyCoursesTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meus Cursos Matriculados", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Meus Cursos Matriculados", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcUdemyMyCoursesTemplate(modifier: Modifier = Modifier) {
 fun WgcUdemyReviewsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Avaliações e Perguntas ao Instrutor", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Avaliações e Perguntas ao Instrutor", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcUdemyReviewsTemplate(modifier: Modifier = Modifier) {
 fun WgcUdemyProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Udemy & Métodos de Pagamento", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Udemy & Métodos de Pagamento", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

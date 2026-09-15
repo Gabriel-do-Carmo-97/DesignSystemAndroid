@@ -22,7 +22,7 @@ fun WgcTokStokHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.tokstokRed)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Tok&Stok • Design Autoral & Móveis", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Tok&Stok • Design Autoral & Móveis", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcTokStokHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
-                        Text(item.room, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.room, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcTokStokHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcTokStokEnvironmentsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ambientes Inspiradores • Decore Fácil", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Ambientes Inspiradores • Decore Fácil", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcTokStokEnvironmentsTemplate(modifier: Modifier = Modifier) {
 fun WgcTokStokArTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Realidade Aumentada (RA) & Medidas 3D", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Realidade Aumentada (RA) & Medidas 3D", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcTokStokArTemplate(modifier: Modifier = Modifier) {
 fun WgcTokStokCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Decoração Tok&Stok", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho de Decoração Tok&Stok", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcTokStokCartTemplate(modifier: Modifier = Modifier) {
 fun WgcTokStokProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil & Lista de Casamento/Chá de Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil & Lista de Casamento/Chá de Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

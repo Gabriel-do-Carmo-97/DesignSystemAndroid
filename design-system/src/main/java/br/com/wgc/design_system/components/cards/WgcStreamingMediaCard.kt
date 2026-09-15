@@ -43,7 +43,7 @@ fun WgcStreamingMediaCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -62,13 +62,13 @@ fun WgcStreamingMediaCard(
                 Text(
                     text = title,
                     color = Color.White,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "$artistOrCreator • $duration",
                     color = Color.LightGray,
-                    fontSize = 14.sp.sp
+                    fontSize = 14.sp
                 )
             }
 

@@ -28,9 +28,7 @@ fun WgcDrogasilVaccinesTemplate(
     onScheduleVaccine: (DrogasilVaccine) -> Unit = {}
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.drogasilBackground)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
@@ -39,13 +37,13 @@ fun WgcDrogasilVaccinesTemplate(
             item {
                 Text(
                     text = "Vacinação & Serviços Farmacêuticos",
-                    fontSize = 18.sp.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.drogasilTextPrimary)
                 )
                 Text(
                     text = "Aplicação em sala privativa por farmacêuticos habilitados com registro no RNDS",
-                    fontSize = 10.sp.sp,
+                    fontSize = 10.sp,
                     color = Color(WgcCoreDsColors.drogasilTextSecondary)
                 )
             }

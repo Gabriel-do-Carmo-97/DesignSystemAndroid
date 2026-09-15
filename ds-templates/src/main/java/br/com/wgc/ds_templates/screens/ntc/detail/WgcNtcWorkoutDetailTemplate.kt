@@ -69,7 +69,6 @@ fun WgcNtcWorkoutDetailTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.ntcBlack),
         topBar = {
             Row(
                 modifier = Modifier
@@ -126,9 +125,7 @@ fun WgcNtcWorkoutDetailTemplate(
                             .height(WgcCoreDsSize.s52.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.ntcVolt),
-                            contentColor = Color(WgcCoreDsColors.ntcBlack)
-                        )
+                            containerColor = Color(WgcCoreDsColors.ntcVolt))
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,

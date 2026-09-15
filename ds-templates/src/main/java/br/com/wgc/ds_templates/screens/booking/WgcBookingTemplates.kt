@@ -22,7 +22,7 @@ fun WgcBookingSearchTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.bookingBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Booking.com • Genius Nível 2", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Booking.com • Genius Nível 2", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -30,9 +30,9 @@ fun WgcBookingSearchTemplate(modifier: Modifier = Modifier) {
             items(BookingMockData.sampleHotels) { hotel ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                        Text(hotel.name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                        Text("${hotel.city} • Nota ${hotel.score} (${hotel.reviewsCount} avaliações)", color = Color.Gray, fontSize = 14.sp.sp)
-                        Text(hotel.geniusDiscount, color = Color(WgcCoreDsColors.bookingYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                        Text(hotel.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("${hotel.city} • Nota ${hotel.score} (${hotel.reviewsCount} avaliações)", color = Color.Gray, fontSize = 14.sp)
+                        Text(hotel.geniusDiscount, color = Color(WgcCoreDsColors.bookingYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(hotel.price)}", fontWeight = FontWeight.ExtraBold, color = Color.Black)
                     }
                 }
@@ -45,7 +45,7 @@ fun WgcBookingSearchTemplate(modifier: Modifier = Modifier) {
 fun WgcBookingGeniusTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Programa Genius • Benefícios Vitalícios", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Programa Genius • Benefícios Vitalícios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -54,7 +54,7 @@ fun WgcBookingGeniusTemplate(modifier: Modifier = Modifier) {
 fun WgcBookingWishlistTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Lista de Desejos & Hotéis Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Lista de Desejos & Hotéis Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -63,7 +63,7 @@ fun WgcBookingWishlistTemplate(modifier: Modifier = Modifier) {
 fun WgcBookingReservationsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Confirmações de Reserva & Voucher", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Confirmações de Reserva & Voucher", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -72,7 +72,7 @@ fun WgcBookingReservationsTemplate(modifier: Modifier = Modifier) {
 fun WgcBookingProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Booking.com", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Perfil Booking.com", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

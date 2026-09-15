@@ -85,7 +85,6 @@ fun WgcShopperHomeTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.shopperBackground),
         bottomBar = {
             if (bottomNavSlot != null) {
                 bottomNavSlot()

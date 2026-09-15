@@ -22,7 +22,7 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         topBar = {
             Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.leroymerlinGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Leroy Merlin • Casa, Construção & Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp, color = Color.White)
+                Text("Leroy Merlin • Casa, Construção & Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
@@ -31,7 +31,7 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
-                        Text(item.department, color = Color.Gray, fontSize = 14.sp.sp)
+                        Text(item.department, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.leroymerlinGreen))
                     }
                 }
@@ -44,7 +44,7 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
 fun WgcLeroyMerlinClubeTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube Leroy Merlin Com Você", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Clube Leroy Merlin Com Você", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -53,7 +53,7 @@ fun WgcLeroyMerlinClubeTemplate(modifier: Modifier = Modifier) {
 fun WgcLeroyMerlinCalculatorTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Calculadora de Materiais & Tinta", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Calculadora de Materiais & Tinta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -62,7 +62,7 @@ fun WgcLeroyMerlinCalculatorTemplate(modifier: Modifier = Modifier) {
 fun WgcLeroyMerlinCartTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho & Agendamento de Entrega de Obra", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Carrinho & Agendamento de Entrega de Obra", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }
@@ -71,7 +71,7 @@ fun WgcLeroyMerlinCartTemplate(modifier: Modifier = Modifier) {
 fun WgcLeroyMerlinProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Conta & Projetos de Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+            Text("Minha Conta & Projetos de Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp)
         }
     }
 }

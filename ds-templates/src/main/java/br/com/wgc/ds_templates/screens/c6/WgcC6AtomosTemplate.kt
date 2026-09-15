@@ -23,7 +23,6 @@ fun WgcC6AtomosTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.c6Background),
         topBar = {
             TopAppBar(
                 title = { Text("Átomos C6 Store", fontWeight = FontWeight.Bold) },
@@ -51,8 +50,8 @@ fun WgcC6AtomosTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(reward.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp.sp)
-                            Text(reward.category, color = Color.Gray, fontSize = 14.sp.sp)
+                            Text(reward.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp)
+                            Text(reward.category, color = Color.Gray, fontSize = 14.sp)
                         }
                         Text("${reward.pointsRequired} pts", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.c6Yellow))
                     }

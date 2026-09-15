@@ -92,7 +92,6 @@ fun WgcCarrefourHomeTemplate(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.carrefourBackground),
         bottomBar = {
             footerSlot?.invoke() ?: WgcCarrefourBottomNav(
                 selectedItem = selectedNavIndex,

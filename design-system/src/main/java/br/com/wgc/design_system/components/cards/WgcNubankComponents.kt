@@ -50,7 +50,7 @@ fun WgcNubankPixActionItem(
         }
         Text(
             text = label,
-            fontSize = 14.sp.sp,
+            fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             color = Color.Black
         )
@@ -82,14 +82,14 @@ fun WgcNubankCreditCard(
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                     Icon(Icons.Default.CreditCard, contentDescription = null, tint = Color(WgcCoreDsColors.nubankPrimary))
-                    Text("Cartão de Crédito", fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
+                    Text("Cartão de Crédito", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
                 Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.Gray)
             }
-            Text("Fatura atual", fontSize = 14.sp.sp, color = Color.Gray)
-            Text("R$ ${"%,.2f".format(currentInvoice)}", fontSize = 14.sp.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
-            Text("Limite disponível: R$ ${"%,.2f".format(availableLimit)}", fontSize = 14.sp.sp, color = Color.Gray)
-            Text("Vencimento: $dueDate", fontSize = 14.sp.sp, fontWeight = FontWeight.Medium, color = Color.DarkGray)
+            Text("Fatura atual", fontSize = 14.sp, color = Color.Gray)
+            Text("R$ ${"%,.2f".format(currentInvoice)}", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
+            Text("Limite disponível: R$ ${"%,.2f".format(availableLimit)}", fontSize = 14.sp, color = Color.Gray)
+            Text("Vencimento: $dueDate", fontSize = 14.sp, fontWeight = FontWeight.Medium, color = Color.DarkGray)
             Button(
                 onClick = onPayInvoiceClick,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.nubankPrimary)),
@@ -124,10 +124,10 @@ fun WgcNubankCaixinhaCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(title, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                Text(yieldLabel, fontSize = 14.sp.sp, color = Color(WgcCoreDsColors.nubankPrimary), fontWeight = FontWeight.SemiBold)
+                Text(title, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Text(yieldLabel, fontSize = 14.sp, color = Color(WgcCoreDsColors.nubankPrimary), fontWeight = FontWeight.SemiBold)
             }
-            Text("R$ ${"%,.2f".format(currentAmount)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp, color = Color.Black)
+            Text("R$ ${"%,.2f".format(currentAmount)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.Black)
             val progress = (currentAmount / targetAmount).toFloat().coerceIn(0f, 1f)
             LinearProgressIndicator(
                 progress = { progress },
@@ -135,7 +135,7 @@ fun WgcNubankCaixinhaCard(
                 color = Color(WgcCoreDsColors.nubankPrimary),
                 trackColor = Color(WgcCoreDsColors.gray200)
             )
-            Text("Meta: R$ ${"%,.2f".format(targetAmount)}", fontSize = 14.sp.sp, color = Color.Gray)
+            Text("Meta: R$ ${"%,.2f".format(targetAmount)}", fontSize = 14.sp, color = Color.Gray)
         }
     }
 }

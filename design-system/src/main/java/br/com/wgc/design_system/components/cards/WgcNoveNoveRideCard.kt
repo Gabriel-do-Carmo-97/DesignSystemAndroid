@@ -43,14 +43,14 @@ fun WgcNoveNoveRideCard(
             Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp), verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.novenoveYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))
                 Column {
-                    Text(name, fontWeight = FontWeight.Bold, fontSize = 14.sp.sp)
-                    Text("Chega em $eta", fontSize = 14.sp.sp, color = Color.Gray)
+                    Text(name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Text("Chega em $eta", fontSize = 14.sp, color = Color.Gray)
                     discount?.let {
-                        Text(it, fontSize = 14.sp.sp, color = Color(0xFF2E7D32), fontWeight = FontWeight.SemiBold)
+                        Text(it, fontSize = 14.sp, color = Color(0xFF2E7D32), fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
-            Text("R$ ${"%,.2f".format(price)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp.sp)
+            Text("R$ ${"%,.2f".format(price)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
         }
     }
 }

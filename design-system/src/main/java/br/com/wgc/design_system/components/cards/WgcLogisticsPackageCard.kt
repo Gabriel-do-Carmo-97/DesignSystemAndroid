@@ -38,7 +38,7 @@ fun WgcLogisticsPackageCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.xs2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -56,18 +56,18 @@ fun WgcLogisticsPackageCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "Código: $trackingCode",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = statusText,
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color(WgcCoreDsColors.loggiBlue),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = "Previsão: $deliveryDate",
-                    fontSize = 14.sp.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray
                 )
             }

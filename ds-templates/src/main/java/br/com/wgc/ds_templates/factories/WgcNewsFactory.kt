@@ -26,9 +26,7 @@ fun WgcNewsFactory(
     screen: WgcNewsScreen = WgcNewsScreen.G1
 ) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        containerColor = Color(0xFFF7F8FA)
-    ) { padding ->
+        modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),

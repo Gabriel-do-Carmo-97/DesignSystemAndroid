@@ -200,9 +200,7 @@ fun WgcNtcProgramCard(
                         Color(WgcCoreDsColors.ntcVolt)
                     } else {
                         Color(WgcCoreDsColors.ntcWhite)
-                    },
-                    contentColor = Color(WgcCoreDsColors.ntcBlack)
-                )
+                    })
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

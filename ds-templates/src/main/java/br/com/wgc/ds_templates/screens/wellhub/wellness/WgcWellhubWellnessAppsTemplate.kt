@@ -65,7 +65,6 @@ fun WgcWellhubWellnessAppsTemplate(
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = Color(WgcCoreDsColors.wellhubCreamBg),
         bottomBar = {
             if (slotBottomNav != null) {
                 slotBottomNav()
