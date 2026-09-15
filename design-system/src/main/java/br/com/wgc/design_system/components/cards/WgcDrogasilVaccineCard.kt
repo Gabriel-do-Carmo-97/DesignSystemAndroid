@@ -138,7 +138,7 @@ fun WgcDrogasilVaccineCard(
                     textButton = "Agendar",
                     onClick = onScheduleClick
                     )
-                )
+                
             }
         }
     }

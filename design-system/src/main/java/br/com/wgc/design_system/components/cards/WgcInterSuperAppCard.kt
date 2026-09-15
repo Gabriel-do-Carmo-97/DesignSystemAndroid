@@ -97,7 +97,7 @@ fun WgcInterSuperAppCard(
                 textButton = "Ativar",
                 onClick = onShopClick
                 )
-            )
+            
         }
     }
 }

@@ -93,7 +93,7 @@ fun WgcDrogaRaiaProductCard(
                     DrogaRaiaMedicineStripe.RED -> {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(Color(WgcCoreDsColors.drogaRaiaRed))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -111,7 +111,7 @@ fun WgcDrogaRaiaProductCard(
                     DrogaRaiaMedicineStripe.BLACK -> {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(Color(WgcCoreDsColors.drogaRaiaNavyDark))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -129,7 +129,7 @@ fun WgcDrogaRaiaProductCard(
                     DrogaRaiaMedicineStripe.GENERIC -> {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(Color(WgcCoreDsColors.drogaRaiaPrescriptionYellow))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -147,7 +147,7 @@ fun WgcDrogaRaiaProductCard(
                     DrogaRaiaMedicineStripe.NONE -> {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(Color(WgcCoreDsColors.drogaRaiaGreenLight))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -229,7 +229,7 @@ fun WgcDrogaRaiaProductCard(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .background(Color(WgcCoreDsColors.drogaRaiaPrescriptionYellowLight))
                         .padding(WgcCoreDsSpacing.xs8.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -355,7 +355,6 @@ fun WgcDrogaRaiaProductCard(
                         textButton = "Comprar",
                         onClick = { onQuantityChange(1) }
                         )
-                    )
                 }
             }
         }

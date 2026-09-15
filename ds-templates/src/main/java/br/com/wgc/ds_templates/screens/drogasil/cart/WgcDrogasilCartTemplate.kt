@@ -76,7 +76,7 @@ fun WgcDrogasilCartTemplate(
                     textButton = "Finalizar Pedido • R$ 79,90",
                     onClick = onCheckout,
                     modifier = Modifier.fillMaxWidth()
-                    )
+                    
                 )
             }
         }

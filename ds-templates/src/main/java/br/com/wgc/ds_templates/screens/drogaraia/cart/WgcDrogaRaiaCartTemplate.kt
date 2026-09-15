@@ -260,7 +260,7 @@ private fun CartBottomBar(total: Double, onCheckout: () -> Unit) {
                 textButton = "Finalizar Pedido",
                 onClick = onCheckout
                 )
-            )
+            
         }
     }
 }

@@ -56,6 +56,7 @@ import br.com.wgc.design_system.components.cards.WgcCarrefourMeuCard
 import br.com.wgc.design_system.components.cards.WgcCarrefourNutriScoreCard
 import br.com.wgc.design_system.components.cards.WgcCarrefourProductCard
 import br.com.wgc.design_system.components.navigation.WgcCarrefourBottomNav
+import br.com.wgc.design_system.components.navigation.CarrefourNavTab
 import br.com.wgc.ds_templates.screens.carrefour.model.CarrefourMockData
 import br.com.wgc.ds_templates.screens.carrefour.model.CarrefourProductItem
 import br.com.wgc.ds_templates.screens.carrefour.model.CarrefourUserProfile
@@ -73,11 +74,19 @@ fun WgcCarrefourHomeTemplate(
     modifier: Modifier = Modifier,
     userProfile: CarrefourUserProfile = CarrefourMockData.defaultUser,
     products: List<CarrefourProductItem> = CarrefourMockData.products,
+    featuredProducts: List<CarrefourProductItem> = products,
+    coinsBalance: Int = userProfile.coinsBalance,
+    currentStore: String = userProfile.selectedStore,
+    activeTab: CarrefourNavTab = CarrefourNavTab.HOME,
+    onTabSelected: (CarrefourNavTab) -> Unit = {},
     selectedNavIndex: Int = 0,
     onNavSelect: (Int) -> Unit = {},
     onProductQuantityChange: (String, Int) -> Unit = { _, _ -> },
     onProductFavoriteToggle: (String) -> Unit = {},
     onScanBarcodeClick: () -> Unit = {},
+    onStoreChangeClick: () -> Unit = {},
+    onBarcodeScanClick: () -> Unit = onScanBarcodeClick,
+    onViewNutriScoreDetails: () -> Unit = {},
     headerSlot: (@Composable () -> Unit)? = null,
     cardSlot: (@Composable () -> Unit)? = null,
     footerSlot: (@Composable () -> Unit)? = null

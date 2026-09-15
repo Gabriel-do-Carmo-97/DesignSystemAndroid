@@ -386,6 +386,15 @@ fun WgcAuthFactory(
                     )
                 }
             }
+            else -> {
+                val vm = FakeShopeeAuthViewModel()
+                when (flow) {
+                    WgcAuthFlow.Login -> WgcShopeeLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
+                    WgcAuthFlow.Register -> WgcShopeeRegisterScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.ResetPassword,
+                    WgcAuthFlow.OtpVerification -> WgcShopeeResetPasswordScreenTemplate(vm, onNavigateToLogin)
+                }
+            }
         }
         return
     }

@@ -14,7 +14,9 @@ data class CarrefourProductItem(
     val discountPercentage: String? = null,
     val installmentsText: String? = "em até 10x sem juros",
     val quantity: Int = 0,
-    val isFavorite: Boolean = false
+    val isFavorite: Boolean = false,
+    val price: Double = regularPrice,
+    val carrefourCardPrice: Double = cardCarrefourPrice
 )
 
 /**
@@ -27,7 +29,8 @@ data class CarrefourCouponItem(
     val discountBadge: String,
     val minSpend: String,
     val validUntil: String,
-    val isActivated: Boolean = false
+    val isActivated: Boolean = false,
+    val description: String = minSpend
 )
 
 /**
@@ -47,7 +50,10 @@ data class CarrefourFlyerOffer(
     val department: String,
     val promoTag: String,
     val price: Double,
-    val cardPrice: Double
+    val cardPrice: Double,
+    val discountBadge: String = promoTag,
+    val originalPrice: Double = price,
+    val promoPrice: Double = cardPrice
 )
 
 /**
@@ -60,7 +66,11 @@ data class CarrefourUserProfile(
     val coinsBalance: Int,
     val bestPurchaseDay: Int,
     val selectedStore: String,
-    val deliveryOption: String
+    val deliveryOption: String,
+    val cpf: String = "123.***.***-00",
+    val membershipLevel: String = "Cliente Ouro",
+    val email: String = "cliente@carrefour.com.br",
+    val invoiceAmount: Double = 1420.50
 )
 
 /**
@@ -216,4 +226,10 @@ object CarrefourMockData {
         CarrefourCartItem(product = products[0], quantity = 1),
         CarrefourCartItem(product = products[2], quantity = 2)
     )
+
+    val sampleUserProfile = defaultUser
+    val sampleProducts = products
+    val sampleCoupons = coupons
+    val sampleFlyerOffers = flyerOffers
+    val sampleCartItems = cartItems
 }

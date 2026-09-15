@@ -137,7 +137,7 @@ fun WgcPagueMenosClinicCard(
                     textButton = "Agendar Sala",
                     onClick = onBookClick
                     )
-                )
+                
             }
         }
     }

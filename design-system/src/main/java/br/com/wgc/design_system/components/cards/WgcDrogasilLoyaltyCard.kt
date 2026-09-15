@@ -81,16 +81,7 @@ fun WgcDrogasilLoyaltyCard(
 
                 WgcClassicButton(
                     textButton = "Código Caixa",
-                    onClick = onShowBarcodeClick,
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.QrCode,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogasilRed),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                    }
-                    )
+                    onClick = onShowBarcodeClick
                 )
             }
 

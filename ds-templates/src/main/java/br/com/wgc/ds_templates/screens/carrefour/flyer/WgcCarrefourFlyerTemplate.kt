@@ -182,7 +182,7 @@ private fun FlyerOfferGridItem(
                 Box(
                     modifier = Modifier
                         .padding(WgcCoreDsSpacing.xs8.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .background(Color(WgcCoreDsColors.carrefourRed))
                         .padding(
                             horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -229,16 +229,7 @@ private fun FlyerOfferGridItem(
             WgcClassicButton(
                 textButton = "Adicionar",
                 onClick = onAddToCart,
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = {
-                    Icon(
-                        imageVector = Icons.Default.AddShoppingCart,
-                        contentDescription = null,
-                        tint = Color(WgcCoreDsColors.carrefourSurface),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
-                    )
-                }
-                )
+                modifier = Modifier.fillMaxWidth()
             )
         }
     }

@@ -179,7 +179,7 @@ enum class WgcBrand(
         brandName = "C6 Bank",
         brandLogoText = "C6",
         primaryColor = Color(0xFF242424)
-    )
+    ),
 
     // Cat 6: Mobilidade
     NinetyNine("99", "99", Color(0xFFFFC800)),
@@ -254,5 +254,12 @@ enum class WgcBrand(
     // Cat 20: Governo
     GovBr("Gov.br", "Gov.br", Color(0xFF003399)),
     CDT("CDT Trânsito", "CDT", Color(0xFF008037)),
-    CTPS("CTPS Digital", "CTPS", Color(0xFF005CA9))
+    CTPS("CTPS Digital", "CTPS", Color(0xFF005CA9)),
+
+    // Novas Suítes Figma Especializadas
+    DentiCare("DentiCare", "Denti", Color(0xFF00A8B5)),
+    Doctoralia("Doctoralia", "Doc", Color(0xFF00B39B)),
+    ZeDelivery("Zé Delivery", "Zé", Color(0xFFFFCC00)),
+    Webmotors("Webmotors", "WM", Color(0xFFE6192E)),
+    KaBuM("KaBuM!", "KaBuM", Color(0xFFFF6500))
 }

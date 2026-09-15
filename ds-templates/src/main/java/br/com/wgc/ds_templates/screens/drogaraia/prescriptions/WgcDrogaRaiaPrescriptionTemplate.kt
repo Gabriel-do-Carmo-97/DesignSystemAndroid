@@ -194,7 +194,7 @@ private fun PrescriptionItemCard(
                 textButton = "Comprar Medicamentos da Receita",
                 onClick = {},
                 modifier = Modifier.fillMaxWidth()
-                )
+                
             )
         }
     }

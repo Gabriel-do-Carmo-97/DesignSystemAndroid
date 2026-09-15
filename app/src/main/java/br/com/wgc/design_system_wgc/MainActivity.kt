@@ -205,7 +205,13 @@ fun DesignSystemCatalogApp() {
         "🎨 Figma (3 Templates)",
         "🧩 Componentes (:design-system)",
         "📱 Templates (:ds-templates)",
-        "🏭 Fábricas & Slots"
+        "🏭 Fábricas & Slots",
+        // 74-78: Novas Suítes Especializadas Figma
+        "🦷 DentiCare (Odontologia & Raio-X)",
+        "🩺 Doctoralia (Telemedicina & Consultas)",
+        "🍺 Zé Delivery (Bebidas Geladas)",
+        "🚘 Webmotors (Carros & Tabela FIPE)",
+        "⚡ KaBuM! (Hardware & Ofertas Ninja)"
     )
 
     val quintoAndarScreens = br.com.wgc.ds_templates.factories.WgcQuintoAndarScreen.entries
@@ -356,6 +362,22 @@ fun DesignSystemCatalogApp() {
     var selectedCdtScreenIndex by remember { mutableIntStateOf(0) }
     val ctpsScreens = br.com.wgc.ds_templates.factories.WgcCtpsScreen.entries
     var selectedCtpsScreenIndex by remember { mutableIntStateOf(0) }
+
+    // Novas Suítes Figma
+    val dentiCareScreens = br.com.wgc.ds_templates.factories.WgcDentiCareScreen.entries
+    var selectedDentiCareScreenIndex by remember { mutableIntStateOf(0) }
+
+    val doctoraliaScreens = br.com.wgc.ds_templates.factories.WgcDoctoraliaScreen.entries
+    var selectedDoctoraliaScreenIndex by remember { mutableIntStateOf(0) }
+
+    val zeDeliveryScreens = br.com.wgc.ds_templates.factories.WgcZeDeliveryScreen.entries
+    var selectedZeDeliveryScreenIndex by remember { mutableIntStateOf(0) }
+
+    val webmotorsScreens = br.com.wgc.ds_templates.factories.WgcWebmotorsScreen.entries
+    var selectedWebmotorsScreenIndex by remember { mutableIntStateOf(0) }
+
+    val kabumScreens = br.com.wgc.ds_templates.factories.WgcKaBuMScreen.entries
+    var selectedKaBuMScreenIndex by remember { mutableIntStateOf(0) }
 
     val organizzeScreens = br.com.wgc.ds_templates.factories.WgcOrganizzeScreen.entries
     var selectedOrganizzeScreenIndex by remember { mutableIntStateOf(0) } // Default: Dashboard
@@ -1240,6 +1262,61 @@ fun DesignSystemCatalogApp() {
                     }
                 }
             }
+            74 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedDentiCareScreenIndex) {
+                    dentiCareScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedDentiCareScreenIndex == index,
+                            onClick = { selectedDentiCareScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            75 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedDoctoraliaScreenIndex) {
+                    doctoraliaScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedDoctoraliaScreenIndex == index,
+                            onClick = { selectedDoctoraliaScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            76 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedZeDeliveryScreenIndex) {
+                    zeDeliveryScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedZeDeliveryScreenIndex == index,
+                            onClick = { selectedZeDeliveryScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            77 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedWebmotorsScreenIndex) {
+                    webmotorsScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedWebmotorsScreenIndex == index,
+                            onClick = { selectedWebmotorsScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
+            78 -> {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedKaBuMScreenIndex) {
+                    kabumScreens.forEachIndexed { index, screen ->
+                        Tab(
+                            selected = selectedKaBuMScreenIndex == index,
+                            onClick = { selectedKaBuMScreenIndex = index },
+                            text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
+                        )
+                    }
+                }
+            }
         }
 
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
@@ -1791,6 +1868,51 @@ fun DesignSystemCatalogApp() {
                 }
                 73 -> {
                     WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
+                }
+                74 -> {
+                    val currentScreen = dentiCareScreens[selectedDentiCareScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcDentiCareFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedDentiCareScreenIndex = dentiCareScreens.indexOf(targetScreen)
+                        }
+                    )
+                }
+                75 -> {
+                    val currentScreen = doctoraliaScreens[selectedDoctoraliaScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcDoctoraliaFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedDoctoraliaScreenIndex = doctoraliaScreens.indexOf(targetScreen)
+                        }
+                    )
+                }
+                76 -> {
+                    val currentScreen = zeDeliveryScreens[selectedZeDeliveryScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcZeDeliveryFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedZeDeliveryScreenIndex = zeDeliveryScreens.indexOf(targetScreen)
+                        }
+                    )
+                }
+                77 -> {
+                    val currentScreen = webmotorsScreens[selectedWebmotorsScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcWebmotorsFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedWebmotorsScreenIndex = webmotorsScreens.indexOf(targetScreen)
+                        }
+                    )
+                }
+                78 -> {
+                    val currentScreen = kabumScreens[selectedKaBuMScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcKaBuMFactory(
+                        screen = currentScreen,
+                        onNavigateToScreen = { targetScreen ->
+                            selectedKaBuMScreenIndex = kabumScreens.indexOf(targetScreen)
+                        }
+                    )
                 }
             }
         }

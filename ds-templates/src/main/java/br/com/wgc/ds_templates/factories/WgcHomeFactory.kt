@@ -82,6 +82,7 @@ fun WgcHomeFactory(
             WgcBrand.NikeTrainingClub -> WgcNtcFactory(screen = WgcNtcScreen.HOME)
             WgcBrand.ClubeExtra -> WgcExtraFactory(screen = WgcExtraScreen.HOME)
             WgcBrand.PaoDeAcucar -> WgcPdaFactory(screen = WgcPdaScreen.HOME)
+            else -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
         }
         return
     }

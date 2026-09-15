@@ -49,6 +49,7 @@ android {
 dependencies {
     implementation(project(":design-system"))
     implementation(project(":ds-templates"))
+    implementation(project(":ds-navigation-flows"))
     implementation(project(":core-ds"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
