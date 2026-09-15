@@ -22,7 +22,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Design-System-WGC"
 include(":app")
-include(":design-system")
-include(":ds-templates")
-include(":core-ds")
-include(":ds-navigation-flows")
+include(":core")
+include(":components")
+include(":templates")
+include(":navigation-flows")

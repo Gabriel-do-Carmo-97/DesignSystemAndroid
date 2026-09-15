@@ -1,12 +1,20 @@
 plugins {
-    id("wgc.android.library")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("maven-publish")
+    alias(libs.plugins.screenshot)
     alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "br.com.wgc.ds_navigation_flows"
+    namespace = "br.com.wgc.ds_templates"
+    compileSdk = 37
+    defaultConfig {
+        minSdk = 29
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
 
     buildTypes {
         release {
@@ -17,18 +25,33 @@ android {
             )
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        }
+    }
     buildFeatures {
         compose = true
     }
     publishing {
         singleVariant("release")
     }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
+        }
+    }
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
+
 }
 
 dependencies {
-    implementation(project(":ds-templates"))
-    implementation(project(":design-system"))
-    implementation(project(":core-ds"))
+    implementation(project(":components"))
+    implementation(project(":core"))
     implementation(libs.androidx.core.ktx)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
@@ -36,26 +59,29 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.navigation.compose)
+    implementation(libs.coil.compose)
     implementation(libs.kotlinx.serialization.core)
+    implementation(libs.coil.compose)
 
     testImplementation(libs.mockk)
+    androidTestImplementation( libs.mockk.android)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.mockk.android)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
+    screenshotTestImplementation(libs.screenshot.validation.api)
+    screenshotTestImplementation(libs.androidx.ui.tooling)
+
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
-
 publishing {
     publications {
         create<MavenPublication>("release") {
             groupId = "br.com.wgc"
-            artifactId = "ds-navigation-flows"
+            artifactId = "templates"
             version = project.findProperty("VERSION_NAME")?.toString()
                 ?: System.getenv("VERSION_NAME")
                 ?: "1.0.0-SNAPSHOT"
@@ -77,8 +103,9 @@ publishing {
         }
     }
 }
-
 tasks.register<Jar>("sourcesJar") {
     archiveClassifier.set("sources")
     from(android.sourceSets.getByName("main").java.srcDirs)
 }
+
+// Trigger ds-templates module deployment
