@@ -445,6 +445,40 @@ object WgcCoreDsColors {
     val pagueMenosTextSecondary = Color.parseColor("#5B6B7C")
     val pagueMenosBorder = Color.parseColor("#E0E6ED")
     val pagueMenosPlaceholder = Color.parseColor("#CBD5E1")
+
+    // --- NUBANK TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val nubankPurple = Color.parseColor("#820AD1") // Roxo Nubank Oficial
+    val nubankPurpleDark = Color.parseColor("#5A0594")
+    val nubankPurpleLight = Color.parseColor("#F4EAFB")
+    val nubankBackground = Color.parseColor("#F5F5F5")
+    val nubankSurface = Color.WHITE
+    val nubankTextPrimary = Color.parseColor("#111111")
+    val nubankTextSecondary = Color.parseColor("#767676")
+    val nubankBorder = Color.parseColor("#E5E5E5")
+    val nubankMoneyGreen = Color.parseColor("#00875A")
+
+    // --- INTER TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val interOrange = Color.parseColor("#FF7A00") // Laranja Oficial Banco Inter
+    val interOrangeDark = Color.parseColor("#CC6200")
+    val interOrangeLight = Color.parseColor("#FFF2E6")
+    val interBackground = Color.parseColor("#F5F6F8")
+    val interSurface = Color.WHITE
+    val interTextPrimary = Color.parseColor("#1F2D3D")
+    val interTextSecondary = Color.parseColor("#8492A6")
+    val interBorder = Color.parseColor("#E0E6ED")
+    val interGoldCashback = Color.parseColor("#F7BA2A")
+
+    // --- C6 BANK TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
+    val c6Carbon = Color.parseColor("#242424") // Carbon C6 Bank
+    val c6CarbonDark = Color.parseColor("#141414")
+    val c6CarbonLight = Color.parseColor("#EAEAEA")
+    val c6Yellow = Color.parseColor("#FFD100") // Amarelo Átomos Pontos C6
+    val c6YellowLight = Color.parseColor("#FFFBE6")
+    val c6Background = Color.parseColor("#121212")
+    val c6Surface = Color.parseColor("#1E1E1E")
+    val c6TextPrimary = Color.WHITE
+    val c6TextSecondary = Color.parseColor("#A0A0A0")
+    val c6Border = Color.parseColor("#2D2D2D")
 }
 
 

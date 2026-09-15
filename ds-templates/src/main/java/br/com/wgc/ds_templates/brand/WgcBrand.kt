@@ -164,5 +164,20 @@ enum class WgcBrand(
         brandName = "Pague Menos",
         brandLogoText = "PGM",
         primaryColor = Color(0xFF00A859)
+    ),
+    Nubank(
+        brandName = "Nubank",
+        brandLogoText = "Nu",
+        primaryColor = Color(0xFF820AD1)
+    ),
+    BancoInter(
+        brandName = "Inter",
+        brandLogoText = "Inter",
+        primaryColor = Color(0xFFFF7A00)
+    ),
+    C6Bank(
+        brandName = "C6 Bank",
+        brandLogoText = "C6",
+        primaryColor = Color(0xFF242424)
     )
 }
