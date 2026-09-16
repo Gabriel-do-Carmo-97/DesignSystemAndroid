@@ -24,14 +24,14 @@ A equipe é liderada por um **Orquestrador Central (Tech Lead / Arquiteto)**, qu
         ▼                               ▼                               ▼                               ▼
 ┌──────────────┐                ┌──────────────┐                ┌──────────────┐                ┌──────────────┐
 │ Figma & UI   │                │ Tokens Core  │                │ Componentes  │                │ Templates &  │
-│  Analyser    │                │  (:core-ds)  │                │(:design-syst)│                │    Telas     │
-└──────────────┘                └──────────────┘                └──────────────┘                └──────────────┘
-        │                               │                               │                               │
-        ▼                               ▼                               ▼                               ▼
-┌──────────────┐                ┌──────────────┐                ┌──────────────┐                ┌──────────────┐
-│  Reviewer &  │                │ Gradle Build │                │ GitHub CI/CD │                │ Storybook    │
-│  Qualidade   │                │   & Tooling  │                │   & Deploy   │                │ Catalog App  │
-└──────────────┘                └──────────────┘                └──────────────┘                └──────────────┘
+│  Analyser    │                │   (:core)    │                │(:components) │                │    Telas     │
+└──────────────┘                └──────────────┘                └──────────────┘                └───────┬──────┘
+        │                               │                               │                       │
+        ▼                               ▼                               ▼                       ▼
+┌──────────────┐                ┌──────────────┐                ┌──────────────┐        ┌──────────────┐
+│  Reviewer &  │                │ Gradle Build │                │ GitHub CI/CD │        │  Navigation  │
+│  Qualidade   │                │   & Tooling  │                │   & Deploy   │        │    Flows     │
+└──────────────┘                └──────────────┘                └──────────────┘        └──────────────┘
 ```
 
 ---
@@ -45,7 +45,7 @@ A equipe é liderada por um **Orquestrador Central (Tech Lead / Arquiteto)**, qu
 | **`core`** | [`agents/core-ds-agent.md`](./agents/core-ds-agent.md) | `:core` | Mantém os tokens de design (Cores primitivas e semânticas, Espaçamentos, Raios, Tamanhos, Elevações e Animações). |
 | **`components`** | [`agents/design-system-agent.md`](./agents/design-system-agent.md) | `:components` | Desenvolve átomos e moléculas reutilizáveis em Jetpack Compose com State Hoisting, acessibilidade e screenshot tests. |
 | **`templates`** | [`agents/ds-templates-agent.md`](./agents/ds-templates-agent.md) | `:templates` | Desenvolve telas completas e fluxos desacoplados baseados em `UiState` + `BaseViewModel` + `FakeViewModel`. |
-| **`navigation-flows`** | [`agents/ds-templates-agent.md`](./agents/ds-templates-agent.md) | `:navigation-flows` | Orquestra grafos e fluxos de navegação desacoplados (Auth, Checkout, Onboarding) com type-safety e slots customizáveis. |
+| **`navigation-flows`** | [`agents/navigation-flows-agent.md`](./agents/navigation-flows-agent.md) | `:navigation-flows` | Orquestra grafos e fluxos de navegação desacoplados (Auth, Checkout, Onboarding) com type-safety e slots customizáveis. |
 | **`code-reviewer`** | [`agents/code-reviewer-agent.md`](./agents/code-reviewer-agent.md) | Validação / QA | Audita código gerado, valida checklists de padrões, OWASP, acessibilidade e conformidade com tokens. Parecer: APROVADO / REPROVADO. |
 | **`gradle`** | [`agents/gradle-agent.md`](./agents/gradle-agent.md) | Build & Tooling | Gerencia dependências (`libs.versions.toml`), plugins Gradle, Detekt, Dokka e compilação. |
 | **`github`** | [`agents/github-agent.md`](./agents/github-agent.md) | CI/CD & Releases | Gerencia branches, convenções de commits, Pull Requests, publicação de AARs no GitHub Packages e releases SemVer. |
