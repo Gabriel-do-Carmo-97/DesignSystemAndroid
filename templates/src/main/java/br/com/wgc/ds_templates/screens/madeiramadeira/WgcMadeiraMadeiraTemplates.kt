@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.madeiramadeira
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcMadeiraMadeiraHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcMadeiraMadeiraPlannedTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ambientes Planejados Direto de Fábrica", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcMadeiraMadeiraPlannedTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Ambientes Planejados Direto de Fábrica", modifier = modifier)
 
 @Composable
-fun WgcMadeiraMadeiraShippingTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ofertas com Frete Grátis Sul & Sudeste", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcMadeiraMadeiraShippingTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Ofertas com Frete Grátis Sul & Sudeste", modifier = modifier)
 
 @Composable
-fun WgcMadeiraMadeiraCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Móveis & Decoração", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcMadeiraMadeiraCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho de Móveis & Decoração", modifier = modifier)
 
 @Composable
-fun WgcMadeiraMadeiraProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meus Pedidos & Rastreio de Transportadora", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcMadeiraMadeiraProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Meus Pedidos & Rastreio de Transportadora", modifier = modifier)

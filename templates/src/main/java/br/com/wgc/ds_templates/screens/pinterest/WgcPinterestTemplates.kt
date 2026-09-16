@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.pinterest
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcPinterestFeedTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcPinterestSearchTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Buscar Ideias & Tendências", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPinterestSearchTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Buscar Ideias & Tendências", modifier = modifier)
 
 @Composable
-fun WgcPinterestCreateTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Criar Novo Pin & Pasta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPinterestCreateTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Criar Novo Pin & Pasta", modifier = modifier)
 
 @Composable
-fun WgcPinterestUpdatesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Atualizações de Inspiração", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPinterestUpdatesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Atualizações de Inspiração", modifier = modifier)
 
 @Composable
-fun WgcPinterestProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil & Minhas Pastas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPinterestProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Meu Perfil & Minhas Pastas", modifier = modifier)

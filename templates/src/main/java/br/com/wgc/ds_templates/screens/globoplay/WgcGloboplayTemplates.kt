@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.globoplay
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcGloboplayHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcGloboplayLiveTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Agora na TV • Canais Globosat ao Vivo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcGloboplayLiveTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Agora na TV • Canais Globosat ao Vivo", modifier = modifier)
 
 @Composable
-fun WgcGloboplayNovelasTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Catálogo de Novelas & Séries", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcGloboplayNovelasTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Catálogo de Novelas & Séries", modifier = modifier)
 
 @Composable
-fun WgcGloboplayChannelsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Telecine, Premiere & Combate", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcGloboplayChannelsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Telecine, Premiere & Combate", modifier = modifier)
 
 @Composable
-fun WgcGloboplayProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Conta Globo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcGloboplayProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Conta Globo", modifier = modifier)

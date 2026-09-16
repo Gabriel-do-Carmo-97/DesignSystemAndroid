@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.alura
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcAluraHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcAluraPlayerTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player de Videoaula & Transcrição", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAluraPlayerTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Player de Videoaula & Transcrição", modifier = modifier)
 
 @Composable
-fun WgcAluraCareerTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Carreira Tech & Formações", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAluraCareerTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minha Carreira Tech & Formações", modifier = modifier)
 
 @Composable
-fun WgcAluraForumTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Fórum Alura & Dúvidas dos Alunos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAluraForumTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Fórum Alura & Dúvidas dos Alunos", modifier = modifier)
 
 @Composable
-fun WgcAluraProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Alura & Certificados", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAluraProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Alura & Certificados", modifier = modifier)

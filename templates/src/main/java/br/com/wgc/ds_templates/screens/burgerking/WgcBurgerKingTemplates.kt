@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.burgerking
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcBurgerKingMenuTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcBurgerKingClubeTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube BK • Seus Pontos & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBurgerKingClubeTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Clube BK • Seus Pontos & Descontos", modifier = modifier)
 
 @Composable
-fun WgcBurgerKingCouponsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Cupons Exclusivos do App BK", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBurgerKingCouponsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Cupons Exclusivos do App BK", modifier = modifier)
 
 @Composable
-fun WgcBurgerKingBagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Pedidos BK", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBurgerKingBagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sacola de Pedidos BK", modifier = modifier)
 
 @Composable
-fun WgcBurgerKingProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Burger King", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBurgerKingProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Burger King", modifier = modifier)

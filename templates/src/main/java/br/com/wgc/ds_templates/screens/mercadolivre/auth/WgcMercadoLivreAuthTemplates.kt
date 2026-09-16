@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.mercadolivre.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,38 +50,8 @@ class FakeMercadoLivreAuthViewModel : BaseMercadoLivreAuthViewModel() {
 }
 
 @Composable
-fun WgcMercadoLivreLoginScreenTemplate(viewModel: BaseMercadoLivreAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "Mercado Livre",
-                brandLogoText = "ML",
-                brandColor = Color(0xFFFFE600),
-                title = "Digite seu e-mail, e-mail ou usuário",
-                subtitle = "Para acessar sua conta do Mercado Livre e Mercado Pago"
-            )
-
-            SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "E-mail, telefone ou usuário")
-            WgcClassicButton(textButton = "Continuar", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Preciso de ajuda com minha senha ou conta")
-            }
-
-            HorizontalDivider()
-            WgcSocialLoginButtons()
-            WgcSecondaryClassicButton(textButton = "Criar conta no Mercado Livre", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcMercadoLivreLoginScreenTemplate(viewModel: BaseMercadoLivreAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Preciso de ajuda com minha senha ou conta")
 
 @Composable
 fun WgcMercadoLivreRegisterScreenTemplate(viewModel: BaseMercadoLivreAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

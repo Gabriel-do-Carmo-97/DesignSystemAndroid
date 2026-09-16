@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.telegram
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcTelegramChatsTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcTelegramSavedTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Salvas & Nuvem Pessoal", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTelegramSavedTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Mensagens Salvas & Nuvem Pessoal", modifier = modifier)
 
 @Composable
-fun WgcTelegramSecretTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chat Secreto Criptografado Ponta a Ponta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTelegramSecretTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Chat Secreto Criptografado Ponta a Ponta", modifier = modifier)
 
 @Composable
-fun WgcTelegramFoldersTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Pastas de Conversas & Trabalho", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTelegramFoldersTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Pastas de Conversas & Trabalho", modifier = modifier)
 
 @Composable
-fun WgcTelegramSettingsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Configurações do Telegram", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTelegramSettingsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Configurações do Telegram", modifier = modifier)

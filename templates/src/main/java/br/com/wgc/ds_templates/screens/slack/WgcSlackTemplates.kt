@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.slack
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Threads & Respostas de Mensagens", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSlackThreadsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Threads & Respostas de Mensagens", modifier = modifier)
 
 @Composable
-fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Diretas e Menções (@)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSlackDirectTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Mensagens Diretas e Menções (@)", modifier = modifier)
 
 @Composable
-fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Busca em Mensagens & Arquivos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSlackSearchTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Busca em Mensagens & Arquivos", modifier = modifier)
 
 @Composable
-fun WgcSlackProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Status de Presença • 💬 Focado", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSlackProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Meu Status de Presença • 💬 Focado", modifier = modifier)

@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.exame
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcExameInvestTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Exame Invest • Cotações, FIIs & Análises", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcExameInvestTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Exame Invest • Cotações, FIIs & Análises", modifier = modifier)
 
 @Composable
-fun WgcExameEsgTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("ESG & Sustentabilidade Corporativa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcExameEsgTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "ESG & Sustentabilidade Corporativa", modifier = modifier)
 
 @Composable
-fun WgcExameMagazineTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Edição Digital da Revista EXAME", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcExameMagazineTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Edição Digital da Revista EXAME", modifier = modifier)
 
 @Composable
-fun WgcExameProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil de Assinante Exame Pro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcExameProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil de Assinante Exame Pro", modifier = modifier)

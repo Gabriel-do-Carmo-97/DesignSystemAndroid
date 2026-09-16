@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.nineninefood.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,38 +50,8 @@ class FakeNineNineAuthViewModel : BaseNineNineAuthViewModel() {
 }
 
 @Composable
-fun WgcNineNineLoginScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "99Food",
-                brandLogoText = "99",
-                brandColor = Color(0xFF0B2545),
-                title = "Entrar no 99Food",
-                subtitle = "Peça seus pratos favoritos com cupons exclusivos"
-            )
-
-            SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "Celular ou E-mail")
-            WgcClassicButton(textButton = "Entrar no 99Food", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Esqueci a senha / Entrar por SMS")
-            }
-
-            HorizontalDivider()
-            WgcSocialLoginButtons()
-            WgcSecondaryClassicButton(textButton = "Criar conta no 99Food", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcNineNineLoginScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Esqueci a senha / Entrar por SMS")
 
 @Composable
 fun WgcNineNineRegisterScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

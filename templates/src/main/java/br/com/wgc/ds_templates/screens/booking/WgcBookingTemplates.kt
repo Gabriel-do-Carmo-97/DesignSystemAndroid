@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.booking
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -42,37 +44,17 @@ fun WgcBookingSearchTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcBookingGeniusTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Programa Genius • Benefícios Vitalícios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBookingGeniusTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Programa Genius • Benefícios Vitalícios", modifier = modifier)
 
 @Composable
-fun WgcBookingWishlistTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Lista de Desejos & Hotéis Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBookingWishlistTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Lista de Desejos & Hotéis Salvos", modifier = modifier)
 
 @Composable
-fun WgcBookingReservationsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Confirmações de Reserva & Voucher", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBookingReservationsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Confirmações de Reserva & Voucher", modifier = modifier)
 
 @Composable
-fun WgcBookingProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Booking.com", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBookingProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Booking.com", modifier = modifier)

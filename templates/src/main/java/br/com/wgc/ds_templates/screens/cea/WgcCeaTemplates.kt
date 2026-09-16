@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.cea
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcCeaHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcCeaClubeTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("C&A&VC Clube de Vantagens", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCeaClubeTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "C&A&VC Clube de Vantagens", modifier = modifier)
 
 @Composable
-fun WgcCeaSearchTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Busca Visual & Filtros por Tamanho", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCeaSearchTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Busca Visual & Filtros por Tamanho", modifier = modifier)
 
 @Composable
-fun WgcCeaBagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Compras C&A", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCeaBagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sacola de Compras C&A", modifier = modifier)
 
 @Composable
-fun WgcCeaProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil C&A & Cartão C&A Pay", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCeaProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil C&A & Cartão C&A Pay", modifier = modifier)

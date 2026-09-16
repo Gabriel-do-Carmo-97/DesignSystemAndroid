@@ -53,8 +53,9 @@ fun WgcC6HomeTemplate(
         ) {
             item {
                 WgcPlasticCreditCard(
-                    cardHolder = "GABRIEL CARMO",
-                    invoiceAmount = 3450.00
+                    holderName = "GABRIEL CARMO",
+                    cardLastDigits = "7412",
+                    atomosPoints = 8625
                 )
             }
 

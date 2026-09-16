@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.trello
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcTrelloBoardTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcTrelloCardDetailTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Detalhes do Cartão & Checklist", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTrelloCardDetailTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Detalhes do Cartão & Checklist", modifier = modifier)
 
 @Composable
-fun WgcTrelloCalendarTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Visualização em Calendário & Prazos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTrelloCalendarTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Visualização em Calendário & Prazos", modifier = modifier)
 
 @Composable
-fun WgcTrelloPowerupsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Power-Ups & Automações Butler", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTrelloPowerupsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Power-Ups & Automações Butler", modifier = modifier)
 
 @Composable
-fun WgcTrelloProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Membro & Quadros Salvos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTrelloProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Membro & Quadros Salvos", modifier = modifier)

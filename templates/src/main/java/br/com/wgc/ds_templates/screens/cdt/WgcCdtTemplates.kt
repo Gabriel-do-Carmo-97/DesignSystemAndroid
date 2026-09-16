@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.cdt
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -38,37 +40,17 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcCdtCrlvTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("CRLV Digital (Documento do Veículo)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCdtCrlvTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "CRLV Digital (Documento do Veículo)", modifier = modifier)
 
 @Composable
-fun WgcCdtInfractionsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Infrações & 40% de Desconto no SNE", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCdtInfractionsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Infrações & 40% de Desconto no SNE", modifier = modifier)
 
 @Composable
-fun WgcCdtPointsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Pontuação • 0 Pontos (Sem Multas)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCdtPointsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Histórico de Pontuação • 0 Pontos (Sem Multas)", modifier = modifier)
 
 @Composable
-fun WgcCdtProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Condutor CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCdtProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Condutor CDT", modifier = modifier)

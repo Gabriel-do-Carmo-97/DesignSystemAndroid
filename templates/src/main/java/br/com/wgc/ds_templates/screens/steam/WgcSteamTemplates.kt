@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.steam
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Biblioteca de Jogos Instalados", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Biblioteca de Jogos Instalados", modifier = modifier)
 
 @Composable
-fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Central da Comunidade & Fóruns", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Central da Comunidade & Fóruns", modifier = modifier)
 
 @Composable
-fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Lista de Desejos & Carrinho", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Lista de Desejos & Carrinho", modifier = modifier)
 
 @Composable
-fun WgcSteamProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Steam • Nível 45 & Insígnias", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSteamProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Steam • Nível 45 & Insígnias", modifier = modifier)

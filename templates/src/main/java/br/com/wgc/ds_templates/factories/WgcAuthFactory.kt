@@ -372,7 +372,7 @@ fun WgcAuthFactory(
             }
             WgcBrand.Laza -> {
                 when (flow) {
-                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate(
+                    WgcAuthFlow.Login -> br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInScreenTemplate(
                         onEmailSignInClick = onNavigateToRegister,
                         onCreateAccountClick = onNavigateToRegister
                     )

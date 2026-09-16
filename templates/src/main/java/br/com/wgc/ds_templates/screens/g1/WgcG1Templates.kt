@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.g1
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcG1CategoriesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Categorias: Economia, Política, Tecnologia, Saúde", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcG1CategoriesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Categorias: Economia, Política, Tecnologia, Saúde", modifier = modifier)
 
 @Composable
-fun WgcG1FactCheckTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Fato ou Boato • Verificação de Notícias Falsas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcG1FactCheckTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Fato ou Boato • Verificação de Notícias Falsas", modifier = modifier)
 
 @Composable
-fun WgcG1VideosTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Vídeos & Podcasts g1 (O Assunto)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcG1VideosTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Vídeos & Podcasts g1 (O Assunto)", modifier = modifier)
 
 @Composable
-fun WgcG1ProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Notícias Salvas & Notificações de Plantão", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcG1ProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Notícias Salvas & Notificações de Plantão", modifier = modifier)

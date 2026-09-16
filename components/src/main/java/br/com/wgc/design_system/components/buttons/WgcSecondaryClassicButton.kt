@@ -46,16 +46,6 @@ fun WgcSecondaryClassicButton(
     )
 }
 
-@Deprecated("Utilize WgcSecondaryClassicButton para manter a padronização", ReplaceWith("WgcSecondaryClassicButton(modifier, onClick, isEnabled, textButton)"))
-@Composable
-fun SecondaryClassicButton(
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
-    isEnabled: Boolean = true,
-    textButton: String = "Button"
-) {
-    WgcSecondaryClassicButton(modifier, onClick, isEnabled, textButton)
-}
 
 @Preview(showBackground = true)
 @Composable

@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.notion
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -44,13 +46,8 @@ fun WgcNotionWorkspaceTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNotionKanbanTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Quadro Kanban • Visualização em Colunas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNotionKanbanTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Quadro Kanban • Visualização em Colunas", modifier = modifier)
 
 @Composable
 fun WgcNotionEditorTemplate(modifier: Modifier = Modifier) {
@@ -62,19 +59,9 @@ fun WgcNotionEditorTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNotionHistoryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Edições & Compartilhamento", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNotionHistoryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Histórico de Edições & Compartilhamento", modifier = modifier)
 
 @Composable
-fun WgcNotionProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Notion & Configuração do Time", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNotionProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Notion & Configuração do Time", modifier = modifier)

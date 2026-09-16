@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.ds_templates.screens.laza.auth.WgcLazaEmailSignInTemplate
 import br.com.wgc.ds_templates.screens.laza.auth.WgcLazaIntroScreenTemplate
-import br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInTemplate
+import br.com.wgc.ds_templates.screens.laza.auth.WgcLazaSignInScreenTemplate
 import br.com.wgc.ds_templates.screens.laza.cart.WgcLazaCartTemplate
 import br.com.wgc.ds_templates.screens.laza.checkout.WgcLazaOrderConfirmedTemplate
 import br.com.wgc.ds_templates.screens.laza.home.WgcLazaHomeTemplate
@@ -55,7 +55,7 @@ fun WgcLazaFactory(
             )
         }
         WgcLazaScreen.SignIn -> {
-            WgcLazaSignInTemplate(
+            WgcLazaSignInScreenTemplate(
                 modifier = modifier,
                 onBackClick = { onNavigateToScreen(WgcLazaScreen.Intro) },
                 onEmailSignInClick = { onNavigateToScreen(WgcLazaScreen.EmailSignIn) },

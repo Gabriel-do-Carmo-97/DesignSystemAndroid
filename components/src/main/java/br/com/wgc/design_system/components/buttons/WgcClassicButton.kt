@@ -59,17 +59,6 @@ fun WgcClassicButton(
     )
 }
 
-@Deprecated("Utilize WgcClassicButton para manter a padronização do Design System", ReplaceWith("WgcClassicButton(modifier, onClick, isEnabled, isLoading, textButton)"))
-@Composable
-fun ClassicButton(
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
-    isEnabled: Boolean = true,
-    isLoading: Boolean = false,
-    textButton: String = "Button"
-) {
-    WgcClassicButton(modifier, onClick, isEnabled, isLoading, textButton)
-}
 
 @Preview(showBackground = true , name = "Only Component")
 @Composable

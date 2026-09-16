@@ -127,17 +127,3 @@ private fun WgcPlasticCreditCardPreview() {
         atomosPoints = 14250
     )
 }
-
-@Composable
-fun WgcPlasticCreditCard(
-    cardHolder: String,
-    invoiceAmount: Double,
-    modifier: Modifier = Modifier
-) {
-    WgcPlasticCreditCard(
-        holderName = cardHolder,
-        cardLastDigits = "7412",
-        atomosPoints = (invoiceAmount * 2.5).toInt(),
-        modifier = modifier
-    )
-}

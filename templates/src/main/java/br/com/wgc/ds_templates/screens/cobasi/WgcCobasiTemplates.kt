@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.cobasi
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcCobasiHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcCobasiAmigoTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Amigo Cobasi • Fidelidade & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCobasiAmigoTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Amigo Cobasi • Fidelidade & Descontos", modifier = modifier)
 
 @Composable
-fun WgcCobasiProgramadaTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Compra Programada Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCobasiProgramadaTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Compra Programada Cobasi", modifier = modifier)
 
 @Composable
-fun WgcCobasiCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Compras Cobasi", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCobasiCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho de Compras Cobasi", modifier = modifier)
 
 @Composable
-fun WgcCobasiProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carteira de Vacinação & Perfil do Pet", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCobasiProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carteira de Vacinação & Perfil do Pet", modifier = modifier)

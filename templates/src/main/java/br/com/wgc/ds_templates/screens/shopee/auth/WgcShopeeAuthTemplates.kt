@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.shopee.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,40 +50,8 @@ class FakeShopeeAuthViewModel : BaseShopeeAuthViewModel() {
 }
 
 @Composable
-fun WgcShopeeLoginScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "Shopee",
-                brandLogoText = "S",
-                brandColor = Color(0xFFEE4D2D),
-                title = "Entre na Shopee",
-                subtitle = "Aproveite cupons de frete grátis e ofertas"
-            )
-
-            SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "Telefone, E-mail ou Usuário")
-            SimpleTextField(value = state.password, onValueChange = viewModel::onPasswordChange, label = "Senha")
-
-            WgcClassicButton(textButton = "Entrar", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Esqueceu a senha? / Entrar com SMS")
-            }
-
-            HorizontalDivider()
-            WgcSocialLoginButtons()
-            WgcSecondaryClassicButton(textButton = "Cadastrar-se na Shopee", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcShopeeLoginScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Esqueceu a senha? / Entrar com SMS")
 
 @Composable
 fun WgcShopeeRegisterScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.discord
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcDiscordVoiceTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Canais de Voz & Screen Share", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDiscordVoiceTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Canais de Voz & Screen Share", modifier = modifier)
 
 @Composable
-fun WgcDiscordDirectTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens Diretas (DMs)", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDiscordDirectTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Mensagens Diretas (DMs)", modifier = modifier)
 
 @Composable
-fun WgcDiscordExploreTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Descubra Servidores Públicos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDiscordExploreTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Descubra Servidores Públicos", modifier = modifier)
 
 @Composable
-fun WgcDiscordProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Discord Nitro", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDiscordProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Discord Nitro", modifier = modifier)

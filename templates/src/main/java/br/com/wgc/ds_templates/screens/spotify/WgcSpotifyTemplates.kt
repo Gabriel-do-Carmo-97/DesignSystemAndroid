@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.spotify
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -44,37 +46,17 @@ fun WgcSpotifyHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSpotifySearchTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Buscar Músicas, Podcasts & Playlists", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSpotifySearchTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Buscar Músicas, Podcasts & Playlists", modifier = modifier)
 
 @Composable
-fun WgcSpotifyLibraryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sua Biblioteca & Playlists Curtidas", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSpotifyLibraryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sua Biblioteca & Playlists Curtidas", modifier = modifier)
 
 @Composable
-fun WgcSpotifyPlayerTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player em Reprodução • Letras em Tempo Real", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSpotifyPlayerTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Player em Reprodução • Letras em Tempo Real", modifier = modifier)
 
 @Composable
-fun WgcSpotifyProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Spotify Premium Familiar", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSpotifyProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Spotify Premium Familiar", modifier = modifier)
