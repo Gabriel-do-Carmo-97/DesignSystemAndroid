@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WgcTransactionReceiptUiState</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Design-System-WGC
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":templates:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="templates::br.com.wgc.ds_templates.screens.receipt/WgcTransactionReceiptUiState///PointingToDeclaration//1612300108">
+  <div class="breadcrumbs"><a href="../../index.html">templates</a><span class="delimiter">/</span><a href="../index.html">br.com.wgc.ds_templates.screens.receipt</a><span class="delimiter">/</span><span class="current">WgcTransactionReceiptUiState</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Wgc</span><wbr><span>Transaction</span><wbr><span>Receipt</span><wbr><span>Ui</span><wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">WgcTransactionReceiptUiState</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Comprovante de Transferência"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>statusText<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Transferência enviada com sucesso!"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amountFormatted<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"R"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transactionDate<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"15/09/2026 às 14:35:12"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transactionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"PIX Instantâneo"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recipientName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Maria Helena de Almeida"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recipientDocumentMasked<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"***.382.918-**"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recipientBank<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"WGC Instituição Financeira"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>senderName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Gabriel do Carmo"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>senderBank<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"WGC Instituição Financeira"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authenticationProtocol<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"E00038166202609151435WGC7612984"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalDetails<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-receipt-field/index.html">WgcReceiptField</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcReceiptField("Canal de Atendimento", "Aplicativo Android DS"),
+        WgcReceiptField("Tarifa da operação", "R$ 0,00 (Gratuito)")
+    )</span></span><span class="token punctuation">)</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-445461703%2FConstructors%2F1612300108" anchor-label="WgcTransactionReceiptUiState" id="-445461703%2FConstructors%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-wgc-transaction-receipt-ui-state.html"><span>Wgc</span><wbr><span>Transaction</span><wbr><span>Receipt</span><wbr><span>Ui</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-445461703%2FConstructors%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Comprovante de Transferência"</span><span class="token punctuation">, </span></span><span class="parameter ">statusText<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Transferência enviada com sucesso!"</span><span class="token punctuation">, </span></span><span class="parameter ">amountFormatted<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"R"</span><span class="token punctuation">, </span></span><span class="parameter ">transactionDate<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"15/09/2026 às 14:35:12"</span><span class="token punctuation">, </span></span><span class="parameter ">transactionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"PIX Instantâneo"</span><span class="token punctuation">, </span></span><span class="parameter ">recipientName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Maria Helena de Almeida"</span><span class="token punctuation">, </span></span><span class="parameter ">recipientDocumentMasked<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"***.382.918-**"</span><span class="token punctuation">, </span></span><span class="parameter ">recipientBank<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"WGC Instituição Financeira"</span><span class="token punctuation">, </span></span><span class="parameter ">senderName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Gabriel do Carmo"</span><span class="token punctuation">, </span></span><span class="parameter ">senderBank<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"WGC Instituição Financeira"</span><span class="token punctuation">, </span></span><span class="parameter ">authenticationProtocol<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"E00038166202609151435WGC7612984"</span><span class="token punctuation">, </span></span><span class="parameter ">additionalDetails<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-receipt-field/index.html">WgcReceiptField</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcReceiptField("Canal de Atendimento", "Aplicativo Android DS"),
+        WgcReceiptField("Tarifa da operação", "R$ 0,00 (Gratuito)")
+    )</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1297043876%2FProperties%2F1612300108" anchor-label="additionalDetails" id="1297043876%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-details.html"><span>additional</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1297043876%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-details.html">additionalDetails</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-receipt-field/index.html">WgcReceiptField</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1565128933%2FProperties%2F1612300108" anchor-label="amountFormatted" id="-1565128933%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="amount-formatted.html"><span>amount</span><wbr><span><span>Formatted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1565128933%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="amount-formatted.html">amountFormatted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1297637419%2FProperties%2F1612300108" anchor-label="authenticationProtocol" id="1297637419%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="authentication-protocol.html"><span>authentication</span><wbr><span><span>Protocol</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1297637419%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="authentication-protocol.html">authenticationProtocol</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="584338442%2FProperties%2F1612300108" anchor-label="recipientBank" id="584338442%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recipient-bank.html"><span>recipient</span><wbr><span><span>Bank</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="584338442%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="recipient-bank.html">recipientBank</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1420393664%2FProperties%2F1612300108" anchor-label="recipientDocumentMasked" id="1420393664%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recipient-document-masked.html"><span>recipient</span><wbr><span>Document</span><wbr><span><span>Masked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1420393664%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="recipient-document-masked.html">recipientDocumentMasked</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-836108645%2FProperties%2F1612300108" anchor-label="recipientName" id="-836108645%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recipient-name.html"><span>recipient</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-836108645%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="recipient-name.html">recipientName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-695445654%2FProperties%2F1612300108" anchor-label="senderBank" id="-695445654%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sender-bank.html"><span>sender</span><wbr><span><span>Bank</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-695445654%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sender-bank.html">senderBank</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2115892741%2FProperties%2F1612300108" anchor-label="senderName" id="-2115892741%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sender-name.html"><span>sender</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2115892741%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sender-name.html">senderName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-765314820%2FProperties%2F1612300108" anchor-label="statusText" id="-765314820%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="status-text.html"><span>status</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-765314820%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="status-text.html">statusText</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1977317113%2FProperties%2F1612300108" anchor-label="title" id="-1977317113%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title.html"><span><span>title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1977317113%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1473058739%2FProperties%2F1612300108" anchor-label="transactionDate" id="1473058739%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transaction-date.html"><span>transaction</span><wbr><span><span>Date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1473058739%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="transaction-date.html">transactionDate</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1692414553%2FProperties%2F1612300108" anchor-label="transactionType" id="-1692414553%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transaction-type.html"><span>transaction</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1692414553%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="transaction-type.html">transactionType</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WgcHelpCenterUiState</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Design-System-WGC
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":templates:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="templates::br.com.wgc.ds_templates.screens.support/WgcHelpCenterUiState///PointingToDeclaration//1612300108">
+  <div class="breadcrumbs"><a href="../../index.html">templates</a><span class="delimiter">/</span><a href="../index.html">br.com.wgc.ds_templates.screens.support</a><span class="delimiter">/</span><span class="current">WgcHelpCenterUiState</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Wgc</span><wbr><span>Help</span><wbr><span>Center</span><wbr><span>Ui</span><wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">WgcHelpCenterUiState</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Central de Ajuda"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>searchQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>categories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf("Tudo", "Conta", "Pagamentos", "Segurança", "Cartões")<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selectedCategory<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Tudo"</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>faqs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-faq-item/index.html">WgcSupportFaqItem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcSupportFaqItem(
+            id = "1",
+            question = "Como altero minha senha ou chave de acesso?",
+            answer = "Acesse Perfil &gt; Segurança &gt; Alterar Senha. Você precisará confirmar sua biometria ou código de verificação."
+        ),
+        WgcSupportFaqItem(
+            id = "2",
+            question = "Qual o prazo para compensação de transferências?",
+            answer = "Transferências via PIX ocorrem instantaneamente em até 10 segundos. TEDs são compensadas em até 2 horas úteis."
+        ),
+        WgcSupportFaqItem(
+            id = "3",
+            question = "Como solicitar segunda via do meu comprovante?",
+            answer = "No menu Extrato, localize a transação desejada e clique em 'Ver Comprovante' para compartilhar ou salvar em PDF."
+        )
+    )<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recentTickets<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-ticket/index.html">WgcSupportTicket</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcSupportTicket(
+            id = "ticket-101",
+            protocolNumber = "#WGC-89210",
+            subject = "Dúvida sobre estorno de compra",
+            status = "Em análise",
+            updatedAt = "Hoje às 11:20"
+        )
+    )<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isLoading<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-335723680%2FConstructors%2F1612300108" anchor-label="WgcHelpCenterUiState" id="-335723680%2FConstructors%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-wgc-help-center-ui-state.html"><span>Wgc</span><wbr><span>Help</span><wbr><span>Center</span><wbr><span>Ui</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-335723680%2FConstructors%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Central de Ajuda"</span><span class="token punctuation">, </span></span><span class="parameter ">searchQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">categories<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf("Tudo", "Conta", "Pagamentos", "Segurança", "Cartões")<span class="token punctuation">, </span></span><span class="parameter ">selectedCategory<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Tudo"</span><span class="token punctuation">, </span></span><span class="parameter ">faqs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-faq-item/index.html">WgcSupportFaqItem</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcSupportFaqItem(
+            id = "1",
+            question = "Como altero minha senha ou chave de acesso?",
+            answer = "Acesse Perfil &gt; Segurança &gt; Alterar Senha. Você precisará confirmar sua biometria ou código de verificação."
+        ),
+        WgcSupportFaqItem(
+            id = "2",
+            question = "Qual o prazo para compensação de transferências?",
+            answer = "Transferências via PIX ocorrem instantaneamente em até 10 segundos. TEDs são compensadas em até 2 horas úteis."
+        ),
+        WgcSupportFaqItem(
+            id = "3",
+            question = "Como solicitar segunda via do meu comprovante?",
+            answer = "No menu Extrato, localize a transação desejada e clique em 'Ver Comprovante' para compartilhar ou salvar em PDF."
+        )
+    )<span class="token punctuation">, </span></span><span class="parameter ">recentTickets<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-ticket/index.html">WgcSupportTicket</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(
+        WgcSupportTicket(
+            id = "ticket-101",
+            protocolNumber = "#WGC-89210",
+            subject = "Dúvida sobre estorno de compra",
+            status = "Em análise",
+            updatedAt = "Hoje às 11:20"
+        )
+    )<span class="token punctuation">, </span></span><span class="parameter ">isLoading<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-174813428%2FProperties%2F1612300108" anchor-label="categories" id="-174813428%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="categories.html"><span><span>categories</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-174813428%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="categories.html">categories</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-872014741%2FProperties%2F1612300108" anchor-label="faqs" id="-872014741%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="faqs.html"><span><span>faqs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-872014741%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="faqs.html">faqs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-faq-item/index.html">WgcSupportFaqItem</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="712082432%2FProperties%2F1612300108" anchor-label="isLoading" id="712082432%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-loading.html"><span>is</span><wbr><span><span>Loading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="712082432%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-loading.html">isLoading</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-918591642%2FProperties%2F1612300108" anchor-label="recentTickets" id="-918591642%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recent-tickets.html"><span>recent</span><wbr><span><span>Tickets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-918591642%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="recent-tickets.html">recentTickets</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-wgc-support-ticket/index.html">WgcSupportTicket</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-865273038%2FProperties%2F1612300108" anchor-label="searchQuery" id="-865273038%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="search-query.html"><span>search</span><wbr><span><span>Query</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-865273038%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="search-query.html">searchQuery</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="832269007%2FProperties%2F1612300108" anchor-label="selectedCategory" id="832269007%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="selected-category.html"><span>selected</span><wbr><span><span>Category</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="832269007%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="selected-category.html">selectedCategory</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1922944102%2FProperties%2F1612300108" anchor-label="title" id="-1922944102%2FProperties%2F1612300108" data-filterable-set=":templates:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":templates:dokkaHtmlPartial/release" data-filterable-set=":templates:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title.html"><span><span>title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1922944102%2FProperties%2F1612300108"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":templates:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

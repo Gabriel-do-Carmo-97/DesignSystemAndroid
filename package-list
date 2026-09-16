@@ -9,6 +9,7 @@ br.com.wgc.design_system.commons
 br.com.wgc.design_system.components.alert
 br.com.wgc.design_system.components.auth
 br.com.wgc.design_system.components.avatar
+br.com.wgc.design_system.components.badge
 br.com.wgc.design_system.components.bottomsheet
 br.com.wgc.design_system.components.buttons
 br.com.wgc.design_system.components.buttons.fab
@@ -25,8 +26,11 @@ br.com.wgc.design_system.components.images
 br.com.wgc.design_system.components.inputs
 br.com.wgc.design_system.components.list
 br.com.wgc.design_system.components.navigation
+br.com.wgc.design_system.components.pickers
 br.com.wgc.design_system.components.placeholder
+br.com.wgc.design_system.components.progress
 br.com.wgc.design_system.components.providers_login
+br.com.wgc.design_system.components.pulltorefresh
 br.com.wgc.design_system.components.radio
 br.com.wgc.design_system.components.sections
 br.com.wgc.design_system.components.sections.category
@@ -34,8 +38,10 @@ br.com.wgc.design_system.components.sections.items.category
 br.com.wgc.design_system.components.sections.items.product
 br.com.wgc.design_system.components.sections.product
 br.com.wgc.design_system.components.sections.type
+br.com.wgc.design_system.components.snackbar
 br.com.wgc.design_system.components.stepper
 br.com.wgc.design_system.components.story
+br.com.wgc.design_system.components.tabs
 br.com.wgc.design_system.components.tooltip
 br.com.wgc.design_system.components.tracking
 br.com.wgc.design_system.mock
@@ -44,6 +50,9 @@ module:core
 br.com.wgc.core_ds
 module:navigation-flows
 br.com.wgc.ds_navigation_flows
+br.com.wgc.ds_navigation_flows.auth
+br.com.wgc.ds_navigation_flows.checkout
+br.com.wgc.ds_navigation_flows.onboarding
 module:templates
 br.com.wgc.ds_templates.brand
 br.com.wgc.ds_templates.ecommerces.v1
@@ -124,6 +133,7 @@ br.com.wgc.ds_templates.screens.kutuku.model
 br.com.wgc.ds_templates.screens.kutuku.product
 br.com.wgc.ds_templates.screens.kutuku.profile
 br.com.wgc.ds_templates.screens.kutuku.tracking
+br.com.wgc.ds_templates.screens.kyc
 br.com.wgc.ds_templates.screens.lalamove
 br.com.wgc.ds_templates.screens.laza.auth
 br.com.wgc.ds_templates.screens.laza.cart
@@ -190,6 +200,7 @@ br.com.wgc.ds_templates.screens.quintoandar.home
 br.com.wgc.ds_templates.screens.quintoandar.model
 br.com.wgc.ds_templates.screens.quintoandar.profile
 br.com.wgc.ds_templates.screens.quintoandar.schedule
+br.com.wgc.ds_templates.screens.receipt
 br.com.wgc.ds_templates.screens.register.address.model
 br.com.wgc.ds_templates.screens.register.address.screen
 br.com.wgc.ds_templates.screens.register.address.state
@@ -246,6 +257,7 @@ br.com.wgc.ds_templates.screens.stylish.home
 br.com.wgc.ds_templates.screens.stylish.model
 br.com.wgc.ds_templates.screens.stylish.onboarding
 br.com.wgc.ds_templates.screens.stylish.profile
+br.com.wgc.ds_templates.screens.support
 br.com.wgc.ds_templates.screens.tassel.cart
 br.com.wgc.ds_templates.screens.tassel.featured
 br.com.wgc.ds_templates.screens.tassel.market
