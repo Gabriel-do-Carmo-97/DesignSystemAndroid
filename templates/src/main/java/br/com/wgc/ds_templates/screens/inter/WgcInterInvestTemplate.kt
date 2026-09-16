@@ -27,7 +27,7 @@ fun WgcInterInvestTemplate(
             TopAppBar(
                 title = { Text("Inter Invest", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.interPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechOrange),
                     titleContentColor = Color.White
                 )
             )
@@ -53,7 +53,7 @@ fun WgcInterInvestTemplate(
                             Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                             Text("${item.type} • Mínimo R$ ${"%,.2f".format(item.minimumAmount)}", color = Color.Gray, fontSize = 14.sp)
                         }
-                        Text(item.profitability, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.interPrimary))
+                        Text(item.profitability, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.fintechOrange))
                     }
                 }
             }

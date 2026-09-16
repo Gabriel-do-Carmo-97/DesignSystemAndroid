@@ -45,7 +45,7 @@ fun WgcTechnicalHardwareCard(
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-            Text(text = category, color = Color(WgcCoreDsColors.kabumOrange), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            Text(text = category, color = Color(WgcCoreDsColors.hardwareOrange), fontWeight = FontWeight.Bold, fontSize = 12.sp)
             Text(text = name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(text = "De R$ " + String.format("%.2f", originalPrice), fontSize = 12.sp, color = Color.Gray)
@@ -53,7 +53,7 @@ fun WgcTechnicalHardwareCard(
                 text = "Por R$ " + String.format("%.2f", discountPrice) + " no PIX",
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
-                color = Color(WgcCoreDsColors.kabumOrange)
+                color = Color(WgcCoreDsColors.hardwareOrange)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(text = "Socket: $socket • TDP: ${tdpWatts}W • Score: $benchmarkScore pts", fontSize = 12.sp, color = Color.DarkGray)

@@ -42,7 +42,7 @@ fun WgcStreamingMediaCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(

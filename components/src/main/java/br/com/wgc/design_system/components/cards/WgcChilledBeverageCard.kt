@@ -58,7 +58,7 @@ fun WgcChilledBeverageCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.zeDeliveryYellow)),
+                    .background(Color(WgcCoreDsColors.beverageDeliveryYellow)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(

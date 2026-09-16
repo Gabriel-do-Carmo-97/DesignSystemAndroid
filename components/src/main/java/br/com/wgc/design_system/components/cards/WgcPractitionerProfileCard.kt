@@ -60,13 +60,13 @@ fun WgcPractitionerProfileCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s48.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.doctoraliaGreenLight)),
+                        .background(Color(WgcCoreDsColors.telemedicineGreenLight)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.Person,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.doctoraliaGreen),
+                        tint = Color(WgcCoreDsColors.telemedicineGreen),
                         modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                 }
@@ -107,7 +107,7 @@ fun WgcPractitionerProfileCard(
                         text = "R$ " + String.format("%.2f", consultationFee),
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color(WgcCoreDsColors.doctoraliaGreen)
+                        color = Color(WgcCoreDsColors.telemedicineGreen)
                     )
                 }
                 Text(

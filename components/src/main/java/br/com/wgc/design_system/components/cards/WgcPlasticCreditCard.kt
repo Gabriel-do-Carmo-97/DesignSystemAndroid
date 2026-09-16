@@ -41,7 +41,7 @@ fun WgcPlasticCreditCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Surface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -58,13 +58,13 @@ fun WgcPlasticCreditCard(
                     Icon(
                         imageVector = Icons.Default.CreditCard,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.c6Yellow),
+                        tint = Color(WgcCoreDsColors.fintechYellow),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "C6 Carbon Mastercard Black",
-                        color = Color(WgcCoreDsColors.c6TextPrimary),
+                        color = Color(WgcCoreDsColors.fintechTextPrimary),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -72,7 +72,7 @@ fun WgcPlasticCreditCard(
 
                 Text(
                     text = "•••• $cardLastDigits",
-                    color = Color(WgcCoreDsColors.c6TextSecondary),
+                    color = Color(WgcCoreDsColors.fintechTextSecondary),
                     fontSize = 14.sp
                 )
             }
@@ -88,13 +88,13 @@ fun WgcPlasticCreditCard(
                     Text(
                         text = "Titular",
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.c6TextSecondary)
+                        color = Color(WgcCoreDsColors.fintechTextSecondary)
                     )
                     Text(
                         text = holderName.uppercase(),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.c6TextPrimary)
+                        color = Color(WgcCoreDsColors.fintechTextPrimary)
                     )
                 }
 
@@ -102,7 +102,7 @@ fun WgcPlasticCreditCard(
                     Icon(
                         imageVector = Icons.Default.Diamond,
                         contentDescription = "Pontos Átomos",
-                        tint = Color(WgcCoreDsColors.c6Yellow),
+                        tint = Color(WgcCoreDsColors.fintechYellow),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
@@ -110,7 +110,7 @@ fun WgcPlasticCreditCard(
                         text = "$atomosPoints Átomos",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.c6Yellow)
+                        color = Color(WgcCoreDsColors.fintechYellow)
                     )
                 }
             }

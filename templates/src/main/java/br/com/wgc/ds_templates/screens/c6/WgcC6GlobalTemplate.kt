@@ -24,7 +24,7 @@ fun WgcC6GlobalTemplate(
             TopAppBar(
                 title = { Text("Conta Global Dólar & Euro", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.c6Primary),
+                    containerColor = Color(WgcCoreDsColors.fintechDark),
                     titleContentColor = Color.White
                 )
             )
@@ -37,7 +37,7 @@ fun WgcC6GlobalTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechDark))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                     Text("Saldo em Dólar Comercial", color = Color.Gray, fontSize = 14.sp)

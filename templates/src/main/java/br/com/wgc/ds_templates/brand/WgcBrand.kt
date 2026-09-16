@@ -257,9 +257,9 @@ enum class WgcBrand(
     CTPS("CTPS Digital", "CTPS", Color(0xFF005CA9)),
 
     // Novas Suítes Figma Especializadas
-    DentiCare("DentiCare", "Denti", Color(0xFF00A8B5)),
-    Doctoralia("Doctoralia", "Doc", Color(0xFF00B39B)),
-    ZeDelivery("Zé Delivery", "Zé", Color(0xFFFFCC00)),
-    Webmotors("Webmotors", "WM", Color(0xFFE6192E)),
-    KaBuM("KaBuM!", "KaBuM", Color(0xFFFF6500))
+    Dental("DentiCare", "Denti", Color(0xFF00A8B5)),
+    Telemedicine("Doctoralia", "Doc", Color(0xFF00B39B)),
+    BeverageDelivery("Zé Delivery", "Zé", Color(0xFFFFCC00)),
+    Automotive("Webmotors", "WM", Color(0xFFE6192E)),
+    Hardware("KaBuM!", "KaBuM", Color(0xFFFF6500))
 }

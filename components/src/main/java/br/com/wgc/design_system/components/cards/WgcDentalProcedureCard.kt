@@ -57,13 +57,13 @@ fun WgcDentalProcedureCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s40.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.dentiCareTealLight)),
+                    .background(Color(WgcCoreDsColors.dentalTealLight)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.HealthAndSafety,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.dentiCareTeal),
+                    tint = Color(WgcCoreDsColors.dentalTeal),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -73,7 +73,7 @@ fun WgcDentalProcedureCard(
                     text = "Dente $toothNumber - $toothName",
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = Color(WgcCoreDsColors.dentiCareDark)
+                    color = Color(WgcCoreDsColors.dentalDark)
                 )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {

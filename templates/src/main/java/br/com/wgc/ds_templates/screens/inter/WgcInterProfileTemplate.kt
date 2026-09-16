@@ -25,7 +25,7 @@ fun WgcInterProfileTemplate(
             TopAppBar(
                 title = { Text("Configurações da Conta Inter", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.interPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechOrange),
                     titleContentColor = Color.White
                 )
             )

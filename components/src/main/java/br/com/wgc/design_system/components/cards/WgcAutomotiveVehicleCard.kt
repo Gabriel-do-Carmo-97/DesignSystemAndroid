@@ -57,7 +57,7 @@ fun WgcAutomotiveVehicleCard(
                     text = "R$ " + String.format("%.2f", price),
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = Color(WgcCoreDsColors.webmotorsRed)
+                    color = Color(WgcCoreDsColors.automotiveRed)
                 )
                 Text(
                     text = "FIPE: R$ " + String.format("%.2f", fipePrice),

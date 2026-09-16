@@ -31,7 +31,7 @@ fun WgcNubankPixTemplate(
             TopAppBar(
                 title = { Text("Área Pix & Transferências", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.nubankPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechPurple),
                     titleContentColor = Color.White
                 )
             )
@@ -53,7 +53,7 @@ fun WgcNubankPixTemplate(
                         Button(
                             onClick = onSendPixClick,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.nubankPrimary)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechPurple)),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Text("Transferir com Chave Pix", fontWeight = FontWeight.Bold, color = Color.White)

@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNubankCreditCard
+import br.com.wgc.design_system.components.cards.WgcFintechCreditCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,7 +30,7 @@ fun WgcNubankCardTemplate(
             TopAppBar(
                 title = { Text("Cartão de Crédito", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.nubankPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechPurple),
                     titleContentColor = Color.White
                 )
             )
@@ -42,7 +42,7 @@ fun WgcNubankCardTemplate(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             item {
-                WgcNubankCreditCard(
+                WgcFintechCreditCard(
                     currentInvoice = NubankMockData.sampleCard.currentInvoice,
                     availableLimit = NubankMockData.sampleCard.availableLimit,
                     dueDate = NubankMockData.sampleCard.dueDate

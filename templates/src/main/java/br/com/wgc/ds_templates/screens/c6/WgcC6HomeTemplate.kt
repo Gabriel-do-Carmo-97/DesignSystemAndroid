@@ -33,7 +33,7 @@ fun WgcC6HomeTemplate(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.c6Primary))
+                    .background(Color(WgcCoreDsColors.fintechDark))
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -62,15 +62,15 @@ fun WgcC6HomeTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechDark))
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                         Text("Pontos Átomos", color = Color.Gray, fontSize = 14.sp)
-                        Text("48.500 pts", color = Color(WgcCoreDsColors.c6Yellow), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+                        Text("48.500 pts", color = Color(WgcCoreDsColors.fintechYellow), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
                         Text("Seus pontos nunca expiram!", color = Color.White, fontSize = 14.sp)
                         Button(
                             onClick = onAtomosClick,
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.c6Yellow)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechYellow)),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Text("Ver Catálogo Átomos", color = Color.Black, fontWeight = FontWeight.Bold)
