@@ -30,7 +30,7 @@ fun WgcNubankInvestTemplate(
             TopAppBar(
                 title = { Text("Caixinhas & Investimentos", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.nubankPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechPurple),
                     titleContentColor = Color.White
                 )
             )
@@ -52,11 +52,11 @@ fun WgcNubankInvestTemplate(
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
                         Text("Total guardado em Caixinhas", fontSize = 14.sp, color = Color.Gray)
-                        Text("R$ 35.651,30", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.nubankPrimary))
+                        Text("R$ 35.651,30", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.fintechPurple))
                         Button(
                             onClick = onCreateCaixinhaClick,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.nubankPrimary)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechPurple)),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Icon(Icons.Default.Add, contentDescription = null, tint = Color.White)

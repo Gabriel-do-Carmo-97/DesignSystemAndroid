@@ -20,9 +20,9 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNubankAccountCard
-import br.com.wgc.design_system.components.cards.WgcNubankCreditCard
-import br.com.wgc.design_system.components.cards.WgcNubankPixActionItem
+import br.com.wgc.design_system.components.cards.WgcFinancialBalanceCard
+import br.com.wgc.design_system.components.cards.WgcFintechCreditCard
+import br.com.wgc.design_system.components.cards.WgcFintechPixActionItem
 
 @Composable
 fun WgcNubankHomeTemplate(
@@ -39,7 +39,7 @@ fun WgcNubankHomeTemplate(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.nubankPrimary))
+                    .background(Color(WgcCoreDsColors.fintechPurple))
                     .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp)
             ) {
                 Row(
@@ -74,7 +74,7 @@ fun WgcNubankHomeTemplate(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             item {
-                WgcNubankAccountCard(balance = 5420.75)
+                WgcFinancialBalanceCard(balance = 5420.75)
             }
 
             item {
@@ -82,17 +82,17 @@ fun WgcNubankHomeTemplate(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
                 ) {
-                    WgcNubankPixActionItem(Icons.Default.QrCode, "Área Pix", onPixClick)
-                    WgcNubankPixActionItem(Icons.Default.Receipt, "Pagar", onPayClick)
-                    WgcNubankPixActionItem(Icons.Default.ArrowUpward, "Transferir", onTransferClick)
-                    WgcNubankPixActionItem(Icons.Default.ArrowDownward, "Depositar", onDepositClick)
-                    WgcNubankPixActionItem(Icons.Default.PhoneAndroid, "Recarga", {})
-                    WgcNubankPixActionItem(Icons.Default.MonetizationOn, "Cobrar", {})
+                    WgcFintechPixActionItem(Icons.Default.QrCode, "Área Pix", onPixClick)
+                    WgcFintechPixActionItem(Icons.Default.Receipt, "Pagar", onPayClick)
+                    WgcFintechPixActionItem(Icons.Default.ArrowUpward, "Transferir", onTransferClick)
+                    WgcFintechPixActionItem(Icons.Default.ArrowDownward, "Depositar", onDepositClick)
+                    WgcFintechPixActionItem(Icons.Default.PhoneAndroid, "Recarga", {})
+                    WgcFintechPixActionItem(Icons.Default.MonetizationOn, "Cobrar", {})
                 }
             }
 
             item {
-                WgcNubankCreditCard(
+                WgcFintechCreditCard(
                     currentInvoice = NubankMockData.sampleCard.currentInvoice,
                     availableLimit = NubankMockData.sampleCard.availableLimit,
                     dueDate = NubankMockData.sampleCard.dueDate,

@@ -25,7 +25,7 @@ fun WgcInterCardTemplate(
             TopAppBar(
                 title = { Text("Cartão Inter Mastercard", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.interPrimary),
+                    containerColor = Color(WgcCoreDsColors.fintechOrange),
                     titleContentColor = Color.White
                 )
             )
@@ -38,7 +38,7 @@ fun WgcInterCardTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.interPrimary))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechOrange))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                     Text("Inter Black Mastercard", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)

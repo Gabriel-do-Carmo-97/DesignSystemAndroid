@@ -23,7 +23,7 @@ fun WgcC6ProfileTemplate(
             TopAppBar(
                 title = { Text("Perfil & Segurança C6", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.c6Primary),
+                    containerColor = Color(WgcCoreDsColors.fintechDark),
                     titleContentColor = Color.White
                 )
             )
@@ -36,7 +36,7 @@ fun WgcC6ProfileTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechDark))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
                     Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, color = Color.White)

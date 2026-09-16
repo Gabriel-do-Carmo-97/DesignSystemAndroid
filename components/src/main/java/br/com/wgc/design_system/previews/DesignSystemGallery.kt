@@ -21,13 +21,16 @@ import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.chip.WgcChip
-import br.com.wgc.design_system.components.ifood.*
+import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
+import br.com.wgc.design_system.components.cards.WgcPromotionalProductCard
 import br.com.wgc.design_system.components.inputs.WgcSlider
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
-import br.com.wgc.design_system.components.mercadolivre.*
-import br.com.wgc.design_system.components.nineninefood.*
+import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
+import br.com.wgc.design_system.components.navigation.WgcMarketplaceSearchHeaderBar
 import br.com.wgc.design_system.components.radio.WgcRadioButton
+import br.com.wgc.design_system.components.sections.WgcCircularCategoryRow
+import br.com.wgc.design_system.components.sections.WgcDepartmentCategoryGrid
 import br.com.wgc.design_system.components.story.*
 import br.com.wgc.design_system.components.tooltip.WgcTooltip
 
@@ -124,26 +127,19 @@ fun DesignSystemGalleryScreen(modifier: Modifier = Modifier) {
                 WgcStoryTray(stories = sampleStories, onStoryClick = {})
             }
 
-            // --- 4. IFOOD ---
-            GallerySection(title = "4. Componentes iFood") {
-                WgcIFoodAddressHeader()
-                WgcIFoodCategoryGrid()
-                WgcIFoodRestaurantCard(name = "McDonald's", rating = "4.8", deliveryFee = "Grátis")
+            // --- 4. DELIVERY & RESTAURANTES ---
+            GallerySection(title = "4. Delivery & Restaurantes") {
+                WgcAddressHeaderBar()
+                WgcCircularCategoryRow()
+                WgcMerchantListingCard(name = "Restaurante Exemplo", rating = "4.8", deliveryFee = "Grátis")
             }
 
-            // --- 5. 99FOOD ---
-            GallerySection(title = "5. Componentes 99Food") {
-                WgcNineNineAddressHeader()
-                WgcNineNineCategoryGrid()
-                WgcNineNineRestaurantCard(name = "Pizza Hut", rating = "4.9")
-            }
-
-            // --- 6. MERCADO LIVRE ---
-            GallerySection(title = "6. Componentes Mercado Livre") {
-                WgcMercadoLivreHeader()
-                WgcMercadoLivreCategoryGrid()
+            // --- 5. MARKETPLACE & CATEGORIAS ---
+            GallerySection(title = "5. Marketplace & Categorias") {
+                WgcMarketplaceSearchHeaderBar()
+                WgcDepartmentCategoryGrid()
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    WgcMercadoLivreProductCard(title = "Smart TV 50\" 4K")
+                    WgcPromotionalProductCard(title = "Smart TV 50\" 4K")
                 }
             }
 

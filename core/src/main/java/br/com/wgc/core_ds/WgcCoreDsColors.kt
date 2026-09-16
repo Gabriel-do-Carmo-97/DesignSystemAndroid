@@ -20,20 +20,20 @@ object WgcCoreDsColors {
     const val transparent = Color.TRANSPARENT
 
     // --- 2. CORES BRAND IFOOD ---
-    val ifoodRed = "#EA1D2C".toColorInt()
-    val ifoodRedDark = "#CC1825".toColorInt()
-    val ifoodGreen = "#00A251".toColorInt()
-    val ifoodBgGray = "#F7F7F7".toColorInt()
+    val foodDeliveryRed = "#EA1D2C".toColorInt()
+    val foodDeliveryRedDark = "#CC1825".toColorInt()
+    val foodDeliveryGreen = "#00A251".toColorInt()
+    val foodDeliveryBgGray = "#F7F7F7".toColorInt()
 
     // --- 3. CORES BRAND 99FOOD ---
-    val nineNineDarkBlue = "#0B2545".toColorInt()
-    val nineNineLightBlue = "#1E88E5".toColorInt()
+    val foodDeliveryDarkBlue = "#0B2545".toColorInt()
+    val foodDeliveryLightBlue = "#1E88E5".toColorInt()
 
     // --- 4. CORES BRAND MERCADO LIVRE ---
-    val mercadoLivreYellow = "#FFE600".toColorInt()
-    val mercadoLivreBlue = "#2D3277".toColorInt()
-    val mercadoLivreGreen = "#00A650".toColorInt()
-    val mercadoLivreBgGray = "#EBEBEB".toColorInt()
+    val marketplaceYellow = "#FFE600".toColorInt()
+    val marketplaceBlue = "#2D3277".toColorInt()
+    val marketplaceGreen = "#00A650".toColorInt()
+    val marketplaceBgGray = "#EBEBEB".toColorInt()
 
     // --- 5. NOVAS BRANDS (SHOPEE, UBER, ALIEXPRESS, STYLISH) ---
     val shopeeOrange = "#EE4D2D".toColorInt()
@@ -452,10 +452,10 @@ object WgcCoreDsColors {
     val nubankPurpleDark = "#5A0594".toColorInt()
     val nubankPurpleLight = "#F4EAFB".toColorInt()
     val nubankBackground = "#F5F5F5".toColorInt()
-    val nubankSurface = Color.WHITE
-    val nubankTextPrimary = "#111111".toColorInt()
-    val nubankTextSecondary = "#767676".toColorInt()
-    val nubankBorder = "#E5E5E5".toColorInt()
+    val fintechPurpleSurface = Color.WHITE
+    val fintechPurpleTextPrimary = "#111111".toColorInt()
+    val fintechPurpleTextSecondary = "#767676".toColorInt()
+    val fintechPurpleBorder = "#E5E5E5".toColorInt()
     val nubankMoneyGreen = "#00875A".toColorInt()
 
     // --- INTER TOKENS (CATEGORIA 5: FINTECH & BANCOS DIGITAIS) ---
@@ -473,12 +473,12 @@ object WgcCoreDsColors {
     val c6Carbon = "#242424".toColorInt() // Carbon C6 Bank
     val c6CarbonDark = "#141414".toColorInt()
     val c6CarbonLight = "#EAEAEA".toColorInt()
-    val c6Yellow = "#FFD100".toColorInt() // Amarelo Átomos Pontos C6
+    val fintechYellow = "#FFD100".toColorInt() // Amarelo Átomos Pontos C6
     val c6YellowLight = "#FFFBE6".toColorInt()
     val c6Background = "#121212".toColorInt()
-    val c6Surface = "#1E1E1E".toColorInt()
-    val c6TextPrimary = Color.WHITE
-    val c6TextSecondary = "#A0A0A0".toColorInt()
+    val fintechSurface = "#1E1E1E".toColorInt()
+    val fintechTextPrimary = Color.WHITE
+    val fintechTextSecondary = "#A0A0A0".toColorInt()
     val c6Border = "#2D2D2D".toColorInt()
 
     // --- CATEGORIA 6: MOBILIDADE & TRANSPORTE ---
@@ -570,10 +570,10 @@ object WgcCoreDsColors {
     val gray800 = "#424242".toColorInt()
 
     // Brand Aliases
-    val nubankPrimary = "#820AD1".toColorInt()
-    val interPrimary = "#FF7A00".toColorInt()
+    val fintechPurple = "#820AD1".toColorInt()
+    val fintechOrange = "#FF7A00".toColorInt()
     val interSecondary = "#FF5000".toColorInt()
-    val c6Primary = "#242424".toColorInt()
+    val fintechDark = "#242424".toColorInt()
     val novenoveYellow = "#FFCC00".toColorInt()
     val uolYellow = "#FFCC00".toColorInt()
 
@@ -602,29 +602,29 @@ object WgcCoreDsColors {
 
     // --- NOVAS SUÍTES FIGMA (ODONTO, TELEMEDICINA, ZÉ DELIVERY, WEBMOTORS, KABUM) ---
     // 1. Odontologia (DentiCare / OdontoPrev)
-    val dentiCareTeal = Color.parseColor("#00A8B5")
-    val dentiCareTealLight = Color.parseColor("#E0F7FA")
-    val dentiCareDark = Color.parseColor("#004D54")
+    val dentalTeal = Color.parseColor("#00A8B5")
+    val dentalTealLight = Color.parseColor("#E0F7FA")
+    val dentalDark = Color.parseColor("#004D54")
 
     // 2. Telemedicina (Doctoralia / Dr. Consulta)
-    val doctoraliaGreen = Color.parseColor("#00B39B")
-    val doctoraliaNavy = Color.parseColor("#002B49")
-    val doctoraliaGreenLight = Color.parseColor("#E6F8F5")
+    val telemedicineGreen = Color.parseColor("#00B39B")
+    val telemedicineNavy = Color.parseColor("#002B49")
+    val telemedicineGreenLight = Color.parseColor("#E6F8F5")
 
     // 3. Drinks Delivery (Zé Delivery)
-    val zeDeliveryYellow = Color.parseColor("#FFCC00")
-    val zeDeliveryDark = Color.parseColor("#111111")
-    val zeDeliveryRed = Color.parseColor("#E31837")
+    val beverageDeliveryYellow = Color.parseColor("#FFCC00")
+    val beverageDeliveryDark = Color.parseColor("#111111")
+    val beverageDeliveryRed = Color.parseColor("#E31837")
 
     // 4. Automotivo & Car Marketplace (Webmotors / iCarros)
-    val webmotorsRed = Color.parseColor("#E6192E")
-    val webmotorsDark = Color.parseColor("#1A1D20")
-    val webmotorsGray = Color.parseColor("#2C3238")
-    val webmotorsGreen = Color.parseColor("#00A868")
+    val automotiveRed = Color.parseColor("#E6192E")
+    val automotiveDark = Color.parseColor("#1A1D20")
+    val automotiveGray = Color.parseColor("#2C3238")
+    val automotiveGreen = Color.parseColor("#00A868")
 
     // 5. Eletrônicos & Hardware Specs (KaBuM! / Hardware)
-    val kabumOrange = Color.parseColor("#FF6500")
-    val kabumNavy = Color.parseColor("#002B49")
-    val kabumOrangeLight = Color.parseColor("#FFF0E6")
-    val kabumNinjaBlack = Color.parseColor("#121212")
+    val hardwareOrange = Color.parseColor("#FF6500")
+    val hardwareNavy = Color.parseColor("#002B49")
+    val hardwareOrangeLight = Color.parseColor("#FFF0E6")
+    val hardwareNinjaBlack = Color.parseColor("#121212")
 }

@@ -27,7 +27,7 @@ fun WgcC6AtomosTemplate(
             TopAppBar(
                 title = { Text("Átomos C6 Store", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.c6Primary),
+                    containerColor = Color(WgcCoreDsColors.fintechDark),
                     titleContentColor = Color.White
                 )
             )
@@ -42,7 +42,7 @@ fun WgcC6AtomosTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.c6Primary))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechDark))
                 ) {
                     Row(
                         modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -53,7 +53,7 @@ fun WgcC6AtomosTemplate(
                             Text(reward.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp)
                             Text(reward.category, color = Color.Gray, fontSize = 14.sp)
                         }
-                        Text("${reward.pointsRequired} pts", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.c6Yellow))
+                        Text("${reward.pointsRequired} pts", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.fintechYellow))
                     }
                 }
             }

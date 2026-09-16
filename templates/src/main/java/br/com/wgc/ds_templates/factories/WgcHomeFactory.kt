@@ -21,16 +21,16 @@ import br.com.wgc.design_system.components.cards.WgcCardFactory
 import br.com.wgc.design_system.components.cards.WgcCardType
 import br.com.wgc.design_system.components.fields.WgcFieldFactory
 import br.com.wgc.design_system.components.fields.WgcFieldType
-import br.com.wgc.design_system.components.ifood.WgcIFoodAddressHeader
+import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
 import br.com.wgc.design_system.components.navigation.WgcMenuFactory
 import br.com.wgc.design_system.components.navigation.WgcMenuType
 import br.com.wgc.ds_templates.brand.WgcBrand
 import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
-import br.com.wgc.ds_templates.screens.ifood.FakeIFoodHomeViewModel
-import br.com.wgc.ds_templates.screens.ifood.IFoodHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.mercadolivre.FakeMercadoLivreHomeViewModel
-import br.com.wgc.ds_templates.screens.mercadolivre.MercadoLivreHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.fooddelivery.FakeFoodDeliveryHomeViewModel
+import br.com.wgc.ds_templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
+import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.nineninefood.FakeNineNineFoodHomeViewModel
 import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTemplate
 
@@ -55,8 +55,8 @@ fun WgcHomeFactory(
 
     if (!hasCustomSlots) {
         when (brand) {
-            WgcBrand.IFood -> IFoodHomeScreenTemplate(FakeIFoodHomeViewModel())
-            WgcBrand.MercadoLivre -> MercadoLivreHomeScreenTemplate(FakeMercadoLivreHomeViewModel())
+            WgcBrand.IFood -> WgcFoodDeliveryHomeScreenTemplate(FakeFoodDeliveryHomeViewModel())
+            WgcBrand.MercadoLivre -> WgcMarketplaceHomeScreenTemplate(FakeMarketplaceHomeViewModel())
             WgcBrand.NineNineFood -> NineNineFoodHomeScreenTemplate(FakeNineNineFoodHomeViewModel())
             WgcBrand.Uber,
             WgcBrand.Shopee,
@@ -97,7 +97,7 @@ fun WgcHomeFactory(
                     color = MaterialTheme.colorScheme.surface,
                     tonalElevation = 2.dp
                 ) {
-                    WgcIFoodAddressHeader(
+                    WgcAddressHeaderBar(
                         address = "Endereço Principal - ${brand.brandName}",
                         searchQuery = "",
                         onAddressClick = {},

@@ -34,7 +34,7 @@ fun WgcInterHomeTemplate(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.interPrimary))
+                    .background(Color(WgcCoreDsColors.fintechOrange))
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Row(

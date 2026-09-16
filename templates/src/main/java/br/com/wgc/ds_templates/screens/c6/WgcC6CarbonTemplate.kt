@@ -9,7 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcC6CarbonCard
+import br.com.wgc.design_system.components.cards.WgcPlasticCreditCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -22,7 +22,7 @@ fun WgcC6CarbonTemplate(
             TopAppBar(
                 title = { Text("Cartão C6 Carbon Black", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.c6Primary),
+                    containerColor = Color(WgcCoreDsColors.fintechDark),
                     titleContentColor = Color.White
                 )
             )
@@ -32,7 +32,7 @@ fun WgcC6CarbonTemplate(
             modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            WgcC6CarbonCard(
+            WgcPlasticCreditCard(
                 cardHolder = "GABRIEL CARMO",
                 invoiceAmount = 3450.00
             )
