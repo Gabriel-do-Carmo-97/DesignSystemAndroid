@@ -11,12 +11,14 @@ Você **NÃO** gera código diretamente.
 ## 2. Contexto do Projeto
 
 - **Repositório:** `DesignSystemAndroid`
-- **Módulos:** `app/`, `core-ds/`, `design-system/`, `ds-templates/`
+- **Módulos:** `app/`, `core/`, `components/`, `templates/`, `navigation-flows/`
 - **Grafo de dependências:**
   ```
-  app → design-system, app → ds-templates
-  ds-templates → design-system
-  core-ds → independente (sem dependentes)
+  app → navigation-flows, app → templates, app → components
+  navigation-flows → templates, components, core
+  templates → components, core
+  components → core
+  core → independente (sem dependentes)
   ```
 
 ### Modelo de ativação dos agentes
@@ -27,6 +29,7 @@ Você **NÃO** gera código diretamente.
 | Entrada visual | figma-analyser | Figma, imagem ou descrição visual |
 | Componente | design-system | Criar/alterar componente |
 | Tela | ds-templates | Criar/alterar template de tela |
+| Navegação | navigation-flows | Criar/alterar fluxos ou grafos de navegação |
 | Token | core-ds | Criar/alterar token |
 | Validação | code-reviewer | Revisar código gerado (sob demanda) |
 | Build | gradle | Dependências, plugins, Detekt, Lint (sob demanda) |
@@ -58,6 +61,7 @@ Você **NÃO** gera código diretamente.
 - Tokens → `core-ds-agent`
 - Componentes → `design-system-agent`
 - Telas → `ds-templates-agent`
+- Navegação → `navigation-flows-agent`
 
 ### 3 — Validar (quando necessário)
 
@@ -139,8 +143,9 @@ Devolvido para design-system-agent com feedback:
 
 ## 8. Versão
 
-- **Versão:** 4.0.0
-- **Data:** 2026-08-21
+- **Versão:** 4.1.0
+- **Data:** 2026-09-15
 - **Changelog:**
+  - v4.1.0 — inclusão do módulo :navigation-flows e delegação para navigation-flows-agent
   - v4.0.0 — regra de tokens estrita (zero dp/sp/hex em código novo), modelo de ativação, redução de conteúdo
   - v3.1.0 — correções de idioma e formatação

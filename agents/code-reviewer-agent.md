@@ -10,7 +10,7 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 
 ## 2. Contexto do Projeto
 
-- **Módulos:** `core-ds/` (tokens), `design-system/` (componentes), `ds-templates/` (telas)
+- **Módulos:** `core/` (tokens), `components/` (componentes), `templates/` (telas), `navigation-flows/` (grafos e fluxos)
 - **Tooling ativo:** Screenshot Test (nativo), JUnit, MockK
 - **Tooling planejado:** Detekt, Lint (não configurados ainda)
 - **Imagens:** Coil 3 — `AsyncImage`, `SubcomposeAsyncImage`, `AsyncImagePainter`
@@ -44,6 +44,16 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 - [ ] `@Preview` (default + loading + error)?
 - [ ] Sem API/navegação concreta (apenas callbacks)?
 - [ ] Zero valores mágicos em código novo?
+
+### Padrões (`navigation-flows`)
+- [ ] Rotas Type-Safe com `@Serializable` (classes/objetos tipados)?
+- [ ] Extensões no `NavGraphBuilder` (ex: `NavGraphBuilder.authGraph(...)`)?
+- [ ] Desacoplamento entre fluxos (saídas e ramificações via callbacks)?
+- [ ] Flow Factory com Sensible Defaults e Slots para customização granular?
+- [ ] Reuso estrito de templates de `:templates` e componentes de `:components` (sem recriar UI)?
+- [ ] Zero valores mágicos (tokens via `MaterialTheme` ou `:core`)?
+- [ ] Gestão segura de backstack (`launchSingleTop`, `popUpTo`)?
+- [ ] Testes de navegação implementados (`TestNavHostController`)?
 
 ### Padrões (`core-ds`)
 - [ ] Primitivas usam hex corretamente?
@@ -161,8 +171,9 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 
 ## 9. Versão
 
-- **Versão:** 3.0.0
-- **Data:** 2026-08-21
+- **Versão:** 3.1.0
+- **Data:** 2026-09-15
 - **Changelog:**
+  - v3.1.0 — adição de checklist específico para o módulo :navigation-flows
   - v3.0.0 — regra de tokens estrita, Coil3 corrigido (AsyncImage/AsyncImagePainter), exemplos adicionados, reduzido
   - v2.0.0 — checklists de a11y e performance
