@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.dominos
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcDominosBuildTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcDominosTrackerTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Pizza Tracker • Acompanhe o Forno e a Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDominosTrackerTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Pizza Tracker • Acompanhe o Forno e a Entrega", modifier = modifier)
 
 @Composable
-fun WgcDominosOffersTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ofertas 2 por 1 • Terça em Dobro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDominosOffersTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Ofertas 2 por 1 • Terça em Dobro", modifier = modifier)
 
 @Composable
-fun WgcDominosCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Pedidos Domino's", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDominosCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho de Pedidos Domino's", modifier = modifier)
 
 @Composable
-fun WgcDominosProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Domino's & Endereços de Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDominosProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Domino's & Endereços de Entrega", modifier = modifier)

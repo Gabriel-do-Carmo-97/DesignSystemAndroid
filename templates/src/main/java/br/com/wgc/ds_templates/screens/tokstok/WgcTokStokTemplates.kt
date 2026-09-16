@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.tokstok
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcTokStokHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcTokStokEnvironmentsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Ambientes Inspiradores • Decore Fácil", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTokStokEnvironmentsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Ambientes Inspiradores • Decore Fácil", modifier = modifier)
 
 @Composable
-fun WgcTokStokArTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Realidade Aumentada (RA) & Medidas 3D", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTokStokArTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Realidade Aumentada (RA) & Medidas 3D", modifier = modifier)
 
 @Composable
-fun WgcTokStokCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Decoração Tok&Stok", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTokStokCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho de Decoração Tok&Stok", modifier = modifier)
 
 @Composable
-fun WgcTokStokProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil & Lista de Casamento/Chá de Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTokStokProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil & Lista de Casamento/Chá de Casa", modifier = modifier)

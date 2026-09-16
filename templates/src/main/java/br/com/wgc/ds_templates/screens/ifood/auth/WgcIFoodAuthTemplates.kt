@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.ifood.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,45 +50,8 @@ class FakeIFoodAuthViewModel : BaseIFoodAuthViewModel() {
 }
 
 @Composable
-fun WgcIFoodLoginScreenTemplate(viewModel: BaseIFoodAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "iFood",
-                brandLogoText = "iF",
-                brandColor = Color(0xFFEA1D2C),
-                title = "Falta pouco para matar sua fome!",
-                subtitle = "Como deseja continuar?"
-            )
-
-            SimpleTextField(
-                value = state.emailOrPhone,
-                onValueChange = viewModel::onEmailOrPhoneChange,
-                label = "E-mail ou número de celular"
-            )
-
-            WgcClassicButton(textButton = "Continuar", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Esqueci minha senha / Verificar por SMS")
-            }
-
-            HorizontalDivider()
-
-            WgcSocialLoginButtons()
-
-            WgcSecondaryClassicButton(textButton = "Criar nova conta no iFood", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcIFoodLoginScreenTemplate(viewModel: BaseIFoodAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Esqueci minha senha / Verificar por SMS")
 
 @Composable
 fun WgcIFoodRegisterScreenTemplate(viewModel: BaseIFoodAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

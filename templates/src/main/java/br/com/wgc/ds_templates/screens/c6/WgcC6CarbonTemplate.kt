@@ -33,8 +33,9 @@ fun WgcC6CarbonTemplate(
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             WgcPlasticCreditCard(
-                cardHolder = "GABRIEL CARMO",
-                invoiceAmount = 3450.00
+                holderName = "GABRIEL CARMO",
+                cardLastDigits = "7412",
+                atomosPoints = 8625
             )
         }
     }

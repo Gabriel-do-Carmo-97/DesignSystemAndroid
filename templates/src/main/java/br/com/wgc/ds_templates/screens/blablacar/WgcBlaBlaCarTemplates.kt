@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.blablacar
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcBlaBlaCarSearchTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcBlaBlaCarOfferTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Oferecer Carona no BlaBlaCar", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBlaBlaCarOfferTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Oferecer Carona no BlaBlaCar", modifier = modifier)
 
 @Composable
-fun WgcBlaBlaCarBookingsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Reservas & Chat com o Motorista", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBlaBlaCarBookingsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minhas Reservas & Chat com o Motorista", modifier = modifier)
 
 @Composable
-fun WgcBlaBlaCarAlertsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Alertas de Trajetos & Novas Vagas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBlaBlaCarAlertsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Alertas de Trajetos & Novas Vagas", modifier = modifier)
 
 @Composable
-fun WgcBlaBlaCarProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Membro & Avaliações", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBlaBlaCarProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Membro & Avaliações", modifier = modifier)

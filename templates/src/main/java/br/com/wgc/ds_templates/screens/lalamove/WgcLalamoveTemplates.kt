@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.lalamove
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcLalamoveQuoteTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcLalamoveRouteTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Rota com Múltiplas Paradas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLalamoveRouteTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Rota com Múltiplas Paradas", modifier = modifier)
 
 @Composable
-fun WgcLalamoveTrackingTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Rastreamento ao Vivo do Motorista Parceiro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLalamoveTrackingTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Rastreamento ao Vivo do Motorista Parceiro", modifier = modifier)
 
 @Composable
-fun WgcLalamoveOrdersTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Pedidos de Entrega", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLalamoveOrdersTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Histórico de Pedidos de Entrega", modifier = modifier)
 
 @Composable
-fun WgcLalamoveProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Lalamove & Conta Corporativa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLalamoveProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Lalamove & Conta Corporativa", modifier = modifier)

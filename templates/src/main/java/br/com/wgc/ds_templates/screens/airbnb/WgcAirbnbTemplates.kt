@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.airbnb
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcAirbnbExploreTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcAirbnbDetailsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Detalhes & Comodidades da Estadia", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAirbnbDetailsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Detalhes & Comodidades da Estadia", modifier = modifier)
 
 @Composable
-fun WgcAirbnbMessagesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Mensagens com Anfitriões", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAirbnbMessagesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Mensagens com Anfitriões", modifier = modifier)
 
 @Composable
-fun WgcAirbnbTripsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Viagens & Check-in", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAirbnbTripsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minhas Viagens & Check-in", modifier = modifier)
 
 @Composable
-fun WgcAirbnbProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Airbnb • Modo Anfitrião", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcAirbnbProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Airbnb • Modo Anfitrião", modifier = modifier)

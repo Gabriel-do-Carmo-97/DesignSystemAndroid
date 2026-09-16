@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.petz
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -42,37 +44,17 @@ fun WgcPetzHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcPetzSubscriptionTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Assinatura Petz • 10% OFF em Todas as Entregas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPetzSubscriptionTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Assinatura Petz • 10% OFF em Todas as Entregas", modifier = modifier)
 
 @Composable
-fun WgcPetzClinicTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Centro Veterinário Seres & Banho/Tosa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPetzClinicTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Centro Veterinário Seres & Banho/Tosa", modifier = modifier)
 
 @Composable
-fun WgcPetzCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho de Compras Petz", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPetzCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho de Compras Petz", modifier = modifier)
 
 @Composable
-fun WgcPetzProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil dos Meus Pets (Bob & Luna)", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcPetzProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil dos Meus Pets (Bob & Luna)", modifier = modifier)

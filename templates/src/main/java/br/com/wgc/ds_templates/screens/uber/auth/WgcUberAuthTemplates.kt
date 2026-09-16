@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.uber.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,38 +50,8 @@ class FakeUberAuthViewModel : BaseUberAuthViewModel() {
 }
 
 @Composable
-fun WgcUberLoginScreenTemplate(viewModel: BaseUberAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "Uber",
-                brandLogoText = "Uber",
-                brandColor = Color(0xFF111111),
-                title = "Vá a qualquer lugar com a Uber",
-                subtitle = "Insira seu número ou e-mail"
-            )
-
-            SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "Celular ou E-mail")
-            WgcClassicButton(textButton = "Avançar", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Ajuda para entrar / Código por SMS")
-            }
-
-            HorizontalDivider()
-            WgcSocialLoginButtons()
-            WgcSecondaryClassicButton(textButton = "Criar conta na Uber", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcUberLoginScreenTemplate(viewModel: BaseUberAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Ajuda para entrar / Código por SMS")
 
 @Composable
 fun WgcUberRegisterScreenTemplate(viewModel: BaseUberAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

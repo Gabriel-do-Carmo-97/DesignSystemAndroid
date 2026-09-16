@@ -169,26 +169,6 @@ fun WgcLazaIntroScreenTemplate(
 /**
  * Tela de boas-vindas e login social do Laza (WgcLazaSignInScreenTemplate).
  */
-@Composable
-fun WgcLazaSignInTemplate(
-    modifier: Modifier = Modifier,
-    onFacebookClick: () -> Unit = {},
-    onTwitterClick: () -> Unit = {},
-    onGoogleClick: () -> Unit = {},
-    onEmailSignInClick: () -> Unit = {},
-    onCreateAccountClick: () -> Unit = {},
-    onBackClick: () -> Unit = {}
-) {
-    WgcLazaSignInScreenTemplate(
-        modifier = modifier,
-        onFacebookClick = onFacebookClick,
-        onTwitterClick = onTwitterClick,
-        onGoogleClick = onGoogleClick,
-        onEmailSignInClick = onEmailSignInClick,
-        onCreateAccountClick = onCreateAccountClick,
-        onBackClick = onBackClick
-    )
-}
 
 @Composable
 fun WgcLazaSignInScreenTemplate(

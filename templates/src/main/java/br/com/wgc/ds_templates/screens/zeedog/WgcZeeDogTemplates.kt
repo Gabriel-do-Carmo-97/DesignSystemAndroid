@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.zeedog
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcZeeDogHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Zee.Dog Kitchen • Alimentação Natural Completa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcZeeDogKitchenTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Zee.Dog Kitchen • Alimentação Natural Completa", modifier = modifier)
 
 @Composable
-fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Coleiras, Guias & Conectores", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcZeeDogAccessoriesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Coleiras, Guias & Conectores", modifier = modifier)
 
 @Composable
-fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho Zee.Dog", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcZeeDogCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho Zee.Dog", modifier = modifier)
 
 @Composable
-fun WgcZeeDogProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Zee.Club", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcZeeDogProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Zee.Club", modifier = modifier)

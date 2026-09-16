@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.ctps
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcCtpsSalaryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Dados Salariais & Abono PIS", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCtpsSalaryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Dados Salariais & Abono PIS", modifier = modifier)
 
 @Composable
-fun WgcCtpsBenefitsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Seguro-Desemprego & Benefícios do Trabalhador", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCtpsBenefitsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Seguro-Desemprego & Benefícios do Trabalhador", modifier = modifier)
 
 @Composable
-fun WgcCtpsDeclarationsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Declarações de Vínculo & Anotações de Férias", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCtpsDeclarationsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Declarações de Vínculo & Anotações de Férias", modifier = modifier)
 
 @Composable
-fun WgcCtpsProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Trabalhador CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcCtpsProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Trabalhador CTPS", modifier = modifier)

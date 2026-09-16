@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.leroymerlin
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcLeroyMerlinClubeTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube Leroy Merlin Com Você", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLeroyMerlinClubeTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Clube Leroy Merlin Com Você", modifier = modifier)
 
 @Composable
-fun WgcLeroyMerlinCalculatorTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Calculadora de Materiais & Tinta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLeroyMerlinCalculatorTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Calculadora de Materiais & Tinta", modifier = modifier)
 
 @Composable
-fun WgcLeroyMerlinCartTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Carrinho & Agendamento de Entrega de Obra", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLeroyMerlinCartTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Carrinho & Agendamento de Entrega de Obra", modifier = modifier)
 
 @Composable
-fun WgcLeroyMerlinProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Conta & Projetos de Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLeroyMerlinProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minha Conta & Projetos de Reforma", modifier = modifier)

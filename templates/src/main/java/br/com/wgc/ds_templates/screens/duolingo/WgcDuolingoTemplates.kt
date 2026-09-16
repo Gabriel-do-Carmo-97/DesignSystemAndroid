@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.duolingo
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -52,37 +54,17 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Desafio de Pronúncia & Escuta", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDuolingoPronounceTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Desafio de Pronúncia & Escuta", modifier = modifier)
 
 @Composable
-fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Divisão Diamante • Ligas Semanais", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDuolingoLeaguesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Divisão Diamante • Ligas Semanais", modifier = modifier)
 
 @Composable
-fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Loja de Gemas & Bloqueio de Ofensiva", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDuolingoShopTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Loja de Gemas & Bloqueio de Ofensiva", modifier = modifier)
 
 @Composable
-fun WgcDuolingoProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Estudante & Conquistas", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcDuolingoProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Estudante & Conquistas", modifier = modifier)

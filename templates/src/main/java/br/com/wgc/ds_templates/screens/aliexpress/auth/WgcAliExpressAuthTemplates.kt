@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.aliexpress.auth
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -48,40 +50,8 @@ class FakeAliExpressAuthViewModel : BaseAliExpressAuthViewModel() {
 }
 
 @Composable
-fun WgcAliExpressLoginScreenTemplate(viewModel: BaseAliExpressAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) {
-    val state by viewModel.uiState.collectAsState()
-    Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            WgcBrandAuthHeader(
-                brandName = "AliExpress",
-                brandLogoText = "Ali",
-                brandColor = Color(0xFFFF4747),
-                title = "Entrar no AliExpress",
-                subtitle = "Encontre ofertas globais incríveis e frete Choice"
-            )
-
-            SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "E-mail ou número de telefone")
-            SimpleTextField(value = state.password, onValueChange = viewModel::onPasswordChange, label = "Senha")
-
-            WgcClassicButton(textButton = "Entrar", onClick = viewModel::onSubmit)
-
-            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                Text("Esqueceu a senha?")
-            }
-
-            HorizontalDivider()
-            WgcSocialLoginButtons()
-            WgcSecondaryClassicButton(textButton = "Criar conta no AliExpress", onClick = onNavigateToRegister)
-        }
-    }
-}
+fun WgcAliExpressLoginScreenTemplate(viewModel: BaseAliExpressAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+    WgcGenericPlaceholderTemplate(title = "Esqueceu a senha?")
 
 @Composable
 fun WgcAliExpressRegisterScreenTemplate(viewModel: BaseAliExpressAuthViewModel, onNavigateToLogin: () -> Unit = {}) {

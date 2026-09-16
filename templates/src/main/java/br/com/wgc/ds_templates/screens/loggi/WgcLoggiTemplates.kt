@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.loggi
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcLoggiSendTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Solicitar Envio de Pacote", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLoggiSendTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Solicitar Envio de Pacote", modifier = modifier)
 
 @Composable
-fun WgcLoggiDeliveriesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Entregas em Andamento", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLoggiDeliveriesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minhas Entregas em Andamento", modifier = modifier)
 
 @Composable
-fun WgcLoggiHistoryTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico Completo de Envios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLoggiHistoryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Histórico Completo de Envios", modifier = modifier)
 
 @Composable
-fun WgcLoggiProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil de Remetente / Empresa", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcLoggiProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil de Remetente / Empresa", modifier = modifier)

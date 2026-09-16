@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.uol
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Economia & Cotações em Tempo Real", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcUolEconomyTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "UOL Economia & Cotações em Tempo Real", modifier = modifier)
 
 @Composable
-fun WgcUolSportsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("UOL Esporte • Placar ao Vivo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcUolSportsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "UOL Esporte • Placar ao Vivo", modifier = modifier)
 
 @Composable
-fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Colunistas & Opinião UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcUolOpinionTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Colunistas & Opinião UOL", modifier = modifier)
 
 @Composable
-fun WgcUolProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Conta UOL & Clube UOL", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcUolProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Conta UOL & Clube UOL", modifier = modifier)

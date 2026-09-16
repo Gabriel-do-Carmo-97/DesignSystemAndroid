@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.indrive
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -60,28 +62,13 @@ fun WgcInDriveIntercityTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcInDriveBidsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Histórico de Lances & Negociações", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcInDriveBidsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Histórico de Lances & Negociações", modifier = modifier)
 
 @Composable
-fun WgcInDriveRatingsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minhas Avaliações e Confiança", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcInDriveRatingsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minhas Avaliações e Confiança", modifier = modifier)
 
 @Composable
-fun WgcInDriveProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil do Usuário inDrive", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcInDriveProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Usuário inDrive", modifier = modifier)

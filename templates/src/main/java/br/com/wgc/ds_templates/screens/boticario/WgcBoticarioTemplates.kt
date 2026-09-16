@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.boticario
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcBoticarioClubeTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Clube Viva O Boticário • Resgate de Prêmios", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBoticarioClubeTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Clube Viva O Boticário • Resgate de Prêmios", modifier = modifier)
 
 @Composable
-fun WgcBoticarioDiagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Diagnóstico Facial & Dicas de Skincare", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBoticarioDiagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Diagnóstico Facial & Dicas de Skincare", modifier = modifier)
 
 @Composable
-fun WgcBoticarioBagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Beleza • Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBoticarioBagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sacola de Beleza • Amostras Grátis", modifier = modifier)
 
 @Composable
-fun WgcBoticarioProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil Viva O Boticário", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcBoticarioProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Meu Perfil Viva O Boticário", modifier = modifier)

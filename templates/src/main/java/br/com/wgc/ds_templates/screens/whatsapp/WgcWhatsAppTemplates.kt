@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.whatsapp
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -43,37 +45,17 @@ fun WgcWhatsAppChatsTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcWhatsAppStatusTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Atualizações de Status", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcWhatsAppStatusTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Atualizações de Status", modifier = modifier)
 
 @Composable
-fun WgcWhatsAppCallsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chamadas de Voz & Vídeo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcWhatsAppCallsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Chamadas de Voz & Vídeo", modifier = modifier)
 
 @Composable
-fun WgcWhatsAppCommunitiesTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Comunidades & Avisos Oficiais", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcWhatsAppCommunitiesTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Comunidades & Avisos Oficiais", modifier = modifier)
 
 @Composable
-fun WgcWhatsAppSettingsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Configurações & Privacidade", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcWhatsAppSettingsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Configurações & Privacidade", modifier = modifier)

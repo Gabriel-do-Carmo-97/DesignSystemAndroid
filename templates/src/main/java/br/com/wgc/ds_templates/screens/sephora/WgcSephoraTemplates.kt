@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.sephora
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -42,37 +44,17 @@ fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSephoraClubTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Beauty Club • Resgate de Miniaturas de Luxo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSephoraClubTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Beauty Club • Resgate de Miniaturas de Luxo", modifier = modifier)
 
 @Composable
-fun WgcSephoraTutorialsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Tutoriais de Maquiagem & Reviews Reais", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSephoraTutorialsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Tutoriais de Maquiagem & Reviews Reais", modifier = modifier)
 
 @Composable
-fun WgcSephoraBagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola Sephora • Escolha até 3 Amostras Grátis", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSephoraBagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sacola Sephora • Escolha até 3 Amostras Grátis", modifier = modifier)
 
 @Composable
-fun WgcSephoraProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Perfil Beauty Pass & Histórico", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcSephoraProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil Beauty Pass & Histórico", modifier = modifier)

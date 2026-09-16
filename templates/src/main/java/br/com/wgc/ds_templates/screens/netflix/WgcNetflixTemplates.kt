@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.netflix
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -42,37 +44,17 @@ fun WgcNetflixHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNetflixTrailerTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Player & Previews de Séries", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNetflixTrailerTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Player & Previews de Séries", modifier = modifier)
 
 @Composable
-fun WgcNetflixMyListTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Minha Lista & Títulos Salvos", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNetflixMyListTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Minha Lista & Títulos Salvos", modifier = modifier)
 
 @Composable
-fun WgcNetflixNewsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Novidades & Em Breve", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNetflixNewsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Novidades & Em Breve", modifier = modifier)
 
 @Composable
-fun WgcNetflixProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize(), containerColor = Color.Black) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Quem está assistindo? • Perfis", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNetflixProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Quem está assistindo? • Perfis", modifier = modifier)

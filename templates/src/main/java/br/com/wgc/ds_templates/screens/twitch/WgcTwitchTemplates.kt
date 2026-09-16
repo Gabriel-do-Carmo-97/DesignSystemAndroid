@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.twitch
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,37 +42,17 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Explorar Categorias & Games", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Explorar Categorias & Games", modifier = modifier)
 
 @Composable
-fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Chat da Transmissão & Emotes WGC", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Chat da Transmissão & Emotes WGC", modifier = modifier)
 
 @Composable
-fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Inscrições Prime & Bits", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Inscrições Prime & Bits", modifier = modifier)
 
 @Composable
-fun WgcTwitchProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Painel de Criador de Conteúdo", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcTwitchProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Painel de Criador de Conteúdo", modifier = modifier)

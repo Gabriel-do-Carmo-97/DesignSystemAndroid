@@ -1,5 +1,7 @@
 package br.com.wgc.ds_templates.screens.natura
 
+import br.com.wgc.ds_templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,37 +43,17 @@ fun WgcNaturaHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNaturaConsultantTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Espaço da Consultora Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNaturaConsultantTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Espaço da Consultora Natura", modifier = modifier)
 
 @Composable
-fun WgcNaturaRefillsTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Refis & Sustentabilidade Amazônia", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNaturaRefillsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Refis & Sustentabilidade Amazônia", modifier = modifier)
 
 @Composable
-fun WgcNaturaBagTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Sacola de Compras Natura", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNaturaBagTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Sacola de Compras Natura", modifier = modifier)
 
 @Composable
-fun WgcNaturaProfileTemplate(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil Natura & Pontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        }
-    }
-}
+fun WgcNaturaProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Meu Perfil Natura & Pontos", modifier = modifier)
