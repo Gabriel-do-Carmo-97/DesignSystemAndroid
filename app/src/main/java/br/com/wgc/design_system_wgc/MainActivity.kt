@@ -61,7 +61,7 @@ import br.com.wgc.ds_templates.factories.WgcHomeFactory
 import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
 import br.com.wgc.ds_templates.screens.community.split.WgcSplitCardAuthScreenTemplate
 import br.com.wgc.ds_templates.screens.community.wave.WgcWaveAuthScreenTemplate
-import br.com.wgc.ds_templates.screens.aliexpress.auth.*
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*
 import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
 import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
 import br.com.wgc.ds_templates.screens.common.auth.FakeBrandAddressAuthViewModel
@@ -72,25 +72,25 @@ import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
 import br.com.wgc.ds_templates.screens.home.fintech.FintechHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.fooddelivery.FakeFoodDeliveryHomeViewModel
 import br.com.wgc.ds_templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.ifood.auth.*
+import br.com.wgc.ds_templates.screens.fooddelivery.auth.*
 import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
 import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
 import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
 import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
 import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.mercadolivre.auth.*
-import br.com.wgc.ds_templates.screens.nineninefood.FakeNineNineFoodHomeViewModel
-import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.nineninefood.auth.*
+import br.com.wgc.ds_templates.screens.marketplacescreen.auth.*
+import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeNineNineFoodHomeViewModel
+import br.com.wgc.ds_templates.screens.quickfooddelivery.NineNineFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.*
 import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
 import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
 import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
 import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
-import br.com.wgc.ds_templates.screens.shopee.auth.*
+import br.com.wgc.ds_templates.screens.dealmarketplace.auth.*
 import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
 import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
-import br.com.wgc.ds_templates.screens.uber.auth.*
+import br.com.wgc.ds_templates.screens.ridehailing.auth.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -116,255 +116,255 @@ fun DesignSystemCatalogApp() {
 
     val primaryTabs = listOf(
         // 0-2: Cat 1 - Imobiliárias
-        "🏠 QuintoAndar (Imobiliária & Aluguel)",
-        "🏡 Viva Real (Classificados Imobiliários)",
-        "🏢 Zap Imóveis (Inteligência & Classificados)",
+        "🏠 Locação Imobiliária (PropertyRental)",
+        "🏡 Classificados Imobiliários (PropertyListing)",
+        "🏢 Inteligência Imobiliária (PropertyClassifieds)",
         // 3-5: Cat 2 - Fitness
-        "🏋️ Smart Fit (Treinos, Lotação & Acesso)",
-        "💪 Wellhub / Gympass (Redes, Check-in & Planos)",
-        "⚡ Nike Training Club (Treinos, Player & Metas)",
+        "🏋️ Treinos & Academia (Gym & Fitness)",
+        "💪 Bem-Estar Corporativo (CorporateWellness)",
+        "⚡ Treinos Guiados & Metas (Guided Training)",
         // 6-8: Cat 3 - Supermercados
-        "🛒 Clube Extra (Supermercado & Meus Descontos)",
-        "🍇 Pão de Açúcar Mais (Gourmet, Adega & Cliente Mais)",
-        "🏪 Carrefour Brasil (Hipermercado, Moedas & Nutri-Score)",
+        "🛒 Hipermercado & Descontos (Hypermarket)",
+        "🍇 Varejo Premium & Adega (Premium Grocery)",
+        "🏪 Supermercado & Nutri-Score (Grocery Store)",
         // 9-11: Cat 4 - Farmácias
-        "💊 Droga Raia (Sua Farmácia Digital & Receitas)",
-        "🏥 Drogasil (Farmácia Vizinha, Vacinas & Fidelidade)",
-        "💚 Pague Menos (Sempre Bem, Clinic Farma & Convênios)",
+        "💊 Farmácia Digital & Receitas (Pharmacy Chain)",
+        "🏥 Cuidados Farmacêuticos (Care Pharmacy)",
+        "💚 Farmácia Popular (Popular Pharmacy)",
         // 12-14: Cat 5 - FinTech
-        "💜 Nubank (NuConta, Cartão & Caixinhas)",
-        "🧡 Banco Inter (Super App, Inter Shop & Invest)",
-        "🖤 C6 Bank (Carbon, Átomos & Conta Global)",
+        "💜 Fintech Neobank (Digital Bank)",
+        "🧡 Fintech SuperApp (Shopping & Invest)",
+        "🖤 Fintech Carbon (Global Bank)",
         // 15-17: Cat 6 - Mobilidade
-        "🟡 99 (Rides, 99Pay & Corridas)",
-        "🟢 inDrive (Negocie o Preço & Lances)",
-        "🚌 ClickBus (Passagens Rodoviárias & Poltrona)",
+        "🟡 Mobilidade Urbana (Urban Mobility)",
+        "🟢 Viagens por Lances (Bidding Rides)",
+        "🚌 Passagens Rodoviárias (Bus Travel)",
         // 18-20: Cat 7 - Viagem
-        "✈️ Decolar (Pacotes & Passaporte Decolar)",
-        "🏡 Airbnb (Acomodações Únicas & Experiências)",
-        "🌐 Booking.com (Genius & Hotéis com Desconto)",
+        "✈️ Viagens & Passagens Aéreas (Flight Travel)",
+        "🏡 Hospedagem & Acomodações (Hospitality)",
+        "🌐 Reserva de Hotéis (HotelBooking)",
         // 21-23: Cat 8 - Streaming
-        "🔴 Netflix (Séries, Top 10 & Minha Lista)",
-        "🟢 Spotify (Player, Playlists & Premium)",
-        "🟠 Globoplay (TV Ao Vivo, Novelas & Premiere)",
+        "🔴 Streaming de Vídeo (Video Stream)",
+        "🟢 Streaming de Áudio (Audio Stream)",
+        "🟠 Transmissão & TV Ao Vivo (Broadcast Stream)",
         // 24-26: Cat 9 - Educação
-        "🦜 Duolingo (Inglês, Ofensivas & Ligas)",
-        "🔵 Alura (Cursos Tech, Trilhas & Certificados)",
-        "🟣 Udemy (200K Cursos & Meus Matriculados)",
+        "🦜 Aprendizado de Idiomas (Language Learning)",
+        "🔵 Educação Tech (Tech Education)",
+        "🟣 Marketplace de Cursos (Course Marketplace)",
         // 27-29: Cat 10 - Mensageria
-        "💬 WhatsApp (Chats, Status & Comunidades)",
-        "✈️ Telegram (Chats, Cloud & Pastas)",
-        "📌 Pinterest (Feed, Criar Pins & Perfil)",
+        "💬 Mensageria Direta (Direct Messaging)",
+        "✈️ Mensageria em Canais (Channel Messaging)",
+        "📌 Descoberta Visual (Visual Discovery)",
         // 30-32: Cat 11 - Gaming
-        "🎮 Steam (Loja, Biblioteca & Wishlist)",
-        "🟣 Twitch (Ao Vivo, Emotes & Nitro Subs)",
-        "💙 Discord (Servidores, Voz & DMs)",
+        "🎮 Jogos Digitais (Gaming Store)",
+        "🟣 Transmissão Ao Vivo (Live Streaming)",
+        "💙 Comunidades & Chat (Community Chat)",
         // 33-35: Cat 12 - Produtividade
-        "⬛ Notion (Workspace, Kanban & Editor)",
-        "🟦 Trello (Quadro, Cards & Power-Ups)",
-        "🟪 Slack (Canais, Threads & DMs)",
+        "⬛ Workspace & Notas (Workspace Docs)",
+        "🟦 Gestão Kanban (Kanban Tasks)",
+        "🟪 Colaboração em Equipe (Team Collaboration)",
         // 36-38: Cat 13 - Fast Food
-        "🍔 McDonald's (Cardápio, Cupons & Meu Méqui)",
-        "🔥 Burger King (Menu, Clube BK & Whopper)",
-        "🍕 Domino's (Monte sua Pizza & Tracker)",
+        "🍔 Fast Food Burger (Burger FastFood)",
+        "🔥 Fast Food Grelhado (Flame FastFood)",
+        "🍕 Pizzaria & Delivery (Pizza Delivery)",
         // 39-41: Cat 14 - Logística
-        "🚗 BlaBlaCar (Caronas Compartilhadas & Oferecer)",
-        "📦 Loggi (Rastreamento & Envio Inteligente)",
-        "🟠 Lalamove (Cotação Frete & Carreto Express)",
+        "🚗 Caronas Compartilhadas (Carpooling)",
+        "📦 Envio Expresso & Logística (Express Logistics)",
+        "🟠 Frete & Cargas (Freight Logistics)",
         // 42-44: Cat 15 - Moda Fast Fashion
-        "🔴 Lojas Renner (Coleções & Cartão Renner)",
-        "🛍️ C&A Brasil (Muito Eu & C&A Pay)",
-        "⬛ Riachuelo (Moda, Casa & RCHLO)",
+        "🔴 Departamentos Moda (Department Fashion)",
+        "🛍️ Moda Urbana (Urban Fashion)",
+        "⬛ Tendências em Moda (Trend Apparel)",
         // 45-47: Cat 16 - Beleza
-        "🌿 O Boticário (Perfumaria & Clube Viva)",
-        "🟠 Natura (Ekos, Chronos & Refis)",
-        "⬛ Sephora (Beauty Club & Luxo)",
+        "🌿 Perfumaria & Beleza (Fragrance & Beauty)",
+        "🟠 Beleza Natural (Natural Beauty)",
+        "⬛ Cosméticos de Luxo (Prestige Beauty)",
         // 48-50: Cat 17 - Pet Care
-        "🐾 Petz (Pet Shop Completo & Assinatura)",
-        "🐕 Cobasi (Shopping do Animal & Amigo Cobasi)",
-        "🖤 Zee.Dog (Design & Kitchen Natural)",
+        "🐾 Cuidados Pet (Pet Care)",
+        "🐕 Superloja Pet (Pet Superstore)",
+        "🖤 Estilo de Vida Pet (Pet Lifestyle)",
         // 51-53: Cat 18 - Casa & Decor
-        "🟢 Leroy Merlin (Construção & Calculadora)",
-        "🔴 Tok&Stok (Móveis Design & RA 3D)",
-        "🟠 MadeiraMadeira (Planejados & Frete Grátis)",
+        "🟢 Casa & Construção (Home Improvement)",
+        "🔴 Móveis & Decoração (Designer Furniture)",
+        "🟠 Marketplace Moveleiro (Home Marketplace)",
         // 54-56: Cat 19 - Notícias
-        "🔴 g1 (Portal Globo & Fato ou Boato)",
-        "🟡 UOL (Cotações, Esportes & Colunistas)",
-        "🔵 Exame (Negócios, ESG & Invest)",
+        "🔴 Portal Noticioso (Daily News)",
+        "🟡 Rede de Notícias (Media Network)",
+        "🔵 Notícias de Negócios (Business News)",
         // 57-59: Cat 20 - Serviços Públicos
-        "🇧🇷 Gov.br (Serviços Cidadão & Conta Ouro)",
-        "🚗 CDT (CNH Digital & CRLV Online)",
-        "📋 CTPS (Carteira de Trabalho & Vínculos)",
+        "🏛️ Serviços ao Cidadão (Citizen Services)",
+        "🚗 Habilitação & Trânsito (Transit Digital)",
+        "📋 Trabalho Digital (Employment Record)",
         // 60+: Extras
-        "💰 Organizze (Controle Financeiro)",
-        "🛍️ Laza (Streetwear Suite)",
-        "🌅 ShopEase (Sunset Orange Store)",
-        "🛒 Nexkart (Premium Store)",
-        "🌿 Shopper (Emerald Green Store)",
-        "✨ Tassel (Minimalist Store)",
-        "🧢 Clothee (Sportswear Suite)",
-        "👜 Kutuku (Luxury Store)",
-        "👗 Shoppe (Fashion Suite)",
-        "🛍️ Stylish (16 Telas Figma)",
+        "💰 Gestão Financeira (Personal Finance)",
+        "🛍️ Moda Boutique (Boutique Fashion)",
+        "🌅 Loja Rápida (Quick Shop)",
+        "🛒 Loja de Gadgets (Gadget Shop)",
+        "🌿 Hortifrúti Fresco (Fresh Grocery)",
+        "✨ Mercado Curado (Curated Market)",
+        "🧢 Moda Esportiva (Apparel Fashion)",
+        "👜 Loja de Variedades (Retail Store)",
+        "👗 Megaloja de Moda (Mega Store)",
+        "🛍️ Tendências de Moda (Trend Fashion)",
         "🎨 Figma (3 Templates)",
         "🧩 Componentes (:design-system)",
         "📱 Templates (:ds-templates)",
         "🏭 Fábricas & Slots",
         // 74-78: Novas Suítes Especializadas Figma
-        "🦷 DentiCare (Odontologia & Raio-X)",
-        "🩺 Doctoralia (Telemedicina & Consultas)",
-        "🍺 Zé Delivery (Bebidas Geladas)",
-        "🚘 Webmotors (Carros & Tabela FIPE)",
-        "⚡ KaBuM! (Hardware & Ofertas Ninja)"
+        "🦷 Odontologia & Raio-X (Dental Clinic)",
+        "🩺 Telemedicina & Consultas (Telemedicine)",
+        "🍺 Entrega de Bebidas (Beverage Delivery)",
+        "🚘 Automotivo & FIPE (Automotive Market)",
+        "⚡ Hardware & Specs (Hardware Tech)"
     )
 
-    val quintoAndarScreens = br.com.wgc.ds_templates.factories.WgcQuintoAndarScreen.entries
-    var selectedQuintoAndarScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+    val propertyRentalScreens = br.com.wgc.ds_templates.factories.WgcPropertyRentalScreen.entries
+    var selectedPropertyRentalScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val vivaRealScreens = br.com.wgc.ds_templates.factories.WgcVivaRealScreen.entries
-    var selectedVivaRealScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+    val propertyListingScreens = br.com.wgc.ds_templates.factories.WgcPropertyListingScreen.entries
+    var selectedPropertyListingScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val zapScreens = br.com.wgc.ds_templates.factories.WgcZapScreen.entries
+    val zapScreens = br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsScreen.entries
     var selectedZapScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val smartFitScreens = br.com.wgc.ds_templates.factories.WgcSmartFitScreen.entries
-    var selectedSmartFitScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+    val gymFitnessScreens = br.com.wgc.ds_templates.factories.WgcGymFitnessScreen.entries
+    var selectedGymFitnessScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val wellhubScreens = br.com.wgc.ds_templates.factories.WgcWellhubScreen.entries
-    var selectedWellhubScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+    val wellhubScreens = br.com.wgc.ds_templates.factories.WgcCorporateWellnessScreen.entries
+    var selectedCorporateWellnessScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val ntcScreens = br.com.wgc.ds_templates.factories.WgcNtcScreen.entries
+    val ntcScreens = br.com.wgc.ds_templates.factories.WgcGuidedTrainingScreen.entries
     var selectedNtcScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val extraScreens = br.com.wgc.ds_templates.factories.WgcExtraScreen.entries
+    val extraScreens = br.com.wgc.ds_templates.factories.WgcHypermarketScreen.entries
     var selectedExtraScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val pdaScreens = br.com.wgc.ds_templates.factories.WgcPdaScreen.entries
+    val pdaScreens = br.com.wgc.ds_templates.factories.WgcPremiumGroceryScreen.entries
     var selectedPdaScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val carrefourScreens = br.com.wgc.ds_templates.factories.WgcCarrefourScreen.entries
-    var selectedCarrefourScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
+    val groceryScreens = br.com.wgc.ds_templates.factories.WgcGroceryScreen.entries
+    var selectedGroceryScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val drogaRaiaScreens = br.com.wgc.ds_templates.factories.WgcDrogaRaiaScreen.entries
+    val drogaRaiaScreens = br.com.wgc.ds_templates.factories.WgcPharmacyChainScreen.entries
     var selectedDrogaRaiaScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val drogasilScreens = br.com.wgc.ds_templates.factories.WgcDrogasilScreen.entries
+    val drogasilScreens = br.com.wgc.ds_templates.factories.WgcCarePharmacyScreen.entries
     var selectedDrogasilScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val pagueMenosScreens = br.com.wgc.ds_templates.factories.WgcPagueMenosScreen.entries
+    val pagueMenosScreens = br.com.wgc.ds_templates.factories.WgcPopularPharmacyScreen.entries
     var selectedPagueMenosScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
     // Cat 5: FinTech
-    val nubankScreens = br.com.wgc.ds_templates.factories.WgcNubankScreen.entries
-    var selectedNubankScreenIndex by remember { mutableIntStateOf(0) }
-    val interScreens = br.com.wgc.ds_templates.factories.WgcInterScreen.entries
+    val fintechNeobankScreens = br.com.wgc.ds_templates.factories.WgcFintechNeobankScreen.entries
+    var selectedFintechNeobankScreenIndex by remember { mutableIntStateOf(0) }
+    val interScreens = br.com.wgc.ds_templates.factories.WgcFintechSuperAppScreen.entries
     var selectedInterScreenIndex by remember { mutableIntStateOf(0) }
-    val c6Screens = br.com.wgc.ds_templates.factories.WgcC6Screen.entries
+    val c6Screens = br.com.wgc.ds_templates.factories.WgcFintechCarbonScreen.entries
     var selectedC6ScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 6: Mobilidade
-    val noveNoveScreens = br.com.wgc.ds_templates.factories.WgcNoveNoveScreen.entries
+    val noveNoveScreens = br.com.wgc.ds_templates.factories.WgcUrbanMobilityScreen.entries
     var selectedNoveNoveScreenIndex by remember { mutableIntStateOf(0) }
-    val inDriveScreens = br.com.wgc.ds_templates.factories.WgcInDriveScreen.entries
+    val inDriveScreens = br.com.wgc.ds_templates.factories.WgcBiddingRidesScreen.entries
     var selectedInDriveScreenIndex by remember { mutableIntStateOf(0) }
-    val clickBusScreens = br.com.wgc.ds_templates.factories.WgcClickBusScreen.entries
+    val clickBusScreens = br.com.wgc.ds_templates.factories.WgcBusTravelScreen.entries
     var selectedClickBusScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 7: Viagem
-    val decolarScreens = br.com.wgc.ds_templates.factories.WgcDecolarScreen.entries
+    val decolarScreens = br.com.wgc.ds_templates.factories.WgcFlightTravelScreen.entries
     var selectedDecolarScreenIndex by remember { mutableIntStateOf(0) }
-    val airbnbScreens = br.com.wgc.ds_templates.factories.WgcAirbnbScreen.entries
-    var selectedAirbnbScreenIndex by remember { mutableIntStateOf(0) }
-    val bookingScreens = br.com.wgc.ds_templates.factories.WgcBookingScreen.entries
-    var selectedBookingScreenIndex by remember { mutableIntStateOf(0) }
+    val hospitalityLodgingScreens = br.com.wgc.ds_templates.factories.WgcHospitalityLodgingScreen.entries
+    var selectedHospitalityLodgingScreenIndex by remember { mutableIntStateOf(0) }
+    val bookingScreens = br.com.wgc.ds_templates.factories.WgcHotelBookingScreen.entries
+    var selectedHotelBookingScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 8: Streaming
-    val netflixScreens = br.com.wgc.ds_templates.factories.WgcNetflixScreen.entries
-    var selectedNetflixScreenIndex by remember { mutableIntStateOf(0) }
-    val spotifyScreens = br.com.wgc.ds_templates.factories.WgcSpotifyScreen.entries
-    var selectedSpotifyScreenIndex by remember { mutableIntStateOf(0) }
-    val globoplayScreens = br.com.wgc.ds_templates.factories.WgcGloboplayScreen.entries
+    val videoStreamScreens = br.com.wgc.ds_templates.factories.WgcVideoStreamScreen.entries
+    var selectedVideoStreamScreenIndex by remember { mutableIntStateOf(0) }
+    val audioStreamScreens = br.com.wgc.ds_templates.factories.WgcAudioStreamScreen.entries
+    var selectedAudioStreamScreenIndex by remember { mutableIntStateOf(0) }
+    val globoplayScreens = br.com.wgc.ds_templates.factories.WgcBroadcastStreamingScreen.entries
     var selectedGloboplayScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 9: Educação
-    val duolingoScreens = br.com.wgc.ds_templates.factories.WgcDuolingoScreen.entries
+    val duolingoScreens = br.com.wgc.ds_templates.factories.WgcLanguageLearningScreen.entries
     var selectedDuolingoScreenIndex by remember { mutableIntStateOf(0) }
-    val aluraScreens = br.com.wgc.ds_templates.factories.WgcAluraScreen.entries
+    val aluraScreens = br.com.wgc.ds_templates.factories.WgcTechEducationScreen.entries
     var selectedAluraScreenIndex by remember { mutableIntStateOf(0) }
-    val udemyScreens = br.com.wgc.ds_templates.factories.WgcUdemyScreen.entries
+    val udemyScreens = br.com.wgc.ds_templates.factories.WgcCourseMarketplaceScreen.entries
     var selectedUdemyScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 10: Mensageria
-    val whatsAppScreens = br.com.wgc.ds_templates.factories.WgcWhatsAppScreen.entries
+    val whatsAppScreens = br.com.wgc.ds_templates.factories.WgcDirectMessagingScreen.entries
     var selectedWhatsAppScreenIndex by remember { mutableIntStateOf(0) }
-    val telegramScreens = br.com.wgc.ds_templates.factories.WgcTelegramScreen.entries
+    val telegramScreens = br.com.wgc.ds_templates.factories.WgcChannelMessagingScreen.entries
     var selectedTelegramScreenIndex by remember { mutableIntStateOf(0) }
-    val pinterestScreens = br.com.wgc.ds_templates.factories.WgcPinterestScreen.entries
+    val pinterestScreens = br.com.wgc.ds_templates.factories.WgcVisualDiscoveryScreen.entries
     var selectedPinterestScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 11: Gaming
-    val steamScreens = br.com.wgc.ds_templates.factories.WgcSteamScreen.entries
+    val steamScreens = br.com.wgc.ds_templates.factories.WgcGamingStoreScreen.entries
     var selectedSteamScreenIndex by remember { mutableIntStateOf(0) }
-    val twitchScreens = br.com.wgc.ds_templates.factories.WgcTwitchScreen.entries
+    val twitchScreens = br.com.wgc.ds_templates.factories.WgcLiveStreamingScreen.entries
     var selectedTwitchScreenIndex by remember { mutableIntStateOf(0) }
-    val discordScreens = br.com.wgc.ds_templates.factories.WgcDiscordScreen.entries
+    val discordScreens = br.com.wgc.ds_templates.factories.WgcCommunityChatScreen.entries
     var selectedDiscordScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 12: Produtividade
-    val notionScreens = br.com.wgc.ds_templates.factories.WgcNotionScreen.entries
+    val notionScreens = br.com.wgc.ds_templates.factories.WgcWorkspaceDocsScreen.entries
     var selectedNotionScreenIndex by remember { mutableIntStateOf(0) }
-    val trelloScreens = br.com.wgc.ds_templates.factories.WgcTrelloScreen.entries
+    val trelloScreens = br.com.wgc.ds_templates.factories.WgcKanbanTasksScreen.entries
     var selectedTrelloScreenIndex by remember { mutableIntStateOf(0) }
-    val slackScreens = br.com.wgc.ds_templates.factories.WgcSlackScreen.entries
+    val slackScreens = br.com.wgc.ds_templates.factories.WgcTeamCollaborationScreen.entries
     var selectedSlackScreenIndex by remember { mutableIntStateOf(0) }
-    // Cat 13: Fast Food
-    val mcDonaldsScreens = br.com.wgc.ds_templates.factories.WgcMcDonaldsScreen.entries
-    var selectedMcDonaldsScreenIndex by remember { mutableIntStateOf(0) }
-    val burgerKingScreens = br.com.wgc.ds_templates.factories.WgcBurgerKingScreen.entries
+    // Cat 13: FastFood
+    val burgerFastFoodScreens = br.com.wgc.ds_templates.factories.WgcBurgerFastFoodScreen.entries
+    var selectedBurgerFastFoodScreenIndex by remember { mutableIntStateOf(0) }
+    val burgerKingScreens = br.com.wgc.ds_templates.factories.WgcFlameFastFoodScreen.entries
     var selectedBurgerKingScreenIndex by remember { mutableIntStateOf(0) }
-    val dominosScreens = br.com.wgc.ds_templates.factories.WgcDominosScreen.entries
-    var selectedDominosScreenIndex by remember { mutableIntStateOf(0) }
+    val pizzaScreens = br.com.wgc.ds_templates.factories.WgcPizzaScreen.entries
+    var selectedPizzaScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 14: Logística
-    val blaBlaCarScreens = br.com.wgc.ds_templates.factories.WgcBlaBlaCarScreen.entries
-    var selectedBlaBlaCarScreenIndex by remember { mutableIntStateOf(0) }
-    val loggiScreens = br.com.wgc.ds_templates.factories.WgcLoggiScreen.entries
+    val carpoolingScreens = br.com.wgc.ds_templates.factories.WgcCarpoolingScreen.entries
+    var selectedCarpoolingScreenIndex by remember { mutableIntStateOf(0) }
+    val loggiScreens = br.com.wgc.ds_templates.factories.WgcExpressLogisticsScreen.entries
     var selectedLoggiScreenIndex by remember { mutableIntStateOf(0) }
-    val lalamoveScreens = br.com.wgc.ds_templates.factories.WgcLalamoveScreen.entries
+    val lalamoveScreens = br.com.wgc.ds_templates.factories.WgcFreightLogisticsScreen.entries
     var selectedLalamoveScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 15: Moda
-    val rennerScreens = br.com.wgc.ds_templates.factories.WgcRennerScreen.entries
+    val rennerScreens = br.com.wgc.ds_templates.factories.WgcDepartmentFashionScreen.entries
     var selectedRennerScreenIndex by remember { mutableIntStateOf(0) }
-    val ceaScreens = br.com.wgc.ds_templates.factories.WgcCeaScreen.entries
+    val ceaScreens = br.com.wgc.ds_templates.factories.WgcUrbanFashionScreen.entries
     var selectedCeaScreenIndex by remember { mutableIntStateOf(0) }
-    val riachueloScreens = br.com.wgc.ds_templates.factories.WgcRiachueloScreen.entries
+    val riachueloScreens = br.com.wgc.ds_templates.factories.WgcTrendApparelScreen.entries
     var selectedRiachueloScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 16: Beleza
-    val boticarioScreens = br.com.wgc.ds_templates.factories.WgcBoticarioScreen.entries
+    val boticarioScreens = br.com.wgc.ds_templates.factories.WgcFragranceBeautyScreen.entries
     var selectedBoticarioScreenIndex by remember { mutableIntStateOf(0) }
-    val naturaScreens = br.com.wgc.ds_templates.factories.WgcNaturaScreen.entries
+    val naturaScreens = br.com.wgc.ds_templates.factories.WgcNaturalBeautyScreen.entries
     var selectedNaturaScreenIndex by remember { mutableIntStateOf(0) }
-    val sephoraScreens = br.com.wgc.ds_templates.factories.WgcSephoraScreen.entries
+    val sephoraScreens = br.com.wgc.ds_templates.factories.WgcPrestigeBeautyScreen.entries
     var selectedSephoraScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 17: Pet Care
-    val petzScreens = br.com.wgc.ds_templates.factories.WgcPetzScreen.entries
+    val petzScreens = br.com.wgc.ds_templates.factories.WgcPetCareScreen.entries
     var selectedPetzScreenIndex by remember { mutableIntStateOf(0) }
-    val cobasiScreens = br.com.wgc.ds_templates.factories.WgcCobasiScreen.entries
+    val cobasiScreens = br.com.wgc.ds_templates.factories.WgcPetSuperstoreScreen.entries
     var selectedCobasiScreenIndex by remember { mutableIntStateOf(0) }
-    val zeeDogScreens = br.com.wgc.ds_templates.factories.WgcZeeDogScreen.entries
+    val zeeDogScreens = br.com.wgc.ds_templates.factories.WgcPetLifestyleScreen.entries
     var selectedZeeDogScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 18: Casa & Decor
-    val leroyMerlinScreens = br.com.wgc.ds_templates.factories.WgcLeroyMerlinScreen.entries
+    val leroyMerlinScreens = br.com.wgc.ds_templates.factories.WgcHomeImprovementScreen.entries
     var selectedLeroyMerlinScreenIndex by remember { mutableIntStateOf(0) }
-    val tokStokScreens = br.com.wgc.ds_templates.factories.WgcTokStokScreen.entries
+    val tokStokScreens = br.com.wgc.ds_templates.factories.WgcDesignerFurnitureScreen.entries
     var selectedTokStokScreenIndex by remember { mutableIntStateOf(0) }
-    val madeiraMadeiraScreens = br.com.wgc.ds_templates.factories.WgcMadeiraMadeiraScreen.entries
+    val madeiraMadeiraScreens = br.com.wgc.ds_templates.factories.WgcHomeMarketplaceScreen.entries
     var selectedMadeiraMadeiraScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 19: Notícias
-    val g1Screens = br.com.wgc.ds_templates.factories.WgcG1Screen.entries
+    val g1Screens = br.com.wgc.ds_templates.factories.WgcDailyNewsScreen.entries
     var selectedG1ScreenIndex by remember { mutableIntStateOf(0) }
-    val uolScreens = br.com.wgc.ds_templates.factories.WgcUolScreen.entries
+    val uolScreens = br.com.wgc.ds_templates.factories.WgcMediaNetworkScreen.entries
     var selectedUolScreenIndex by remember { mutableIntStateOf(0) }
-    val exameScreens = br.com.wgc.ds_templates.factories.WgcExameScreen.entries
+    val exameScreens = br.com.wgc.ds_templates.factories.WgcBusinessNewsScreen.entries
     var selectedExameScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 20: Serviços Públicos
-    val govBrScreens = br.com.wgc.ds_templates.factories.WgcGovBrScreen.entries
+    val govBrScreens = br.com.wgc.ds_templates.factories.WgcCitizenServicesScreen.entries
     var selectedGovBrScreenIndex by remember { mutableIntStateOf(0) }
-    val cdtScreens = br.com.wgc.ds_templates.factories.WgcCdtScreen.entries
+    val cdtScreens = br.com.wgc.ds_templates.factories.WgcTransitDigitalScreen.entries
     var selectedCdtScreenIndex by remember { mutableIntStateOf(0) }
-    val ctpsScreens = br.com.wgc.ds_templates.factories.WgcCtpsScreen.entries
+    val ctpsScreens = br.com.wgc.ds_templates.factories.WgcEmploymentRecordScreen.entries
     var selectedCtpsScreenIndex by remember { mutableIntStateOf(0) }
 
     // Novas Suítes Figma
@@ -383,34 +383,34 @@ fun DesignSystemCatalogApp() {
     val hardwareScreens = br.com.wgc.ds_templates.factories.WgcHardwareScreen.entries
     var selectedHardwareScreenIndex by remember { mutableIntStateOf(0) }
 
-    val organizzeScreens = br.com.wgc.ds_templates.factories.WgcOrganizzeScreen.entries
+    val organizzeScreens = br.com.wgc.ds_templates.factories.WgcPersonalFinanceScreen.entries
     var selectedOrganizzeScreenIndex by remember { mutableIntStateOf(0) } // Default: Dashboard
 
-    val lazaScreens = br.com.wgc.ds_templates.factories.WgcLazaScreen.entries
+    val lazaScreens = br.com.wgc.ds_templates.factories.WgcBoutiqueScreen.entries
     var selectedLazaScreenIndex by remember { mutableIntStateOf(3) } // Default: Home
 
-    val nexkartScreens = br.com.wgc.ds_templates.factories.WgcNexkartScreen.entries
+    val nexkartScreens = br.com.wgc.ds_templates.factories.WgcGadgetShopScreen.entries
     var selectedNexkartScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val shopEaseScreens = br.com.wgc.ds_templates.factories.WgcShopEaseScreen.entries
+    val shopEaseScreens = br.com.wgc.ds_templates.factories.WgcQuickShopScreen.entries
     var selectedShopEaseScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val shopperScreens = br.com.wgc.ds_templates.factories.WgcShopperScreen.entries
+    val shopperScreens = br.com.wgc.ds_templates.factories.WgcFreshGroceryScreen.entries
     var selectedShopperScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val tasselScreens = br.com.wgc.ds_templates.factories.WgcTasselScreen.entries
+    val tasselScreens = br.com.wgc.ds_templates.factories.WgcCuratedMarketScreen.entries
     var selectedTasselScreenIndex by remember { mutableIntStateOf(0) } // Default: Market
 
-    val clotheeScreens = br.com.wgc.ds_templates.factories.WgcClotheeScreen.entries
+    val clotheeScreens = br.com.wgc.ds_templates.factories.WgcApparelScreen.entries
     var selectedClotheeScreenIndex by remember { mutableIntStateOf(3) } // Default: Home
 
-    val kutukuScreens = br.com.wgc.ds_templates.factories.WgcKutukuScreen.entries
+    val kutukuScreens = br.com.wgc.ds_templates.factories.WgcRetailScreen.entries
     var selectedKutukuScreenIndex by remember { mutableIntStateOf(2) } // Default: Home
 
-    val shoppeScreens = br.com.wgc.ds_templates.factories.WgcShoppeScreen.entries
+    val shoppeScreens = br.com.wgc.ds_templates.factories.WgcMegaStoreScreen.entries
     var selectedShoppeScreenIndex by remember { mutableIntStateOf(4) } // Default: HomeShop
 
-    val stylishScreens = br.com.wgc.ds_templates.factories.WgcStylishScreen.entries
+    val stylishScreens = br.com.wgc.ds_templates.factories.WgcTrendFashionScreen.entries
     var selectedStylishScreenIndex by remember { mutableIntStateOf(8) } // Default: Home
 
     val figmaSubTabs = listOf(
@@ -429,7 +429,7 @@ fun DesignSystemCatalogApp() {
 
     val templateSubTabs = listOf(
         "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth",
-        "Auth Multi-Brand", "Mercado Livre Home", "99Food Home", "iFood Home",
+        "Auth Multi-Brand", "Marketplace Home", "99Food Home", "Food Delivery Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
         "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
     )
@@ -453,22 +453,22 @@ fun DesignSystemCatalogApp() {
 
         when (primarySection) {
             0 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedQuintoAndarScreenIndex) {
-                    quintoAndarScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedPropertyRentalScreenIndex) {
+                    propertyRentalScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedQuintoAndarScreenIndex == index,
-                            onClick = { selectedQuintoAndarScreenIndex = index },
+                            selected = selectedPropertyRentalScreenIndex == index,
+                            onClick = { selectedPropertyRentalScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             1 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedVivaRealScreenIndex) {
-                    vivaRealScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedPropertyListingScreenIndex) {
+                    propertyListingScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedVivaRealScreenIndex == index,
-                            onClick = { selectedVivaRealScreenIndex = index },
+                            selected = selectedPropertyListingScreenIndex == index,
+                            onClick = { selectedPropertyListingScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -486,22 +486,22 @@ fun DesignSystemCatalogApp() {
                 }
             }
             3 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedSmartFitScreenIndex) {
-                    smartFitScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedGymFitnessScreenIndex) {
+                    gymFitnessScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedSmartFitScreenIndex == index,
-                            onClick = { selectedSmartFitScreenIndex = index },
+                            selected = selectedGymFitnessScreenIndex == index,
+                            onClick = { selectedGymFitnessScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             4 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedWellhubScreenIndex) {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedCorporateWellnessScreenIndex) {
                     wellhubScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedWellhubScreenIndex == index,
-                            onClick = { selectedWellhubScreenIndex = index },
+                            selected = selectedCorporateWellnessScreenIndex == index,
+                            onClick = { selectedCorporateWellnessScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -541,11 +541,11 @@ fun DesignSystemCatalogApp() {
                 }
             }
             8 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedCarrefourScreenIndex) {
-                    carrefourScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedGroceryScreenIndex) {
+                    groceryScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedCarrefourScreenIndex == index,
-                            onClick = { selectedCarrefourScreenIndex = index },
+                            selected = selectedGroceryScreenIndex == index,
+                            onClick = { selectedGroceryScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -585,11 +585,11 @@ fun DesignSystemCatalogApp() {
                 }
             }
             12 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedNubankScreenIndex) {
-                    nubankScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedFintechNeobankScreenIndex) {
+                    fintechNeobankScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedNubankScreenIndex == index,
-                            onClick = { selectedNubankScreenIndex = index },
+                            selected = selectedFintechNeobankScreenIndex == index,
+                            onClick = { selectedFintechNeobankScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -662,44 +662,44 @@ fun DesignSystemCatalogApp() {
                 }
             }
             19 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedAirbnbScreenIndex) {
-                    airbnbScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedHospitalityLodgingScreenIndex) {
+                    hospitalityLodgingScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedAirbnbScreenIndex == index,
-                            onClick = { selectedAirbnbScreenIndex = index },
+                            selected = selectedHospitalityLodgingScreenIndex == index,
+                            onClick = { selectedHospitalityLodgingScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             20 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedBookingScreenIndex) {
+                PrimaryScrollableTabRow(selectedTabIndex = selectedHotelBookingScreenIndex) {
                     bookingScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedBookingScreenIndex == index,
-                            onClick = { selectedBookingScreenIndex = index },
+                            selected = selectedHotelBookingScreenIndex == index,
+                            onClick = { selectedHotelBookingScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             21 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedNetflixScreenIndex) {
-                    netflixScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedVideoStreamScreenIndex) {
+                    videoStreamScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedNetflixScreenIndex == index,
-                            onClick = { selectedNetflixScreenIndex = index },
+                            selected = selectedVideoStreamScreenIndex == index,
+                            onClick = { selectedVideoStreamScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             22 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedSpotifyScreenIndex) {
-                    spotifyScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedAudioStreamScreenIndex) {
+                    audioStreamScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedSpotifyScreenIndex == index,
-                            onClick = { selectedSpotifyScreenIndex = index },
+                            selected = selectedAudioStreamScreenIndex == index,
+                            onClick = { selectedAudioStreamScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -849,11 +849,11 @@ fun DesignSystemCatalogApp() {
                 }
             }
             36 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedMcDonaldsScreenIndex) {
-                    mcDonaldsScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedBurgerFastFoodScreenIndex) {
+                    burgerFastFoodScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedMcDonaldsScreenIndex == index,
-                            onClick = { selectedMcDonaldsScreenIndex = index },
+                            selected = selectedBurgerFastFoodScreenIndex == index,
+                            onClick = { selectedBurgerFastFoodScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -871,22 +871,22 @@ fun DesignSystemCatalogApp() {
                 }
             }
             38 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedDominosScreenIndex) {
-                    dominosScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedPizzaScreenIndex) {
+                    pizzaScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedDominosScreenIndex == index,
-                            onClick = { selectedDominosScreenIndex = index },
+                            selected = selectedPizzaScreenIndex == index,
+                            onClick = { selectedPizzaScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
                 }
             }
             39 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedBlaBlaCarScreenIndex) {
-                    blaBlaCarScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedCarpoolingScreenIndex) {
+                    carpoolingScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedBlaBlaCarScreenIndex == index,
-                            onClick = { selectedBlaBlaCarScreenIndex = index },
+                            selected = selectedCarpoolingScreenIndex == index,
+                            onClick = { selectedCarpoolingScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -1326,26 +1326,26 @@ fun DesignSystemCatalogApp() {
         Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
             when (primarySection) {
                 0 -> {
-                    val currentScreen = quintoAndarScreens[selectedQuintoAndarScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcQuintoAndarFactory(
+                    val currentScreen = propertyRentalScreens[selectedPropertyRentalScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcPropertyRentalFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
-                            selectedQuintoAndarScreenIndex = quintoAndarScreens.indexOf(targetScreen)
+                            selectedPropertyRentalScreenIndex = propertyRentalScreens.indexOf(targetScreen)
                         }
                     )
                 }
                 1 -> {
-                    val currentScreen = vivaRealScreens[selectedVivaRealScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcVivaRealFactory(
+                    val currentScreen = propertyListingScreens[selectedPropertyListingScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcPropertyListingFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
-                            selectedVivaRealScreenIndex = vivaRealScreens.indexOf(targetScreen)
+                            selectedPropertyListingScreenIndex = propertyListingScreens.indexOf(targetScreen)
                         }
                     )
                 }
                 2 -> {
                     val currentScreen = zapScreens[selectedZapScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcZapFactory(
+                    br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedZapScreenIndex = zapScreens.indexOf(targetScreen)
@@ -1353,26 +1353,26 @@ fun DesignSystemCatalogApp() {
                     )
                 }
                 3 -> {
-                    val currentScreen = smartFitScreens[selectedSmartFitScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcSmartFitFactory.Screen(
+                    val currentScreen = gymFitnessScreens[selectedGymFitnessScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcGymFitnessFactory.Screen(
                         screen = currentScreen,
                         onNavigateScreen = { targetScreen ->
-                            selectedSmartFitScreenIndex = smartFitScreens.indexOf(targetScreen)
+                            selectedGymFitnessScreenIndex = gymFitnessScreens.indexOf(targetScreen)
                         }
                     )
                 }
                 4 -> {
-                    val currentScreen = wellhubScreens[selectedWellhubScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcWellhubFactory.Screen(
+                    val currentScreen = wellhubScreens[selectedCorporateWellnessScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcCorporateWellnessFactory.Screen(
                         screen = currentScreen,
                         onNavigateScreen = { targetScreen ->
-                            selectedWellhubScreenIndex = wellhubScreens.indexOf(targetScreen)
+                            selectedCorporateWellnessScreenIndex = wellhubScreens.indexOf(targetScreen)
                         }
                     )
                 }
                 5 -> {
                     val currentScreen = ntcScreens[selectedNtcScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNtcFactory(
+                    br.com.wgc.ds_templates.factories.WgcGuidedTrainingFactory(
                         screen = currentScreen,
                         onSelectWorkout = { selectedNtcScreenIndex = 2 },
                         onStartWorkout = { selectedNtcScreenIndex = 1 },
@@ -1383,7 +1383,7 @@ fun DesignSystemCatalogApp() {
                 }
                 6 -> {
                     val currentScreen = extraScreens[selectedExtraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcExtraFactory(
+                    br.com.wgc.ds_templates.factories.WgcHypermarketFactory(
                         screen = currentScreen,
                         onNavigateToDiscounts = { selectedExtraScreenIndex = 1 },
                         onNavigateToFlyer = { selectedExtraScreenIndex = 2 },
@@ -1393,29 +1393,29 @@ fun DesignSystemCatalogApp() {
                 }
                 7 -> {
                     val currentScreen = pdaScreens[selectedPdaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPdaFactory(
+                    br.com.wgc.ds_templates.factories.WgcPremiumGroceryFactory(
                         screen = currentScreen,
                         onNavSelect = { navIdx -> selectedPdaScreenIndex = navIdx }
                     )
                 }
                 8 -> {
-                    val currentScreen = carrefourScreens[selectedCarrefourScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCarrefourFactory(
+                    val currentScreen = groceryScreens[selectedGroceryScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcGroceryFactory(
                         screen = currentScreen,
                         onTabSelected = { tab ->
-                            selectedCarrefourScreenIndex = when (tab) {
-                                br.com.wgc.design_system.components.navigation.CarrefourNavTab.HOME -> 0
-                                br.com.wgc.design_system.components.navigation.CarrefourNavTab.COUPONS -> 1
-                                br.com.wgc.design_system.components.navigation.CarrefourNavTab.FLYER -> 2
-                                br.com.wgc.design_system.components.navigation.CarrefourNavTab.CART -> 3
-                                br.com.wgc.design_system.components.navigation.CarrefourNavTab.MEU_CARREFOUR -> 4
+                            selectedGroceryScreenIndex = when (tab) {
+                                br.com.wgc.design_system.components.navigation.GroceryNavTab.HOME -> 0
+                                br.com.wgc.design_system.components.navigation.GroceryNavTab.COUPONS -> 1
+                                br.com.wgc.design_system.components.navigation.GroceryNavTab.FLYER -> 2
+                                br.com.wgc.design_system.components.navigation.GroceryNavTab.CART -> 3
+                                br.com.wgc.design_system.components.navigation.GroceryNavTab.LOYALTY -> 4
                             }
                         }
                     )
                 }
                 9 -> {
                     val currentScreen = drogaRaiaScreens[selectedDrogaRaiaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDrogaRaiaFactory(
+                    br.com.wgc.ds_templates.factories.WgcPharmacyChainFactory(
                         screen = currentScreen,
                         onTabSelected = { tab ->
                             selectedDrogaRaiaScreenIndex = when (tab) {
@@ -1430,307 +1430,307 @@ fun DesignSystemCatalogApp() {
                 }
                 10 -> {
                     val currentScreen = drogasilScreens[selectedDrogasilScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDrogasilFactory(
+                    br.com.wgc.ds_templates.factories.WgcCarePharmacyFactory(
                         screen = currentScreen
                     )
                 }
                 11 -> {
                     val currentScreen = pagueMenosScreens[selectedPagueMenosScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPagueMenosFactory(
+                    br.com.wgc.ds_templates.factories.WgcPopularPharmacyFactory(
                         screen = currentScreen
                     )
                 }
                 12 -> {
-                    val currentScreen = nubankScreens[selectedNubankScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNubankFactory(
+                    val currentScreen = fintechNeobankScreens[selectedFintechNeobankScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcFintechNeobankFactory(
                         screen = currentScreen
                     )
                 }
                 13 -> {
                     val currentScreen = interScreens[selectedInterScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcInterFactory(
+                    br.com.wgc.ds_templates.factories.WgcFintechSuperAppFactory(
                         screen = currentScreen
                     )
                 }
                 14 -> {
                     val currentScreen = c6Screens[selectedC6ScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcC6Factory(
+                    br.com.wgc.ds_templates.factories.WgcFintechCarbonFactory(
                         screen = currentScreen
                     )
                 }
                 15 -> {
                     val currentScreen = noveNoveScreens[selectedNoveNoveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNoveNoveFactory(
+                    br.com.wgc.ds_templates.factories.WgcUrbanMobilityFactory(
                         screen = currentScreen
                     )
                 }
                 16 -> {
                     val currentScreen = inDriveScreens[selectedInDriveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcInDriveFactory(
+                    br.com.wgc.ds_templates.factories.WgcBiddingRidesFactory(
                         screen = currentScreen
                     )
                 }
                 17 -> {
                     val currentScreen = clickBusScreens[selectedClickBusScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcClickBusFactory(
+                    br.com.wgc.ds_templates.factories.WgcBusTravelFactory(
                         screen = currentScreen
                     )
                 }
                 18 -> {
                     val currentScreen = decolarScreens[selectedDecolarScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDecolarFactory(
+                    br.com.wgc.ds_templates.factories.WgcFlightTravelFactory(
                         screen = currentScreen
                     )
                 }
                 19 -> {
-                    val currentScreen = airbnbScreens[selectedAirbnbScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcAirbnbFactory(
+                    val currentScreen = hospitalityLodgingScreens[selectedHospitalityLodgingScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcHospitalityLodgingFactory(
                         screen = currentScreen
                     )
                 }
                 20 -> {
-                    val currentScreen = bookingScreens[selectedBookingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBookingFactory(
+                    val currentScreen = bookingScreens[selectedHotelBookingScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcHotelBookingFactory(
                         screen = currentScreen
                     )
                 }
                 21 -> {
-                    val currentScreen = netflixScreens[selectedNetflixScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNetflixFactory(
+                    val currentScreen = videoStreamScreens[selectedVideoStreamScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcVideoStreamFactory(
                         screen = currentScreen
                     )
                 }
                 22 -> {
-                    val currentScreen = spotifyScreens[selectedSpotifyScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcSpotifyFactory(
+                    val currentScreen = audioStreamScreens[selectedAudioStreamScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcAudioStreamFactory(
                         screen = currentScreen
                     )
                 }
                 23 -> {
                     val currentScreen = globoplayScreens[selectedGloboplayScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGloboplayFactory(
+                    br.com.wgc.ds_templates.factories.WgcBroadcastStreamingFactory(
                         screen = currentScreen
                     )
                 }
                 24 -> {
                     val currentScreen = duolingoScreens[selectedDuolingoScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDuolingoFactory(
+                    br.com.wgc.ds_templates.factories.WgcLanguageLearningFactory(
                         screen = currentScreen
                     )
                 }
                 25 -> {
                     val currentScreen = aluraScreens[selectedAluraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcAluraFactory(
+                    br.com.wgc.ds_templates.factories.WgcTechEducationFactory(
                         screen = currentScreen
                     )
                 }
                 26 -> {
                     val currentScreen = udemyScreens[selectedUdemyScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcUdemyFactory(
+                    br.com.wgc.ds_templates.factories.WgcCourseMarketplaceFactory(
                         screen = currentScreen
                     )
                 }
                 27 -> {
                     val currentScreen = whatsAppScreens[selectedWhatsAppScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcWhatsAppFactory(
+                    br.com.wgc.ds_templates.factories.WgcDirectMessagingFactory(
                         screen = currentScreen
                     )
                 }
                 28 -> {
                     val currentScreen = telegramScreens[selectedTelegramScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTelegramFactory(
+                    br.com.wgc.ds_templates.factories.WgcChannelMessagingFactory(
                         screen = currentScreen
                     )
                 }
                 29 -> {
                     val currentScreen = pinterestScreens[selectedPinterestScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPinterestFactory(
+                    br.com.wgc.ds_templates.factories.WgcVisualDiscoveryFactory(
                         screen = currentScreen
                     )
                 }
                 30 -> {
                     val currentScreen = steamScreens[selectedSteamScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcSteamFactory(
+                    br.com.wgc.ds_templates.factories.WgcGamingStoreFactory(
                         screen = currentScreen
                     )
                 }
                 31 -> {
                     val currentScreen = twitchScreens[selectedTwitchScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTwitchFactory(
+                    br.com.wgc.ds_templates.factories.WgcLiveStreamingFactory(
                         screen = currentScreen
                     )
                 }
                 32 -> {
                     val currentScreen = discordScreens[selectedDiscordScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDiscordFactory(
+                    br.com.wgc.ds_templates.factories.WgcCommunityChatFactory(
                         screen = currentScreen
                     )
                 }
                 33 -> {
                     val currentScreen = notionScreens[selectedNotionScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNotionFactory(
+                    br.com.wgc.ds_templates.factories.WgcWorkspaceDocsFactory(
                         screen = currentScreen
                     )
                 }
                 34 -> {
                     val currentScreen = trelloScreens[selectedTrelloScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTrelloFactory(
+                    br.com.wgc.ds_templates.factories.WgcKanbanTasksFactory(
                         screen = currentScreen
                     )
                 }
                 35 -> {
                     val currentScreen = slackScreens[selectedSlackScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcSlackFactory(
+                    br.com.wgc.ds_templates.factories.WgcTeamCollaborationFactory(
                         screen = currentScreen
                     )
                 }
                 36 -> {
-                    val currentScreen = mcDonaldsScreens[selectedMcDonaldsScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcMcDonaldsFactory(
+                    val currentScreen = burgerFastFoodScreens[selectedBurgerFastFoodScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcBurgerFastFoodFactory(
                         screen = currentScreen
                     )
                 }
                 37 -> {
                     val currentScreen = burgerKingScreens[selectedBurgerKingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBurgerKingFactory(
+                    br.com.wgc.ds_templates.factories.WgcFlameFastFoodFactory(
                         screen = currentScreen
                     )
                 }
                 38 -> {
-                    val currentScreen = dominosScreens[selectedDominosScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDominosFactory(
+                    val currentScreen = pizzaScreens[selectedPizzaScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcPizzaFactory(
                         screen = currentScreen
                     )
                 }
                 39 -> {
-                    val currentScreen = blaBlaCarScreens[selectedBlaBlaCarScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBlaBlaCarFactory(
+                    val currentScreen = carpoolingScreens[selectedCarpoolingScreenIndex]
+                    br.com.wgc.ds_templates.factories.WgcCarpoolingFactory(
                         screen = currentScreen
                     )
                 }
                 40 -> {
                     val currentScreen = loggiScreens[selectedLoggiScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLoggiFactory(
+                    br.com.wgc.ds_templates.factories.WgcExpressLogisticsFactory(
                         screen = currentScreen
                     )
                 }
                 41 -> {
                     val currentScreen = lalamoveScreens[selectedLalamoveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLalamoveFactory(
+                    br.com.wgc.ds_templates.factories.WgcFreightLogisticsFactory(
                         screen = currentScreen
                     )
                 }
                 42 -> {
                     val currentScreen = rennerScreens[selectedRennerScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcRennerFactory(
+                    br.com.wgc.ds_templates.factories.WgcDepartmentFashionFactory(
                         screen = currentScreen
                     )
                 }
                 43 -> {
                     val currentScreen = ceaScreens[selectedCeaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCeaFactory(
+                    br.com.wgc.ds_templates.factories.WgcUrbanFashionFactory(
                         screen = currentScreen
                     )
                 }
                 44 -> {
                     val currentScreen = riachueloScreens[selectedRiachueloScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcRiachueloFactory(
+                    br.com.wgc.ds_templates.factories.WgcTrendApparelFactory(
                         screen = currentScreen
                     )
                 }
                 45 -> {
                     val currentScreen = boticarioScreens[selectedBoticarioScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBoticarioFactory(
+                    br.com.wgc.ds_templates.factories.WgcFragranceBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 46 -> {
                     val currentScreen = naturaScreens[selectedNaturaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNaturaFactory(
+                    br.com.wgc.ds_templates.factories.WgcNaturalBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 47 -> {
                     val currentScreen = sephoraScreens[selectedSephoraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcSephoraFactory(
+                    br.com.wgc.ds_templates.factories.WgcPrestigeBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 48 -> {
                     val currentScreen = petzScreens[selectedPetzScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPetzFactory(
+                    br.com.wgc.ds_templates.factories.WgcPetCareFactory(
                         screen = currentScreen
                     )
                 }
                 49 -> {
                     val currentScreen = cobasiScreens[selectedCobasiScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCobasiFactory(
+                    br.com.wgc.ds_templates.factories.WgcPetSuperstoreFactory(
                         screen = currentScreen
                     )
                 }
                 50 -> {
                     val currentScreen = zeeDogScreens[selectedZeeDogScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcZeeDogFactory(
+                    br.com.wgc.ds_templates.factories.WgcPetLifestyleFactory(
                         screen = currentScreen
                     )
                 }
                 51 -> {
                     val currentScreen = leroyMerlinScreens[selectedLeroyMerlinScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLeroyMerlinFactory(
+                    br.com.wgc.ds_templates.factories.WgcHomeImprovementFactory(
                         screen = currentScreen
                     )
                 }
                 52 -> {
                     val currentScreen = tokStokScreens[selectedTokStokScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTokStokFactory(
+                    br.com.wgc.ds_templates.factories.WgcDesignerFurnitureFactory(
                         screen = currentScreen
                     )
                 }
                 53 -> {
                     val currentScreen = madeiraMadeiraScreens[selectedMadeiraMadeiraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcMadeiraMadeiraFactory(
+                    br.com.wgc.ds_templates.factories.WgcHomeMarketplaceFactory(
                         screen = currentScreen
                     )
                 }
                 54 -> {
                     val currentScreen = g1Screens[selectedG1ScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcG1Factory(
+                    br.com.wgc.ds_templates.factories.WgcDailyNewsFactory(
                         screen = currentScreen
                     )
                 }
                 55 -> {
                     val currentScreen = uolScreens[selectedUolScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcUolFactory(
+                    br.com.wgc.ds_templates.factories.WgcMediaNetworkFactory(
                         screen = currentScreen
                     )
                 }
                 56 -> {
                     val currentScreen = exameScreens[selectedExameScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcExameFactory(
+                    br.com.wgc.ds_templates.factories.WgcBusinessNewsFactory(
                         screen = currentScreen
                     )
                 }
                 57 -> {
                     val currentScreen = govBrScreens[selectedGovBrScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGovBrFactory(
+                    br.com.wgc.ds_templates.factories.WgcCitizenServicesFactory(
                         screen = currentScreen
                     )
                 }
                 58 -> {
                     val currentScreen = cdtScreens[selectedCdtScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCdtFactory(
+                    br.com.wgc.ds_templates.factories.WgcTransitDigitalFactory(
                         screen = currentScreen
                     )
                 }
                 59 -> {
                     val currentScreen = ctpsScreens[selectedCtpsScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCtpsFactory(
+                    br.com.wgc.ds_templates.factories.WgcEmploymentRecordFactory(
                         screen = currentScreen
                     )
                 }
                 60 -> {
                     val currentScreen = organizzeScreens[selectedOrganizzeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcOrganizzeFactory(
+                    br.com.wgc.ds_templates.factories.WgcPersonalFinanceFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedOrganizzeScreenIndex = organizzeScreens.indexOf(targetScreen)
@@ -1739,7 +1739,7 @@ fun DesignSystemCatalogApp() {
                 }
                 61 -> {
                     val currentScreen = lazaScreens[selectedLazaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLazaFactory(
+                    br.com.wgc.ds_templates.factories.WgcBoutiqueFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedLazaScreenIndex = lazaScreens.indexOf(targetScreen)
@@ -1748,7 +1748,7 @@ fun DesignSystemCatalogApp() {
                 }
                 62 -> {
                     val currentScreen = shopEaseScreens[selectedShopEaseScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcShopEaseFactory(
+                    br.com.wgc.ds_templates.factories.WgcQuickShopFactory(
                         screen = currentScreen,
                         onNavigateToHome = { selectedShopEaseScreenIndex = 1 },
                         onNavigateToDetail = { selectedShopEaseScreenIndex = 2 },
@@ -1760,7 +1760,7 @@ fun DesignSystemCatalogApp() {
                 }
                 63 -> {
                     val currentScreen = nexkartScreens[selectedNexkartScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNexkartFactory(
+                    br.com.wgc.ds_templates.factories.WgcGadgetShopFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedNexkartScreenIndex = nexkartScreens.indexOf(targetScreen)
@@ -1769,7 +1769,7 @@ fun DesignSystemCatalogApp() {
                 }
                 64 -> {
                     val currentScreen = shopperScreens[selectedShopperScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcShopperFactory(
+                    br.com.wgc.ds_templates.factories.WgcFreshGroceryFactory(
                         screen = currentScreen,
                         onNavigateToHome = { selectedShopperScreenIndex = 1 },
                         onNavigateToDetail = { selectedShopperScreenIndex = 2 },
@@ -1780,7 +1780,7 @@ fun DesignSystemCatalogApp() {
                 }
                 65 -> {
                     val currentScreen = tasselScreens[selectedTasselScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTasselFactory(
+                    br.com.wgc.ds_templates.factories.WgcCuratedMarketFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedTasselScreenIndex = tasselScreens.indexOf(targetScreen)
@@ -1789,7 +1789,7 @@ fun DesignSystemCatalogApp() {
                 }
                 66 -> {
                     val currentScreen = clotheeScreens[selectedClotheeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcClotheeFactory(
+                    br.com.wgc.ds_templates.factories.WgcApparelFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedClotheeScreenIndex = clotheeScreens.indexOf(targetScreen)
@@ -1798,7 +1798,7 @@ fun DesignSystemCatalogApp() {
                 }
                 67 -> {
                     val currentScreen = kutukuScreens[selectedKutukuScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcKutukuFactory(
+                    br.com.wgc.ds_templates.factories.WgcRetailFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedKutukuScreenIndex = kutukuScreens.indexOf(targetScreen)
@@ -1807,7 +1807,7 @@ fun DesignSystemCatalogApp() {
                 }
                 68 -> {
                     val currentScreen = shoppeScreens[selectedShoppeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcShoppeFactory(
+                    br.com.wgc.ds_templates.factories.WgcMegaStoreFactory(
                         screen = currentScreen,
                         onNavigate = { targetScreen ->
                             selectedShoppeScreenIndex = shoppeScreens.indexOf(targetScreen)
@@ -1816,7 +1816,7 @@ fun DesignSystemCatalogApp() {
                 }
                 69 -> {
                     val currentScreen = stylishScreens[selectedStylishScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcStylishFactory(
+                    br.com.wgc.ds_templates.factories.WgcTrendFashionFactory(
                         screen = currentScreen,
                         onNavigate = { targetScreen ->
                             selectedStylishScreenIndex = stylishScreens.indexOf(targetScreen)
@@ -2078,7 +2078,7 @@ fun WgcDeliveryComponentsCatalogSection() {
         Text("Componentes de Delivery", style = MaterialTheme.typography.titleLarge)
         WgcAddressHeaderBar()
         WgcCircularCategoryRow()
-        WgcMerchantListingCard(name = "McDonald's", rating = "4.8", deliveryFee = "Grátis")
+        WgcMerchantListingCard(name = "Burger Bistro", rating = "4.8", deliveryFee = "Grátis")
         WgcFloatingCartSummaryBar()
     }
 }
@@ -2108,7 +2108,7 @@ fun WgcMarketplaceComponentsCatalogSection() {
 fun MultiBrandAuthCatalogSection() {
     var selectedBrand by remember { mutableIntStateOf(0) }
     var selectedFlow by remember { mutableIntStateOf(0) }
-    val brands = listOf("iFood", "Uber", "Shopee", "Mercado Livre", "99Food", "AliExpress")
+    val brands = listOf("Food Delivery", "Ride Hailing", "Deal Marketplace", "Marketplace", "Quick Delivery", "Global Marketplace")
     val flows = listOf("Login", "Cadastro", "Recuperar", "Endereço 2026")
 
     val brandColors = listOf(
@@ -2142,28 +2142,28 @@ fun MultiBrandAuthCatalogSection() {
         Box(modifier = Modifier.fillMaxSize()) {
             when (selectedBrand) {
                 0 -> when (selectedFlow) {
-                    0 -> WgcIFoodLoginScreenTemplate(viewModel = FakeIFoodAuthViewModel())
-                    1 -> WgcIFoodRegisterScreenTemplate(viewModel = FakeIFoodAuthViewModel())
-                    2 -> WgcIFoodResetPasswordScreenTemplate(viewModel = FakeIFoodAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "iFood", brandLogoText = "iF", brandColor = brandColors[0])
+                    0 -> WgcFoodDeliveryLoginScreenTemplate(viewModel = FakeFoodDeliveryAuthViewModel())
+                    1 -> WgcFoodDeliveryRegisterScreenTemplate(viewModel = FakeFoodDeliveryAuthViewModel())
+                    2 -> WgcFoodDeliveryResetPasswordScreenTemplate(viewModel = FakeFoodDeliveryAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Food Delivery", brandLogoText = "iF", brandColor = brandColors[0])
                 }
                 1 -> when (selectedFlow) {
-                    0 -> WgcUberLoginScreenTemplate(viewModel = FakeUberAuthViewModel())
-                    1 -> WgcUberRegisterScreenTemplate(viewModel = FakeUberAuthViewModel())
-                    2 -> WgcUberResetPasswordScreenTemplate(viewModel = FakeUberAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Uber", brandLogoText = "Uber", brandColor = brandColors[1])
+                    0 -> WgcRideHailingLoginScreenTemplate(viewModel = FakeRideHailingAuthViewModel())
+                    1 -> WgcRideHailingRegisterScreenTemplate(viewModel = FakeRideHailingAuthViewModel())
+                    2 -> WgcRideHailingResetPasswordScreenTemplate(viewModel = FakeRideHailingAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Ride Hailing", brandLogoText = "Ride Hailing", brandColor = brandColors[1])
                 }
                 2 -> when (selectedFlow) {
                     0 -> WgcShopeeLoginScreenTemplate(viewModel = FakeShopeeAuthViewModel())
                     1 -> WgcShopeeRegisterScreenTemplate(viewModel = FakeShopeeAuthViewModel())
                     2 -> WgcShopeeResetPasswordScreenTemplate(viewModel = FakeShopeeAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Shopee", brandLogoText = "S", brandColor = brandColors[2])
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Deal Marketplace", brandLogoText = "S", brandColor = brandColors[2])
                 }
                 3 -> when (selectedFlow) {
-                    0 -> WgcMercadoLivreLoginScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
-                    1 -> WgcMercadoLivreRegisterScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
-                    2 -> WgcMercadoLivreResetPasswordScreenTemplate(viewModel = FakeMercadoLivreAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Mercado Livre", brandLogoText = "ML", brandColor = brandColors[3])
+                    0 -> WgcMarketplaceLoginScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
+                    1 -> WgcMarketplaceRegisterScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
+                    2 -> WgcMarketplaceResetPasswordScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Marketplace", brandLogoText = "ML", brandColor = brandColors[3])
                 }
                 4 -> when (selectedFlow) {
                     0 -> WgcNineNineLoginScreenTemplate(viewModel = FakeNineNineAuthViewModel())
@@ -2175,7 +2175,7 @@ fun MultiBrandAuthCatalogSection() {
                     0 -> WgcAliExpressLoginScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
                     1 -> WgcAliExpressRegisterScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
                     2 -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "AliExpress", brandLogoText = "Ali", brandColor = brandColors[5])
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Global Marketplace", brandLogoText = "Ali", brandColor = brandColors[5])
                 }
             }
         }
@@ -2390,60 +2390,60 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                     } else null
                 )
 
-                Text("4. Droga Raia (Farmácia & Prescrição):", style = MaterialTheme.typography.titleSmall)
+                Text("4. Farmácia & Prescrição (Pharmacy Chain):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.DrogaRaiaProduct)
                 WgcCardFactory(type = WgcCardType.DrogaRaiaPrescription)
 
-                Text("5. Drogasil (Vacinas & Fidelidade):", style = MaterialTheme.typography.titleSmall)
+                Text("5. Cuidados & Vacinas (Care Pharmacy):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.DrogasilVaccine)
                 WgcCardFactory(type = WgcCardType.DrogasilLoyalty)
 
-                Text("6. Pague Menos (Clinic Farma & Convênio):", style = MaterialTheme.typography.titleSmall)
+                Text("6. Farmácia Popular & Convênio (Popular Pharmacy):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.PagueMenosClinic)
                 WgcCardFactory(type = WgcCardType.PagueMenosConvenio)
 
-                Text("7. Nubank / Inter / C6 Bank (FinTech):", style = MaterialTheme.typography.titleSmall)
-                WgcCardFactory(type = WgcCardType.NubankAccount)
+                Text("7. Fintech (Neobank / SuperApp / Carbon):", style = MaterialTheme.typography.titleSmall)
+                WgcCardFactory(type = WgcCardType.NeobankAccount)
                 WgcCardFactory(type = WgcCardType.InterSuperApp)
                 WgcCardFactory(type = WgcCardType.C6Carbon)
 
-                Text("8. Mobilidade (99 / inDrive / ClickBus):", style = MaterialTheme.typography.titleSmall)
+                Text("8. Mobilidade & Viagens (Urban / Bidding / Bus):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.MobilityRide)
 
-                Text("9. Viagem & Hospedagem (Airbnb / Decolar):", style = MaterialTheme.typography.titleSmall)
+                Text("9. Viagem & Hospedagem (Hospedagem / Decolar):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.TravelStay)
 
-                Text("10. Streaming (Spotify / Netflix):", style = MaterialTheme.typography.titleSmall)
+                Text("10. Streaming (AudioStream / VideoStream):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.StreamingMedia)
 
-                Text("11. Educação (Duolingo / Alura):", style = MaterialTheme.typography.titleSmall)
+                Text("11. Educação & Cursos (Language / Tech / Marketplace):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.EducationCourse)
 
-                Text("12. Mensageria & Redes (WhatsApp / Telegram):", style = MaterialTheme.typography.titleSmall)
+                Text("12. Mensageria & Redes (Direct / Channels):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.MessagingConversation)
 
-                Text("13. Games (Steam / Twitch):", style = MaterialTheme.typography.titleSmall)
+                Text("13. Games & Streaming (Gaming Store / Live Stream):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.GameStore)
 
-                Text("14. Produtividade (Notion / Trello):", style = MaterialTheme.typography.titleSmall)
+                Text("14. Produtividade & Tarefas (Workspace Docs / Kanban):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.ProductivityTask)
 
-                Text("15. Fast Food & Delivery (McDonald's / BK):", style = MaterialTheme.typography.titleSmall)
+                Text("15. Fast Food & Delivery (Burger / Flame):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.FastFoodMeal)
 
-                Text("16. Logística & Rastreio (Loggi / Lalamove):", style = MaterialTheme.typography.titleSmall)
+                Text("16. Logística & Rastreio (Express / Freight):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.LogisticsPackage)
 
-                Text("17. Vestuário & Moda (Renner / C&A):", style = MaterialTheme.typography.titleSmall)
+                Text("17. Vestuário & Moda (Department / Urban / Trend):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.FashionItem)
 
-                Text("18. Beleza & Cosméticos (O Boticário / Sephora):", style = MaterialTheme.typography.titleSmall)
+                Text("18. Beleza & Cosméticos (Fragrance / Natural / Prestige):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.BeautyCosmetic)
 
-                Text("19. Pet Shop & Cuidados (Petz / Cobasi):", style = MaterialTheme.typography.titleSmall)
+                Text("19. Pet Shop & Cuidados (Pet Care / Superstore):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.PetCare)
 
-                Text("20. Casa & Construção (Leroy Merlin / Tok&Stok):", style = MaterialTheme.typography.titleSmall)
+                Text("20. Casa & Construção (Home Improvement / Designer Furniture):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.HomeImprovement)
 
                 Text("21. Notícias & Mídia (G1 / UOL):", style = MaterialTheme.typography.titleSmall)

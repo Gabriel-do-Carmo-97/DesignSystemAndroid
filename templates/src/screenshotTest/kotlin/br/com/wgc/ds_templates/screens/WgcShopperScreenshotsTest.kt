@@ -2,13 +2,13 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcShopperFactory
-import br.com.wgc.ds_templates.factories.WgcShopperScreen
-import br.com.wgc.ds_templates.screens.shopper.cart.WgcShopperCartTemplate
-import br.com.wgc.ds_templates.screens.shopper.detail.WgcShopperProductDetailTemplate
-import br.com.wgc.ds_templates.screens.shopper.home.WgcShopperHomeTemplate
-import br.com.wgc.ds_templates.screens.shopper.profile.WgcShopperProfileTemplate
-import br.com.wgc.ds_templates.screens.shopper.splash.WgcShopperSplashTemplate
+import br.com.wgc.ds_templates.factories.WgcFreshGroceryFactory
+import br.com.wgc.ds_templates.factories.WgcFreshGroceryScreen
+import br.com.wgc.ds_templates.screens.freshgrocery.cart.WgcShopperCartTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.detail.WgcShopperProductDetailTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.home.WgcShopperHomeTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.profile.WgcShopperProfileTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.splash.WgcShopperSplashTemplate
 
 class WgcShopperScreenshotsTest {
 
@@ -45,6 +45,6 @@ class WgcShopperScreenshotsTest {
     @Preview(showBackground = true)
     @Composable
     fun previewShopperFactory() {
-        WgcShopperFactory(screen = WgcShopperScreen.Home)
+        WgcFreshGroceryFactory(screen = WgcFreshGroceryScreen.Home)
     }
 }

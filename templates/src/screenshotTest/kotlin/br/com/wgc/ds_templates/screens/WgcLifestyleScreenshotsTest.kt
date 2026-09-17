@@ -21,27 +21,27 @@ class WgcLifestyleScreenshotsTest {
         WgcMobilityFactory(screen = WgcMobilityScreen.NINETY_NINE)
     }
 
-    @Preview(name = "Viagem - Airbnb Screen", showBackground = true)
+    @Preview(name = "Viagem - Hospedagem Screen", showBackground = true)
     @Composable
     fun travelScreenPreview() {
-        WgcTravelFactory(screen = WgcTravelScreen.AIRBNB)
+        WgcTravelFactory(screen = WgcTravelScreen.LODGING)
     }
 
-    @Preview(name = "Streaming - Spotify Screen", showBackground = true)
+    @Preview(name = "Streaming - Áudio Streaming Screen", showBackground = true)
     @Composable
     fun streamingScreenPreview() {
-        WgcStreamingFactory(screen = WgcStreamingScreen.SPOTIFY)
+        WgcStreamingFactory(screen = WgcStreamingScreen.AUDIO)
     }
 
-    @Preview(name = "Educação - Duolingo Screen", showBackground = true)
+    @Preview(name = "Educação - Idiomas Screen", showBackground = true)
     @Composable
     fun educationScreenPreview() {
-        WgcEducationFactory(screen = WgcEducationScreen.DUOLINGO)
+        WgcEducationFactory(screen = WgcEducationScreen.LANGUAGE)
     }
 
-    @Preview(name = "Mensageria - WhatsApp Screen", showBackground = true)
+    @Preview(name = "Mensageria - Direct Screen", showBackground = true)
     @Composable
     fun messagingScreenPreview() {
-        WgcMessagingFactory(screen = WgcMessagingScreen.WHATSAPP)
+        WgcMessagingFactory(screen = WgcMessagingScreen.DIRECT)
     }
 }

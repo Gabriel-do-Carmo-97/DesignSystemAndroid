@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcTravelStayCard
 
 enum class WgcTravelScreen {
-    DECOLAR,
-    AIRBNB,
-    BOOKING
+    FLIGHT,
+    LODGING,
+    HOTEL
 }
 
 @Composable
 fun WgcTravelFactory(
     modifier: Modifier = Modifier,
-    screen: WgcTravelScreen = WgcTravelScreen.AIRBNB
+    screen: WgcTravelScreen = WgcTravelScreen.LODGING
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->

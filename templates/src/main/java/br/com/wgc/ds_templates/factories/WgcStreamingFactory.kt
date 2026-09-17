@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcStreamingMediaCard
 
 enum class WgcStreamingScreen {
-    NETFLIX,
-    SPOTIFY,
-    GLOBOPLAY
+    VIDEO,
+    AUDIO,
+    BROADCAST
 }
 
 @Composable
 fun WgcStreamingFactory(
     modifier: Modifier = Modifier,
-    screen: WgcStreamingScreen = WgcStreamingScreen.SPOTIFY
+    screen: WgcStreamingScreen = WgcStreamingScreen.AUDIO
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->

@@ -19,11 +19,11 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 
 /**
- * Botão de rodapé fixo oficial do Laza (WgcLazaBottomNavButton).
+ * Botão de rodapé fixo oficial do Laza (WgcBoutiqueBottomNavButton).
  * Ocupa a largura total na base da tela com fundo roxo primário (#9775FA) e tipografia em destaque.
  */
 @Composable
-fun WgcLazaBottomNavButton(
+fun WgcBoutiqueBottomNavButton(
     modifier: Modifier = Modifier,
     label: String,
     enabled: Boolean = true,
@@ -34,8 +34,8 @@ fun WgcLazaBottomNavButton(
             .fillMaxWidth()
             .height(WgcCoreDsSize.s54.dp)
             .background(
-                if (enabled) Color(WgcCoreDsColors.lazaPrimary)
-                else Color(WgcCoreDsColors.lazaPrimary).copy(alpha = 0.5f)
+                if (enabled) Color(WgcCoreDsColors.boutiquePrimary)
+                else Color(WgcCoreDsColors.boutiquePrimary).copy(alpha = 0.5f)
             )
             .clickable(enabled = enabled, onClick = onClick),
         contentAlignment = Alignment.Center
@@ -52,5 +52,5 @@ fun WgcLazaBottomNavButton(
 @Preview(showBackground = true)
 @Composable
 private fun WgcLazaBottomNavButtonPreview() {
-    WgcLazaBottomNavButton(label = "Add to Cart")
+    WgcBoutiqueBottomNavButton(label = "Add to Cart")
 }

@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcMessagingConversationCard
 
 enum class WgcMessagingScreen {
-    WHATSAPP,
-    TELEGRAM,
-    PINTEREST
+    DIRECT,
+    CHANNELS,
+    VISUAL
 }
 
 @Composable
 fun WgcMessagingFactory(
     modifier: Modifier = Modifier,
-    screen: WgcMessagingScreen = WgcMessagingScreen.WHATSAPP
+    screen: WgcMessagingScreen = WgcMessagingScreen.DIRECT
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->

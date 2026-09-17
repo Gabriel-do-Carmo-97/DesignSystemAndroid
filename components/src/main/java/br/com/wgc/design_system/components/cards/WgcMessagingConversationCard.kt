@@ -50,7 +50,7 @@ fun WgcMessagingConversationCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.whatsAppGreen)),
+                    .background(Color(WgcCoreDsColors.directMessagingGreen)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -87,7 +87,7 @@ fun WgcMessagingConversationCard(
                     Box(
                         modifier = Modifier
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.whatsAppGreen))
+                            .background(Color(WgcCoreDsColors.directMessagingGreen))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         Text(

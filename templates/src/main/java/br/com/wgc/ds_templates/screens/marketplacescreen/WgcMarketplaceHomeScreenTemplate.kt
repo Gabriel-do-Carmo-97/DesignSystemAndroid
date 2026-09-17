@@ -115,7 +115,7 @@ fun WgcMarketplaceHomeScreenContent(
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         Text(text = "meli+ • Assine por R$ 17,90/mês", color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                        Text(text = "Frete grátis em milhões de produtos + Disney+ incluído 🎬", color = Color.White.copy(alpha = 0.9f), style = MaterialTheme.typography.bodySmall)
+                        Text(text = "Frete grátis em milhões de produtos + Streaming Plus incluído 🎬", color = Color.White.copy(alpha = 0.9f), style = MaterialTheme.typography.bodySmall)
                     }
                 }
             }
@@ -171,7 +171,7 @@ private fun PaddingBox(content: @Composable () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-private fun MercadoLivreHomePreview() {
+private fun MarketplaceHomePreview() {
     MaterialTheme {
         WgcMarketplaceHomeScreenContent(
             state = MarketplaceHomeUiState(),

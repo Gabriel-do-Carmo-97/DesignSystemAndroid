@@ -47,7 +47,7 @@ fun WgcLogisticsPackageCard(
             Icon(
                 imageVector = Icons.Default.LocalShipping,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.loggiBlue),
+                tint = Color(WgcCoreDsColors.expressLogisticsBlue),
                 modifier = Modifier.size(WgcCoreDsSize.s32.dp)
             )
 
@@ -62,7 +62,7 @@ fun WgcLogisticsPackageCard(
                 Text(
                     text = statusText,
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.loggiBlue),
+                    color = Color(WgcCoreDsColors.expressLogisticsBlue),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(

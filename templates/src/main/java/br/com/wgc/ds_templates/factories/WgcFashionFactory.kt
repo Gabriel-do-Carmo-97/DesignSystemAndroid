@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcFashionItemCard
 
 enum class WgcFashionScreen {
-    RENNER,
-    CEA,
-    RIACHUELO
+    DEPARTMENT,
+    URBAN,
+    TREND
 }
 
 @Composable
 fun WgcFashionFactory(
     modifier: Modifier = Modifier,
-    screen: WgcFashionScreen = WgcFashionScreen.RENNER
+    screen: WgcFashionScreen = WgcFashionScreen.DEPARTMENT
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -34,7 +34,7 @@ fun WgcFashionFactory(
         ) {
             item {
                 WgcFashionItemCard(
-                    brandName = "Renner Jeans",
+                    brandName = "Department Denim",
                     itemTitle = "Calça Jeans Wide Leg Cintura Alta",
                     price = 179.90,
                     installments = "4x de R$ 44,97 sem juros"

@@ -2,30 +2,30 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcDrogaRaiaFactory
-import br.com.wgc.ds_templates.factories.WgcDrogaRaiaScreen
-import br.com.wgc.ds_templates.factories.WgcDrogasilFactory
-import br.com.wgc.ds_templates.factories.WgcDrogasilScreen
-import br.com.wgc.ds_templates.factories.WgcPagueMenosFactory
-import br.com.wgc.ds_templates.factories.WgcPagueMenosScreen
+import br.com.wgc.ds_templates.factories.WgcPharmacyChainFactory
+import br.com.wgc.ds_templates.factories.WgcPharmacyChainScreen
+import br.com.wgc.ds_templates.factories.WgcCarePharmacyFactory
+import br.com.wgc.ds_templates.factories.WgcCarePharmacyScreen
+import br.com.wgc.ds_templates.factories.WgcPopularPharmacyFactory
+import br.com.wgc.ds_templates.factories.WgcPopularPharmacyScreen
 
 class WgcPharmaScreenshotsTest {
 
-    @Preview(name = "Droga Raia - Home Screen", showBackground = true)
+    @Preview(name = "Pharmacy Chain - Home Screen", showBackground = true)
     @Composable
     fun drogaRaiaHomeScreenPreview() {
-        WgcDrogaRaiaFactory(screen = WgcDrogaRaiaScreen.HOME)
+        WgcPharmacyChainFactory(screen = WgcPharmacyChainScreen.HOME)
     }
 
-    @Preview(name = "Drogasil - Home Screen", showBackground = true)
+    @Preview(name = "Care Pharmacy - Home Screen", showBackground = true)
     @Composable
     fun drogasilHomeScreenPreview() {
-        WgcDrogasilFactory(screen = WgcDrogasilScreen.HOME)
+        WgcCarePharmacyFactory(screen = WgcCarePharmacyScreen.HOME)
     }
 
-    @Preview(name = "Pague Menos - Home Screen", showBackground = true)
+    @Preview(name = "Popular Pharmacy - Home Screen", showBackground = true)
     @Composable
     fun pagueMenosHomeScreenPreview() {
-        WgcPagueMenosFactory(screen = WgcPagueMenosScreen.HOME)
+        WgcPopularPharmacyFactory(screen = WgcPopularPharmacyScreen.HOME)
     }
 }

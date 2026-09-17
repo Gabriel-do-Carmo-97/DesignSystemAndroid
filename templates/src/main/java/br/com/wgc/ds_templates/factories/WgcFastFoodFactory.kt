@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcFastFoodMealCard
 
 enum class WgcFastFoodScreen {
-    MCDONALDS,
-    BURGER_KING,
-    DOMINOS
+    BURGER,
+    FLAME_BURGER,
+    PIZZA
 }
 
 @Composable
 fun WgcFastFoodFactory(
     modifier: Modifier = Modifier,
-    screen: WgcFastFoodScreen = WgcFastFoodScreen.MCDONALDS
+    screen: WgcFastFoodScreen = WgcFastFoodScreen.BURGER
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -34,8 +34,8 @@ fun WgcFastFoodFactory(
         ) {
             item {
                 WgcFastFoodMealCard(
-                    comboName = "McOferta Média Big Mac",
-                    description = "Dois hambúrgueres, alface, queijo, molho especial, cebola e picles",
+                    comboName = "Combo Clássico Burger",
+                    description = "Dois hambúrgueres artesanais, alface, queijo cheddar, molho especial e cebola",
                     price = 36.90
                 )
             }

@@ -2,30 +2,30 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcC6Factory
-import br.com.wgc.ds_templates.factories.WgcC6Screen
-import br.com.wgc.ds_templates.factories.WgcInterFactory
-import br.com.wgc.ds_templates.factories.WgcInterScreen
-import br.com.wgc.ds_templates.factories.WgcNubankFactory
-import br.com.wgc.ds_templates.factories.WgcNubankScreen
+import br.com.wgc.ds_templates.factories.WgcFintechCarbonFactory
+import br.com.wgc.ds_templates.factories.WgcFintechCarbonScreen
+import br.com.wgc.ds_templates.factories.WgcFintechSuperAppFactory
+import br.com.wgc.ds_templates.factories.WgcFintechSuperAppScreen
+import br.com.wgc.ds_templates.factories.WgcFintechNeobankFactory
+import br.com.wgc.ds_templates.factories.WgcFintechNeobankScreen
 
 class WgcFintechScreenshotsTest {
 
-    @Preview(name = "Nubank - Home Screen", showBackground = true)
+    @Preview(name = "Neobank - Home Screen", showBackground = true)
     @Composable
-    fun nubankHomeScreenPreview() {
-        WgcNubankFactory(screen = WgcNubankScreen.HOME)
+    fun fintechNeobankHomeScreenPreview() {
+        WgcFintechNeobankFactory(screen = WgcFintechNeobankScreen.HOME)
     }
 
-    @Preview(name = "Inter - Home Screen", showBackground = true)
+    @Preview(name = "Fintech SuperApp - Home Screen", showBackground = true)
     @Composable
-    fun interHomeScreenPreview() {
-        WgcInterFactory(screen = WgcInterScreen.HOME)
+    fun fintechSuperAppHomeScreenPreview() {
+        WgcFintechSuperAppFactory(screen = WgcFintechSuperAppScreen.HOME)
     }
 
-    @Preview(name = "C6 Bank - Home Screen", showBackground = true)
+    @Preview(name = "Carbon Bank - Home Screen", showBackground = true)
     @Composable
     fun c6HomeScreenPreview() {
-        WgcC6Factory(screen = WgcC6Screen.HOME)
+        WgcFintechCarbonFactory(screen = WgcFintechCarbonScreen.HOME)
     }
 }

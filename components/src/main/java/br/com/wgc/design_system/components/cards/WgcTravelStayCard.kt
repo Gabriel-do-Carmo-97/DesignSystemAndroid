@@ -61,7 +61,7 @@ fun WgcTravelStayCard(
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.uolYellow),
+                    tint = Color(WgcCoreDsColors.mediaNetworkYellow),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
@@ -88,7 +88,7 @@ fun WgcTravelStayCard(
                     text = "R$ " + String.format("%.2f", nightPrice) + " /noite",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.airbnbCoral),
+                    color = Color(WgcCoreDsColors.lodgingCoral),
                     modifier = Modifier.weight(1f)
                 )
 

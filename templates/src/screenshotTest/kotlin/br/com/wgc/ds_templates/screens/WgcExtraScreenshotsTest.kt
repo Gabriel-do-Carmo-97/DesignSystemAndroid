@@ -2,15 +2,15 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcExtraFactory
-import br.com.wgc.ds_templates.factories.WgcExtraScreen
-import br.com.wgc.ds_templates.screens.extra.cart.WgcExtraCartTemplate
-import br.com.wgc.ds_templates.screens.extra.discounts.WgcExtraDiscountsTemplate
-import br.com.wgc.ds_templates.screens.extra.flyer.WgcExtraFlyerTemplate
-import br.com.wgc.ds_templates.screens.extra.home.WgcExtraHomeTemplate
-import br.com.wgc.ds_templates.screens.extra.loyalty.WgcExtraLoyaltyTemplate
-import br.com.wgc.ds_templates.screens.extra.model.ExtraCartItem
-import br.com.wgc.ds_templates.screens.extra.model.ExtraMockData
+import br.com.wgc.ds_templates.factories.WgcHypermarketFactory
+import br.com.wgc.ds_templates.factories.WgcHypermarketScreen
+import br.com.wgc.ds_templates.screens.hypermarket.cart.WgcExtraCartTemplate
+import br.com.wgc.ds_templates.screens.hypermarket.discounts.WgcExtraDiscountsTemplate
+import br.com.wgc.ds_templates.screens.hypermarket.flyer.WgcExtraFlyerTemplate
+import br.com.wgc.ds_templates.screens.hypermarket.home.WgcExtraHomeTemplate
+import br.com.wgc.ds_templates.screens.hypermarket.loyalty.WgcExtraLoyaltyTemplate
+import br.com.wgc.ds_templates.screens.hypermarket.model.ExtraCartItem
+import br.com.wgc.ds_templates.screens.hypermarket.model.HypermarketMockData
 
 class WgcExtraScreenshotsTest {
 
@@ -18,8 +18,8 @@ class WgcExtraScreenshotsTest {
     @Composable
     fun PreviewExtraHome() {
         WgcExtraHomeTemplate(
-            user = ExtraMockData.mockUser,
-            products = ExtraMockData.mockProducts
+            user = HypermarketMockData.mockUser,
+            products = HypermarketMockData.mockProducts
         )
     }
 
@@ -27,7 +27,7 @@ class WgcExtraScreenshotsTest {
     @Composable
     fun PreviewExtraDiscounts() {
         WgcExtraDiscountsTemplate(
-            coupons = ExtraMockData.mockCoupons,
+            coupons = HypermarketMockData.mockCoupons,
             userCpfMasked = "***.482.918-**"
         )
     }
@@ -36,7 +36,7 @@ class WgcExtraScreenshotsTest {
     @Composable
     fun PreviewExtraFlyer() {
         WgcExtraFlyerTemplate(
-            products = ExtraMockData.mockProducts
+            products = HypermarketMockData.mockProducts
         )
     }
 
@@ -45,9 +45,9 @@ class WgcExtraScreenshotsTest {
     fun PreviewExtraCart() {
         WgcExtraCartTemplate(
             cartItems = listOf(
-                ExtraCartItem(ExtraMockData.mockProducts[0], 1),
-                ExtraCartItem(ExtraMockData.mockProducts[1], 2),
-                ExtraCartItem(ExtraMockData.mockProducts[2], 6)
+                ExtraCartItem(HypermarketMockData.mockProducts[0], 1),
+                ExtraCartItem(HypermarketMockData.mockProducts[1], 2),
+                ExtraCartItem(HypermarketMockData.mockProducts[2], 6)
             )
         )
     }
@@ -56,13 +56,13 @@ class WgcExtraScreenshotsTest {
     @Composable
     fun PreviewExtraLoyalty() {
         WgcExtraLoyaltyTemplate(
-            stamps = ExtraMockData.mockStamps
+            stamps = HypermarketMockData.mockStamps
         )
     }
 
     @Preview(showBackground = true)
     @Composable
     fun PreviewExtraFactory() {
-        WgcExtraFactory(screen = WgcExtraScreen.HOME)
+        WgcHypermarketFactory(screen = WgcHypermarketScreen.HOME)
     }
 }

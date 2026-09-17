@@ -43,7 +43,7 @@ fun WgcDrogaRaiaBottomNav(
     cartBadgeCount: Int = 0
 ) {
     NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.drogaRaiaSurface)),
+        modifier = modifier.background(Color(WgcCoreDsColors.pharmacyChainSurface)),
         tonalElevation = WgcCoreDsElevation.level3.dp
     ) {
         DrogaRaiaNavTab.entries.forEach { tab ->
@@ -56,7 +56,7 @@ fun WgcDrogaRaiaBottomNav(
                         BadgedBox(
                             badge = {
                                 Badge(
-                                    containerColor = Color(WgcCoreDsColors.drogaRaiaRed)) {
+                                    containerColor = Color(WgcCoreDsColors.pharmacyChainRed)) {
                                     Text(text = cartBadgeCount.toString())
                                 }
                             }
@@ -83,11 +83,11 @@ fun WgcDrogaRaiaBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                    selectedTextColor = Color(WgcCoreDsColors.drogaRaiaRed),
-                    unselectedIconColor = Color(WgcCoreDsColors.drogaRaiaTextSecondary),
-                    unselectedTextColor = Color(WgcCoreDsColors.drogaRaiaTextSecondary),
-                    indicatorColor = Color(WgcCoreDsColors.drogaRaiaRedLight)
+                    selectedIconColor = Color(WgcCoreDsColors.pharmacyChainRed),
+                    selectedTextColor = Color(WgcCoreDsColors.pharmacyChainRed),
+                    unselectedIconColor = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                    unselectedTextColor = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                    indicatorColor = Color(WgcCoreDsColors.pharmacyChainRedLight)
                 )
             )
         }

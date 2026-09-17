@@ -32,8 +32,8 @@ fun WgcNoveNoveRideCard(
     Card(
         modifier = modifier.fillMaxWidth().clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = if (isSelected) Color(WgcCoreDsColors.novenoveYellow).copy(alpha = 0.15f) else Color.White),
-        border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.novenoveYellow)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gray200))
+        colors = CardDefaults.cardColors(containerColor = if (isSelected) Color(WgcCoreDsColors.urbanMobilityYellow).copy(alpha = 0.15f) else Color.White),
+        border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.urbanMobilityYellow)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gray200))
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
@@ -41,7 +41,7 @@ fun WgcNoveNoveRideCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp), verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.novenoveYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))
+                Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.urbanMobilityYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))
                 Column {
                     Text(name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Text("Chega em $eta", fontSize = 14.sp, color = Color.Gray)

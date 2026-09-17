@@ -79,13 +79,13 @@ fun WgcAutomotiveHomeTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(text = "R$ " + String.format("%.2f", car.price), fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.automotiveRed))
-                        Text(text = "FIPE: R$ " + String.format("%.2f", car.fipePrice), fontSize = 12.sp, color = Color(WgcCoreDsColors.cdtGreen), fontWeight = FontWeight.SemiBold)
+                        Text(text = "FIPE: R$ " + String.format("%.2f", car.fipePrice), fontSize = 12.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.SemiBold)
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Text(text = "${car.yearModel} • ${car.mileageKm} km • ${car.cityState}", fontSize = 12.sp, color = Color.DarkGray)
                     if (car.certifiedReportApproved) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-                        Text(text = "🛡️ Laudo Cautelar 100% Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.cdtGreen), fontWeight = FontWeight.Bold)
+                        Text(text = "🛡️ Laudo Cautelar 100% Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -136,7 +136,7 @@ fun WgcAutomotiveFipeTemplate(
         ) {
             Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                 Text(text = "Veículo: ${car.makeModel}", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                Text(text = "Valor Oficial FIPE: R$ " + String.format("%.2f", car.fipePrice), fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(WgcCoreDsColors.cdtGreen))
+                Text(text = "Valor Oficial FIPE: R$ " + String.format("%.2f", car.fipePrice), fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(WgcCoreDsColors.transitDigitalGreen))
                 Text(text = "Variação últimos 12 meses: -3.8% (Desvalorização normal)", fontSize = 13.sp, color = Color.Gray)
             }
         }

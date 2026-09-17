@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcMobilityRideCard
 
 enum class WgcMobilityScreen {
-    NINETY_NINE,
-    INDRIVE,
-    CLICKBUS
+    URBAN,
+    BIDDING,
+    BUS
 }
 
 @Composable
 fun WgcMobilityFactory(
     modifier: Modifier = Modifier,
-    screen: WgcMobilityScreen = WgcMobilityScreen.NINETY_NINE
+    screen: WgcMobilityScreen = WgcMobilityScreen.URBAN
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -34,14 +34,14 @@ fun WgcMobilityFactory(
         ) {
             item {
                 WgcMobilityRideCard(
-                    categoryName = "99Pop Express",
+                    categoryName = "Pop Express",
                     estimatedTime = "3 min",
                     price = 18.50
                 )
             }
             item {
                 WgcMobilityRideCard(
-                    categoryName = "99Comfort",
+                    categoryName = "Comfort Plus",
                     estimatedTime = "5 min",
                     price = 24.90
                 )

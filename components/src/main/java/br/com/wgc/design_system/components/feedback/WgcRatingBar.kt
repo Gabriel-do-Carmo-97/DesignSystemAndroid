@@ -34,7 +34,7 @@ fun WgcRatingBar(
     rating: Float = 4.5f,
     maxStars: Int = 5,
     reviewCount: Int? = null,
-    starColor: Color = Color(WgcCoreDsColors.stylishGold),
+    starColor: Color = Color(WgcCoreDsColors.trendFashionGold),
     showRatingText: Boolean = true
 ) {
     val clampedRating = rating.coerceIn(0f, maxStars.toFloat())

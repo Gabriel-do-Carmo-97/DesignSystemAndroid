@@ -31,8 +31,8 @@ import br.com.wgc.ds_templates.screens.fooddelivery.FakeFoodDeliveryHomeViewMode
 import br.com.wgc.ds_templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
 import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.nineninefood.FakeNineNineFoodHomeViewModel
-import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeNineNineFoodHomeViewModel
+import br.com.wgc.ds_templates.screens.quickfooddelivery.NineNineFoodHomeScreenTemplate
 
 /**
  * Fábrica Universal de Telas Home (WgcHomeFactory).
@@ -43,7 +43,7 @@ import br.com.wgc.ds_templates.screens.nineninefood.NineNineFoodHomeScreenTempla
 @Composable
 fun WgcHomeFactory(
     modifier: Modifier = Modifier,
-    brand: WgcBrand = WgcBrand.IFood,
+    brand: WgcBrand = WgcBrand.FoodDelivery,
     topBarSlot: (@Composable () -> Unit)? = null,
     bottomNavSlot: (@Composable () -> Unit)? = null,
     floatingActionSlot: (@Composable () -> Unit)? = null,
@@ -55,33 +55,33 @@ fun WgcHomeFactory(
 
     if (!hasCustomSlots) {
         when (brand) {
-            WgcBrand.IFood -> WgcFoodDeliveryHomeScreenTemplate(FakeFoodDeliveryHomeViewModel())
-            WgcBrand.MercadoLivre -> WgcMarketplaceHomeScreenTemplate(FakeMarketplaceHomeViewModel())
-            WgcBrand.NineNineFood -> NineNineFoodHomeScreenTemplate(FakeNineNineFoodHomeViewModel())
-            WgcBrand.Uber,
-            WgcBrand.Shopee,
-            WgcBrand.AliExpress,
-            WgcBrand.Klok,
-            WgcBrand.CleanWave,
-            WgcBrand.SplitCard -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
-            WgcBrand.Stylish -> br.com.wgc.ds_templates.screens.stylish.home.WgcStylishHomeScreenTemplate()
-            WgcBrand.Shoppe -> br.com.wgc.ds_templates.screens.shoppe.home.WgcShoppeHomeScreenTemplate()
-            WgcBrand.Kutuku -> br.com.wgc.ds_templates.screens.kutuku.home.WgcKutukuHomeScreen()
-            WgcBrand.Clothee -> br.com.wgc.ds_templates.screens.clothee.home.WgcClotheeHomeTemplate()
-            WgcBrand.Laza -> br.com.wgc.ds_templates.screens.laza.home.WgcLazaHomeTemplate()
-            WgcBrand.Tassel -> br.com.wgc.ds_templates.screens.tassel.market.WgcTasselMarketTemplate()
-            WgcBrand.Shopper -> br.com.wgc.ds_templates.screens.shopper.home.WgcShopperHomeTemplate()
-            WgcBrand.Nexkart -> br.com.wgc.ds_templates.screens.nexkart.home.WgcNexkartHomeTemplate()
-            WgcBrand.ShopEase -> br.com.wgc.ds_templates.screens.shopease.home.WgcShopEaseHomeTemplate()
-            WgcBrand.Organizze -> br.com.wgc.ds_templates.screens.organizze.dashboard.WgcOrganizzeDashboardTemplate()
-            WgcBrand.QuintoAndar -> br.com.wgc.ds_templates.screens.quintoandar.home.WgcQuintoAndarHomeTemplate()
-            WgcBrand.VivaReal -> br.com.wgc.ds_templates.screens.vivareal.home.WgcVivaRealHomeTemplate()
-            WgcBrand.Zap -> br.com.wgc.ds_templates.screens.zap.home.WgcZapHomeTemplate()
-            WgcBrand.SmartFit -> WgcSmartFitFactory.Screen(WgcSmartFitScreen.Home)
-            WgcBrand.Wellhub -> WgcWellhubFactory.Screen(WgcWellhubScreen.Home)
-            WgcBrand.NikeTrainingClub -> WgcNtcFactory(screen = WgcNtcScreen.HOME)
-            WgcBrand.ClubeExtra -> WgcExtraFactory(screen = WgcExtraScreen.HOME)
-            WgcBrand.PaoDeAcucar -> WgcPdaFactory(screen = WgcPdaScreen.HOME)
+            WgcBrand.FoodDelivery -> WgcFoodDeliveryHomeScreenTemplate(FakeFoodDeliveryHomeViewModel())
+            WgcBrand.Marketplace -> WgcMarketplaceHomeScreenTemplate(FakeMarketplaceHomeViewModel())
+            WgcBrand.QuickFoodDelivery -> NineNineFoodHomeScreenTemplate(FakeNineNineFoodHomeViewModel())
+            WgcBrand.RideHailing,
+            WgcBrand.DealMarketplace,
+            WgcBrand.GlobalMarketplace,
+            WgcBrand.ClockAuth,
+            WgcBrand.WaveAuth,
+            WgcBrand.SplitAuth -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
+            WgcBrand.TrendFashion -> br.com.wgc.ds_templates.screens.trendfashion.home.WgcStylishHomeScreenTemplate()
+            WgcBrand.MegaStore -> br.com.wgc.ds_templates.screens.megastore.home.WgcShoppeHomeScreenTemplate()
+            WgcBrand.Retail -> br.com.wgc.ds_templates.screens.retail.home.WgcKutukuHomeScreen()
+            WgcBrand.Apparel -> br.com.wgc.ds_templates.screens.apparel.home.WgcClotheeHomeTemplate()
+            WgcBrand.Boutique -> br.com.wgc.ds_templates.screens.boutique.home.WgcLazaHomeTemplate()
+            WgcBrand.CuratedMarket -> br.com.wgc.ds_templates.screens.curatedmarket.market.WgcTasselMarketTemplate()
+            WgcBrand.FreshGrocery -> br.com.wgc.ds_templates.screens.freshgrocery.home.WgcShopperHomeTemplate()
+            WgcBrand.GadgetShop -> br.com.wgc.ds_templates.screens.gadgetshop.home.WgcNexkartHomeTemplate()
+            WgcBrand.QuickShop -> br.com.wgc.ds_templates.screens.quickshop.home.WgcShopEaseHomeTemplate()
+            WgcBrand.PersonalFinance -> br.com.wgc.ds_templates.screens.personalfinance.dashboard.WgcOrganizzeDashboardTemplate()
+            WgcBrand.PropertyRental -> br.com.wgc.ds_templates.screens.propertyrental.home.WgcPropertyRentalHomeTemplate()
+            WgcBrand.PropertyListing -> br.com.wgc.ds_templates.screens.propertylisting.home.WgcPropertyListingHomeTemplate()
+            WgcBrand.PropertyClassifieds -> br.com.wgc.ds_templates.screens.propertyclassifieds.home.WgcZapHomeTemplate()
+            WgcBrand.GymFitness -> WgcGymFitnessFactory.Screen(WgcGymFitnessScreen.Home)
+            WgcBrand.CorporateWellness -> WgcCorporateWellnessFactory.Screen(WgcCorporateWellnessScreen.Home)
+            WgcBrand.GuidedTraining -> WgcGuidedTrainingFactory(screen = WgcGuidedTrainingScreen.HOME)
+            WgcBrand.Hypermarket -> WgcHypermarketFactory(screen = WgcHypermarketScreen.HOME)
+            WgcBrand.PremiumGrocery -> WgcPremiumGroceryFactory(screen = WgcPremiumGroceryScreen.HOME)
             else -> EcommerceHomeScreenTemplate(FakeEcommerceHomeViewModel())
         }
         return
@@ -156,14 +156,14 @@ fun WgcHomeFactory(
     }
 }
 
-@Preview(name = "WgcHomeFactory - Default iFood", showBackground = true)
+@Preview(name = "WgcHomeFactory - Default Food Delivery", showBackground = true)
 @Composable
 private fun WgcHomeFactoryDefaultPreview() {
     WgcHomeFactory()
 }
 
-@Preview(name = "WgcHomeFactory - MercadoLivre", showBackground = true)
+@Preview(name = "WgcHomeFactory - Marketplace", showBackground = true)
 @Composable
 private fun WgcHomeFactoryMLPreview() {
-    WgcHomeFactory(brand = WgcBrand.MercadoLivre)
+    WgcHomeFactory(brand = WgcBrand.Marketplace)
 }

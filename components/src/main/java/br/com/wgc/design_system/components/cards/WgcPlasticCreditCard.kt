@@ -35,7 +35,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 fun WgcPlasticCreditCard(
     holderName: String,
     cardLastDigits: String,
-    atomosPoints: Int,
+    rewardPoints: Int,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -63,7 +63,7 @@ fun WgcPlasticCreditCard(
                     )
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
                     Text(
-                        text = "C6 Carbon Mastercard Black",
+                        text = "Carbon Mastercard Black",
                         color = Color(WgcCoreDsColors.fintechTextPrimary),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
@@ -107,7 +107,7 @@ fun WgcPlasticCreditCard(
                     )
                     Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
                     Text(
-                        text = "$atomosPoints Átomos",
+                        text = "$rewardPoints Átomos",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.fintechYellow)
@@ -124,6 +124,6 @@ private fun WgcPlasticCreditCardPreview() {
     WgcPlasticCreditCard(
         holderName = "Lucas Ferreira",
         cardLastDigits = "8832",
-        atomosPoints = 14250
+        rewardPoints = 14250
     )
 }

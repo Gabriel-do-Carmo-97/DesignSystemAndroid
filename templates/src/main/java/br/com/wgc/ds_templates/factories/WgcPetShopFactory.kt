@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcPetCareCard
 
 enum class WgcPetShopScreen {
-    PETZ,
-    COBASI,
-    ZEEDOG
+    CARE,
+    SUPERSTORE,
+    LIFESTYLE
 }
 
 @Composable
 fun WgcPetShopFactory(
     modifier: Modifier = Modifier,
-    screen: WgcPetShopScreen = WgcPetShopScreen.PETZ
+    screen: WgcPetShopScreen = WgcPetShopScreen.CARE
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -34,7 +34,7 @@ fun WgcPetShopFactory(
         ) {
             item {
                 WgcPetCareCard(
-                    petProductTitle = "Ração Royal Canin Mini Adult",
+                    petProductTitle = "Ração Especializada Cães Adultos Mini",
                     weightOrSize = "7.5kg",
                     subscriberPrice = 289.90,
                     regularPrice = 329.90

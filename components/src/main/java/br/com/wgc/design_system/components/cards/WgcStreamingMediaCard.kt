@@ -76,7 +76,7 @@ fun WgcStreamingMediaCard(
                 Icon(
                     imageVector = Icons.Default.PlayArrow,
                     contentDescription = "Tocar",
-                    tint = Color(WgcCoreDsColors.spotifyGreen),
+                    tint = Color(WgcCoreDsColors.audioStreamingGreen),
                     modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                 )
             }

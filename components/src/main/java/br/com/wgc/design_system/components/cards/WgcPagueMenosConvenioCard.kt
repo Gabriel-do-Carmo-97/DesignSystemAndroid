@@ -48,9 +48,9 @@ fun WgcPagueMenosConvenioCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosBlueLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacyBlueLight)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pagueMenosBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.popularPharmacyBorder))
     ) {
         Row(
             modifier = Modifier
@@ -62,13 +62,13 @@ fun WgcPagueMenosConvenioCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s40.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.pagueMenosBlue)),
+                    .background(Color(WgcCoreDsColors.popularPharmacyBlue)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Badge,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.pagueMenosSurface),
+                    tint = Color(WgcCoreDsColors.popularPharmacySurface),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -81,14 +81,14 @@ fun WgcPagueMenosConvenioCard(
                         text = convenioName,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pagueMenosBlueDark)
+                        color = Color(WgcCoreDsColors.popularPharmacyBlueDark)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     if (isLinked) {
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = "Vinculado",
-                            tint = Color(WgcCoreDsColors.pagueMenosGreen),
+                            tint = Color(WgcCoreDsColors.popularPharmacyGreen),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                     }
@@ -96,12 +96,12 @@ fun WgcPagueMenosConvenioCard(
                 Text(
                     text = "Carteirinha: $cardNumberMasked",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
+                    color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
                 )
                 Text(
                     text = "Até $discountPercentage% de desconto em medicamentos",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.pagueMenosGreen),
+                    color = Color(WgcCoreDsColors.popularPharmacyGreen),
                     fontWeight = FontWeight.Bold
                 )
             }

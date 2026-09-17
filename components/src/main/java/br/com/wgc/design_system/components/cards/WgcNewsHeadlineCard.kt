@@ -38,7 +38,7 @@ fun WgcNewsHeadlineCard(
             Text(
                 text = editoria.uppercase(),
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.g1Red),
+                color = Color(WgcCoreDsColors.dailyNewsRed),
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))

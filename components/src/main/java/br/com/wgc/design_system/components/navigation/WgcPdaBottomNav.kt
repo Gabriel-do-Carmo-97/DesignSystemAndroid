@@ -26,7 +26,7 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 /**
- * Itens da barra de navegação inferior do Pão de Açúcar Mais.
+ * Itens da barra de navegação inferior do Supermercado Gourmet.
  */
 enum class WgcPdaNavItem(val label: String, val icon: ImageVector) {
     HOME("Início", Icons.Default.Home),
@@ -37,7 +37,7 @@ enum class WgcPdaNavItem(val label: String, val icon: ImageVector) {
 }
 
 /**
- * Barra de navegação inferior do Pão de Açúcar Mais.
+ * Barra de navegação inferior do Supermercado Gourmet.
  *
  * Apresenta design premium com acabamento verde floresta e detalhes dourados.
  */
@@ -50,7 +50,7 @@ fun WgcPdaBottomNav(
     NavigationBar(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.pdaBorder)
+            color = Color(WgcCoreDsColors.premiumGroceryBorder)
         )) {
         WgcPdaNavItem.entries.forEachIndexed { index, item ->
             val isSelected = selectedItem == index
@@ -72,11 +72,11 @@ fun WgcPdaBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.pdaGreenDark),
-                    selectedTextColor = Color(WgcCoreDsColors.pdaGreenDark),
-                    unselectedIconColor = Color(WgcCoreDsColors.pdaTextSecondary),
-                    unselectedTextColor = Color(WgcCoreDsColors.pdaTextSecondary),
-                    indicatorColor = Color(WgcCoreDsColors.pdaGreenLight)
+                    selectedIconColor = Color(WgcCoreDsColors.premiumGroceryGreenDark),
+                    selectedTextColor = Color(WgcCoreDsColors.premiumGroceryGreenDark),
+                    unselectedIconColor = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                    unselectedTextColor = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                    indicatorColor = Color(WgcCoreDsColors.premiumGroceryGreenLight)
                 )
             )
         }

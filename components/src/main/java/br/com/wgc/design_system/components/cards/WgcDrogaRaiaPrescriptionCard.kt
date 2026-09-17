@@ -46,9 +46,9 @@ fun WgcDrogaRaiaPrescriptionCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaNavyLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainNavyLight)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogaRaiaBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pharmacyChainBorder))
     ) {
         Column(
             modifier = Modifier
@@ -63,13 +63,13 @@ fun WgcDrogaRaiaPrescriptionCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.drogaRaiaNavy)),
+                        .background(Color(WgcCoreDsColors.pharmacyChainNavy)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.Description,
                         contentDescription = "Receita Médica",
-                        tint = Color(WgcCoreDsColors.drogaRaiaSurface),
+                        tint = Color(WgcCoreDsColors.pharmacyChainSurface),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                 }
@@ -81,12 +81,12 @@ fun WgcDrogaRaiaPrescriptionCard(
                         text = "Enviar Receita Médica Digital",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.drogaRaiaNavyDark)
+                        color = Color(WgcCoreDsColors.pharmacyChainNavyDark)
                     )
                     Text(
                         text = "PDF, foto de receita ou link SMS com certificado",
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
+                        color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
                     )
                 }
             }

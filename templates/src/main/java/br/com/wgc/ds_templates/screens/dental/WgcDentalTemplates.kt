@@ -204,10 +204,10 @@ fun WgcDentalOdontogramTemplate(
                 ) {
                     items(teeth) { tooth ->
                         val statusColor = when (tooth.status) {
-                            ToothStatus.HEALTHY -> Color(WgcCoreDsColors.cdtGreen)
+                            ToothStatus.HEALTHY -> Color(WgcCoreDsColors.transitDigitalGreen)
                             ToothStatus.CAVITY -> Color(WgcCoreDsColors.red500)
                             ToothStatus.RESTORATION -> Color(WgcCoreDsColors.blue500)
-                            ToothStatus.TREATED -> Color(WgcCoreDsColors.tokstokYellow)
+                            ToothStatus.TREATED -> Color(WgcCoreDsColors.designerFurnitureYellow)
                             ToothStatus.EXTRACTION_RECOMMENDED -> Color.DarkGray
                         }
                         Box(
@@ -361,7 +361,7 @@ fun WgcDentalProfileTemplate(
                 Text(text = "Plano: ${user.planName}", fontSize = 14.sp)
                 Text(text = "Matrícula: ${user.cardId}", fontSize = 14.sp)
                 Text(text = "Coberturas: ${user.coverageLevel}", fontSize = 14.sp, color = Color(WgcCoreDsColors.dentalDark))
-                Text(text = "Status: ${user.gracePeriodStatus}", fontSize = 13.sp, color = Color(WgcCoreDsColors.cdtGreen))
+                Text(text = "Status: ${user.gracePeriodStatus}", fontSize = 13.sp, color = Color(WgcCoreDsColors.transitDigitalGreen))
             }
         }
     }

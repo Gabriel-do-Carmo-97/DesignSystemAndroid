@@ -50,9 +50,9 @@ fun WgcDrogaRaiaSubscriptionCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogaRaiaSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogaRaiaBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pharmacyChainBorder))
     ) {
         Column(
             modifier = Modifier
@@ -69,13 +69,13 @@ fun WgcDrogaRaiaSubscriptionCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.drogaRaiaGreenLight)),
+                            .background(Color(WgcCoreDsColors.pharmacyChainGreenLight)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.EventRepeat,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogaRaiaGreen),
+                            tint = Color(WgcCoreDsColors.pharmacyChainGreen),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -84,14 +84,14 @@ fun WgcDrogaRaiaSubscriptionCard(
                         Text(
                             text = "Assinatura Raia Ativa",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.drogaRaiaGreen),
+                            color = Color(WgcCoreDsColors.pharmacyChainGreen),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = medicineName,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.drogaRaiaTextPrimary)
+                            color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
                         )
                     }
                 }
@@ -100,7 +100,7 @@ fun WgcDrogaRaiaSubscriptionCard(
                     text = "R$ " + String.format("%.2f", monthlyPrice) + "/mês",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.drogaRaiaNavy)
+                    color = Color(WgcCoreDsColors.pharmacyChainNavy)
                 )
             }
 
@@ -113,20 +113,20 @@ fun WgcDrogaRaiaSubscriptionCard(
                 Icon(
                     imageVector = Icons.Default.CalendarToday,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.drogaRaiaTextSecondary),
+                    tint = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "Frequência: $dosageFrequency",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.drogaRaiaTextSecondary)
+                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = "Próxima Entrega: $nextDeliveryDate",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.drogaRaiaRed),
+                    color = Color(WgcCoreDsColors.pharmacyChainRed),
                     fontWeight = FontWeight.SemiBold
                 )
             }

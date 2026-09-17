@@ -47,7 +47,7 @@ fun WgcHardwareHomeTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hardwareOrange))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text(text = "⚡ Live de Ofertas Ninja KaBuM!", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                    Text(text = "⚡ Live de Ofertas Ninja Hardware Tech", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                     Text(text = "Preços imperdíveis no PIX com envio imediato", color = Color.White.copy(alpha = 0.9f), fontSize = 13.sp)
                 }
             }
@@ -122,7 +122,7 @@ fun WgcHardwarePcBuilderTemplate(
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
             Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                Text(text = "Fonte Recomendada: Mínimo ${totalWatts}W 80 Plus Gold", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.cdtGreen))
+                Text(text = "Fonte Recomendada: Mínimo ${totalWatts}W 80 Plus Gold", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.transitDigitalGreen))
                 Text(text = "Compatibilidade de Socket: 100% Compatível (AM5)", fontSize = 14.sp)
                 Text(text = "Peças Selecionadas: ${selectedParts.size} componentes", fontSize = 14.sp)
             }
@@ -137,7 +137,7 @@ fun WgcHardwareCartTemplate(
 ) {
     val total = items.sumOf { it.ninjaDiscountPrice }
     Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
-        Text(text = "Carrinho Ninja KaBuM!", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+        Text(text = "Carrinho Ninja Hardware Tech", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         items.forEach { item ->
             Card(
@@ -175,7 +175,7 @@ fun WgcHardwareProfileTemplate() {
             Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                 Text(text = "Cliente: Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 Text(text = "Nível Ninja: Black Prime (Frete Grátis)", fontSize = 14.sp, color = Color(WgcCoreDsColors.hardwareOrange), fontWeight = FontWeight.Bold)
-                Text(text = "Protocolos de Garantia / RMA: 0 pendentes", fontSize = 14.sp, color = Color(WgcCoreDsColors.cdtGreen))
+                Text(text = "Protocolos de Garantia / RMA: 0 pendentes", fontSize = 14.sp, color = Color(WgcCoreDsColors.transitDigitalGreen))
             }
         }
     }

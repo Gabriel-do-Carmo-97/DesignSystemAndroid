@@ -74,7 +74,7 @@ fun WgcFastFoodMealCard(
                     text = "R$ " + String.format("%.2f", price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.mcdonaldsRed),
+                    color = Color(WgcCoreDsColors.burgerFastFoodRed),
                     modifier = Modifier.weight(1f)
                 )
                 WgcClassicButton(

@@ -40,7 +40,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
- * Card de Fidelidade VIP "Cliente Mais Pão de Açúcar".
+ * Card de Fidelidade VIP "Cliente VIP Gourmet".
  *
  * Apresenta categoria VIP (Black/Gold), saldo de Stillo Moedas, economia acumulada
  * e atalho rápido para o QR Code de identificação no caixa físico.
@@ -65,14 +65,14 @@ fun WgcPdaClienteMaisLoyaltyCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isBlackTier) Color(WgcCoreDsColors.pdaTextPrimary) else Color(WgcCoreDsColors.pdaGreenDark)
+            containerColor = if (isBlackTier) Color(WgcCoreDsColors.premiumGroceryTextPrimary) else Color(WgcCoreDsColors.premiumGroceryGreenDark)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level3.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.pdaGold)
+            color = Color(WgcCoreDsColors.premiumGroceryGold)
         )
     ) {
         Column(
@@ -92,13 +92,13 @@ fun WgcPdaClienteMaisLoyaltyCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s32.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.pdaGoldLight)),
+                            .background(Color(WgcCoreDsColors.premiumGroceryGoldLight)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = if (isBlackTier) Icons.Default.Diamond else Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pdaGoldDark),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -106,7 +106,7 @@ fun WgcPdaClienteMaisLoyaltyCard(
                     Column {
                         Text(
                             text = tier.uppercase(Locale.ROOT),
-                            color = Color(WgcCoreDsColors.pdaGold),
+                            color = Color(WgcCoreDsColors.premiumGroceryGold),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Black
                         )
@@ -134,12 +134,12 @@ fun WgcPdaClienteMaisLoyaltyCard(
                         Icon(
                             imageVector = Icons.Default.QrCode,
                             contentDescription = "QR Code Caixa",
-                            tint = Color(WgcCoreDsColors.pdaGreenDark),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "NO CAIXA",
-                            color = Color(WgcCoreDsColors.pdaGreenDark),
+                            color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -162,7 +162,7 @@ fun WgcPdaClienteMaisLoyaltyCard(
                 Column {
                     Text(
                         text = "STILLO MOEDAS",
-                        color = Color(WgcCoreDsColors.pdaGoldLight),
+                        color = Color(WgcCoreDsColors.premiumGroceryGoldLight),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -184,13 +184,13 @@ fun WgcPdaClienteMaisLoyaltyCard(
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
                         text = "ECONOMIA DO MÊS",
-                        color = Color(WgcCoreDsColors.pdaGoldLight),
+                        color = Color(WgcCoreDsColors.premiumGroceryGoldLight),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         text = String.format(Locale.GERMANY, "R$ %.2f", monthlySavings),
-                        color = Color(WgcCoreDsColors.pdaGold),
+                        color = Color(WgcCoreDsColors.premiumGroceryGold),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Black
                     )
@@ -212,7 +212,7 @@ fun WgcPdaClienteMaisLoyaltyCard(
                     )
                     Text(
                         text = "${(progressToNextTier * 100).toInt()}%",
-                        color = Color(WgcCoreDsColors.pdaGold),
+                        color = Color(WgcCoreDsColors.premiumGroceryGold),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold
                     )
@@ -226,7 +226,7 @@ fun WgcPdaClienteMaisLoyaltyCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSpacing.xs8.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                    color = Color(WgcCoreDsColors.pdaGold),
+                    color = Color(WgcCoreDsColors.premiumGroceryGold),
                     trackColor = Color.White.copy(alpha = 0.2f)
                 )
             }

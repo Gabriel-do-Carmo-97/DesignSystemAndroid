@@ -71,9 +71,9 @@ fun WgcChilledBeverageCard(
             Spacer(modifier = Modifier.size(WgcCoreDsSpacing.md16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = drinkName, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                Text(text = "$volume • ❄️ $temperatureText", fontSize = 12.sp, color = Color(WgcCoreDsColors.decolarBlue))
+                Text(text = "$volume • ❄️ $temperatureText", fontSize = 12.sp, color = Color(WgcCoreDsColors.flightTravelBlue))
                 if (isReturnable) {
-                    Text(text = "♻️ Casco Retornável", fontSize = 11.sp, color = Color(WgcCoreDsColors.cdtGreen), fontWeight = FontWeight.Bold)
+                    Text(text = "♻️ Casco Retornável", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
                 }
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                 Text(text = "R$ " + String.format("%.2f", price), fontWeight = FontWeight.Bold, fontSize = 16.sp)

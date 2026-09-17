@@ -1,4 +1,4 @@
-package br.com.wgc.ds_templates.screens.nineninefood
+package br.com.wgc.ds_templates.screens.quickfooddelivery
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

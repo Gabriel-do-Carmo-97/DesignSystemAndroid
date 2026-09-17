@@ -49,9 +49,9 @@ fun WgcPagueMenosClinicCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pagueMenosSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacySurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pagueMenosBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.popularPharmacyBorder))
     ) {
         Column(
             modifier = Modifier
@@ -68,29 +68,29 @@ fun WgcPagueMenosClinicCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.pagueMenosClinicTealLight)),
+                            .background(Color(WgcCoreDsColors.popularPharmacyClinicTealLight)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.MonitorHeart,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pagueMenosClinicTeal),
+                            tint = Color(WgcCoreDsColors.popularPharmacyClinicTeal),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Column {
                         Text(
-                            text = "Clinic Farma • Pague Menos",
+                            text = "Clinic Farma • Farmácia Popular",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.pagueMenosClinicTeal),
+                            color = Color(WgcCoreDsColors.popularPharmacyClinicTeal),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = serviceTitle,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.pagueMenosTextPrimary)
+                            color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
                         )
                     }
                 }
@@ -99,7 +99,7 @@ fun WgcPagueMenosClinicCard(
                     text = if (price > 0) "R$ " + String.format("%.2f", price) else "Gratuito",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pagueMenosGreen)
+                    color = Color(WgcCoreDsColors.popularPharmacyGreen)
                 )
             }
 
@@ -108,7 +108,7 @@ fun WgcPagueMenosClinicCard(
             Text(
                 text = description,
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
+                color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -122,14 +122,14 @@ fun WgcPagueMenosClinicCard(
                     Icon(
                         imageVector = Icons.Default.AccessTime,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pagueMenosTextSecondary),
+                        tint = Color(WgcCoreDsColors.popularPharmacyTextSecondary),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = estimatedDuration,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.pagueMenosTextSecondary)
+                        color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
                     )
                 }
 

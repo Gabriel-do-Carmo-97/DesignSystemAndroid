@@ -102,7 +102,7 @@ fun WgcFintechCreditCard(
 }
 
 @Composable
-fun WgcNubankCaixinhaCard(
+fun WgcFintechSavingsBoxCard(
     title: String,
     currentAmount: Double,
     targetAmount: Double,

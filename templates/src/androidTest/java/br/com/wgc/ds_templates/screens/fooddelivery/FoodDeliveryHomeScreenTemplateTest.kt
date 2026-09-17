@@ -15,7 +15,7 @@ class FoodDeliveryHomeScreenTemplateTest {
     val composeTestRule = createComposeRule()
 
     @Test
-    fun testIFoodHomeScreenRenders() {
+    fun testFoodDeliveryHomeScreenRenders() {
         composeTestRule.setContent {
             WgcFoodDeliveryHomeScreenTemplate(viewModel = FakeFoodDeliveryHomeViewModel())
         }

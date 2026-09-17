@@ -2,14 +2,14 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcShopEaseFactory
-import br.com.wgc.ds_templates.factories.WgcShopEaseScreen
-import br.com.wgc.ds_templates.screens.shopease.checkout.WgcShopEaseCheckoutTemplate
-import br.com.wgc.ds_templates.screens.shopease.detail.WgcShopEaseProductDetailTemplate
-import br.com.wgc.ds_templates.screens.shopease.favorites.WgcShopEaseFavoritesTemplate
-import br.com.wgc.ds_templates.screens.shopease.home.WgcShopEaseHomeTemplate
-import br.com.wgc.ds_templates.screens.shopease.onboarding.WgcShopEaseOnboardingTemplate
-import br.com.wgc.ds_templates.screens.shopease.profile.WgcShopEaseProfileTemplate
+import br.com.wgc.ds_templates.factories.WgcQuickShopFactory
+import br.com.wgc.ds_templates.factories.WgcQuickShopScreen
+import br.com.wgc.ds_templates.screens.quickshop.checkout.WgcShopEaseCheckoutTemplate
+import br.com.wgc.ds_templates.screens.quickshop.detail.WgcShopEaseProductDetailTemplate
+import br.com.wgc.ds_templates.screens.quickshop.favorites.WgcShopEaseFavoritesTemplate
+import br.com.wgc.ds_templates.screens.quickshop.home.WgcShopEaseHomeTemplate
+import br.com.wgc.ds_templates.screens.quickshop.onboarding.WgcShopEaseOnboardingTemplate
+import br.com.wgc.ds_templates.screens.quickshop.profile.WgcShopEaseProfileTemplate
 
 class WgcShopEaseScreenshotsTest {
 
@@ -52,6 +52,6 @@ class WgcShopEaseScreenshotsTest {
     @Preview(showBackground = true)
     @Composable
     fun previewShopEaseFactory() {
-        WgcShopEaseFactory(screen = WgcShopEaseScreen.Home)
+        WgcQuickShopFactory(screen = WgcQuickShopScreen.Home)
     }
 }

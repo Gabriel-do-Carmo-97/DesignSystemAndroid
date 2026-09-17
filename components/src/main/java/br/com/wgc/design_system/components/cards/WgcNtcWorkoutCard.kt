@@ -53,11 +53,11 @@ enum class WgcNtcWorkoutIntensity(val label: String, val level: Int) {
  * Categoria / Foco do treino NTC.
  */
 enum class WgcNtcWorkoutCategory(val label: String, val colorHex: Int) {
-    HIIT("HIIT", WgcCoreDsColors.ntcOrange),
-    STRENGTH("FORÇA", WgcCoreDsColors.ntcVolt),
-    YOGA("YOGA", WgcCoreDsColors.ntcBlue),
-    MOBILITY("MOBILIDADE", WgcCoreDsColors.ntcPurple),
-    ENDURANCE("RESISTÊNCIA", WgcCoreDsColors.ntcVolt)
+    HIIT("HIIT", WgcCoreDsColors.trainingOrange),
+    STRENGTH("FORÇA", WgcCoreDsColors.trainingVolt),
+    YOGA("YOGA", WgcCoreDsColors.trainingBlue),
+    MOBILITY("MOBILIDADE", WgcCoreDsColors.trainingPurple),
+    ENDURANCE("RESISTÊNCIA", WgcCoreDsColors.trainingVolt)
 }
 
 /**
@@ -88,7 +88,7 @@ fun WgcNtcWorkoutCard(
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.ntcDarkGray)
+            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
@@ -135,7 +135,7 @@ fun WgcNtcWorkoutCard(
                         Icon(
                             imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                             contentDescription = if (isSaved) "Salvo" else "Salvar treino",
-                            tint = if (isSaved) Color(WgcCoreDsColors.ntcVolt) else Color(WgcCoreDsColors.ntcSecondaryText),
+                            tint = if (isSaved) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingSecondaryText),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -151,7 +151,7 @@ fun WgcNtcWorkoutCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.ntcMediumGray)),
+                        .background(Color(WgcCoreDsColors.trainingMediumGray)),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
@@ -161,12 +161,12 @@ fun WgcNtcWorkoutCard(
                         Icon(
                             imageVector = Icons.Default.PlayArrow,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.ntcVolt),
+                            tint = Color(WgcCoreDsColors.trainingVolt),
                             modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                         )
                         Text(
                             text = "ASSISTIR PRÉVIA",
-                            color = Color(WgcCoreDsColors.ntcWhite),
+                            color = Color(WgcCoreDsColors.trainingWhite),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
                             letterSpacing = 0.5.sp
@@ -179,14 +179,14 @@ fun WgcNtcWorkoutCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                 Text(
                     text = title,
-                    color = Color(WgcCoreDsColors.ntcWhite),
+                    color = Color(WgcCoreDsColors.trainingWhite),
                     fontSize = 17.sp,
                     fontWeight = FontWeight.ExtraBold,
                     lineHeight = 22.sp
                 )
                 Text(
                     text = "Treinador: $trainerName",
-                    color = Color(WgcCoreDsColors.ntcSecondaryText),
+                    color = Color(WgcCoreDsColors.trainingSecondaryText),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium
                 )
@@ -208,12 +208,12 @@ fun WgcNtcWorkoutCard(
                     Icon(
                         imageVector = Icons.Default.Schedule,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.ntcSecondaryText),
+                        tint = Color(WgcCoreDsColors.trainingSecondaryText),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Text(
                         text = "$durationMinutes min",
-                        color = Color(WgcCoreDsColors.ntcWhite),
+                        color = Color(WgcCoreDsColors.trainingWhite),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -226,7 +226,7 @@ fun WgcNtcWorkoutCard(
                 ) {
                     Text(
                         text = intensity.label,
-                        color = Color(WgcCoreDsColors.ntcSecondaryText),
+                        color = Color(WgcCoreDsColors.trainingSecondaryText),
                         fontSize = 11.sp
                     )
                     Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
@@ -239,9 +239,9 @@ fun WgcNtcWorkoutCard(
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                     .background(
                                         if (i <= intensity.level) {
-                                            Color(WgcCoreDsColors.ntcVolt)
+                                            Color(WgcCoreDsColors.trainingVolt)
                                         } else {
-                                            Color(WgcCoreDsColors.ntcLightGray)
+                                            Color(WgcCoreDsColors.trainingLightGray)
                                         }
                                     )
                             )
@@ -257,12 +257,12 @@ fun WgcNtcWorkoutCard(
                     Icon(
                         imageVector = Icons.Default.FitnessCenter,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.ntcSecondaryText),
+                        tint = Color(WgcCoreDsColors.trainingSecondaryText),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Text(
                         text = equipment,
-                        color = Color(WgcCoreDsColors.ntcSecondaryText),
+                        color = Color(WgcCoreDsColors.trainingSecondaryText),
                         fontSize = 11.sp
                     )
                 }

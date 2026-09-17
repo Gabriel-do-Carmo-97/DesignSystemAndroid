@@ -45,7 +45,7 @@ data class DentalPlanUser(
 object DentalMockData {
     val defaultUser = DentalPlanUser(
         name = "Gabriel do Carmo",
-        planName = "DentiCare Premium Gold",
+        planName = "Dental Clinic Premium Gold",
         cardId = "8890.1234.5678.90",
         gracePeriodStatus = "Carências 100% cumpridas",
         coverageLevel = "Ortodontia, Prótese e Clareamento"

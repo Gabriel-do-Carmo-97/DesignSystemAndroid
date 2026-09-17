@@ -49,9 +49,9 @@ fun WgcDrogasilVaccineCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.drogasilSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carePharmacySurface)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.drogasilBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.carePharmacyBorder))
     ) {
         Column(
             modifier = Modifier
@@ -68,13 +68,13 @@ fun WgcDrogasilVaccineCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.drogasilVaccineGreenLight)),
+                            .background(Color(WgcCoreDsColors.carePharmacyVaccineGreenLight)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.Vaccines,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.drogasilVaccineGreen),
+                            tint = Color(WgcCoreDsColors.carePharmacyVaccineGreen),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -83,14 +83,14 @@ fun WgcDrogasilVaccineCard(
                         Text(
                             text = "Serviços Farmacêuticos",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.drogasilVaccineGreen),
+                            color = Color(WgcCoreDsColors.carePharmacyVaccineGreen),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = vaccineName,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.drogasilTextPrimary)
+                            color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
                         )
                     }
                 }
@@ -99,7 +99,7 @@ fun WgcDrogasilVaccineCard(
                     text = "R$ " + String.format("%.2f", price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.drogasilRed)
+                    color = Color(WgcCoreDsColors.carePharmacyRed)
                 )
             }
 
@@ -108,7 +108,7 @@ fun WgcDrogasilVaccineCard(
             Text(
                 text = "Público: $targetAudience",
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.drogasilTextSecondary)
+                color = Color(WgcCoreDsColors.carePharmacyTextSecondary)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -122,14 +122,14 @@ fun WgcDrogasilVaccineCard(
                     Icon(
                         imageVector = Icons.Default.CalendarMonth,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.drogasilBlue),
+                        tint = Color(WgcCoreDsColors.carePharmacyBlue),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = nextAvailableSlot,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.drogasilBlue),
+                        color = Color(WgcCoreDsColors.carePharmacyBlue),
                         fontWeight = FontWeight.SemiBold
                     )
                 }

@@ -15,7 +15,7 @@ class MarketplaceHomeScreenTemplateTest {
     val composeTestRule = createComposeRule()
 
     @Test
-    fun testMercadoLivreHomeScreenRenders() {
+    fun testMarketplaceHomeScreenRenders() {
         composeTestRule.setContent {
             WgcMarketplaceHomeScreenTemplate(viewModel = FakeMarketplaceHomeViewModel())
         }

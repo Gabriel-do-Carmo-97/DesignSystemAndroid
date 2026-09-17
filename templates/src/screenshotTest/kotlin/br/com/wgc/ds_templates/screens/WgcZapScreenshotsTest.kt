@@ -2,13 +2,13 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcZapFactory
-import br.com.wgc.ds_templates.factories.WgcZapScreen
-import br.com.wgc.ds_templates.screens.zap.detail.WgcZapPropertyDetailTemplate
-import br.com.wgc.ds_templates.screens.zap.favorites.WgcZapFavoritesTemplate
-import br.com.wgc.ds_templates.screens.zap.fipezap.WgcZapFipeZapCalculatorTemplate
-import br.com.wgc.ds_templates.screens.zap.home.WgcZapHomeTemplate
-import br.com.wgc.ds_templates.screens.zap.profile.WgcZapProfileTemplate
+import br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsFactory
+import br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsScreen
+import br.com.wgc.ds_templates.screens.propertyclassifieds.detail.WgcZapPropertyDetailTemplate
+import br.com.wgc.ds_templates.screens.propertyclassifieds.favorites.WgcZapFavoritesTemplate
+import br.com.wgc.ds_templates.screens.propertyclassifieds.fipezap.WgcZapFipeZapCalculatorTemplate
+import br.com.wgc.ds_templates.screens.propertyclassifieds.home.WgcZapHomeTemplate
+import br.com.wgc.ds_templates.screens.propertyclassifieds.profile.WgcZapProfileTemplate
 
 class WgcZapScreenshotsTest {
 
@@ -45,6 +45,6 @@ class WgcZapScreenshotsTest {
     @Preview(showBackground = true)
     @Composable
     fun PreviewZapFactory() {
-        WgcZapFactory(screen = WgcZapScreen.Home)
+        WgcPropertyClassifiedsFactory(screen = WgcPropertyClassifiedsScreen.Home)
     }
 }

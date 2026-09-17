@@ -70,7 +70,7 @@ fun WgcNtcTimerDisplay(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.ntcDarkGray)
+            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
@@ -90,7 +90,7 @@ fun WgcNtcTimerDisplay(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.ntcMediumGray))
+                        .background(Color(WgcCoreDsColors.trainingMediumGray))
                         .padding(
                             horizontal = WgcCoreDsSpacing.xs8.dp,
                             vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -98,7 +98,7 @@ fun WgcNtcTimerDisplay(
                 ) {
                     Text(
                         text = "MOVIMENTO $exerciseIndex DE $totalExercises",
-                        color = Color(WgcCoreDsColors.ntcVolt),
+                        color = Color(WgcCoreDsColors.trainingVolt),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.sp
@@ -112,12 +112,12 @@ fun WgcNtcTimerDisplay(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Áudio ativo",
-                        tint = Color(WgcCoreDsColors.ntcVolt),
+                        tint = Color(WgcCoreDsColors.trainingVolt),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Text(
                         text = "VOZ DO COACH",
-                        color = Color(WgcCoreDsColors.ntcSecondaryText),
+                        color = Color(WgcCoreDsColors.trainingSecondaryText),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -133,10 +133,10 @@ fun WgcNtcTimerDisplay(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s120.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.ntcBlack))
+                        .background(Color(WgcCoreDsColors.trainingBlack))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.ntcMediumGray),
+                            color = Color(WgcCoreDsColors.trainingMediumGray),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                         ),
                     contentAlignment = Alignment.Center
@@ -147,14 +147,14 @@ fun WgcNtcTimerDisplay(
                     ) {
                         Text(
                             text = exerciseName.uppercase(),
-                            color = Color(WgcCoreDsColors.ntcWhite),
+                            color = Color(WgcCoreDsColors.trainingWhite),
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 1.sp
                         )
                         Text(
                             text = "Execute no seu próprio ritmo",
-                            color = Color(WgcCoreDsColors.ntcSecondaryText),
+                            color = Color(WgcCoreDsColors.trainingSecondaryText),
                             fontSize = 12.sp
                         )
                     }
@@ -168,7 +168,7 @@ fun WgcNtcTimerDisplay(
             ) {
                 Text(
                     text = timeRemainingFormatted,
-                    color = Color(WgcCoreDsColors.ntcVolt),
+                    color = Color(WgcCoreDsColors.trainingVolt),
                     fontSize = 54.sp,
                     fontWeight = FontWeight.Black,
                     letterSpacing = 2.sp
@@ -181,8 +181,8 @@ fun WgcNtcTimerDisplay(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s6.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                    color = Color(WgcCoreDsColors.ntcVolt),
-                    trackColor = Color(WgcCoreDsColors.ntcMediumGray)
+                    color = Color(WgcCoreDsColors.trainingVolt),
+                    trackColor = Color(WgcCoreDsColors.trainingMediumGray)
                 )
             }
 
@@ -191,17 +191,17 @@ fun WgcNtcTimerDisplay(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.ntcVoltGlow))
+                    .background(Color(WgcCoreDsColors.trainingVoltGlow))
                     .border(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.ntcVolt).copy(alpha = 0.3f),
+                        color = Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.3f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                     )
                     .padding(WgcCoreDsSpacing.sm12.dp)
             ) {
                 Text(
                     text = "\"$coachTip\"",
-                    color = Color(WgcCoreDsColors.ntcWhite),
+                    color = Color(WgcCoreDsColors.trainingWhite),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium,
                     lineHeight = 16.sp
@@ -216,13 +216,13 @@ fun WgcNtcTimerDisplay(
             ) {
                 Text(
                     text = "A SEGUIR:",
-                    color = Color(WgcCoreDsColors.ntcSecondaryText),
+                    color = Color(WgcCoreDsColors.trainingSecondaryText),
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = nextExerciseName,
-                    color = Color(WgcCoreDsColors.ntcWhite),
+                    color = Color(WgcCoreDsColors.trainingWhite),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -243,7 +243,7 @@ fun WgcNtcTimerDisplay(
                     Icon(
                         imageVector = Icons.Default.FastRewind,
                         contentDescription = "Exercício anterior",
-                        tint = Color(WgcCoreDsColors.ntcWhite),
+                        tint = Color(WgcCoreDsColors.trainingWhite),
                         modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                 }
@@ -253,14 +253,14 @@ fun WgcNtcTimerDisplay(
                         .padding(horizontal = WgcCoreDsSpacing.lg24.dp)
                         .size(WgcCoreDsSize.s64.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.ntcVolt))
+                        .background(Color(WgcCoreDsColors.trainingVolt))
                         .clickable { onPlayPauseToggle() },
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                         contentDescription = if (isPlaying) "Pausar" else "Continuar",
-                        tint = Color(WgcCoreDsColors.ntcBlack),
+                        tint = Color(WgcCoreDsColors.trainingBlack),
                         modifier = Modifier.size(WgcCoreDsSize.s36.dp)
                     )
                 }
@@ -272,7 +272,7 @@ fun WgcNtcTimerDisplay(
                     Icon(
                         imageVector = Icons.Default.FastForward,
                         contentDescription = "Próximo exercício",
-                        tint = Color(WgcCoreDsColors.ntcWhite),
+                        tint = Color(WgcCoreDsColors.trainingWhite),
                         modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                 }

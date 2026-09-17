@@ -50,8 +50,8 @@ fun WgcPaymentMethodRadioCard(
     onSelect: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val activeBorderColor = Color(WgcCoreDsColors.stylishPink)
-    val inactiveBorderColor = Color(WgcCoreDsColors.stylishBorderGray).copy(alpha = 0.3f)
+    val activeBorderColor = Color(WgcCoreDsColors.trendFashionPink)
+    val inactiveBorderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.3f)
 
     val border = if (isSelected) {
         BorderStroke(1.5.dp, activeBorderColor)
@@ -60,7 +60,7 @@ fun WgcPaymentMethodRadioCard(
     }
 
     val containerColor = if (isSelected) {
-        Color(WgcCoreDsColors.stylishPink).copy(alpha = 0.05f)
+        Color(WgcCoreDsColors.trendFashionPink).copy(alpha = 0.05f)
     } else {
         Color(WgcCoreDsColors.white)
     }
@@ -86,7 +86,7 @@ fun WgcPaymentMethodRadioCard(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = if (isSelected) Color(WgcCoreDsColors.stylishPink) else Color(WgcCoreDsColors.stylishDark),
+                    tint = if (isSelected) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
                     modifier = Modifier.size(28.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
@@ -94,7 +94,7 @@ fun WgcPaymentMethodRadioCard(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.stylishDark)
+                        color = Color(WgcCoreDsColors.trendFashionDark)
                     )
                     if (subtitle != null) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
@@ -111,8 +111,8 @@ fun WgcPaymentMethodRadioCard(
                 selected = isSelected,
                 onClick = onSelect,
                 colors = RadioButtonDefaults.colors(
-                    selectedColor = Color(WgcCoreDsColors.stylishPink),
-                    unselectedColor = Color(WgcCoreDsColors.stylishBorderGray)
+                    selectedColor = Color(WgcCoreDsColors.trendFashionPink),
+                    unselectedColor = Color(WgcCoreDsColors.trendFashionBorderGray)
                 )
             )
         }

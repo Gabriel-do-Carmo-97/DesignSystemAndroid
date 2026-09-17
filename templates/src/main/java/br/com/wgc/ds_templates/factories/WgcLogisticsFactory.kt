@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcLogisticsPackageCard
 
 enum class WgcLogisticsScreen {
-    BLABLACAR,
-    LOGGI,
-    LALAMOVE
+    CARPOOLING,
+    EXPRESS,
+    FREIGHT
 }
 
 @Composable
 fun WgcLogisticsFactory(
     modifier: Modifier = Modifier,
-    screen: WgcLogisticsScreen = WgcLogisticsScreen.LOGGI
+    screen: WgcLogisticsScreen = WgcLogisticsScreen.EXPRESS
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->

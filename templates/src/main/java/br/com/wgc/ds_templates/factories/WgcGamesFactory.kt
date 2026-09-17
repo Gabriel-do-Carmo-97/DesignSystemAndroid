@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcGameStoreCard
 
 enum class WgcGamesScreen {
-    STEAM,
-    TWITCH,
-    DISCORD
+    STORE,
+    LIVE,
+    COMMUNITY
 }
 
 @Composable
 fun WgcGamesFactory(
     modifier: Modifier = Modifier,
-    screen: WgcGamesScreen = WgcGamesScreen.STEAM
+    screen: WgcGamesScreen = WgcGamesScreen.STORE
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->

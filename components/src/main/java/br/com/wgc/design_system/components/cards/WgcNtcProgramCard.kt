@@ -66,7 +66,7 @@ fun WgcNtcProgramCard(
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.ntcDarkGray)
+            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
@@ -87,17 +87,17 @@ fun WgcNtcProgramCard(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .background(
                             if (isEnrolled) {
-                                Color(WgcCoreDsColors.ntcVolt).copy(alpha = 0.18f)
+                                Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.18f)
                             } else {
-                                Color(WgcCoreDsColors.ntcMediumGray)
+                                Color(WgcCoreDsColors.trainingMediumGray)
                             }
                         )
                         .border(
                             width = WgcCoreDsSize.s1.dp,
                             color = if (isEnrolled) {
-                                Color(WgcCoreDsColors.ntcVolt).copy(alpha = 0.5f)
+                                Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.5f)
                             } else {
-                                Color(WgcCoreDsColors.ntcLightGray)
+                                Color(WgcCoreDsColors.trainingLightGray)
                             },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         )
@@ -108,7 +108,7 @@ fun WgcNtcProgramCard(
                 ) {
                     Text(
                         text = if (isEnrolled) "EM ANDAMENTO" else "NOVO PROGRAMA",
-                        color = if (isEnrolled) Color(WgcCoreDsColors.ntcVolt) else Color(WgcCoreDsColors.ntcSecondaryText),
+                        color = if (isEnrolled) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingSecondaryText),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
@@ -122,12 +122,12 @@ fun WgcNtcProgramCard(
                     Icon(
                         imageVector = Icons.Default.CalendarToday,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.ntcSecondaryText),
+                        tint = Color(WgcCoreDsColors.trainingSecondaryText),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Text(
                         text = "$totalWeeks Semanas",
-                        color = Color(WgcCoreDsColors.ntcWhite),
+                        color = Color(WgcCoreDsColors.trainingWhite),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -138,18 +138,18 @@ fun WgcNtcProgramCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                 Text(
                     text = title,
-                    color = Color(WgcCoreDsColors.ntcWhite),
+                    color = Color(WgcCoreDsColors.trainingWhite),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.ExtraBold
                 )
                 Text(
                     text = "Foco: $goal",
-                    color = Color(WgcCoreDsColors.ntcSecondaryText),
+                    color = Color(WgcCoreDsColors.trainingSecondaryText),
                     fontSize = 12.sp
                 )
                 Text(
                     text = "Treinador(a): $trainerName",
-                    color = Color(WgcCoreDsColors.ntcVolt),
+                    color = Color(WgcCoreDsColors.trainingVolt),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -165,13 +165,13 @@ fun WgcNtcProgramCard(
                     ) {
                         Text(
                             text = "Semana $currentWeek de $totalWeeks",
-                            color = Color(WgcCoreDsColors.ntcWhite),
+                            color = Color(WgcCoreDsColors.trainingWhite),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = "$completedWorkouts/$totalWorkouts treinos",
-                            color = Color(WgcCoreDsColors.ntcSecondaryText),
+                            color = Color(WgcCoreDsColors.trainingSecondaryText),
                             fontSize = 11.sp
                         )
                     }
@@ -182,8 +182,8 @@ fun WgcNtcProgramCard(
                             .fillMaxWidth()
                             .height(WgcCoreDsSize.s6.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                        color = Color(WgcCoreDsColors.ntcVolt),
-                        trackColor = Color(WgcCoreDsColors.ntcMediumGray)
+                        color = Color(WgcCoreDsColors.trainingVolt),
+                        trackColor = Color(WgcCoreDsColors.trainingMediumGray)
                     )
                 }
             }
@@ -197,9 +197,9 @@ fun WgcNtcProgramCard(
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isEnrolled) {
-                        Color(WgcCoreDsColors.ntcVolt)
+                        Color(WgcCoreDsColors.trainingVolt)
                     } else {
-                        Color(WgcCoreDsColors.ntcWhite)
+                        Color(WgcCoreDsColors.trainingWhite)
                     })
             ) {
                 Row(

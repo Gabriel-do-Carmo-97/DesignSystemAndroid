@@ -25,49 +25,49 @@ import br.com.wgc.ds_templates.factories.WgcProductivityScreen
 
 class WgcServicesScreenshotsTest {
 
-    @Preview(name = "Games - Steam Screen", showBackground = true)
+    @Preview(name = "Games - Store Screen", showBackground = true)
     @Composable
     fun gamesScreenPreview() {
-        WgcGamesFactory(screen = WgcGamesScreen.STEAM)
+        WgcGamesFactory(screen = WgcGamesScreen.STORE)
     }
 
-    @Preview(name = "Produtividade - Notion Screen", showBackground = true)
+    @Preview(name = "Produtividade - Docs Screen", showBackground = true)
     @Composable
     fun productivityScreenPreview() {
-        WgcProductivityFactory(screen = WgcProductivityScreen.NOTION)
+        WgcProductivityFactory(screen = WgcProductivityScreen.DOCS)
     }
 
-    @Preview(name = "Fast Food - McDonald's Screen", showBackground = true)
+    @Preview(name = "Fast Food - Burger Screen", showBackground = true)
     @Composable
     fun fastFoodScreenPreview() {
-        WgcFastFoodFactory(screen = WgcFastFoodScreen.MCDONALDS)
+        WgcFastFoodFactory(screen = WgcFastFoodScreen.BURGER)
     }
 
-    @Preview(name = "Logística - Loggi Screen", showBackground = true)
+    @Preview(name = "Logística - Express Screen", showBackground = true)
     @Composable
     fun logisticsScreenPreview() {
-        WgcLogisticsFactory(screen = WgcLogisticsScreen.LOGGI)
+        WgcLogisticsFactory(screen = WgcLogisticsScreen.EXPRESS)
     }
 
-    @Preview(name = "Moda - Renner Screen", showBackground = true)
+    @Preview(name = "Moda - Department Screen", showBackground = true)
     @Composable
     fun fashionScreenPreview() {
-        WgcFashionFactory(screen = WgcFashionScreen.RENNER)
+        WgcFashionFactory(screen = WgcFashionScreen.DEPARTMENT)
     }
 
-    @Preview(name = "Beleza - O Boticário Screen", showBackground = true)
+    @Preview(name = "Beleza - Fragrance Screen", showBackground = true)
     @Composable
     fun beautyScreenPreview() {
-        WgcBeautyFactory(screen = WgcBeautyScreen.BOTICARIO)
+        WgcBeautyFactory(screen = WgcBeautyScreen.FRAGRANCE)
     }
 
-    @Preview(name = "Pet Shop - Petz Screen", showBackground = true)
+    @Preview(name = "Pet Shop - Care Screen", showBackground = true)
     @Composable
     fun petShopScreenPreview() {
-        WgcPetShopFactory(screen = WgcPetShopScreen.PETZ)
+        WgcPetShopFactory(screen = WgcPetShopScreen.CARE)
     }
 
-    @Preview(name = "Casa & Decoração - Leroy Merlin Screen", showBackground = true)
+    @Preview(name = "Casa & Decoração - Home Improvement Screen", showBackground = true)
     @Composable
     fun homeDecorScreenPreview() {
         WgcHomeDecorFactory(screen = WgcHomeDecorScreen.LEROY_MERLIN)

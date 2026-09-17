@@ -45,7 +45,7 @@ fun WgcEducationCourseCard(
             Text(
                 text = instructorOrTrack,
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.aluraBlue),
+                color = Color(WgcCoreDsColors.techEducationBlue),
                 fontWeight = FontWeight.Bold
             )
             Text(
@@ -62,7 +62,7 @@ fun WgcEducationCourseCard(
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s6.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                color = Color(WgcCoreDsColors.duolingoGreen),
+                color = Color(WgcCoreDsColors.languageLearningGreen),
                 trackColor = Color.LightGray
             )
 

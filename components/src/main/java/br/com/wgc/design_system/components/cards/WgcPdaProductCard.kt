@@ -46,7 +46,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
- * Card de produto gourmet e supermercado para Pão de Açúcar Mais.
+ * Card de produto gourmet e supermercado para Supermercado Gourmet.
  *
  * Apresenta selos orgânicos/gourmet, preço regular vs preço exclusivo "Cliente Mais",
  * controle de quantidade no carrinho e favorito.
@@ -73,14 +73,14 @@ fun WgcPdaProductCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.pdaSurface)
+            containerColor = Color(WgcCoreDsColors.premiumGrocerySurface)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level1.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.pdaBorder)
+            color = Color(WgcCoreDsColors.premiumGroceryBorder)
         )
     ) {
         Column(
@@ -92,7 +92,7 @@ fun WgcPdaProductCard(
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s120.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.pdaBackground)),
+                    .background(Color(WgcCoreDsColors.premiumGroceryBackground)),
                 contentAlignment = Alignment.Center
             ) {
                 // Mock visual do produto com ícone estilizado
@@ -100,7 +100,7 @@ fun WgcPdaProductCard(
                     imageVector = if (isOrganic) Icons.Default.Eco else Icons.Default.ShoppingBag,
                     contentDescription = null,
                     modifier = Modifier.size(WgcCoreDsSize.s48.dp),
-                    tint = if (isOrganic) Color(WgcCoreDsColors.pdaGreen) else Color(WgcCoreDsColors.pdaGold)
+                    tint = if (isOrganic) Color(WgcCoreDsColors.premiumGroceryGreen) else Color(WgcCoreDsColors.premiumGroceryGold)
                 )
 
                 // Tag de Destaque Orgânico ou Importado no canto superior esquerdo
@@ -111,8 +111,8 @@ fun WgcPdaProductCard(
                             .padding(WgcCoreDsSpacing.xxs4.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                             .background(
-                                if (isOrganic) Color(WgcCoreDsColors.pdaGreen)
-                                else Color(WgcCoreDsColors.pdaGold)
+                                if (isOrganic) Color(WgcCoreDsColors.premiumGroceryGreen)
+                                else Color(WgcCoreDsColors.premiumGroceryGold)
                             )
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
@@ -138,7 +138,7 @@ fun WgcPdaProductCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.pdaWineRed) else Color(WgcCoreDsColors.pdaTextSecondary),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -149,7 +149,7 @@ fun WgcPdaProductCard(
             // Marca / Linha Gourmet
             Text(
                 text = brandOrOrigin.uppercase(Locale.ROOT),
-                color = Color(WgcCoreDsColors.pdaTextSecondary),
+                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
@@ -159,7 +159,7 @@ fun WgcPdaProductCard(
             // Nome do Produto
             Text(
                 text = title,
-                color = Color(WgcCoreDsColors.pdaTextPrimary),
+                color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
                 maxLines = 2,
@@ -170,7 +170,7 @@ fun WgcPdaProductCard(
             // Unidade / Peso
             Text(
                 text = unit,
-                color = Color(WgcCoreDsColors.pdaTextSecondary),
+                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                 style = MaterialTheme.typography.bodySmall
             )
 
@@ -179,7 +179,7 @@ fun WgcPdaProductCard(
             // Preço Regular riscado
             Text(
                 text = String.format(Locale.GERMANY, "R$ %.2f", originalPrice),
-                color = Color(WgcCoreDsColors.pdaTextSecondary),
+                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                 style = MaterialTheme.typography.labelSmall,
                 textDecoration = TextDecoration.LineThrough
             )
@@ -191,7 +191,7 @@ fun WgcPdaProductCard(
             ) {
                 Text(
                     text = String.format(Locale.GERMANY, "R$ %.2f", clienteMaisPrice),
-                    color = Color(WgcCoreDsColors.pdaGreenDark),
+                    color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Black
                 )
@@ -199,10 +199,10 @@ fun WgcPdaProductCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.pdaGoldLight))
+                        .background(Color(WgcCoreDsColors.premiumGroceryGoldLight))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.pdaGold),
+                            color = Color(WgcCoreDsColors.premiumGroceryGold),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         )
                         .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
@@ -211,12 +211,12 @@ fun WgcPdaProductCard(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pdaGoldDark),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             modifier = Modifier.size(WgcCoreDsSize.s10.dp)
                         )
                         Text(
                             text = "Mais",
-                            color = Color(WgcCoreDsColors.pdaGoldDark),
+                            color = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -233,7 +233,7 @@ fun WgcPdaProductCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s32.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.pdaGreen))
+                        .background(Color(WgcCoreDsColors.premiumGroceryGreen))
                         .clickable { onQuantityChange(1) },
                     contentAlignment = Alignment.Center
                 ) {
@@ -252,7 +252,7 @@ fun WgcPdaProductCard(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.pdaGreen),
+                            color = Color(WgcCoreDsColors.premiumGroceryGreen),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         ),
                     verticalAlignment = Alignment.CenterVertically,
@@ -265,14 +265,14 @@ fun WgcPdaProductCard(
                         Icon(
                             imageVector = Icons.Default.Remove,
                             contentDescription = "Diminuir",
-                            tint = Color(WgcCoreDsColors.pdaGreen),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGreen),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }
 
                     Text(
                         text = "$quantity",
-                        color = Color(WgcCoreDsColors.pdaGreenDark),
+                        color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold
                     )
@@ -284,7 +284,7 @@ fun WgcPdaProductCard(
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = "Aumentar",
-                            tint = Color(WgcCoreDsColors.pdaGreen),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGreen),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }

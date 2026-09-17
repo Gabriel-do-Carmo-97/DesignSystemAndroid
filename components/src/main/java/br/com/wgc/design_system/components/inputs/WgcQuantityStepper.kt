@@ -45,7 +45,7 @@ fun WgcQuantityStepper(
     val canDecrement = isEnabled && quantity > minQuantity
     val canIncrement = isEnabled && quantity < maxQuantity
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp)
-    val borderColor = Color(WgcCoreDsColors.stylishBorderGray).copy(alpha = 0.5f)
+    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.5f)
 
     Surface(
         modifier = modifier.semantics {
@@ -68,7 +68,7 @@ fun WgcQuantityStepper(
                 Icon(
                     imageVector = Icons.Default.Remove,
                     contentDescription = "Diminuir quantidade",
-                    tint = if (canDecrement) Color(WgcCoreDsColors.stylishDark) else Color(WgcCoreDsColors.stylishBorderGray),
+                    tint = if (canDecrement) Color(WgcCoreDsColors.trendFashionDark) else Color(WgcCoreDsColors.trendFashionBorderGray),
                     modifier = Modifier.size(16.dp)
                 )
             }
@@ -82,7 +82,7 @@ fun WgcQuantityStepper(
                 Text(
                     text = quantity.toString(),
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.stylishDark)
+                    color = Color(WgcCoreDsColors.trendFashionDark)
                 )
             }
 
@@ -96,7 +96,7 @@ fun WgcQuantityStepper(
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "Aumentar quantidade",
-                    tint = if (canIncrement) Color(WgcCoreDsColors.stylishDark) else Color(WgcCoreDsColors.stylishBorderGray),
+                    tint = if (canIncrement) Color(WgcCoreDsColors.trendFashionDark) else Color(WgcCoreDsColors.trendFashionBorderGray),
                     modifier = Modifier.size(16.dp)
                 )
             }

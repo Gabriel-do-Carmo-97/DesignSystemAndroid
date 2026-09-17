@@ -31,11 +31,11 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import coil3.compose.AsyncImage
 
 /**
- * Avatar Oficial de Story de Moda do Shoppe (WgcShoppeStoryAvatar).
+ * Avatar Oficial de Story de Moda do Shoppe (WgcMegaStoreStoryAvatar).
  * Apresenta anel de gradiente azul ativo, foto circular e etiqueta de "LIVE" opcional.
  */
 @Composable
-fun WgcShoppeStoryAvatar(
+fun WgcMegaStoreStoryAvatar(
     modifier: Modifier = Modifier,
     imageUrl: String = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300",
     name: String = "Summer Sale",
@@ -47,9 +47,9 @@ fun WgcShoppeStoryAvatar(
         colors = if (isLive) {
             listOf(Color(WgcCoreDsColors.red500), Color(WgcCoreDsColors.orange500))
         } else if (hasUnseenStory) {
-            listOf(Color(WgcCoreDsColors.shoppePrimary), Color(WgcCoreDsColors.shoppePrimaryLight))
+            listOf(Color(WgcCoreDsColors.megaStorePrimary), Color(WgcCoreDsColors.megaStorePrimaryLight))
         } else {
-            listOf(Color(WgcCoreDsColors.shoppeBorder), Color(WgcCoreDsColors.shoppeBorder))
+            listOf(Color(WgcCoreDsColors.megaStoreBorder), Color(WgcCoreDsColors.megaStoreBorder))
         }
     )
 
@@ -65,7 +65,7 @@ fun WgcShoppeStoryAvatar(
                     .border(2.5.dp, gradientBrush, CircleShape)
                     .padding(3.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.shoppeBackground)),
+                    .background(Color(WgcCoreDsColors.megaStoreBackground)),
                 contentAlignment = Alignment.Center
             ) {
                 AsyncImage(
@@ -99,7 +99,7 @@ fun WgcShoppeStoryAvatar(
         Text(
             text = name,
             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium),
-            color = Color(WgcCoreDsColors.shoppeDark),
+            color = Color(WgcCoreDsColors.megaStoreDark),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontSize = 11.sp
@@ -112,7 +112,7 @@ fun WgcShoppeStoryAvatar(
 private fun WgcShoppeStoryAvatarPreview() {
     MaterialTheme {
         Box(modifier = Modifier.padding(16.dp)) {
-            WgcShoppeStoryAvatar(isLive = true)
+            WgcMegaStoreStoryAvatar(isLive = true)
         }
     }
 }

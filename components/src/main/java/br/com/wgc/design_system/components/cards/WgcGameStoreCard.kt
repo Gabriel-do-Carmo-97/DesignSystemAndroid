@@ -40,7 +40,7 @@ fun WgcGameStoreCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.steamNavy)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gamingStoreNavy)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
@@ -57,7 +57,7 @@ fun WgcGameStoreCard(
             Text(
                 text = genre.uppercase(),
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.twitchPurple),
+                color = Color(WgcCoreDsColors.liveStreamingPurple),
                 fontWeight = FontWeight.Bold
             )
             Text(
@@ -77,7 +77,7 @@ fun WgcGameStoreCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.duolingoGreen))
+                            .background(Color(WgcCoreDsColors.languageLearningGreen))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
                     ) {
                         Text(

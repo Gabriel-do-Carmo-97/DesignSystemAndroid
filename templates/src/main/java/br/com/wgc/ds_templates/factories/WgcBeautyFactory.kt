@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcBeautyCosmeticCard
 
 enum class WgcBeautyScreen {
-    BOTICARIO,
-    NATURA,
-    SEPHORA
+    FRAGRANCE,
+    NATURAL,
+    PRESTIGE
 }
 
 @Composable
 fun WgcBeautyFactory(
     modifier: Modifier = Modifier,
-    screen: WgcBeautyScreen = WgcBeautyScreen.BOTICARIO
+    screen: WgcBeautyScreen = WgcBeautyScreen.FRAGRANCE
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -34,7 +34,7 @@ fun WgcBeautyFactory(
         ) {
             item {
                 WgcBeautyCosmeticCard(
-                    perfumeOrBrand = "O Boticário",
+                    perfumeOrBrand = "Fragrância & Beleza",
                     productName = "Lily Eau de Parfum",
                     volume = "75ml",
                     price = 289.90

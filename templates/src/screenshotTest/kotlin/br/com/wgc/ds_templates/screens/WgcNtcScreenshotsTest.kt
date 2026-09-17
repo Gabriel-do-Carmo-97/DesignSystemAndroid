@@ -2,14 +2,14 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcNtcFactory
-import br.com.wgc.ds_templates.factories.WgcNtcScreen
-import br.com.wgc.ds_templates.screens.ntc.activity.WgcNtcActivityTemplate
-import br.com.wgc.ds_templates.screens.ntc.detail.WgcNtcWorkoutDetailTemplate
-import br.com.wgc.ds_templates.screens.ntc.home.WgcNtcHomeTemplate
-import br.com.wgc.ds_templates.screens.ntc.model.NtcMockData
-import br.com.wgc.ds_templates.screens.ntc.player.WgcNtcWorkoutPlayerTemplate
-import br.com.wgc.ds_templates.screens.ntc.programs.WgcNtcProgramsTemplate
+import br.com.wgc.ds_templates.factories.WgcGuidedTrainingFactory
+import br.com.wgc.ds_templates.factories.WgcGuidedTrainingScreen
+import br.com.wgc.ds_templates.screens.guidedtraining.activity.WgcNtcActivityTemplate
+import br.com.wgc.ds_templates.screens.guidedtraining.detail.WgcNtcWorkoutDetailTemplate
+import br.com.wgc.ds_templates.screens.guidedtraining.home.WgcNtcHomeTemplate
+import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockData
+import br.com.wgc.ds_templates.screens.guidedtraining.player.WgcNtcWorkoutPlayerTemplate
+import br.com.wgc.ds_templates.screens.guidedtraining.programs.WgcNtcProgramsTemplate
 
 class WgcNtcScreenshotsTest {
 
@@ -17,10 +17,10 @@ class WgcNtcScreenshotsTest {
     @Composable
     fun PreviewNtcHome() {
         WgcNtcHomeTemplate(
-            user = NtcMockData.mockUser,
-            featuredWorkout = NtcMockData.mockWorkouts.first(),
-            activeProgram = NtcMockData.mockPrograms.first(),
-            workouts = NtcMockData.mockWorkouts
+            user = GuidedTrainingMockData.mockUser,
+            featuredWorkout = GuidedTrainingMockData.mockWorkouts.first(),
+            activeProgram = GuidedTrainingMockData.mockPrograms.first(),
+            workouts = GuidedTrainingMockData.mockWorkouts
         )
     }
 
@@ -28,7 +28,7 @@ class WgcNtcScreenshotsTest {
     @Composable
     fun PreviewNtcPlayer() {
         WgcNtcWorkoutPlayerTemplate(
-            workout = NtcMockData.mockWorkouts.first(),
+            workout = GuidedTrainingMockData.mockWorkouts.first(),
             currentExerciseIndex = 2,
             timeRemainingFormatted = "00:45",
             progressFraction = 0.60f,
@@ -40,7 +40,7 @@ class WgcNtcScreenshotsTest {
     @Composable
     fun PreviewNtcDetail() {
         WgcNtcWorkoutDetailTemplate(
-            workout = NtcMockData.mockWorkouts.first()
+            workout = GuidedTrainingMockData.mockWorkouts.first()
         )
     }
 
@@ -48,7 +48,7 @@ class WgcNtcScreenshotsTest {
     @Composable
     fun PreviewNtcPrograms() {
         WgcNtcProgramsTemplate(
-            programs = NtcMockData.mockPrograms
+            programs = GuidedTrainingMockData.mockPrograms
         )
     }
 
@@ -56,13 +56,13 @@ class WgcNtcScreenshotsTest {
     @Composable
     fun PreviewNtcActivity() {
         WgcNtcActivityTemplate(
-            stats = NtcMockData.mockStats
+            stats = GuidedTrainingMockData.mockStats
         )
     }
 
     @Preview(showBackground = true)
     @Composable
     fun PreviewNtcFactory() {
-        WgcNtcFactory(screen = WgcNtcScreen.HOME)
+        WgcGuidedTrainingFactory(screen = WgcGuidedTrainingScreen.HOME)
     }
 }

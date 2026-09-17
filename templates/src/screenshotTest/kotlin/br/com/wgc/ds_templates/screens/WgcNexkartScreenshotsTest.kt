@@ -2,8 +2,8 @@ package br.com.wgc.ds_templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.ds_templates.factories.WgcNexkartFactory
-import br.com.wgc.ds_templates.factories.WgcNexkartScreen
+import br.com.wgc.ds_templates.factories.WgcGadgetShopFactory
+import br.com.wgc.ds_templates.factories.WgcGadgetShopScreen
 import com.android.tools.screenshot.PreviewTest
 
 class WgcNexkartScreenshotsTest {
@@ -12,55 +12,55 @@ class WgcNexkartScreenshotsTest {
     @Preview(showBackground = true, name = "Nexkart Onboarding Screen")
     @Composable
     private fun NexkartOnboardingScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.Onboarding)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.Onboarding)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Home Screen")
     @Composable
     private fun NexkartHomeScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.Home)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.Home)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Product Detail Screen")
     @Composable
     private fun NexkartProductDetailScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.ProductDetail)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.ProductDetail)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Product List Screen")
     @Composable
     private fun NexkartProductListScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.ProductList)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.ProductList)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Cart Screen")
     @Composable
     private fun NexkartCartScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.Cart)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.Cart)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Checkout Screen")
     @Composable
     private fun NexkartCheckoutScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.Checkout)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.Checkout)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Order Success Screen")
     @Composable
     private fun NexkartOrderSuccessScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.OrderSuccess)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.OrderSuccess)
     }
 
     @PreviewTest
     @Preview(showBackground = true, name = "Nexkart Profile Screen")
     @Composable
     private fun NexkartProfileScreenPreview() {
-        WgcNexkartFactory(screen = WgcNexkartScreen.Profile)
+        WgcGadgetShopFactory(screen = WgcGadgetShopScreen.Profile)
     }
 }

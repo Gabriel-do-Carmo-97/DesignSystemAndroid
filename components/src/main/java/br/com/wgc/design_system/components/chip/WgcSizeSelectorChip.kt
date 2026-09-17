@@ -41,9 +41,9 @@ fun WgcSizeSelectorChip(
     val stateDesc = if (isSelected) "Tamanho $size selecionado" else "Tamanho $size não selecionado"
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp)
 
-    val activeColor = Color(WgcCoreDsColors.stylishPink)
+    val activeColor = Color(WgcCoreDsColors.trendFashionPink)
     val inactiveBg = Color(WgcCoreDsColors.white)
-    val inactiveBorder = Color(WgcCoreDsColors.stylishBorderGray)
+    val inactiveBorder = Color(WgcCoreDsColors.trendFashionBorderGray)
 
     val backgroundColor = when {
         !isEnabled -> MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
@@ -54,7 +54,7 @@ fun WgcSizeSelectorChip(
     val textColor = when {
         !isEnabled -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
         isSelected -> Color.White
-        else -> Color(WgcCoreDsColors.stylishDark)
+        else -> Color(WgcCoreDsColors.trendFashionDark)
     }
 
     val border = if (isSelected || !isEnabled) null else BorderStroke(1.dp, inactiveBorder)

@@ -45,14 +45,14 @@ data class FoodDeliveryHomeUiState(
         WgcCircularCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
     ),
     val restaurants: List<FoodDeliveryRestaurant> = listOf(
-        FoodDeliveryRestaurant("1", "Mcdonald's", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
+        FoodDeliveryRestaurant("1", "Burger Bistro", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
         FoodDeliveryRestaurant("2", "Outback Steakhouse", "4.9", "Carnes", "2.5 km", "35-45 min", "R$ 7,99", true),
         FoodDeliveryRestaurant("3", "Sushi Hiroshi", "4.7", "Japonesa", "3.0 km", "40-50 min", "Grátis", false)
     ),
     val hasCartItems: Boolean = true,
     val cartItemCount: Int = 2,
     val cartTotal: String = "R$ 54,90",
-    val cartRestaurantName: String = "McDonald's"
+    val cartRestaurantName: String = "Burger Bistro"
 )
 
 abstract class BaseFoodDeliveryHomeViewModel : ViewModel() {
@@ -175,7 +175,7 @@ private fun PaddingBox(content: @Composable () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-private fun IFoodHomePreview() {
+private fun FoodDeliveryHomePreview() {
     MaterialTheme {
         WgcFoodDeliveryHomeScreenContent(
             state = FoodDeliveryHomeUiState(),

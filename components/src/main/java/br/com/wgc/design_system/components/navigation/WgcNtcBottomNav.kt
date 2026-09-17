@@ -51,7 +51,7 @@ fun WgcNtcBottomNav(
     NavigationBar(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.ntcMediumGray)
+            color = Color(WgcCoreDsColors.trainingMediumGray)
         )) {
         WgcNtcNavItem.entries.forEach { item ->
             val isSelected = item == selectedItem
@@ -73,11 +73,11 @@ fun WgcNtcBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.ntcBlack),
-                    selectedTextColor = Color(WgcCoreDsColors.ntcVolt),
-                    indicatorColor = Color(WgcCoreDsColors.ntcVolt),
-                    unselectedIconColor = Color(WgcCoreDsColors.ntcSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.ntcSecondaryText)
+                    selectedIconColor = Color(WgcCoreDsColors.trainingBlack),
+                    selectedTextColor = Color(WgcCoreDsColors.trainingVolt),
+                    indicatorColor = Color(WgcCoreDsColors.trainingVolt),
+                    unselectedIconColor = Color(WgcCoreDsColors.trainingSecondaryText),
+                    unselectedTextColor = Color(WgcCoreDsColors.trainingSecondaryText)
                 )
             )
         }

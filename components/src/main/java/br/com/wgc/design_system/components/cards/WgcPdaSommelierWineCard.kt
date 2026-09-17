@@ -44,7 +44,7 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
- * Card especializado da "Adega Pão de Açúcar / Sommelier".
+ * Card especializado da "Adega Gourmet / Sommelier".
  *
  * Apresenta notas de harmonização, uvas, safra, pontuação de sommelier
  * e temperatura recomendada de serviço.
@@ -72,14 +72,14 @@ fun WgcPdaSommelierWineCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.pdaSurface)
+            containerColor = Color(WgcCoreDsColors.premiumGrocerySurface)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level1.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.pdaBorder)
+            color = Color(WgcCoreDsColors.premiumGroceryBorder)
         )
     ) {
         Column(
@@ -98,7 +98,7 @@ fun WgcPdaSommelierWineCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.pdaWineRedLight))
+                            .background(Color(WgcCoreDsColors.premiumGroceryWineRedLight))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -106,7 +106,7 @@ fun WgcPdaSommelierWineCard(
                     ) {
                         Text(
                             text = countryOrigin.uppercase(Locale.ROOT),
-                            color = Color(WgcCoreDsColors.pdaWineRed),
+                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -114,7 +114,7 @@ fun WgcPdaSommelierWineCard(
 
                     Text(
                         text = vintage,
-                        color = Color(WgcCoreDsColors.pdaTextSecondary),
+                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                         style = MaterialTheme.typography.labelSmall
                     )
                 }
@@ -123,10 +123,10 @@ fun WgcPdaSommelierWineCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.pdaGoldLight))
+                        .background(Color(WgcCoreDsColors.premiumGroceryGoldLight))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.pdaGold),
+                            color = Color(WgcCoreDsColors.premiumGroceryGold),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         )
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
@@ -138,12 +138,12 @@ fun WgcPdaSommelierWineCard(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pdaGoldDark),
+                            tint = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                         )
                         Text(
                             text = "$sommelierPoints pts Sommelier",
-                            color = Color(WgcCoreDsColors.pdaGoldDark),
+                            color = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -164,13 +164,13 @@ fun WgcPdaSommelierWineCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.pdaBackground)),
+                        .background(Color(WgcCoreDsColors.premiumGroceryBackground)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.LocalBar,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pdaWineRed),
+                        tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
                         modifier = Modifier.size(WgcCoreDsSize.s40.dp)
                     )
                 }
@@ -179,7 +179,7 @@ fun WgcPdaSommelierWineCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = wineName,
-                        color = Color(WgcCoreDsColors.pdaTextPrimary),
+                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
                         maxLines = 2,
@@ -190,7 +190,7 @@ fun WgcPdaSommelierWineCard(
 
                     Text(
                         text = "Uvas: $grape",
-                        color = Color(WgcCoreDsColors.pdaTextSecondary),
+                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                         style = MaterialTheme.typography.bodySmall,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
@@ -203,12 +203,12 @@ fun WgcPdaSommelierWineCard(
                         Icon(
                             imageVector = Icons.Default.Thermostat,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pdaTextSecondary),
+                            tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                         )
                         Text(
                             text = "Servir a $servingTemp",
-                            color = Color(WgcCoreDsColors.pdaTextSecondary),
+                            color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                             style = MaterialTheme.typography.labelSmall
                         )
                     }
@@ -222,12 +222,12 @@ fun WgcPdaSommelierWineCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.pdaBackground))
+                    .background(Color(WgcCoreDsColors.premiumGroceryBackground))
                     .padding(WgcCoreDsSpacing.xs8.dp)
             ) {
                 Text(
                     text = "🍷 Harmonização: $pairingTip",
-                    color = Color(WgcCoreDsColors.pdaTextPrimary),
+                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.Medium
                 )
@@ -244,7 +244,7 @@ fun WgcPdaSommelierWineCard(
                 Column {
                     Text(
                         text = String.format(Locale.GERMANY, "R$ %.2f", price),
-                        color = Color(WgcCoreDsColors.pdaTextSecondary),
+                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
                         style = MaterialTheme.typography.labelSmall,
                         textDecoration = TextDecoration.LineThrough
                     )
@@ -255,13 +255,13 @@ fun WgcPdaSommelierWineCard(
                     ) {
                         Text(
                             text = String.format(Locale.GERMANY, "R$ %.2f", clienteMaisPrice),
-                            color = Color(WgcCoreDsColors.pdaGreenDark),
+                            color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Black
                         )
                         Text(
                             text = "Cliente Mais",
-                            color = Color(WgcCoreDsColors.pdaGoldDark),
+                            color = Color(WgcCoreDsColors.premiumGroceryGoldDark),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -274,7 +274,7 @@ fun WgcPdaSommelierWineCard(
                         modifier = Modifier
                             .height(WgcCoreDsSize.s32.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.pdaWineRed))
+                            .background(Color(WgcCoreDsColors.premiumGroceryWineRed))
                             .clickable { onQuantityChange(1) }
                             .padding(horizontal = WgcCoreDsSpacing.sm12.dp),
                         contentAlignment = Alignment.Center
@@ -293,7 +293,7 @@ fun WgcPdaSommelierWineCard(
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                             .border(
                                 width = WgcCoreDsSize.s1.dp,
-                                color = Color(WgcCoreDsColors.pdaWineRed),
+                                color = Color(WgcCoreDsColors.premiumGroceryWineRed),
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                             ),
                         verticalAlignment = Alignment.CenterVertically
@@ -305,14 +305,14 @@ fun WgcPdaSommelierWineCard(
                             Icon(
                                 imageVector = Icons.Default.Remove,
                                 contentDescription = "Diminuir",
-                                tint = Color(WgcCoreDsColors.pdaWineRed),
+                                tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
                                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                             )
                         }
 
                         Text(
                             text = "$quantity",
-                            color = Color(WgcCoreDsColors.pdaWineRed),
+                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
@@ -325,7 +325,7 @@ fun WgcPdaSommelierWineCard(
                             Icon(
                                 imageVector = Icons.Default.Add,
                                 contentDescription = "Aumentar",
-                                tint = Color(WgcCoreDsColors.pdaWineRed),
+                                tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
                                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                             )
                         }

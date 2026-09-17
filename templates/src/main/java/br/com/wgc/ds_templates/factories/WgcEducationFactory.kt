@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcEducationCourseCard
 
 enum class WgcEducationScreen {
-    DUOLINGO,
-    ALURA,
-    UDEMY
+    LANGUAGE,
+    TECH,
+    MARKETPLACE
 }
 
 @Composable
 fun WgcEducationFactory(
     modifier: Modifier = Modifier,
-    screen: WgcEducationScreen = WgcEducationScreen.DUOLINGO
+    screen: WgcEducationScreen = WgcEducationScreen.LANGUAGE
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
@@ -35,14 +35,14 @@ fun WgcEducationFactory(
             item {
                 WgcEducationCourseCard(
                     courseTitle = "Inglês Intermediário - Módulo 3",
-                    instructorOrTrack = "Duolingo English Trilha",
+                    instructorOrTrack = "Trilha Idiomas Inglês",
                     progressPercentage = 0.85f
                 )
             }
             item {
                 WgcEducationCourseCard(
                     courseTitle = "Kotlin Avançado e Coroutines",
-                    instructorOrTrack = "Alura Formação Android",
+                    instructorOrTrack = "Formação Android Developer",
                     progressPercentage = 0.40f
                 )
             }

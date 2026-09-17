@@ -62,7 +62,7 @@ fun WgcAutomotiveVehicleCard(
                 Text(
                     text = "FIPE: R$ " + String.format("%.2f", fipePrice),
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.cdtGreen),
+                    color = Color(WgcCoreDsColors.transitDigitalGreen),
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -70,7 +70,7 @@ fun WgcAutomotiveVehicleCard(
             Text(text = "$yearModel • $mileageKm km • $cityState", fontSize = 12.sp, color = Color.DarkGray)
             if (isReportApproved) {
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.cdtGreen), fontWeight = FontWeight.Bold)
+                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
             }
         }
     }

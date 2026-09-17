@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.buttons.WgcLazaBrandPill
+import br.com.wgc.design_system.components.buttons.WgcBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
 
 /**
@@ -64,13 +64,13 @@ enum class WgcCardType {
     OrganizzeBalance,
     OrganizzeCreditCard,
     OrganizzeTransaction,
-    QuintoAndarProperty,
-    VivaRealProperty,
+    PropertyRentalProperty,
+    PropertyListingProperty,
     ZapProperty,
-    SmartFitWorkout,
-    SmartFitCrowd,
-    WellhubGym,
-    WellhubCheckIn,
+    GymFitnessWorkout,
+    GymFitnessCrowd,
+    CorporateWellnessGym,
+    CorporateWellnessCheckIn,
     NtcWorkout,
     NtcProgram,
     ExtraProduct,
@@ -78,9 +78,9 @@ enum class WgcCardType {
     PdaProduct,
     PdaWine,
     PdaLoyalty,
-    CarrefourProduct,
-    CarrefourNutriScore,
-    CarrefourMeuCard,
+    SupermercadoProduct,
+    SupermercadoNutriScore,
+    SupermercadoMeuCard,
     DrogaRaiaProduct,
     DrogaRaiaPrescription,
     DrogaRaiaSubscription,
@@ -88,7 +88,7 @@ enum class WgcCardType {
     DrogasilLoyalty,
     PagueMenosClinic,
     PagueMenosConvenio,
-    NubankAccount,
+    NeobankAccount,
     InterSuperApp,
     C6Carbon,
     MobilityRide,
@@ -270,7 +270,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.KutukuProduct -> {
-            WgcKutukuProductCard(
+            WgcRetailProductCard(
                 modifier = modifier,
                 title = title,
                 subtitle = subtitle,
@@ -280,7 +280,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.KutukuCategory -> {
-            WgcKutukuCategoryCard(
+            WgcRetailCategoryCard(
                 modifier = modifier,
                 title = title,
                 productCountText = subtitle,
@@ -289,7 +289,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.KutukuCartItem -> {
-            WgcKutukuCartItemRow(
+            WgcRetailCartItemRow(
                 modifier = modifier,
                 title = title,
                 colorVariant = subtitle,
@@ -299,7 +299,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShoppeProduct -> {
-            WgcShoppeProductCard(
+            WgcMegaStoreProductCard(
                 modifier = modifier,
                 title = title,
                 category = subtitle,
@@ -309,12 +309,12 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShoppeOrderStatus -> {
-            WgcShoppeOrderStatusRow(
+            WgcMegaStoreOrderStatusRow(
                 modifier = modifier
             )
         }
         WgcCardType.ShoppeVoucher -> {
-            WgcShoppeVoucherCard(
+            WgcMegaStoreVoucherCard(
                 modifier = modifier,
                 discountTitle = title,
                 minSpend = subtitle,
@@ -322,14 +322,14 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShoppeFlashSale -> {
-            WgcShoppeFlashSaleBanner(
+            WgcMegaStoreFlashSaleBanner(
                 modifier = modifier,
                 title = title,
                 discountTag = subtitle
             )
         }
         WgcCardType.ClotheeProduct -> {
-            WgcClotheeProductCard(
+            WgcApparelProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -339,7 +339,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ClotheeCategory -> {
-            WgcClotheeCategoryAvatar(
+            WgcApparelCategoryAvatar(
                 modifier = modifier,
                 name = title,
                 imageUrl = imageUrl,
@@ -347,7 +347,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ClotheeCartItem -> {
-            WgcClotheeCartItemCard(
+            WgcApparelCartItemCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -356,7 +356,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.LazaProduct -> {
-            WgcLazaProductCard(
+            WgcBoutiqueProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -366,7 +366,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.LazaBrand -> {
-            WgcLazaBrandPill(
+            WgcBrandPill(
                 modifier = modifier,
                 brandName = title,
                 logoUrl = imageUrl,
@@ -374,7 +374,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.LazaCartItem -> {
-            WgcLazaCartItemRow(
+            WgcBoutiqueCartItemRow(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -384,14 +384,14 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.TasselCollection -> {
-            WgcTasselCollectionCard(
+            WgcCuratedCollectionCard(
                 modifier = modifier,
                 title = title,
                 onClick = onClick
             )
         }
         WgcCardType.TasselProduct -> {
-            WgcTasselProductCard(
+            WgcCuratedProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -401,7 +401,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.TasselOrderTracker -> {
-            WgcTasselOrderTrackerCard(
+            WgcCuratedOrderTrackerCard(
                 modifier = modifier,
                 productTitle = title,
                 productDetails = subtitle,
@@ -410,7 +410,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShopperProduct -> {
-            WgcShopperProductCard(
+            WgcFreshGroceryProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -420,7 +420,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShopperPromoBanner -> {
-            WgcShopperPromoBanner(
+            WgcFreshGroceryPromoBanner(
                 modifier = modifier,
                 title = title,
                 subtitle = subtitle,
@@ -428,7 +428,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.NexkartProduct -> {
-            WgcNexkartProductCard(
+            WgcGadgetShopProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -439,7 +439,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.NexkartTopProduct -> {
-            WgcNexkartTopProductRow(
+            WgcGadgetShopTopProductRow(
                 modifier = modifier,
                 rank = 1,
                 title = title,
@@ -450,7 +450,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.NexkartCartItem -> {
-            WgcNexkartCartItemRow(
+            WgcGadgetShopCartItemRow(
                 modifier = modifier,
                 title = title,
                 subtitle = subtitle,
@@ -460,7 +460,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShopEaseProduct -> {
-            WgcShopEaseProductCard(
+            WgcQuickShopProductCard(
                 modifier = modifier,
                 title = title,
                 price = price,
@@ -470,7 +470,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ShopEaseOfferBanner -> {
-            WgcShopEaseOfferBanner(
+            WgcQuickShopOfferBanner(
                 modifier = modifier,
                 title = title,
                 subtitle = subtitle,
@@ -479,7 +479,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.OrganizzeBalance -> {
-            WgcOrganizzeBalanceCard(
+            WgcPersonalFinanceBalanceCard(
                 modifier = modifier,
                 monthLabel = title.ifBlank { "Maio 2026" },
                 balance = price.ifBlank { "R$ 14.850,00" },
@@ -488,16 +488,16 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.OrganizzeCreditCard -> {
-            WgcOrganizzeCreditCardRow(
+            WgcPersonalFinanceCreditCardRow(
                 modifier = modifier,
-                bankName = title.ifBlank { "Nubank Mastercard" },
+                bankName = title.ifBlank { "Neobank Mastercard" },
                 lastDigits = subtitle.ifBlank { "•••• 8421" },
                 currentInvoice = price.ifBlank { "R$ 1.840,50" },
                 onClick = onClick
             )
         }
         WgcCardType.OrganizzeTransaction -> {
-            WgcOrganizzeTransactionItem(
+            WgcPersonalFinanceTransactionItem(
                 modifier = modifier,
                 title = title.ifBlank { "Lançamento" },
                 category = subtitle.ifBlank { "Geral" },
@@ -505,8 +505,8 @@ fun WgcCardFactory(
                 onClick = onClick
             )
         }
-        WgcCardType.QuintoAndarProperty -> {
-            WgcQuintoAndarPropertyCard(
+        WgcCardType.PropertyRentalProperty -> {
+            WgcPropertyRentalCard(
                 modifier = modifier,
                 title = title.ifBlank { "Apartamento para alugar" },
                 neighborhood = subtitle.ifBlank { "Pinheiros" },
@@ -517,8 +517,8 @@ fun WgcCardFactory(
                 onClick = onClick
             )
         }
-        WgcCardType.VivaRealProperty -> {
-            WgcVivaRealPropertyCard(
+        WgcCardType.PropertyListingProperty -> {
+            WgcPropertyListingCard(
                 modifier = modifier,
                 title = title.ifBlank { "Apartamento à venda" },
                 neighborhood = subtitle.ifBlank { "Moema" },
@@ -531,7 +531,7 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.ZapProperty -> {
-            WgcZapPropertyCard(
+            WgcPropertyClassifiedsCard(
                 modifier = modifier,
                 title = title.ifBlank { "Apartamento Alto Padrão com Varanda Gourmet" },
                 neighborhood = subtitle.ifBlank { "Itaim Bibi" },
@@ -551,8 +551,8 @@ fun WgcCardFactory(
                 onCardClick = onClick
             )
         }
-        WgcCardType.SmartFitWorkout -> {
-            WgcSmartFitWorkoutCard(
+        WgcCardType.GymFitnessWorkout -> {
+            WgcGymWorkoutCard(
                 modifier = modifier,
                 exerciseName = title.ifBlank { "Supino Reto com Barra" },
                 targetMuscle = subtitle.ifBlank { "Peitoral Maior" },
@@ -562,32 +562,32 @@ fun WgcCardFactory(
                 onClick = onClick
             )
         }
-        WgcCardType.SmartFitCrowd -> {
-            WgcSmartFitUnitCrowdCard(
+        WgcCardType.GymFitnessCrowd -> {
+            WgcGymCrowdCard(
                 modifier = modifier,
-                unitName = title.ifBlank { "Smart Fit - Paulista" },
+                unitName = title.ifBlank { "Gym & Fitness - Paulista" },
                 address = subtitle.ifBlank { "Av. Paulista, 2064 • 350m" },
                 operatingHours = "06:00 às 23:00",
-                crowdLevel = WgcSmartFitCrowdLevel.LOW,
+                crowdLevel = WgcGymFitnessCrowdLevel.LOW,
                 crowdPercentage = 30,
                 onClick = onClick
             )
         }
-        WgcCardType.WellhubGym -> {
-            WgcWellhubGymCard(
+        WgcCardType.CorporateWellnessGym -> {
+            WgcWellnessGymCard(
                 modifier = modifier,
-                name = title.ifBlank { "Smart Fit - Paulista" },
+                name = title.ifBlank { "Gym & Fitness - Paulista" },
                 category = subtitle.ifBlank { "Musculação • Aeróbico" },
                 address = "Av. Paulista, 2064",
                 distance = "350 m",
                 rating = 4.8,
                 reviewsCount = "1.4k",
-                requiredTier = WgcWellhubPlanTier.BASIC,
+                requiredTier = WgcCorporateWellnessPlanTier.BASIC,
                 onClick = onClick
             )
         }
-        WgcCardType.WellhubCheckIn -> {
-            WgcWellhubCheckInCard(
+        WgcCardType.CorporateWellnessCheckIn -> {
+            WgcWellnessCheckInCard(
                 modifier = modifier,
                 gymName = title.ifBlank { "Bio Ritmo - Jardins" },
                 userName = subtitle.ifBlank { "Gabriel do Carmo" },
@@ -691,28 +691,28 @@ fun WgcCardFactory(
                 onClick = onClick
             )
         }
-        WgcCardType.CarrefourProduct -> {
-            WgcCarrefourProductCard(
+        WgcCardType.SupermercadoProduct -> {
+            WgcGroceryProductCard(
                 modifier = modifier,
-                title = title.ifBlank { "Arroz Tipo 1 Carrefour Classic 5kg" },
-                brandLine = subtitle.ifBlank { "Carrefour Classic" },
+                title = title.ifBlank { "Arroz Tipo 1 Supermercado Classic 5kg" },
+                brandLine = subtitle.ifBlank { "Supermercado Classic" },
                 unit = "5kg",
                 regularPrice = 32.90,
-                cardCarrefourPrice = 28.90,
+                cardSupermercadoPrice = 28.90,
                 nutriScore = badgeText ?: "A",
                 quantity = 1,
                 onClick = onClick
             )
         }
-        WgcCardType.CarrefourNutriScore -> {
-            WgcCarrefourNutriScoreCard(
+        WgcCardType.SupermercadoNutriScore -> {
+            WgcGroceryNutriScoreCard(
                 modifier = modifier,
                 currentScore = badgeText ?: "A",
                 onClick = onClick
             )
         }
-        WgcCardType.CarrefourMeuCard -> {
-            WgcCarrefourMeuCard(
+        WgcCardType.SupermercadoMeuCard -> {
+            WgcGroceryLoyaltyCard(
                 modifier = modifier,
                 holderName = title.ifBlank { "Gabriel do Carmo" },
                 cardLastDigits = subtitle.ifBlank { "8412" },
@@ -785,7 +785,7 @@ fun WgcCardFactory(
                 onManageConvenio = onClick
             )
         }
-        WgcCardType.NubankAccount -> {
+        WgcCardType.NeobankAccount -> {
             WgcFinancialBalanceCard(
                 modifier = modifier,
                 balance = 3450.75,
@@ -793,9 +793,9 @@ fun WgcCardFactory(
             )
         }
         WgcCardType.InterSuperApp -> {
-            WgcInterSuperAppCard(
+            WgcFintechSuperAppCard(
                 modifier = modifier,
-                partnerStore = title.ifBlank { "Magalu" },
+                partnerStore = title.ifBlank { "Marketplace" },
                 offerTitle = subtitle.ifBlank { "Smartphones e Informática" },
                 cashbackPercentage = 8,
                 onShopClick = onClick
@@ -806,7 +806,7 @@ fun WgcCardFactory(
                 modifier = modifier,
                 holderName = title.ifBlank { "Lucas Ferreira" },
                 cardLastDigits = subtitle.ifBlank { "8832" },
-                atomosPoints = 14250
+                rewardPoints = 14250
             )
         }
         WgcCardType.MobilityRide -> {
@@ -893,7 +893,7 @@ fun WgcCardFactory(
         WgcCardType.FashionItem -> {
             WgcFashionItemCard(
                 modifier = modifier,
-                brandName = title.ifBlank { "Renner Premium" },
+                brandName = title.ifBlank { "Fashion Premium" },
                 itemTitle = subtitle.ifBlank { "Jaqueta Corta-Vento Street Casual" },
                 price = 199.90,
                 installments = "5x de R$ 39,98 sem juros",

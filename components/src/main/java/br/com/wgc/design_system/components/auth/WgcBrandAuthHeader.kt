@@ -65,7 +65,7 @@ fun WgcBrandAuthHeader(
 private fun WgcBrandAuthHeaderPreview() {
     MaterialTheme {
         WgcBrandAuthHeader(
-            brandName = "iFood",
+            brandName = "Food Delivery",
             brandLogoText = "iF",
             brandColor = Color(0xFFEA1D2C),
             title = "Falta pouco para matar sua fome!",

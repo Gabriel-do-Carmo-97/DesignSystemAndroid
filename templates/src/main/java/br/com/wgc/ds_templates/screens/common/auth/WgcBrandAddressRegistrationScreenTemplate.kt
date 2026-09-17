@@ -61,7 +61,7 @@ class FakeBrandAddressAuthViewModel : BaseBrandAddressAuthViewModel() {
 fun WgcBrandAddressRegistrationScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseBrandAddressAuthViewModel,
-    brandName: String = "iFood",
+    brandName: String = "Food Delivery",
     brandLogoText: String = "iF",
     brandColor: Color = Color(0xFFEA1D2C),
     onBackClick: () -> Unit = {}

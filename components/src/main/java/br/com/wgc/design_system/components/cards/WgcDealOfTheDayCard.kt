@@ -41,7 +41,7 @@ fun WgcDealOfTheDayCard(
     title: String = "Deal of the Day",
     remainingTime: String = "22h 55m 20s remaining",
     actionLabel: String = "View all",
-    backgroundColor: Color = Color(WgcCoreDsColors.stylishBlue),
+    backgroundColor: Color = Color(WgcCoreDsColors.trendFashionBlue),
     onViewAllClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)

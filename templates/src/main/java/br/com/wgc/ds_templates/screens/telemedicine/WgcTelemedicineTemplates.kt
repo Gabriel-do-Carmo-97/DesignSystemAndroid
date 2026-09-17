@@ -102,7 +102,7 @@ fun WgcTelemedicineHomeTemplate(
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.tokstokYellow), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
+                        Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.designerFurnitureYellow), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
                         Text(text = "${doc.rating} (${doc.reviewsCount} opiniões)", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
                         Spacer(modifier = Modifier.weight(1f))

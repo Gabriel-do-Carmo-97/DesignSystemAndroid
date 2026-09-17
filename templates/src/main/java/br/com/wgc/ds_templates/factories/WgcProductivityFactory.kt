@@ -15,15 +15,15 @@ import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcProductivityTaskCard
 
 enum class WgcProductivityScreen {
-    NOTION,
-    TRELLO,
-    SLACK
+    DOCS,
+    KANBAN,
+    COLLABORATION
 }
 
 @Composable
 fun WgcProductivityFactory(
     modifier: Modifier = Modifier,
-    screen: WgcProductivityScreen = WgcProductivityScreen.NOTION
+    screen: WgcProductivityScreen = WgcProductivityScreen.DOCS
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize()) { padding ->
