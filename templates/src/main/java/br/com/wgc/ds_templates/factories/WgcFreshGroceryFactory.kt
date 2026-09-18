@@ -2,13 +2,13 @@ package br.com.wgc.ds_templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.ds_templates.screens.freshgrocery.cart.WgcShopperCartTemplate
-import br.com.wgc.ds_templates.screens.freshgrocery.detail.WgcShopperProductDetailTemplate
-import br.com.wgc.ds_templates.screens.freshgrocery.home.WgcShopperHomeTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.cart.WgcFreshGroceryCartTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.detail.WgcFreshGroceryProductDetailTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.home.WgcFreshGroceryHomeTemplate
 import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryMockData
-import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperProduct
-import br.com.wgc.ds_templates.screens.freshgrocery.profile.WgcShopperProfileTemplate
-import br.com.wgc.ds_templates.screens.freshgrocery.splash.WgcShopperSplashTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryProductItem
+import br.com.wgc.ds_templates.screens.freshgrocery.profile.WgcFreshGroceryProfileTemplate
+import br.com.wgc.ds_templates.screens.freshgrocery.splash.WgcFreshGrocerySplashTemplate
 
 /**
  * Telas disponíveis para renderização na [WgcFreshGroceryFactory].
@@ -22,15 +22,15 @@ enum class WgcFreshGroceryScreen {
 }
 
 /**
- * Fábrica Universal de Telas do Shopper (Modern Emerald Green Ecommerce).
+ * Fábrica Universal de Telas do Fresh Grocery (Modern Emerald Green Ecommerce).
  * Expõe ponto de entrada único com defaults sensatos e slots de customização granulares.
  */
 @Composable
 fun WgcFreshGroceryFactory(
     screen: WgcFreshGroceryScreen = WgcFreshGroceryScreen.Home,
-    selectedProduct: ShopperProduct = FreshGroceryMockData.products[0],
+    selectedProduct: FreshGroceryProductItem = FreshGroceryMockData.products[0],
     onNavigateToHome: () -> Unit = {},
-    onNavigateToDetail: (ShopperProduct) -> Unit = {},
+    onNavigateToDetail: (FreshGroceryProductItem) -> Unit = {},
     onNavigateToCart: () -> Unit = {},
     onNavigateToProfile: () -> Unit = {},
     onBackClick: () -> Unit = {},
@@ -44,20 +44,20 @@ fun WgcFreshGroceryFactory(
 
     when (screen) {
         WgcFreshGroceryScreen.Splash -> {
-            WgcShopperSplashTemplate(
+            WgcFreshGrocerySplashTemplate(
                 onGetStartedClick = onNavigateToHome,
                 modifier = modifier
             )
         }
         WgcFreshGroceryScreen.Home -> {
-            WgcShopperHomeTemplate(
+            WgcFreshGroceryHomeTemplate(
                 onProductClick = onNavigateToDetail,
                 onCartClick = onNavigateToCart,
                 modifier = modifier
             )
         }
         WgcFreshGroceryScreen.ProductDetail -> {
-            WgcShopperProductDetailTemplate(
+            WgcFreshGroceryProductDetailTemplate(
                 product = selectedProduct,
                 onBackClick = onBackClick,
                 onAddToCartClick = onNavigateToCart,
@@ -65,14 +65,14 @@ fun WgcFreshGroceryFactory(
             )
         }
         WgcFreshGroceryScreen.Cart -> {
-            WgcShopperCartTemplate(
+            WgcFreshGroceryCartTemplate(
                 onBackClick = onBackClick,
                 onCheckoutClick = { /* checkout */ },
                 modifier = modifier
             )
         }
         WgcFreshGroceryScreen.Profile -> {
-            WgcShopperProfileTemplate(
+            WgcFreshGroceryProfileTemplate(
                 modifier = modifier
             )
         }

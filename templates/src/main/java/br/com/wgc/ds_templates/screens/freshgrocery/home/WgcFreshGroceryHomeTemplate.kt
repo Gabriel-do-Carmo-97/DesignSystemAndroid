@@ -51,14 +51,14 @@ import br.com.wgc.design_system.components.cards.WgcFreshGroceryCategoryItem
 import br.com.wgc.design_system.components.cards.WgcFreshGroceryProductCard
 import br.com.wgc.design_system.components.cards.WgcFreshGroceryPromoBanner
 import br.com.wgc.design_system.components.navigation.WgcFreshGroceryBottomNav
-import br.com.wgc.design_system.components.navigation.WgcShopperNavItem
-import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperCategory
+import br.com.wgc.design_system.components.navigation.WgcFreshGroceryNavItem
+import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryCategory
 import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryMockData
-import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperProduct
+import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryProductItem
 
 /**
- * Tela Home do Shopper:
- * - Header verde esmeralda com logo "Shopper", ícones de notificação/carrinho e barra de busca integrada
+ * Tela Home do Fresh Grocery:
+ * - Header verde esmeralda com logo, ícones de notificação/carrinho e barra de busca integrada
  * - Banner promocional em destaque ("Don't Miss Out! Get discount up to 50%")
  * - Grid de categorias 5x2 de ícones circulares com "More" em destaque verde
  * - Seção "Flash Deal" com contador regressivo e lista horizontal de produtos
@@ -66,17 +66,17 @@ import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperProduct
  * - Bottom Navigation Bar fixa
  */
 @Composable
-fun WgcShopperHomeTemplate(
+fun WgcFreshGroceryHomeTemplate(
     searchQuery: String = "",
     onSearchChange: (String) -> Unit = {},
-    categories: List<ShopperCategory> = FreshGroceryMockData.categories,
-    products: List<ShopperProduct> = FreshGroceryMockData.products,
+    categories: List<FreshGroceryCategory> = FreshGroceryMockData.categories,
+    products: List<FreshGroceryProductItem> = FreshGroceryMockData.products,
     countdown: String = "08:21:30",
-    selectedNav: WgcShopperNavItem = WgcShopperNavItem.Home,
-    onNavSelect: (WgcShopperNavItem) -> Unit = {},
-    onCategoryClick: (ShopperCategory) -> Unit = {},
-    onProductClick: (ShopperProduct) -> Unit = {},
-    onFavoriteToggle: (ShopperProduct) -> Unit = {},
+    selectedNav: WgcFreshGroceryNavItem = WgcFreshGroceryNavItem.Home,
+    onNavSelect: (WgcFreshGroceryNavItem) -> Unit = {},
+    onCategoryClick: (FreshGroceryCategory) -> Unit = {},
+    onProductClick: (FreshGroceryProductItem) -> Unit = {},
+    onFavoriteToggle: (FreshGroceryProductItem) -> Unit = {},
     onCartClick: () -> Unit = {},
     onNotificationClick: () -> Unit = {},
     bannerSlot: (@Composable () -> Unit)? = null,
@@ -394,6 +394,6 @@ fun WgcShopperHomeTemplate(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcShopperHomeTemplatePreview() {
-    WgcShopperHomeTemplate()
+private fun WgcFreshGroceryHomeTemplatePreview() {
+    WgcFreshGroceryHomeTemplate()
 }

@@ -9,20 +9,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.LocalShipping
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,12 +30,12 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.components.cards.WgcDrogasilLoyaltyCard
+import br.com.wgc.design_system.components.cards.WgcHealthLoyaltyCard
 import br.com.wgc.ds_templates.screens.carepharmacy.model.CarePharmacyMockData
 import br.com.wgc.ds_templates.screens.carepharmacy.model.DrogasilOffer
+import java.util.Locale
 
 @Composable
 fun WgcDrogasilHomeTemplate(
@@ -62,7 +55,7 @@ fun WgcDrogasilHomeTemplate(
             }
 
             item {
-                WgcDrogasilLoyaltyCard(
+                WgcHealthLoyaltyCard(
                     userName = "Mariana Alves",
                     cpfMasked = "123.***.***-00",
                     pointsBalance = 420
@@ -144,7 +137,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (offer.originalPrice != null) {
                         Text(
-                            text = "R$ " + String.format("%.2f", offer.originalPrice),
+                            text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.originalPrice),
                             fontSize = 10.sp,
                             color = Color(WgcCoreDsColors.carePharmacyTextSecondary),
                             textDecoration = TextDecoration.LineThrough
@@ -152,7 +145,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                         Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
                     }
                     Text(
-                        text = "R$ " + String.format("%.2f", offer.price),
+                        text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.price),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.carePharmacyRed)
@@ -163,8 +156,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
             WgcClassicButton(
                 textButton = "Comprar",
                 onClick = onBuy
-                )
-            
+            )
         }
     }
 }

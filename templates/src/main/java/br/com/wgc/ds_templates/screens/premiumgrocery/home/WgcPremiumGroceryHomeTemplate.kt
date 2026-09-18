@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,27 +18,23 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.BakeryDining
-import androidx.compose.material.icons.filled.CenterFocusWeak
 import androidx.compose.material.icons.filled.Eco
-import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.LocalBar
-import androidx.compose.material.icons.filled.Mic
-import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.QrCodeScanner
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SetMeal
-import androidx.compose.material.icons.filled.ShoppingBag
-import androidx.compose.material.icons.filled.Timer
+import androidx.compose.material.icons.filled.Storefront
+import androidx.compose.material.icons.filled.WineBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,15 +46,17 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcPdaClienteMaisLoyaltyCard
-import br.com.wgc.design_system.components.cards.WgcPdaProductCard
-import br.com.wgc.design_system.components.cards.WgcPdaSommelierWineCard
-import br.com.wgc.design_system.components.navigation.WgcPdaBottomNav
+import br.com.wgc.design_system.components.cards.WgcSupermarketLoyaltyCard
+import br.com.wgc.design_system.components.cards.WgcSupermarketProductCard
+import br.com.wgc.design_system.components.cards.WgcWineStoreCard
+import br.com.wgc.design_system.components.navigation.WgcSupermarketBottomNav
+import br.com.wgc.design_system.components.navigation.WgcSupermarketNavItem
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PremiumGroceryMockData
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaProductItem
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaUserProfile
@@ -65,20 +64,14 @@ import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaWineItem
 
 private data class PdaDepartmentCategory(val title: String, val icon: ImageVector, val color: Int)
 
-/**
- * Template da Tela Principal do Supermercado Gourmet.
- *
- * Vitrine premium com seletor de loja física/delivery, busca com scanner de código de barras,
- * card VIP Cliente Mais, departamentos gourmet, festival de queijos & vinhos e curadoria sommelier.
- */
 @Composable
 fun WgcPdaHomeTemplate(
     modifier: Modifier = Modifier,
     userProfile: PdaUserProfile = PremiumGroceryMockData.defaultUser,
     featuredProducts: List<PdaProductItem> = PremiumGroceryMockData.gourmetProducts,
     sommelierPicks: List<PdaWineItem> = PremiumGroceryMockData.sommelierWines,
-    selectedNavIndex: Int = 0,
-    onNavSelect: (Int) -> Unit = {},
+    selectedNavItem: WgcSupermarketNavItem = WgcSupermarketNavItem.HOME,
+    onNavItemClick: (WgcSupermarketNavItem) -> Unit = {},
     onProductQuantityChange: (String, Int) -> Unit = { _, _ -> },
     onWineQuantityChange: (String, Int) -> Unit = { _, _ -> },
     onProductFavoriteToggle: (String) -> Unit = {},
@@ -99,204 +92,153 @@ fun WgcPdaHomeTemplate(
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            footerSlot?.invoke() ?: WgcPdaBottomNav(
-                selectedItem = selectedNavIndex,
-                onItemSelected = onNavSelect
+            footerSlot?.invoke() ?: WgcSupermarketBottomNav(
+                selectedItem = selectedNavItem,
+                onItemSelected = onNavItemClick
             )
         }
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(innerPadding),
+            contentPadding = PaddingValues(bottom = WgcCoreDsSpacing.xl32.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            // Header: Seletor de Loja & Notificações
             item {
-                headerSlot?.invoke() ?: Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.premiumGrocerySurface))
-                        .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp)
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                if (headerSlot != null) {
+                    headerSlot()
+                } else {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(Color(WgcCoreDsColors.premiumGroceryGreenDark))
+                            .padding(WgcCoreDsSpacing.md16.dp)
                     ) {
-                        Column {
-                            Text(
-                                text = "ENTREGAR EM",
-                                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold
-                            )
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                        ) {
                             Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(
-                                    text = userProfile.selectedStore,
-                                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Icon(
-                                    imageVector = Icons.Default.KeyboardArrowDown,
-                                    contentDescription = "Trocar Loja",
-                                    tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                    modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                                )
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.Storefront,
+                                        contentDescription = null,
+                                        tint = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                                    )
+                                    Column {
+                                        Text(
+                                            text = "SUPERMERCADO • LOJA SELECIONADA",
+                                            color = Color(WgcCoreDsColors.premiumGroceryGold),
+                                            fontSize = 10.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                        Text(
+                                            text = userProfile.selectedStore,
+                                            color = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                            fontSize = 14.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    }
+                                }
+
+                                IconButton(onClick = onScanBarcodeClick) {
+                                    Icon(
+                                        imageVector = Icons.Default.QrCodeScanner,
+                                        contentDescription = "Scanner",
+                                        tint = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                    )
+                                }
                             }
-                        }
 
-                        IconButton(
-                            onClick = {},
-                            modifier = Modifier.size(WgcCoreDsSize.s36.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Notifications,
-                                contentDescription = "Notificações",
-                                tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                            OutlinedTextField(
+                                value = "",
+                                onValueChange = {},
+                                modifier = Modifier.fillMaxWidth(),
+                                placeholder = {
+                                    Text(
+                                        text = "Buscar vinhos, queijos, orgânicos, carnes...",
+                                        fontSize = 12.sp
+                                    )
+                                },
+                                leadingIcon = {
+                                    Icon(
+                                        imageVector = Icons.Default.Search,
+                                        contentDescription = "Buscar",
+                                        tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                                    )
+                                },
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    focusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    unfocusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    focusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    unfocusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                ),
+                                singleLine = true,
+                                readOnly = true
                             )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-
-                    // Janela de Entrega Express
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryGreenLight))
-                            .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Timer,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                        Text(
-                            text = userProfile.deliveryWindow,
-                            color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                            style = MaterialTheme.typography.bodySmall,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
-
-                    // Barra de Busca Sofisticada com Scanner de Código de Barras
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(WgcCoreDsSize.s48.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryBackground))
-                            .border(
-                                width = WgcCoreDsSize.s1.dp,
-                                color = Color(WgcCoreDsColors.premiumGroceryBorder),
-                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
-                            )
-                            .padding(horizontal = WgcCoreDsSpacing.sm12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Search,
-                                contentDescription = null,
-                                tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                modifier = Modifier.size(WgcCoreDsSize.s20.dp)
-                            )
-                            Text(
-                                text = "Buscar azeites, vinhos, queijos ou Taeq...",
-                                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                style = MaterialTheme.typography.bodyMedium
-                            )
-                        }
-
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
-                        ) {
-                            IconButton(
-                                onClick = onScanBarcodeClick,
-                                modifier = Modifier.size(WgcCoreDsSize.s32.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Default.CenterFocusWeak,
-                                    contentDescription = "Escanear Código de Barras",
-                                    tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                    modifier = Modifier.size(WgcCoreDsSize.s20.dp)
-                                )
-                            }
-                            IconButton(
-                                onClick = {},
-                                modifier = Modifier.size(WgcCoreDsSize.s32.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Default.Mic,
-                                    contentDescription = "Busca por Voz",
-                                    tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                    modifier = Modifier.size(WgcCoreDsSize.s20.dp)
-                                )
-                            }
                         }
                     }
                 }
             }
 
-            // Card VIP Cliente Mais Black/Gold
+            // Cartão Fidelidade Cliente Mais VIP
             item {
-                Box(
-                    modifier = Modifier.padding(
-                        horizontal = WgcCoreDsSpacing.md16.dp,
-                        vertical = WgcCoreDsSpacing.sm12.dp
-                    )
-                ) {
-                    loyaltyCardSlot?.invoke() ?: WgcPdaClienteMaisLoyaltyCard(
-                        clientName = userProfile.name,
-                        cpfMasked = userProfile.cpfMasked,
-                        tier = userProfile.tier,
-                        stilloCoins = userProfile.stilloCoins,
-                        monthlySavings = userProfile.monthlySavings,
-                        onShowQrCode = onShowQrCodeClick
-                    )
+                Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)) {
+                    if (loyaltyCardSlot != null) {
+                        loyaltyCardSlot()
+                    } else {
+                        WgcSupermarketLoyaltyCard(
+                            clientName = userProfile.name,
+                            cpfMasked = userProfile.cpfMasked,
+                            tier = userProfile.tier,
+                            coinsBalance = userProfile.stilloCoins,
+                            monthlySavings = userProfile.monthlySavings,
+                            onShowQrCode = onShowQrCodeClick
+                        )
+                    }
                 }
             }
 
-            // Departamentos Gourmet em Círculos
+            // Departamentos Gourmet
             item {
-                Column(modifier = Modifier.padding(vertical = WgcCoreDsSpacing.xs8.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+                    Text(
+                        text = "DEPARTAMENTOS GOURMET",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
+                    )
                     LazyRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                            horizontal = WgcCoreDsSpacing.md16.dp
-                        )
+                        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
                         items(departments) { dept ->
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier.width(WgcCoreDsSize.s64.dp)
+                                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
+                                modifier = Modifier.clickable { }
                             ) {
                                 Box(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s56.dp)
-                                        .clip(CircleShape)
-                                        .background(Color(WgcCoreDsColors.premiumGrocerySurface))
+                                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                                        .background(Color(dept.color).copy(alpha = 0.15f))
                                         .border(
                                             width = WgcCoreDsSize.s1.dp,
                                             color = Color(dept.color).copy(alpha = 0.4f),
-                                            shape = CircleShape
+                                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp)
                                         ),
                                     contentAlignment = Alignment.Center
                                 ) {
@@ -304,19 +246,14 @@ fun WgcPdaHomeTemplate(
                                         imageVector = dept.icon,
                                         contentDescription = dept.title,
                                         tint = Color(dept.color),
-                                        modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                     )
                                 }
-
-                                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-
                                 Text(
                                     text = dept.title,
-                                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                    style = MaterialTheme.typography.labelSmall,
+                                    fontSize = 10.sp,
                                     fontWeight = FontWeight.Medium,
-                                    maxLines = 1,
-                                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
                                 )
                             }
                         }
@@ -324,205 +261,107 @@ fun WgcPdaHomeTemplate(
                 }
             }
 
-            // Banner Festival de Queijos & Vinhos
+            // Produtos Gourmet em Destaque
             item {
-                Card(
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = WgcCoreDsSpacing.md16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "ESPECIAIS DA SEMANA",
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
+                    )
+                    Text(
+                        text = "Ver todos",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.premiumGroceryGreen),
+                        modifier = Modifier.clickable { }
+                    )
+                }
+            }
+
+            items(featuredProducts, key = { it.id }) { product ->
+                Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)) {
+                    WgcSupermarketProductCard(
+                        title = product.title,
+                        brandOrOrigin = product.brandOrOrigin,
+                        unit = product.unit,
+                        originalPrice = product.originalPrice,
+                        clienteMaisPrice = product.clienteMaisPrice,
+                        discountBadge = product.badgeText,
+                        isOrganic = product.isOrganic,
+                        isFavorite = product.isFavorite,
+                        quantityInCart = product.quantity,
+                        onQuantityChange = { qty -> onProductQuantityChange(product.id, qty) },
+                        onFavoriteToggle = { onProductFavoriteToggle(product.id) }
+                    )
+                }
+            }
+
+            // Seleção Sommelier
+            item {
+                Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.premiumGroceryWineRed)
-                    ),
-                    elevation = CardDefaults.cardElevation(
-                        defaultElevation = WgcCoreDsElevation.level3.dp
-                    )
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.premiumGroceryGold))
-                                    .padding(
-                                        horizontal = WgcCoreDsSpacing.xs8.dp,
-                                        vertical = WgcCoreDsSpacing.xxs4.dp
-                                    )
-                            ) {
-                                Text(
-                                    text = "FESTIVAL GOURMET",
-                                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = FontWeight.Black
-                                )
-                            }
-
-                            Text(
-                                text = "Até 35% OFF",
-                                color = Color(WgcCoreDsColors.premiumGroceryGoldLight),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
-
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-
-                        Text(
-                            text = "Festival de Queijos Nobres & Vinhos Europeus",
-                            color = Color.White,
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.WineBar,
+                            contentDescription = null,
+                            tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
-
                         Text(
-                            text = "Harmonizações selecionadas por nossos sommeliers com descontos exclusivos no app.",
-                            color = Color.White.copy(alpha = 0.85f),
-                            style = MaterialTheme.typography.bodySmall
+                            text = "CURADORIA SOMMELIER",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
                         )
                     }
+                    Text(
+                        text = "Explorar Adega",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                        modifier = Modifier.clickable { }
+                    )
                 }
             }
 
-            // Seção: Seleção do Sommelier
-            item {
-                Column(modifier = Modifier.padding(top = WgcCoreDsSpacing.md16.dp)) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = WgcCoreDsSpacing.md16.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column {
-                            Text(
-                                text = "ADEGA GOURMET SOMMELIER",
-                                color = Color(WgcCoreDsColors.premiumGroceryWineRed),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Black
-                            )
-                            Text(
-                                text = "Curadoria dos Sommeliers",
-                                color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                style = MaterialTheme.typography.titleSmall,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
-
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
-                            modifier = Modifier.clickable { onNavSelect(1) }
-                        ) {
-                            Text(
-                                text = "Ver Adega",
-                                color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold
-                            )
-                            Icon(
-                                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                                contentDescription = null,
-                                tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                modifier = Modifier.size(WgcCoreDsSize.s14.dp)
-                            )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-
-                    Column(
-                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp),
-                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
-                    ) {
-                        sommelierPicks.take(2).forEach { wine ->
-                            WgcPdaSommelierWineCard(
-                                wineName = wine.wineName,
-                                countryOrigin = wine.countryOrigin,
-                                grape = wine.grape,
-                                vintage = wine.vintage,
-                                rating = wine.rating,
-                                sommelierPoints = wine.sommelierPoints,
-                                pairingTip = wine.pairingTip,
-                                servingTemp = wine.servingTemp,
-                                price = wine.price,
-                                clienteMaisPrice = wine.clienteMaisPrice,
-                                quantity = wine.quantity,
-                                onQuantityChange = { qty -> onWineQuantityChange(wine.id, qty) }
-                            )
-                        }
-                    }
-                }
-            }
-
-            // Seção: Produtos Gourmet & Taeq Orgânicos
-            item {
-                Column(modifier = Modifier.padding(top = WgcCoreDsSpacing.lg24.dp, bottom = WgcCoreDsSpacing.lg24.dp)) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = WgcCoreDsSpacing.md16.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column {
-                            Text(
-                                text = "EXCLUSIVOS & ORGÂNICOS",
-                                color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Black
-                            )
-                            Text(
-                                text = "Ofertas Cliente Mais",
-                                color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                style = MaterialTheme.typography.titleSmall,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
-
-                        Text(
-                            text = "Ver Todos",
-                            color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-
-                    LazyRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                            horizontal = WgcCoreDsSpacing.md16.dp
-                        )
-                    ) {
-                        items(featuredProducts) { product ->
-                            WgcPdaProductCard(
-                                title = product.title,
-                                brandOrOrigin = product.brandOrOrigin,
-                                unit = product.unit,
-                                originalPrice = product.originalPrice,
-                                clienteMaisPrice = product.clienteMaisPrice,
-                                badgeText = product.badgeText,
-                                isOrganic = product.isOrganic,
-                                quantity = product.quantity,
-                                isFavorite = product.isFavorite,
-                                onQuantityChange = { qty -> onProductQuantityChange(product.id, qty) },
-                                onFavoriteToggle = { onProductFavoriteToggle(product.id) }
-                            )
-                        }
-                    }
+            items(sommelierPicks, key = { it.id }) { wine ->
+                Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)) {
+                    WgcWineStoreCard(
+                        wineName = wine.wineName,
+                        winery = wine.countryOrigin,
+                        countryAndRegion = wine.countryOrigin,
+                        year = 2021,
+                        rating = wine.rating,
+                        originalPrice = wine.price,
+                        clienteMaisPrice = wine.clienteMaisPrice,
+                        grape = wine.grape,
+                        sommelierNote = wine.pairingTip,
+                        quantityInCart = wine.quantity,
+                        onQuantityChange = { qty -> onWineQuantityChange(wine.id, qty) }
+                    )
                 }
             }
         }
     }
 }
 
-@Preview(name = "PDA Home Template - Production", showBackground = true)
+@Preview(name = "Supermarket Home Template", showBackground = true)
 @Composable
 private fun WgcPdaHomeTemplatePreview() {
     WgcPdaHomeTemplate()

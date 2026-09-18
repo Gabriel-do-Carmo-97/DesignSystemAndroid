@@ -1,0 +1,10 @@
+# Global owners for DesignSystemAndroid
+* @Gabriel-do-Carmo-97
+
+# Module-specific ownership
+/core/              @Gabriel-do-Carmo-97
+/components/        @Gabriel-do-Carmo-97
+/templates/         @Gabriel-do-Carmo-97
+/navigation-flows/  @Gabriel-do-Carmo-97
+/build-logic/       @Gabriel-do-Carmo-97
+/.github/           @Gabriel-do-Carmo-97

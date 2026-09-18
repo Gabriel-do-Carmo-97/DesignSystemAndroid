@@ -1,0 +1,753 @@
+public final class br/com/wgc/core_ds/DefaultWgcThemeTokens : br/com/wgc/core_ds/WgcThemeTokens {
+	public fun <init> ()V
+	public fun getBackgroundColor ()I
+	public fun getPrimaryColor ()I
+	public fun getSecondaryColor ()I
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsBorderRadius {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsBorderRadius;
+	public static final field circular D
+	public static final field circular999 D
+	public static final field display45 D
+	public static final field lg D
+	public static final field lg12 D
+	public static final field md D
+	public static final field md8 D
+	public static final field none D
+	public static final field none0 D
+	public static final field sl D
+	public static final field sl18 D
+	public static final field sm D
+	public static final field sm4 D
+	public static final field xl D
+	public static final field xl16 D
+	public static final field xs D
+	public static final field xs2 D
+	public static final field xxl D
+	public static final field xxl24 D
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsBreakpoints {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsBreakpoints;
+	public static final field compactMax D
+	public static final field expandedMin D
+	public static final field mediumMax D
+	public static final field mediumMin D
+	public final fun calculateWindowSizeClass (D)Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsColors {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsColors;
+	public static final field black I
+	public static final field transparent I
+	public static final field white I
+	public final fun getApparelAlertRed ()I
+	public final fun getApparelBackground ()I
+	public final fun getApparelBorder ()I
+	public final fun getApparelDark ()I
+	public final fun getApparelDarkBackground ()I
+	public final fun getApparelDarkSurface ()I
+	public final fun getApparelPrimary ()I
+	public final fun getApparelPrimaryLight ()I
+	public final fun getApparelSecondaryText ()I
+	public final fun getApparelSuccessGreen ()I
+	public final fun getApparelSurface ()I
+	public final fun getAudioStreamingGreen ()I
+	public final fun getAutomotiveDark ()I
+	public final fun getAutomotiveGray ()I
+	public final fun getAutomotiveGreen ()I
+	public final fun getAutomotiveRed ()I
+	public final fun getBackground ()I
+	public final fun getBeverageDeliveryDark ()I
+	public final fun getBeverageDeliveryRed ()I
+	public final fun getBeverageDeliveryYellow ()I
+	public final fun getBiddingRidesGreen ()I
+	public final fun getBlue500 ()I
+	public final fun getBoutiqueAlertRed ()I
+	public final fun getBoutiqueBackground ()I
+	public final fun getBoutiqueBorder ()I
+	public final fun getBoutiqueDark ()I
+	public final fun getBoutiqueDarkBackground ()I
+	public final fun getBoutiqueDarkSurface ()I
+	public final fun getBoutiqueFacebook ()I
+	public final fun getBoutiqueGold ()I
+	public final fun getBoutiqueGoogle ()I
+	public final fun getBoutiquePrimary ()I
+	public final fun getBoutiquePrimaryLight ()I
+	public final fun getBoutiqueSecondaryText ()I
+	public final fun getBoutiqueSuccessGreen ()I
+	public final fun getBoutiqueSurface ()I
+	public final fun getBoutiqueTwitter ()I
+	public final fun getBroadcastStreamingOrange ()I
+	public final fun getBroadcastStreamingSalmon ()I
+	public final fun getBurgerFastFoodRed ()I
+	public final fun getBurgerFastFoodYellow ()I
+	public final fun getBusTravelBlue ()I
+	public final fun getBusTravelGreen ()I
+	public final fun getBusinessNewsBlue ()I
+	public final fun getCarePharmacyBackground ()I
+	public final fun getCarePharmacyBlue ()I
+	public final fun getCarePharmacyBlueLight ()I
+	public final fun getCarePharmacyBorder ()I
+	public final fun getCarePharmacyGold ()I
+	public final fun getCarePharmacyGoldLight ()I
+	public final fun getCarePharmacyPlaceholder ()I
+	public final fun getCarePharmacyRed ()I
+	public final fun getCarePharmacyRedDark ()I
+	public final fun getCarePharmacyRedLight ()I
+	public final fun getCarePharmacySurface ()I
+	public final fun getCarePharmacyTextPrimary ()I
+	public final fun getCarePharmacyTextSecondary ()I
+	public final fun getCarePharmacyVaccineGreen ()I
+	public final fun getCarePharmacyVaccineGreenLight ()I
+	public final fun getCarpoolingBlue ()I
+	public final fun getChannelMessagingBlue ()I
+	public final fun getCitizenServicesBlue ()I
+	public final fun getCitizenServicesGold ()I
+	public final fun getCommunityChatBlurple ()I
+	public final fun getCourseMarketplacePurple ()I
+	public final fun getCuratedMarketAlertRed ()I
+	public final fun getCuratedMarketBackground ()I
+	public final fun getCuratedMarketBorder ()I
+	public final fun getCuratedMarketDark ()I
+	public final fun getCuratedMarketDarkBackground ()I
+	public final fun getCuratedMarketDarkSurface ()I
+	public final fun getCuratedMarketDenimBlue ()I
+	public final fun getCuratedMarketGold ()I
+	public final fun getCuratedMarketNewInPurple ()I
+	public final fun getCuratedMarketNewInPurpleText ()I
+	public final fun getCuratedMarketPrimary ()I
+	public final fun getCuratedMarketPrimaryLight ()I
+	public final fun getCuratedMarketSalePink ()I
+	public final fun getCuratedMarketSalePinkText ()I
+	public final fun getCuratedMarketSecondaryText ()I
+	public final fun getCuratedMarketSuccessGreen ()I
+	public final fun getCuratedMarketSurface ()I
+	public final fun getDailyNewsRed ()I
+	public final fun getDealMarketplaceOrange ()I
+	public final fun getDentalDark ()I
+	public final fun getDentalTeal ()I
+	public final fun getDentalTealLight ()I
+	public final fun getDepartmentFashionRed ()I
+	public final fun getDesignerFurnitureRed ()I
+	public final fun getDesignerFurnitureYellow ()I
+	public final fun getDirectMessagingGreen ()I
+	public final fun getEmploymentRecordBlue ()I
+	public final fun getError ()I
+	public final fun getExpressLogisticsBlue ()I
+	public final fun getFintechBackground ()I
+	public final fun getFintechCarbon ()I
+	public final fun getFintechCarbonBackground ()I
+	public final fun getFintechCarbonBorder ()I
+	public final fun getFintechCarbonDark ()I
+	public final fun getFintechCarbonLight ()I
+	public final fun getFintechCarbonYellowLight ()I
+	public final fun getFintechDark ()I
+	public final fun getFintechMoneyGreen ()I
+	public final fun getFintechOrange ()I
+	public final fun getFintechOrangeDark ()I
+	public final fun getFintechOrangeLight ()I
+	public final fun getFintechPurple ()I
+	public final fun getFintechPurpleBorder ()I
+	public final fun getFintechPurpleDark ()I
+	public final fun getFintechPurpleLight ()I
+	public final fun getFintechPurpleSurface ()I
+	public final fun getFintechPurpleTextPrimary ()I
+	public final fun getFintechPurpleTextSecondary ()I
+	public final fun getFintechSuperAppBackground ()I
+	public final fun getFintechSuperAppBorder ()I
+	public final fun getFintechSuperAppGoldCashback ()I
+	public final fun getFintechSuperAppSecondary ()I
+	public final fun getFintechSuperAppSurface ()I
+	public final fun getFintechSuperAppTextPrimary ()I
+	public final fun getFintechSuperAppTextSecondary ()I
+	public final fun getFintechSurface ()I
+	public final fun getFintechTextPrimary ()I
+	public final fun getFintechTextSecondary ()I
+	public final fun getFintechYellow ()I
+	public final fun getFlameFastFoodBrown ()I
+	public final fun getFlameFastFoodFlame ()I
+	public final fun getFlameFastFoodOrange ()I
+	public final fun getFlightTravelBlue ()I
+	public final fun getFlightTravelPurple ()I
+	public final fun getFlightTravelRed ()I
+	public final fun getFoodDeliveryBgGray ()I
+	public final fun getFoodDeliveryDarkBlue ()I
+	public final fun getFoodDeliveryGreen ()I
+	public final fun getFoodDeliveryLightBlue ()I
+	public final fun getFoodDeliveryRed ()I
+	public final fun getFoodDeliveryRedDark ()I
+	public final fun getFragranceBeautyGreen ()I
+	public final fun getFreightLogisticsOrange ()I
+	public final fun getFreshGroceryEmerald ()I
+	public final fun getGadgetShopAccentPink ()I
+	public final fun getGadgetShopAlertRed ()I
+	public final fun getGadgetShopBackground ()I
+	public final fun getGadgetShopBorder ()I
+	public final fun getGadgetShopCatBeauty ()I
+	public final fun getGadgetShopCatCine ()I
+	public final fun getGadgetShopCatFashion ()I
+	public final fun getGadgetShopCatGadgets ()I
+	public final fun getGadgetShopCatGames ()I
+	public final fun getGadgetShopDark ()I
+	public final fun getGadgetShopDarkBackground ()I
+	public final fun getGadgetShopDarkSurface ()I
+	public final fun getGadgetShopGold ()I
+	public final fun getGadgetShopPrimary ()I
+	public final fun getGadgetShopPrimaryDark ()I
+	public final fun getGadgetShopPrimaryLight ()I
+	public final fun getGadgetShopSecondaryText ()I
+	public final fun getGadgetShopSuccessGreen ()I
+	public final fun getGadgetShopSurface ()I
+	public final fun getGamingStoreAccent ()I
+	public final fun getGamingStoreBlue ()I
+	public final fun getGamingStoreCardBg ()I
+	public final fun getGamingStoreNavy ()I
+	public final fun getGlobalMarketplaceOrange ()I
+	public final fun getGlobalMarketplaceRed ()I
+	public final fun getGovBlue ()I
+	public final fun getGovYellow ()I
+	public final fun getGray100 ()I
+	public final fun getGray200 ()I
+	public final fun getGray300 ()I
+	public final fun getGray400 ()I
+	public final fun getGray500 ()I
+	public final fun getGray600 ()I
+	public final fun getGray700 ()I
+	public final fun getGray800 ()I
+	public final fun getGrey100 ()I
+	public final fun getGrey50 ()I
+	public final fun getGrey900 ()I
+	public final fun getGroceryBackground ()I
+	public final fun getGroceryBlue ()I
+	public final fun getGroceryBlueDark ()I
+	public final fun getGroceryBlueLight ()I
+	public final fun getGroceryBorder ()I
+	public final fun getGroceryNutriScoreA ()I
+	public final fun getGroceryNutriScoreB ()I
+	public final fun getGroceryNutriScoreC ()I
+	public final fun getGroceryNutriScoreD ()I
+	public final fun getGroceryNutriScoreE ()I
+	public final fun getGroceryOrange ()I
+	public final fun getGroceryPlaceholder ()I
+	public final fun getGroceryRed ()I
+	public final fun getGroceryRedDark ()I
+	public final fun getGroceryRedLight ()I
+	public final fun getGrocerySurface ()I
+	public final fun getGroceryTextPrimary ()I
+	public final fun getGroceryTextSecondary ()I
+	public final fun getGroceryYellow ()I
+	public final fun getGymAccentCyan ()I
+	public final fun getGymBlack ()I
+	public final fun getGymCardPlaceholder ()I
+	public final fun getGymCrowdHigh ()I
+	public final fun getGymCrowdHighLight ()I
+	public final fun getGymCrowdLow ()I
+	public final fun getGymCrowdLowLight ()I
+	public final fun getGymCrowdMedium ()I
+	public final fun getGymCrowdMediumLight ()I
+	public final fun getGymDarkGray ()I
+	public final fun getGymLightGray ()I
+	public final fun getGymMediumGray ()I
+	public final fun getGymTextInverse ()I
+	public final fun getGymTextPrimary ()I
+	public final fun getGymTextSecondary ()I
+	public final fun getGymYellow ()I
+	public final fun getGymYellowDark ()I
+	public final fun getGymYellowLight ()I
+	public final fun getHardwareNavy ()I
+	public final fun getHardwareNinjaBlack ()I
+	public final fun getHardwareOrange ()I
+	public final fun getHardwareOrangeLight ()I
+	public final fun getHomeImprovementGreen ()I
+	public final fun getHomeMarketplaceOrange ()I
+	public final fun getHotelBookingBlue ()I
+	public final fun getHotelBookingNavy ()I
+	public final fun getHotelBookingYellow ()I
+	public final fun getHypermarketBackground ()I
+	public final fun getHypermarketBlue ()I
+	public final fun getHypermarketBlueDark ()I
+	public final fun getHypermarketBlueLight ()I
+	public final fun getHypermarketBorder ()I
+	public final fun getHypermarketDark ()I
+	public final fun getHypermarketOrange ()I
+	public final fun getHypermarketOrangeLight ()I
+	public final fun getHypermarketPlaceholder ()I
+	public final fun getHypermarketRed ()I
+	public final fun getHypermarketRedDark ()I
+	public final fun getHypermarketRedLight ()I
+	public final fun getHypermarketSecondaryText ()I
+	public final fun getHypermarketSuccessGreen ()I
+	public final fun getHypermarketSuccessGreenLight ()I
+	public final fun getHypermarketSurface ()I
+	public final fun getHypermarketYellow ()I
+	public final fun getHypermarketYellowLight ()I
+	public final fun getKanbanTasksBlue ()I
+	public final fun getLanguageLearningGreen ()I
+	public final fun getLeroyGreen ()I
+	public final fun getLiveStreamingDarkCard ()I
+	public final fun getLiveStreamingPurple ()I
+	public final fun getLodgingCoral ()I
+	public final fun getMadeiraOrange ()I
+	public final fun getMarketplaceBgGray ()I
+	public final fun getMarketplaceBlue ()I
+	public final fun getMarketplaceGreen ()I
+	public final fun getMarketplaceYellow ()I
+	public final fun getMediaNetworkOrange ()I
+	public final fun getMediaNetworkYellow ()I
+	public final fun getMegaStoreAlertRed ()I
+	public final fun getMegaStoreBackground ()I
+	public final fun getMegaStoreBorder ()I
+	public final fun getMegaStoreDark ()I
+	public final fun getMegaStoreGold ()I
+	public final fun getMegaStorePrimary ()I
+	public final fun getMegaStorePrimaryLight ()I
+	public final fun getMegaStoreSecondaryText ()I
+	public final fun getMegaStorerAccent ()I
+	public final fun getMegaStorerBackground ()I
+	public final fun getMegaStorerBorder ()I
+	public final fun getMegaStorerDark ()I
+	public final fun getMegaStorerDarkBackground ()I
+	public final fun getMegaStorerDarkSurface ()I
+	public final fun getMegaStorerGold ()I
+	public final fun getMegaStorerPrimary ()I
+	public final fun getMegaStorerPrimaryDark ()I
+	public final fun getMegaStorerPrimaryLight ()I
+	public final fun getMegaStorerSaleOrange ()I
+	public final fun getMegaStorerSaleOrangeText ()I
+	public final fun getMegaStorerSecondary ()I
+	public final fun getMegaStorerSecondaryText ()I
+	public final fun getMegaStorerSuccessGreen ()I
+	public final fun getMegaStorerSurface ()I
+	public final fun getMobilityYellow99 ()I
+	public final fun getNaturalBeautyOrange ()I
+	public final fun getOrange500 ()I
+	public final fun getPersonalFinanceBackground ()I
+	public final fun getPersonalFinanceBorder ()I
+	public final fun getPersonalFinanceCardNavy ()I
+	public final fun getPersonalFinanceCardOrange ()I
+	public final fun getPersonalFinanceCardPurple ()I
+	public final fun getPersonalFinanceDark ()I
+	public final fun getPersonalFinanceExpenseRed ()I
+	public final fun getPersonalFinanceExpenseRedLight ()I
+	public final fun getPersonalFinanceIncomeGreen ()I
+	public final fun getPersonalFinanceIncomeGreenLight ()I
+	public final fun getPersonalFinancePrimary ()I
+	public final fun getPersonalFinancePrimaryDark ()I
+	public final fun getPersonalFinancePrimaryLight ()I
+	public final fun getPersonalFinanceSecondary ()I
+	public final fun getPersonalFinanceSecondaryText ()I
+	public final fun getPersonalFinanceSurface ()I
+	public final fun getPersonalFinanceTransferBlue ()I
+	public final fun getPersonalFinanceTransferBlueLight ()I
+	public final fun getPersonalFinanceWarningYellow ()I
+	public final fun getPetCareBlue ()I
+	public final fun getPetCareYellow ()I
+	public final fun getPetLifestyleBlack ()I
+	public final fun getPetLifestyleSkull ()I
+	public final fun getPetSuperstoreBlue ()I
+	public final fun getPharmacyChainBackground ()I
+	public final fun getPharmacyChainBorder ()I
+	public final fun getPharmacyChainGreen ()I
+	public final fun getPharmacyChainGreenLight ()I
+	public final fun getPharmacyChainNavy ()I
+	public final fun getPharmacyChainNavyDark ()I
+	public final fun getPharmacyChainNavyLight ()I
+	public final fun getPharmacyChainPlaceholder ()I
+	public final fun getPharmacyChainPrescriptionYellow ()I
+	public final fun getPharmacyChainPrescriptionYellowLight ()I
+	public final fun getPharmacyChainRed ()I
+	public final fun getPharmacyChainRedDark ()I
+	public final fun getPharmacyChainRedLight ()I
+	public final fun getPharmacyChainSurface ()I
+	public final fun getPharmacyChainTextPrimary ()I
+	public final fun getPharmacyChainTextSecondary ()I
+	public final fun getPizzaBlue ()I
+	public final fun getPizzaRed ()I
+	public final fun getPopularPharmacyBackground ()I
+	public final fun getPopularPharmacyBlue ()I
+	public final fun getPopularPharmacyBlueDark ()I
+	public final fun getPopularPharmacyBlueLight ()I
+	public final fun getPopularPharmacyBorder ()I
+	public final fun getPopularPharmacyClinicTeal ()I
+	public final fun getPopularPharmacyClinicTealLight ()I
+	public final fun getPopularPharmacyGreen ()I
+	public final fun getPopularPharmacyGreenDark ()I
+	public final fun getPopularPharmacyGreenLight ()I
+	public final fun getPopularPharmacyOrange ()I
+	public final fun getPopularPharmacyOrangeLight ()I
+	public final fun getPopularPharmacyPlaceholder ()I
+	public final fun getPopularPharmacySurface ()I
+	public final fun getPopularPharmacyTextPrimary ()I
+	public final fun getPopularPharmacyTextSecondary ()I
+	public final fun getPremiumGroceryBackground ()I
+	public final fun getPremiumGroceryBorder ()I
+	public final fun getPremiumGroceryGold ()I
+	public final fun getPremiumGroceryGoldDark ()I
+	public final fun getPremiumGroceryGoldLight ()I
+	public final fun getPremiumGroceryGreen ()I
+	public final fun getPremiumGroceryGreenDark ()I
+	public final fun getPremiumGroceryGreenLight ()I
+	public final fun getPremiumGroceryOrangeOrganic ()I
+	public final fun getPremiumGroceryOrangeOrganicLight ()I
+	public final fun getPremiumGroceryPlaceholder ()I
+	public final fun getPremiumGrocerySuccessGreen ()I
+	public final fun getPremiumGrocerySuccessGreenLight ()I
+	public final fun getPremiumGrocerySurface ()I
+	public final fun getPremiumGroceryTextPrimary ()I
+	public final fun getPremiumGroceryTextSecondary ()I
+	public final fun getPremiumGroceryWineRed ()I
+	public final fun getPremiumGroceryWineRedDark ()I
+	public final fun getPremiumGroceryWineRedLight ()I
+	public final fun getPrestigeBeautyBlack ()I
+	public final fun getPrimary ()I
+	public final fun getProductGreen ()I
+	public final fun getProductLemon ()I
+	public final fun getProductTan ()I
+	public final fun getProductTeal ()I
+	public final fun getPropertyClassifiedsBackground ()I
+	public final fun getPropertyClassifiedsBlue ()I
+	public final fun getPropertyClassifiedsBlueDark ()I
+	public final fun getPropertyClassifiedsBlueLight ()I
+	public final fun getPropertyClassifiedsBorder ()I
+	public final fun getPropertyClassifiedsCardPlaceholder ()I
+	public final fun getPropertyClassifiedsDark ()I
+	public final fun getPropertyClassifiedsFipeGreen ()I
+	public final fun getPropertyClassifiedsFipeGreenLight ()I
+	public final fun getPropertyClassifiedsFipeRed ()I
+	public final fun getPropertyClassifiedsFipeRedLight ()I
+	public final fun getPropertyClassifiedsFipeYellow ()I
+	public final fun getPropertyClassifiedsFipeYellowLight ()I
+	public final fun getPropertyClassifiedsOrange ()I
+	public final fun getPropertyClassifiedsOrangeDark ()I
+	public final fun getPropertyClassifiedsOrangeLight ()I
+	public final fun getPropertyClassifiedsPrimary ()I
+	public final fun getPropertyClassifiedsPrimaryDark ()I
+	public final fun getPropertyClassifiedsPrimaryLight ()I
+	public final fun getPropertyClassifiedsSecondaryText ()I
+	public final fun getPropertyClassifiedsSurface ()I
+	public final fun getPropertyListingBackground ()I
+	public final fun getPropertyListingBorder ()I
+	public final fun getPropertyListingCardPlaceholder ()I
+	public final fun getPropertyListingDark ()I
+	public final fun getPropertyListingOrange ()I
+	public final fun getPropertyListingOrangeDark ()I
+	public final fun getPropertyListingOrangeLight ()I
+	public final fun getPropertyListingPrimary ()I
+	public final fun getPropertyListingPrimaryDark ()I
+	public final fun getPropertyListingPrimaryLight ()I
+	public final fun getPropertyListingSecondaryText ()I
+	public final fun getPropertyListingSuperDestaque ()I
+	public final fun getPropertyListingSuperDestaqueLight ()I
+	public final fun getPropertyListingSurface ()I
+	public final fun getPropertyListingWhatsApp ()I
+	public final fun getPropertyListingWhatsAppLight ()I
+	public final fun getPropertyRentalBackground ()I
+	public final fun getPropertyRentalBorder ()I
+	public final fun getPropertyRentalCardPlaceholder ()I
+	public final fun getPropertyRentalCoral ()I
+	public final fun getPropertyRentalCoralLight ()I
+	public final fun getPropertyRentalDark ()I
+	public final fun getPropertyRentalGreen ()I
+	public final fun getPropertyRentalGreenLight ()I
+	public final fun getPropertyRentalPrimary ()I
+	public final fun getPropertyRentalPrimaryDark ()I
+	public final fun getPropertyRentalPrimaryLight ()I
+	public final fun getPropertyRentalSecondaryText ()I
+	public final fun getPropertyRentalSurface ()I
+	public final fun getPropertyRentalYellow ()I
+	public final fun getPropertyRentalYellowDark ()I
+	public final fun getPropertyRentalYellowLight ()I
+	public final fun getQuickShopBackground ()I
+	public final fun getQuickShopBorder ()I
+	public final fun getQuickShopCardBlue ()I
+	public final fun getQuickShopCardGreen ()I
+	public final fun getQuickShopCardOrange ()I
+	public final fun getQuickShopCardPurple ()I
+	public final fun getQuickShopCardRed ()I
+	public final fun getQuickShopDark ()I
+	public final fun getQuickShopPeachBg ()I
+	public final fun getQuickShopPrimary ()I
+	public final fun getQuickShopPrimaryDark ()I
+	public final fun getQuickShopPrimaryLight ()I
+	public final fun getQuickShopSecondary ()I
+	public final fun getQuickShopSecondaryText ()I
+	public final fun getQuickShopSuccessGreen ()I
+	public final fun getQuickShopSurface ()I
+	public final fun getRed500 ()I
+	public final fun getRed700 ()I
+	public final fun getRetailAlertRed ()I
+	public final fun getRetailBackground ()I
+	public final fun getRetailBorder ()I
+	public final fun getRetailDark ()I
+	public final fun getRetailGold ()I
+	public final fun getRetailPrimary ()I
+	public final fun getRetailPrimaryLight ()I
+	public final fun getRetailSecondary ()I
+	public final fun getRetailSecondaryText ()I
+	public final fun getRetailSurface ()I
+	public final fun getRideHailingBlack ()I
+	public final fun getSecondary ()I
+	public final fun getSocialFacebook ()I
+	public final fun getSocialInstagram ()I
+	public final fun getSocialLinkedIn ()I
+	public final fun getSuccess ()I
+	public final fun getTeamCollaborationAubergine ()I
+	public final fun getTechEducationBlue ()I
+	public final fun getTelemedicineGreen ()I
+	public final fun getTelemedicineGreenLight ()I
+	public final fun getTelemedicineNavy ()I
+	public final fun getTextPrimary ()I
+	public final fun getTextSecondary ()I
+	public final fun getTrainingBlack ()I
+	public final fun getTrainingBlue ()I
+	public final fun getTrainingBlueDark ()I
+	public final fun getTrainingBlueLight ()I
+	public final fun getTrainingDarkGray ()I
+	public final fun getTrainingLightGray ()I
+	public final fun getTrainingMediumGray ()I
+	public final fun getTrainingOrange ()I
+	public final fun getTrainingOrangeDark ()I
+	public final fun getTrainingOrangeLight ()I
+	public final fun getTrainingPlaceholder ()I
+	public final fun getTrainingPurple ()I
+	public final fun getTrainingSecondaryText ()I
+	public final fun getTrainingStreakGold ()I
+	public final fun getTrainingVolt ()I
+	public final fun getTrainingVoltDark ()I
+	public final fun getTrainingVoltGlow ()I
+	public final fun getTrainingWhite ()I
+	public final fun getTransitDigitalGreen ()I
+	public final fun getTrendApparelDark ()I
+	public final fun getTrendApparelGreen ()I
+	public final fun getTrendFashionBlue ()I
+	public final fun getTrendFashionBorderGray ()I
+	public final fun getTrendFashionDark ()I
+	public final fun getTrendFashionGold ()I
+	public final fun getTrendFashionLightGray ()I
+	public final fun getTrendFashionPink ()I
+	public final fun getUrbanFashionBlue ()I
+	public final fun getUrbanFashionRed ()I
+	public final fun getUrbanMobilityYellow ()I
+	public final fun getVideoStreamingRed ()I
+	public final fun getVisualDiscoveryRed ()I
+	public final fun getWarning ()I
+	public final fun getWellnessBorder ()I
+	public final fun getWellnessCheckInGreen ()I
+	public final fun getWellnessCheckInGreenLight ()I
+	public final fun getWellnessCheckInTimer ()I
+	public final fun getWellnessCoral ()I
+	public final fun getWellnessCoralDark ()I
+	public final fun getWellnessCoralLight ()I
+	public final fun getWellnessCreamBg ()I
+	public final fun getWellnessDark ()I
+	public final fun getWellnessForest ()I
+	public final fun getWellnessForestDark ()I
+	public final fun getWellnessForestLight ()I
+	public final fun getWellnessPlaceholder ()I
+	public final fun getWellnessSecondaryText ()I
+	public final fun getWellnessSurface ()I
+	public final fun getWellnessTierBasic ()I
+	public final fun getWellnessTierDiamond ()I
+	public final fun getWellnessTierGold ()I
+	public final fun getWellnessTierPlatinum ()I
+	public final fun getWellnessTierSilver ()I
+	public final fun getWellnessTierStarter ()I
+	public final fun getWorkspaceDocsBlack ()I
+	public final fun getWorkspaceDocsDark ()I
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsElevation {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsElevation;
+	public static final field level0 D
+	public static final field level1 D
+	public static final field level2 D
+	public static final field level3 D
+	public static final field level6 D
+	public static final field level8 D
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsMotion {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsMotion;
+	public static final field durationFast100 I
+	public static final field durationNormal200 I
+	public static final field durationSlow500 I
+	public static final field durationStandard300 I
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsOpacity {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsOpacity;
+	public static final field disabled F
+	public static final field dragged F
+	public static final field focus F
+	public static final field hover F
+	public static final field opaque F
+	public static final field pressed F
+	public static final field scrim F
+	public static final field subtle F
+	public static final field surfaceDim F
+	public static final field transparent F
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsSize {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsSize;
+	public static final field s0 D
+	public static final field s1 D
+	public static final field s10 D
+	public static final field s100 D
+	public static final field s12 D
+	public static final field s120 D
+	public static final field s14 D
+	public static final field s140 D
+	public static final field s16 D
+	public static final field s160 D
+	public static final field s18 D
+	public static final field s180 D
+	public static final field s2 D
+	public static final field s20 D
+	public static final field s200 D
+	public static final field s22 D
+	public static final field s24 D
+	public static final field s240 D
+	public static final field s26 D
+	public static final field s28 D
+	public static final field s280 D
+	public static final field s30 D
+	public static final field s300 D
+	public static final field s32 D
+	public static final field s34 D
+	public static final field s36 D
+	public static final field s360 D
+	public static final field s38 D
+	public static final field s4 D
+	public static final field s40 D
+	public static final field s400 D
+	public static final field s42 D
+	public static final field s44 D
+	public static final field s46 D
+	public static final field s48 D
+	public static final field s50 D
+	public static final field s52 D
+	public static final field s54 D
+	public static final field s56 D
+	public static final field s58 D
+	public static final field s6 D
+	public static final field s60 D
+	public static final field s62 D
+	public static final field s64 D
+	public static final field s66 D
+	public static final field s68 D
+	public static final field s70 D
+	public static final field s72 D
+	public static final field s74 D
+	public static final field s76 D
+	public static final field s78 D
+	public static final field s8 D
+	public static final field s80 D
+	public static final field s82 D
+	public static final field s84 D
+	public static final field s86 D
+	public static final field s88 D
+	public static final field s90 D
+	public static final field s92 D
+	public static final field s94 D
+	public static final field s96 D
+	public static final field s98 D
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsSpacing {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsSpacing;
+	public static final field display64 D
+	public static final field giant80 D
+	public static final field lg D
+	public static final field lg24 D
+	public static final field md D
+	public static final field md16 D
+	public static final field none D
+	public static final field none0 D
+	public static final field sm D
+	public static final field sm12 D
+	public static final field xl D
+	public static final field xl32 D
+	public static final field xs D
+	public static final field xs8 D
+	public static final field xxl D
+	public static final field xxl40 D
+	public static final field xxs D
+	public static final field xxs4 D
+	public static final field xxxl D
+	public static final field xxxl48 D
+	public static final field xxxs D
+	public static final field xxxs2 D
+}
+
+public final class br/com/wgc/core_ds/WgcCoreDsTypography {
+	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsTypography;
+	public static final field bodyLargeLineHeight D
+	public static final field bodyLargeSize D
+	public static final field bodyLargeTracking D
+	public static final field bodyMediumLineHeight D
+	public static final field bodyMediumSize D
+	public static final field bodyMediumTracking D
+	public static final field bodySmallLineHeight D
+	public static final field bodySmallSize D
+	public static final field bodySmallTracking D
+	public static final field displayLargeLineHeight D
+	public static final field displayLargeSize D
+	public static final field displayLargeTracking D
+	public static final field displayMediumLineHeight D
+	public static final field displayMediumSize D
+	public static final field displayMediumTracking D
+	public static final field displaySmallLineHeight D
+	public static final field displaySmallSize D
+	public static final field displaySmallTracking D
+	public static final field headlineLargeLineHeight D
+	public static final field headlineLargeSize D
+	public static final field headlineLargeTracking D
+	public static final field headlineMediumLineHeight D
+	public static final field headlineMediumSize D
+	public static final field headlineMediumTracking D
+	public static final field headlineSmallLineHeight D
+	public static final field headlineSmallSize D
+	public static final field headlineSmallTracking D
+	public static final field labelLargeLineHeight D
+	public static final field labelLargeSize D
+	public static final field labelLargeTracking D
+	public static final field labelMediumLineHeight D
+	public static final field labelMediumSize D
+	public static final field labelMediumTracking D
+	public static final field labelSmallLineHeight D
+	public static final field labelSmallSize D
+	public static final field labelSmallTracking D
+	public static final field titleLargeLineHeight D
+	public static final field titleLargeSize D
+	public static final field titleLargeTracking D
+	public static final field titleMediumLineHeight D
+	public static final field titleMediumSize D
+	public static final field titleMediumTracking D
+	public static final field titleSmallLineHeight D
+	public static final field titleSmallSize D
+	public static final field titleSmallTracking D
+	public static final field weightBold I
+	public static final field weightLight I
+	public static final field weightMedium I
+	public static final field weightNormal I
+	public static final field weightSemiBold I
+}
+
+public abstract interface class br/com/wgc/core_ds/WgcThemeTokens {
+	public abstract fun getBackgroundColor ()I
+	public abstract fun getPrimaryColor ()I
+	public abstract fun getSecondaryColor ()I
+}
+
+public final class br/com/wgc/core_ds/WgcWindowSizeClass : java/lang/Enum {
+	public static final field Compact Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public static final field Expanded Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public static final field Medium Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public static fun values ()[Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+}
+

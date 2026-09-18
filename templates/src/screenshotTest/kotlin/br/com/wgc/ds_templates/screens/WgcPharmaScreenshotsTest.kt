@@ -13,19 +13,19 @@ class WgcPharmaScreenshotsTest {
 
     @Preview(name = "Pharmacy Chain - Home Screen", showBackground = true)
     @Composable
-    fun drogaRaiaHomeScreenPreview() {
+    fun pharmacyChainHomeScreenPreview() {
         WgcPharmacyChainFactory(screen = WgcPharmacyChainScreen.HOME)
     }
 
     @Preview(name = "Care Pharmacy - Home Screen", showBackground = true)
     @Composable
-    fun drogasilHomeScreenPreview() {
+    fun carePharmacyHomeScreenPreview() {
         WgcCarePharmacyFactory(screen = WgcCarePharmacyScreen.HOME)
     }
 
     @Preview(name = "Popular Pharmacy - Home Screen", showBackground = true)
     @Composable
-    fun pagueMenosHomeScreenPreview() {
+    fun popularPharmacyHomeScreenPreview() {
         WgcPopularPharmacyFactory(screen = WgcPopularPharmacyScreen.HOME)
     }
 }

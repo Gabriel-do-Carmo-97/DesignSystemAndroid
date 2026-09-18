@@ -1,6 +1,5 @@
 package br.com.wgc.ds_templates.screens.pharmacychain.prescriptions
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,11 +15,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.LocalPharmacy
-import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -29,7 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,22 +36,22 @@ import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.components.cards.WgcDrogaRaiaPrescriptionCard
-import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
-import br.com.wgc.design_system.components.navigation.WgcDrogaRaiaBottomNav
+import br.com.wgc.design_system.components.cards.WgcPharmacyPrescriptionCard
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
+import br.com.wgc.design_system.components.navigation.WgcPharmacyBottomNav
 
 @Composable
 fun WgcDrogaRaiaPrescriptionTemplate(
     modifier: Modifier = Modifier,
-    activeTab: DrogaRaiaNavTab = DrogaRaiaNavTab.PRESCRIPTIONS,
-    onTabSelected: (DrogaRaiaNavTab) -> Unit = {},
+    activeTab: PharmacyNavTab = PharmacyNavTab.PRESCRIPTIONS,
+    onTabSelected: (PharmacyNavTab) -> Unit = {},
     onUploadClick: () -> Unit = {},
     onConsultPharmacist: () -> Unit = {}
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            WgcDrogaRaiaBottomNav(
+            WgcPharmacyBottomNav(
                 selectedTab = activeTab,
                 onTabSelected = onTabSelected,
                 cartBadgeCount = 2
@@ -85,7 +80,7 @@ fun WgcDrogaRaiaPrescriptionTemplate(
             }
 
             item {
-                WgcDrogaRaiaPrescriptionCard(
+                WgcPharmacyPrescriptionCard(
                     onUploadPrescription = onUploadClick,
                     onTalkToPharmacist = onConsultPharmacist
                 )
@@ -170,7 +165,7 @@ private fun PrescriptionItemCard(
                         tint = Color(WgcCoreDsColors.pharmacyChainGreen),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = status,
                         fontSize = 9.sp,
@@ -194,7 +189,6 @@ private fun PrescriptionItemCard(
                 textButton = "Comprar Medicamentos da Receita",
                 onClick = {},
                 modifier = Modifier.fillMaxWidth()
-                
             )
         }
     }

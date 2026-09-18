@@ -44,20 +44,20 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.navigation.WgcFreshGroceryBottomNav
-import br.com.wgc.design_system.components.navigation.WgcShopperNavItem
+import br.com.wgc.design_system.components.navigation.WgcFreshGroceryNavItem
 
 /**
- * Tela de Perfil do Shopper:
+ * Tela de Perfil do Fresh Grocery:
  * - Card de usuário com avatar, nome ("Alex Turner") e e-mail
  * - Estatísticas rápidas (Pedidos, Cupons, Pontos)
  * - Menu de configurações e opções de conta
  */
 @Composable
-fun WgcShopperProfileTemplate(
+fun WgcFreshGroceryProfileTemplate(
     userName: String = "Alex Turner",
     userEmail: String = "alex.turner@example.com",
-    selectedNav: WgcShopperNavItem = WgcShopperNavItem.Profile,
-    onNavSelect: (WgcShopperNavItem) -> Unit = {},
+    selectedNav: WgcFreshGroceryNavItem = WgcFreshGroceryNavItem.Profile,
+    onNavSelect: (WgcFreshGroceryNavItem) -> Unit = {},
     bottomNavSlot: (@Composable () -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
@@ -243,6 +243,6 @@ private fun ProfileMenuItem(icon: ImageVector, title: String, onClick: () -> Uni
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcShopperProfileTemplatePreview() {
-    WgcShopperProfileTemplate()
+private fun WgcFreshGroceryProfileTemplatePreview() {
+    WgcFreshGroceryProfileTemplate()
 }

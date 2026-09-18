@@ -1,7 +1,7 @@
 package br.com.wgc.ds_templates.screens.guidedtraining.model
 
-import br.com.wgc.design_system.components.cards.WgcNtcWorkoutCategory
-import br.com.wgc.design_system.components.cards.WgcNtcWorkoutIntensity
+import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutCategory
+import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutIntensity
 
 /**
  * Modelo de Exercício individual dentro de um Treino NTC.
@@ -22,9 +22,9 @@ data class NtcWorkoutItem(
     val id: String,
     val title: String,
     val trainerName: String,
-    val category: WgcNtcWorkoutCategory,
+    val category: WgcFitnessWorkoutCategory,
     val durationMinutes: Int,
-    val intensity: WgcNtcWorkoutIntensity,
+    val intensity: WgcFitnessWorkoutIntensity,
     val equipment: String,
     val estimatedCalories: Int,
     val description: String,
@@ -145,9 +145,9 @@ object GuidedTrainingMockData {
             id = "ntc_w1",
             title = "Queima Metabólica Rápida",
             trainerName = "Kirsty Godso",
-            category = WgcNtcWorkoutCategory.HIIT,
+            category = WgcFitnessWorkoutCategory.HIIT,
             durationMinutes = 20,
-            intensity = WgcNtcWorkoutIntensity.HIGH,
+            intensity = WgcFitnessWorkoutIntensity.HIGH,
             equipment = "Sem equipamentos",
             estimatedCalories = 240,
             description = "Sequência HIIT explosiva de alta queima para acelerar o metabolismo e fortalecer o core sem usar pesos.",
@@ -158,9 +158,9 @@ object GuidedTrainingMockData {
             id = "ntc_w2",
             title = "Força Total e Densidade Muscular",
             trainerName = "Betina Gozo",
-            category = WgcNtcWorkoutCategory.STRENGTH,
+            category = WgcFitnessWorkoutCategory.STRENGTH,
             durationMinutes = 35,
-            intensity = WgcNtcWorkoutIntensity.HIGH,
+            intensity = WgcFitnessWorkoutIntensity.HIGH,
             equipment = "Halteres médios",
             estimatedCalories = 320,
             description = "Foco em hipertrofia funcional com movimentos compostos para pernas, peito e costas.",
@@ -171,9 +171,9 @@ object GuidedTrainingMockData {
             id = "ntc_w3",
             title = "Yoga Restaurativo & Respiração",
             trainerName = "Jonah Kest",
-            category = WgcNtcWorkoutCategory.YOGA,
+            category = WgcFitnessWorkoutCategory.YOGA,
             durationMinutes = 25,
-            intensity = WgcNtcWorkoutIntensity.LOW,
+            intensity = WgcFitnessWorkoutIntensity.LOW,
             equipment = "Tapete de Yoga",
             estimatedCalories = 110,
             description = "Fluxo restaurador focado em abertura de quadris, descompressão da coluna e relaxamento ativo.",
@@ -184,9 +184,9 @@ object GuidedTrainingMockData {
             id = "ntc_w4",
             title = "Mobilidade Essencial para Corredores",
             trainerName = "Cory Wharton-Malcolm",
-            category = WgcNtcWorkoutCategory.MOBILITY,
+            category = WgcFitnessWorkoutCategory.MOBILITY,
             durationMinutes = 18,
-            intensity = WgcNtcWorkoutIntensity.MODERATE,
+            intensity = WgcFitnessWorkoutIntensity.MODERATE,
             equipment = "Sem equipamentos",
             estimatedCalories = 95,
             description = "Melhore sua amplitude de movimento nos tornozelos, flexores do quadril e panturrilhas.",

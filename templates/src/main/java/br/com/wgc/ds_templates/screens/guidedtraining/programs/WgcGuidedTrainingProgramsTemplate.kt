@@ -34,27 +34,19 @@ import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNtcProgramCard
-import br.com.wgc.design_system.components.navigation.WgcNtcBottomNav
-import br.com.wgc.design_system.components.navigation.WgcNtcNavItem
+import br.com.wgc.design_system.components.cards.WgcFitnessProgramCard
+import br.com.wgc.design_system.components.navigation.WgcFitnessBottomNav
+import br.com.wgc.design_system.components.navigation.WgcFitnessNavItem
 import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockData
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcProgramItem
 
-/**
- * Template da Tela de Programas Estruturados Nike Training Club (NTC).
- *
- * Apresenta o catálogo de programas de treinamento de várias semanas,
- * acompanhamento de metas a longo prazo e status de inscrição do atleta.
- *
- * 100% tokenizado com WgcCoreDs e State Hoisting.
- */
 @Composable
 fun WgcNtcProgramsTemplate(
     programs: List<NtcProgramItem>,
     modifier: Modifier = Modifier,
     onSelectProgram: (NtcProgramItem) -> Unit = {},
-    selectedNavItem: WgcNtcNavItem = WgcNtcNavItem.PROGRAMS,
-    onNavItemClick: (WgcNtcNavItem) -> Unit = {},
+    selectedNavItem: WgcFitnessNavItem = WgcFitnessNavItem.WORKOUTS,
+    onNavItemClick: (WgcFitnessNavItem) -> Unit = {},
     slotHeader: (@Composable () -> Unit)? = null,
     slotBottomNav: (@Composable () -> Unit)? = null
 ) {
@@ -67,7 +59,7 @@ fun WgcNtcProgramsTemplate(
             if (slotBottomNav != null) {
                 slotBottomNav()
             } else {
-                WgcNtcBottomNav(
+                WgcFitnessBottomNav(
                     selectedItem = selectedNavItem,
                     onItemSelected = onNavItemClick
                 )
@@ -81,7 +73,6 @@ fun WgcNtcProgramsTemplate(
                 .padding(horizontal = WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            // Header
             item {
                 if (slotHeader != null) {
                     slotHeader()
@@ -121,7 +112,6 @@ fun WgcNtcProgramsTemplate(
                 }
             }
 
-            // Banner Informativo
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
@@ -146,7 +136,7 @@ fun WgcNtcProgramsTemplate(
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                         Text(
-                            text = "Os programas do NTC combinam treinos de força, mobilidade e recuperação ativa criados por Master Trainers da Nike.",
+                            text = "Os programas combinam treinos de força, mobilidade e recuperação ativa criados por Master Trainers.",
                             color = Color(WgcCoreDsColors.trainingSecondaryText),
                             fontSize = 12.sp,
                             lineHeight = 16.sp
@@ -155,7 +145,6 @@ fun WgcNtcProgramsTemplate(
                 }
             }
 
-            // Programas Ativos
             if (enrolledPrograms.isNotEmpty()) {
                 item {
                     Text(
@@ -168,7 +157,7 @@ fun WgcNtcProgramsTemplate(
                 }
 
                 items(enrolledPrograms, key = { it.id }) { program ->
-                    WgcNtcProgramCard(
+                    WgcFitnessProgramCard(
                         title = program.title,
                         goal = program.goal,
                         trainerName = program.trainerName,
@@ -183,7 +172,6 @@ fun WgcNtcProgramsTemplate(
                 }
             }
 
-            // Programas Disponíveis para Explorar
             item {
                 Text(
                     text = "TODOS OS PROGRAMAS",
@@ -195,7 +183,7 @@ fun WgcNtcProgramsTemplate(
             }
 
             items(availablePrograms, key = { it.id }) { program ->
-                WgcNtcProgramCard(
+                WgcFitnessProgramCard(
                     title = program.title,
                     goal = program.goal,
                     trainerName = program.trainerName,
@@ -212,7 +200,7 @@ fun WgcNtcProgramsTemplate(
     }
 }
 
-@Preview(name = "NTC Programs Template - Preview")
+@Preview(name = "Fitness Programs Template - Preview")
 @Composable
 fun WgcNtcProgramsTemplatePreview() {
     WgcNtcProgramsTemplate(

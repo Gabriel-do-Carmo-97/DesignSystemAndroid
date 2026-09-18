@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,7 +25,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -41,24 +41,16 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNtcProgramCard
-import br.com.wgc.design_system.components.cards.WgcNtcWorkoutCard
-import br.com.wgc.design_system.components.cards.WgcNtcWorkoutCategory
-import br.com.wgc.design_system.components.navigation.WgcNtcBottomNav
-import br.com.wgc.design_system.components.navigation.WgcNtcNavItem
+import br.com.wgc.design_system.components.cards.WgcFitnessProgramCard
+import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutCard
+import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutCategory
+import br.com.wgc.design_system.components.navigation.WgcFitnessBottomNav
+import br.com.wgc.design_system.components.navigation.WgcFitnessNavItem
 import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockData
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcProgramItem
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcUserProfile
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcWorkoutItem
 
-/**
- * Template da Tela Principal / Feed do Nike Training Club (NTC).
- *
- * Contém o feed atlético diário com destaque do dia, atalhos de categoria,
- * progresso da meta semanal do atleta, programa ativo e treinos recomendados.
- *
- * 100% tokenizado com WgcCoreDs e State Hoisting.
- */
 @Composable
 fun WgcNtcHomeTemplate(
     user: NtcUserProfile,
@@ -66,14 +58,14 @@ fun WgcNtcHomeTemplate(
     activeProgram: NtcProgramItem?,
     workouts: List<NtcWorkoutItem>,
     modifier: Modifier = Modifier,
-    selectedCategory: WgcNtcWorkoutCategory? = null,
-    onSelectCategory: (WgcNtcWorkoutCategory?) -> Unit = {},
+    selectedCategory: WgcFitnessWorkoutCategory? = null,
+    onSelectCategory: (WgcFitnessWorkoutCategory?) -> Unit = {},
     onSelectWorkout: (NtcWorkoutItem) -> Unit = {},
     onStartWorkout: (NtcWorkoutItem) -> Unit = {},
     onOpenProgram: (NtcProgramItem) -> Unit = {},
     onOpenActivity: () -> Unit = {},
-    selectedNavItem: WgcNtcNavItem = WgcNtcNavItem.FOR_YOU,
-    onNavItemClick: (WgcNtcNavItem) -> Unit = {},
+    selectedNavItem: WgcFitnessNavItem = WgcFitnessNavItem.HOME,
+    onNavItemClick: (WgcFitnessNavItem) -> Unit = {},
     slotHeader: (@Composable () -> Unit)? = null,
     slotHeroWorkout: (@Composable () -> Unit)? = null,
     slotBottomNav: (@Composable () -> Unit)? = null
@@ -84,7 +76,7 @@ fun WgcNtcHomeTemplate(
             if (slotBottomNav != null) {
                 slotBottomNav()
             } else {
-                WgcNtcBottomNav(
+                WgcFitnessBottomNav(
                     selectedItem = selectedNavItem,
                     onItemSelected = onNavItemClick
                 )
@@ -98,166 +90,128 @@ fun WgcNtcHomeTemplate(
                 .padding(horizontal = WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            // Header: Marca NTC + Streak + Notificações
             item {
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                 if (slotHeader != null) {
                     slotHeader()
                 } else {
                     Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = WgcCoreDsSpacing.md16.dp),
+                        modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Column {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
-                            ) {
-                                Text(
-                                    text = "NIKE TRAINING CLUB",
-                                    color = Color(WgcCoreDsColors.trainingVolt),
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Black,
-                                    letterSpacing = 1.sp
-                                )
-                                Box(
-                                    modifier = Modifier
-                                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                        .background(Color(WgcCoreDsColors.trainingMediumGray))
-                                        .padding(
-                                            horizontal = WgcCoreDsSpacing.xs8.dp,
-                                            vertical = WgcCoreDsSpacing.xxxs2.dp
-                                        )
-                                ) {
-                                    Text(
-                                        text = "PRO",
-                                        color = Color(WgcCoreDsColors.trainingWhite),
-                                        fontSize = 10.sp,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                }
-                            }
-                            Text(
-                                text = "Olá, ${user.name.split(" ").firstOrNull() ?: "Atleta"}",
-                                color = Color(WgcCoreDsColors.trainingWhite),
-                                fontSize = 24.sp,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
-
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                         ) {
-                            // Streak Flame Badge
                             Box(
                                 modifier = Modifier
+                                    .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.2f))
-                                    .border(
-                                        width = WgcCoreDsSize.s1.dp,
-                                        color = Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.5f),
-                                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
-                                    )
-                                    .clickable { onOpenActivity() }
-                                    .padding(
-                                        horizontal = WgcCoreDsSpacing.xs8.dp,
-                                        vertical = WgcCoreDsSpacing.xxs4.dp
-                                    )
+                                    .background(Color(WgcCoreDsColors.trainingVolt)),
+                                contentAlignment = Alignment.Center
                             ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
-                                ) {
-                                    Icon(
-                                        imageVector = Icons.Default.LocalFireDepartment,
-                                        contentDescription = "Streak",
-                                        tint = Color(WgcCoreDsColors.trainingOrange),
-                                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
-                                    )
-                                    Text(
-                                        text = "${user.currentStreakDays}d",
-                                        color = Color(WgcCoreDsColors.trainingWhite),
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.Black
-                                    )
-                                }
-                            }
-
-                            IconButton(onClick = {}) {
-                                Icon(
-                                    imageVector = Icons.Default.Notifications,
-                                    contentDescription = "Notificações",
-                                    tint = Color(WgcCoreDsColors.trainingWhite),
-                                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                                Text(
+                                    text = user.name.take(2).uppercase(),
+                                    color = Color(WgcCoreDsColors.trainingBlack),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 14.sp
                                 )
                             }
+                            Column {
+                                Text(
+                                    text = "BEM-VINDO DE VOLTA",
+                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = user.name,
+                                    color = Color(WgcCoreDsColors.trainingWhite),
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                        }
+
+                        IconButton(onClick = {}) {
+                            Icon(
+                                imageVector = Icons.Default.Notifications,
+                                contentDescription = "Notificações",
+                                tint = Color(WgcCoreDsColors.trainingWhite)
+                            )
                         }
                     }
                 }
             }
 
-            // Widget de Meta Semanal
+            // Streak Card & Weekly Goal
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
-                    border = androidx.compose.foundation.BorderStroke(
-                        WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingMediumGray)
-                    ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
-                    Column(
+                    Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(WgcCoreDsSpacing.md16.dp),
-                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                         ) {
-                            Text(
-                                text = "META SEMANAL DE TREINO",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                letterSpacing = 0.5.sp
-                            )
-                            Text(
-                                text = "${user.weeklyMinutesProgress} / ${user.weeklyMinutesGoal} MIN",
-                                color = Color(WgcCoreDsColors.trainingVolt),
-                                fontSize = 13.sp,
-                                fontWeight = FontWeight.Black
-                            )
+                            Box(
+                                modifier = Modifier
+                                    .size(WgcCoreDsSize.s40.dp)
+                                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                                    .background(Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.2f)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.LocalFireDepartment,
+                                    contentDescription = null,
+                                    tint = Color(WgcCoreDsColors.trainingOrange),
+                                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                                )
+                            }
+                            Column {
+                                Text(
+                                    text = "${user.currentStreakDays} DIAS DE SEQUÊNCIA",
+                                    color = Color(WgcCoreDsColors.trainingOrange),
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = "Mantenha o foco esta semana!",
+                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    fontSize = 10.sp
+                                )
+                            }
                         }
 
-                        val progress = (user.weeklyMinutesProgress.toFloat() / user.weeklyMinutesGoal.toFloat()).coerceIn(0f, 1f)
-                        LinearProgressIndicator(
-                            progress = { progress },
+                        Box(
                             modifier = Modifier
-                                .fillMaxWidth()
-                                .height(WgcCoreDsSize.s6.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                            color = Color(WgcCoreDsColors.trainingVolt),
-                            trackColor = Color(WgcCoreDsColors.trainingMediumGray)
-                        )
-
-                        Text(
-                            text = "Faltam apenas ${user.weeklyMinutesGoal - user.weeklyMinutesProgress} minutos para atingir sua meta da semana!",
-                            color = Color(WgcCoreDsColors.trainingWhite),
-                            fontSize = 12.sp
-                        )
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                                .background(Color(WgcCoreDsColors.trainingMediumGray))
+                                .clickable { onOpenActivity() }
+                                .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
+                        ) {
+                            Text(
+                                text = "Placar",
+                                color = Color(WgcCoreDsColors.trainingVolt),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
             }
 
-            // Categorias Rápidas
+            // Categorias Atalhos
             item {
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
@@ -287,7 +241,7 @@ fun WgcNtcHomeTemplate(
                         }
                     }
 
-                    items(WgcNtcWorkoutCategory.entries) { category ->
+                    items(WgcFitnessWorkoutCategory.entries) { category ->
                         val isSelected = selectedCategory == category
                         Box(
                             modifier = Modifier
@@ -328,13 +282,12 @@ fun WgcNtcHomeTemplate(
                         border = androidx.compose.foundation.BorderStroke(
                             WgcCoreDsSize.s1.dp,
                             Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.4f)
-                        ),
-                        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+                        )
                     ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(WgcCoreDsSpacing.lg24.dp),
+                                .padding(WgcCoreDsSpacing.md16.dp),
                             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                         ) {
                             Row(
@@ -345,58 +298,48 @@ fun WgcNtcHomeTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                        .background(Color(WgcCoreDsColors.trainingVolt))
+                                        .background(Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.2f))
                                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                                 ) {
                                     Text(
-                                        text = "TREINO DO DIA",
-                                        color = Color(WgcCoreDsColors.trainingBlack),
+                                        text = "DESTAQUE DE HOJE",
+                                        color = Color(WgcCoreDsColors.trainingVolt),
                                         fontSize = 10.sp,
-                                        fontWeight = FontWeight.Black,
-                                        letterSpacing = 1.sp
+                                        fontWeight = FontWeight.Bold
                                     )
                                 }
-
                                 Text(
-                                    text = "${featuredWorkout.durationMinutes} MIN • ${featuredWorkout.intensity.label}",
+                                    text = "${featuredWorkout.durationMinutes} min • ${featuredWorkout.intensity.label}",
                                     color = Color(WgcCoreDsColors.trainingSecondaryText),
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.SemiBold
+                                    fontSize = 12.sp
                                 )
                             }
 
-                            Text(
-                                text = featuredWorkout.title,
-                                color = Color(WgcCoreDsColors.trainingWhite),
-                                fontSize = 22.sp,
-                                fontWeight = FontWeight.Black,
-                                lineHeight = 26.sp
-                            )
-
-                            Text(
-                                text = featuredWorkout.description,
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
-                                fontSize = 12.sp,
-                                lineHeight = 16.sp
-                            )
+                            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+                                Text(
+                                    text = featuredWorkout.title,
+                                    color = Color(WgcCoreDsColors.trainingWhite),
+                                    fontSize = 18.sp,
+                                    fontWeight = FontWeight.ExtraBold
+                                )
+                                Text(
+                                    text = "Com ${featuredWorkout.trainerName}",
+                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    fontSize = 14.sp
+                                )
+                            }
 
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
+                                horizontalArrangement = Arrangement.End,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(
-                                    text = "Coach: ${featuredWorkout.trainerName}",
-                                    color = Color(WgcCoreDsColors.trainingVolt),
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold
-                                )
-
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                         .background(Color(WgcCoreDsColors.trainingVolt))
-                                        .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp)
+                                        .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+                                    contentAlignment = Alignment.Center
                                 ) {
                                     Row(
                                         verticalAlignment = Alignment.CenterVertically,
@@ -406,13 +349,13 @@ fun WgcNtcHomeTemplate(
                                             imageVector = Icons.Default.PlayArrow,
                                             contentDescription = null,
                                             tint = Color(WgcCoreDsColors.trainingBlack),
-                                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                         )
                                         Text(
-                                            text = "INICIAR",
+                                            text = "Iniciar Treino",
                                             color = Color(WgcCoreDsColors.trainingBlack),
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Black
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 12.sp
                                         )
                                     }
                                 }
@@ -435,7 +378,7 @@ fun WgcNtcHomeTemplate(
                 }
 
                 item {
-                    WgcNtcProgramCard(
+                    WgcFitnessProgramCard(
                         title = activeProgram.title,
                         goal = activeProgram.goal,
                         trainerName = activeProgram.trainerName,
@@ -476,7 +419,7 @@ fun WgcNtcHomeTemplate(
 
             // Lista de Treinos
             items(workouts, key = { it.id }) { workout ->
-                WgcNtcWorkoutCard(
+                WgcFitnessWorkoutCard(
                     title = workout.title,
                     trainerName = workout.trainerName,
                     category = workout.category,
@@ -491,7 +434,7 @@ fun WgcNtcHomeTemplate(
     }
 }
 
-@Preview(name = "NTC Home Template - Preview")
+@Preview(name = "Fitness Home Template - Preview")
 @Composable
 fun WgcNtcHomeTemplatePreview() {
     WgcNtcHomeTemplate(

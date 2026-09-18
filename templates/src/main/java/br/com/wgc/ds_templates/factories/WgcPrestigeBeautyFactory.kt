@@ -18,10 +18,10 @@ fun WgcPrestigeBeautyFactory(
     modifier: Modifier = Modifier
 ) {
     when (screen) {
-        WgcPrestigeBeautyScreen.HOME -> WgcSephoraHomeTemplate(modifier = modifier)
-        WgcPrestigeBeautyScreen.CLUB -> WgcSephoraClubTemplate(modifier = modifier)
-        WgcPrestigeBeautyScreen.TUTORIALS -> WgcSephoraTutorialsTemplate(modifier = modifier)
-        WgcPrestigeBeautyScreen.BAG -> WgcSephoraBagTemplate(modifier = modifier)
-        WgcPrestigeBeautyScreen.PROFILE -> WgcSephoraProfileTemplate(modifier = modifier)
+        WgcPrestigeBeautyScreen.HOME -> WgcPrestigeBeautyHomeTemplate(modifier = modifier)
+        WgcPrestigeBeautyScreen.CLUB -> WgcPrestigeBeautyClubTemplate(modifier = modifier)
+        WgcPrestigeBeautyScreen.TUTORIALS -> WgcPrestigeBeautyTutorialsTemplate(modifier = modifier)
+        WgcPrestigeBeautyScreen.BAG -> WgcPrestigeBeautyBagTemplate(modifier = modifier)
+        WgcPrestigeBeautyScreen.PROFILE -> WgcPrestigeBeautyProfileTemplate(modifier = modifier)
     }
 }

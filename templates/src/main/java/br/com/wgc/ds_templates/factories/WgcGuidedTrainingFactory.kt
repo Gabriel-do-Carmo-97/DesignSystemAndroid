@@ -2,7 +2,7 @@ package br.com.wgc.ds_templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.components.navigation.WgcNtcNavItem
+import br.com.wgc.design_system.components.navigation.WgcFitnessNavItem
 import br.com.wgc.ds_templates.screens.guidedtraining.activity.WgcNtcActivityTemplate
 import br.com.wgc.ds_templates.screens.guidedtraining.detail.WgcNtcWorkoutDetailTemplate
 import br.com.wgc.ds_templates.screens.guidedtraining.home.WgcNtcHomeTemplate
@@ -14,9 +14,6 @@ import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcWorkoutItem
 import br.com.wgc.ds_templates.screens.guidedtraining.player.WgcNtcWorkoutPlayerTemplate
 import br.com.wgc.ds_templates.screens.guidedtraining.programs.WgcNtcProgramsTemplate
 
-/**
- * Telas suportadas pela Fábrica Nike Training Club (NTC).
- */
 enum class WgcGuidedTrainingScreen {
     HOME,
     PLAYER,
@@ -25,14 +22,6 @@ enum class WgcGuidedTrainingScreen {
     ACTIVITY
 }
 
-/**
- * Fábrica Universal de Telas do Nike Training Club (WgcGuidedTrainingFactory).
- *
- * Provê alternância instantânea entre as telas de treino, player guiado por áudio,
- * detalhes com roteiro muscular, programas progressivos e conquistas atléticas.
- *
- * 100% tokenizado com WgcCoreDs, State Hoisting e slots customizáveis.
- */
 @Composable
 fun WgcGuidedTrainingFactory(
     modifier: Modifier = Modifier,
@@ -46,8 +35,8 @@ fun WgcGuidedTrainingFactory(
     timeRemainingFormatted: String = "00:45",
     progressFraction: Float = 0.5f,
     isPlaying: Boolean = true,
-    selectedNavItem: WgcNtcNavItem = WgcNtcNavItem.FOR_YOU,
-    onNavItemClick: (WgcNtcNavItem) -> Unit = {},
+    selectedNavItem: WgcFitnessNavItem = WgcFitnessNavItem.HOME,
+    onNavItemClick: (WgcFitnessNavItem) -> Unit = {},
     onSelectWorkout: (NtcWorkoutItem) -> Unit = {},
     onStartWorkout: (NtcWorkoutItem) -> Unit = {},
     onOpenProgram: (NtcProgramItem) -> Unit = {},

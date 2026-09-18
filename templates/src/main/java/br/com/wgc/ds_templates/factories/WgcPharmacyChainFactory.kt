@@ -2,11 +2,11 @@ package br.com.wgc.ds_templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
 import br.com.wgc.ds_templates.screens.pharmacychain.home.WgcDrogaRaiaHomeTemplate
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaMockData
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaProduct
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaUserProfile
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyMockData
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyProduct
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyUserProfile
 
 enum class WgcPharmacyChainScreen {
     HOME,
@@ -20,11 +20,11 @@ enum class WgcPharmacyChainScreen {
 fun WgcPharmacyChainFactory(
     modifier: Modifier = Modifier,
     screen: WgcPharmacyChainScreen = WgcPharmacyChainScreen.HOME,
-    userProfile: DrogaRaiaUserProfile = DrogaRaiaMockData.defaultUser,
-    products: List<DrogaRaiaProduct> = DrogaRaiaMockData.sampleProducts,
-    activeTab: DrogaRaiaNavTab = DrogaRaiaNavTab.HOME,
-    onTabSelected: (DrogaRaiaNavTab) -> Unit = {},
-    onProductClick: (DrogaRaiaProduct) -> Unit = {},
+    userProfile: PharmacyUserProfile = PharmacyMockData.defaultUser,
+    products: List<PharmacyProduct> = PharmacyMockData.sampleProducts,
+    activeTab: PharmacyNavTab = PharmacyNavTab.HOME,
+    onTabSelected: (PharmacyNavTab) -> Unit = {},
+    onProductClick: (PharmacyProduct) -> Unit = {},
     onUploadPrescription: () -> Unit = {},
     onTalkToPharmacist: () -> Unit = {}
 ) {

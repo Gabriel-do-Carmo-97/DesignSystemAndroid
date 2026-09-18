@@ -1,21 +1,21 @@
 package br.com.wgc.ds_templates.screens.pharmacychain.model
 
-import br.com.wgc.design_system.components.cards.DrogaRaiaMedicineStripe
+import br.com.wgc.design_system.components.cards.PharmacyMedicineStripe
 
-data class DrogaRaiaProduct(
+data class PharmacyProduct(
     val id: String,
     val title: String,
     val laboratory: String,
     val presentation: String,
     val price: Double,
     val originalPrice: Double? = null,
-    val raiaClientPrice: Double? = null,
-    val stripe: DrogaRaiaMedicineStripe = DrogaRaiaMedicineStripe.NONE,
+    val pharmacyClientPrice: Double? = null,
+    val stripe: PharmacyMedicineStripe = PharmacyMedicineStripe.NONE,
     val requiresPrescription: Boolean = false,
     val hasSubscription: Boolean = false
 )
 
-data class DrogaRaiaSubscriptionItem(
+data class PharmacySubscriptionItem(
     val id: String,
     val medicineName: String,
     val frequency: String,
@@ -23,15 +23,15 @@ data class DrogaRaiaSubscriptionItem(
     val price: Double
 )
 
-data class DrogaRaiaUserProfile(
+data class PharmacyUserProfile(
     val name: String,
     val cpfMasked: String,
     val pointsBalance: Int,
     val address: String
 )
 
-object DrogaRaiaMockData {
-    val defaultUser = DrogaRaiaUserProfile(
+object PharmacyMockData {
+    val defaultUser = PharmacyUserProfile(
         name = "Lucas Ferreira",
         cpfMasked = "342.***.***-18",
         pointsBalance = 680,
@@ -39,64 +39,64 @@ object DrogaRaiaMockData {
     )
 
     val sampleProducts = listOf(
-        DrogaRaiaProduct(
+        PharmacyProduct(
             id = "1",
             title = "Dipirona Monoidratada 500mg/mL",
             laboratory = "EMS Genéricos",
             presentation = "Gotas Frasco 20mL",
             price = 14.50,
             originalPrice = 19.90,
-            raiaClientPrice = 9.90,
-            stripe = DrogaRaiaMedicineStripe.GENERIC,
+            pharmacyClientPrice = 9.90,
+            stripe = PharmacyMedicineStripe.GENERIC,
             requiresPrescription = false,
             hasSubscription = true
         ),
-        DrogaRaiaProduct(
+        PharmacyProduct(
             id = "2",
             title = "Amoxicilina + Clavulanato 875mg",
             laboratory = "Eurofarma",
             presentation = "14 Comprimidos Revestidos",
             price = 54.90,
             originalPrice = 69.90,
-            raiaClientPrice = 49.90,
-            stripe = DrogaRaiaMedicineStripe.RED,
+            pharmacyClientPrice = 49.90,
+            stripe = PharmacyMedicineStripe.RED,
             requiresPrescription = true,
             hasSubscription = false
         ),
-        DrogaRaiaProduct(
+        PharmacyProduct(
             id = "3",
             title = "Vitamina C + Zinco Efervescente",
             laboratory = "Redoxon",
             presentation = "30 Comprimidos Efervescentes",
             price = 39.90,
             originalPrice = 48.00,
-            raiaClientPrice = 32.90,
-            stripe = DrogaRaiaMedicineStripe.NONE,
+            pharmacyClientPrice = 32.90,
+            stripe = PharmacyMedicineStripe.NONE,
             requiresPrescription = false,
             hasSubscription = true
         ),
-        DrogaRaiaProduct(
+        PharmacyProduct(
             id = "4",
             title = "Clonazepam 2mg",
             laboratory = "Medley",
             presentation = "30 Comprimidos",
             price = 18.20,
-            raiaClientPrice = 13.90,
-            stripe = DrogaRaiaMedicineStripe.BLACK,
+            pharmacyClientPrice = 13.90,
+            stripe = PharmacyMedicineStripe.BLACK,
             requiresPrescription = true,
             hasSubscription = false
         )
     )
 
     val sampleSubscriptions = listOf(
-        DrogaRaiaSubscriptionItem(
+        PharmacySubscriptionItem(
             id = "sub1",
             medicineName = "Losartana Potássica 50mg",
             frequency = "A cada 30 dias",
             nextDeliveryDate = "05/10/2026",
             price = 18.90
         ),
-        DrogaRaiaSubscriptionItem(
+        PharmacySubscriptionItem(
             id = "sub2",
             medicineName = "Glifage XR 500mg",
             frequency = "A cada 60 dias",

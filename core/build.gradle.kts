@@ -25,7 +25,9 @@ android {
     }
 
     publishing {
-        singleVariant("release")
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
 }
 
@@ -51,6 +53,30 @@ publishing {
             afterEvaluate {
                 from(components["release"])
             }
+
+            pom {
+                name.set("WGC Design System Core")
+                description.set("Core design tokens, colors, typography, dimensions and shapes for WGC Design System")
+                url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("wgc")
+                        name.set("WGC Android Team")
+                        email.set("dev@wgc.com.br")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    developerConnection.set("scm:git:ssh://github.com:Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                }
+            }
         }
     }
 
@@ -65,10 +91,3 @@ publishing {
         }
     }
 }
-
-tasks.register<Jar>("sourcesJar") {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-}
-
-// Trigger core-ds module deployment

@@ -29,9 +29,10 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.components.cards.WgcPagueMenosConvenioCard
+import br.com.wgc.design_system.components.cards.WgcHealthInsuranceCard
 import br.com.wgc.ds_templates.screens.popularpharmacy.model.PagueMenosMockData
 import br.com.wgc.ds_templates.screens.popularpharmacy.model.PagueMenosOffer
+import java.util.Locale
 
 @Composable
 fun WgcPagueMenosHomeTemplate(
@@ -51,8 +52,8 @@ fun WgcPagueMenosHomeTemplate(
             }
 
             item {
-                WgcPagueMenosConvenioCard(
-                    convenioName = "Bradesco Saúde / Orizon",
+                WgcHealthInsuranceCard(
+                    insuranceName = "Bradesco Saúde / Orizon",
                     cardNumberMasked = "9874 **** **** 1029",
                     discountPercentage = 45
                 )
@@ -129,7 +130,7 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
                     color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
                 )
                 Text(
-                    text = "R$ " + String.format("%.2f", offer.price),
+                    text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.popularPharmacyBlue)
@@ -139,8 +140,7 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
             WgcClassicButton(
                 textButton = "Comprar",
                 onClick = onBuy
-                )
-            
+            )
         }
     }
 }

@@ -19,7 +19,7 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
+fun WgcGamingStoreCatalogTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
@@ -30,10 +30,10 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(GamingStoreMockData.sampleGames) { game ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2A475E))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gamingStoreCardBg))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(game.title, fontWeight = FontWeight.Bold, color = Color.White)
-                        Text("${game.discount} • R$ ${"%,.2f".format(game.price)}", color = Color(0xFF66C0F4), fontWeight = FontWeight.Bold)
+                        Text("${game.discount} • R$ ${"%,.2f".format(game.price)}", color = Color(WgcCoreDsColors.gamingStoreAccent), fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -42,17 +42,17 @@ fun WgcSteamStoreTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSteamLibraryTemplate(modifier: Modifier = Modifier) =
+fun WgcGamingStoreLibraryTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Biblioteca de Jogos Instalados", modifier = modifier)
 
 @Composable
-fun WgcSteamCommunityTemplate(modifier: Modifier = Modifier) =
+fun WgcGamingStoreCommunityTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Central da Comunidade & Fóruns", modifier = modifier)
 
 @Composable
-fun WgcSteamWishlistTemplate(modifier: Modifier = Modifier) =
+fun WgcGamingStoreWishlistTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Lista de Desejos & Carrinho", modifier = modifier)
 
 @Composable
-fun WgcSteamProfileTemplate(modifier: Modifier = Modifier) =
+fun WgcGamingStoreProfileTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Perfil do Jogador • Nível 45", modifier = modifier)

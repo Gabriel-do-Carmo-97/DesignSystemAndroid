@@ -39,8 +39,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.core_ds.WgcCoreDsColors
+import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcBiometricButton
 import br.com.wgc.design_system.components.auth.WgcBiometricStyle
@@ -96,7 +99,7 @@ class FakeKlokAuthViewModel : BaseKlokAuthViewModel() {
 fun WgcKlokAuthScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseKlokAuthViewModel = FakeKlokAuthViewModel(),
-    brandPrimaryColor: Color = Color(0xFFFF9800),
+    brandPrimaryColor: Color = Color(WgcCoreDsColors.warning),
     onNavigateToForgotPassword: () -> Unit = {},
     headerSlot: (@Composable () -> Unit)? = null,
     switcherSlot: (@Composable () -> Unit)? = null,

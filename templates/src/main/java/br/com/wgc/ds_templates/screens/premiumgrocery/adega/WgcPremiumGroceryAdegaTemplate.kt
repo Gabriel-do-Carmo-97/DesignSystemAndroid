@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,22 +14,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AcUnit
-import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.LocalBar
-import androidx.compose.material.icons.filled.RestaurantMenu
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Verified
+import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.WineBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,28 +44,24 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcPdaSommelierWineCard
-import br.com.wgc.design_system.components.navigation.WgcPdaBottomNav
+import br.com.wgc.design_system.components.cards.WgcWineStoreCard
+import br.com.wgc.design_system.components.navigation.WgcSupermarketBottomNav
+import br.com.wgc.design_system.components.navigation.WgcSupermarketNavItem
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PremiumGroceryMockData
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaWineItem
 
-/**
- * Template da Tela "Adega Gourmet / Sommelier".
- *
- * Apresenta curadoria profissional de vinhos finos, buscador por harmonização gastronômica
- * ("O que você vai comer hoje?"), filtros por estilo (Tintos, Brancos, Espumantes) e garantia climatizada.
- */
 @Composable
 fun WgcPdaAdegaTemplate(
     modifier: Modifier = Modifier,
     wines: List<PdaWineItem> = PremiumGroceryMockData.sommelierWines,
-    selectedNavIndex: Int = 1,
-    onNavSelect: (Int) -> Unit = {},
+    selectedNavItem: WgcSupermarketNavItem = WgcSupermarketNavItem.ADEGA,
+    onNavItemClick: (WgcSupermarketNavItem) -> Unit = {},
     onWineQuantityChange: (String, Int) -> Unit = { _, _ -> },
     headerSlot: (@Composable () -> Unit)? = null,
     footerSlot: (@Composable () -> Unit)? = null
@@ -78,186 +75,133 @@ fun WgcPdaAdegaTemplate(
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            footerSlot?.invoke() ?: WgcPdaBottomNav(
-                selectedItem = selectedNavIndex,
-                onItemSelected = onNavSelect
+            footerSlot?.invoke() ?: WgcSupermarketBottomNav(
+                selectedItem = selectedNavItem,
+                onItemSelected = onNavItemClick
             )
         }
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(innerPadding),
+            contentPadding = PaddingValues(bottom = WgcCoreDsSpacing.xl32.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            // Header Adega Sofisticado
             item {
-                headerSlot?.invoke() ?: Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.premiumGroceryWineRed))
-                        .padding(WgcCoreDsSpacing.md16.dp)
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.LocalBar,
-                                contentDescription = null,
-                                tint = Color(WgcCoreDsColors.premiumGroceryGold),
-                                modifier = Modifier.size(WgcCoreDsSize.s28.dp)
-                            )
-                            Column {
-                                Text(
-                                    text = "ADEGA GOURMET SOMMELIER",
-                                    color = Color(WgcCoreDsColors.premiumGroceryGold),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = FontWeight.Black
-                                )
-                                Text(
-                                    text = "Curadoria & Sommelier",
-                                    color = Color.White,
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold
-                                )
-                            }
-                        }
-
-                        IconButton(
-                            onClick = {},
-                            modifier = Modifier.size(WgcCoreDsSize.s36.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.FilterList,
-                                contentDescription = "Filtrar",
-                                tint = Color.White,
-                                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
-                            )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
-
-                    Text(
-                        text = "Mais de 1.200 rótulos do mundo inteiro selecionados por Carlos Cabral e equipe de sommeliers PDA.",
-                        color = Color.White.copy(alpha = 0.9f),
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                }
-            }
-
-            // Harmonização Gastronômica: "O que vai servir hoje?"
-            item {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = WgcCoreDsSpacing.md16.dp)
-                ) {
-                    Row(
+                if (headerSlot != null) {
+                    headerSlot()
+                } else {
+                    Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = WgcCoreDsSpacing.md16.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                            .background(Color(WgcCoreDsColors.premiumGroceryWineRedDark))
+                            .padding(WgcCoreDsSpacing.md16.dp)
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.RestaurantMenu,
-                            contentDescription = null,
-                            tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
-                        )
-                        Text(
-                            text = "O QUE VAI SERVIR HOJE? (HARMONIZAÇÃO)",
-                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-
-                    LazyRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                            horizontal = WgcCoreDsSpacing.md16.dp
-                        )
-                    ) {
-                        items(pairings.size) { idx ->
-                            val isSelected = selectedPairingIndex == idx
-                            Box(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                    .background(
-                                        if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed)
-                                        else Color(WgcCoreDsColors.premiumGrocerySurface)
-                                    )
-                                    .border(
-                                        width = WgcCoreDsSize.s1.dp,
-                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed)
-                                        else Color(WgcCoreDsColors.premiumGroceryBorder),
-                                        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
-                                    )
-                                    .clickable { selectedPairingIndex = idx }
-                                    .padding(
-                                        horizontal = WgcCoreDsSpacing.sm12.dp,
-                                        vertical = WgcCoreDsSpacing.xs8.dp
-                                    )
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(
-                                    text = pairings[idx],
-                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.premiumGroceryTextPrimary),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                                )
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.WineBar,
+                                        contentDescription = null,
+                                        tint = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                                    )
+                                    Text(
+                                        text = "ADEGA & SOMMELIER",
+                                        color = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Black,
+                                        letterSpacing = 1.sp
+                                    )
+                                }
+                                IconButton(onClick = {}) {
+                                    Icon(
+                                        imageVector = Icons.Default.Tune,
+                                        contentDescription = "Filtros",
+                                        tint = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                    )
+                                }
                             }
+
+                            OutlinedTextField(
+                                value = "",
+                                onValueChange = {},
+                                modifier = Modifier.fillMaxWidth(),
+                                placeholder = {
+                                    Text(
+                                        text = "Buscar por uva, país, safra ou vinícola...",
+                                        fontSize = 12.sp
+                                    )
+                                },
+                                leadingIcon = {
+                                    Icon(
+                                        imageVector = Icons.Default.Search,
+                                        contentDescription = "Buscar",
+                                        tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                                    )
+                                },
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    focusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    unfocusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    focusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                    unfocusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                ),
+                                singleLine = true,
+                                readOnly = true
+                            )
                         }
                     }
                 }
             }
 
-            // Tipos de Vinho
+            // Filtros por Estilo
             item {
-                Column(modifier = Modifier.padding(top = WgcCoreDsSpacing.sm12.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+                    Text(
+                        text = "ESTILO DO VINHO",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
+                    )
                     LazyRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                            horizontal = WgcCoreDsSpacing.md16.dp
-                        )
+                        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
                     ) {
-                        items(wineTypes.size) { idx ->
-                            val isSelected = selectedTypeIndex == idx
+                        items(wineTypes.size) { index ->
+                            val isSelected = selectedTypeIndex == index
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                     .background(
-                                        if (isSelected) Color(WgcCoreDsColors.premiumGroceryGoldLight)
-                                        else Color(WgcCoreDsColors.premiumGrocerySurface)
+                                        if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGrocerySurface)
                                     )
                                     .border(
                                         width = WgcCoreDsSize.s1.dp,
-                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryGold)
-                                        else Color(WgcCoreDsColors.premiumGroceryBorder),
+                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGroceryBorder),
                                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                     )
-                                    .clickable { selectedTypeIndex = idx }
-                                    .padding(
-                                        horizontal = WgcCoreDsSpacing.sm12.dp,
-                                        vertical = WgcCoreDsSpacing.xs8.dp
-                                    )
+                                    .clickable { selectedTypeIndex = index }
+                                    .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                             ) {
                                 Text(
-                                    text = wineTypes[idx],
-                                    color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryGoldDark)
-                                    else Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+                                    text = wineTypes[index],
+                                    color = if (isSelected) Color(WgcCoreDsColors.premiumGrocerySurface) else Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold
                                 )
                             }
                         }
@@ -265,56 +209,56 @@ fun WgcPdaAdegaTemplate(
                 }
             }
 
-            // Selo de Garantia de Transporte Climatizado
+            // Banner Harmonização
             item {
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.premiumGrocerySurface)
-                    ),
-                    elevation = CardDefaults.cardElevation(
-                        defaultElevation = WgcCoreDsElevation.level1.dp
-                    ),
+                        .padding(horizontal = WgcCoreDsSpacing.md16.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.premiumGroceryGoldLight)),
                     border = androidx.compose.foundation.BorderStroke(
-                        width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.premiumGroceryBorder)
+                        WgcCoreDsSize.s1.dp,
+                        Color(WgcCoreDsColors.premiumGroceryGold).copy(alpha = 0.5f)
                     )
                 ) {
-                    Row(
-                        modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(WgcCoreDsSpacing.md16.dp),
+                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
-                        Box(
-                            modifier = Modifier
-                                .size(WgcCoreDsSize.s40.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.premiumGroceryGreenLight)),
-                            contentAlignment = Alignment.Center
+                        Text(
+                            text = "🍷 O que você vai comer hoje?",
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(WgcCoreDsColors.premiumGroceryGoldDark)
+                        )
+                        LazyRow(
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.AcUnit,
-                                contentDescription = null,
-                                tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
-                            )
-                        }
-
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Garantia de Transporte Climatizado",
-                                color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                                style = MaterialTheme.typography.titleSmall,
-                                fontWeight = FontWeight.Bold
-                            )
-                            Text(
-                                text = "Seus vinhos e espumantes são entregues em embalagens térmicas protegidas da luz e do calor.",
-                                color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                                style = MaterialTheme.typography.bodySmall
-                            )
+                            items(pairings.size) { index ->
+                                val isSelected = selectedPairingIndex == index
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                                        .background(if (isSelected) Color(WgcCoreDsColors.premiumGroceryGold) else Color(WgcCoreDsColors.premiumGrocerySurface))
+                                        .border(
+                                            width = WgcCoreDsSize.s1.dp,
+                                            color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryGold) else Color(WgcCoreDsColors.premiumGroceryBorder),
+                                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                                        )
+                                        .clickable { selectedPairingIndex = index }
+                                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
+                                ) {
+                                    Text(
+                                        text = pairings[index],
+                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGrocerySurface) else Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
                         }
                     }
                 }
@@ -329,18 +273,17 @@ fun WgcPdaAdegaTemplate(
                     verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                 ) {
                     wines.forEach { wine ->
-                        WgcPdaSommelierWineCard(
+                        WgcWineStoreCard(
                             wineName = wine.wineName,
-                            countryOrigin = wine.countryOrigin,
-                            grape = wine.grape,
-                            vintage = wine.vintage,
+                            winery = wine.countryOrigin,
+                            countryAndRegion = wine.countryOrigin,
+                            year = 2021,
                             rating = wine.rating,
-                            sommelierPoints = wine.sommelierPoints,
-                            pairingTip = wine.pairingTip,
-                            servingTemp = wine.servingTemp,
-                            price = wine.price,
+                            originalPrice = wine.price,
                             clienteMaisPrice = wine.clienteMaisPrice,
-                            quantity = wine.quantity,
+                            grape = wine.grape,
+                            sommelierNote = wine.pairingTip,
+                            quantityInCart = wine.quantity,
                             onQuantityChange = { qty -> onWineQuantityChange(wine.id, qty) }
                         )
                     }
@@ -350,7 +293,7 @@ fun WgcPdaAdegaTemplate(
     }
 }
 
-@Preview(name = "PDA Adega Template", showBackground = true)
+@Preview(name = "Wine Store Adega Template", showBackground = true)
 @Composable
 private fun WgcPdaAdegaTemplatePreview() {
     WgcPdaAdegaTemplate()

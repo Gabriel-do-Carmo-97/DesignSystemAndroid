@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
 import br.com.wgc.design_system.components.auth.WgcOtpCodeInput
@@ -23,7 +24,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-data class ShopeeAuthUiState(
+data class DealMarketplaceAuthUiState(
     val emailOrPhone: String = "",
     val name: String = "",
     val password: String = "",
@@ -31,8 +32,8 @@ data class ShopeeAuthUiState(
     val isLoading: Boolean = false
 )
 
-abstract class BaseShopeeAuthViewModel : ViewModel() {
-    abstract val uiState: StateFlow<ShopeeAuthUiState>
+abstract class BaseDealMarketplaceAuthViewModel : ViewModel() {
+    abstract val uiState: StateFlow<DealMarketplaceAuthUiState>
     abstract fun onEmailOrPhoneChange(value: String)
     abstract fun onNameChange(value: String)
     abstract fun onPasswordChange(value: String)
@@ -40,8 +41,8 @@ abstract class BaseShopeeAuthViewModel : ViewModel() {
     abstract fun onSubmit()
 }
 
-class FakeShopeeAuthViewModel : BaseShopeeAuthViewModel() {
-    override val uiState: StateFlow<ShopeeAuthUiState> = MutableStateFlow(ShopeeAuthUiState()).asStateFlow()
+class FakeDealMarketplaceAuthViewModel : BaseDealMarketplaceAuthViewModel() {
+    override val uiState: StateFlow<DealMarketplaceAuthUiState> = MutableStateFlow(DealMarketplaceAuthUiState()).asStateFlow()
     override fun onEmailOrPhoneChange(value: String) {}
     override fun onNameChange(value: String) {}
     override fun onPasswordChange(value: String) {}
@@ -50,11 +51,11 @@ class FakeShopeeAuthViewModel : BaseShopeeAuthViewModel() {
 }
 
 @Composable
-fun WgcShopeeLoginScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+fun WgcDealMarketplaceLoginScreenTemplate(viewModel: BaseDealMarketplaceAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
     WgcGenericPlaceholderTemplate(title = "Esqueceu a senha? / Entrar com SMS")
 
 @Composable
-fun WgcShopeeRegisterScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
+fun WgcDealMarketplaceRegisterScreenTemplate(viewModel: BaseDealMarketplaceAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
     val state by viewModel.uiState.collectAsState()
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -67,8 +68,8 @@ fun WgcShopeeRegisterScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNaviga
         ) {
             WgcBrandAuthHeader(
                 brandName = "Deal Marketplace",
-                brandLogoText = "S",
-                brandColor = Color(0xFFEE4D2D),
+                brandLogoText = "DM",
+                brandColor = Color(WgcCoreDsColors.dealMarketplaceOrange),
                 title = "Cadastrar no Marketplace",
                 subtitle = "Informe seu número de celular para receber o código"
             )
@@ -81,7 +82,7 @@ fun WgcShopeeRegisterScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNaviga
 }
 
 @Composable
-fun WgcShopeeResetPasswordScreenTemplate(viewModel: BaseShopeeAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
+fun WgcDealMarketplaceResetPasswordScreenTemplate(viewModel: BaseDealMarketplaceAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
     val state by viewModel.uiState.collectAsState()
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -94,8 +95,8 @@ fun WgcShopeeResetPasswordScreenTemplate(viewModel: BaseShopeeAuthViewModel, onN
         ) {
             WgcBrandAuthHeader(
                 brandName = "Deal Marketplace",
-                brandLogoText = "S",
-                brandColor = Color(0xFFEE4D2D),
+                brandLogoText = "DM",
+                brandColor = Color(WgcCoreDsColors.dealMarketplaceOrange),
                 title = "Verificação do Celular",
                 subtitle = "Insira o código enviado por SMS para redefinir"
             )
@@ -109,8 +110,8 @@ fun WgcShopeeResetPasswordScreenTemplate(viewModel: BaseShopeeAuthViewModel, onN
 
 @Preview(showBackground = true)
 @Composable
-private fun ShopeeAuthPreview() {
+private fun WgcDealMarketplaceAuthPreview() {
     MaterialTheme {
-        WgcShopeeLoginScreenTemplate(viewModel = FakeShopeeAuthViewModel())
+        WgcDealMarketplaceLoginScreenTemplate(viewModel = FakeDealMarketplaceAuthViewModel())
     }
 }

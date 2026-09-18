@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcDrogasilLoyaltyCard
+import br.com.wgc.design_system.components.cards.WgcHealthLoyaltyCard
 
 @Composable
 fun WgcDrogasilProfileTemplate(
@@ -39,7 +39,7 @@ fun WgcDrogasilProfileTemplate(
             }
 
             item {
-                WgcDrogasilLoyaltyCard(
+                WgcHealthLoyaltyCard(
                     userName = "Mariana Alves",
                     cpfMasked = "123.***.***-00",
                     pointsBalance = 420

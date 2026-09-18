@@ -18,10 +18,10 @@ fun WgcLiveStreamingFactory(
     modifier: Modifier = Modifier
 ) {
     when (screen) {
-        WgcLiveStreamingScreen.LIVE -> WgcTwitchLiveTemplate(modifier = modifier)
-        WgcLiveStreamingScreen.BROWSE -> WgcTwitchBrowseTemplate(modifier = modifier)
-        WgcLiveStreamingScreen.CHAT -> WgcTwitchChatTemplate(modifier = modifier)
-        WgcLiveStreamingScreen.SUBS -> WgcTwitchSubsTemplate(modifier = modifier)
-        WgcLiveStreamingScreen.PROFILE -> WgcTwitchProfileTemplate(modifier = modifier)
+        WgcLiveStreamingScreen.LIVE -> WgcLiveStreamingLiveTemplate(modifier = modifier)
+        WgcLiveStreamingScreen.BROWSE -> WgcLiveStreamingBrowseTemplate(modifier = modifier)
+        WgcLiveStreamingScreen.CHAT -> WgcLiveStreamingChatTemplate(modifier = modifier)
+        WgcLiveStreamingScreen.SUBS -> WgcLiveStreamingSubsTemplate(modifier = modifier)
+        WgcLiveStreamingScreen.PROFILE -> WgcLiveStreamingProfileTemplate(modifier = modifier)
     }
 }

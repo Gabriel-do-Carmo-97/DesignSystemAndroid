@@ -67,10 +67,10 @@ fun WgcMarketplaceRegisterScreenTemplate(viewModel: BaseMarketplaceAuthViewModel
         ) {
             WgcBrandAuthHeader(
                 brandName = "Marketplace",
-                brandLogoText = "ML",
-                brandColor = Color(0xFFFFE600),
+                brandLogoText = "MP",
+                brandColor = Color(br.com.wgc.core_ds.WgcCoreDsColors.marketplaceYellow),
                 title = "Complete seus dados para se cadastrar",
-                subtitle = "Sua conta valerá para Marketplace e Mercado Pago"
+                subtitle = "Sua conta valerá para Marketplace e Pagamentos Integrados"
             )
 
             SimpleTextField(value = state.name, onValueChange = viewModel::onNameChange, label = "Nome e Sobrenome")
@@ -96,8 +96,8 @@ fun WgcMarketplaceResetPasswordScreenTemplate(viewModel: BaseMarketplaceAuthView
         ) {
             WgcBrandAuthHeader(
                 brandName = "Marketplace",
-                brandLogoText = "ML",
-                brandColor = Color(0xFFFFE600),
+                brandLogoText = "MP",
+                brandColor = Color(br.com.wgc.core_ds.WgcCoreDsColors.marketplaceYellow),
                 title = "Código de Segurança",
                 subtitle = "Digite o código enviado por e-mail/SMS para redefinir"
             )

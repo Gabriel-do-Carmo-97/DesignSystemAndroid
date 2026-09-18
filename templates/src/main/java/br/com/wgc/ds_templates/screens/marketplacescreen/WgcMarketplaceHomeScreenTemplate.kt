@@ -16,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcPromotionalProductCard
 import br.com.wgc.design_system.components.navigation.WgcMarketplaceSearchHeaderBar
@@ -36,17 +37,17 @@ data class MarketplaceProduct(
 )
 
 data class MarketplaceHomeUiState(
-    val address: String = "Enviar para Gabriel - Rua Augusta 1000",
+    val address: String = "Enviar para Gabriel - Av. Paulista, 1000",
     val searchQuery: String = "",
     val categories: List<WgcSquareCategoryItem> = listOf(
-        WgcSquareCategoryItem("1", "Ofertas", "⚡", Color(0xFFFFF9C4)),
-        WgcSquareCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        WgcSquareCategoryItem("3", "Meli+", "⭐", Color(0xFFE8EAF6)),
-        WgcSquareCategoryItem("4", "Moda", "👕", Color(0xFFF3E5F5)),
-        WgcSquareCategoryItem("5", "Veículos", "🚗", Color(0xFFE0F2F1))
+        WgcSquareCategoryItem("1", "Ofertas", "⚡", Color(WgcCoreDsColors.hypermarketYellowLight)),
+        WgcSquareCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
+        WgcSquareCategoryItem("3", "Clube+", "⭐", Color(WgcCoreDsColors.groceryBlueLight)),
+        WgcSquareCategoryItem("4", "Moda", "👕", Color(WgcCoreDsColors.quickShopCardPurple)),
+        WgcSquareCategoryItem("5", "Veículos", "🚗", Color(WgcCoreDsColors.dentalTealLight))
     ),
     val products: List<MarketplaceProduct> = listOf(
-        MarketplaceProduct("1", "Smart TV 50\" 4K UHD Samsung", "R$ 2.499", "R$ 1.899", "24% OFF", "em 10x R$ 189,90 sem juros"),
+        MarketplaceProduct("1", "Smart TV 50\" 4K UHD", "R$ 2.499", "R$ 1.899", "24% OFF", "em 10x R$ 189,90 sem juros"),
         MarketplaceProduct("2", "Fone Sem Fio Bluetooth Noise Cancelling", "R$ 499", "R$ 299", "40% OFF", "em 6x R$ 49,83 sem juros"),
         MarketplaceProduct("3", "Console de Videogame 1TB 4K", "R$ 4.299", "R$ 3.499", "18% OFF", "em 12x R$ 291,58 sem juros")
     )
@@ -90,7 +91,7 @@ fun WgcMarketplaceHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(0xFFEBEBEB))
+                .background(Color(WgcCoreDsColors.marketplaceBgGray))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -108,13 +109,13 @@ fun WgcMarketplaceHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFF2D3277))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.marketplaceBlue))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        Text(text = "meli+ • Assine por R$ 17,90/mês", color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Text(text = "Clube+ • Assine por R$ 17,90/mês", color = Color.White, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         Text(text = "Frete grátis em milhões de produtos + Streaming Plus incluído 🎬", color = Color.White.copy(alpha = 0.9f), style = MaterialTheme.typography.bodySmall)
                     }
                 }
@@ -130,12 +131,12 @@ fun WgcMarketplaceHomeScreenContent(
                         text = "Ofertas do Dia ⚡",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF333333)
+                        color = Color(WgcCoreDsColors.grey900)
                     )
                     Text(
                         text = "Ver todas",
                         style = MaterialTheme.typography.labelLarge,
-                        color = Color(0xFF1976D2),
+                        color = Color(WgcCoreDsColors.blue500),
                         fontWeight = FontWeight.SemiBold
                     )
                 }

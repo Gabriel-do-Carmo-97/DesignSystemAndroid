@@ -67,8 +67,8 @@ fun WgcRideHailingRegisterScreenTemplate(viewModel: BaseRideHailingAuthViewModel
         ) {
             WgcBrandAuthHeader(
                 brandName = "Ride Hailing",
-                brandLogoText = "Ride Hailing",
-                brandColor = Color(0xFF111111),
+                brandLogoText = "RH",
+                brandColor = Color(br.com.wgc.core_ds.WgcCoreDsColors.rideHailingBlack),
                 title = "Crie sua conta Ride Hailing",
                 subtitle = "Informe seu nome e dados de contato"
             )
@@ -97,8 +97,8 @@ fun WgcRideHailingResetPasswordScreenTemplate(viewModel: BaseRideHailingAuthView
         ) {
             WgcBrandAuthHeader(
                 brandName = "Ride Hailing",
-                brandLogoText = "Ride Hailing",
-                brandColor = Color(0xFF111111),
+                brandLogoText = "RH",
+                brandColor = Color(br.com.wgc.core_ds.WgcCoreDsColors.rideHailingBlack),
                 title = "Verificação de Segurança Ride Hailing",
                 subtitle = "Insira o código de 6 dígitos enviado"
             )

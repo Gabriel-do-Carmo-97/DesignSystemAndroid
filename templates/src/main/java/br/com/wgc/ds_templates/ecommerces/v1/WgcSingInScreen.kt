@@ -13,13 +13,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 
 
 @Composable
 fun WgcSingInScreen() {
-    // Definindo as cores baseadas no seu código Flutter
-    val deepOrange = Color(0xFFFF5722)
-    val amber = Color(0xFFFFC107)
+    val deepOrange = Color(WgcCoreDsColors.orange500)
+    val amber = Color(WgcCoreDsColors.warning)
 
     Scaffold(
         containerColor = deepOrange

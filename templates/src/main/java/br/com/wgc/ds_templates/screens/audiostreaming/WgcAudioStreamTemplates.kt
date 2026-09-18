@@ -23,7 +23,7 @@ fun WgcAudioStreamHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(0xFF121212)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.hardwareNinjaBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Boa tarde", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -31,7 +31,7 @@ fun WgcAudioStreamHomeTemplate(modifier: Modifier = Modifier) {
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             item { Text("Tocadas recentemente", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp) }
             items(AudioStreamMockData.sampleTracks) { track ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF282828))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechCarbonBorder))) {
                     Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                         Column {
                             Text(track.title, fontWeight = FontWeight.Bold, color = Color.White)

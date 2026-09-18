@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -47,22 +46,22 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
-import br.com.wgc.design_system.components.navigation.WgcDrogaRaiaBottomNav
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaMockData
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaUserProfile
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
+import br.com.wgc.design_system.components.navigation.WgcPharmacyBottomNav
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyMockData
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyUserProfile
 
 @Composable
 fun WgcDrogaRaiaProfileTemplate(
     modifier: Modifier = Modifier,
-    userProfile: DrogaRaiaUserProfile = DrogaRaiaMockData.defaultUser,
-    activeTab: DrogaRaiaNavTab = DrogaRaiaNavTab.PROFILE,
-    onTabSelected: (DrogaRaiaNavTab) -> Unit = {}
+    userProfile: PharmacyUserProfile = PharmacyMockData.defaultUser,
+    activeTab: PharmacyNavTab = PharmacyNavTab.PROFILE,
+    onTabSelected: (PharmacyNavTab) -> Unit = {}
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            WgcDrogaRaiaBottomNav(
+            WgcPharmacyBottomNav(
                 selectedTab = activeTab,
                 onTabSelected = onTabSelected,
                 cartBadgeCount = 2
@@ -109,7 +108,7 @@ fun WgcDrogaRaiaProfileTemplate(
 }
 
 @Composable
-private fun ProfileHeaderCard(userProfile: DrogaRaiaUserProfile) {
+private fun ProfileHeaderCard(userProfile: PharmacyUserProfile) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
@@ -181,7 +180,7 @@ private fun RaiaPointsCard(points: Int) {
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                 Column {
                     Text(
-                        text = "Programa Sua Farmácia",
+                        text = "Programa de Vantagens",
                         fontSize = 10.sp,
                         color = Color(WgcCoreDsColors.pharmacyChainSurface).copy(alpha = 0.85f)
                     )

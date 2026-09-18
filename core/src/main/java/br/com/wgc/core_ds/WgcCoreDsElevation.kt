@@ -7,6 +7,9 @@ object WgcCoreDsElevation {
     /** 1dp - Elevação sutil (cards) */
     const val level1 = 1.0
 
+    /** 2dp - Elevação baixa (barras de navegação e abas) */
+    const val level2 = 2.0
+
     /** 3dp - Elevação média (botões elevados) */
     const val level3 = 3.0
 

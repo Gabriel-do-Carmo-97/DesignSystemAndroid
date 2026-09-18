@@ -19,7 +19,7 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
+fun WgcCommunityChatServersTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
@@ -30,7 +30,7 @@ fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(CommunityChatMockData.sampleServers) { srv ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF2B2D31))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.workspaceDocsDark))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(srv.name, fontWeight = FontWeight.Bold, color = Color.White)
                         Text("${srv.channelsCount} canais • 🟢 ${srv.activeUsers} online", color = Color.Gray, fontSize = 14.sp)
@@ -42,17 +42,17 @@ fun WgcDiscordServersTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcDiscordVoiceTemplate(modifier: Modifier = Modifier) =
+fun WgcCommunityChatVoiceTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Canais de Voz & Screen Share", modifier = modifier)
 
 @Composable
-fun WgcDiscordDirectTemplate(modifier: Modifier = Modifier) =
+fun WgcCommunityChatDirectTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Mensagens Diretas (DMs)", modifier = modifier)
 
 @Composable
-fun WgcDiscordExploreTemplate(modifier: Modifier = Modifier) =
+fun WgcCommunityChatExploreTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Descubra Servidores Públicos", modifier = modifier)
 
 @Composable
-fun WgcDiscordProfileTemplate(modifier: Modifier = Modifier) =
+fun WgcCommunityChatProfileTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Perfil VIP da Comunidade", modifier = modifier)

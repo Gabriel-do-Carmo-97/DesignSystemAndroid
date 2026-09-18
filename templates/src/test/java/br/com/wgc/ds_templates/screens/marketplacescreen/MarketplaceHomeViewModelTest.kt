@@ -12,7 +12,7 @@ class MarketplaceHomeViewModelTest {
         val state = viewModel.uiState.value
 
         assertNotNull(state)
-        assertEquals("Enviar para Gabriel - Rua Augusta 1000", state.address)
+        assertEquals("Enviar para Gabriel - Av. Paulista, 1000", state.address)
         assertEquals(5, state.categories.size)
         assertEquals(3, state.products.size)
     }

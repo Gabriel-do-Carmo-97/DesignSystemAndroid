@@ -23,10 +23,10 @@ import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.components.buttons.WgcButtonVariant
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.ds_templates.brand.WgcBrand
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.FakeAliExpressAuthViewModel
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcAliExpressLoginScreenTemplate
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcAliExpressRegisterScreenTemplate
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcAliExpressResetPasswordScreenTemplate
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.FakeGlobalMarketplaceAuthViewModel
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceLoginScreenTemplate
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceRegisterScreenTemplate
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceResetPasswordScreenTemplate
 import br.com.wgc.ds_templates.screens.fooddelivery.auth.FakeFoodDeliveryAuthViewModel
 import br.com.wgc.ds_templates.screens.fooddelivery.auth.WgcFoodDeliveryLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.fooddelivery.auth.WgcFoodDeliveryRegisterScreenTemplate
@@ -35,17 +35,17 @@ import br.com.wgc.ds_templates.screens.marketplacescreen.auth.FakeMarketplaceAut
 import br.com.wgc.ds_templates.screens.marketplacescreen.auth.WgcMarketplaceLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.auth.WgcMarketplaceRegisterScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.auth.WgcMarketplaceResetPasswordScreenTemplate
-import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.FakeNineNineAuthViewModel
-import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcNineNineLoginScreenTemplate
-import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcNineNineRegisterScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.FakeQuickFoodDeliveryAuthViewModel
+import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryLoginScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryRegisterScreenTemplate
 import br.com.wgc.ds_templates.screens.trendfashion.auth.WgcStylishForgotPasswordScreenTemplate
 import br.com.wgc.ds_templates.screens.trendfashion.auth.WgcStylishLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.trendfashion.auth.WgcStylishRegisterScreenTemplate
-import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcNineNineResetPasswordScreenTemplate
-import br.com.wgc.ds_templates.screens.dealmarketplace.auth.FakeShopeeAuthViewModel
-import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcShopeeLoginScreenTemplate
-import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcShopeeRegisterScreenTemplate
-import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcShopeeResetPasswordScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryResetPasswordScreenTemplate
+import br.com.wgc.ds_templates.screens.dealmarketplace.auth.FakeDealMarketplaceAuthViewModel
+import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcDealMarketplaceLoginScreenTemplate
+import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcDealMarketplaceRegisterScreenTemplate
+import br.com.wgc.ds_templates.screens.dealmarketplace.auth.WgcDealMarketplaceResetPasswordScreenTemplate
 import br.com.wgc.ds_templates.screens.ridehailing.auth.FakeRideHailingAuthViewModel
 import br.com.wgc.ds_templates.screens.ridehailing.auth.WgcRideHailingLoginScreenTemplate
 import br.com.wgc.ds_templates.screens.ridehailing.auth.WgcRideHailingRegisterScreenTemplate
@@ -116,30 +116,30 @@ fun WgcAuthFactory(
                 }
             }
             WgcBrand.QuickFoodDelivery -> {
-                val vm = FakeNineNineAuthViewModel()
+                val vm = FakeQuickFoodDeliveryAuthViewModel()
                 when (flow) {
-                    WgcAuthFlow.Login -> WgcNineNineLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcNineNineRegisterScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.Login -> WgcQuickFoodDeliveryLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
+                    WgcAuthFlow.Register -> WgcQuickFoodDeliveryRegisterScreenTemplate(vm, onNavigateToLogin)
                     WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcNineNineResetPasswordScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.OtpVerification -> WgcQuickFoodDeliveryResetPasswordScreenTemplate(vm, onNavigateToLogin)
                 }
             }
             WgcBrand.DealMarketplace -> {
-                val vm = FakeShopeeAuthViewModel()
+                val vm = FakeDealMarketplaceAuthViewModel()
                 when (flow) {
-                    WgcAuthFlow.Login -> WgcShopeeLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcShopeeRegisterScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.Login -> WgcDealMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
+                    WgcAuthFlow.Register -> WgcDealMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
                     WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcShopeeResetPasswordScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.OtpVerification -> WgcDealMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
                 }
             }
             WgcBrand.GlobalMarketplace -> {
-                val vm = FakeAliExpressAuthViewModel()
+                val vm = FakeGlobalMarketplaceAuthViewModel()
                 when (flow) {
-                    WgcAuthFlow.Login -> WgcAliExpressLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcAliExpressRegisterScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.Login -> WgcGlobalMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
+                    WgcAuthFlow.Register -> WgcGlobalMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
                     WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcAliExpressResetPasswordScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.OtpVerification -> WgcGlobalMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
                 }
             }
             WgcBrand.ClockAuth -> {
@@ -246,7 +246,7 @@ fun WgcAuthFactory(
                     WgcAuthFlow.Login,
                     WgcAuthFlow.Register,
                     WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.freshgrocery.splash.WgcShopperSplashTemplate(
+                    WgcAuthFlow.OtpVerification -> br.com.wgc.ds_templates.screens.freshgrocery.splash.WgcFreshGrocerySplashTemplate(
                         onGetStartedClick = onNavigateToLogin
                     )
                 }
@@ -387,12 +387,12 @@ fun WgcAuthFactory(
                 }
             }
             else -> {
-                val vm = FakeShopeeAuthViewModel()
+                val vm = FakeDealMarketplaceAuthViewModel()
                 when (flow) {
-                    WgcAuthFlow.Login -> WgcShopeeLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcShopeeRegisterScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.Login -> WgcDealMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
+                    WgcAuthFlow.Register -> WgcDealMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
                     WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcShopeeResetPasswordScreenTemplate(vm, onNavigateToLogin)
+                    WgcAuthFlow.OtpVerification -> WgcDealMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
                 }
             }
         }

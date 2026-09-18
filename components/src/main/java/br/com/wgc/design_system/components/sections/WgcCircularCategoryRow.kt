@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.sections
+package br.com.wgc.design_system.components.sections
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,6 +13,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
@@ -20,7 +21,7 @@ data class WgcCircularCategoryItem(
     val id: String,
     val name: String,
     val initials: String,
-    val backgroundColor: Color = Color(0xFFF2F2F2)
+    val backgroundColor: Color = Color(WgcCoreDsColors.grey100)
 )
 
 /**
@@ -30,11 +31,11 @@ data class WgcCircularCategoryItem(
 fun WgcCircularCategoryRow(
     modifier: Modifier = Modifier,
     categories: List<WgcCircularCategoryItem> = listOf(
-        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(0xFFFDE8EA)),
-        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
-        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
-        WgcCircularCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
+        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(WgcCoreDsColors.carePharmacyRedLight)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.quickShopCardOrange)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.quickShopCardPurple))
     ),
     onCategoryClick: (WgcCircularCategoryItem) -> Unit = {}
 ) {

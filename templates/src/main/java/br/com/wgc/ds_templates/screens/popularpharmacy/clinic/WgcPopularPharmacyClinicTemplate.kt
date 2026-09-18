@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcPagueMenosClinicCard
+import br.com.wgc.design_system.components.cards.WgcMedicalClinicCard
 import br.com.wgc.ds_templates.screens.popularpharmacy.model.ClinicService
 import br.com.wgc.ds_templates.screens.popularpharmacy.model.PagueMenosMockData
 
@@ -48,7 +48,7 @@ fun WgcPagueMenosClinicTemplate(
             }
 
             items(services) { s ->
-                WgcPagueMenosClinicCard(
+                WgcMedicalClinicCard(
                     serviceTitle = s.title,
                     description = s.desc,
                     price = s.price,

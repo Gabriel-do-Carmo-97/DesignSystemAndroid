@@ -1,15 +1,12 @@
 package br.com.wgc.ds_templates.screens.pharmacychain.subscription
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -17,8 +14,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.EventRepeat
 import androidx.compose.material.icons.filled.Percent
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -39,24 +34,24 @@ import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.components.cards.WgcDrogaRaiaSubscriptionCard
-import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
-import br.com.wgc.design_system.components.navigation.WgcDrogaRaiaBottomNav
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaMockData
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaSubscriptionItem
+import br.com.wgc.design_system.components.cards.WgcPharmacySubscriptionCard
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
+import br.com.wgc.design_system.components.navigation.WgcPharmacyBottomNav
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyMockData
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacySubscriptionItem
 
 @Composable
 fun WgcDrogaRaiaSubscriptionTemplate(
     modifier: Modifier = Modifier,
-    subscriptions: List<DrogaRaiaSubscriptionItem> = DrogaRaiaMockData.sampleSubscriptions,
-    activeTab: DrogaRaiaNavTab = DrogaRaiaNavTab.SUBSCRIPTION,
-    onTabSelected: (DrogaRaiaNavTab) -> Unit = {},
+    subscriptions: List<PharmacySubscriptionItem> = PharmacyMockData.sampleSubscriptions,
+    activeTab: PharmacyNavTab = PharmacyNavTab.SUBSCRIPTION,
+    onTabSelected: (PharmacyNavTab) -> Unit = {},
     onAddNewSubscription: () -> Unit = {}
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            WgcDrogaRaiaBottomNav(
+            WgcPharmacyBottomNav(
                 selectedTab = activeTab,
                 onTabSelected = onTabSelected,
                 cartBadgeCount = 2
@@ -89,7 +84,7 @@ fun WgcDrogaRaiaSubscriptionTemplate(
             }
 
             items(subscriptions) { sub ->
-                WgcDrogaRaiaSubscriptionCard(
+                WgcPharmacySubscriptionCard(
                     medicineName = sub.medicineName,
                     dosageFrequency = sub.frequency,
                     nextDeliveryDate = sub.nextDeliveryDate,
@@ -131,7 +126,7 @@ private fun SubscriptionBenefitBanner() {
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
             Column {
                 Text(
-                    text = "Vantagens da Assinatura Raia",
+                    text = "Vantagens da Assinatura",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.pharmacyChainGreen)
