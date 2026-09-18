@@ -8,10 +8,7 @@ on:
     types: [opened, edited, synchronize, reopened]
 
 permissions:
-  contents: write
-  packages: write
-  pages: write
-  deployments: write
+  contents: read
 
 jobs:
   # --- 1. VALIDAR TÍTULO DO PR (CONVENTIONAL COMMITS) ---
@@ -247,6 +244,10 @@ jobs:
     needs: [detect-changes, detekt-matrix, unit-tests-matrix]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/
@@ -292,6 +293,9 @@ jobs:
             env_name: "navigation-flows"
             doc_url: "https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/navigation-flows/"
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     environment:
       name: ${{ matrix.env_name }}
       url: ${{ matrix.doc_url }}
@@ -320,6 +324,8 @@ jobs:
     needs: [detect-changes, calculate-version, publish-modules]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:

@@ -5,8 +5,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,10 +17,10 @@ import br.com.wgc.core_ds.WgcCoreDsBorderRadius
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcNoveNoveRideCard
+import br.com.wgc.design_system.components.cards.WgcRideShareCard
 
 @Composable
-fun WgcNoveNoveRideRequestTemplate(
+fun WgcUrbanMobilityRideRequestTemplate(
     onConfirmRide: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
@@ -43,7 +41,7 @@ fun WgcNoveNoveRideRequestTemplate(
                     colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.urbanMobilityYellow)),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                 ) {
-                    Text("Confirmar 99", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Text("Confirmar Corrida", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
             }
         }
@@ -53,8 +51,8 @@ fun WgcNoveNoveRideRequestTemplate(
             contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
         ) {
-            items(NoveNoveMockData.sampleRides) { ride ->
-                WgcNoveNoveRideCard(
+            items(UrbanMobilityMockData.sampleRides) { ride ->
+                WgcRideShareCard(
                     name = ride.name,
                     eta = ride.eta,
                     price = ride.price,
@@ -68,20 +66,20 @@ fun WgcNoveNoveRideRequestTemplate(
 }
 
 @Composable
-fun WgcNoveNovePayTemplate(modifier: Modifier = Modifier) {
+fun WgcUrbanMobilityPayTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), topBar = {
         Surface(color = Color(WgcCoreDsColors.urbanMobilityYellow)) {
             Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text("99Pay • Carteira Lucrativa", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
+                Text("Carteira de Mobilidade • Digital", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
             }
         }
     }) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Saldo 99Pay rendendo 110% do CDI", color = Color.Gray, fontSize = 14.sp)
+                    Text("Saldo com rendimento diário", color = Color.Gray, fontSize = 14.sp)
                     Text("R$ 1.450,20", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.Black)
-                    Text("+ R$ 0,72 rendeu hoje", color = Color(0xFF2E7D32), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                    Text("+ R$ 0,72 rendeu hoje", color = Color(WgcCoreDsColors.premiumGrocerySuccessGreen), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                 }
             }
         }
@@ -89,11 +87,11 @@ fun WgcNoveNovePayTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNoveNoveHistoryTemplate(modifier: Modifier = Modifier) {
+fun WgcUrbanMobilityHistoryTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             item { Text("Minhas Corridas Recentes", fontWeight = FontWeight.Bold, fontSize = 14.sp) }
-            items(NoveNoveMockData.sampleHistory) { trip ->
+            items(UrbanMobilityMockData.sampleHistory) { trip ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -109,14 +107,14 @@ fun WgcNoveNoveHistoryTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNoveNoveCouponsTemplate(modifier: Modifier = Modifier) {
+fun WgcUrbanMobilityCouponsTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
             Text("Meus Cupons & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text("15% OFF em até 3 corridas de 99Pop", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.urbanMobilityYellow))
-                    Text("Válido até domingo para pagamentos no 99Pay", fontSize = 14.sp, color = Color.Gray)
+                    Text("15% OFF em até 3 corridas de Mobilidade", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.urbanMobilityYellow))
+                    Text("Válido até domingo para pagamentos na carteira", fontSize = 14.sp, color = Color.Gray)
                 }
             }
         }
@@ -124,15 +122,15 @@ fun WgcNoveNoveCouponsTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcNoveNoveProfileTemplate(modifier: Modifier = Modifier) {
+fun WgcUrbanMobilityProfileTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize()) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
-            Text("Meu Perfil 99", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            Text("Meu Perfil • Passageiro", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("Gabriel do Carmo", fontWeight = FontWeight.Bold)
+                    Text("Passageiro Frequente", fontWeight = FontWeight.Bold)
                     Text("Nota como passageiro: ⭐ 4.96", color = Color.DarkGray)
-                    Text("Membro desde 2018", color = Color.Gray, fontSize = 14.sp)
+                    Text("Membro desde 2021", color = Color.Gray, fontSize = 14.sp)
                 }
             }
         }

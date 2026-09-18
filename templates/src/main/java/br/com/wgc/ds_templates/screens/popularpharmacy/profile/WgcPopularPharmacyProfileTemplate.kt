@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcPagueMenosConvenioCard
+import br.com.wgc.design_system.components.cards.WgcHealthInsuranceCard
 
 @Composable
 fun WgcPagueMenosProfileTemplate(
@@ -39,8 +39,8 @@ fun WgcPagueMenosProfileTemplate(
             }
 
             item {
-                WgcPagueMenosConvenioCard(
-                    convenioName = "Bradesco Saúde / Orizon",
+                WgcHealthInsuranceCard(
+                    insuranceName = "Bradesco Saúde / Orizon",
                     cardNumberMasked = "9874 **** **** 1029",
                     discountPercentage = 45
                 )

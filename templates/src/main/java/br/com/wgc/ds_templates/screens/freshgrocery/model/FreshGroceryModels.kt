@@ -11,14 +11,14 @@ import androidx.compose.material.icons.filled.Spa
 import androidx.compose.material.icons.filled.Watch
 import androidx.compose.ui.graphics.vector.ImageVector
 
-data class ShopperCategory(
+data class FreshGroceryCategory(
     val id: String,
     val name: String,
     val icon: ImageVector,
     val isHighlighted: Boolean = false
 )
 
-data class ShopperProduct(
+data class FreshGroceryProductItem(
     val id: String,
     val title: String,
     val category: String,
@@ -31,14 +31,14 @@ data class ShopperProduct(
     val isFavorite: Boolean = false
 )
 
-data class ShopperFlashDeal(
+data class FreshGroceryFlashDeal(
     val title: String = "Flash Deal",
     val countdown: String = "08:21:30",
-    val products: List<ShopperProduct>
+    val products: List<FreshGroceryProductItem>
 )
 
-data class ShopperCartItem(
-    val product: ShopperProduct,
+data class FreshGroceryCartItem(
+    val product: FreshGroceryProductItem,
     var quantity: Int = 1,
     val selectedColor: String = "Green",
     val selectedSize: String = "M"
@@ -46,20 +46,20 @@ data class ShopperCartItem(
 
 object FreshGroceryMockData {
     val categories = listOf(
-        ShopperCategory("1", "Blouse", Icons.Default.Checkroom),
-        ShopperCategory("2", "Uniform", Icons.Default.LocalMall),
-        ShopperCategory("3", "Skirt", Icons.Default.ShoppingBag),
-        ShopperCategory("4", "Jacket", Icons.Default.Checkroom),
-        ShopperCategory("5", "Pants", Icons.Default.FitnessCenter),
-        ShopperCategory("6", "Dress", Icons.Default.Spa),
-        ShopperCategory("7", "Hoodie", Icons.Default.Checkroom),
-        ShopperCategory("8", "T-Shirt", Icons.Default.Face),
-        ShopperCategory("9", "Suit App", Icons.Default.Watch),
-        ShopperCategory("10", "More", Icons.Default.Add, isHighlighted = true)
+        FreshGroceryCategory("1", "Blouse", Icons.Default.Checkroom),
+        FreshGroceryCategory("2", "Uniform", Icons.Default.LocalMall),
+        FreshGroceryCategory("3", "Skirt", Icons.Default.ShoppingBag),
+        FreshGroceryCategory("4", "Jacket", Icons.Default.Checkroom),
+        FreshGroceryCategory("5", "Pants", Icons.Default.FitnessCenter),
+        FreshGroceryCategory("6", "Dress", Icons.Default.Spa),
+        FreshGroceryCategory("7", "Hoodie", Icons.Default.Checkroom),
+        FreshGroceryCategory("8", "T-Shirt", Icons.Default.Face),
+        FreshGroceryCategory("9", "Suit App", Icons.Default.Watch),
+        FreshGroceryCategory("10", "More", Icons.Default.Add, isHighlighted = true)
     )
 
     val products = listOf(
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp1",
             title = "Oversized Cotton Tee",
             category = "T-Shirt",
@@ -70,7 +70,7 @@ object FreshGroceryMockData {
             reviewCount = 248,
             isFavorite = true
         ),
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp2",
             title = "Casual Streetwear Hoodie",
             category = "Hoodie",
@@ -81,7 +81,7 @@ object FreshGroceryMockData {
             reviewCount = 180,
             isFavorite = false
         ),
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp3",
             title = "Slim Fit Cargo Pants",
             category = "Pants",
@@ -92,7 +92,7 @@ object FreshGroceryMockData {
             reviewCount = 95,
             isFavorite = true
         ),
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp4",
             title = "Classic Bomber Jacket",
             category = "Jacket",
@@ -103,7 +103,7 @@ object FreshGroceryMockData {
             reviewCount = 310,
             isFavorite = false
         ),
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp5",
             title = "Minimalist Linen Blouse",
             category = "Blouse",
@@ -114,7 +114,7 @@ object FreshGroceryMockData {
             reviewCount = 74,
             isFavorite = false
         ),
-        ShopperProduct(
+        FreshGroceryProductItem(
             id = "sp6",
             title = "Pleated Midi Skirt",
             category = "Skirt",

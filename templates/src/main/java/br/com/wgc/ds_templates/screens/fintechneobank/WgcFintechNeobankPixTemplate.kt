@@ -84,7 +84,7 @@ fun WgcNeobankPixTemplate(
                         Text(
                             text = "${if (tx.isPositive) "+" else "-"} R$ ${"%,.2f".format(tx.amount)}",
                             fontWeight = FontWeight.Bold,
-                            color = if (tx.isPositive) Color(0xFF2E7D32) else Color.Black
+                            color = if (tx.isPositive) Color(WgcCoreDsColors.success) else Color(WgcCoreDsColors.black)
                         )
                     }
                 }

@@ -34,12 +34,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
-enum class WgcShopperNavItem(
+enum class WgcFreshGroceryNavItem(
     val title: String,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector
@@ -51,58 +52,51 @@ enum class WgcShopperNavItem(
 }
 
 /**
- * Bottom Navigation Bar Shopper:
+ * Bottom Navigation Bar Fresh Grocery:
  * Limpa, com ícones minimalistas e destaque verde esmeralda no item ativo.
  */
 @Composable
 fun WgcFreshGroceryBottomNav(
-    selectedItem: WgcShopperNavItem = WgcShopperNavItem.Home,
-    onItemSelected: (WgcShopperNavItem) -> Unit = {},
+    selectedItem: WgcFreshGroceryNavItem = WgcFreshGroceryNavItem.Home,
+    onItemSelected: (WgcFreshGroceryNavItem) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
         color = Color.White,
-        shadowElevation = WgcCoreDsElevation.level1.dp
+        shadowElevation = WgcCoreDsElevation.level2.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
-                .height(WgcCoreDsSize.s64.dp)
+                .height(60.dp)
                 .padding(horizontal = WgcCoreDsSpacing.md16.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            WgcShopperNavItem.entries.forEach { item ->
+            WgcFreshGroceryNavItem.entries.forEach { item ->
                 val isSelected = item == selectedItem
-                val iconColor = if (isSelected) {
-                    Color(WgcCoreDsColors.megaStorerPrimary)
-                } else {
-                    Color(WgcCoreDsColors.megaStorerSecondaryText)
-                }
-
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center,
                     modifier = Modifier
                         .clip(CircleShape)
                         .clickable { onItemSelected(item) }
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                 ) {
                     Icon(
                         imageVector = if (isSelected) item.selectedIcon else item.unselectedIcon,
                         contentDescription = item.title,
-                        tint = iconColor,
+                        tint = if (isSelected) Color(WgcCoreDsColors.freshGroceryEmerald) else Color.Gray,
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
-
                     if (isSelected) {
-                        Box(
-                            modifier = Modifier
-                                .padding(top = WgcCoreDsSpacing.xxs4.dp)
-                                .size(WgcCoreDsSize.s4.dp)
-                                .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.megaStorerPrimary))
+                        Text(
+                            text = item.title,
+                            color = Color(WgcCoreDsColors.freshGroceryEmerald),
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Bold
                         )
                     }
                 }
@@ -111,8 +105,8 @@ fun WgcFreshGroceryBottomNav(
     }
 }
 
-@Preview(showBackground = true)
+@Preview(name = "Fresh Grocery Bottom Nav", showBackground = true)
 @Composable
-private fun WgcShopperBottomNavPreview() {
+private fun WgcFreshGroceryBottomNavPreview() {
     WgcFreshGroceryBottomNav()
 }

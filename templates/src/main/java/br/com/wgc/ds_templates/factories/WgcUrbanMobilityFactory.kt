@@ -18,10 +18,10 @@ fun WgcUrbanMobilityFactory(
     modifier: Modifier = Modifier
 ) {
     when (screen) {
-        WgcUrbanMobilityScreen.REQUEST -> WgcNoveNoveRideRequestTemplate(modifier = modifier)
-        WgcUrbanMobilityScreen.WALLET -> WgcNoveNovePayTemplate(modifier = modifier)
-        WgcUrbanMobilityScreen.HISTORY -> WgcNoveNoveHistoryTemplate(modifier = modifier)
-        WgcUrbanMobilityScreen.COUPONS -> WgcNoveNoveCouponsTemplate(modifier = modifier)
-        WgcUrbanMobilityScreen.PROFILE -> WgcNoveNoveProfileTemplate(modifier = modifier)
+        WgcUrbanMobilityScreen.REQUEST -> WgcUrbanMobilityRideRequestTemplate(modifier = modifier)
+        WgcUrbanMobilityScreen.WALLET -> WgcUrbanMobilityPayTemplate(modifier = modifier)
+        WgcUrbanMobilityScreen.HISTORY -> WgcUrbanMobilityHistoryTemplate(modifier = modifier)
+        WgcUrbanMobilityScreen.COUPONS -> WgcUrbanMobilityCouponsTemplate(modifier = modifier)
+        WgcUrbanMobilityScreen.PROFILE -> WgcUrbanMobilityProfileTemplate(modifier = modifier)
     }
 }

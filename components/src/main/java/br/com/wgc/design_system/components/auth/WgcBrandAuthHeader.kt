@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
@@ -66,8 +67,8 @@ private fun WgcBrandAuthHeaderPreview() {
     MaterialTheme {
         WgcBrandAuthHeader(
             brandName = "Food Delivery",
-            brandLogoText = "iF",
-            brandColor = Color(0xFFEA1D2C),
+            brandLogoText = "FD",
+            brandColor = Color(WgcCoreDsColors.foodDeliveryRed),
             title = "Falta pouco para matar sua fome!",
             subtitle = "Como deseja continuar?"
         )

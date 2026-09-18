@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcCardFactory
 import br.com.wgc.design_system.components.cards.WgcCardType
@@ -31,8 +32,8 @@ import br.com.wgc.ds_templates.screens.fooddelivery.FakeFoodDeliveryHomeViewMode
 import br.com.wgc.ds_templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
 import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeNineNineFoodHomeViewModel
-import br.com.wgc.ds_templates.screens.quickfooddelivery.NineNineFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeQuickFoodDeliveryHomeViewModel
+import br.com.wgc.ds_templates.screens.quickfooddelivery.WgcQuickFoodDeliveryHomeScreenTemplate
 
 /**
  * Fábrica Universal de Telas Home (WgcHomeFactory).
@@ -57,7 +58,7 @@ fun WgcHomeFactory(
         when (brand) {
             WgcBrand.FoodDelivery -> WgcFoodDeliveryHomeScreenTemplate(FakeFoodDeliveryHomeViewModel())
             WgcBrand.Marketplace -> WgcMarketplaceHomeScreenTemplate(FakeMarketplaceHomeViewModel())
-            WgcBrand.QuickFoodDelivery -> NineNineFoodHomeScreenTemplate(FakeNineNineFoodHomeViewModel())
+            WgcBrand.QuickFoodDelivery -> WgcQuickFoodDeliveryHomeScreenTemplate(FakeQuickFoodDeliveryHomeViewModel())
             WgcBrand.RideHailing,
             WgcBrand.DealMarketplace,
             WgcBrand.GlobalMarketplace,
@@ -70,7 +71,7 @@ fun WgcHomeFactory(
             WgcBrand.Apparel -> br.com.wgc.ds_templates.screens.apparel.home.WgcClotheeHomeTemplate()
             WgcBrand.Boutique -> br.com.wgc.ds_templates.screens.boutique.home.WgcLazaHomeTemplate()
             WgcBrand.CuratedMarket -> br.com.wgc.ds_templates.screens.curatedmarket.market.WgcTasselMarketTemplate()
-            WgcBrand.FreshGrocery -> br.com.wgc.ds_templates.screens.freshgrocery.home.WgcShopperHomeTemplate()
+            WgcBrand.FreshGrocery -> br.com.wgc.ds_templates.screens.freshgrocery.home.WgcFreshGroceryHomeTemplate()
             WgcBrand.GadgetShop -> br.com.wgc.ds_templates.screens.gadgetshop.home.WgcNexkartHomeTemplate()
             WgcBrand.QuickShop -> br.com.wgc.ds_templates.screens.quickshop.home.WgcShopEaseHomeTemplate()
             WgcBrand.PersonalFinance -> br.com.wgc.ds_templates.screens.personalfinance.dashboard.WgcOrganizzeDashboardTemplate()
@@ -121,7 +122,7 @@ fun WgcHomeFactory(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(0xFFF7F7F7))
+                .background(Color(WgcCoreDsColors.foodDeliveryBgGray))
                 .verticalScroll(rememberScrollState())
                 .padding(WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)

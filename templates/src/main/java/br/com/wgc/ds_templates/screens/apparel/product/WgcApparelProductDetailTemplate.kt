@@ -287,7 +287,7 @@ fun WgcClotheeProductDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = "Avaliação",
-                            tint = Color(0xFFFFB800),
+                            tint = Color(WgcCoreDsColors.warning),
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))

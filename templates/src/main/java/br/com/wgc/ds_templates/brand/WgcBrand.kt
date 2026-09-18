@@ -1,125 +1,127 @@
 package br.com.wgc.ds_templates.brand
 
 import androidx.compose.ui.graphics.Color
+import br.com.wgc.core_ds.WgcCoreDsColors
 
 /**
  * Domínios e arquétipos suportados pelo ecossistema de templates do WGC Design System (100% White-label).
+ * Vinculados diretamente aos tokens de design oficiais de [:core].
  */
 enum class WgcBrand(
     val brandName: String,
     val brandLogoText: String,
     val primaryColor: Color
 ) {
-    FoodDelivery("Food Delivery", "FD", Color(0xFFEA1D2C)),
-    RideHailing("Ride Hailing", "RH", Color(0xFF000000)),
-    Marketplace("Marketplace", "MP", Color(0xFFFFE600)),
-    QuickFoodDelivery("Quick Food Delivery", "QD", Color(0xFFFF5722)),
-    DealMarketplace("Deal Marketplace", "DM", Color(0xFFEE4D2D)),
-    GlobalMarketplace("Global Marketplace", "GM", Color(0xFFFF4747)),
-    ClockAuth("Time Tracking", "TT", Color(0xFFFF9800)),
-    WaveAuth("Wave Auth", "WA", Color(0xFF1976D2)),
-    SplitAuth("Split Card", "SC", Color(0xFF0288D1)),
-    TrendFashion("Trend Fashion", "TF", Color(0xFFF83758)),
-    MegaStore("Mega Store", "MS", Color(0xFF004CFF)),
-    Retail("Retail Store", "RT", Color(0xFF514EB7)),
-    Apparel("Apparel Fashion", "AP", Color(0xFF8E6CEF)),
-    Boutique("Boutique Fashion", "BF", Color(0xFF9775FA)),
-    CuratedMarket("Curated Market", "CM", Color(0xFF4D38DC)),
-    FreshGrocery("Fresh Grocery", "FG", Color(0xFF00966B)),
-    GadgetShop("Gadget Shop", "GS", Color(0xFF2D60FF)),
-    QuickShop("Quick Shop", "QS", Color(0xFFFF8C42)),
-    PersonalFinance("Personal Finance", "PF", Color(0xFF2ECC71)),
-    PropertyRental("Property Rental", "PR", Color(0xFF1C2A44)),
-    PropertyListing("Property Listing", "PL", Color(0xFF1C9963)),
-    PropertyClassifieds("Property Classifieds", "PC", Color(0xFF002F6C)),
-    GymFitness("Gym & Fitness", "GF", Color(0xFFFFB800)),
-    CorporateWellness("Corporate Wellness", "CW", Color(0xFFFF4338)),
-    GuidedTraining("Guided Training", "GT", Color(0xFFD0FF00)),
-    Hypermarket("Hypermarket", "HM", Color(0xFFE30613)),
-    PremiumGrocery("Premium Grocery", "PG", Color(0xFF006837)),
-    Grocery("Grocery & Supermarket", "GR", Color(0xFF00387B)),
-    PharmacyChain("Pharmacy Chain", "PC", Color(0xFFC8102E)),
-    CarePharmacy("Care Pharmacy", "CP", Color(0xFFE30613)),
-    PopularPharmacy("Popular Pharmacy", "PP", Color(0xFF00A859)),
-    FintechNeobank("Fintech Neobank", "FN", Color(0xFF820AD1)),
-    FintechSuperApp("Fintech SuperApp", "SA", Color(0xFFFF7A00)),
-    FintechCarbon("Fintech Carbon", "FC", Color(0xFF242424)),
+    FoodDelivery("Food Delivery", "FD", Color(WgcCoreDsColors.foodDeliveryRed)),
+    RideHailing("Ride Hailing", "RH", Color(WgcCoreDsColors.rideHailingBlack)),
+    Marketplace("Marketplace", "MP", Color(WgcCoreDsColors.marketplaceYellow)),
+    QuickFoodDelivery("Quick Food Delivery", "QD", Color(WgcCoreDsColors.orange500)),
+    DealMarketplace("Deal Marketplace", "DM", Color(WgcCoreDsColors.dealMarketplaceOrange)),
+    GlobalMarketplace("Global Marketplace", "GM", Color(WgcCoreDsColors.globalMarketplaceRed)),
+    ClockAuth("Time Tracking", "TT", Color(WgcCoreDsColors.warning)),
+    WaveAuth("Wave Auth", "WA", Color(WgcCoreDsColors.blue500)),
+    SplitAuth("Split Card", "SC", Color(WgcCoreDsColors.personalFinanceTransferBlue)),
+    TrendFashion("Trend Fashion", "TF", Color(WgcCoreDsColors.trendFashionPink)),
+    MegaStore("Mega Store", "MS", Color(WgcCoreDsColors.megaStorePrimary)),
+    Retail("Retail Store", "RT", Color(WgcCoreDsColors.retailPrimary)),
+    Apparel("Apparel Fashion", "AP", Color(WgcCoreDsColors.apparelPrimary)),
+    Boutique("Boutique Fashion", "BF", Color(WgcCoreDsColors.boutiquePrimary)),
+    CuratedMarket("Curated Market", "CM", Color(WgcCoreDsColors.curatedMarketPrimary)),
+    FreshGrocery("Fresh Grocery", "FG", Color(WgcCoreDsColors.megaStorerPrimary)),
+    GadgetShop("Gadget Shop", "GS", Color(WgcCoreDsColors.gadgetShopPrimary)),
+    QuickShop("Quick Shop", "QS", Color(WgcCoreDsColors.quickShopPrimary)),
+    PersonalFinance("Personal Finance", "PF", Color(WgcCoreDsColors.personalFinancePrimary)),
+    PropertyRental("Property Rental", "PR", Color(WgcCoreDsColors.propertyRentalPrimary)),
+    PropertyListing("Property Listing", "PL", Color(WgcCoreDsColors.propertyListingPrimary)),
+    PropertyClassifieds("Property Classifieds", "PC", Color(WgcCoreDsColors.propertyClassifiedsPrimary)),
+    GymFitness("Gym & Fitness", "GF", Color(WgcCoreDsColors.gymYellow)),
+    CorporateWellness("Corporate Wellness", "CW", Color(WgcCoreDsColors.wellnessCoral)),
+    GuidedTraining("Guided Training", "GT", Color(WgcCoreDsColors.trainingVolt)),
+    Hypermarket("Hypermarket", "HM", Color(WgcCoreDsColors.hypermarketRed)),
+    PremiumGrocery("Premium Grocery", "PG", Color(WgcCoreDsColors.premiumGroceryGreen)),
+    Grocery("Grocery & Supermarket", "GR", Color(WgcCoreDsColors.groceryBlue)),
+    PharmacyChain("Pharmacy Chain", "PC", Color(WgcCoreDsColors.pharmacyChainRed)),
+    CarePharmacy("Care Pharmacy", "CP", Color(WgcCoreDsColors.carePharmacyRed)),
+    PopularPharmacy("Popular Pharmacy", "PP", Color(WgcCoreDsColors.popularPharmacyGreen)),
+    FintechNeobank("Fintech Neobank", "FN", Color(WgcCoreDsColors.fintechPurple)),
+    FintechSuperApp("Fintech SuperApp", "SA", Color(WgcCoreDsColors.fintechOrange)),
+    FintechCarbon("Fintech Carbon", "FC", Color(WgcCoreDsColors.fintechCarbon)),
 
     // Mobilidade & Viagem
-    UrbanMobility("Urban Mobility", "UM", Color(0xFFFFC800)),
-    BiddingRides("Bidding Rides", "BR", Color(0xFF29B75F)),
-    BusTravel("Bus Travel", "BT", Color(0xFF0054A6)),
-    FlightTravel("Flight Travel", "FT", Color(0xFFE6004C)),
-    HospitalityLodging("Hospitality & Lodging", "HL", Color(0xFFFF5A5F)),
-    HotelBooking("Hotel Booking", "HB", Color(0xFF003580)),
+    UrbanMobility("Urban Mobility", "UM", Color(WgcCoreDsColors.urbanMobilityYellow)),
+    BiddingRides("Bidding Rides", "BR", Color(WgcCoreDsColors.biddingRidesGreen)),
+    BusTravel("Bus Travel", "BT", Color(WgcCoreDsColors.busTravelBlue)),
+    FlightTravel("Flight Travel", "FT", Color(WgcCoreDsColors.flightTravelRed)),
+    HospitalityLodging("Hospitality & Lodging", "HL", Color(WgcCoreDsColors.lodgingCoral)),
+    HotelBooking("Hotel Booking", "HB", Color(WgcCoreDsColors.hotelBookingNavy)),
 
     // Streaming
-    VideoStream("VideoStreaming", "VS", Color(0xFFE50914)),
-    AudioStream("AudioStreaming", "AS", Color(0xFF1DB954)),
-    BroadcastStreaming("Broadcast Streaming", "BS", Color(0xFFFF5028)),
+    VideoStream("VideoStreaming", "VS", Color(WgcCoreDsColors.videoStreamingRed)),
+    AudioStream("AudioStreaming", "AS", Color(WgcCoreDsColors.audioStreamingGreen)),
+    BroadcastStreaming("Broadcast Streaming", "BS", Color(WgcCoreDsColors.broadcastStreamingSalmon)),
 
     // Educação
-    LanguageLearning("Language Learning", "LL", Color(0xFF58CC02)),
-    TechEducation("Tech Education", "TE", Color(0xFF0070F3)),
-    CourseMarketplace("Course Marketplace", "CM", Color(0xFFA435F0)),
+    LanguageLearning("Language Learning", "LL", Color(WgcCoreDsColors.languageLearningGreen)),
+    TechEducation("Tech Education", "TE", Color(WgcCoreDsColors.techEducationBlue)),
+    CourseMarketplace("Course Marketplace", "CM", Color(WgcCoreDsColors.courseMarketplacePurple)),
 
     // Social & Comunicação
-    DirectMessaging("Direct Messaging", "DM", Color(0xFF25D366)),
-    ChannelMessaging("Channel Messaging", "CM", Color(0xFF24A1DE)),
-    VisualDiscovery("Visual Discovery", "VD", Color(0xFFE60023)),
+    DirectMessaging("Direct Messaging", "DM", Color(WgcCoreDsColors.directMessagingGreen)),
+    ChannelMessaging("Channel Messaging", "CM", Color(WgcCoreDsColors.channelMessagingBlue)),
+    VisualDiscovery("Visual Discovery", "VD", Color(WgcCoreDsColors.visualDiscoveryRed)),
 
     // Games
-    GamingStore("Gaming Store", "GS", Color(0xFF171A21)),
-    LiveStreaming("Live Streaming", "LS", Color(0xFF9146FF)),
-    CommunityChat("Community Chat", "CC", Color(0xFF5865F2)),
+    GamingStore("Gaming Store", "GS", Color(WgcCoreDsColors.gamingStoreNavy)),
+    LiveStreaming("Live Streaming", "LS", Color(WgcCoreDsColors.liveStreamingPurple)),
+    CommunityChat("Community Chat", "CC", Color(WgcCoreDsColors.communityChatBlurple)),
 
     // Produtividade
-    WorkspaceDocs("Workspace Docs", "WD", Color(0xFF2F3437)),
-    KanbanTasks("Kanban Tasks", "KT", Color(0xFF0079BF)),
-    TeamCollaboration("Team Collaboration", "TC", Color(0xFF4A154B)),
+    WorkspaceDocs("Workspace Docs", "WD", Color(WgcCoreDsColors.workspaceDocsDark)),
+    KanbanTasks("Kanban Tasks", "KT", Color(WgcCoreDsColors.kanbanTasksBlue)),
+    TeamCollaboration("Team Collaboration", "TC", Color(WgcCoreDsColors.teamCollaborationAubergine)),
 
     // Fast Food & Delivery
-    BurgerFastFood("Burger Fast Food", "BF", Color(0xFFFFBC0D)),
-    FlameFastFood("Flame Fast Food", "FF", Color(0xFFD62300)),
-    PizzaDelivery("Pizza Delivery", "PD", Color(0xFF006491)),
+    BurgerFastFood("Burger Fast Food", "BF", Color(WgcCoreDsColors.burgerFastFoodYellow)),
+    FlameFastFood("Flame Fast Food", "FF", Color(WgcCoreDsColors.flameFastFoodFlame)),
+    PizzaDelivery("Pizza Delivery", "PD", Color(WgcCoreDsColors.pizzaBlue)),
 
     // Logística
-    Carpooling("Carpooling", "CP", Color(0xFF00AFF5)),
-    ExpressLogistics("Express Logistics", "EL", Color(0xFF0073FF)),
-    FreightLogistics("Freight Logistics", "FL", Color(0xFFFF6600)),
+    Carpooling("Carpooling", "CP", Color(WgcCoreDsColors.carpoolingBlue)),
+    ExpressLogistics("Express Logistics", "EL", Color(WgcCoreDsColors.expressLogisticsBlue)),
+    FreightLogistics("Freight Logistics", "FL", Color(WgcCoreDsColors.freightLogisticsOrange)),
 
     // Vestuário & Beleza
-    DepartmentFashion("Department Fashion", "DF", Color(0xFFC8102E)),
-    UrbanFashion("Urban Fashion", "UF", Color(0xFF003882)),
-    TrendApparel("Trend Apparel", "TA", Color(0xFF00965E)),
-    FragranceBeauty("Fragrance & Beauty", "FB", Color(0xFF00573D)),
-    NaturalBeauty("Natural Beauty", "NB", Color(0xFFFF6A13)),
-    PrestigeBeauty("Prestige Beauty", "PB", Color(0xFF000000)),
+    DepartmentFashion("Department Fashion", "DF", Color(WgcCoreDsColors.departmentFashionRed)),
+    UrbanFashion("Urban Fashion", "UF", Color(WgcCoreDsColors.urbanFashionBlue)),
+    TrendApparel("Trend Apparel", "TA", Color(WgcCoreDsColors.trendApparelGreen)),
+    FragranceBeauty("Fragrance & Beauty", "FB", Color(WgcCoreDsColors.fragranceBeautyGreen)),
+    NaturalBeauty("Natural Beauty", "NB", Color(WgcCoreDsColors.naturalBeautyOrange)),
+    PrestigeBeauty("Prestige Beauty", "PB", Color(WgcCoreDsColors.prestigeBeautyBlack)),
 
     // Pet Shop
-    PetCare("Pet Care", "PC", Color(0xFFFED100)),
-    PetSuperstore("Pet Superstore", "PS", Color(0xFF0071CE)),
-    PetLifestyle("Pet Lifestyle", "PL", Color(0xFF111111)),
+    PetCare("Pet Care", "PC", Color(WgcCoreDsColors.petCareYellow)),
+    PetSuperstore("Pet Superstore", "PS", Color(WgcCoreDsColors.petSuperstoreBlue)),
+    PetLifestyle("Pet Lifestyle", "PL", Color(WgcCoreDsColors.petLifestyleSkull)),
 
     // Casa & Decoração
-    HomeImprovement("Home Improvement", "HI", Color(0xFF78BE20)),
-    DesignerFurniture("Designer Furniture", "DF", Color(0xFFFFCC00)),
-    HomeMarketplace("Home Marketplace", "HM", Color(0xFFFF5C00)),
+    HomeImprovement("Home Improvement", "HI", Color(WgcCoreDsColors.leroyGreen)),
+    DesignerFurniture("Designer Furniture", "DF", Color(WgcCoreDsColors.designerFurnitureYellow)),
+    HomeMarketplace("Home Marketplace", "HM", Color(WgcCoreDsColors.madeiraOrange)),
 
     // Notícias & Informação
-    DailyNews("Daily News", "DN", Color(0xFFC4170C)),
-    MediaNetwork("Media Network", "MN", Color(0xFFFF6600)),
-    BusinessNews("Business News", "BN", Color(0xFF003F7F)),
+    DailyNews("Daily News", "DN", Color(WgcCoreDsColors.dailyNewsRed)),
+    MediaNetwork("Media Network", "MN", Color(WgcCoreDsColors.mediaNetworkOrange)),
+    BusinessNews("Business News", "BN", Color(WgcCoreDsColors.businessNewsBlue)),
 
     // Serviços Cívicos / Governo
-    CitizenServices("Citizen Services", "CS", Color(0xFF003399)),
-    TransitDigital("Transit Digital", "TD", Color(0xFF008037)),
-    EmploymentRecord("Employment Record", "ER", Color(0xFF005CA9)),
+    CitizenServices("Citizen Services", "CS", Color(WgcCoreDsColors.govBlue)),
+    TransitDigital("Transit Digital", "TD", Color(WgcCoreDsColors.transitDigitalGreen)),
+    EmploymentRecord("Employment Record", "ER", Color(WgcCoreDsColors.employmentRecordBlue)),
 
     // Especialidades Médicas & Verticais
-    Dental("Dental Clinic", "DC", Color(0xFF00A8B5)),
-    Telemedicine("Telemedicine", "TM", Color(0xFF00B39B)),
-    BeverageDelivery("Beverage Delivery", "BD", Color(0xFFFFCC00)),
-    Automotive("Automotive Marketplace", "AM", Color(0xFFE6192E)),
-    Hardware("Hardware & Tech", "HW", Color(0xFFFF6500))
+    Dental("Dental Clinic", "DC", Color(WgcCoreDsColors.dentalTeal)),
+    Telemedicine("Telemedicine", "TM", Color(WgcCoreDsColors.telemedicineGreen)),
+    BeverageDelivery("Beverage Delivery", "BD", Color(WgcCoreDsColors.beverageDeliveryYellow)),
+    Automotive("Automotive Marketplace", "AM", Color(WgcCoreDsColors.automotiveRed)),
+    Hardware("Hardware & Tech", "HW", Color(WgcCoreDsColors.hardwareOrange))
 }

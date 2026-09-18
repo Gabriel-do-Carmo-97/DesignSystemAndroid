@@ -19,7 +19,7 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
+fun WgcPrestigeBeautyHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
@@ -34,7 +34,7 @@ fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.brand, fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        Text("+${item.pointsReward} Beauty Club pts", color = Color(0xFFE91E63), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                        Text("+${item.pointsReward} Beauty Club pts", color = Color(WgcCoreDsColors.gadgetShopAccentPink), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }
@@ -44,17 +44,17 @@ fun WgcSephoraHomeTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcSephoraClubTemplate(modifier: Modifier = Modifier) =
+fun WgcPrestigeBeautyClubTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Beauty Club • Resgate de Miniaturas de Luxo", modifier = modifier)
 
 @Composable
-fun WgcSephoraTutorialsTemplate(modifier: Modifier = Modifier) =
+fun WgcPrestigeBeautyTutorialsTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Tutoriais de Maquiagem & Reviews Reais", modifier = modifier)
 
 @Composable
-fun WgcSephoraBagTemplate(modifier: Modifier = Modifier) =
+fun WgcPrestigeBeautyBagTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Sacola de Cosméticos • Amostras Grátis", modifier = modifier)
 
 @Composable
-fun WgcSephoraProfileTemplate(modifier: Modifier = Modifier) =
+fun WgcPrestigeBeautyProfileTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Perfil Beauty Pass & Histórico", modifier = modifier)

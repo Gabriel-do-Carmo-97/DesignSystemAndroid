@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
 import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
@@ -31,23 +32,23 @@ data class FoodDeliveryRestaurant(
     val distance: String,
     val deliveryTime: String,
     val deliveryFee: String,
-    val isSuper: Boolean = true
+    val isFeatured: Boolean
 )
 
 data class FoodDeliveryHomeUiState(
     val address: String = "Rua Augusta, 1000 - Consolação",
     val searchQuery: String = "",
     val categories: List<WgcCircularCategoryItem> = listOf(
-        WgcCircularCategoryItem("1", "Restaurantes", "🍔", Color(0xFFFDE8EA)),
-        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(0xFFE3F2FD)),
-        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(0xFFE8F5E9)),
-        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(0xFFFFF3E0)),
-        WgcCircularCategoryItem("5", "Pet", "🐶", Color(0xFFF3E5F5))
+        WgcCircularCategoryItem("1", "Restaurantes", "🍔", Color(WgcCoreDsColors.carePharmacyRedLight)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.quickShopCardOrange)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.quickShopCardPurple))
     ),
     val restaurants: List<FoodDeliveryRestaurant> = listOf(
         FoodDeliveryRestaurant("1", "Burger Bistro", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
-        FoodDeliveryRestaurant("2", "Outback Steakhouse", "4.9", "Carnes", "2.5 km", "35-45 min", "R$ 7,99", true),
-        FoodDeliveryRestaurant("3", "Sushi Hiroshi", "4.7", "Japonesa", "3.0 km", "40-50 min", "Grátis", false)
+        FoodDeliveryRestaurant("2", "Prime Steakhouse", "4.9", "Carnes", "2.5 km", "35-45 min", "R$ 7,99", true),
+        FoodDeliveryRestaurant("3", "Sushi Master", "4.7", "Japonesa", "3.0 km", "40-50 min", "Grátis", false)
     ),
     val hasCartItems: Boolean = true,
     val cartItemCount: Int = 2,
@@ -105,7 +106,7 @@ fun WgcFoodDeliveryHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(0xFFF7F7F7))
+                .background(Color(WgcCoreDsColors.foodDeliveryBgGray))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -124,7 +125,7 @@ fun WgcFoodDeliveryHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFEA1D2C))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.foodDeliveryRed))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
@@ -156,7 +157,7 @@ fun WgcFoodDeliveryHomeScreenContent(
                         distance = restaurant.distance,
                         deliveryTime = restaurant.deliveryTime,
                         deliveryFee = restaurant.deliveryFee,
-                        isFeatured = restaurant.isSuper
+                        isFeatured = restaurant.isFeatured
                     )
                 }
             }

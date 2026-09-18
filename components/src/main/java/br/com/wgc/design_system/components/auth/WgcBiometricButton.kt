@@ -25,7 +25,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
@@ -122,7 +124,7 @@ private fun WgcBiometricButtonPreview() {
             WgcBiometricButton(
                 label = "Login with touch ID",
                 style = WgcBiometricStyle.OutlinedSquare,
-                borderColor = Color(0xFFFFA000)
+                borderColor = Color(WgcCoreDsColors.warning)
             )
         }
     }

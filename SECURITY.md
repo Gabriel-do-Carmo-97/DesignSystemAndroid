@@ -1,40 +1,23 @@
-﻿# Política de Segurança — DesignSystemAndroid 🔒
+# Política de Segurança (Security Policy)
 
-O **DesignSystemAndroid** é a base visual corporativa da organização **WGC**, fornecendo componentes de UI, campos de dados sensíveis (inputs de senha, dados de pagamento, cartões) e fluxos completos de autenticação consumidos em produção por diversos aplicativos móveis.
+## Versões com Suporte Oficial
 
----
-
-## 🛡️ Versões Suportadas
-
-Apenas as versões mais recentes na branch ativa `master` recebem patches de segurança e hotfixes regulares:
-
-| Versão | Suporte a Patches de Segurança |
-|:---|:---|
-| `v0.1.x` (Atual) | Sim (Versão ativa em desenvolvimento) |
-| `< v0.1.0` | Não (Atualização recomendada) |
+| Módulo / Versão | Com Suporte? |
+| :--- | :--- |
+| `>= 1.0.0` | :white_check_mark: |
+| `< 1.0.0` | :x: |
 
 ---
 
-## 🚨 Como Reportar uma Vulnerabilidade
+## Reportando uma Vulnerabilidade
 
-**Por favor, NÃO abra Issues públicas no GitHub para reportar vulnerabilidades de segurança.**
+A segurança dos usuários e a integridade de dados corporativos é nossa prioridade máxima.
 
-Se você identificou uma falha de segurança (ex: vazamento de credenciais em previews, má sanitização em campos de texto, inputs não seguros ou dependências comprometidas):
-
-1. Envie um e-mail confidencial detalhado para:
-   📧 **`gabriel.desenvolvedor.97@gmail.com`**
-2. No assunto do e-mail, utilize:
-   `[SECURITY VULNERABILITY] DesignSystemAndroid - <Resumo Breve>`
-3. No corpo da mensagem, inclua:
-   - **Descrição detalhada:** Explicação do problema ou vetor de vulnerabilidade.
-   - **Módulos afetados:** (ex: `:core-ds`, `:design-system`, `:ds-templates`).
-   - **Passos para reprodução:** Trecho de código ou cenário demonstrativo.
-   - **Impacto potencial:** Avaliação de risco.
-
----
-
-## ⏱️ Compromisso e SLA de Resposta
-
-* **Confirmação inicial de recebimento:** Em até **24 a 48 horas**.
-* **Avaliação de severidade e triagem:** Em até **72 horas**.
-* **Lançamento de patch corretivo:** Prioridade máxima com publicação de release no GitHub Packages.
+Caso identifique uma vulnerabilidade de segurança:
+1. **NÃO crie uma Issue pública.**
+2. Envie um e-mail detalhado para `gabriel.desenvolvedor.97@gmail.com` com:
+   - Descrição da vulnerabilidade e escopo afetado.
+   - Passos reproduzíveis ou prova de conceito (PoC).
+   - Impacto potencial estimado.
+3. Você receberá uma confirmação de recebimento em até 48 horas úteis.
+4. Trabalharemos na correção antes de qualquer divulgação pública ou release de patch de segurança.

@@ -47,28 +47,28 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperCartItem
+import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryCartItem
 import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryMockData
 
 /**
- * Tela de Carrinho / Checkout Shopper:
+ * Tela de Carrinho / Checkout Fresh Grocery:
  * - Lista de itens no carrinho com controle de quantidade (+/-) e botão remover
  * - Campo de cupom de desconto com botão "Apply"
  * - Resumo financeiro (Subtotal, Desconto, Entrega, Total)
  * - Botão de Checkout fixo no rodapé
  */
 @Composable
-fun WgcShopperCartTemplate(
-    cartItems: List<ShopperCartItem> = listOf(
-        ShopperCartItem(FreshGroceryMockData.products[0], quantity = 1),
-        ShopperCartItem(FreshGroceryMockData.products[1], quantity = 2)
+fun WgcFreshGroceryCartTemplate(
+    cartItems: List<FreshGroceryCartItem> = listOf(
+        FreshGroceryCartItem(FreshGroceryMockData.products[0], quantity = 1),
+        FreshGroceryCartItem(FreshGroceryMockData.products[1], quantity = 2)
     ),
     promoCode: String = "",
     onPromoCodeChange: (String) -> Unit = {},
     onApplyPromo: () -> Unit = {},
-    onIncrement: (ShopperCartItem) -> Unit = {},
-    onDecrement: (ShopperCartItem) -> Unit = {},
-    onRemoveItem: (ShopperCartItem) -> Unit = {},
+    onIncrement: (FreshGroceryCartItem) -> Unit = {},
+    onDecrement: (FreshGroceryCartItem) -> Unit = {},
+    onRemoveItem: (FreshGroceryCartItem) -> Unit = {},
     onBackClick: () -> Unit = {},
     onCheckoutClick: () -> Unit = {},
     bottomBarSlot: (@Composable () -> Unit)? = null,
@@ -375,6 +375,6 @@ fun WgcShopperCartTemplate(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcShopperCartTemplatePreview() {
-    WgcShopperCartTemplate()
+private fun WgcFreshGroceryCartTemplatePreview() {
+    WgcFreshGroceryCartTemplate()
 }

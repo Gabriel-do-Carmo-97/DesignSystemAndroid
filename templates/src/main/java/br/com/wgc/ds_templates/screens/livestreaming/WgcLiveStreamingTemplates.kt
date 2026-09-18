@@ -19,7 +19,7 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 @Composable
-fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
+fun WgcLiveStreamingLiveTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
@@ -30,7 +30,7 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(LiveStreamingMockData.sampleLive) { stream ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1F1F23))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.liveStreamingDarkCard))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(stream.streamer, fontWeight = FontWeight.Bold, color = Color.White)
                         Text("${stream.game} • 🔴 ${stream.viewers} espectadores", color = Color.LightGray, fontSize = 14.sp)
@@ -42,17 +42,17 @@ fun WgcTwitchLiveTemplate(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun WgcTwitchBrowseTemplate(modifier: Modifier = Modifier) =
-    WgcGenericPlaceholderTemplate(title = "Explorar Categorias & Games", modifier = modifier)
+fun WgcLiveStreamingBrowseTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Explorar Categorias & Transmissões", modifier = modifier)
 
 @Composable
-fun WgcTwitchChatTemplate(modifier: Modifier = Modifier) =
+fun WgcLiveStreamingChatTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Chat da Transmissão & Emotes WGC", modifier = modifier)
 
 @Composable
-fun WgcTwitchSubsTemplate(modifier: Modifier = Modifier) =
-    WgcGenericPlaceholderTemplate(title = "Inscrições Prime & Bits", modifier = modifier)
+fun WgcLiveStreamingSubsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Inscrições & Apoios da Comunidade", modifier = modifier)
 
 @Composable
-fun WgcTwitchProfileTemplate(modifier: Modifier = Modifier) =
+fun WgcLiveStreamingProfileTemplate(modifier: Modifier = Modifier) =
     WgcGenericPlaceholderTemplate(title = "Painel de Criador de Conteúdo", modifier = modifier)

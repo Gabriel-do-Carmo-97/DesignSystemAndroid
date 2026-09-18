@@ -83,7 +83,7 @@ fun WgcPractitionerProfileCard(
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
-                    tint = Color(0xFFFFB800),
+                    tint = Color(WgcCoreDsColors.gymYellow),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Text(
@@ -113,7 +113,7 @@ fun WgcPractitionerProfileCard(
                 Text(
                     text = "Disponível: $nextSlot",
                     fontSize = 12.sp,
-                    color = Color(0xFF00875A),
+                    color = Color(WgcCoreDsColors.propertyRentalGreen),
                     fontWeight = FontWeight.Bold
                 )
             }

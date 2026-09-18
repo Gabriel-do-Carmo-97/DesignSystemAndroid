@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
@@ -27,7 +28,7 @@ fun WgcMarketplaceSearchHeaderBar(
     address: String = "Enviar para Cliente - Av. Central, 1000",
     searchQuery: String = "",
     searchPlaceholder: String = "Buscar produtos, marcas e mais...",
-    headerColor: Color = Color(0xFFFFE600),
+    headerColor: Color = Color(WgcCoreDsColors.marketplaceYellow),
     onAddressClick: () -> Unit = {},
     onSearchQueryChange: (String) -> Unit = {},
     onCartClick: () -> Unit = {},
@@ -61,7 +62,7 @@ fun WgcMarketplaceSearchHeaderBar(
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notificações",
-                        tint = Color(0xFF333333)
+                        tint = Color(WgcCoreDsColors.grey900)
                     )
                 }
 
@@ -69,7 +70,7 @@ fun WgcMarketplaceSearchHeaderBar(
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = "Carrinho",
-                        tint = Color(0xFF333333)
+                        tint = Color(WgcCoreDsColors.grey900)
                     )
                 }
             }
@@ -86,12 +87,12 @@ fun WgcMarketplaceSearchHeaderBar(
                     imageVector = Icons.Default.LocationOn,
                     contentDescription = null,
                     modifier = Modifier.size(16.dp),
-                    tint = Color(0xFF333333)
+                    tint = Color(WgcCoreDsColors.grey900)
                 )
                 Text(
                     text = address,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF333333),
+                    color = Color(WgcCoreDsColors.grey900),
                     fontWeight = FontWeight.Medium
                 )
             }

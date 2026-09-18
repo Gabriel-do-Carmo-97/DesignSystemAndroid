@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
 import br.com.wgc.design_system.components.navigation.WgcAddressHeaderBar
@@ -23,7 +24,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-data class NineNineRestaurant(
+data class QuickFoodDeliveryRestaurantItem(
     val id: String,
     val name: String,
     val rating: String,
@@ -33,45 +34,45 @@ data class NineNineRestaurant(
     val discountTag: String
 )
 
-data class NineNineFoodHomeUiState(
+data class QuickFoodDeliveryHomeUiState(
     val address: String = "Av. Paulista, 1000 - Bela Vista",
     val searchQuery: String = "",
     val categories: List<WgcSquareCategoryItem> = listOf(
-        WgcSquareCategoryItem("1", "Entrega 15m", "⚡", Color(0xFF0B2545)),
-        WgcSquareCategoryItem("2", "Restaurantes", "🍕", Color(0xFFE3F2FD)),
-        WgcSquareCategoryItem("3", "Cupons", "🎟️", Color(0xFFFFF8E1)),
-        WgcSquareCategoryItem("4", "Mercado", "🛒", Color(0xFFE8F5E9)),
-        WgcSquareCategoryItem("5", "Bebidas", "🥤", Color(0xFFF3E5F5))
+        WgcSquareCategoryItem("1", "Entrega 15m", "⚡", Color(WgcCoreDsColors.foodDeliveryDarkBlue)),
+        WgcSquareCategoryItem("2", "Restaurantes", "🍕", Color(WgcCoreDsColors.quickShopCardBlue)),
+        WgcSquareCategoryItem("3", "Cupons", "🎟️", Color(WgcCoreDsColors.quickShopPeachBg)),
+        WgcSquareCategoryItem("4", "Mercado", "🛒", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
+        WgcSquareCategoryItem("5", "Bebidas", "🥤", Color(WgcCoreDsColors.quickShopCardPurple))
     ),
-    val restaurants: List<NineNineRestaurant> = listOf(
-        NineNineRestaurant("1", "Pizza Hut", "4.9", "Pizzaria", "15-25 min", "Grátis", "R$ 12 OFF"),
-        NineNineRestaurant("2", "Habib's", "4.6", "Esfiha", "20-30 min", "R$ 3,99", "Frete Grátis"),
-        NineNineRestaurant("3", "China in Box", "4.8", "Chinesa", "25-35 min", "Grátis", "Cupom 20%")
+    val restaurants: List<QuickFoodDeliveryRestaurantItem> = listOf(
+        QuickFoodDeliveryRestaurantItem("1", "Pizza Express", "4.9", "Pizzaria", "15-25 min", "Grátis", "R$ 12 OFF"),
+        QuickFoodDeliveryRestaurantItem("2", "Burger House", "4.6", "Lanches", "20-30 min", "R$ 3,99", "Frete Grátis"),
+        QuickFoodDeliveryRestaurantItem("3", "Wok Asian", "4.8", "Chinesa", "25-35 min", "Grátis", "Cupom 20%")
     ),
     val hasCartItems: Boolean = true,
     val cartItemCount: Int = 3,
     val cartTotal: String = "R$ 62,50",
-    val cartRestaurantName: String = "Pizza Hut"
+    val cartRestaurantName: String = "Pizza Express"
 )
 
-abstract class BaseNineNineFoodHomeViewModel : ViewModel() {
-    abstract val uiState: StateFlow<NineNineFoodHomeUiState>
+abstract class BaseQuickFoodDeliveryHomeViewModel : ViewModel() {
+    abstract val uiState: StateFlow<QuickFoodDeliveryHomeUiState>
     abstract fun onSearchQueryChange(query: String)
     abstract fun onAddressClick()
     abstract fun onCartClick()
 }
 
-class FakeNineNineFoodHomeViewModel : BaseNineNineFoodHomeViewModel() {
-    override val uiState: StateFlow<NineNineFoodHomeUiState> = MutableStateFlow(NineNineFoodHomeUiState()).asStateFlow()
+class FakeQuickFoodDeliveryHomeViewModel : BaseQuickFoodDeliveryHomeViewModel() {
+    override val uiState: StateFlow<QuickFoodDeliveryHomeUiState> = MutableStateFlow(QuickFoodDeliveryHomeUiState()).asStateFlow()
     override fun onSearchQueryChange(query: String) {}
     override fun onAddressClick() {}
     override fun onCartClick() {}
 }
 
 @Composable
-fun NineNineFoodHomeScreenTemplate(viewModel: BaseNineNineFoodHomeViewModel) {
+fun WgcQuickFoodDeliveryHomeScreenTemplate(viewModel: BaseQuickFoodDeliveryHomeViewModel) {
     val state by viewModel.uiState.collectAsState()
-    NineNineFoodHomeScreenContent(
+    WgcQuickFoodDeliveryHomeScreenContent(
         state = state,
         onSearchQueryChange = { viewModel.onSearchQueryChange(it) },
         onAddressClick = { viewModel.onAddressClick() },
@@ -80,9 +81,9 @@ fun NineNineFoodHomeScreenTemplate(viewModel: BaseNineNineFoodHomeViewModel) {
 }
 
 @Composable
-fun NineNineFoodHomeScreenContent(
+fun WgcQuickFoodDeliveryHomeScreenContent(
     modifier: Modifier = Modifier,
-    state: NineNineFoodHomeUiState,
+    state: QuickFoodDeliveryHomeUiState,
     onSearchQueryChange: (String) -> Unit,
     onAddressClick: () -> Unit,
     onCartClick: () -> Unit
@@ -104,7 +105,7 @@ fun NineNineFoodHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(0xFFF5F5F5))
+                .background(Color(WgcCoreDsColors.grey100))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -121,7 +122,7 @@ fun NineNineFoodHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFF0B2545))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
@@ -138,7 +139,7 @@ fun NineNineFoodHomeScreenContent(
                     text = "Restaurantes em Destaque",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF0B2545)
+                    color = Color(WgcCoreDsColors.foodDeliveryDarkBlue)
                 )
             }
 
@@ -171,10 +172,10 @@ private fun PaddingBox(content: @Composable () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-private fun NineNineFoodHomePreview() {
+private fun QuickFoodDeliveryHomePreview() {
     MaterialTheme {
-        NineNineFoodHomeScreenContent(
-            state = NineNineFoodHomeUiState(),
+        WgcQuickFoodDeliveryHomeScreenContent(
+            state = QuickFoodDeliveryHomeUiState(),
             onSearchQueryChange = {},
             onAddressClick = {},
             onCartClick = {}

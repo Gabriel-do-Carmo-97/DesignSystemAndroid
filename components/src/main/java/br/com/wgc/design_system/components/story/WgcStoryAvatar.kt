@@ -21,6 +21,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
@@ -29,6 +30,9 @@ enum class StoryState {
     UNSEEN, SEEN, CLOSE_FRIENDS
 }
 
+/**
+ * Componente de Avatar para Stories com anel gradiente de status (WgcStoryAvatar).
+ */
 @Composable
 fun WgcStoryAvatar(
     modifier: Modifier = Modifier,
@@ -43,17 +47,17 @@ fun WgcStoryAvatar(
     val ringBorder = when (storyState) {
         StoryState.UNSEEN -> Brush.sweepGradient(
             listOf(
-                Color(0xFF833AB4),
-                Color(0xFFFD1D1D),
-                Color(0xFFF77737),
-                Color(0xFF833AB4)
+                Color(WgcCoreDsColors.courseMarketplacePurple),
+                Color(WgcCoreDsColors.visualDiscoveryRed),
+                Color(WgcCoreDsColors.orange500),
+                Color(WgcCoreDsColors.courseMarketplacePurple)
             )
         )
         StoryState.CLOSE_FRIENDS -> Brush.horizontalGradient(
-            listOf(Color(0xFF4CAF50), Color(0xFF81C784))
+            listOf(Color(WgcCoreDsColors.success), Color(WgcCoreDsColors.megaStorerSecondary))
         )
         StoryState.SEEN -> Brush.horizontalGradient(
-            listOf(Color(0xFFBDBDBD), Color(0xFFE0E0E0))
+            listOf(Color(WgcCoreDsColors.gray400), Color(WgcCoreDsColors.gray300))
         )
     }
 

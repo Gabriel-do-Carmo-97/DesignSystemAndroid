@@ -622,4 +622,23 @@ object WgcCoreDsColors {
     val hardwareNavy = Color.parseColor("#002B49")
     val hardwareOrangeLight = Color.parseColor("#FFF0E6")
     val hardwareNinjaBlack = Color.parseColor("#121212")
+
+    // Provedores Sociais de Autenticação
+    val socialFacebook = Color.parseColor("#1877F2")
+    val socialInstagram = Color.parseColor("#E4405F")
+    val socialLinkedIn = Color.parseColor("#0A66C2")
+
+    // Gaming Store & Live Streaming
+    val gamingStoreCardBg = Color.parseColor("#2A475E")
+    val gamingStoreAccent = Color.parseColor("#66C0F4")
+    val liveStreamingDarkCard = Color.parseColor("#1F1F23")
+
+    // Product Variant Colors
+    val productLemon = Color.parseColor("#F9E79F")
+    val productTan = Color.parseColor("#A0522D")
+    val productTeal = Color.parseColor("#20B2AA")
+    val productGreen = Color.parseColor("#00C853")
+
+    // Fresh Grocery
+    val freshGroceryEmerald = Color.parseColor("#00B368")
 }

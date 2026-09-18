@@ -18,10 +18,10 @@ fun WgcGamingStoreFactory(
     modifier: Modifier = Modifier
 ) {
     when (screen) {
-        WgcGamingStoreScreen.STORE -> WgcSteamStoreTemplate(modifier = modifier)
-        WgcGamingStoreScreen.LIBRARY -> WgcSteamLibraryTemplate(modifier = modifier)
-        WgcGamingStoreScreen.COMMUNITY -> WgcSteamCommunityTemplate(modifier = modifier)
-        WgcGamingStoreScreen.WISHLIST -> WgcSteamWishlistTemplate(modifier = modifier)
-        WgcGamingStoreScreen.PROFILE -> WgcSteamProfileTemplate(modifier = modifier)
+        WgcGamingStoreScreen.STORE -> WgcGamingStoreCatalogTemplate(modifier = modifier)
+        WgcGamingStoreScreen.LIBRARY -> WgcGamingStoreLibraryTemplate(modifier = modifier)
+        WgcGamingStoreScreen.COMMUNITY -> WgcGamingStoreCommunityTemplate(modifier = modifier)
+        WgcGamingStoreScreen.WISHLIST -> WgcGamingStoreWishlistTemplate(modifier = modifier)
+        WgcGamingStoreScreen.PROFILE -> WgcGamingStoreProfileTemplate(modifier = modifier)
     }
 }

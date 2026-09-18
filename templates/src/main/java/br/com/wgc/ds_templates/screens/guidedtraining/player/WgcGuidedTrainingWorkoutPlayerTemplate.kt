@@ -41,7 +41,7 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.fitness.WgcNtcTimerDisplay
+import br.com.wgc.design_system.components.fitness.WgcFitnessTimerDisplay
 import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockData
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcWorkoutItem
 
@@ -129,7 +129,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                 if (slotTimer != null) {
                     slotTimer()
                 } else {
-                    WgcNtcTimerDisplay(
+                    WgcFitnessTimerDisplay(
                         exerciseName = currentExercise?.name ?: "Exercício",
                         exerciseIndex = currentExerciseIndex + 1,
                         totalExercises = workout.exercises.size,
@@ -138,11 +138,9 @@ fun WgcNtcWorkoutPlayerTemplate(
                         isPlaying = isPlaying,
                         nextExerciseName = nextExercise?.let { "${it.name} • ${it.durationSeconds}s" }
                             ?: "Fim do Treino!",
-                        coachTip = currentExercise?.coachTip
-                            ?: "Mantenha o ritmo e a postura firme!",
                         onPlayPauseToggle = onPlayPauseToggle,
-                        onPreviousClick = onPreviousClick,
-                        onNextClick = onNextClick
+                        onRewind = onPreviousClick,
+                        onSkip = onNextClick
                     )
                 }
             }

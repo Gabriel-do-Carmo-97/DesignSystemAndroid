@@ -2,6 +2,7 @@ package br.com.wgc.ds_templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import br.com.wgc.design_system.components.navigation.WgcSupermarketNavItem
 import br.com.wgc.ds_templates.screens.premiumgrocery.adega.WgcPdaAdegaTemplate
 import br.com.wgc.ds_templates.screens.premiumgrocery.cart.WgcPdaGourmetCartTemplate
 import br.com.wgc.ds_templates.screens.premiumgrocery.discounts.WgcPdaDiscountsTemplate
@@ -14,9 +15,6 @@ import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaUserProfile
 import br.com.wgc.ds_templates.screens.premiumgrocery.model.PdaWineItem
 import br.com.wgc.ds_templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate
 
-/**
- * Telas disponíveis na suíte Supermercado Gourmet Premium.
- */
 enum class WgcPremiumGroceryScreen {
     HOME,
     ADEGA,
@@ -25,12 +23,6 @@ enum class WgcPremiumGroceryScreen {
     PROFILE
 }
 
-/**
- * Fábrica unificada para telas do Supermercado Gourmet Premium (WgcPremiumGroceryFactory).
- *
- * Fornece defaults corporativos prontos para produção, com suporte total
- * a State Hoisting e substituição granular via slots.
- */
 @Composable
 fun WgcPremiumGroceryFactory(
     modifier: Modifier = Modifier,
@@ -40,14 +32,14 @@ fun WgcPremiumGroceryFactory(
     sommelierWines: List<PdaWineItem> = PremiumGroceryMockData.sommelierWines,
     discounts: List<PdaDiscountItem> = PremiumGroceryMockData.discounts,
     cartItems: List<PdaCartItem> = PremiumGroceryMockData.cartItems,
-    selectedNavIndex: Int = when (screen) {
-        WgcPremiumGroceryScreen.HOME -> 0
-        WgcPremiumGroceryScreen.ADEGA -> 1
-        WgcPremiumGroceryScreen.DISCOUNTS -> 2
-        WgcPremiumGroceryScreen.CART -> 3
-        WgcPremiumGroceryScreen.PROFILE -> 4
+    selectedNavItem: WgcSupermarketNavItem = when (screen) {
+        WgcPremiumGroceryScreen.HOME -> WgcSupermarketNavItem.HOME
+        WgcPremiumGroceryScreen.ADEGA -> WgcSupermarketNavItem.ADEGA
+        WgcPremiumGroceryScreen.DISCOUNTS -> WgcSupermarketNavItem.DISCOUNTS
+        WgcPremiumGroceryScreen.CART -> WgcSupermarketNavItem.CART
+        WgcPremiumGroceryScreen.PROFILE -> WgcSupermarketNavItem.PROFILE
     },
-    onNavSelect: (Int) -> Unit = {},
+    onNavItemClick: (WgcSupermarketNavItem) -> Unit = {},
     onProductQuantityChange: (String, Int) -> Unit = { _, _ -> },
     onWineQuantityChange: (String, Int) -> Unit = { _, _ -> },
     onProductFavoriteToggle: (String) -> Unit = {},
@@ -64,8 +56,8 @@ fun WgcPremiumGroceryFactory(
                 userProfile = userProfile,
                 featuredProducts = featuredProducts,
                 sommelierPicks = sommelierWines,
-                selectedNavIndex = selectedNavIndex,
-                onNavSelect = onNavSelect,
+                selectedNavItem = selectedNavItem,
+                onNavItemClick = onNavItemClick,
                 onProductQuantityChange = onProductQuantityChange,
                 onWineQuantityChange = onWineQuantityChange,
                 onProductFavoriteToggle = onProductFavoriteToggle,
@@ -77,8 +69,8 @@ fun WgcPremiumGroceryFactory(
             WgcPdaAdegaTemplate(
                 modifier = modifier,
                 wines = sommelierWines,
-                selectedNavIndex = selectedNavIndex,
-                onNavSelect = onNavSelect,
+                selectedNavItem = selectedNavItem,
+                onNavItemClick = onNavItemClick,
                 onWineQuantityChange = onWineQuantityChange,
                 headerSlot = headerSlot,
                 footerSlot = footerSlot
@@ -88,8 +80,8 @@ fun WgcPremiumGroceryFactory(
             WgcPdaDiscountsTemplate(
                 modifier = modifier,
                 discounts = discounts,
-                selectedNavIndex = selectedNavIndex,
-                onNavSelect = onNavSelect,
+                selectedNavItem = selectedNavItem,
+                onNavItemClick = onNavItemClick,
                 onActivateAllClick = onActivateAllDiscountsClick,
                 onToggleDiscount = onToggleDiscount,
                 headerSlot = headerSlot,
@@ -100,8 +92,8 @@ fun WgcPremiumGroceryFactory(
             WgcPdaGourmetCartTemplate(
                 modifier = modifier,
                 cartItems = cartItems,
-                selectedNavIndex = selectedNavIndex,
-                onNavSelect = onNavSelect,
+                selectedNavItem = selectedNavItem,
+                onNavItemClick = onNavItemClick,
                 onQuantityChange = onProductQuantityChange,
                 onCheckoutClick = onCheckoutClick,
                 headerSlot = headerSlot,
@@ -112,8 +104,8 @@ fun WgcPremiumGroceryFactory(
             WgcPdaClienteMaisProfileTemplate(
                 modifier = modifier,
                 userProfile = userProfile,
-                selectedNavIndex = selectedNavIndex,
-                onNavSelect = onNavSelect,
+                selectedNavItem = selectedNavItem,
+                onNavItemClick = onNavItemClick,
                 headerSlot = headerSlot,
                 footerSlot = footerSlot
             )

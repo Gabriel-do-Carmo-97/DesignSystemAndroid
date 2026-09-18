@@ -14,11 +14,12 @@ lifecycleViewmodelKtx = "2.10.0"
 material = "1.13.0"
 mockk = "1.14.11"
 screenshot = "0.0.1-alpha16"
-kotlinSerialization = "2.4.10"
+kotlinSerialization = "2.2.20"
 kotlinxSerializationCore = "1.11.0"
 detekt = "1.23.8"
 sonarqube = "7.4.0.8496"
 dokka = "1.9.20"
+bcv = "0.17.0"
 
 navigationCompose = "2.8.8"
 
@@ -55,7 +56,7 @@ kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.4.10" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
@@ -63,3 +64,4 @@ jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serializati
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+binary-compatibility-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "bcv" }

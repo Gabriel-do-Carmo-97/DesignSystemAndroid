@@ -18,10 +18,10 @@ fun WgcCommunityChatFactory(
     modifier: Modifier = Modifier
 ) {
     when (screen) {
-        WgcCommunityChatScreen.SERVERS -> WgcDiscordServersTemplate(modifier = modifier)
-        WgcCommunityChatScreen.VOICE -> WgcDiscordVoiceTemplate(modifier = modifier)
-        WgcCommunityChatScreen.DIRECT -> WgcDiscordDirectTemplate(modifier = modifier)
-        WgcCommunityChatScreen.EXPLORE -> WgcDiscordExploreTemplate(modifier = modifier)
-        WgcCommunityChatScreen.PROFILE -> WgcDiscordProfileTemplate(modifier = modifier)
+        WgcCommunityChatScreen.SERVERS -> WgcCommunityChatServersTemplate(modifier = modifier)
+        WgcCommunityChatScreen.VOICE -> WgcCommunityChatVoiceTemplate(modifier = modifier)
+        WgcCommunityChatScreen.DIRECT -> WgcCommunityChatDirectTemplate(modifier = modifier)
+        WgcCommunityChatScreen.EXPLORE -> WgcCommunityChatExploreTemplate(modifier = modifier)
+        WgcCommunityChatScreen.PROFILE -> WgcCommunityChatProfileTemplate(modifier = modifier)
     }
 }

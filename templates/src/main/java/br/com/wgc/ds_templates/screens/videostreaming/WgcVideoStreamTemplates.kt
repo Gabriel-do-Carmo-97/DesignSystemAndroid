@@ -32,10 +32,10 @@ fun WgcVideoStreamHomeTemplate(modifier: Modifier = Modifier) {
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
             item { Text("Top 10 Séries Hoje no Brasil", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp) }
             items(VideoStreamMockData.sampleTop10) { show ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSurface))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                         Text(show.title, fontWeight = FontWeight.Bold, color = Color.White, fontSize = 14.sp)
-                        Text("${show.matchPercentage} • ${show.maturity} • ${show.genre}", color = Color(0xFF46D369), fontSize = 14.sp)
+                        Text("${show.matchPercentage} • ${show.maturity} • ${show.genre}", color = Color(WgcCoreDsColors.audioStreamingGreen), fontSize = 14.sp)
                     }
                 }
             }

@@ -39,8 +39,8 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.navigation.WgcNtcBottomNav
-import br.com.wgc.design_system.components.navigation.WgcNtcNavItem
+import br.com.wgc.design_system.components.navigation.WgcFitnessBottomNav
+import br.com.wgc.design_system.components.navigation.WgcFitnessNavItem
 import br.com.wgc.ds_templates.screens.guidedtraining.model.NtcActivityStats
 import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockData
 
@@ -56,8 +56,8 @@ import br.com.wgc.ds_templates.screens.guidedtraining.model.GuidedTrainingMockDa
 fun WgcNtcActivityTemplate(
     stats: NtcActivityStats,
     modifier: Modifier = Modifier,
-    selectedNavItem: WgcNtcNavItem = WgcNtcNavItem.ACTIVITY,
-    onNavItemClick: (WgcNtcNavItem) -> Unit = {},
+    selectedNavItem: WgcFitnessNavItem = WgcFitnessNavItem.ACTIVITY,
+    onNavItemClick: (WgcFitnessNavItem) -> Unit = {},
     slotHeader: (@Composable () -> Unit)? = null,
     slotBottomNav: (@Composable () -> Unit)? = null
 ) {
@@ -67,7 +67,7 @@ fun WgcNtcActivityTemplate(
             if (slotBottomNav != null) {
                 slotBottomNav()
             } else {
-                WgcNtcBottomNav(
+                WgcFitnessBottomNav(
                     selectedItem = selectedNavItem,
                     onItemSelected = onNavItemClick
                 )

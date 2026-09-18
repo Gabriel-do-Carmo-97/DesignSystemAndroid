@@ -40,29 +40,29 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcDrogaRaiaPrescriptionCard
-import br.com.wgc.design_system.components.cards.WgcDrogaRaiaProductCard
-import br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab
-import br.com.wgc.design_system.components.navigation.WgcDrogaRaiaBottomNav
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaMockData
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaProduct
-import br.com.wgc.ds_templates.screens.pharmacychain.model.DrogaRaiaUserProfile
+import br.com.wgc.design_system.components.cards.WgcPharmacyPrescriptionCard
+import br.com.wgc.design_system.components.cards.WgcPharmacyProductCard
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
+import br.com.wgc.design_system.components.navigation.WgcPharmacyBottomNav
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyMockData
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyProduct
+import br.com.wgc.ds_templates.screens.pharmacychain.model.PharmacyUserProfile
 
 @Composable
 fun WgcDrogaRaiaHomeTemplate(
     modifier: Modifier = Modifier,
-    userProfile: DrogaRaiaUserProfile = DrogaRaiaMockData.defaultUser,
-    products: List<DrogaRaiaProduct> = DrogaRaiaMockData.sampleProducts,
-    activeTab: DrogaRaiaNavTab = DrogaRaiaNavTab.HOME,
-    onTabSelected: (DrogaRaiaNavTab) -> Unit = {},
-    onProductClick: (DrogaRaiaProduct) -> Unit = {},
+    userProfile: PharmacyUserProfile = PharmacyMockData.defaultUser,
+    products: List<PharmacyProduct> = PharmacyMockData.sampleProducts,
+    activeTab: PharmacyNavTab = PharmacyNavTab.HOME,
+    onTabSelected: (PharmacyNavTab) -> Unit = {},
+    onProductClick: (PharmacyProduct) -> Unit = {},
     onUploadPrescription: () -> Unit = {},
     onTalkToPharmacist: () -> Unit = {}
 ) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         bottomBar = {
-            WgcDrogaRaiaBottomNav(
+            WgcPharmacyBottomNav(
                 selectedTab = activeTab,
                 onTabSelected = onTabSelected,
                 cartBadgeCount = 2
@@ -76,27 +76,23 @@ fun WgcDrogaRaiaHomeTemplate(
             contentPadding = PaddingValues(bottom = WgcCoreDsSpacing.xl32.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
-            // Header da Farmácia com Busca e Localização
             item {
                 RaiaHeaderSection(userProfile = userProfile)
             }
 
-            // Card de Prescrição Médica & Farmacêutico Digital
             item {
                 Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)) {
-                    WgcDrogaRaiaPrescriptionCard(
+                    WgcPharmacyPrescriptionCard(
                         onUploadPrescription = onUploadPrescription,
                         onTalkToPharmacist = onTalkToPharmacist
                     )
                 }
             }
 
-            // Banner Entrega Vizinha / Expressa
             item {
                 RaiaFastDeliveryBanner()
             }
 
-            // Título Seção Medicamentos & Produtos
             item {
                 Text(
                     text = "Mais Vendidos e Cuidados Pessoais",
@@ -107,16 +103,15 @@ fun WgcDrogaRaiaHomeTemplate(
                 )
             }
 
-            // Lista de Produtos Farmacêuticos
             items(products) { product ->
                 Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)) {
-                    WgcDrogaRaiaProductCard(
+                    WgcPharmacyProductCard(
                         title = product.title,
                         laboratory = product.laboratory,
                         presentation = product.presentation,
                         price = product.price,
                         originalPrice = product.originalPrice,
-                        raiaClientPrice = product.raiaClientPrice,
+                        pharmacyClientPrice = product.pharmacyClientPrice,
                         stripe = product.stripe,
                         requiresPrescription = product.requiresPrescription,
                         hasSubscription = product.hasSubscription,
@@ -129,7 +124,7 @@ fun WgcDrogaRaiaHomeTemplate(
 }
 
 @Composable
-private fun RaiaHeaderSection(userProfile: DrogaRaiaUserProfile) {
+private fun RaiaHeaderSection(userProfile: PharmacyUserProfile) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -225,7 +220,7 @@ private fun RaiaFastDeliveryBanner() {
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = "Ou retire grátis em qualquer farmácia Raia em 15 minutos",
+                    text = "Ou retire grátis em qualquer farmácia em 15 minutos",
                     color = Color(WgcCoreDsColors.pharmacyChainSurface).copy(alpha = 0.85f),
                     fontSize = 10.sp
                 )

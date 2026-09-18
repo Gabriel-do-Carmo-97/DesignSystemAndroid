@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
@@ -62,8 +63,8 @@ fun WgcBrandAddressRegistrationScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseBrandAddressAuthViewModel,
     brandName: String = "Food Delivery",
-    brandLogoText: String = "iF",
-    brandColor: Color = Color(0xFFEA1D2C),
+    brandLogoText: String = "FD",
+    brandColor: Color = Color(WgcCoreDsColors.foodDeliveryRed),
     onBackClick: () -> Unit = {}
 ) {
     val state by viewModel.uiState.collectAsState()

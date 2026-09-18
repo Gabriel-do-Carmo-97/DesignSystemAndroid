@@ -36,11 +36,11 @@ import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 
 /**
- * Tela Splash & Onboarding do Shopper:
- * Fundo verde vibrante degradê, logo e ícone do Shopper, e botão CTA branco "Get Started".
+ * Tela Splash & Onboarding do Fresh Grocery:
+ * Fundo verde vibrante degradê, logo e ícone, e botão CTA branco "Get Started".
  */
 @Composable
-fun WgcShopperSplashTemplate(
+fun WgcFreshGrocerySplashTemplate(
     onGetStartedClick: () -> Unit = {},
     logoSlot: (@Composable () -> Unit)? = null,
     buttonSlot: (@Composable () -> Unit)? = null,
@@ -134,6 +134,6 @@ fun WgcShopperSplashTemplate(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcShopperSplashTemplatePreview() {
-    WgcShopperSplashTemplate()
+private fun WgcFreshGrocerySplashTemplatePreview() {
+    WgcFreshGrocerySplashTemplate()
 }

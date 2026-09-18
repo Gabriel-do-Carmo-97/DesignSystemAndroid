@@ -45,10 +45,10 @@ import br.com.wgc.core_ds.WgcCoreDsElevation
 import br.com.wgc.core_ds.WgcCoreDsSize
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryMockData
-import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperProduct
+import br.com.wgc.ds_templates.screens.freshgrocery.model.FreshGroceryProductItem
 
 /**
- * Tela de Detalhes do Produto Shopper:
+ * Tela de Detalhes do Produto Fresh Grocery:
  * - TopBar com botão voltar e botão favoritar
  * - Área de imagem grande com tag de desconto
  * - Título, avaliação (estrelas), preço
@@ -57,8 +57,8 @@ import br.com.wgc.ds_templates.screens.freshgrocery.model.ShopperProduct
  * - Barra fixa inferior com botão "Add to Cart" em verde esmeralda
  */
 @Composable
-fun WgcShopperProductDetailTemplate(
-    product: ShopperProduct = FreshGroceryMockData.products[0],
+fun WgcFreshGroceryProductDetailTemplate(
+    product: FreshGroceryProductItem = FreshGroceryMockData.products[0],
     selectedColor: String = "Green",
     selectedSize: String = "M",
     onColorSelect: (String) -> Unit = {},
@@ -355,6 +355,6 @@ fun WgcShopperProductDetailTemplate(
 
 @Preview(showBackground = true)
 @Composable
-private fun WgcShopperProductDetailTemplatePreview() {
-    WgcShopperProductDetailTemplate()
+private fun WgcFreshGroceryProductDetailTemplatePreview() {
+    WgcFreshGroceryProductDetailTemplate()
 }

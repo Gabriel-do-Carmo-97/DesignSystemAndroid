@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.cards.WgcDrogasilVaccineCard
+import br.com.wgc.design_system.components.cards.WgcHealthVaccineCard
 import br.com.wgc.ds_templates.screens.carepharmacy.model.CarePharmacyMockData
 import br.com.wgc.ds_templates.screens.carepharmacy.model.DrogasilVaccine
 
@@ -49,7 +49,7 @@ fun WgcDrogasilVaccinesTemplate(
             }
 
             items(vaccines) { vaccine ->
-                WgcDrogasilVaccineCard(
+                WgcHealthVaccineCard(
                     vaccineName = vaccine.name,
                     targetAudience = vaccine.audience,
                     price = vaccine.price,

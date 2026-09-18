@@ -92,7 +92,7 @@ fun WgcKutukuOrderTrackingScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(240.dp)
-                .background(Color(0xFFE8F5E9)),
+                .background(Color(WgcCoreDsColors.premiumGroceryGreenLight)),
             contentAlignment = Alignment.Center
         ) {
             // Linhas de rua decorativas

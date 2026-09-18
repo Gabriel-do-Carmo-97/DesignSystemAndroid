@@ -80,14 +80,15 @@ import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
 import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.marketplacescreen.auth.*
-import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeNineNineFoodHomeViewModel
-import br.com.wgc.ds_templates.screens.quickfooddelivery.NineNineFoodHomeScreenTemplate
+import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeQuickFoodDeliveryHomeViewModel
+import br.com.wgc.ds_templates.screens.quickfooddelivery.WgcQuickFoodDeliveryHomeScreenTemplate
 import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.*
 import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
 import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
 import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
 import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
 import br.com.wgc.ds_templates.screens.dealmarketplace.auth.*
+import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*
 import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
 import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
 import br.com.wgc.ds_templates.screens.ridehailing.auth.*
@@ -301,8 +302,8 @@ fun DesignSystemCatalogApp() {
     var selectedSteamScreenIndex by remember { mutableIntStateOf(0) }
     val twitchScreens = br.com.wgc.ds_templates.factories.WgcLiveStreamingScreen.entries
     var selectedTwitchScreenIndex by remember { mutableIntStateOf(0) }
-    val discordScreens = br.com.wgc.ds_templates.factories.WgcCommunityChatScreen.entries
-    var selectedDiscordScreenIndex by remember { mutableIntStateOf(0) }
+    val communityChatScreens = br.com.wgc.ds_templates.factories.WgcCommunityChatScreen.entries
+    var selectedCommunityChatScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 12: Produtividade
     val notionScreens = br.com.wgc.ds_templates.factories.WgcWorkspaceDocsScreen.entries
     var selectedNotionScreenIndex by remember { mutableIntStateOf(0) }
@@ -805,11 +806,11 @@ fun DesignSystemCatalogApp() {
                 }
             }
             32 -> {
-                PrimaryScrollableTabRow(selectedTabIndex = selectedDiscordScreenIndex) {
-                    discordScreens.forEachIndexed { index, screen ->
+                PrimaryScrollableTabRow(selectedTabIndex = selectedCommunityChatScreenIndex) {
+                    communityChatScreens.forEachIndexed { index, screen ->
                         Tab(
-                            selected = selectedDiscordScreenIndex == index,
-                            onClick = { selectedDiscordScreenIndex = index },
+                            selected = selectedCommunityChatScreenIndex == index,
+                            onClick = { selectedCommunityChatScreenIndex = index },
                             text = { Text(text = "${index + 1}. ${screen.name}", fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold) }
                         )
                     }
@@ -1395,7 +1396,7 @@ fun DesignSystemCatalogApp() {
                     val currentScreen = pdaScreens[selectedPdaScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcPremiumGroceryFactory(
                         screen = currentScreen,
-                        onNavSelect = { navIdx -> selectedPdaScreenIndex = navIdx }
+                        onNavItemClick = { navItem -> selectedPdaScreenIndex = navItem.ordinal }
                     )
                 }
                 8 -> {
@@ -1419,11 +1420,11 @@ fun DesignSystemCatalogApp() {
                         screen = currentScreen,
                         onTabSelected = { tab ->
                             selectedDrogaRaiaScreenIndex = when (tab) {
-                                br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab.HOME -> 0
-                                br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab.PRESCRIPTIONS -> 1
-                                br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab.SUBSCRIPTION -> 2
-                                br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab.CART -> 3
-                                br.com.wgc.design_system.components.navigation.DrogaRaiaNavTab.PROFILE -> 4
+                                br.com.wgc.design_system.components.navigation.PharmacyNavTab.HOME -> 0
+                                br.com.wgc.design_system.components.navigation.PharmacyNavTab.PRESCRIPTIONS -> 1
+                                br.com.wgc.design_system.components.navigation.PharmacyNavTab.SUBSCRIPTION -> 2
+                                br.com.wgc.design_system.components.navigation.PharmacyNavTab.CART -> 3
+                                br.com.wgc.design_system.components.navigation.PharmacyNavTab.PROFILE -> 4
                             }
                         }
                     )
@@ -1561,7 +1562,7 @@ fun DesignSystemCatalogApp() {
                     )
                 }
                 32 -> {
-                    val currentScreen = discordScreens[selectedDiscordScreenIndex]
+                    val currentScreen = communityChatScreens[selectedCommunityChatScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcCommunityChatFactory(
                         screen = currentScreen
                     )
@@ -1860,7 +1861,7 @@ fun DesignSystemCatalogApp() {
                         2 -> WgcKlokAuthScreenTemplate()
                         3 -> MultiBrandAuthCatalogSection()
                         4 -> WgcMarketplaceHomeScreenTemplate(viewModel = FakeMarketplaceHomeViewModel())
-                        5 -> NineNineFoodHomeScreenTemplate(viewModel = FakeNineNineFoodHomeViewModel())
+                        5 -> WgcQuickFoodDeliveryHomeScreenTemplate(viewModel = FakeQuickFoodDeliveryHomeViewModel())
                         6 -> WgcFoodDeliveryHomeScreenTemplate(viewModel = FakeFoodDeliveryHomeViewModel())
                         7 -> InstagramStoryViewerScreenTemplate(viewModel = FakeInstagramStoryViewerViewModel())
                         8 -> StandardCartScreenTemplate(viewModel = FakeStandardCartViewModel())
@@ -2154,28 +2155,28 @@ fun MultiBrandAuthCatalogSection() {
                     else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Ride Hailing", brandLogoText = "Ride Hailing", brandColor = brandColors[1])
                 }
                 2 -> when (selectedFlow) {
-                    0 -> WgcShopeeLoginScreenTemplate(viewModel = FakeShopeeAuthViewModel())
-                    1 -> WgcShopeeRegisterScreenTemplate(viewModel = FakeShopeeAuthViewModel())
-                    2 -> WgcShopeeResetPasswordScreenTemplate(viewModel = FakeShopeeAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Deal Marketplace", brandLogoText = "S", brandColor = brandColors[2])
+                    0 -> WgcDealMarketplaceLoginScreenTemplate(viewModel = FakeDealMarketplaceAuthViewModel())
+                    1 -> WgcDealMarketplaceRegisterScreenTemplate(viewModel = FakeDealMarketplaceAuthViewModel())
+                    2 -> WgcDealMarketplaceResetPasswordScreenTemplate(viewModel = FakeDealMarketplaceAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Deal Marketplace", brandLogoText = "DM", brandColor = brandColors[2])
                 }
                 3 -> when (selectedFlow) {
                     0 -> WgcMarketplaceLoginScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
                     1 -> WgcMarketplaceRegisterScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
                     2 -> WgcMarketplaceResetPasswordScreenTemplate(viewModel = FakeMarketplaceAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Marketplace", brandLogoText = "ML", brandColor = brandColors[3])
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Marketplace", brandLogoText = "MP", brandColor = brandColors[3])
                 }
                 4 -> when (selectedFlow) {
-                    0 -> WgcNineNineLoginScreenTemplate(viewModel = FakeNineNineAuthViewModel())
-                    1 -> WgcNineNineRegisterScreenTemplate(viewModel = FakeNineNineAuthViewModel())
-                    2 -> WgcNineNineResetPasswordScreenTemplate(viewModel = FakeNineNineAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "99Food", brandLogoText = "99", brandColor = brandColors[4])
+                    0 -> WgcQuickFoodDeliveryLoginScreenTemplate(viewModel = FakeQuickFoodDeliveryAuthViewModel())
+                    1 -> WgcQuickFoodDeliveryRegisterScreenTemplate(viewModel = FakeQuickFoodDeliveryAuthViewModel())
+                    2 -> WgcQuickFoodDeliveryResetPasswordScreenTemplate(viewModel = FakeQuickFoodDeliveryAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Quick Food Delivery", brandLogoText = "QD", brandColor = brandColors[4])
                 }
                 5 -> when (selectedFlow) {
-                    0 -> WgcAliExpressLoginScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
-                    1 -> WgcAliExpressRegisterScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
-                    2 -> WgcAliExpressResetPasswordScreenTemplate(viewModel = FakeAliExpressAuthViewModel())
-                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Global Marketplace", brandLogoText = "Ali", brandColor = brandColors[5])
+                    0 -> WgcGlobalMarketplaceLoginScreenTemplate(viewModel = FakeGlobalMarketplaceAuthViewModel())
+                    1 -> WgcGlobalMarketplaceRegisterScreenTemplate(viewModel = FakeGlobalMarketplaceAuthViewModel())
+                    2 -> WgcGlobalMarketplaceResetPasswordScreenTemplate(viewModel = FakeGlobalMarketplaceAuthViewModel())
+                    else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Global Marketplace", brandLogoText = "GM", brandColor = brandColors[5])
                 }
             }
         }
@@ -2391,16 +2392,16 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                 )
 
                 Text("4. Farmácia & Prescrição (Pharmacy Chain):", style = MaterialTheme.typography.titleSmall)
-                WgcCardFactory(type = WgcCardType.DrogaRaiaProduct)
-                WgcCardFactory(type = WgcCardType.DrogaRaiaPrescription)
+                WgcCardFactory(type = WgcCardType.PharmacyProduct)
+                WgcCardFactory(type = WgcCardType.PharmacyPrescription)
 
                 Text("5. Cuidados & Vacinas (Care Pharmacy):", style = MaterialTheme.typography.titleSmall)
-                WgcCardFactory(type = WgcCardType.DrogasilVaccine)
-                WgcCardFactory(type = WgcCardType.DrogasilLoyalty)
+                WgcCardFactory(type = WgcCardType.HealthVaccine)
+                WgcCardFactory(type = WgcCardType.HealthLoyalty)
 
                 Text("6. Farmácia Popular & Convênio (Popular Pharmacy):", style = MaterialTheme.typography.titleSmall)
-                WgcCardFactory(type = WgcCardType.PagueMenosClinic)
-                WgcCardFactory(type = WgcCardType.PagueMenosConvenio)
+                WgcCardFactory(type = WgcCardType.MedicalClinic)
+                WgcCardFactory(type = WgcCardType.HealthInsurance)
 
                 Text("7. Fintech (Neobank / SuperApp / Carbon):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.NeobankAccount)

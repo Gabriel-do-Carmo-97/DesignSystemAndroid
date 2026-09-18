@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
 import br.com.wgc.design_system.components.auth.WgcOtpCodeInput
@@ -23,7 +24,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-data class NineNineAuthUiState(
+data class QuickFoodDeliveryAuthUiState(
     val emailOrPhone: String = "",
     val name: String = "",
     val password: String = "",
@@ -31,8 +32,8 @@ data class NineNineAuthUiState(
     val isLoading: Boolean = false
 )
 
-abstract class BaseNineNineAuthViewModel : ViewModel() {
-    abstract val uiState: StateFlow<NineNineAuthUiState>
+abstract class BaseQuickFoodDeliveryAuthViewModel : ViewModel() {
+    abstract val uiState: StateFlow<QuickFoodDeliveryAuthUiState>
     abstract fun onEmailOrPhoneChange(value: String)
     abstract fun onNameChange(value: String)
     abstract fun onPasswordChange(value: String)
@@ -40,8 +41,8 @@ abstract class BaseNineNineAuthViewModel : ViewModel() {
     abstract fun onSubmit()
 }
 
-class FakeNineNineAuthViewModel : BaseNineNineAuthViewModel() {
-    override val uiState: StateFlow<NineNineAuthUiState> = MutableStateFlow(NineNineAuthUiState()).asStateFlow()
+class FakeQuickFoodDeliveryAuthViewModel : BaseQuickFoodDeliveryAuthViewModel() {
+    override val uiState: StateFlow<QuickFoodDeliveryAuthUiState> = MutableStateFlow(QuickFoodDeliveryAuthUiState()).asStateFlow()
     override fun onEmailOrPhoneChange(value: String) {}
     override fun onNameChange(value: String) {}
     override fun onPasswordChange(value: String) {}
@@ -50,11 +51,11 @@ class FakeNineNineAuthViewModel : BaseNineNineAuthViewModel() {
 }
 
 @Composable
-fun WgcNineNineLoginScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
+fun WgcQuickFoodDeliveryLoginScreenTemplate(viewModel: BaseQuickFoodDeliveryAuthViewModel, onNavigateToRegister: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}) =
     WgcGenericPlaceholderTemplate(title = "Esqueci a senha / Entrar por SMS")
 
 @Composable
-fun WgcNineNineRegisterScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
+fun WgcQuickFoodDeliveryRegisterScreenTemplate(viewModel: BaseQuickFoodDeliveryAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
     val state by viewModel.uiState.collectAsState()
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -66,24 +67,24 @@ fun WgcNineNineRegisterScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNa
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             WgcBrandAuthHeader(
-                brandName = "99Food",
-                brandLogoText = "99",
-                brandColor = Color(0xFF0B2545),
-                title = "Cadastro 99Food",
-                subtitle = "Crie sua conta para aproveitar os descontos 99Club"
+                brandName = "Quick Food Delivery",
+                brandLogoText = "QD",
+                brandColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue),
+                title = "Cadastro Quick Food",
+                subtitle = "Crie sua conta para aproveitar os cupons exclusivos"
             )
 
             SimpleTextField(value = state.name, onValueChange = viewModel::onNameChange, label = "Nome completo")
             SimpleTextField(value = state.emailOrPhone, onValueChange = viewModel::onEmailOrPhoneChange, label = "Número de Celular")
 
-            WgcClassicButton(textButton = "Cadastrar no 99Food", onClick = viewModel::onSubmit)
-            WgcSecondaryClassicButton(textButton = "Já tenho uma conta 99", onClick = onNavigateToLogin)
+            WgcClassicButton(textButton = "Cadastrar no Quick Food", onClick = viewModel::onSubmit)
+            WgcSecondaryClassicButton(textButton = "Já tenho uma conta", onClick = onNavigateToLogin)
         }
     }
 }
 
 @Composable
-fun WgcNineNineResetPasswordScreenTemplate(viewModel: BaseNineNineAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
+fun WgcQuickFoodDeliveryResetPasswordScreenTemplate(viewModel: BaseQuickFoodDeliveryAuthViewModel, onNavigateToLogin: () -> Unit = {}) {
     val state by viewModel.uiState.collectAsState()
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -95,10 +96,10 @@ fun WgcNineNineResetPasswordScreenTemplate(viewModel: BaseNineNineAuthViewModel,
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
             WgcBrandAuthHeader(
-                brandName = "99Food",
-                brandLogoText = "99",
-                brandColor = Color(0xFF0B2545),
-                title = "Recuperar Acesso 99Food",
+                brandName = "Quick Food Delivery",
+                brandLogoText = "QD",
+                brandColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue),
+                title = "Recuperar Acesso Quick Food",
                 subtitle = "Digite o código enviado por SMS para seu celular"
             )
 
@@ -111,8 +112,8 @@ fun WgcNineNineResetPasswordScreenTemplate(viewModel: BaseNineNineAuthViewModel,
 
 @Preview(showBackground = true)
 @Composable
-private fun NineNineAuthPreview() {
+private fun QuickFoodDeliveryAuthPreview() {
     MaterialTheme {
-        WgcNineNineLoginScreenTemplate(viewModel = FakeNineNineAuthViewModel())
+        WgcQuickFoodDeliveryLoginScreenTemplate(viewModel = FakeQuickFoodDeliveryAuthViewModel())
     }
 }
