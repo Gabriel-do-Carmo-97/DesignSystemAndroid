@@ -41,6 +41,9 @@ android {
         }
     }
     experimentalProperties["android.experimental.enableScreenshotTest"] = true
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -66,6 +69,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4-android:1.7.6")
+    androidTestImplementation("androidx.compose.ui:ui-test-manifest:1.7.6")
+    androidTestImplementation("androidx.test.espresso:espresso-accessibility:3.6.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 
     screenshotTestImplementation(libs.screenshot.validation.api)
     screenshotTestImplementation(libs.androidx.ui.tooling)
@@ -93,8 +100,8 @@ publishing {
                 url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {

@@ -7,6 +7,7 @@ plugins {
 
 android {
     namespace = "br.com.wgc.ds_navigation_flows"
+    compileSdk = 37
 
     buildTypes {
         release {
@@ -75,8 +76,8 @@ publishing {
                 url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {

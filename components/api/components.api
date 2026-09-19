@@ -17,6 +17,15 @@ public final class br/com/wgc/design_system/commons/WgcCompositionLocalsKt {
 	public static final fun getLocalWgcSpacing ()Landroidx/compose/runtime/ProvidableCompositionLocal;
 }
 
+public abstract interface annotation class br/com/wgc/design_system/commons/WgcDevicePreviews : java/lang/annotation/Annotation {
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/WgcStatusDevicePreviews : java/lang/annotation/Annotation {
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/WgcTabletDevicePreviews : java/lang/annotation/Annotation {
+}
+
 public final class br/com/wgc/design_system/components/alert/AlertType : java/lang/Enum {
 	public static final field ERROR Lbr/com/wgc/design_system/components/alert/AlertType;
 	public static final field INFO Lbr/com/wgc/design_system/components/alert/AlertType;
@@ -213,7 +222,7 @@ public final class br/com/wgc/design_system/components/buttons/WgcPillTabSwitchK
 }
 
 public final class br/com/wgc/design_system/components/buttons/WgcSecondaryClassicButtonKt {
-	public static final fun WgcSecondaryClassicButton (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;ZLjava/lang/String;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSecondaryClassicButton (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;ZZLjava/lang/String;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/buttons/WgcSegmentedButtonKt {

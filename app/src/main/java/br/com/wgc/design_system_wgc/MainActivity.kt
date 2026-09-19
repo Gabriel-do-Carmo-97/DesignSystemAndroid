@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
 import br.com.wgc.design_system.components.auth.WgcBiometricButton
@@ -92,6 +93,10 @@ import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*
 import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
 import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
 import br.com.wgc.ds_templates.screens.ridehailing.auth.*
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import br.com.wgc.ds_templates.factories.WgcProfileFactory
+import br.com.wgc.ds_templates.factories.WgcProfileType
+import br.com.wgc.ds_templates.factories.WgcProfileStatus
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,11 +114,47 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Suppress("LongMethod", "CyclomaticComplexMethod")
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DesignSystemCatalogApp() {
+    var selectedModule by remember { mutableStateOf<br.com.wgc.design_system_wgc.showcase.DsModule?>(null) }
+
+    if (selectedModule == null) {
+        br.com.wgc.design_system_wgc.showcase.DsModuleHubScreen(
+            onSelectModule = { selectedModule = it }
+        )
+        return
+    }
+
+    when (selectedModule) {
+        br.com.wgc.design_system_wgc.showcase.DsModule.CORE -> {
+            br.com.wgc.design_system_wgc.showcase.CoreTokensShowcase(
+                onBack = { selectedModule = null }
+            )
+            return
+        }
+        br.com.wgc.design_system_wgc.showcase.DsModule.NAVIGATION_FLOWS -> {
+            br.com.wgc.design_system_wgc.showcase.NavigationFlowsShowcase(
+                onBack = { selectedModule = null }
+            )
+            return
+        }
+        else -> Unit
+    }
+
     var primarySection by remember { mutableIntStateOf(0) }
     var selectedComponentSubTab by remember { mutableIntStateOf(0) }
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
+
+    // Alinhamento automático com o módulo selecionado
+    LaunchedEffect(selectedModule) {
+        if (selectedModule == br.com.wgc.design_system_wgc.showcase.DsModule.COMPONENTS) {
+            primarySection = 71 // Tab de componentes (:design-system)
+        } else if (selectedModule == br.com.wgc.design_system_wgc.showcase.DsModule.TEMPLATES) {
+            primarySection = 73 // Tab de Fábricas & Templates (:ds-templates)
+        }
+    }
 
     val primaryTabs = listOf(
         // 0-2: Cat 1 - Imobiliárias
@@ -436,13 +477,42 @@ fun DesignSystemCatalogApp() {
     )
 
     val factorySubTabs = listOf(
-        "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory"
+        "WgcProfileFactory (22 Perfis)", "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory"
     )
 
     var selectedFactorySubTab by remember { mutableIntStateOf(0) }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        PrimaryTabRow(selectedTabIndex = primarySection) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Column {
+                        Text(
+                            text = selectedModule?.title ?: "Catálogo Design System",
+                            fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                            fontSize = 18.sp
+                        )
+                        Text(
+                            text = selectedModule?.moduleBadge ?: "",
+                            fontSize = 12.sp,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
+                navigationIcon = {
+                    IconButton(onClick = { selectedModule = null }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar ao Hub de Módulos")
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+        ) {
+            PrimaryTabRow(selectedTabIndex = primarySection) {
             primaryTabs.forEachIndexed { index, title ->
                 Tab(
                     selected = primarySection == index,
@@ -1396,7 +1466,7 @@ fun DesignSystemCatalogApp() {
                     val currentScreen = pdaScreens[selectedPdaScreenIndex]
                     br.com.wgc.ds_templates.factories.WgcPremiumGroceryFactory(
                         screen = currentScreen,
-                        onNavItemClick = { navItem -> selectedPdaScreenIndex = navItem.ordinal }
+                            onNavItemClick = { navItem -> selectedPdaScreenIndex = navItem.ordinal }
                     )
                 }
                 8 -> {
@@ -1923,6 +1993,7 @@ fun DesignSystemCatalogApp() {
         }
     }
 }
+}
 
 // --- SEÇÕES ISOLADAS PARA CADA COMPONENTE INDIVIDUAL COM SEUS ESTADOS ---
 
@@ -2232,6 +2303,77 @@ fun WgcPillTabSwitchCatalogSection() {
     }
 }
 
+@Suppress("LongMethod")
+@Composable
+fun WgcProfileFactoryShowcase() {
+    var selectedType by remember { mutableStateOf(WgcProfileType.CARE_PHARMACY) }
+    var selectedStatus by remember { mutableStateOf(WgcProfileStatus.DEFAULT) }
+    var customHeader by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Text("WgcProfileFactory - Catálogo Universal de Perfis (22 Perfis)", style = MaterialTheme.typography.titleLarge)
+        Text("Inspecione individualmente cada um dos 22 perfis com 100% de preservação visual:", style = MaterialTheme.typography.bodyMedium)
+
+        Text("Tipo de Perfil (${selectedType.name}):", style = MaterialTheme.typography.titleSmall)
+        PrimaryScrollableTabRow(selectedTabIndex = selectedType.ordinal) {
+            WgcProfileType.entries.forEach { type ->
+                Tab(
+                    selected = selectedType == type,
+                    onClick = { selectedType = type },
+                    text = { Text(type.name, fontSize = 11.sp) }
+                )
+            }
+        }
+
+        Text("Status de Ciclo de Vida:", style = MaterialTheme.typography.titleSmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            WgcProfileStatus.entries.forEach { status ->
+                FilterChip(
+                    selected = selectedStatus == status,
+                    onClick = { selectedStatus = status },
+                    label = { Text(status.name) }
+                )
+            }
+        }
+
+        if (selectedType == WgcProfileType.STANDARD) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Checkbox(checked = customHeader, onCheckedChange = { customHeader = it })
+                Text("Injetar Slot Customizado de Header")
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(560.dp)
+        ) {
+            WgcProfileFactory(
+                type = selectedType,
+                status = selectedStatus,
+                headerSlot = if (customHeader && selectedType == WgcProfileType.STANDARD) {
+                    {
+                        Surface(
+                            color = MaterialTheme.colorScheme.tertiaryContainer,
+                            shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp),
+                            modifier = Modifier.fillMaxWidth().padding(8.dp)
+                        ) {
+                            Text(
+                                "👑 HEADER VIP CUSTOMIZADO VIA SLOT",
+                                modifier = Modifier.padding(16.dp),
+                                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold
+                            )
+                        }
+                    }
+                } else null
+            )
+        }
+    }
+}
+
 @Composable
 fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
     Column(
@@ -2241,7 +2383,8 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         when (selectedSubTab) {
-            0 -> {
+            0 -> WgcProfileFactoryShowcase()
+            1 -> {
                 Text("WgcButton - Fábrica Universal de Botões", style = MaterialTheme.typography.titleLarge)
                 Text(
                     "Ponto de entrada unificado para botões do Design System com defaults de produção e variações por enum.",
@@ -2265,7 +2408,7 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                 Text("4. Estado de Carregamento:", style = MaterialTheme.typography.titleSmall)
                 WgcButton(text = "Processando...", isLoading = true)
             }
-            1 -> {
+            2 -> {
                 var menuIndex by remember { mutableIntStateOf(0) }
                 Text("WgcMenuFactory - Fábrica Universal de Navegação", style = MaterialTheme.typography.titleLarge)
                 Text(
@@ -2296,7 +2439,7 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                     onItemSelected = { menuIndex = it }
                 )
             }
-            2 -> {
+            3 -> {
                 var textInput by remember { mutableStateOf("") }
                 var passwordInput by remember { mutableStateOf("") }
                 var otpInput by remember { mutableStateOf("") }
@@ -2335,7 +2478,7 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                     onValueChange = { otpInput = it }
                 )
             }
-            3 -> {
+            4 -> {
                 var customSlotEnabled by remember { mutableStateOf(false) }
                 Text("WgcCardFactory - Fábrica Universal de Cards", style = MaterialTheme.typography.titleLarge)
                 Text("Cards prontos para catálogo com slots customizáveis:", style = MaterialTheme.typography.bodyMedium)
@@ -2453,7 +2596,7 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                 Text("22. Governo Digital & Cidadania (Gov.br / CDT):", style = MaterialTheme.typography.titleSmall)
                 WgcCardFactory(type = WgcCardType.GovDigitalDocument)
             }
-            4 -> {
+            5 -> {
                 var authBrandIndex by remember { mutableIntStateOf(0) }
                 var authFlowIndex by remember { mutableIntStateOf(0) }
                 var overrideHeaderSlot by remember { mutableStateOf(false) }
@@ -2517,7 +2660,7 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                     )
                 }
             }
-            5 -> {
+            6 -> {
                 var homeBrandIndex by remember { mutableIntStateOf(0) }
                 var overrideBottomNav by remember { mutableStateOf(false) }
                 val brands = WgcBrand.entries

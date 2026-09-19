@@ -18,10 +18,53 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.commons.WgcDevicePreviews
 
 /**
  * Botão de ação primária do Design System (WgcClassicButton).
- * Suporta estado de carregamento nativo (`isLoading`) e semântica de acessibilidade.
+ * 
+ * Este é um botão elevado (elevated button) seguindo o Material Design 3,
+ * otimizado para ações principais em formulários e fluxos de navegação.
+ * 
+ * ### Características:
+ * - **Elevated Style**: Botão com elevação sutil para destaque visual
+ * - **Loading State**: Indicador de carregamento integrado que desabilita interações
+ * - **Accessibility**: Semântica de botão para leitores de tela
+ * - **Standard Height**: Altura fixa de 56dp seguindo guias de Material Design
+ * - **State Hoisting**: Estado controlado externamente (stateless)
+ * 
+ * ### Quando usar:
+ * - Como ação principal em formulários
+ * - Em diálogos e bottom sheets
+ * - Para ações de confirmação importantes
+ * 
+ * ### Quando não usar:
+ * - Para ações secundárias (use WgcSecondaryClassicButton)
+ * - Em barras de navegação (use WgcPillTabSwitch)
+ * - Para ações textuais (use TextButton ou WgcButton com variant Ghost)
+ * 
+ * ### Uso Básico:
+ * ```kotlin
+ * WgcClassicButton(
+ *     textButton = "Confirmar",
+ *     onClick = { onConfirm() }
+ * )
+ * ```
+ * 
+ * ### Uso com Loading:
+ * ```kotlin
+ * WgcClassicButton(
+ *     textButton = "Confirmar",
+ *     onClick = { onConfirm() },
+ *     isLoading = isConfirming
+ * )
+ * ```
+ * 
+ * @param modifier Modificador para o componente
+ * @param onClick Callback executado ao clicar no botão
+ * @param isEnabled Se o botão está habilitado (padrão: true)
+ * @param isLoading Se o botão está em estado de carregamento (padrão: false)
+ * @param textButton Texto exibido no botão (padrão: "Button")
  */
 @Composable
 fun WgcClassicButton(
@@ -59,15 +102,26 @@ fun WgcClassicButton(
     )
 }
 
-
-@Preview(showBackground = true , name = "Only Component")
+@WgcDevicePreviews
+@Preview(showBackground = true, name = "Default - Enabled")
 @Composable
-private fun ButtonClassicPreview() = WgcClassicButton(
-    isEnabled = false
+private fun ButtonClassicDefaultPreview() = WgcClassicButton(
+    isEnabled = true,
+    textButton = "Continuar"
 )
 
+@WgcDevicePreviews
+@Preview(showBackground = true, name = "Disabled State")
+@Composable
+private fun ButtonClassicDisabledPreview() = WgcClassicButton(
+    isEnabled = false,
+    textButton = "Continuar"
+)
+
+@WgcDevicePreviews
 @Preview(showBackground = true, name = "Loading State")
 @Composable
 private fun ButtonClassicLoadingPreview() = WgcClassicButton(
-    isLoading = true
+    isLoading = true,
+    textButton = "Continuar"
 )

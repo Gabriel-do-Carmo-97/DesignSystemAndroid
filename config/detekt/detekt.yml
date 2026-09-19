@@ -1,4 +1,4 @@
-﻿build:
+build:
   maxIssues: 0
   excludeCorrectable: false
 
@@ -32,6 +32,9 @@ naming:
   TopLevelPropertyNaming:
     constantPattern: '[A-Z][A-Z0-9_]*'
     propertyPattern: '[a-zA-Z][A-Za-z0-9]*'
+  PackageNaming:
+    active: true
+    packagePattern: '^[a-z]+(\.[a-z_][A-Za-z0-9_]*)*$'
 
 style:
   NewLineAtEndOfFile:

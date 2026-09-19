@@ -29,7 +29,7 @@ fun WgcCarePharmacyFactory(
             )
         }
         WgcCarePharmacyScreen.LOYALTY -> {
-            br.com.wgc.ds_templates.screens.carepharmacy.profile.WgcDrogasilProfileTemplate(
+            br.com.wgc.ds_templates.screens.carepharmacy.profile.WgcCarePharmacyProfileTemplate(
                 modifier = modifier
             )
         }
@@ -39,7 +39,7 @@ fun WgcCarePharmacyFactory(
             )
         }
         WgcCarePharmacyScreen.PROFILE -> {
-            br.com.wgc.ds_templates.screens.carepharmacy.profile.WgcDrogasilProfileTemplate(
+            br.com.wgc.ds_templates.screens.carepharmacy.profile.WgcCarePharmacyProfileTemplate(
                 modifier = modifier
             )
         }

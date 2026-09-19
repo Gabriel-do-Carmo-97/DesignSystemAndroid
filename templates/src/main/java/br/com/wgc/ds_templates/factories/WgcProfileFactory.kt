@@ -107,6 +107,7 @@ data class WgcProfileUserData(
  * Provê alternância entre todas as 22 variantes oficiais preservadas do ecossistema WGC,
  * defaults sensatos de produção e slots customizáveis para injeção granular.
  */
+@Suppress("LongMethod", "CyclomaticComplexMethod")
 @Composable
 fun WgcProfileFactory(
     modifier: Modifier = Modifier,
@@ -157,22 +158,35 @@ fun WgcProfileFactory(
 
     when (type) {
         WgcProfileType.CARE_PHARMACY -> br.com.wgc.ds_templates.screens.carepharmacy.profile.WgcCarePharmacyProfileTemplate(modifier = modifier)
-        WgcProfileType.PHARMACY_CHAIN -> br.com.wgc.ds_templates.screens.pharmacychain.profile.WgcPharmacyChainProfileTemplate(modifier = modifier)
-        WgcProfileType.POPULAR_PHARMACY -> br.com.wgc.ds_templates.screens.popularpharmacy.profile.WgcPopularPharmacyProfileTemplate(modifier = modifier)
+        // Pharmacy chain templates are named per brand (Droga Raia)
+        WgcProfileType.PHARMACY_CHAIN -> br.com.wgc.ds_templates.screens.pharmacychain.profile.WgcDrogaRaiaProfileTemplate(modifier = modifier)
+        // Popular pharmacy mapped to Pague Menos template
+        WgcProfileType.POPULAR_PHARMACY -> br.com.wgc.ds_templates.screens.popularpharmacy.profile.WgcPagueMenosProfileTemplate(modifier = modifier)
         WgcProfileType.FRESH_GROCERY -> br.com.wgc.ds_templates.screens.freshgrocery.profile.WgcFreshGroceryProfileTemplate(modifier = modifier)
-        WgcProfileType.GROCERY -> br.com.wgc.ds_templates.screens.grocery.profile.WgcGroceryProfileTemplate(modifier = modifier)
-        WgcProfileType.PREMIUM_GROCERY -> br.com.wgc.ds_templates.screens.premiumgrocery.profile.WgcPremiumGroceryClienteMaisProfileTemplate(modifier = modifier)
-        WgcProfileType.FINTECH_NEOBANK -> br.com.wgc.ds_templates.screens.fintechneobank.WgcFintechNeobankProfileTemplate(modifier = modifier)
-        WgcProfileType.FINTECH_CARBON -> br.com.wgc.ds_templates.screens.fintechcarbon.WgcFintechCarbonProfileTemplate(modifier = modifier)
-        WgcProfileType.FINTECH_SUPERAPP -> br.com.wgc.ds_templates.screens.fintechsuperapp.WgcFintechSuperAppProfileTemplate(modifier = modifier)
-        WgcProfileType.CURATED_MARKET -> br.com.wgc.ds_templates.screens.curatedmarket.profile.WgcCuratedMarketProfileTemplate(modifier = modifier)
-        WgcProfileType.GADGET_SHOP -> br.com.wgc.ds_templates.screens.gadgetshop.profile.WgcGadgetShopProfileTemplate(modifier = modifier)
-        WgcProfileType.GYM_FITNESS -> br.com.wgc.ds_templates.screens.gymfitness.profile.WgcGymFitnessProfilePassTemplate(modifier = modifier)
+        // Grocery uses Supermercado template with default mock user
+        WgcProfileType.GROCERY -> br.com.wgc.ds_templates.screens.grocery.profile.WgcSupermercadoProfileTemplate(modifier = modifier)
+        // Premium grocery mapped to PDA Cliente Mais template
+        WgcProfileType.PREMIUM_GROCERY -> br.com.wgc.ds_templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate(modifier = modifier)
+        // Fintech mappings follow concrete template names
+        WgcProfileType.FINTECH_NEOBANK -> br.com.wgc.ds_templates.screens.fintechneobank.WgcNeobankProfileTemplate(modifier = modifier)
+        WgcProfileType.FINTECH_CARBON -> br.com.wgc.ds_templates.screens.fintechcarbon.WgcC6ProfileTemplate(modifier = modifier)
+        WgcProfileType.FINTECH_SUPERAPP -> br.com.wgc.ds_templates.screens.fintechsuperapp.WgcInterProfileTemplate(modifier = modifier)
+        // Curated market mapped to Tassel profile
+        WgcProfileType.CURATED_MARKET -> br.com.wgc.ds_templates.screens.curatedmarket.profile.WgcTasselProfileTemplate(modifier = modifier)
+        // Gadget shop mapped to Nexkart profile
+        WgcProfileType.GADGET_SHOP -> br.com.wgc.ds_templates.screens.gadgetshop.profile.WgcNexkartProfileTemplate(modifier = modifier)
+        // Gym requires an explicit mock user instance
+        WgcProfileType.GYM_FITNESS -> br.com.wgc.ds_templates.screens.gymfitness.profile.WgcGymFitnessProfilePassTemplate(
+            user = br.com.wgc.ds_templates.screens.gymfitness.model.GymFitnessMockData.mockUser,
+            modifier = modifier
+        )
         WgcProfileType.MEGA_STORE -> br.com.wgc.ds_templates.screens.megastore.profile.WgcShoppeProfileScreenTemplate(modifier = modifier)
-        WgcProfileType.PROPERTY_CLASSIFIEDS -> br.com.wgc.ds_templates.screens.propertyclassifieds.profile.WgcPropertyClassifiedsProfileTemplate(modifier = modifier)
+        // Property classifieds use Zap profile
+        WgcProfileType.PROPERTY_CLASSIFIEDS -> br.com.wgc.ds_templates.screens.propertyclassifieds.profile.WgcZapProfileTemplate(modifier = modifier)
         WgcProfileType.PROPERTY_LISTING -> br.com.wgc.ds_templates.screens.propertylisting.profile.WgcPropertyListingProfileTemplate(modifier = modifier)
         WgcProfileType.PROPERTY_RENTAL -> br.com.wgc.ds_templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate(modifier = modifier)
-        WgcProfileType.QUICK_SHOP -> br.com.wgc.ds_templates.screens.quickshop.profile.WgcQuickShopProfileTemplate(modifier = modifier)
+        // Quick shop uses ShopEase branded template
+        WgcProfileType.QUICK_SHOP -> br.com.wgc.ds_templates.screens.quickshop.profile.WgcShopEaseProfileTemplate(modifier = modifier)
         WgcProfileType.RETAIL -> br.com.wgc.ds_templates.screens.retail.profile.WgcKutukuSettingsScreen(modifier = modifier)
         WgcProfileType.TREND_FASHION -> br.com.wgc.ds_templates.screens.trendfashion.profile.WgcStylishProfileScreenTemplate(modifier = modifier)
         WgcProfileType.GAMING_STORE -> br.com.wgc.ds_templates.screens.gamingstore.WgcGamingStoreProfileTemplate(modifier = modifier)
@@ -191,6 +205,7 @@ fun WgcProfileFactory(
 /**
  * Layout padrão corporativo de perfil com seções agrupadas, header com avatar e slots.
  */
+@Suppress("LongMethod")
 @Composable
 private fun WgcStandardProfileLayout(
     modifier: Modifier = Modifier,
@@ -228,8 +243,8 @@ private fun WgcStandardProfileLayout(
                         horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
                     ) {
                         WgcAvatar(
-                            url = user.avatarUrl,
-                            contentDescription = user.name
+                            imageUrl = user.avatarUrl,
+                            initials = user.name.take(2)
                         )
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
@@ -242,7 +257,7 @@ private fun WgcStandardProfileLayout(
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
-                            Spacer(Modifier.height(WgcCoreDsSpacing.xs4.dp))
+                            Spacer(Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Surface(
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                                 color = MaterialTheme.colorScheme.primaryContainer
@@ -296,7 +311,7 @@ private fun WgcStandardProfileLayout(
             if (footerSlot != null) {
                 footerSlot()
             } else {
-                Spacer(Modifier.height(WgcCoreDsSpacing.sm8.dp))
+                Spacer(Modifier.height(WgcCoreDsSpacing.xs8.dp))
                 WgcClassicButton(
                     textButton = "Sair da Conta",
                     onClick = onLogoutClick

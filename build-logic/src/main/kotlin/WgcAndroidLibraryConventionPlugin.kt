@@ -1,4 +1,4 @@
-﻿import com.android.build.gradle.LibraryExtension
+import com.android.build.gradle.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -32,6 +32,10 @@ class WgcAndroidLibraryConventionPlugin : Plugin<Project> {
                     resources {
                         excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
                     }
+                }
+
+                testOptions {
+                    unitTests.isReturnDefaultValues = true
                 }
             }
 

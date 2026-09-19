@@ -18,8 +18,10 @@ import br.com.wgc.core_ds.WgcCoreDsColors
 import br.com.wgc.core_ds.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcHealthLoyaltyCard
 
+import br.com.wgc.design_system.commons.WgcDevicePreviews
+
 @Composable
-fun WgcDrogasilProfileTemplate(
+fun WgcCarePharmacyProfileTemplate(
     modifier: Modifier = Modifier
 ) {
     Scaffold(
@@ -49,8 +51,15 @@ fun WgcDrogasilProfileTemplate(
     }
 }
 
+@WgcDevicePreviews
 @Preview(showBackground = true)
 @Composable
-private fun WgcDrogasilProfileTemplatePreview() {
-    WgcDrogasilProfileTemplate()
+private fun WgcCarePharmacyProfileTemplatePreview() {
+    WgcCarePharmacyProfileTemplate()
+}
+
+@Deprecated("Use WgcCarePharmacyProfileTemplate instead", ReplaceWith("WgcCarePharmacyProfileTemplate(modifier)"))
+@Composable
+fun WgcDrogasilProfileTemplate(modifier: Modifier = Modifier) {
+    WgcCarePharmacyProfileTemplate(modifier = modifier)
 }
