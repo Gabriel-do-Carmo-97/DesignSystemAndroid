@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 

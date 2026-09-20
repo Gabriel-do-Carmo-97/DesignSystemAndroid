@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.navigation
+﻿package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -22,9 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSize
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Barra de navegação inferior oficial do ecossistema Tassel (WgcCuratedBottomNav).

@@ -51,6 +51,8 @@ dependencies {
     implementation(project(":templates"))
     implementation(project(":navigation-flows"))
     implementation(project(":core"))
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.core)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "br.com.wgc.ds_navigation_flows"
+    namespace = "br.com.wgc.design_system.navigation"
 
     buildTypes {
         release {
@@ -24,9 +24,6 @@ android {
         singleVariant("release") {
             withSourcesJar()
         }
-    }
-    testOptions {
-        unitTests.isReturnDefaultValues = true
     }
 }
 
@@ -75,8 +72,8 @@ publishing {
                 url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {

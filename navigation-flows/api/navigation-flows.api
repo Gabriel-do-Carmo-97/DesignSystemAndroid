@@ -1,127 +1,127 @@
-public final class br/com/wgc/ds_navigation_flows/WgcNavigationFlowsInfo {
+public final class br/com/wgc/design_system/navigation/WgcNavigationFlowsInfo {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/WgcNavigationFlowsInfo;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/WgcNavigationFlowsInfo;
 	public static final field MODULE_NAME Ljava/lang/String;
 	public static final field VERSION Ljava/lang/String;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/ComposableSingletons$WgcAuthNavGraphKt {
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/ComposableSingletons$WgcAuthNavGraphKt;
+public final class br/com/wgc/design_system/navigation/auth/ComposableSingletons$WgcAuthNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/ComposableSingletons$WgcAuthNavGraphKt;
 	public fun <init> ()V
-	public final fun getLambda$-521706726$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$120351073$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$1346262997$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$210035146$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$513320211$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1352473236$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1526496203$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-236145124$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1172864577$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$784517059$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthForgotPasswordRoute {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthForgotPasswordRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthForgotPasswordRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/WgcAuthForgotPasswordRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthGraphRoute {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthGraphRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthGraphRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/WgcAuthGraphRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthLoginRoute {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthLoginRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthLoginRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/WgcAuthLoginRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthNavGraphKt {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthNavGraphKt {
 	public static final fun wgcAuthNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Ljava/lang/Object;)V
 	public static synthetic fun wgcAuthNavGraph$default (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Ljava/lang/Object;ILjava/lang/Object;)V
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute {
 	public static final field $stable I
-	public static final field Companion Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute$Companion;
+	public static final field Companion Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/lang/String;)V
 	public synthetic fun <init> (Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;)Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute;
-	public static synthetic fun copy$default (Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute;
+	public final fun copy (Ljava/lang/String;)Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getEmailOrPhone ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final synthetic class br/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class br/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute$$serializer;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthOtpRoute$Companion {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthOtpRoute$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/auth/WgcAuthRegisterRoute {
+public final class br/com/wgc/design_system/navigation/auth/WgcAuthRegisterRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/auth/WgcAuthRegisterRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/auth/WgcAuthRegisterRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/ComposableSingletons$WgcCheckoutNavGraphKt {
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/ComposableSingletons$WgcCheckoutNavGraphKt;
+public final class br/com/wgc/design_system/navigation/checkout/ComposableSingletons$WgcCheckoutNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/ComposableSingletons$WgcCheckoutNavGraphKt;
 	public fun <init> ()V
-	public final fun getLambda$-469749504$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda$120273312$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda$1522368658$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda$2112391474$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-259549994$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-270061436$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$409326884$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$419838326$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutAddressRoute {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutAddressRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutAddressRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutAddressRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutCartRoute {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutCartRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutCartRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutCartRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutGraphRoute {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutGraphRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutGraphRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutGraphRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutNavGraphKt {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutNavGraphKt {
 	public static final fun wgcCheckoutNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)V
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutPaymentRoute {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutPaymentRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutPaymentRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutPaymentRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute {
 	public static final field $stable I
-	public static final field Companion Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute$Companion;
+	public static final field Companion Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute;
-	public static synthetic fun copy$default (Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAmount ()Ljava/lang/String;
 	public final fun getOrderId ()Ljava/lang/String;
@@ -129,57 +129,57 @@ public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRou
 	public fun toString ()Ljava/lang/String;
 }
 
-public final synthetic class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class br/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute$$serializer;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/checkout/WgcCheckoutSuccessRoute$Companion {
+public final class br/com/wgc/design_system/navigation/checkout/WgcCheckoutSuccessRoute$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/ComposableSingletons$WgcOnboardingNavGraphKt {
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/onboarding/ComposableSingletons$WgcOnboardingNavGraphKt;
+public final class br/com/wgc/design_system/navigation/onboarding/ComposableSingletons$WgcOnboardingNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/onboarding/ComposableSingletons$WgcOnboardingNavGraphKt;
 	public fun <init> ()V
-	public final fun getLambda$-1500434196$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$-1706933334$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$-482852310$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$12627788$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda$687716028$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-2056410422$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-2057981876$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-33798406$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-686938006$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$869310156$navigation_flows_release ()Lkotlin/jvm/functions/Function3;
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingGraphRoute {
+public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingGraphRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingGraphRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/onboarding/WgcOnboardingGraphRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingNavGraphKt {
+public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingNavGraphKt {
 	public static final fun wgcOnboardingNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;)V
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingPermissionsRoute {
+public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingPermissionsRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingPermissionsRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/onboarding/WgcOnboardingPermissionsRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingProfileSetupRoute {
+public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingProfileSetupRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingProfileSetupRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/onboarding/WgcOnboardingProfileSetupRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class br/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingWelcomeRoute {
+public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingWelcomeRoute {
 	public static final field $stable I
-	public static final field INSTANCE Lbr/com/wgc/ds_navigation_flows/onboarding/WgcOnboardingWelcomeRoute;
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/onboarding/WgcOnboardingWelcomeRoute;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 

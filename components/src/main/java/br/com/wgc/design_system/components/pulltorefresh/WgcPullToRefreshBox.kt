@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.pulltorefresh
+﻿package br.com.wgc.design_system.components.pulltorefresh
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**

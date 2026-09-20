@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.stepper
+﻿package br.com.wgc.design_system.components.stepper
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -22,9 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Seletor de quantidade no formato pílula arredondada (`- count +`),

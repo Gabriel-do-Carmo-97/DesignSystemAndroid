@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -21,9 +21,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
 

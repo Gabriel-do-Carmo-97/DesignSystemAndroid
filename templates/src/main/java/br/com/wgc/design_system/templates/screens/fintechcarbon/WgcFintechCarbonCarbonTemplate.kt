@@ -1,0 +1,42 @@
+﻿package br.com.wgc.design_system.templates.screens.fintechcarbon
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.components.cards.WgcPlasticCreditCard
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun WgcC6CarbonTemplate(
+    modifier: Modifier = Modifier
+) {
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(
+                title = { Text("Cartão Carbon Mastercard Black", fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(WgcCoreDsColors.fintechDark),
+                    titleContentColor = Color.White
+                )
+            )
+        }
+    ) { padding ->
+        Column(
+            modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        ) {
+            WgcPlasticCreditCard(
+                holderName = "GABRIEL CARMO",
+                cardLastDigits = "7412",
+                rewardPoints = 8625
+            )
+        }
+    }
+}

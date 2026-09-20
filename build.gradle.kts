@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.sonarqube) apply false
     alias(libs.plugins.dokka)
     alias(libs.plugins.binary.compatibility.validator)
+    alias(libs.plugins.dependency.check) apply false
+    alias(libs.plugins.license.report) apply false
 }
 
 apiValidation {
@@ -23,9 +25,14 @@ subprojects {
             val detektExt = it as? io.gitlab.arturbosch.detekt.extensions.DetektExtension
             detektExt?.buildUponDefaultConfig = true
             detektExt?.config?.setFrom(files("${rootProject.rootDir}/config/detekt/detekt.yml"))
-            val baselineFile = file("${rootProject.rootDir}/config/detekt/baseline.xml")
-            if (baselineFile.exists()) {
-                detektExt?.baseline = baselineFile
+            val projectBaseline = file("$projectDir/detekt-baseline.xml")
+            if (projectBaseline.exists()) {
+                detektExt?.baseline = projectBaseline
+            } else {
+                val baselineFile = file("${rootProject.rootDir}/config/detekt/baseline.xml")
+                if (baselineFile.exists()) {
+                    detektExt?.baseline = baselineFile
+                }
             }
             detektExt?.ignoreFailures = false
         }

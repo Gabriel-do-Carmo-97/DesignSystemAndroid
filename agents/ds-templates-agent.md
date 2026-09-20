@@ -9,7 +9,7 @@ Cria e mantém templates de telas, estados de UI (`UiState`), ViewModels abstrat
 
 ## 2. Contexto do Projeto
 
-- **Módulo:** `ds-templates/` (namespace: `br.com.wgc.ds_templates`)
+- **Módulo:** `:templates` (namespace: `br.com.wgc.design_system.templates`)
 - **Dependências:** `design-system` (componentes), Lifecycle, Coroutines
 - **Estado:** não depende de `core-ds`. Usa `MaterialTheme` para cores.
 - **Estrutura por feature:**

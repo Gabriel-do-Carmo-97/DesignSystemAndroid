@@ -163,203 +163,6 @@
     <ID>MaxLineLength:WgcMerchantListingCard.kt$color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.marketplaceGreen) else MaterialTheme.colorScheme.onSurfaceVariant</ID>
     <ID>MaxLineLength:WgcRideShareCard.kt$Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.urbanMobilityYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))</ID>
     <ID>MaxLineLength:WgcRideShareCard.kt$border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.urbanMobilityYellow)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gray200))</ID>
-    <ID>PackageNaming:AsyncImageDefault.kt$package br.com.wgc.design_system.components.images</ID>
-    <ID>PackageNaming:BigDecimalExtensions.kt$package br.com.wgc.design_system.commons</ID>
-    <ID>PackageNaming:CheckBoxDefault.kt$package br.com.wgc.design_system.components.checkbox</ID>
-    <ID>PackageNaming:DesignSystemGallery.kt$package br.com.wgc.design_system.previews</ID>
-    <ID>PackageNaming:ExampleUnitTest.kt$package br.com.wgc.design_system</ID>
-    <ID>PackageNaming:FABType.kt$package br.com.wgc.design_system.components.buttons.fab</ID>
-    <ID>PackageNaming:FAButton.kt$package br.com.wgc.design_system.components.buttons.fab</ID>
-    <ID>PackageNaming:ItemSectionCard.kt$package br.com.wgc.design_system.components.sections.items.product</ID>
-    <ID>PackageNaming:ItemSectionCardModel.kt$package br.com.wgc.design_system.components.sections.items.product</ID>
-    <ID>PackageNaming:ItemSectionCategory.kt$package br.com.wgc.design_system.components.sections.items.category</ID>
-    <ID>PackageNaming:ItemSectionCategory.kt$package br.com.wgc.design_system.components.sections.type</ID>
-    <ID>PackageNaming:ItemSectionCircleCategory.kt$package br.com.wgc.design_system.components.sections.items.category</ID>
-    <ID>PackageNaming:ItemSectionCircleCategoryModel.kt$package br.com.wgc.design_system.components.sections.items.category</ID>
-    <ID>PackageNaming:ItemSectionHorizontalCard.kt$package br.com.wgc.design_system.components.sections.items.product</ID>
-    <ID>PackageNaming:ItemSectionType.kt$package br.com.wgc.design_system.components.sections.type</ID>
-    <ID>PackageNaming:LoginProviderModel.kt$package br.com.wgc.design_system.components.providers_login</ID>
-    <ID>PackageNaming:MockData.kt$package br.com.wgc.design_system.mock</ID>
-    <ID>PackageNaming:PermissionExtension.kt$package br.com.wgc.design_system.commons</ID>
-    <ID>PackageNaming:PlaceholderDefault.kt$package br.com.wgc.design_system.components.placeholder</ID>
-    <ID>PackageNaming:ProductDetailCard.kt$package br.com.wgc.design_system.components.cards.carddetail</ID>
-    <ID>PackageNaming:ProductDetailModel.kt$package br.com.wgc.design_system.components.cards.carddetail</ID>
-    <ID>PackageNaming:ProvidersLogin.kt$package br.com.wgc.design_system.components.providers_login</ID>
-    <ID>PackageNaming:SearchTextField.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:SearchTextField.kt$package br.com.wgc.design_system.components.filter</ID>
-    <ID>PackageNaming:SectionCards.kt$package br.com.wgc.design_system.components.sections.product</ID>
-    <ID>PackageNaming:SectionCardsModel.kt$package br.com.wgc.design_system.components.sections.product</ID>
-    <ID>PackageNaming:SectionCategories.kt$package br.com.wgc.design_system.components.sections.category</ID>
-    <ID>PackageNaming:SectionCategoryModel.kt$package br.com.wgc.design_system.components.sections.category</ID>
-    <ID>PackageNaming:ShimmerEffectExtensions.kt$package br.com.wgc.design_system.commons</ID>
-    <ID>PackageNaming:SimpleTextField.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcAddressCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcAlert.kt$package br.com.wgc.design_system.components.alert</ID>
-    <ID>PackageNaming:WgcAlertDialog.kt$package br.com.wgc.design_system.components.dialogs</ID>
-    <ID>PackageNaming:WgcAlertUnitTest.kt$package br.com.wgc.design_system.components.alert</ID>
-    <ID>PackageNaming:WgcApparelCartItemCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcApparelCategoryAvatar.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcApparelOrderTimeline.kt$package br.com.wgc.design_system.components.tracking</ID>
-    <ID>PackageNaming:WgcApparelProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcApparelQuantityStepper.kt$package br.com.wgc.design_system.components.stepper</ID>
-    <ID>PackageNaming:WgcAutomotiveVehicleCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcAvatar.kt$package br.com.wgc.design_system.components.avatar</ID>
-    <ID>PackageNaming:WgcBadge.kt$package br.com.wgc.design_system.components.badge</ID>
-    <ID>PackageNaming:WgcBeautyCosmeticCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcBiometricButton.kt$package br.com.wgc.design_system.components.auth</ID>
-    <ID>PackageNaming:WgcBottomNavBar.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcBottomSheet.kt$package br.com.wgc.design_system.components.bottomsheet</ID>
-    <ID>PackageNaming:WgcBoutiqueBottomNavButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcBoutiqueCartItemRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcBoutiqueProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcBrandAuthHeader.kt$package br.com.wgc.design_system.components.auth</ID>
-    <ID>PackageNaming:WgcBrandPill.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcCardFactory.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcChilledBeverageCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcChip.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcChipUnitTest.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcCircularCategoryRow.kt$package br.com.wgc.design_system.components.sections</ID>
-    <ID>PackageNaming:WgcClassicButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcComponentPreviews.kt$package br.com.wgc.design_system.commons</ID>
-    <ID>PackageNaming:WgcCompositionLocals.kt$package br.com.wgc.design_system.commons</ID>
-    <ID>PackageNaming:WgcConfirmationDialog.kt$package br.com.wgc.design_system.components.dialogs</ID>
-    <ID>PackageNaming:WgcCuratedBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcCuratedCollectionCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcCuratedOrderTrackerCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcCuratedProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcCuratedSearchBar.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcDatePicker.kt$package br.com.wgc.design_system.components.pickers</ID>
-    <ID>PackageNaming:WgcDealOfTheDayCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcDentalProcedureCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcDepartmentCategoryGrid.kt$package br.com.wgc.design_system.components.sections</ID>
-    <ID>PackageNaming:WgcEcommerceProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcEducationCourseCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcExtraBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcExtraDiscountCouponCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcExtraProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcExtraStampsLoyaltyCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFashionItemCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFastFoodMealCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFieldFactory.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcFinancialBalanceCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFintechComponents.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFintechSuperAppCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFintechSuperAppComponents.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFitnessBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcFitnessProgramCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFitnessTimerDisplay.kt$package br.com.wgc.design_system.components.fitness</ID>
-    <ID>PackageNaming:WgcFitnessWorkoutCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFreshGroceryBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcFreshGroceryCategoryItem.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFreshGroceryProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcFreshGroceryPromoBanner.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGadgetShopBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcGadgetShopCartItemRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGadgetShopCategoryPill.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcGadgetShopProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGadgetShopTopProductRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGameStoreCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGovDigitalDocumentCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGroceryBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcGroceryLoyaltyCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGroceryNutriScoreCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGroceryProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGymBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcGymCrowdCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGymQrPassCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcGymWorkoutCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcHealthInsuranceCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcHealthLoyaltyCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcHealthVaccineCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcHomeImprovementCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcIconButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcListItem.kt$package br.com.wgc.design_system.components.list</ID>
-    <ID>PackageNaming:WgcLogisticsPackageCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMarketplaceSearchHeaderBar.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcMedicalClinicCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMegaStoreFlashSaleBanner.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMegaStoreOrderStatusRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMegaStoreProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMegaStoreStoryAvatar.kt$package br.com.wgc.design_system.components.story</ID>
-    <ID>PackageNaming:WgcMegaStoreVoucherCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMenuFactory.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcMerchantListingCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMessagingConversationCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcMobilityRideCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcNavigationDrawer.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcNewsHeadlineCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcOtpCodeInput.kt$package br.com.wgc.design_system.components.auth</ID>
-    <ID>PackageNaming:WgcPaymentMethodRadioCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPersonalFinanceBalanceCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPersonalFinanceBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcPersonalFinanceCreditCardRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPersonalFinanceSpeedDialSheet.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPersonalFinanceTransactionItem.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPetCareCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPharmacyBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcPharmacyPrescriptionCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPharmacyProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPharmacySubscriptionCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPillTabSwitch.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcPlasticCreditCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPractitionerProfileCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcProductivityTaskCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcProgressIndicators.kt$package br.com.wgc.design_system.components.progress</ID>
-    <ID>PackageNaming:WgcPromotionalProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPropertyClassifiedsBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcPropertyClassifiedsCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPropertyClassifiedsIndexCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPropertyClassifiedsSearchBar.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcPropertyListingBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcPropertyListingCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPropertyListingFilterChip.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcPropertyListingSearchBar.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcPropertyRentalBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcPropertyRentalCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcPropertyRentalFilterChip.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcPropertyRentalSearchBar.kt$package br.com.wgc.design_system.components.fields</ID>
-    <ID>PackageNaming:WgcPullToRefreshBox.kt$package br.com.wgc.design_system.components.pulltorefresh</ID>
-    <ID>PackageNaming:WgcQuantityStepper.kt$package br.com.wgc.design_system.components.inputs</ID>
-    <ID>PackageNaming:WgcQuickShopBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcQuickShopOfferBanner.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcQuickShopProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcRadioButton.kt$package br.com.wgc.design_system.components.radio</ID>
-    <ID>PackageNaming:WgcRadioButtonUnitTest.kt$package br.com.wgc.design_system.components.radio</ID>
-    <ID>PackageNaming:WgcRatingBar.kt$package br.com.wgc.design_system.components.feedback</ID>
-    <ID>PackageNaming:WgcRetailCartItemRow.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcRetailCategoryCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcRetailOrderTrackingStepper.kt$package br.com.wgc.design_system.components.tracking</ID>
-    <ID>PackageNaming:WgcRetailProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcRetailQuantityStepper.kt$package br.com.wgc.design_system.components.stepper</ID>
-    <ID>PackageNaming:WgcRideShareCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcSecondaryClassicButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcSegmentedButton.kt$package br.com.wgc.design_system.components.buttons</ID>
-    <ID>PackageNaming:WgcSimpleDialog.kt$package br.com.wgc.design_system.components.dialogs</ID>
-    <ID>PackageNaming:WgcSizeSelectorChip.kt$package br.com.wgc.design_system.components.chip</ID>
-    <ID>PackageNaming:WgcSlider.kt$package br.com.wgc.design_system.components.inputs</ID>
-    <ID>PackageNaming:WgcSnackbar.kt$package br.com.wgc.design_system.components.feedback</ID>
-    <ID>PackageNaming:WgcSnackbarHost.kt$package br.com.wgc.design_system.components.snackbar</ID>
-    <ID>PackageNaming:WgcSocialLoginButtons.kt$package br.com.wgc.design_system.components.auth</ID>
-    <ID>PackageNaming:WgcSocialLoginPillButton.kt$package br.com.wgc.design_system.components.auth</ID>
-    <ID>PackageNaming:WgcStoryAvatar.kt$package br.com.wgc.design_system.components.story</ID>
-    <ID>PackageNaming:WgcStreamingMediaCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcSupermarketBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcSupermarketLoyaltyCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcSupermarketProductCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcSwitch.kt$package br.com.wgc.design_system.components.inputs</ID>
-    <ID>PackageNaming:WgcSwitchUnitTest.kt$package br.com.wgc.design_system.components.inputs</ID>
-    <ID>PackageNaming:WgcTabs.kt$package br.com.wgc.design_system.components.tabs</ID>
-    <ID>PackageNaming:WgcTechnicalHardwareCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcTimePicker.kt$package br.com.wgc.design_system.components.pickers</ID>
-    <ID>PackageNaming:WgcTooltip.kt$package br.com.wgc.design_system.components.tooltip</ID>
-    <ID>PackageNaming:WgcTopAppBar.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcTravelStayCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcWellnessBottomNav.kt$package br.com.wgc.design_system.components.navigation</ID>
-    <ID>PackageNaming:WgcWellnessCheckInCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcWellnessGymCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcWellnessPlanCard.kt$package br.com.wgc.design_system.components.cards</ID>
-    <ID>PackageNaming:WgcWineStoreCard.kt$package br.com.wgc.design_system.components.cards</ID>
     <ID>UnusedParameter:WgcBrandAuthHeader.kt$brandName: String</ID>
     <ID>UnusedParameter:WgcGovDigitalDocumentCard.kt$documentNumberMasked: String</ID>
     <ID>UnusedParameter:WgcGroceryBottomNav.kt$cartBadgeCount: Int = 0</ID>
@@ -372,31 +175,150 @@
     <ID>UnusedParameter:WgcPullToRefreshBox.kt$enabled: Boolean = true</ID>
     <ID>UnusedParameter:WgcSupermarketLoyaltyCard.kt$cpfMasked: String</ID>
     <ID>UnusedParameter:WgcSupermarketProductCard.kt$imageUrl: String? = null</ID>
+    <ID>UnusedPrivateMember:CheckBoxDefault.kt$@Preview(showBackground = true, name = "Checkbox Default") @Composable private fun CheckBoxDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:CheckBoxDefault.kt$@Preview(showBackground = true, name = "Checkbox Disabled") @Composable private fun CheckBoxDisabledPreview()</ID>
     <ID>UnusedPrivateMember:DesignSystemGallery.kt$@WgcComponentPreviews @Composable private fun DesignSystemGalleryPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Description") @Composable private fun FAButtonDescriptionPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Large") @Composable private fun FAButtonLargePreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Medium") @Composable private fun FAButtonMediumPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Small") @Composable private fun FAButtonSmallPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAddressCard.kt$@Preview(name = "Address Card Preview", showBackground = true) @Composable private fun WgcAddressCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcAddressHeaderBar.kt$@WgcComponentPreviews @Composable private fun WgcAddressHeaderBarPreview()</ID>
     <ID>UnusedPrivateMember:WgcAlert.kt$@WgcComponentPreviews @Composable private fun WgcAlertPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelCartItemCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCartItemCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelCategoryAvatar.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCategoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelOrderTimeline.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeOrderTimelinePreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelQuantityStepper.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAutomotiveVehicleCard.kt$@Preview(showBackground = true) @Composable private fun WgcAutomotiveVehicleCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcBadge.kt$@WgcComponentPreviews @Composable private fun WgcBadgePreview()</ID>
+    <ID>UnusedPrivateMember:WgcBiometricButton.kt$@Preview(name = "WgcBiometricButton - All Styles", showBackground = true) @Composable private fun WgcBiometricButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueBottomNavButton.kt$@Preview(showBackground = true) @Composable private fun WgcBoutiqueBottomNavButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcLazaCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcLazaProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcLazaProductCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcBrandAuthHeader.kt$@WgcComponentPreviews @Composable private fun WgcBrandAuthHeaderPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBrandPill.kt$@Preview(showBackground = true) @Composable private fun WgcLazaBrandPillPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBrandPill.kt$@Preview(showBackground = true) @Composable private fun WgcLazaBrandPillUnselectedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcButton.kt$@Preview(name = "WgcButton - Variants", showBackground = true) @Composable private fun WgcButtonVariantsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCardFactory.kt$@Preview(name = "WgcCardFactory - All Variants", showBackground = true) @Composable private fun WgcCardFactoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcChilledBeverageCard.kt$@Preview(showBackground = true) @Composable private fun WgcChilledBeverageCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcChip.kt$@WgcComponentPreviews @Composable private fun WgcChipPreview()</ID>
     <ID>UnusedPrivateMember:WgcCircularCategoryRow.kt$@WgcComponentPreviews @Composable private fun WgcCircularCategoryRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Default - Enabled") @Composable private fun ButtonClassicDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Disabled State") @Composable private fun ButtonClassicDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Loading State") @Composable private fun ButtonClassicLoadingPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcTasselBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardCategoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardNewInPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardSalePreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedOrderTrackerCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselOrderTrackerCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcTasselSearchBarPreview()</ID>
     <ID>UnusedPrivateMember:WgcDatePicker.kt$@OptIn(ExperimentalMaterial3Api::class) @WgcComponentPreviews @Composable private fun WgcDatePickerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDealOfTheDayCard.kt$@Preview(name = "Deal of the Day Card Preview", showBackground = true) @Composable private fun WgcDealOfTheDayCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDentalProcedureCard.kt$@Preview(showBackground = true) @Composable private fun WgcDentalProcedureCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcDepartmentCategoryGrid.kt$@WgcComponentPreviews @Composable private fun WgcDepartmentCategoryGridPreview()</ID>
+    <ID>UnusedPrivateMember:WgcEcommerceProductCard.kt$@Preview(name = "Product Card Preview", showBackground = true) @Composable private fun WgcEcommerceProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFieldFactory.kt$@Preview(name = "WgcFieldFactory - All Types", showBackground = true) @Composable private fun WgcFieldFactoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFinancialBalanceCard.kt$@Preview(showBackground = true) @Composable private fun WgcFinancialBalanceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFintechSuperAppCard.kt$@Preview(showBackground = true) @Composable private fun WgcInterSuperAppCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessBottomNav.kt$@Preview(name = "Fitness Bottom Nav - Preview", showBackground = true) @Composable private fun WgcFitnessBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessProgramCard.kt$@Preview(name = "Fitness Program Card - Enrolled", showBackground = true) @Composable private fun WgcFitnessProgramCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessTimerDisplay.kt$@Preview(name = "Fitness Timer Display - Preview", showBackground = true) @Composable private fun WgcFitnessTimerDisplayPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessWorkoutCard.kt$@Preview(name = "Fitness Workout Card - Default", showBackground = true) @Composable private fun WgcFitnessWorkoutCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcFloatingCartSummaryBar.kt$@WgcComponentPreviews @Composable private fun WgcFloatingCartSummaryBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryBottomNav.kt$@Preview(name = "Fresh Grocery Bottom Nav", showBackground = true) @Composable private fun WgcFreshGroceryBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryCategoryItem.kt$@Preview(showBackground = true) @Composable private fun WgcShopperCategoryItemHighlightedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryCategoryItem.kt$@Preview(showBackground = true) @Composable private fun WgcShopperCategoryItemPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcShopperProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryPromoBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShopperPromoBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopCategoryPill.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCategoryPillPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductCardSalePreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopTopProductRow.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartTopProductRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryBottomNav.kt$@Preview(name = "Supermercado Bottom Nav - Selected Coupons", showBackground = true) @Composable private fun WgcSupermercadoBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryLoyaltyCard.kt$@Preview(name = "Supermercado Card Preview", showBackground = true) @Composable private fun WgcSupermercadoMeuCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryNutriScoreCard.kt$@Preview(name = "Nutri-Score Card - Grade A", showBackground = true) @Composable private fun WgcSupermercadoNutriScoreCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryProductCard.kt$@Preview(name = "Supermercado Product Card - Default", showBackground = true) @Composable private fun WgcSupermercadoProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthInsuranceCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthInsuranceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthLoyaltyCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthLoyaltyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthVaccineCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthVaccineCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcMarketplaceSearchHeaderBar.kt$@WgcComponentPreviews @Composable private fun WgcMarketplaceSearchHeaderBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMedicalClinicCard.kt$@Preview(showBackground = true) @Composable private fun WgcMedicalClinicCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreFlashSaleBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeFlashSaleBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreOrderStatusRow.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeOrderStatusRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreProductCard.kt$@Preview(showBackground = true, widthDp = 200) @Composable private fun WgcShoppeProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreStoryAvatar.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeStoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreVoucherCard.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeVoucherCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - ClassicBottomBar", showBackground = true) @Composable private fun WgcMenuClassicPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - CollapsibleHeader", showBackground = true) @Composable private fun WgcMenuHeaderPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - FloatingPill", showBackground = true) @Composable private fun WgcMenuFloatingPillPreview()</ID>
     <ID>UnusedPrivateMember:WgcMerchantListingCard.kt$@WgcComponentPreviews @Composable private fun WgcMerchantListingCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcNavigationDrawer.kt$@WgcComponentPreviews @Composable private fun WgcModalNavigationDrawerPreview()</ID>
     <ID>UnusedPrivateMember:WgcOtpCodeInput.kt$@WgcComponentPreviews @Composable private fun WgcOtpCodeInputPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPaymentMethodRadioCard.kt$@Preview(name = "Payment Method Radio Preview", showBackground = true) @Composable private fun WgcPaymentMethodRadioCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceBalanceCard.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeBalanceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceCreditCardRow.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeCreditCardRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceSpeedDialSheet.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeSpeedDialSheetPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceTransactionItem.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeTransactionItemPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyPrescriptionCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyPrescriptionCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacySubscriptionCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacySubscriptionCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPillTabSwitch.kt$@Preview(name = "WgcPillTabSwitch", showBackground = true) @Composable private fun WgcPillTabSwitchPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPlasticCreditCard.kt$@Preview(showBackground = true) @Composable private fun WgcPlasticCreditCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPractitionerProfileCard.kt$@Preview(showBackground = true) @Composable private fun WgcPractitionerProfileCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcProgressIndicators.kt$@WgcComponentPreviews @Composable private fun WgcProgressIndicatorsPreview()</ID>
     <ID>UnusedPrivateMember:WgcPromotionalProductCard.kt$@WgcComponentPreviews @Composable private fun WgcPromotionalProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsBottomNav.kt$@Preview(name = "WgcPropertyClassifiedsBottomNav - Search Selected", showBackground = true) @Composable private fun WgcZapBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsCard.kt$@Preview(name = "WgcPropertyClassifiedsCard - Default", showBackground = true) @Composable private fun WgcZapPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsIndexCard.kt$@Preview(name = "WgcPropertyClassifiedsIndexCard - Below Average", showBackground = true) @Composable private fun WgcZapFipeMeterCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsSearchBar.kt$@Preview(name = "WgcPropertyClassifiedsSearchBar - Default", showBackground = true) @Composable private fun WgcZapSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingFilterChip.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingFilterChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalPropertyCardFavoritedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalFilterChip.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalFilterChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalSearchBarPreview()</ID>
     <ID>UnusedPrivateMember:WgcPullToRefreshBox.kt$@WgcComponentPreviews @Composable private fun WgcPullToRefreshBoxPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuantityStepper.kt$@Preview(name = "Quantity Stepper Preview", showBackground = true) @Composable private fun WgcQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopOfferBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseOfferBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseProductCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcRadioButton.kt$@WgcComponentPreviews @Composable private fun WgcRadioButtonAllStatesPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRatingBar.kt$@Preview(name = "Rating Bar Preview", showBackground = true) @Composable private fun WgcRatingBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCategoryCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCategoryCardInvertedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCategoryCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCategoryCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailOrderTrackingStepper.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuOrderTrackingStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailQuantityStepper.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Default - Enabled") @Composable private fun SecondaryClassicButtonDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Disabled State") @Composable private fun SecondaryClassicButtonDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Loading State") @Composable private fun SecondaryClassicButtonLoadingPreview()</ID>
     <ID>UnusedPrivateMember:WgcSegmentedButton.kt$@WgcComponentPreviews @Composable private fun WgcSegmentedButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSizeSelectorChip.kt$@Preview(name = "Size Selector States", showBackground = true) @Composable private fun WgcSizeSelectorChipPreview()</ID>
     <ID>UnusedPrivateMember:WgcSnackbarHost.kt$@WgcComponentPreviews @Composable private fun WgcSnackbarPreview()</ID>
     <ID>UnusedPrivateMember:WgcSocialLoginButtons.kt$@WgcComponentPreviews @Composable private fun WgcSocialLoginButtonsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSocialLoginPillButton.kt$@Preview(name = "WgcSocialLoginPillGroup", showBackground = true) @Composable private fun WgcSocialLoginPillGroupPreview()</ID>
     <ID>UnusedPrivateMember:WgcStoryAvatar.kt$@WgcComponentPreviews @Composable private fun WgcStoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketBottomNav.kt$@Preview(name = "Supermarket Bottom Nav - Selected Adega", showBackground = true) @Composable private fun WgcSupermarketBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketLoyaltyCard.kt$@Preview(name = "Supermarket Loyalty Card - Preview", showBackground = true) @Composable private fun WgcSupermarketLoyaltyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketProductCard.kt$@Preview(name = "Supermarket Product Card - Preview", showBackground = true) @Composable private fun WgcSupermarketProductCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcSwitch.kt$@WgcComponentPreviews @Composable private fun WgcSwitchAllStatesPreview()</ID>
     <ID>UnusedPrivateMember:WgcTabs.kt$@WgcComponentPreviews @Composable private fun WgcTabsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcTechnicalHardwareCard.kt$@Preview(showBackground = true) @Composable private fun WgcTechnicalHardwareCardPreview()</ID>
     <ID>UnusedPrivateMember:WgcTimePicker.kt$@OptIn(ExperimentalMaterial3Api::class) @WgcComponentPreviews @Composable private fun WgcTimePickerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcWineStoreCard.kt$@Preview(name = "Wine Store Card - Preview", showBackground = true) @Composable private fun WgcWineStoreCardPreview()</ID>
     <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.runtime.*</ID>

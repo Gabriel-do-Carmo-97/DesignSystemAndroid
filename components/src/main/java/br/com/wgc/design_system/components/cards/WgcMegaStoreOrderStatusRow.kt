@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -34,9 +34,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Item de status de pedido do Shoppe.

@@ -3,17 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>MayBeConst:WgcCoreDsColors.kt$WgcCoreDsColors$val secondary = white</ID>
-    <ID>PackageNaming:ExampleUnitTest.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsBorderRadius.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsBreakpoints.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsColors.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsElevation.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsMotion.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsOpacity.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsSize.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsSpacing.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcCoreDsTypography.kt$package br.com.wgc.core_ds</ID>
-    <ID>PackageNaming:WgcThemeTokens.kt$package br.com.wgc.core_ds</ID>
     <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
   </CurrentIssues>
 </SmellBaseline>

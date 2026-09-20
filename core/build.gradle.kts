@@ -1,28 +1,10 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("wgc.android.library")
     id("maven-publish")
 }
 
 android {
-    namespace = "br.com.wgc.core_ds"
-    compileSdk = 37
-
-    defaultConfig {
-        minSdk = 29
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
-        }
-    }
+    namespace = "br.com.wgc.design_system.core"
 
     publishing {
         singleVariant("release") {
@@ -60,8 +42,8 @@ publishing {
                 url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {

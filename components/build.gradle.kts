@@ -1,6 +1,5 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("wgc.android.library")
     alias(libs.plugins.kotlin.compose)
     id("maven-publish")
     alias(libs.plugins.screenshot)
@@ -8,24 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "br.com.wgc.design_system"
-    compileSdk = 37
-
-    defaultConfig {
-        minSdk = 29
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
-        }
-    }
+    namespace = "br.com.wgc.design_system.components"
 
     buildFeatures {
         compose = true
@@ -33,11 +15,6 @@ android {
     publishing {
         singleVariant("release") {
             withSourcesJar()
-        }
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
         }
     }
     experimentalProperties["android.experimental.enableScreenshotTest"] = true
@@ -66,6 +43,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4-android:1.7.6")
+    androidTestImplementation("androidx.compose.ui:ui-test-manifest:1.7.6")
+    androidTestImplementation("androidx.test.espresso:espresso-accessibility:3.6.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 
     screenshotTestImplementation(libs.screenshot.validation.api)
     screenshotTestImplementation(libs.androidx.ui.tooling)
@@ -93,8 +74,8 @@ publishing {
                 url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {
