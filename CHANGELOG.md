@@ -18,13 +18,19 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - `WgcCheckoutFactory`: suporte unificado para fluxos de checkout (`STANDARD`, `GADGET_SHOP`, `MEGA_STORE`, `QUICK_SHOP`, `RETAIL`, `TREND_FASHION`).
   - `WgcOnboardingFactory`: suíte unificada para telas de boas-vindas e introdução (`STANDARD`, `GADGET_SHOP`, `PERSONAL_FINANCE`, `QUICK_SHOP`, `TREND_FASHION`).
   - `WgcCartFactory`: catálogo universal para 14 variantes de carrinho de compras de diversos domínios.
+- **Novos Grafos de Navegação (`:navigation-flows`)**:
+  - `WgcSearchNavGraph` & `WgcSearchNavHost`: fluxo de busca type-safe com transição para detalhe do produto e ação de compra.
+  - `WgcSettingsNavGraph` & `WgcSettingsNavHost`: fluxo do hub de configurações com segurança, preferências, termos e diálogo de logout.
 - **Novos Componentes e Átomos (`:components`)**:
   - `WgcColorPicker`: seletor de cores cromático interativo 360° com slider de brilho, paleta rápida corporativa e múltiplos formatos de abertura (`DIALOG` e `BOTTOM_SHEET`).
+  - `WgcOtpInput`: entrada numérica de 4 e 6 dígitos para códigos de verificação (2FA/PIN) com máscara, feedback de erro e foco automático.
+  - `WgcTimeline`: linha do tempo vertical corporativa para acompanhamento e rastreamento de pedidos e processos.
   - `WgcTag`: etiquetas e rótulos de status com variantes semânticas (`Primary`, `Secondary`, `Success`, `Error`, `Warning`, `Info`, `Neutral`), estilos (`Filled`, `Outlined`) e tamanhos (`Small`, `Medium`).
   - `WgcSnackbar`: enriquecido com variantes semânticas (`Default`, `Success`, `Error`, `Warning`, `Info`), ícones contextuais e preservação de retrocompatibilidade total.
   - `WgcBadge`: integração oficial ao catálogo do `:app`.
 - **Testes de Regressão Visual (Screenshot Testing)**:
   - `WgcColorPickerScreenshotTest`: validação de regressão visual para roda cromática, triggers (badge e ícone) e diálogos.
+  - `WgcOtpInputScreenshotTest` e `WgcTimelineScreenshotTest`: cobertura de estados e nós de linha do tempo.
   - `WgcTagScreenshotTest` e `WgcSnackbarScreenshotTest`: validação visual de variantes semânticas.
   - `WgcFactoriesScreenshotTest`: testes de screenshot para as novas fábricas universais.
 

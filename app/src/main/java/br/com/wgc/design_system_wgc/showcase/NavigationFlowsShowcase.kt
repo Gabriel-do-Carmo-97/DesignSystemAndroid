@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system_wgc.showcase
+package br.com.wgc.design_system_wgc.showcase
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -52,9 +52,14 @@ import br.com.wgc.design_system.navigation.checkout.wgcCheckoutNavGraph
 import br.com.wgc.design_system.navigation.onboarding.WgcOnboardingGraphRoute
 import br.com.wgc.design_system.navigation.onboarding.wgcOnboardingNavGraph
 
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import br.com.wgc.design_system.navigation.search.WgcSearchNavHost
+import br.com.wgc.design_system.navigation.settings.WgcSettingsNavHost
+
 /**
  * Showcase interativo do módulo :navigation-flows.
- * Permite simular e testar os 3 grafos de navegação orquestrados e desacoplados.
+ * Permite simular e testar os 5 grafos de navegação orquestrados e desacoplados.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -99,6 +104,8 @@ fun NavigationFlowsShowcase(
                 "AUTH" -> AuthFlowSimulator(onFinish = { activeFlow = null })
                 "CHECKOUT" -> CheckoutFlowSimulator(onFinish = { activeFlow = null })
                 "ONBOARDING" -> OnboardingFlowSimulator(onFinish = { activeFlow = null })
+                "SEARCH" -> WgcSearchNavHost(onClose = { activeFlow = null })
+                "SETTINGS" -> WgcSettingsNavHost(onClose = { activeFlow = null }, onLogoutConfirmed = { activeFlow = null })
                 else -> FlowSelectorMenu(onSelectFlow = { activeFlow = it })
             }
         }
@@ -141,6 +148,20 @@ private fun FlowSelectorMenu(
             description = "Telas de Boas-Vindas carrossel ➔ Permissões essenciais ➔ Início da jornada.",
             icon = Icons.Default.WavingHand,
             onClick = { onSelectFlow("ONBOARDING") }
+        )
+
+        FlowCard(
+            title = "4. Fluxo de Busca & Catálogo (Search Flow)",
+            description = "Entrada de Busca ➔ Filtros por Categoria ➔ Detalhe do Produto ➔ Adicionar ao Carrinho.",
+            icon = Icons.Default.Search,
+            onClick = { onSelectFlow("SEARCH") }
+        )
+
+        FlowCard(
+            title = "5. Hub de Configurações (Settings Flow)",
+            description = "Visão Geral ➔ Segurança & Biometria ➔ Preferências do App ➔ Termos & Privacidade ➔ Logout.",
+            icon = Icons.Default.Settings,
+            onClick = { onSelectFlow("SETTINGS") }
         )
     }
 }

@@ -122,6 +122,10 @@ import br.com.wgc.design_system.templates.factories.WgcSearchFactory
 import br.com.wgc.design_system.templates.factories.WgcSearchType
 import br.com.wgc.design_system.templates.factories.WgcSettingsHubFactory
 import br.com.wgc.design_system.templates.factories.WgcSettingsHubType
+import br.com.wgc.design_system.components.inputs.WgcOtpInput
+import br.com.wgc.design_system.components.timeline.WgcTimeline
+import br.com.wgc.design_system.components.timeline.WgcTimelineItem
+import br.com.wgc.design_system.components.timeline.WgcTimelineStatus
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.font.FontWeight
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -496,7 +500,7 @@ fun DesignSystemCatalogApp() {
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
         "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
         "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)",
-        "WgcBadge", "WgcTag", "WgcSnackbar"
+        "WgcBadge", "WgcTag", "WgcSnackbar", "WgcOtpInput", "WgcTimeline"
     )
 
     val templateSubTabs = listOf(
@@ -1957,6 +1961,8 @@ fun DesignSystemCatalogApp() {
                         20 -> WgcBadgeCatalogSection()
                         21 -> WgcTagCatalogSection()
                         22 -> WgcSnackbarCatalogSection()
+                        23 -> WgcOtpInputCatalogSection()
+                        24 -> WgcTimelineCatalogSection()
                     }
                 }
                 72 -> {
@@ -3180,6 +3186,95 @@ fun WgcSnackbarCatalogSection() {
             actionLabel = "Desfazer",
             onActionClick = {},
             variant = WgcSnackbarVariant.Default
+        )
+    }
+}
+
+@Composable
+fun WgcOtpInputCatalogSection() {
+    var otp6 by remember { mutableStateOf("123") }
+    var otp4Masked by remember { mutableStateOf("1234") }
+    var otpError by remember { mutableStateOf("987") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcOtpInput - Código de Validação / PIN", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente corporativo de entrada numérica de 4 ou 6 dígitos para autenticação 2FA, recuperação de senha e validação de transações.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Código de 6 Dígitos (Padrão):", style = MaterialTheme.typography.titleSmall)
+        WgcOtpInput(
+            otpValue = otp6,
+            onOtpChange = { otp6 = it },
+            length = 6
+        )
+
+        Text("2. Código de 4 Dígitos Mascarado (PIN Seguro):", style = MaterialTheme.typography.titleSmall)
+        WgcOtpInput(
+            otpValue = otp4Masked,
+            onOtpChange = { otp4Masked = it },
+            length = 4,
+            isMasked = true
+        )
+
+        Text("3. Estado de Erro com Mensagem Contextual:", style = MaterialTheme.typography.titleSmall)
+        WgcOtpInput(
+            otpValue = otpError,
+            onOtpChange = { otpError = it },
+            length = 6,
+            isError = true,
+            errorMessage = "Código expirado ou incorreto. Solicite um novo envio."
+        )
+    }
+}
+
+@Composable
+fun WgcTimelineCatalogSection() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcTimeline - Linha do Tempo & Rastreamento", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente corporativo para esteiras de aprovação, histórico de status e rastreamento de pedidos em tempo real.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Rastreamento de Pedido (E-commerce / Food Delivery):", style = MaterialTheme.typography.titleSmall)
+        WgcTimeline(
+            items = listOf(
+                WgcTimelineItem(
+                    title = "Pedido Confirmado",
+                    description = "Pagamento de R$ 149,90 aprovado via PIX.",
+                    timestamp = "14:20",
+                    status = WgcTimelineStatus.COMPLETED
+                ),
+                WgcTimelineItem(
+                    title = "Em Separação no Centro de Distribuição",
+                    description = "Os itens foram embalados e etiquetados.",
+                    timestamp = "15:05",
+                    status = WgcTimelineStatus.COMPLETED
+                ),
+                WgcTimelineItem(
+                    title = "Saiu para Entrega",
+                    description = "Entregador a caminho da sua residência.",
+                    timestamp = "15:40",
+                    status = WgcTimelineStatus.CURRENT
+                ),
+                WgcTimelineItem(
+                    title = "Pedido Entregue",
+                    description = "Confirmação via assinatura digital.",
+                    status = WgcTimelineStatus.PENDING
+                )
+            )
         )
     }
 }
