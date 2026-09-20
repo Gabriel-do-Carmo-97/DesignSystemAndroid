@@ -1078,12 +1078,33 @@ public final class br/com/wgc/design_system/components/dialogs/WgcSimpleDialogKt
 	public static final fun WgcSimpleDialog (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/feedback/ComposableSingletons$WgcSnackbarKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/feedback/ComposableSingletons$WgcSnackbarKt;
+	public fun <init> ()V
+	public final fun getLambda$-1179990240$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1485842295$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1560885317$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1741228958$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1419100071$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/feedback/WgcRatingBarKt {
 	public static final fun WgcRatingBar-FHprtrg (Landroidx/compose/ui/Modifier;FILjava/lang/Integer;JZLandroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/feedback/WgcSnackbarKt {
-	public static final fun WgcSnackbar (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSnackbar (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/feedback/WgcSnackbarVariant : java/lang/Enum {
+	public static final field Default Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static final field Error Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static final field Info Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static final field Success Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static final field Warning Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
+	public static fun values ()[Lbr/com/wgc/design_system/components/feedback/WgcSnackbarVariant;
 }
 
 public final class br/com/wgc/design_system/components/fields/ComposableSingletons$SearchTextFieldKt {
@@ -1984,6 +2005,46 @@ public final class br/com/wgc/design_system/components/tabs/WgcTabsKt {
 	public static final fun WgcHorizontalPagerIndicator-l69fT-s (IILandroidx/compose/ui/Modifier;JJFFFFLandroidx/compose/runtime/Composer;II)V
 	public static final fun WgcTab (Lbr/com/wgc/design_system/components/tabs/WgcTabItem;ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcTabRow (ILjava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/tag/ComposableSingletons$WgcTagKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/tag/ComposableSingletons$WgcTagKt;
+	public fun <init> ()V
+	public final fun getLambda$-1563725972$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$377832224$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/tag/WgcTagKt {
+	public static final fun WgcTag (Ljava/lang/String;Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/components/tag/WgcTagVariant;Lbr/com/wgc/design_system/components/tag/WgcTagStyle;Lbr/com/wgc/design_system/components/tag/WgcTagSize;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/tag/WgcTagSize : java/lang/Enum {
+	public static final field Medium Lbr/com/wgc/design_system/components/tag/WgcTagSize;
+	public static final field Small Lbr/com/wgc/design_system/components/tag/WgcTagSize;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/tag/WgcTagSize;
+	public static fun values ()[Lbr/com/wgc/design_system/components/tag/WgcTagSize;
+}
+
+public final class br/com/wgc/design_system/components/tag/WgcTagStyle : java/lang/Enum {
+	public static final field Filled Lbr/com/wgc/design_system/components/tag/WgcTagStyle;
+	public static final field Outlined Lbr/com/wgc/design_system/components/tag/WgcTagStyle;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/tag/WgcTagStyle;
+	public static fun values ()[Lbr/com/wgc/design_system/components/tag/WgcTagStyle;
+}
+
+public final class br/com/wgc/design_system/components/tag/WgcTagVariant : java/lang/Enum {
+	public static final field Error Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Info Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Neutral Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Primary Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Secondary Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Success Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static final field Warning Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+	public static fun values ()[Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
 }
 
 public final class br/com/wgc/design_system/components/tooltip/WgcTooltipKt {

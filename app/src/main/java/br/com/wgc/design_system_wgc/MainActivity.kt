@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -106,6 +109,19 @@ import br.com.wgc.design_system.templates.factories.WgcOnboardingFactory
 import br.com.wgc.design_system.templates.factories.WgcOnboardingType
 import br.com.wgc.design_system.templates.factories.WgcCartFactory
 import br.com.wgc.design_system.templates.factories.WgcCartType
+import br.com.wgc.design_system.components.badge.WgcBadge
+import br.com.wgc.design_system.components.badge.WgcBadgeVariant
+import br.com.wgc.design_system.components.badge.WgcBadgedBox
+import br.com.wgc.design_system.components.tag.WgcTag
+import br.com.wgc.design_system.components.tag.WgcTagVariant
+import br.com.wgc.design_system.components.tag.WgcTagStyle
+import br.com.wgc.design_system.components.tag.WgcTagSize
+import br.com.wgc.design_system.components.feedback.WgcSnackbar
+import br.com.wgc.design_system.components.feedback.WgcSnackbarVariant
+import br.com.wgc.design_system.templates.factories.WgcSearchFactory
+import br.com.wgc.design_system.templates.factories.WgcSearchType
+import br.com.wgc.design_system.templates.factories.WgcSettingsHubFactory
+import br.com.wgc.design_system.templates.factories.WgcSettingsHubType
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.font.FontWeight
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -479,7 +495,8 @@ fun DesignSystemCatalogApp() {
         "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
         "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
-        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)"
+        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)",
+        "WgcBadge", "WgcTag", "WgcSnackbar"
     )
 
     val templateSubTabs = listOf(
@@ -491,7 +508,7 @@ fun DesignSystemCatalogApp() {
 
     val factorySubTabs = listOf(
         "WgcProfileFactory (22 Perfis)", "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory",
-        "WgcCheckoutFactory", "WgcOnboardingFactory", "WgcCartFactory"
+        "WgcCheckoutFactory", "WgcOnboardingFactory", "WgcCartFactory", "WgcSearchFactory", "WgcSettingsHubFactory"
     )
 
     var selectedFactorySubTab by remember { mutableIntStateOf(0) }
@@ -1937,6 +1954,9 @@ fun DesignSystemCatalogApp() {
                         17 -> WgcSocialLoginPillCatalogSection()
                         18 -> WgcPillTabSwitchCatalogSection()
                         19 -> WgcColorPickerCatalogSection()
+                        20 -> WgcBadgeCatalogSection()
+                        21 -> WgcTagCatalogSection()
+                        22 -> WgcSnackbarCatalogSection()
                     }
                 }
                 72 -> {
@@ -2903,6 +2923,263 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                     )
                 }
             }
+            10 -> {
+                var searchTypeIndex by remember { mutableIntStateOf(0) }
+                var overrideContentSlot by remember { mutableStateOf(false) }
+                val searchTypes = WgcSearchType.entries
+
+                Text("WgcSearchFactory - Fábrica Universal de Busca & Catálogo", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne telas de busca por domínio ou injete resultados customizados via slot:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Variante de Busca:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = searchTypeIndex) {
+                    searchTypes.forEachIndexed { idx, type ->
+                        Tab(
+                            selected = searchTypeIndex == idx,
+                            onClick = { searchTypeIndex = idx },
+                            text = { Text(type.name) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideContentSlot,
+                        onCheckedChange = { overrideContentSlot = it }
+                    )
+                    Text("Injetar Slot Customizado de Resultados")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcSearchFactory(
+                        type = searchTypes[searchTypeIndex],
+                        contentSlot = if (overrideContentSlot) {
+                            {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.primaryContainer,
+                                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.sm12.dp)
+                                ) {
+                                    Text(
+                                        text = "🔍 RESULTADOS CUSTOMIZADOS INJETADOS VIA SLOT",
+                                        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
+                        } else null
+                    )
+                }
+            }
+            11 -> {
+                var settingsTypeIndex by remember { mutableIntStateOf(0) }
+                var overrideHeaderSlot by remember { mutableStateOf(false) }
+                val settingsTypes = WgcSettingsHubType.entries
+
+                Text("WgcSettingsHubFactory - Hub Universal de Configurações", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne entre perfil, preferências do app e configurações de segurança:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Variante de Configurações:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = settingsTypeIndex) {
+                    settingsTypes.forEachIndexed { idx, type ->
+                        Tab(
+                            selected = settingsTypeIndex == idx,
+                            onClick = { settingsTypeIndex = idx },
+                            text = { Text(type.name) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideHeaderSlot,
+                        onCheckedChange = { overrideHeaderSlot = it }
+                    )
+                    Text("Injetar Header Customizado via Slot")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcSettingsHubFactory(
+                        type = settingsTypes[settingsTypeIndex],
+                        headerSlot = if (overrideHeaderSlot) {
+                            {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.secondaryContainer,
+                                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.sm12.dp)
+                                ) {
+                                    Text(
+                                        text = "⚙️ HEADER VIP INJETADO VIA SLOT: CONFIGURAÇÃO PRO",
+                                        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
+                        } else null
+                    )
+                }
+            }
         }
+    }
+}
+
+@Composable
+fun WgcBadgeCatalogSection() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcBadge & WgcBadgedBox", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Emblemas corporativos para indicação visual de notificações, contadores e status sobre componentes.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Badges com Contadores e Variantes Semânticas:", style = MaterialTheme.typography.titleSmall)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(24.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcBadgedBox(badge = { WgcBadge(count = 3, variant = WgcBadgeVariant.Primary) }) {
+                Icon(Icons.Default.Notifications, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+            WgcBadgedBox(badge = { WgcBadge(count = 12, variant = WgcBadgeVariant.Success) }) {
+                Icon(Icons.Default.ShoppingCart, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+            WgcBadgedBox(badge = { WgcBadge(count = 99, variant = WgcBadgeVariant.Warning) }) {
+                Icon(Icons.Default.Email, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+            WgcBadgedBox(badge = { WgcBadge(count = 150, variant = WgcBadgeVariant.Error) }) {
+                Icon(Icons.Default.Notifications, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+        }
+
+        Text("2. Dot Badges (Pontos de Atenção):", style = MaterialTheme.typography.titleSmall)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(24.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcBadgedBox(badge = { WgcBadge(variant = WgcBadgeVariant.Error) }) {
+                Icon(Icons.Default.Notifications, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+            WgcBadgedBox(badge = { WgcBadge(variant = WgcBadgeVariant.Primary) }) {
+                Icon(Icons.Default.Email, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+            WgcBadgedBox(badge = { WgcBadge(variant = WgcBadgeVariant.Neutral) }) {
+                Icon(Icons.Default.ShoppingCart, contentDescription = null, modifier = Modifier.size(32.dp))
+            }
+        }
+    }
+}
+
+@Composable
+fun WgcTagCatalogSection() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcTag - Rótulos e Tags de Status", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente atômico para categorização, metadados e tags promocionais com suporte a estilos e tamanhos.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Variantes Preenchidas (Filled):", style = MaterialTheme.typography.titleSmall)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcTag(text = "Novo", variant = WgcTagVariant.Primary)
+            WgcTag(text = "Destaque", variant = WgcTagVariant.Success)
+            WgcTag(text = "Atenção", variant = WgcTagVariant.Warning)
+            WgcTag(text = "Esgotado", variant = WgcTagVariant.Error)
+            WgcTag(text = "Info", variant = WgcTagVariant.Info)
+        }
+
+        Text("2. Variantes Contornadas (Outlined):", style = MaterialTheme.typography.titleSmall)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcTag(text = "Promoção", variant = WgcTagVariant.Warning, style = WgcTagStyle.Outlined)
+            WgcTag(text = "Premium", variant = WgcTagVariant.Primary, style = WgcTagStyle.Outlined)
+            WgcTag(text = "Disponível", variant = WgcTagVariant.Success, style = WgcTagStyle.Outlined)
+        }
+
+        Text("3. Tamanhos (Small vs Medium):", style = MaterialTheme.typography.titleSmall)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcTag(text = "Small Tag", size = WgcTagSize.Small, variant = WgcTagVariant.Primary)
+            WgcTag(text = "Medium Tag", size = WgcTagSize.Medium, variant = WgcTagVariant.Primary)
+        }
+    }
+}
+
+@Composable
+fun WgcSnackbarCatalogSection() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcSnackbar - Mensagens e Notificações Contextuais", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente de feedback visual com variantes semânticas, ícones integrados e suporte a ações.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Sucesso (Success):", style = MaterialTheme.typography.titleSmall)
+        WgcSnackbar(
+            message = "Item adicionado ao carrinho com sucesso!",
+            actionLabel = "Ver Carrinho",
+            onActionClick = {},
+            variant = WgcSnackbarVariant.Success
+        )
+
+        Text("2. Erro (Error):", style = MaterialTheme.typography.titleSmall)
+        WgcSnackbar(
+            message = "Não foi possível conectar ao servidor.",
+            actionLabel = "Tentar Novamente",
+            onActionClick = {},
+            variant = WgcSnackbarVariant.Error
+        )
+
+        Text("3. Aviso (Warning):", style = MaterialTheme.typography.titleSmall)
+        WgcSnackbar(
+            message = "Sua assinatura expira em 3 dias.",
+            actionLabel = "Renovar",
+            onActionClick = {},
+            variant = WgcSnackbarVariant.Warning
+        )
+
+        Text("4. Informativo (Info):", style = MaterialTheme.typography.titleSmall)
+        WgcSnackbar(
+            message = "Nova versão 1.1.0 disponível para atualização.",
+            actionLabel = "Detalhes",
+            onActionClick = {},
+            variant = WgcSnackbarVariant.Info
+        )
+
+        Text("5. Padrão (Default):", style = MaterialTheme.typography.titleSmall)
+        WgcSnackbar(
+            message = "Operação concluída.",
+            actionLabel = "Desfazer",
+            onActionClick = {},
+            variant = WgcSnackbarVariant.Default
+        )
     }
 }

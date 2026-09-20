@@ -53,4 +53,23 @@ class WgcFactoriesTest {
         assertTrue(types.contains(WgcCartType.CARE_PHARMACY))
         assertTrue(types.contains(WgcCartType.POPULAR_PHARMACY))
     }
+
+    @Test
+    fun `WgcSearchType should contain all expected variants`() {
+        val types = WgcSearchType.entries
+        assertEquals(4, types.size)
+        assertTrue(types.contains(WgcSearchType.STANDARD))
+        assertTrue(types.contains(WgcSearchType.VISUAL_SEARCH))
+        assertTrue(types.contains(WgcSearchType.ECOMMERCE))
+        assertTrue(types.contains(WgcSearchType.FOOD))
+    }
+
+    @Test
+    fun `WgcSettingsHubType should contain all expected variants`() {
+        val types = WgcSettingsHubType.entries
+        assertEquals(3, types.size)
+        assertTrue(types.contains(WgcSettingsHubType.STANDARD))
+        assertTrue(types.contains(WgcSettingsHubType.SECURITY))
+        assertTrue(types.contains(WgcSettingsHubType.PREFERENCES))
+    }
 }

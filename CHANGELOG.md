@@ -9,7 +9,28 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-09-20
+
 ### Added
+- **Novas Fábricas Universais de Templates (`:templates`)**:
+  - `WgcSearchFactory`: ponto de entrada unificado para busca e catálogo (`STANDARD`, `VISUAL_SEARCH`, `ECOMMERCE`, `FOOD`) com slots para barra de busca, filtros e resultados.
+  - `WgcSettingsHubFactory`: hub unificado de configurações (`STANDARD`, `SECURITY`, `PREFERENCES`) com State Hoisting, alternadores e suporte a slots customizáveis.
+  - `WgcCheckoutFactory`: suporte unificado para fluxos de checkout (`STANDARD`, `GADGET_SHOP`, `MEGA_STORE`, `QUICK_SHOP`, `RETAIL`, `TREND_FASHION`).
+  - `WgcOnboardingFactory`: suíte unificada para telas de boas-vindas e introdução (`STANDARD`, `GADGET_SHOP`, `PERSONAL_FINANCE`, `QUICK_SHOP`, `TREND_FASHION`).
+  - `WgcCartFactory`: catálogo universal para 14 variantes de carrinho de compras de diversos domínios.
+- **Novos Componentes e Átomos (`:components`)**:
+  - `WgcColorPicker`: seletor de cores cromático interativo 360° com slider de brilho, paleta rápida corporativa e múltiplos formatos de abertura (`DIALOG` e `BOTTOM_SHEET`).
+  - `WgcTag`: etiquetas e rótulos de status com variantes semânticas (`Primary`, `Secondary`, `Success`, `Error`, `Warning`, `Info`, `Neutral`), estilos (`Filled`, `Outlined`) e tamanhos (`Small`, `Medium`).
+  - `WgcSnackbar`: enriquecido com variantes semânticas (`Default`, `Success`, `Error`, `Warning`, `Info`), ícones contextuais e preservação de retrocompatibilidade total.
+  - `WgcBadge`: integração oficial ao catálogo do `:app`.
+- **Testes de Regressão Visual (Screenshot Testing)**:
+  - `WgcColorPickerScreenshotTest`: validação de regressão visual para roda cromática, triggers (badge e ícone) e diálogos.
+  - `WgcTagScreenshotTest` e `WgcSnackbarScreenshotTest`: validação visual de variantes semânticas.
+  - `WgcFactoriesScreenshotTest`: testes de screenshot para as novas fábricas universais.
+
+### Changed
+- **Showcase Interativo (`:app`)**:
+  - Adição de seções completas para `WgcColorPicker`, `WgcBadge`, `WgcTag`, `WgcSnackbar`, `WgcSearchFactory` e `WgcSettingsHubFactory`.
 - **Tokens Core (`:core`)**:
   - `WgcCoreDsTypography`: hierarquia tipográfica formal (display, headline, title, body, label).
   - `WgcCoreDsOpacity`: constantes semânticas de opacidade para estados interativos.
