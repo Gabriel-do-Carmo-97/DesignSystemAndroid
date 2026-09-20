@@ -120,7 +120,7 @@ jobs:
         run: ./gradlew :${{ matrix.module }}:detekt
       - name: Upload Detekt Reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: detekt-reports-${{ matrix.module }}
           path: ${{ matrix.module }}/build/reports/detekt/
@@ -151,7 +151,7 @@ jobs:
         run: ./gradlew :${{ matrix.module }}:testDebugUnitTest
       - name: Upload Test Results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: test-results-${{ matrix.module }}
           path: ${{ matrix.module }}/build/reports/tests/testDebugUnitTest/
@@ -173,7 +173,7 @@ jobs:
         run: ./gradlew :components:testDebugUnitTest :templates:testDebugUnitTest :navigation-flows:testDebugUnitTest --tests "*IntegrationTest"
       - name: Upload Integration Test Results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: integration-test-results
           path: '**/build/reports/tests/testDebugUnitTest/'
@@ -196,7 +196,7 @@ jobs:
         run: ./gradlew validateDebugScreenshotTest
       - name: Upload Screenshot Test Reports & Diffs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: screenshot-test-reports
           path: app/build/reports/screenshotTest/
@@ -256,7 +256,7 @@ jobs:
       - name: Assemble ${{ matrix.module }}
         run: ./gradlew :${{ matrix.module }}:${{ matrix.task }} -PVERSION_NAME=${{ needs.calculate-version.outputs.version_name }}
       - name: Upload ${{ matrix.module }} AAR
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aar-${{ matrix.module }}
           path: ${{ matrix.artifact_path }}
@@ -277,7 +277,7 @@ jobs:
       - name: Assemble Catalog App Debug APK
         run: ./gradlew :app:assembleDebug
       - name: Upload Catalog APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: catalog-app-apk
           path: app/build/outputs/apk/debug/app-debug.apk
