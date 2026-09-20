@@ -151,8 +151,20 @@ public final class br/com/wgc/design_system/components/badge/WgcBadgeVariant : j
 	public static fun values ()[Lbr/com/wgc/design_system/components/badge/WgcBadgeVariant;
 }
 
+public final class br/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcStandardBottomSheetKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcStandardBottomSheetKt;
+	public fun <init> ()V
+	public final fun getLambda$-2037445564$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-840187605$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$185376234$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/bottomsheet/WgcBottomSheetKt {
 	public static final fun WgcBottomSheet (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Landroidx/compose/material3/SheetState;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/bottomsheet/WgcStandardBottomSheetKt {
+	public static final fun WgcStandardBottomSheet (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;ZLandroidx/compose/material3/SheetState;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/buttons/ComposableSingletons$WgcButtonKt {
@@ -1089,7 +1101,7 @@ public final class br/com/wgc/design_system/components/feedback/ComposableSingle
 }
 
 public final class br/com/wgc/design_system/components/feedback/WgcRatingBarKt {
-	public static final fun WgcRatingBar-FHprtrg (Landroidx/compose/ui/Modifier;FILjava/lang/Integer;JZLandroidx/compose/runtime/Composer;II)V
+	public static final fun WgcRatingBar-Lz4kqSk (Landroidx/compose/ui/Modifier;FILjava/lang/Integer;JZZLkotlin/jvm/functions/Function1;FFLandroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/feedback/WgcSnackbarKt {
@@ -1665,8 +1677,30 @@ public final class br/com/wgc/design_system/components/pickers/WgcTimePickerKt {
 	public static final fun WgcTimePickerDialog (Landroidx/compose/material3/TimePickerState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/placeholder/ComposableSingletons$WgcSkeletonKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/placeholder/ComposableSingletons$WgcSkeletonKt;
+	public fun <init> ()V
+	public final fun getLambda$953274602$components_release ()Lkotlin/jvm/functions/Function3;
+}
+
 public final class br/com/wgc/design_system/components/placeholder/PlaceholderDefaultKt {
 	public static final fun PlaceholderDefault (Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/vector/ImageVector;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/placeholder/WgcSkeletonKt {
+	public static final fun WgcSkeleton-6a0pyJM (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;FLandroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSkeletonCard (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSkeletonListItem (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSkeletonProfile (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/placeholder/WgcSkeletonShape : java/lang/Enum {
+	public static final field BOX Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;
+	public static final field CIRCLE Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;
+	public static final field ROUNDED Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;
+	public static fun values ()[Lbr/com/wgc/design_system/components/placeholder/WgcSkeletonShape;
 }
 
 public final class br/com/wgc/design_system/components/progress/ComposableSingletons$WgcProgressIndicatorsKt {

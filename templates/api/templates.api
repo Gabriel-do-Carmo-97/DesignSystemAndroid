@@ -6999,6 +6999,104 @@ public final class br/com/wgc/design_system/templates/screens/naturalbeauty/WgcN
 	public static final fun WgcNaturaRefillsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/notifications/BaseNotificationCenterViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onCategorySelected (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;)V
+	public abstract fun onClearAll ()V
+	public abstract fun onMarkAllAsRead ()V
+	public abstract fun onNotificationClick (Ljava/lang/String;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/ComposableSingletons$WgcNotificationCenterTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/notifications/ComposableSingletons$WgcNotificationCenterTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1411873697$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1463721734$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-184198955$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1021446644$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1113030056$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1583297681$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/FakeNotificationCenterViewModel : br/com/wgc/design_system/templates/screens/notifications/BaseNotificationCenterViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onCategorySelected (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;)V
+	public fun onClearAll ()V
+	public fun onMarkAllAsRead ()V
+	public fun onNotificationClick (Ljava/lang/String;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory : java/lang/Enum {
+	public static final field ALL Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public static final field TRANSACTIONAL Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public static final field UNREAD Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getLabel ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/WgcNotificationCenterTemplateKt {
+	public static final fun WgcNotificationCenterTemplate (Lbr/com/wgc/design_system/templates/screens/notifications/BaseNotificationCenterViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/WgcNotificationCenterUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;Ljava/util/List;ZLjava/lang/String;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;Ljava/util/List;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Z
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;Ljava/util/List;ZLjava/lang/String;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCenterUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCenterUiState;Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;Ljava/util/List;ZLjava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCenterUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getNotifications ()Ljava/util/List;
+	public final fun getSelectedCategory ()Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationCategory;
+	public fun hashCode ()I
+	public final fun isLoading ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/WgcNotificationItemData {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Z
+	public final fun component6 ()Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationItemData;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationItemData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationItemData;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getType ()Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public fun hashCode ()I
+	public final fun isRead ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notifications/WgcNotificationType : java/lang/Enum {
+	public static final field INFO Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public static final field SUCCESS Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public static final field TRANSACTION Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public static final field WARNING Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/screens/notifications/WgcNotificationType;
+}
+
 public final class br/com/wgc/design_system/templates/screens/personalfinance/cards/ComposableSingletons$WgcPersonalFinanceCardsTemplateKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/personalfinance/cards/ComposableSingletons$WgcPersonalFinanceCardsTemplateKt;
 	public fun <init> ()V
@@ -7825,10 +7923,36 @@ public abstract class br/com/wgc/design_system/templates/screens/profile/BaseSet
 	public abstract fun onToggleNotifications (Z)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onBioChange (Ljava/lang/String;)V
+	public abstract fun onCancelClick ()V
+	public abstract fun onChangeAvatarClick ()V
+	public abstract fun onEmailChange (Ljava/lang/String;)V
+	public abstract fun onNameChange (Ljava/lang/String;)V
+	public abstract fun onPhoneChange (Ljava/lang/String;)V
+	public abstract fun onSaveClick ()V
+}
+
 public final class br/com/wgc/design_system/templates/screens/profile/ComposableSingletons$SettingsHubScreenTemplateKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/profile/ComposableSingletons$SettingsHubScreenTemplateKt;
 	public fun <init> ()V
 	public final fun getLambda$-1253314939$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/profile/ComposableSingletons$WgcUserProfileEditTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/profile/ComposableSingletons$WgcUserProfileEditTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1618250598$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-484994552$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-566081994$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-907998856$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1157761280$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1425306177$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$890216383$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$98653919$templates_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class br/com/wgc/design_system/templates/screens/profile/FakeSettingsHubViewModel : br/com/wgc/design_system/templates/screens/profile/BaseSettingsHubViewModel {
@@ -7838,6 +7962,19 @@ public final class br/com/wgc/design_system/templates/screens/profile/FakeSettin
 	public fun onLogoutClick ()V
 	public fun onToggleDarkMode (Z)V
 	public fun onToggleNotifications (Z)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/profile/FakeUserProfileEditViewModel : br/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onBioChange (Ljava/lang/String;)V
+	public fun onCancelClick ()V
+	public fun onChangeAvatarClick ()V
+	public fun onEmailChange (Ljava/lang/String;)V
+	public fun onNameChange (Ljava/lang/String;)V
+	public fun onPhoneChange (Ljava/lang/String;)V
+	public fun onSaveClick ()V
 }
 
 public final class br/com/wgc/design_system/templates/screens/profile/SettingsHubScreenTemplateKt {
@@ -7862,6 +7999,44 @@ public final class br/com/wgc/design_system/templates/screens/profile/SettingsHu
 	public final fun getNotificationsEnabled ()Z
 	public final fun getUserName ()Ljava/lang/String;
 	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/profile/WgcUserProfileEditTemplateKt {
+	public static final fun WgcUserProfileEditTemplate (Lbr/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/profile/WgcUserProfileEditUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Z
+	public final fun component7 ()Z
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/design_system/templates/screens/profile/WgcUserProfileEditUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/profile/WgcUserProfileEditUiState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/profile/WgcUserProfileEditUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAvatarUrl ()Ljava/lang/String;
+	public final fun getBio ()Ljava/lang/String;
+	public final fun getEmail ()Ljava/lang/String;
+	public final fun getEmailError ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getNameError ()Ljava/lang/String;
+	public final fun getPhone ()Ljava/lang/String;
+	public final fun getPhoneError ()Ljava/lang/String;
+	public final fun getSuccessMessage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isLoading ()Z
+	public final fun isSaving ()Z
 	public fun toString ()Ljava/lang/String;
 }
 

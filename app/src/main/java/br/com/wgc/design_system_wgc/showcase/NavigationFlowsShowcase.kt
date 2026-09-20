@@ -54,6 +54,8 @@ import br.com.wgc.design_system.navigation.onboarding.wgcOnboardingNavGraph
 
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Person
 import br.com.wgc.design_system.navigation.search.WgcSearchNavHost
 import br.com.wgc.design_system.navigation.settings.WgcSettingsNavHost
 
@@ -106,6 +108,12 @@ fun NavigationFlowsShowcase(
                 "ONBOARDING" -> OnboardingFlowSimulator(onFinish = { activeFlow = null })
                 "SEARCH" -> WgcSearchNavHost(onClose = { activeFlow = null })
                 "SETTINGS" -> WgcSettingsNavHost(onClose = { activeFlow = null }, onLogoutConfirmed = { activeFlow = null })
+                "NOTIFICATIONS" -> br.com.wgc.design_system.navigation.notifications.WgcNotificationsNavHost(
+                    onNavigateBack = { activeFlow = null }
+                )
+                "PROFILE" -> br.com.wgc.design_system.navigation.profile.WgcProfileNavHost(
+                    onNavigateBack = { activeFlow = null }
+                )
                 else -> FlowSelectorMenu(onSelectFlow = { activeFlow = it })
             }
         }
@@ -162,6 +170,20 @@ private fun FlowSelectorMenu(
             description = "Visão Geral ➔ Segurança & Biometria ➔ Preferências do App ➔ Termos & Privacidade ➔ Logout.",
             icon = Icons.Default.Settings,
             onClick = { onSelectFlow("SETTINGS") }
+        )
+
+        FlowCard(
+            title = "6. Central de Notificações (Notifications Flow)",
+            description = "Abas de filtros (Todas, Não lidas, Transações) ➔ Leitura ➔ Detalhe da Mensagem.",
+            icon = Icons.Default.Notifications,
+            onClick = { onSelectFlow("NOTIFICATIONS") }
+        )
+
+        FlowCard(
+            title = "7. Perfil & Edição Cadastral (Profile Flow)",
+            description = "Visualização do Perfil ➔ Edição cadastral completa com validação ➔ Segurança & Senha.",
+            icon = Icons.Default.Person,
+            onClick = { onSelectFlow("PROFILE") }
         )
     }
 }

@@ -126,6 +126,13 @@ import br.com.wgc.design_system.components.inputs.WgcOtpInput
 import br.com.wgc.design_system.components.timeline.WgcTimeline
 import br.com.wgc.design_system.components.timeline.WgcTimelineItem
 import br.com.wgc.design_system.components.timeline.WgcTimelineStatus
+import br.com.wgc.design_system.components.feedback.WgcRatingBar
+import br.com.wgc.design_system.components.bottomsheet.WgcStandardBottomSheet
+import br.com.wgc.design_system.components.placeholder.WgcSkeletonCard
+import br.com.wgc.design_system.components.placeholder.WgcSkeletonListItem
+import br.com.wgc.design_system.components.placeholder.WgcSkeletonProfile
+import br.com.wgc.design_system.templates.screens.notifications.WgcNotificationCenterTemplate
+import br.com.wgc.design_system.templates.screens.profile.WgcUserProfileEditTemplate
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.font.FontWeight
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -500,14 +507,16 @@ fun DesignSystemCatalogApp() {
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
         "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
         "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)",
-        "WgcBadge", "WgcTag", "WgcSnackbar", "WgcOtpInput", "WgcTimeline"
+        "WgcBadge", "WgcTag", "WgcSnackbar", "WgcOtpInput", "WgcTimeline",
+        "WgcRatingBar", "WgcStandardBottomSheet", "WgcSkeleton"
     )
 
     val templateSubTabs = listOf(
         "Figma: Clean Wave Auth", "Figma: Split Card Auth", "Figma: Modern Klok Auth",
         "Auth Multi-Brand", "Marketplace Home", "99Food Home", "Food Delivery Home",
         "Instagram Story Viewer", "Home Fintech", "Home E-commerce",
-        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login"
+        "Mapa & Tracking", "Carrinho & Checkout", "Perfil & Configurações", "Busca & Filtros", "Login",
+        "Central de Notificações", "Editar Perfil (Cadastro)"
     )
 
     val factorySubTabs = listOf(
@@ -1963,6 +1972,9 @@ fun DesignSystemCatalogApp() {
                         22 -> WgcSnackbarCatalogSection()
                         23 -> WgcOtpInputCatalogSection()
                         24 -> WgcTimelineCatalogSection()
+                        25 -> WgcRatingBarCatalogSection()
+                        26 -> WgcBottomSheetCatalogSection()
+                        27 -> WgcSkeletonCatalogSection()
                     }
                 }
                 72 -> {
@@ -1980,6 +1992,8 @@ fun DesignSystemCatalogApp() {
                         10 -> LoginScreenTemplate(viewModel = FakeLoginViewModel())
                         11 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
                         12 -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel())
+                        13 -> WgcNotificationCenterTemplate()
+                        14 -> WgcUserProfileEditTemplate()
                     }
                 }
                 73 -> {
@@ -3278,3 +3292,110 @@ fun WgcTimelineCatalogSection() {
         )
     }
 }
+
+@Composable
+fun WgcRatingBarCatalogSection() {
+    var interactiveRating by remember { mutableStateOf(3.5f) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcRatingBar - Avaliação por Estrelas", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente para feedbacks e notas com suporte a modo leitura fracionário e modo interativo.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Modo Leitura (Read-Only) com Contagem de Avaliações:", style = MaterialTheme.typography.titleSmall)
+        WgcRatingBar(
+            rating = 4.8f,
+            reviewCount = 12430
+        )
+
+        Text("2. Modo Interativo (Clique nas estrelas para avaliar):", style = MaterialTheme.typography.titleSmall)
+        WgcRatingBar(
+            rating = interactiveRating,
+            isInteractive = true,
+            onRatingChange = { interactiveRating = it }
+        )
+        Text(
+            text = "Nota selecionada: $interactiveRating",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.primary
+        )
+    }
+}
+
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+@Composable
+fun WgcBottomSheetCatalogSection() {
+    var showSheet by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcStandardBottomSheet - Folha Inferior Modal", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Bottom Sheet corporativo com cabeçalho padronizado, tokens de elevação e suporte a ações.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        WgcClassicButton(
+            textButton = "Abrir Standard Bottom Sheet",
+            onClick = { showSheet = true }
+        )
+
+        if (showSheet) {
+            WgcStandardBottomSheet(
+                onDismissRequest = { showSheet = false },
+                title = "Opções de Entrega",
+                subtitle = "Escolha como deseja receber o seu pedido.",
+                actionsSlot = {
+                    WgcClassicButton(
+                        textButton = "Confirmar Escolha",
+                        onClick = { showSheet = false },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            ) {
+                Text(
+                    text = "Entrega expressa (até 2 horas) ou convencional (em até 2 dias úteis).",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun WgcSkeletonCatalogSection() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcSkeleton - Estados de Carregamento", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Placeholders modulares com shimmer effect para listas, perfis e cards.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Skeleton de Perfil:", style = MaterialTheme.typography.titleSmall)
+        WgcSkeletonProfile()
+
+        Text("2. Skeleton de Item de Lista:", style = MaterialTheme.typography.titleSmall)
+        WgcSkeletonListItem()
+        WgcSkeletonListItem()
+
+        Text("3. Skeleton de Card:", style = MaterialTheme.typography.titleSmall)
+        WgcSkeletonCard()
+    }
+}
+

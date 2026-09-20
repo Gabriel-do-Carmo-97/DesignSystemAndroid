@@ -37,4 +37,18 @@ class WgcNavGraphsTest {
         assertNotNull(WgcSettingsPreferencesRoute)
         assertNotNull(WgcSettingsTermsRoute)
     }
+
+    @Test
+    fun `notifications nav graph routes should instantiate correctly`() {
+        assertNotNull(br.com.wgc.design_system.navigation.notifications.NotificationsRoute.List)
+        val detail = br.com.wgc.design_system.navigation.notifications.NotificationsRoute.Detail("notif-123")
+        assertEquals("notif-123", detail.notificationId)
+    }
+
+    @Test
+    fun `profile nav graph routes should instantiate correctly`() {
+        assertNotNull(br.com.wgc.design_system.navigation.profile.ProfileRoute.View)
+        assertNotNull(br.com.wgc.design_system.navigation.profile.ProfileRoute.Edit)
+        assertNotNull(br.com.wgc.design_system.navigation.profile.ProfileRoute.Security)
+    }
 }
