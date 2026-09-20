@@ -9,6 +9,23 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ## [Unreleased]
 
+### Added
+- **Novos Templates (`:templates`)**:
+  - `WgcNotificationCenterTemplate`: Central de notificações completa com abas de categoria (Todas, Não Lidas, Transações), marcação de leitura, limpeza e slots customizáveis.
+  - `WgcUserProfileEditTemplate`: Tela completa de edição de perfil cadastral com avatar, validações em tempo real de e-mail e nome, bio e botões de ação.
+- **Novos Componentes e Átomos (`:components`)**:
+  - `WgcRatingBar`: Avaliação por estrelas com suporte a modo interativo (toque e clique nas estrelas) e modo somente leitura com notas fracionárias e acessibilidade.
+  - `WgcStandardBottomSheet`: Folha inferior modal padronizada com cabeçalho corporativo, botão de fechar, slot de ações e tokens de elevação e raio de borda.
+  - `WgcSkeleton` e `WgcSkeletonShape`: Placeholders modulares de carregamento com shimmer effect e composições pré-moldadas (`WgcSkeletonCard`, `WgcSkeletonListItem`, `WgcSkeletonProfile`).
+- **Novos Grafos de Navegação Type-Safe (`:navigation-flows`)**:
+  - `WgcNotificationsNavGraph` & `WgcNotificationsNavHost`: Fluxo de navegação para listagem e detalhes com rotas type-safe (`NotificationsRoute.List`, `NotificationsRoute.Detail`).
+  - `WgcProfileNavGraph` & `WgcProfileNavHost`: Fluxo de navegação para visualização de perfil, edição cadastral e segurança com rotas type-safe (`ProfileRoute.View`, `ProfileRoute.Edit`, `ProfileRoute.Security`).
+- **Tokens de Animação e Movimento (`:core`)**:
+  - `WgcCoreDsMotion`: Adição de curvas de aceleração e desaceleração cúbica (`easingEmphasized`, `easingEmphasizedDecelerate`, `easingEmphasizedAccelerate`, `easingStandardDecelerate`, `easingStandardAccelerate`) e classe de dados agnóstica `WgcCubicBezier`.
+- **Showcase Interativo (`:app`)**:
+  - Novas abas e seções demonstrativas para `WgcRatingBar`, `WgcStandardBottomSheet`, `WgcSkeleton`, `WgcNotificationCenterTemplate` e `WgcUserProfileEditTemplate`.
+  - Integração dos novos fluxos de notificações e perfil no `NavigationFlowsShowcase`.
+
 ## [1.1.0] - 2026-09-20
 
 ### Added

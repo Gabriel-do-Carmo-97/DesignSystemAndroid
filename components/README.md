@@ -20,8 +20,10 @@ O módulo **`:design-system`** contém todos os componentes de interface de usu�
 | **Campos de Texto (Inputs)** | `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField`, `WgcOtpInput` | Suporte a Leading/Trailing icons, estados de erro, máscara de senha/PIN e foco automatizado. |
 | **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButtonDefault`, `WgcSwitchDefault`, `WgcFilterChip` | Feedback háptico, suporte a estados desabilitados e `SemanticsProperties`. |
 | **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge` | Tipos Informativo, Sucesso, Alerta e Erro com ícones semânticos do `:core-ds`. |
-| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress` | Efeito shimmer personalizável para skeletons de carregamento. |
+| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress`, `WgcSkeleton` | Skeletons modulares pré-moldados (Card, ListItem, Profile) com shimmer integrado. |
 | **Linha do Tempo (Timeline)**| `WgcTimeline` | Status (Completed, Current, Pending), nós customizáveis, data e slots de ação. |
+| **Avaliação & Feedback** | `WgcRatingBar` | Classificação de 1 a 5 estrelas, modo leitura com notas fracionárias e interativo com acessibilidade. |
+| **Folha Inferior (Bottom Sheet)**| `WgcStandardBottomSheet`, `WgcBottomSheet` | Folha modal padronizada com cabeçalho corporativo, botão de fechar, elevação e slots de ação. |
 
 ---
 

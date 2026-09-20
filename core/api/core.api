@@ -574,6 +574,11 @@ public final class br/com/wgc/design_system/core/WgcCoreDsMotion {
 	public static final field durationNormal200 I
 	public static final field durationSlow500 I
 	public static final field durationStandard300 I
+	public final fun getEasingEmphasized ()Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public final fun getEasingEmphasizedAccelerate ()Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public final fun getEasingEmphasizedDecelerate ()Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public final fun getEasingStandardAccelerate ()Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public final fun getEasingStandardDecelerate ()Lbr/com/wgc/design_system/core/WgcCubicBezier;
 }
 
 public final class br/com/wgc/design_system/core/WgcCoreDsOpacity {
@@ -734,6 +739,23 @@ public final class br/com/wgc/design_system/core/WgcCoreDsTypography {
 	public static final field weightMedium I
 	public static final field weightNormal I
 	public static final field weightSemiBold I
+}
+
+public final class br/com/wgc/design_system/core/WgcCubicBezier {
+	public fun <init> (FFFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun copy (FFFF)Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/core/WgcCubicBezier;FFFFILjava/lang/Object;)Lbr/com/wgc/design_system/core/WgcCubicBezier;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getX1 ()F
+	public final fun getX2 ()F
+	public final fun getY1 ()F
+	public final fun getY2 ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public abstract interface class br/com/wgc/design_system/core/WgcThemeTokens {

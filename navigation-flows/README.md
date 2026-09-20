@@ -19,6 +19,8 @@ O módulo **`:navigation-flows`** fornece grafos e hosts de navegação desacopl
 | **`WgcOnboardingNavGraph`** / **`WgcOnboardingNavHost`** | Apresentação inicial do aplicativo / tour interativo | `OnboardingRoute.Step(index)` |
 | **`WgcSearchNavGraph`** / **`WgcSearchNavHost`** | Fluxo de busca, exploração de categorias e detalhes | `SearchRoute.Search`, `SearchRoute.ProductDetails(productId)` |
 | **`WgcSettingsNavGraph`** / **`WgcSettingsNavHost`** | Hub de configurações, perfil, termos e logout dialog | `SettingsRoute.Hub`, `SettingsRoute.Terms`, `SettingsRoute.Profile`, `SettingsRoute.LogoutDialog` |
+| **`WgcNotificationsNavGraph`** / **`WgcNotificationsNavHost`** | Central de notificações com filtros e detalhe type-safe | `NotificationsRoute.List`, `NotificationsRoute.Detail(notificationId)` |
+| **`WgcProfileNavGraph`** / **`WgcProfileNavHost`** | Visualização de perfil, edição cadastral e segurança | `ProfileRoute.View`, `ProfileRoute.Edit`, `ProfileRoute.Security` |
 
 ---
 
