@@ -20,7 +20,7 @@ sonarqube = "7.4.0.8496"
 dokka = "1.9.20"
 bcv = "0.17.0"
 
-navigationCompose = "2.8.8"
+navigationCompose = "2.10.1"
 
 [libraries]
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
