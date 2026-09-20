@@ -1242,10 +1242,20 @@ public final class br/com/wgc/design_system/components/images/ComposableSingleto
 	public final fun getLambda$664203543$components_release ()Lkotlin/jvm/functions/Function4;
 }
 
+public final class br/com/wgc/design_system/components/inputs/ComposableSingletons$WgcOtpInputKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/inputs/ComposableSingletons$WgcOtpInputKt;
+	public fun <init> ()V
+	public final fun getLambda$-334677601$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/inputs/ComposableSingletons$WgcSwitchKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/inputs/ComposableSingletons$WgcSwitchKt;
 	public fun <init> ()V
 	public final fun getLambda$486219112$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/inputs/WgcOtpInputKt {
+	public static final fun WgcOtpInput (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;IZZLjava/lang/String;ZLandroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/inputs/WgcQuantityStepperKt {
@@ -2045,6 +2055,46 @@ public final class br/com/wgc/design_system/components/tag/WgcTagVariant : java/
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
 	public static fun values ()[Lbr/com/wgc/design_system/components/tag/WgcTagVariant;
+}
+
+public final class br/com/wgc/design_system/components/timeline/ComposableSingletons$WgcTimelineKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/timeline/ComposableSingletons$WgcTimelineKt;
+	public fun <init> ()V
+	public final fun getLambda$663758967$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineItem {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public final fun component5 ()Lkotlin/jvm/functions/Function2;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;Lkotlin/jvm/functions/Function2;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineItem;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/timeline/WgcTimelineItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineItem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getIcon ()Lkotlin/jvm/functions/Function2;
+	public final fun getStatus ()Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineKt {
+	public static final fun WgcTimeline (Ljava/util/List;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineStatus : java/lang/Enum {
+	public static final field COMPLETED Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public static final field CURRENT Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public static final field PENDING Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+	public static fun values ()[Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
 }
 
 public final class br/com/wgc/design_system/components/tooltip/WgcTooltipKt {

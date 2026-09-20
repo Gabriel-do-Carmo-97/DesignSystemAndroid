@@ -17,10 +17,11 @@ O módulo **`:design-system`** contém todos os componentes de interface de usu�
 | **Botões de Ação** | `WgcClassicButton`, `WgcSecondaryClassicButton`, `WgcFAButton`, `WgcIconButton` | Estados Habilitado, Desabilitado e Loading (`CircularProgressIndicator`), alvo de toque mínimo de 48dp. |
 | **Autenticação & Social** | `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcSocialLoginPillGroup` | Biometria (`Circular`, `RoundedSquare`, `OutlinedSquare`), botões sociais padrão (Google, Apple, Facebook). |
 | **Alternadores & Switches** | `WgcPillTabSwitch`, `WgcSegmentedControl` | Alternador deslizante tipo pílula para Login/Cadastro com animação suave. |
-| **Campos de Texto (Inputs)** | `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField` | Suporte a Leading/Trailing icons, estados de erro, máscara de senha e foco. |
+| **Campos de Texto (Inputs)** | `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField`, `WgcOtpInput` | Suporte a Leading/Trailing icons, estados de erro, máscara de senha/PIN e foco automatizado. |
 | **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButtonDefault`, `WgcSwitchDefault`, `WgcFilterChip` | Feedback háptico, suporte a estados desabilitados e `SemanticsProperties`. |
 | **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge` | Tipos Informativo, Sucesso, Alerta e Erro com ícones semânticos do `:core-ds`. |
 | **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress` | Efeito shimmer personalizável para skeletons de carregamento. |
+| **Linha do Tempo (Timeline)**| `WgcTimeline` | Status (Completed, Current, Pending), nós customizáveis, data e slots de ação. |
 
 ---
 
