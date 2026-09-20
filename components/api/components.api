@@ -997,6 +997,62 @@ public final class br/com/wgc/design_system/components/chip/WgcSizeSelectorChipK
 	public static final fun WgcSizeSelectorChip (Landroidx/compose/ui/Modifier;Ljava/lang/String;ZZLkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/colorpicker/ComposableSingletons$WgcColorPickerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/colorpicker/ComposableSingletons$WgcColorPickerKt;
+	public fun <init> ()V
+	public final fun getLambda$-515363423$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-687936850$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1941561960$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerBottomSheetKt {
+	public static final fun WgcColorPickerBottomSheet-DIANMbU (ZJLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerDefaults;
+	public final fun getQuickPalette ()Ljava/util/List;
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerDialogKt {
+	public static final fun WgcColorPickerDialog-DIANMbU (ZJLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerKt {
+	public static final fun WgcColorPicker-PSU77Us (JLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation;Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation : java/lang/Enum {
+	public static final field BOTTOM_SHEET Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation;
+	public static final field DIALOG Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation;
+	public static fun values ()[Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerPresentation;
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType : java/lang/Enum {
+	public static final field BADGE Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType;
+	public static final field ICON Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType;
+	public static fun values ()[Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerTriggerType;
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorPickerUtils {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerUtils;
+	public final fun colorToHex-DxMtmZc (JZ)Ljava/lang/String;
+	public static synthetic fun colorToHex-DxMtmZc$default (Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerUtils;JZILjava/lang/Object;)Ljava/lang/String;
+	public final fun colorToHsv-8_81llA (J)Lkotlin/Triple;
+	public final fun hsvToColor-wmQWz5c (FFFF)J
+	public static synthetic fun hsvToColor-wmQWz5c$default (Lbr/com/wgc/design_system/components/colorpicker/WgcColorPickerUtils;FFFFILjava/lang/Object;)J
+}
+
+public final class br/com/wgc/design_system/components/colorpicker/WgcColorWheelKt {
+	public static final fun WgcColorWheel-PfoAEA0 (FFFLkotlin/jvm/functions/Function3;Landroidx/compose/ui/Modifier;FZLandroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/dialogs/ComposableSingletons$WgcAlertDialogKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/dialogs/ComposableSingletons$WgcAlertDialogKt;
 	public fun <init> ()V

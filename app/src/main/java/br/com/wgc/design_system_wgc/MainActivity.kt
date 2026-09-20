@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system_wgc
+package br.com.wgc.design_system_wgc
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -97,6 +97,19 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import br.com.wgc.design_system.templates.factories.WgcProfileFactory
 import br.com.wgc.design_system.templates.factories.WgcProfileType
 import br.com.wgc.design_system.templates.factories.WgcProfileStatus
+import br.com.wgc.design_system.components.colorpicker.WgcColorPicker
+import br.com.wgc.design_system.components.colorpicker.WgcColorPickerPresentation
+import br.com.wgc.design_system.components.colorpicker.WgcColorPickerTriggerType
+import br.com.wgc.design_system.templates.factories.WgcCheckoutFactory
+import br.com.wgc.design_system.templates.factories.WgcCheckoutType
+import br.com.wgc.design_system.templates.factories.WgcOnboardingFactory
+import br.com.wgc.design_system.templates.factories.WgcOnboardingType
+import br.com.wgc.design_system.templates.factories.WgcCartFactory
+import br.com.wgc.design_system.templates.factories.WgcCartType
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.text.font.FontWeight
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -466,7 +479,7 @@ fun DesignSystemCatalogApp() {
         "WgcClassicButton", "WgcSecondaryClassicButton", "WgcIconButton", "WgcSegmentedButton",
         "WgcSwitch", "WgcRadioButton", "WgcChip", "WgcSlider", "WgcAlert", "WgcAvatar", "WgcListItem",
         "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
-        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch"
+        "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)"
     )
 
     val templateSubTabs = listOf(
@@ -477,7 +490,8 @@ fun DesignSystemCatalogApp() {
     )
 
     val factorySubTabs = listOf(
-        "WgcProfileFactory (22 Perfis)", "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory"
+        "WgcProfileFactory (22 Perfis)", "WgcButton", "WgcMenuFactory", "WgcFieldFactory", "WgcCardFactory", "WgcAuthFactory", "WgcHomeFactory",
+        "WgcCheckoutFactory", "WgcOnboardingFactory", "WgcCartFactory"
     )
 
     var selectedFactorySubTab by remember { mutableIntStateOf(0) }
@@ -1922,6 +1936,7 @@ fun DesignSystemCatalogApp() {
                         16 -> WgcBiometricButtonCatalogSection()
                         17 -> WgcSocialLoginPillCatalogSection()
                         18 -> WgcPillTabSwitchCatalogSection()
+                        19 -> WgcColorPickerCatalogSection()
                     }
                 }
                 72 -> {
@@ -2303,6 +2318,67 @@ fun WgcPillTabSwitchCatalogSection() {
     }
 }
 
+@Composable
+fun WgcColorPickerCatalogSection() {
+    var selectedColorDialog by remember { mutableStateOf(Color(0xFF6750A4)) }
+    var selectedColorBottomSheet by remember { mutableStateOf(Color(0xFF006C4C)) }
+    var selectedColorCustom by remember { mutableStateOf(Color(0xFFB3261E)) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("WgcColorPicker (Roda Cromática Interativa)", style = MaterialTheme.typography.titleLarge)
+        Text(
+            "Componente com roda cromática 360°, slider de brilho, paleta rápida corporativa e múltiplos formatos de abertura.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+
+        Text("1. Gatilho Badge Circular + Apresentação Dialog:", style = MaterialTheme.typography.titleSmall)
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            WgcColorPicker(
+                selectedColor = selectedColorDialog,
+                onColorSelected = { selectedColorDialog = it },
+                presentation = WgcColorPickerPresentation.DIALOG,
+                triggerType = WgcColorPickerTriggerType.BADGE
+            )
+            Text("Cor: #${Integer.toHexString(selectedColorDialog.value.toInt()).uppercase().takeLast(8)}")
+        }
+
+        Text("2. Gatilho Ícone + Apresentação BottomSheet:", style = MaterialTheme.typography.titleSmall)
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            WgcColorPicker(
+                selectedColor = selectedColorBottomSheet,
+                onColorSelected = { selectedColorBottomSheet = it },
+                presentation = WgcColorPickerPresentation.BOTTOM_SHEET,
+                triggerType = WgcColorPickerTriggerType.ICON
+            )
+            Text("Cor: #${Integer.toHexString(selectedColorBottomSheet.value.toInt()).uppercase().takeLast(8)}")
+        }
+
+        Text("3. Gatilho Customizado (Slot) + Apresentação Dialog:", style = MaterialTheme.typography.titleSmall)
+        WgcColorPicker(
+            selectedColor = selectedColorCustom,
+            onColorSelected = { selectedColorCustom = it },
+            presentation = WgcColorPickerPresentation.DIALOG,
+            trigger = { onClick ->
+                WgcClassicButton(
+                    textButton = "Abrir Seletor de Cor",
+                    onClick = onClick
+                )
+            }
+        )
+    }
+}
+
 @Suppress("LongMethod")
 @Composable
 fun WgcProfileFactoryShowcase() {
@@ -2374,6 +2450,7 @@ fun WgcProfileFactoryShowcase() {
     }
 }
 
+@Suppress("LongMethod", "CyclomaticComplexMethod")
 @Composable
 fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
     Column(
@@ -2693,6 +2770,134 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                         bottomNavSlot = if (overrideBottomNav) {
                             {
                                 WgcMenuFactory(type = WgcMenuType.FloatingPill)
+                            }
+                        } else null
+                    )
+                }
+            }
+            7 -> {
+                var checkoutTypeIndex by remember { mutableIntStateOf(0) }
+                var overrideSummarySlot by remember { mutableStateOf(false) }
+                val checkoutTypes = WgcCheckoutType.entries
+
+                Text("WgcCheckoutFactory - Fábrica Universal de Checkout", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne telas de Checkout completas ou utilize o padrão corporativo com slots:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Variante de Checkout:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = checkoutTypeIndex) {
+                    checkoutTypes.forEachIndexed { idx, type ->
+                        Tab(
+                            selected = checkoutTypeIndex == idx,
+                            onClick = { checkoutTypeIndex = idx },
+                            text = { Text(type.name) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideSummarySlot,
+                        onCheckedChange = { overrideSummarySlot = it }
+                    )
+                    Text("Injetar Slot Customizado de Resumo")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcCheckoutFactory(
+                        type = checkoutTypes[checkoutTypeIndex],
+                        orderSummarySlot = if (overrideSummarySlot) {
+                            {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.tertiaryContainer,
+                                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.sm12.dp)
+                                ) {
+                                    Text(
+                                        text = "⚡ RESUMO CUSTOMIZADO INJETADO VIA SLOT",
+                                        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
+                        } else null
+                    )
+                }
+            }
+            8 -> {
+                var onboardingTypeIndex by remember { mutableIntStateOf(0) }
+                var currentStep by remember { mutableIntStateOf(1) }
+                val onboardingTypes = WgcOnboardingType.entries
+
+                Text("WgcOnboardingFactory - Fábrica Universal de Onboarding", style = MaterialTheme.typography.titleLarge)
+                Text("Fluxos de boas-vindas e walkthroughs com State Hoisting de passos:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Variante de Onboarding:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = onboardingTypeIndex) {
+                    onboardingTypes.forEachIndexed { idx, type ->
+                        Tab(
+                            selected = onboardingTypeIndex == idx,
+                            onClick = { onboardingTypeIndex = idx },
+                            text = { Text(type.name) }
+                        )
+                    }
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcOnboardingFactory(
+                        type = onboardingTypes[onboardingTypeIndex],
+                        step = currentStep,
+                        totalSteps = 3,
+                        onNextClick = { if (currentStep < 3) currentStep++ },
+                        onSkipClick = { currentStep = 3 },
+                        onGetStartedClick = { currentStep = 1 }
+                    )
+                }
+            }
+            9 -> {
+                var cartTypeIndex by remember { mutableIntStateOf(0) }
+                var overrideVoucherSlot by remember { mutableStateOf(false) }
+                val cartTypes = WgcCartType.entries
+
+                Text("WgcCartFactory - Fábrica Universal de Carrinhos", style = MaterialTheme.typography.titleLarge)
+                Text("Alterne telas de Carrinho de todos os ecossistemas com slots customizáveis:", style = MaterialTheme.typography.bodyMedium)
+
+                Text("Variante de Carrinho:", style = MaterialTheme.typography.titleSmall)
+                PrimaryScrollableTabRow(selectedTabIndex = cartTypeIndex) {
+                    cartTypes.forEachIndexed { idx, type ->
+                        Tab(
+                            selected = cartTypeIndex == idx,
+                            onClick = { cartTypeIndex = idx },
+                            text = { Text(type.name) }
+                        )
+                    }
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.Checkbox(
+                        checked = overrideVoucherSlot,
+                        onCheckedChange = { overrideVoucherSlot = it }
+                    )
+                    Text("Injetar Slot de Cupom Exclusivo")
+                }
+
+                Box(modifier = Modifier.fillMaxWidth().height(520.dp)) {
+                    WgcCartFactory(
+                        type = cartTypes[cartTypeIndex],
+                        voucherSlot = if (overrideVoucherSlot) {
+                            {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.secondaryContainer,
+                                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.xs8.dp)
+                                ) {
+                                    Text(
+                                        text = "🏷️ CUPOM VIP INJETADO VIA SLOT: DS2026",
+                                        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
                             }
                         } else null
                     )

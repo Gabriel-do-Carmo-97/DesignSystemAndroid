@@ -111,6 +111,27 @@ public final class br/com/wgc/design_system/templates/factories/ComposableSingle
 	public final fun getLambda$1299233065$templates_release ()Lkotlin/jvm/functions/Function3;
 }
 
+public final class br/com/wgc/design_system/templates/factories/ComposableSingletons$WgcCartFactoryKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/ComposableSingletons$WgcCartFactoryKt;
+	public fun <init> ()V
+	public final fun getLambda$-1047117369$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1411595781$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1289015046$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1801985231$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$191964774$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/factories/ComposableSingletons$WgcCheckoutFactoryKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/ComposableSingletons$WgcCheckoutFactoryKt;
+	public fun <init> ()V
+	public final fun getLambda$-6126656$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-627694423$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-652080313$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-677603935$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-696030688$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1387150432$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/templates/factories/ComposableSingletons$WgcEducationFactoryKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/ComposableSingletons$WgcEducationFactoryKt;
 	public fun <init> ()V
@@ -182,6 +203,13 @@ public final class br/com/wgc/design_system/templates/factories/ComposableSingle
 	public fun <init> ()V
 	public final fun getLambda$-1052143619$templates_release ()Lkotlin/jvm/functions/Function3;
 	public final fun getLambda$-833561902$templates_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class br/com/wgc/design_system/templates/factories/ComposableSingletons$WgcOnboardingFactoryKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/ComposableSingletons$WgcOnboardingFactoryKt;
+	public fun <init> ()V
+	public final fun getLambda$-253210063$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-944254601$templates_release ()Lkotlin/jvm/functions/Function3;
 }
 
 public final class br/com/wgc/design_system/templates/factories/ComposableSingletons$WgcPetShopFactoryKt {
@@ -436,6 +464,30 @@ public final class br/com/wgc/design_system/templates/factories/WgcCarpoolingScr
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcCarpoolingScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcCartFactoryKt {
+	public static final fun WgcCartFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcCartType;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcCartType : java/lang/Enum {
+	public static final field APPAREL Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field BOUTIQUE Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field CARE_PHARMACY Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field CURATED_MARKET Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field FRESH_GROCERY Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field GADGET_SHOP Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field GROCERY Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field HYPERMARKET Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field MEGA_STORE Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field PHARMACY_CHAIN Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field POPULAR_PHARMACY Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field PREMIUM_GROCERY Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field RETAIL Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcCartType;
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcChannelMessagingFactoryKt {
 	public static final fun WgcChannelMessagingFactory (Lbr/com/wgc/design_system/templates/factories/WgcChannelMessagingScreen;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
@@ -449,6 +501,22 @@ public final class br/com/wgc/design_system/templates/factories/WgcChannelMessag
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcChannelMessagingScreen;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcChannelMessagingScreen;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcCheckoutFactoryKt {
+	public static final fun WgcCheckoutFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcCheckoutType : java/lang/Enum {
+	public static final field GADGET_SHOP Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static final field MEGA_STORE Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static final field QUICK_SHOP Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static final field RETAIL Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static final field TREND_FASHION Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcCheckoutType;
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcCitizenServicesFactoryKt {
@@ -1153,6 +1221,21 @@ public final class br/com/wgc/design_system/templates/factories/WgcNewsScreen : 
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcNewsScreen;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcNewsScreen;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcOnboardingFactoryKt {
+	public static final fun WgcOnboardingFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;IILjava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcOnboardingType : java/lang/Enum {
+	public static final field GADGET_SHOP Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static final field PERSONAL_FINANCE Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static final field QUICK_SHOP Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static final field TREND_FASHION Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcPersonalFinanceFactoryKt {
