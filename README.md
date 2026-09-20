@@ -3,8 +3,8 @@
 [![Android CI/CD](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/actions/workflows/android.yml/badge.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/actions)
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 ![Min SDK](https://img.shields.io/badge/minSdk-29-green.svg)
-![Compile SDK](https://img.shields.io/badge/compileSdk-35-brightgreen.svg)
-![Kotlin](https://img.shields.io/badge/kotlin-2.1.0-purple.svg)
+![Compile SDK](https://img.shields.io/badge/compileSdk-37-brightgreen.svg)
+![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-purple.svg)
 ![Detekt](https://img.shields.io/badge/Detekt-Strict-success.svg)
 ![SemVer](https://img.shields.io/badge/SemVer-Conventional%20Commits-orange.svg)
 [![Dokka Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/)
@@ -118,4 +118,4 @@ dependencies {
 ---
 
 ## 📄 Licença
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Distribuído sob a licença Apache 2.0. Veja `LICENSE` para mais informações.

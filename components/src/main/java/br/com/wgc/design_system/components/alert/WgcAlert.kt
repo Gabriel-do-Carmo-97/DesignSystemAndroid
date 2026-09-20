@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.alert
+﻿package br.com.wgc.design_system.components.alert
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,8 +16,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**

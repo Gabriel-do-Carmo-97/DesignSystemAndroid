@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -33,9 +33,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Card selecionável para método de pagamento (WgcPaymentMethodRadioCard).

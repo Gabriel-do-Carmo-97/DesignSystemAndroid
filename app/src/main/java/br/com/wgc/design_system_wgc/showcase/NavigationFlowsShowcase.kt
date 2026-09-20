@@ -1,4 +1,4 @@
-package br.com.wgc.design_system_wgc.showcase
+﻿package br.com.wgc.design_system_wgc.showcase
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -41,16 +41,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
-import br.com.wgc.ds_navigation_flows.auth.WgcAuthGraphRoute
-import br.com.wgc.ds_navigation_flows.auth.wgcAuthNavGraph
-import br.com.wgc.ds_navigation_flows.checkout.WgcCheckoutGraphRoute
-import br.com.wgc.ds_navigation_flows.checkout.wgcCheckoutNavGraph
-import br.com.wgc.ds_navigation_flows.onboarding.WgcOnboardingGraphRoute
-import br.com.wgc.ds_navigation_flows.onboarding.wgcOnboardingNavGraph
+import br.com.wgc.design_system.navigation.auth.WgcAuthGraphRoute
+import br.com.wgc.design_system.navigation.auth.wgcAuthNavGraph
+import br.com.wgc.design_system.navigation.checkout.WgcCheckoutGraphRoute
+import br.com.wgc.design_system.navigation.checkout.wgcCheckoutNavGraph
+import br.com.wgc.design_system.navigation.onboarding.WgcOnboardingGraphRoute
+import br.com.wgc.design_system.navigation.onboarding.wgcOnboardingNavGraph
 
 /**
  * Showcase interativo do módulo :navigation-flows.

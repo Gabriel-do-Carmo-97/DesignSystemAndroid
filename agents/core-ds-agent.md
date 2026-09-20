@@ -9,7 +9,7 @@ Gere cores, espaçamentos, tamanhos e raios de borda no módulo `core-ds`, garan
 
 ## 2. Contexto do Projeto
 
-- **Módulo:** `core-ds/` (namespace: `br.com.wgc.core_ds`)
+- **Módulo:** `:core` (namespace: `br.com.wgc.design_system.core`)
 - **Estado:** independente — nenhum módulo depende dele ainda. A integração é objetivo futuro.
 - **Publicação:** planejada mas **não operacional** — `maven-publish` não está configurado no `build.gradle.kts`.
 

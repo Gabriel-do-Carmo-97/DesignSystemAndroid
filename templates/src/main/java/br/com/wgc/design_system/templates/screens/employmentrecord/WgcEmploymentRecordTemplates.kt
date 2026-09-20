@@ -1,0 +1,59 @@
+﻿package br.com.wgc.design_system.templates.screens.employmentrecord
+
+import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+
+@Composable
+fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        topBar = {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.employmentRecordBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+                Text("Carteira de Trabalho Digital • CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
+            }
+        }
+    ) { padding ->
+        LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
+            items(EmploymentRecordMockData.sampleContracts) { c ->
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+                        Text(c.company, fontWeight = FontWeight.Bold)
+                        Text(c.role, color = Color.DarkGray)
+                        Text("Admissão: ${c.admissionDate} • ${if (c.isActive) "🟢 Contrato Ativo" else "Encerrado"}", color = Color.Gray, fontSize = 14.sp)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun WgcCtpsSalaryTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Dados Salariais & Abono PIS", modifier = modifier)
+
+@Composable
+fun WgcCtpsBenefitsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Seguro-Desemprego & Benefícios do Trabalhador", modifier = modifier)
+
+@Composable
+fun WgcCtpsDeclarationsTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Declarações de Vínculo & Anotações de Férias", modifier = modifier)
+
+@Composable
+fun WgcCtpsProfileTemplate(modifier: Modifier = Modifier) =
+    WgcGenericPlaceholderTemplate(title = "Perfil do Trabalhador CTPS", modifier = modifier)

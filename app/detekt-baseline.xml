@@ -2,9 +2,7 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>CyclomaticComplexMethod:MainActivity.kt$@Composable fun DesignSystemCatalogApp()</ID>
     <ID>CyclomaticComplexMethod:MainActivity.kt$@Composable fun MultiBrandAuthCatalogSection()</ID>
-    <ID>LongMethod:MainActivity.kt$@Composable fun DesignSystemCatalogApp()</ID>
     <ID>LongMethod:MainActivity.kt$@Composable fun MultiBrandAuthCatalogSection()</ID>
     <ID>LongMethod:MainActivity.kt$@Composable fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int)</ID>
     <ID>MagicNumber:MainActivity.kt$0xFFFFA000</ID>
@@ -95,21 +93,16 @@
     <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Marketplace", brandLogoText = "MP", brandColor = brandColors[3])</ID>
     <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Quick Food Delivery", brandLogoText = "QD", brandColor = brandColors[4])</ID>
     <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Ride Hailing", brandLogoText = "Ride Hailing", brandColor = brandColors[1])</ID>
-    <ID>PackageNaming:Color.kt$package br.com.wgc.design_system_wgc.ui.theme</ID>
-    <ID>PackageNaming:ExampleUnitTest.kt$package br.com.wgc.design_system_wgc</ID>
-    <ID>PackageNaming:MainActivity.kt$package br.com.wgc.design_system_wgc</ID>
-    <ID>PackageNaming:Theme.kt$package br.com.wgc.design_system_wgc.ui.theme</ID>
-    <ID>PackageNaming:Type.kt$package br.com.wgc.design_system_wgc.ui.theme</ID>
     <ID>UnusedParameter:Theme.kt$dynamicColor: Boolean = false</ID>
     <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
     <ID>WildcardImport:MainActivity.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:MainActivity.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:MainActivity.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.dealmarketplace.auth.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.fooddelivery.auth.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.marketplacescreen.auth.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.*</ID>
-    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.ds_templates.screens.ridehailing.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.fooddelivery.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.ridehailing.auth.*</ID>
   </CurrentIssues>
 </SmellBaseline>

@@ -1,12 +1,12 @@
-public final class br/com/wgc/core_ds/DefaultWgcThemeTokens : br/com/wgc/core_ds/WgcThemeTokens {
+public final class br/com/wgc/design_system/core/DefaultWgcThemeTokens : br/com/wgc/design_system/core/WgcThemeTokens {
 	public fun <init> ()V
 	public fun getBackgroundColor ()I
 	public fun getPrimaryColor ()I
 	public fun getSecondaryColor ()I
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsBorderRadius {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsBorderRadius;
+public final class br/com/wgc/design_system/core/WgcCoreDsBorderRadius {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsBorderRadius;
 	public static final field circular D
 	public static final field circular999 D
 	public static final field display45 D
@@ -28,17 +28,17 @@ public final class br/com/wgc/core_ds/WgcCoreDsBorderRadius {
 	public static final field xxl24 D
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsBreakpoints {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsBreakpoints;
+public final class br/com/wgc/design_system/core/WgcCoreDsBreakpoints {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsBreakpoints;
 	public static final field compactMax D
 	public static final field expandedMin D
 	public static final field mediumMax D
 	public static final field mediumMin D
-	public final fun calculateWindowSizeClass (D)Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public final fun calculateWindowSizeClass (D)Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsColors {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsColors;
+public final class br/com/wgc/design_system/core/WgcCoreDsColors {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsColors;
 	public static final field black I
 	public static final field transparent I
 	public static final field white I
@@ -558,8 +558,8 @@ public final class br/com/wgc/core_ds/WgcCoreDsColors {
 	public final fun getWorkspaceDocsDark ()I
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsElevation {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsElevation;
+public final class br/com/wgc/design_system/core/WgcCoreDsElevation {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsElevation;
 	public static final field level0 D
 	public static final field level1 D
 	public static final field level2 D
@@ -568,16 +568,16 @@ public final class br/com/wgc/core_ds/WgcCoreDsElevation {
 	public static final field level8 D
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsMotion {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsMotion;
+public final class br/com/wgc/design_system/core/WgcCoreDsMotion {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsMotion;
 	public static final field durationFast100 I
 	public static final field durationNormal200 I
 	public static final field durationSlow500 I
 	public static final field durationStandard300 I
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsOpacity {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsOpacity;
+public final class br/com/wgc/design_system/core/WgcCoreDsOpacity {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsOpacity;
 	public static final field disabled F
 	public static final field dragged F
 	public static final field focus F
@@ -590,8 +590,8 @@ public final class br/com/wgc/core_ds/WgcCoreDsOpacity {
 	public static final field transparent F
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsSize {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsSize;
+public final class br/com/wgc/design_system/core/WgcCoreDsSize {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsSize;
 	public static final field s0 D
 	public static final field s1 D
 	public static final field s10 D
@@ -656,8 +656,8 @@ public final class br/com/wgc/core_ds/WgcCoreDsSize {
 	public static final field s98 D
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsSpacing {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsSpacing;
+public final class br/com/wgc/design_system/core/WgcCoreDsSpacing {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsSpacing;
 	public static final field display64 D
 	public static final field giant80 D
 	public static final field lg D
@@ -682,8 +682,8 @@ public final class br/com/wgc/core_ds/WgcCoreDsSpacing {
 	public static final field xxxs2 D
 }
 
-public final class br/com/wgc/core_ds/WgcCoreDsTypography {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/WgcCoreDsTypography;
+public final class br/com/wgc/design_system/core/WgcCoreDsTypography {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsTypography;
 	public static final field bodyLargeLineHeight D
 	public static final field bodyLargeSize D
 	public static final field bodyLargeTracking D
@@ -736,23 +736,23 @@ public final class br/com/wgc/core_ds/WgcCoreDsTypography {
 	public static final field weightSemiBold I
 }
 
-public abstract interface class br/com/wgc/core_ds/WgcThemeTokens {
+public abstract interface class br/com/wgc/design_system/core/WgcThemeTokens {
 	public abstract fun getBackgroundColor ()I
 	public abstract fun getPrimaryColor ()I
 	public abstract fun getSecondaryColor ()I
 }
 
-public final class br/com/wgc/core_ds/WgcWindowSizeClass : java/lang/Enum {
-	public static final field Compact Lbr/com/wgc/core_ds/WgcWindowSizeClass;
-	public static final field Expanded Lbr/com/wgc/core_ds/WgcWindowSizeClass;
-	public static final field Medium Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+public final class br/com/wgc/design_system/core/WgcWindowSizeClass : java/lang/Enum {
+	public static final field Compact Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
+	public static final field Expanded Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
+	public static final field Medium Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/core_ds/WgcWindowSizeClass;
-	public static fun values ()[Lbr/com/wgc/core_ds/WgcWindowSizeClass;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
+	public static fun values ()[Lbr/com/wgc/design_system/core/WgcWindowSizeClass;
 }
 
-public final class br/com/wgc/core_ds/colors/WgcCoreDsColors {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/WgcCoreDsColors;
+public final class br/com/wgc/design_system/core/colors/WgcCoreDsColors {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/WgcCoreDsColors;
 	public final fun getApparelAlertRed ()I
 	public final fun getApparelBackground ()I
 	public final fun getApparelBorder ()I
@@ -1060,8 +1060,8 @@ public final class br/com/wgc/core_ds/colors/WgcCoreDsColors {
 	public final fun getWhite ()I
 }
 
-public final class br/com/wgc/core_ds/colors/WgcCoreDsColorsPrimitive {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/WgcCoreDsColorsPrimitive;
+public final class br/com/wgc/design_system/core/colors/WgcCoreDsColorsPrimitive {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/WgcCoreDsColorsPrimitive;
 	public static final field black I
 	public static final field transparent I
 	public static final field white I
@@ -1074,8 +1074,8 @@ public final class br/com/wgc/core_ds/colors/WgcCoreDsColorsPrimitive {
 	public final fun getRed700 ()I
 }
 
-public final class br/com/wgc/core_ds/colors/WgcCoreDsColorsSemantic {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/WgcCoreDsColorsSemantic;
+public final class br/com/wgc/design_system/core/colors/WgcCoreDsColorsSemantic {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/WgcCoreDsColorsSemantic;
 	public final fun getBackground ()I
 	public final fun getError ()I
 	public final fun getPrimary ()I
@@ -1086,8 +1086,8 @@ public final class br/com/wgc/core_ds/colors/WgcCoreDsColorsSemantic {
 	public final fun getWarning ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandEcommerce {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandEcommerce;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandEcommerce {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandEcommerce;
 	public final fun getDealMarketplaceOrange ()I
 	public final fun getGlobalMarketplaceOrange ()I
 	public final fun getGlobalMarketplaceRed ()I
@@ -1100,8 +1100,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandEcommerce {
 	public final fun getTrendFashionPink ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandFashion {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandFashion;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandFashion {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandFashion;
 	public final fun getApparelAlertRed ()I
 	public final fun getApparelBackground ()I
 	public final fun getApparelBorder ()I
@@ -1148,8 +1148,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandFashion {
 	public final fun getRetailSurface ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandFinance {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandFinance;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandFinance {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandFinance;
 	public final fun getPersonalFinanceBackground ()I
 	public final fun getPersonalFinanceBorder ()I
 	public final fun getPersonalFinanceCardNavy ()I
@@ -1171,8 +1171,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandFinance {
 	public final fun getPersonalFinanceWarningYellow ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandFitness {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandFitness;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandFitness {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandFitness;
 	public final fun getGymAccentCyan ()I
 	public final fun getGymBlack ()I
 	public final fun getGymCardPlaceholder ()I
@@ -1211,8 +1211,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandFitness {
 	public final fun getTrainingWhite ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandFoodDelivery {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandFoodDelivery;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandFoodDelivery {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandFoodDelivery;
 	public final fun getFoodDeliveryBgGray ()I
 	public final fun getFoodDeliveryDarkBlue ()I
 	public final fun getFoodDeliveryGreen ()I
@@ -1221,8 +1221,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandFoodDelivery {
 	public final fun getFoodDeliveryRedDark ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandGrocery {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandGrocery;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandGrocery {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandGrocery;
 	public final fun getGroceryBackground ()I
 	public final fun getGroceryBlue ()I
 	public final fun getGroceryBlueDark ()I
@@ -1272,16 +1272,16 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandGrocery {
 	public final fun getPremiumGroceryWineRedLight ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandMarketplace {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandMarketplace;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandMarketplace {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandMarketplace;
 	public final fun getMarketplaceBgGray ()I
 	public final fun getMarketplaceBlue ()I
 	public final fun getMarketplaceGreen ()I
 	public final fun getMarketplaceYellow ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandRealEstate {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandRealEstate;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandRealEstate {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandRealEstate;
 	public final fun getPropertyClassifiedsBackground ()I
 	public final fun getPropertyClassifiedsBlue ()I
 	public final fun getPropertyClassifiedsBlueDark ()I
@@ -1337,8 +1337,8 @@ public final class br/com/wgc/core_ds/colors/brands/WgcBrandRealEstate {
 	public final fun getPropertyRentalYellowLight ()I
 }
 
-public final class br/com/wgc/core_ds/colors/brands/WgcBrandTechnology {
-	public static final field INSTANCE Lbr/com/wgc/core_ds/colors/brands/WgcBrandTechnology;
+public final class br/com/wgc/design_system/core/colors/brands/WgcBrandTechnology {
+	public static final field INSTANCE Lbr/com/wgc/design_system/core/colors/brands/WgcBrandTechnology;
 	public final fun getCuratedMarketAlertRed ()I
 	public final fun getCuratedMarketBackground ()I
 	public final fun getCuratedMarketBorder ()I

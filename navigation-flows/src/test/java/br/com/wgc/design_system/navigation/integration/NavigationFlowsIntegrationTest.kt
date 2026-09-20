@@ -1,7 +1,7 @@
-package br.com.wgc.design_system.navigation.integration
+﻿package br.com.wgc.design_system.navigation.integration
 
-import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.core_ds.WgcCoreDsColorsFacade
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColorsFacade
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test

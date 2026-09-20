@@ -1,4 +1,4 @@
-package br.com.wgc.design_system_wgc
+﻿package br.com.wgc.design_system_wgc
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -55,48 +55,48 @@ import br.com.wgc.design_system.components.story.StoryTrayItem
 import br.com.wgc.design_system.components.story.WgcStoryAvatar
 import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system_wgc.ui.theme.DesignSystemWGCTheme
-import br.com.wgc.ds_templates.brand.WgcBrand
-import br.com.wgc.ds_templates.factories.WgcAuthFactory
-import br.com.wgc.ds_templates.factories.WgcAuthFlow
-import br.com.wgc.ds_templates.factories.WgcHomeFactory
-import br.com.wgc.ds_templates.screens.community.klok.WgcKlokAuthScreenTemplate
-import br.com.wgc.ds_templates.screens.community.split.WgcSplitCardAuthScreenTemplate
-import br.com.wgc.ds_templates.screens.community.wave.WgcWaveAuthScreenTemplate
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*
-import br.com.wgc.ds_templates.screens.cart.FakeStandardCartViewModel
-import br.com.wgc.ds_templates.screens.cart.StandardCartScreenTemplate
-import br.com.wgc.ds_templates.screens.common.auth.FakeBrandAddressAuthViewModel
-import br.com.wgc.ds_templates.screens.common.auth.WgcBrandAddressRegistrationScreenTemplate
-import br.com.wgc.ds_templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
-import br.com.wgc.ds_templates.screens.home.fintech.FakeFintechHomeViewModel
-import br.com.wgc.ds_templates.screens.home.fintech.FintechHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.fooddelivery.FakeFoodDeliveryHomeViewModel
-import br.com.wgc.ds_templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.fooddelivery.auth.*
-import br.com.wgc.ds_templates.screens.login.screen.LoginScreenTemplate
-import br.com.wgc.ds_templates.screens.login.viewmodel.FakeLoginViewModel
-import br.com.wgc.ds_templates.screens.map.FakeRealtimeLocationViewModel
-import br.com.wgc.ds_templates.screens.map.RealtimeLocationMapScreenTemplate
-import br.com.wgc.ds_templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
-import br.com.wgc.ds_templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.marketplacescreen.auth.*
-import br.com.wgc.ds_templates.screens.quickfooddelivery.FakeQuickFoodDeliveryHomeViewModel
-import br.com.wgc.ds_templates.screens.quickfooddelivery.WgcQuickFoodDeliveryHomeScreenTemplate
-import br.com.wgc.ds_templates.screens.quickfooddelivery.auth.*
-import br.com.wgc.ds_templates.screens.profile.FakeSettingsHubViewModel
-import br.com.wgc.ds_templates.screens.profile.SettingsHubScreenTemplate
-import br.com.wgc.ds_templates.screens.search.FakeSearchAndFilterViewModel
-import br.com.wgc.ds_templates.screens.search.SearchAndFilterScreenTemplate
-import br.com.wgc.ds_templates.screens.dealmarketplace.auth.*
-import br.com.wgc.ds_templates.screens.globalmarketplace.auth.*
-import br.com.wgc.ds_templates.screens.social.FakeInstagramStoryViewerViewModel
-import br.com.wgc.ds_templates.screens.social.InstagramStoryViewerScreenTemplate
-import br.com.wgc.ds_templates.screens.ridehailing.auth.*
+import br.com.wgc.design_system.templates.brand.WgcBrand
+import br.com.wgc.design_system.templates.factories.WgcAuthFactory
+import br.com.wgc.design_system.templates.factories.WgcAuthFlow
+import br.com.wgc.design_system.templates.factories.WgcHomeFactory
+import br.com.wgc.design_system.templates.screens.community.klok.WgcKlokAuthScreenTemplate
+import br.com.wgc.design_system.templates.screens.community.split.WgcSplitCardAuthScreenTemplate
+import br.com.wgc.design_system.templates.screens.community.wave.WgcWaveAuthScreenTemplate
+import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.*
+import br.com.wgc.design_system.templates.screens.cart.FakeStandardCartViewModel
+import br.com.wgc.design_system.templates.screens.cart.StandardCartScreenTemplate
+import br.com.wgc.design_system.templates.screens.common.auth.FakeBrandAddressAuthViewModel
+import br.com.wgc.design_system.templates.screens.common.auth.WgcBrandAddressRegistrationScreenTemplate
+import br.com.wgc.design_system.templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
+import br.com.wgc.design_system.templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
+import br.com.wgc.design_system.templates.screens.home.fintech.FakeFintechHomeViewModel
+import br.com.wgc.design_system.templates.screens.home.fintech.FintechHomeScreenTemplate
+import br.com.wgc.design_system.templates.screens.fooddelivery.FakeFoodDeliveryHomeViewModel
+import br.com.wgc.design_system.templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
+import br.com.wgc.design_system.templates.screens.fooddelivery.auth.*
+import br.com.wgc.design_system.templates.screens.login.screen.LoginScreenTemplate
+import br.com.wgc.design_system.templates.screens.login.viewmodel.FakeLoginViewModel
+import br.com.wgc.design_system.templates.screens.map.FakeRealtimeLocationViewModel
+import br.com.wgc.design_system.templates.screens.map.RealtimeLocationMapScreenTemplate
+import br.com.wgc.design_system.templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
+import br.com.wgc.design_system.templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
+import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.*
+import br.com.wgc.design_system.templates.screens.quickfooddelivery.FakeQuickFoodDeliveryHomeViewModel
+import br.com.wgc.design_system.templates.screens.quickfooddelivery.WgcQuickFoodDeliveryHomeScreenTemplate
+import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.*
+import br.com.wgc.design_system.templates.screens.profile.FakeSettingsHubViewModel
+import br.com.wgc.design_system.templates.screens.profile.SettingsHubScreenTemplate
+import br.com.wgc.design_system.templates.screens.search.FakeSearchAndFilterViewModel
+import br.com.wgc.design_system.templates.screens.search.SearchAndFilterScreenTemplate
+import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.*
+import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.*
+import br.com.wgc.design_system.templates.screens.social.FakeInstagramStoryViewerViewModel
+import br.com.wgc.design_system.templates.screens.social.InstagramStoryViewerScreenTemplate
+import br.com.wgc.design_system.templates.screens.ridehailing.auth.*
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import br.com.wgc.ds_templates.factories.WgcProfileFactory
-import br.com.wgc.ds_templates.factories.WgcProfileType
-import br.com.wgc.ds_templates.factories.WgcProfileStatus
+import br.com.wgc.design_system.templates.factories.WgcProfileFactory
+import br.com.wgc.design_system.templates.factories.WgcProfileType
+import br.com.wgc.design_system.templates.factories.WgcProfileStatus
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -260,199 +260,199 @@ fun DesignSystemCatalogApp() {
         "⚡ Hardware & Specs (Hardware Tech)"
     )
 
-    val propertyRentalScreens = br.com.wgc.ds_templates.factories.WgcPropertyRentalScreen.entries
+    val propertyRentalScreens = br.com.wgc.design_system.templates.factories.WgcPropertyRentalScreen.entries
     var selectedPropertyRentalScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val propertyListingScreens = br.com.wgc.ds_templates.factories.WgcPropertyListingScreen.entries
+    val propertyListingScreens = br.com.wgc.design_system.templates.factories.WgcPropertyListingScreen.entries
     var selectedPropertyListingScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val zapScreens = br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsScreen.entries
+    val zapScreens = br.com.wgc.design_system.templates.factories.WgcPropertyClassifiedsScreen.entries
     var selectedZapScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val gymFitnessScreens = br.com.wgc.ds_templates.factories.WgcGymFitnessScreen.entries
+    val gymFitnessScreens = br.com.wgc.design_system.templates.factories.WgcGymFitnessScreen.entries
     var selectedGymFitnessScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val wellhubScreens = br.com.wgc.ds_templates.factories.WgcCorporateWellnessScreen.entries
+    val wellhubScreens = br.com.wgc.design_system.templates.factories.WgcCorporateWellnessScreen.entries
     var selectedCorporateWellnessScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val ntcScreens = br.com.wgc.ds_templates.factories.WgcGuidedTrainingScreen.entries
+    val ntcScreens = br.com.wgc.design_system.templates.factories.WgcGuidedTrainingScreen.entries
     var selectedNtcScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val extraScreens = br.com.wgc.ds_templates.factories.WgcHypermarketScreen.entries
+    val extraScreens = br.com.wgc.design_system.templates.factories.WgcHypermarketScreen.entries
     var selectedExtraScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val pdaScreens = br.com.wgc.ds_templates.factories.WgcPremiumGroceryScreen.entries
+    val pdaScreens = br.com.wgc.design_system.templates.factories.WgcPremiumGroceryScreen.entries
     var selectedPdaScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val groceryScreens = br.com.wgc.ds_templates.factories.WgcGroceryScreen.entries
+    val groceryScreens = br.com.wgc.design_system.templates.factories.WgcGroceryScreen.entries
     var selectedGroceryScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val drogaRaiaScreens = br.com.wgc.ds_templates.factories.WgcPharmacyChainScreen.entries
+    val drogaRaiaScreens = br.com.wgc.design_system.templates.factories.WgcPharmacyChainScreen.entries
     var selectedDrogaRaiaScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val drogasilScreens = br.com.wgc.ds_templates.factories.WgcCarePharmacyScreen.entries
+    val drogasilScreens = br.com.wgc.design_system.templates.factories.WgcCarePharmacyScreen.entries
     var selectedDrogasilScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
-    val pagueMenosScreens = br.com.wgc.ds_templates.factories.WgcPopularPharmacyScreen.entries
+    val pagueMenosScreens = br.com.wgc.design_system.templates.factories.WgcPopularPharmacyScreen.entries
     var selectedPagueMenosScreenIndex by remember { mutableIntStateOf(0) } // Default: Home
 
     // Cat 5: FinTech
-    val fintechNeobankScreens = br.com.wgc.ds_templates.factories.WgcFintechNeobankScreen.entries
+    val fintechNeobankScreens = br.com.wgc.design_system.templates.factories.WgcFintechNeobankScreen.entries
     var selectedFintechNeobankScreenIndex by remember { mutableIntStateOf(0) }
-    val interScreens = br.com.wgc.ds_templates.factories.WgcFintechSuperAppScreen.entries
+    val interScreens = br.com.wgc.design_system.templates.factories.WgcFintechSuperAppScreen.entries
     var selectedInterScreenIndex by remember { mutableIntStateOf(0) }
-    val c6Screens = br.com.wgc.ds_templates.factories.WgcFintechCarbonScreen.entries
+    val c6Screens = br.com.wgc.design_system.templates.factories.WgcFintechCarbonScreen.entries
     var selectedC6ScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 6: Mobilidade
-    val noveNoveScreens = br.com.wgc.ds_templates.factories.WgcUrbanMobilityScreen.entries
+    val noveNoveScreens = br.com.wgc.design_system.templates.factories.WgcUrbanMobilityScreen.entries
     var selectedNoveNoveScreenIndex by remember { mutableIntStateOf(0) }
-    val inDriveScreens = br.com.wgc.ds_templates.factories.WgcBiddingRidesScreen.entries
+    val inDriveScreens = br.com.wgc.design_system.templates.factories.WgcBiddingRidesScreen.entries
     var selectedInDriveScreenIndex by remember { mutableIntStateOf(0) }
-    val clickBusScreens = br.com.wgc.ds_templates.factories.WgcBusTravelScreen.entries
+    val clickBusScreens = br.com.wgc.design_system.templates.factories.WgcBusTravelScreen.entries
     var selectedClickBusScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 7: Viagem
-    val decolarScreens = br.com.wgc.ds_templates.factories.WgcFlightTravelScreen.entries
+    val decolarScreens = br.com.wgc.design_system.templates.factories.WgcFlightTravelScreen.entries
     var selectedDecolarScreenIndex by remember { mutableIntStateOf(0) }
-    val hospitalityLodgingScreens = br.com.wgc.ds_templates.factories.WgcHospitalityLodgingScreen.entries
+    val hospitalityLodgingScreens = br.com.wgc.design_system.templates.factories.WgcHospitalityLodgingScreen.entries
     var selectedHospitalityLodgingScreenIndex by remember { mutableIntStateOf(0) }
-    val bookingScreens = br.com.wgc.ds_templates.factories.WgcHotelBookingScreen.entries
+    val bookingScreens = br.com.wgc.design_system.templates.factories.WgcHotelBookingScreen.entries
     var selectedHotelBookingScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 8: Streaming
-    val videoStreamScreens = br.com.wgc.ds_templates.factories.WgcVideoStreamScreen.entries
+    val videoStreamScreens = br.com.wgc.design_system.templates.factories.WgcVideoStreamScreen.entries
     var selectedVideoStreamScreenIndex by remember { mutableIntStateOf(0) }
-    val audioStreamScreens = br.com.wgc.ds_templates.factories.WgcAudioStreamScreen.entries
+    val audioStreamScreens = br.com.wgc.design_system.templates.factories.WgcAudioStreamScreen.entries
     var selectedAudioStreamScreenIndex by remember { mutableIntStateOf(0) }
-    val globoplayScreens = br.com.wgc.ds_templates.factories.WgcBroadcastStreamingScreen.entries
+    val globoplayScreens = br.com.wgc.design_system.templates.factories.WgcBroadcastStreamingScreen.entries
     var selectedGloboplayScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 9: Educação
-    val duolingoScreens = br.com.wgc.ds_templates.factories.WgcLanguageLearningScreen.entries
+    val duolingoScreens = br.com.wgc.design_system.templates.factories.WgcLanguageLearningScreen.entries
     var selectedDuolingoScreenIndex by remember { mutableIntStateOf(0) }
-    val aluraScreens = br.com.wgc.ds_templates.factories.WgcTechEducationScreen.entries
+    val aluraScreens = br.com.wgc.design_system.templates.factories.WgcTechEducationScreen.entries
     var selectedAluraScreenIndex by remember { mutableIntStateOf(0) }
-    val udemyScreens = br.com.wgc.ds_templates.factories.WgcCourseMarketplaceScreen.entries
+    val udemyScreens = br.com.wgc.design_system.templates.factories.WgcCourseMarketplaceScreen.entries
     var selectedUdemyScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 10: Mensageria
-    val whatsAppScreens = br.com.wgc.ds_templates.factories.WgcDirectMessagingScreen.entries
+    val whatsAppScreens = br.com.wgc.design_system.templates.factories.WgcDirectMessagingScreen.entries
     var selectedWhatsAppScreenIndex by remember { mutableIntStateOf(0) }
-    val telegramScreens = br.com.wgc.ds_templates.factories.WgcChannelMessagingScreen.entries
+    val telegramScreens = br.com.wgc.design_system.templates.factories.WgcChannelMessagingScreen.entries
     var selectedTelegramScreenIndex by remember { mutableIntStateOf(0) }
-    val pinterestScreens = br.com.wgc.ds_templates.factories.WgcVisualDiscoveryScreen.entries
+    val pinterestScreens = br.com.wgc.design_system.templates.factories.WgcVisualDiscoveryScreen.entries
     var selectedPinterestScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 11: Gaming
-    val steamScreens = br.com.wgc.ds_templates.factories.WgcGamingStoreScreen.entries
+    val steamScreens = br.com.wgc.design_system.templates.factories.WgcGamingStoreScreen.entries
     var selectedSteamScreenIndex by remember { mutableIntStateOf(0) }
-    val twitchScreens = br.com.wgc.ds_templates.factories.WgcLiveStreamingScreen.entries
+    val twitchScreens = br.com.wgc.design_system.templates.factories.WgcLiveStreamingScreen.entries
     var selectedTwitchScreenIndex by remember { mutableIntStateOf(0) }
-    val communityChatScreens = br.com.wgc.ds_templates.factories.WgcCommunityChatScreen.entries
+    val communityChatScreens = br.com.wgc.design_system.templates.factories.WgcCommunityChatScreen.entries
     var selectedCommunityChatScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 12: Produtividade
-    val notionScreens = br.com.wgc.ds_templates.factories.WgcWorkspaceDocsScreen.entries
+    val notionScreens = br.com.wgc.design_system.templates.factories.WgcWorkspaceDocsScreen.entries
     var selectedNotionScreenIndex by remember { mutableIntStateOf(0) }
-    val trelloScreens = br.com.wgc.ds_templates.factories.WgcKanbanTasksScreen.entries
+    val trelloScreens = br.com.wgc.design_system.templates.factories.WgcKanbanTasksScreen.entries
     var selectedTrelloScreenIndex by remember { mutableIntStateOf(0) }
-    val slackScreens = br.com.wgc.ds_templates.factories.WgcTeamCollaborationScreen.entries
+    val slackScreens = br.com.wgc.design_system.templates.factories.WgcTeamCollaborationScreen.entries
     var selectedSlackScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 13: FastFood
-    val burgerFastFoodScreens = br.com.wgc.ds_templates.factories.WgcBurgerFastFoodScreen.entries
+    val burgerFastFoodScreens = br.com.wgc.design_system.templates.factories.WgcBurgerFastFoodScreen.entries
     var selectedBurgerFastFoodScreenIndex by remember { mutableIntStateOf(0) }
-    val burgerKingScreens = br.com.wgc.ds_templates.factories.WgcFlameFastFoodScreen.entries
+    val burgerKingScreens = br.com.wgc.design_system.templates.factories.WgcFlameFastFoodScreen.entries
     var selectedBurgerKingScreenIndex by remember { mutableIntStateOf(0) }
-    val pizzaScreens = br.com.wgc.ds_templates.factories.WgcPizzaScreen.entries
+    val pizzaScreens = br.com.wgc.design_system.templates.factories.WgcPizzaScreen.entries
     var selectedPizzaScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 14: Logística
-    val carpoolingScreens = br.com.wgc.ds_templates.factories.WgcCarpoolingScreen.entries
+    val carpoolingScreens = br.com.wgc.design_system.templates.factories.WgcCarpoolingScreen.entries
     var selectedCarpoolingScreenIndex by remember { mutableIntStateOf(0) }
-    val loggiScreens = br.com.wgc.ds_templates.factories.WgcExpressLogisticsScreen.entries
+    val loggiScreens = br.com.wgc.design_system.templates.factories.WgcExpressLogisticsScreen.entries
     var selectedLoggiScreenIndex by remember { mutableIntStateOf(0) }
-    val lalamoveScreens = br.com.wgc.ds_templates.factories.WgcFreightLogisticsScreen.entries
+    val lalamoveScreens = br.com.wgc.design_system.templates.factories.WgcFreightLogisticsScreen.entries
     var selectedLalamoveScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 15: Moda
-    val rennerScreens = br.com.wgc.ds_templates.factories.WgcDepartmentFashionScreen.entries
+    val rennerScreens = br.com.wgc.design_system.templates.factories.WgcDepartmentFashionScreen.entries
     var selectedRennerScreenIndex by remember { mutableIntStateOf(0) }
-    val ceaScreens = br.com.wgc.ds_templates.factories.WgcUrbanFashionScreen.entries
+    val ceaScreens = br.com.wgc.design_system.templates.factories.WgcUrbanFashionScreen.entries
     var selectedCeaScreenIndex by remember { mutableIntStateOf(0) }
-    val riachueloScreens = br.com.wgc.ds_templates.factories.WgcTrendApparelScreen.entries
+    val riachueloScreens = br.com.wgc.design_system.templates.factories.WgcTrendApparelScreen.entries
     var selectedRiachueloScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 16: Beleza
-    val boticarioScreens = br.com.wgc.ds_templates.factories.WgcFragranceBeautyScreen.entries
+    val boticarioScreens = br.com.wgc.design_system.templates.factories.WgcFragranceBeautyScreen.entries
     var selectedBoticarioScreenIndex by remember { mutableIntStateOf(0) }
-    val naturaScreens = br.com.wgc.ds_templates.factories.WgcNaturalBeautyScreen.entries
+    val naturaScreens = br.com.wgc.design_system.templates.factories.WgcNaturalBeautyScreen.entries
     var selectedNaturaScreenIndex by remember { mutableIntStateOf(0) }
-    val sephoraScreens = br.com.wgc.ds_templates.factories.WgcPrestigeBeautyScreen.entries
+    val sephoraScreens = br.com.wgc.design_system.templates.factories.WgcPrestigeBeautyScreen.entries
     var selectedSephoraScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 17: Pet Care
-    val petzScreens = br.com.wgc.ds_templates.factories.WgcPetCareScreen.entries
+    val petzScreens = br.com.wgc.design_system.templates.factories.WgcPetCareScreen.entries
     var selectedPetzScreenIndex by remember { mutableIntStateOf(0) }
-    val cobasiScreens = br.com.wgc.ds_templates.factories.WgcPetSuperstoreScreen.entries
+    val cobasiScreens = br.com.wgc.design_system.templates.factories.WgcPetSuperstoreScreen.entries
     var selectedCobasiScreenIndex by remember { mutableIntStateOf(0) }
-    val zeeDogScreens = br.com.wgc.ds_templates.factories.WgcPetLifestyleScreen.entries
+    val zeeDogScreens = br.com.wgc.design_system.templates.factories.WgcPetLifestyleScreen.entries
     var selectedZeeDogScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 18: Casa & Decor
-    val leroyMerlinScreens = br.com.wgc.ds_templates.factories.WgcHomeImprovementScreen.entries
+    val leroyMerlinScreens = br.com.wgc.design_system.templates.factories.WgcHomeImprovementScreen.entries
     var selectedLeroyMerlinScreenIndex by remember { mutableIntStateOf(0) }
-    val tokStokScreens = br.com.wgc.ds_templates.factories.WgcDesignerFurnitureScreen.entries
+    val tokStokScreens = br.com.wgc.design_system.templates.factories.WgcDesignerFurnitureScreen.entries
     var selectedTokStokScreenIndex by remember { mutableIntStateOf(0) }
-    val madeiraMadeiraScreens = br.com.wgc.ds_templates.factories.WgcHomeMarketplaceScreen.entries
+    val madeiraMadeiraScreens = br.com.wgc.design_system.templates.factories.WgcHomeMarketplaceScreen.entries
     var selectedMadeiraMadeiraScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 19: Notícias
-    val g1Screens = br.com.wgc.ds_templates.factories.WgcDailyNewsScreen.entries
+    val g1Screens = br.com.wgc.design_system.templates.factories.WgcDailyNewsScreen.entries
     var selectedG1ScreenIndex by remember { mutableIntStateOf(0) }
-    val uolScreens = br.com.wgc.ds_templates.factories.WgcMediaNetworkScreen.entries
+    val uolScreens = br.com.wgc.design_system.templates.factories.WgcMediaNetworkScreen.entries
     var selectedUolScreenIndex by remember { mutableIntStateOf(0) }
-    val exameScreens = br.com.wgc.ds_templates.factories.WgcBusinessNewsScreen.entries
+    val exameScreens = br.com.wgc.design_system.templates.factories.WgcBusinessNewsScreen.entries
     var selectedExameScreenIndex by remember { mutableIntStateOf(0) }
     // Cat 20: Serviços Públicos
-    val govBrScreens = br.com.wgc.ds_templates.factories.WgcCitizenServicesScreen.entries
+    val govBrScreens = br.com.wgc.design_system.templates.factories.WgcCitizenServicesScreen.entries
     var selectedGovBrScreenIndex by remember { mutableIntStateOf(0) }
-    val cdtScreens = br.com.wgc.ds_templates.factories.WgcTransitDigitalScreen.entries
+    val cdtScreens = br.com.wgc.design_system.templates.factories.WgcTransitDigitalScreen.entries
     var selectedCdtScreenIndex by remember { mutableIntStateOf(0) }
-    val ctpsScreens = br.com.wgc.ds_templates.factories.WgcEmploymentRecordScreen.entries
+    val ctpsScreens = br.com.wgc.design_system.templates.factories.WgcEmploymentRecordScreen.entries
     var selectedCtpsScreenIndex by remember { mutableIntStateOf(0) }
 
     // Novas Suítes Figma
-    val dentalScreens = br.com.wgc.ds_templates.factories.WgcDentalScreen.entries
+    val dentalScreens = br.com.wgc.design_system.templates.factories.WgcDentalScreen.entries
     var selectedDentalScreenIndex by remember { mutableIntStateOf(0) }
 
-    val telemedicineScreens = br.com.wgc.ds_templates.factories.WgcTelemedicineScreen.entries
+    val telemedicineScreens = br.com.wgc.design_system.templates.factories.WgcTelemedicineScreen.entries
     var selectedTelemedicineScreenIndex by remember { mutableIntStateOf(0) }
 
-    val beverageDeliveryScreens = br.com.wgc.ds_templates.factories.WgcBeverageDeliveryScreen.entries
+    val beverageDeliveryScreens = br.com.wgc.design_system.templates.factories.WgcBeverageDeliveryScreen.entries
     var selectedBeverageDeliveryScreenIndex by remember { mutableIntStateOf(0) }
 
-    val automotiveScreens = br.com.wgc.ds_templates.factories.WgcAutomotiveScreen.entries
+    val automotiveScreens = br.com.wgc.design_system.templates.factories.WgcAutomotiveScreen.entries
     var selectedAutomotiveScreenIndex by remember { mutableIntStateOf(0) }
 
-    val hardwareScreens = br.com.wgc.ds_templates.factories.WgcHardwareScreen.entries
+    val hardwareScreens = br.com.wgc.design_system.templates.factories.WgcHardwareScreen.entries
     var selectedHardwareScreenIndex by remember { mutableIntStateOf(0) }
 
-    val organizzeScreens = br.com.wgc.ds_templates.factories.WgcPersonalFinanceScreen.entries
+    val organizzeScreens = br.com.wgc.design_system.templates.factories.WgcPersonalFinanceScreen.entries
     var selectedOrganizzeScreenIndex by remember { mutableIntStateOf(0) } // Default: Dashboard
 
-    val lazaScreens = br.com.wgc.ds_templates.factories.WgcBoutiqueScreen.entries
+    val lazaScreens = br.com.wgc.design_system.templates.factories.WgcBoutiqueScreen.entries
     var selectedLazaScreenIndex by remember { mutableIntStateOf(3) } // Default: Home
 
-    val nexkartScreens = br.com.wgc.ds_templates.factories.WgcGadgetShopScreen.entries
+    val nexkartScreens = br.com.wgc.design_system.templates.factories.WgcGadgetShopScreen.entries
     var selectedNexkartScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val shopEaseScreens = br.com.wgc.ds_templates.factories.WgcQuickShopScreen.entries
+    val shopEaseScreens = br.com.wgc.design_system.templates.factories.WgcQuickShopScreen.entries
     var selectedShopEaseScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val shopperScreens = br.com.wgc.ds_templates.factories.WgcFreshGroceryScreen.entries
+    val shopperScreens = br.com.wgc.design_system.templates.factories.WgcFreshGroceryScreen.entries
     var selectedShopperScreenIndex by remember { mutableIntStateOf(1) } // Default: Home
 
-    val tasselScreens = br.com.wgc.ds_templates.factories.WgcCuratedMarketScreen.entries
+    val tasselScreens = br.com.wgc.design_system.templates.factories.WgcCuratedMarketScreen.entries
     var selectedTasselScreenIndex by remember { mutableIntStateOf(0) } // Default: Market
 
-    val clotheeScreens = br.com.wgc.ds_templates.factories.WgcApparelScreen.entries
+    val clotheeScreens = br.com.wgc.design_system.templates.factories.WgcApparelScreen.entries
     var selectedClotheeScreenIndex by remember { mutableIntStateOf(3) } // Default: Home
 
-    val kutukuScreens = br.com.wgc.ds_templates.factories.WgcRetailScreen.entries
+    val kutukuScreens = br.com.wgc.design_system.templates.factories.WgcRetailScreen.entries
     var selectedKutukuScreenIndex by remember { mutableIntStateOf(2) } // Default: Home
 
-    val shoppeScreens = br.com.wgc.ds_templates.factories.WgcMegaStoreScreen.entries
+    val shoppeScreens = br.com.wgc.design_system.templates.factories.WgcMegaStoreScreen.entries
     var selectedShoppeScreenIndex by remember { mutableIntStateOf(4) } // Default: HomeShop
 
-    val stylishScreens = br.com.wgc.ds_templates.factories.WgcTrendFashionScreen.entries
+    val stylishScreens = br.com.wgc.design_system.templates.factories.WgcTrendFashionScreen.entries
     var selectedStylishScreenIndex by remember { mutableIntStateOf(8) } // Default: Home
 
     val figmaSubTabs = listOf(
@@ -1398,7 +1398,7 @@ fun DesignSystemCatalogApp() {
             when (primarySection) {
                 0 -> {
                     val currentScreen = propertyRentalScreens[selectedPropertyRentalScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPropertyRentalFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPropertyRentalFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedPropertyRentalScreenIndex = propertyRentalScreens.indexOf(targetScreen)
@@ -1407,7 +1407,7 @@ fun DesignSystemCatalogApp() {
                 }
                 1 -> {
                     val currentScreen = propertyListingScreens[selectedPropertyListingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPropertyListingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPropertyListingFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedPropertyListingScreenIndex = propertyListingScreens.indexOf(targetScreen)
@@ -1416,7 +1416,7 @@ fun DesignSystemCatalogApp() {
                 }
                 2 -> {
                     val currentScreen = zapScreens[selectedZapScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPropertyClassifiedsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPropertyClassifiedsFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedZapScreenIndex = zapScreens.indexOf(targetScreen)
@@ -1425,7 +1425,7 @@ fun DesignSystemCatalogApp() {
                 }
                 3 -> {
                     val currentScreen = gymFitnessScreens[selectedGymFitnessScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGymFitnessFactory.Screen(
+                    br.com.wgc.design_system.templates.factories.WgcGymFitnessFactory.Screen(
                         screen = currentScreen,
                         onNavigateScreen = { targetScreen ->
                             selectedGymFitnessScreenIndex = gymFitnessScreens.indexOf(targetScreen)
@@ -1434,7 +1434,7 @@ fun DesignSystemCatalogApp() {
                 }
                 4 -> {
                     val currentScreen = wellhubScreens[selectedCorporateWellnessScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCorporateWellnessFactory.Screen(
+                    br.com.wgc.design_system.templates.factories.WgcCorporateWellnessFactory.Screen(
                         screen = currentScreen,
                         onNavigateScreen = { targetScreen ->
                             selectedCorporateWellnessScreenIndex = wellhubScreens.indexOf(targetScreen)
@@ -1443,7 +1443,7 @@ fun DesignSystemCatalogApp() {
                 }
                 5 -> {
                     val currentScreen = ntcScreens[selectedNtcScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGuidedTrainingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcGuidedTrainingFactory(
                         screen = currentScreen,
                         onSelectWorkout = { selectedNtcScreenIndex = 2 },
                         onStartWorkout = { selectedNtcScreenIndex = 1 },
@@ -1454,7 +1454,7 @@ fun DesignSystemCatalogApp() {
                 }
                 6 -> {
                     val currentScreen = extraScreens[selectedExtraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHypermarketFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHypermarketFactory(
                         screen = currentScreen,
                         onNavigateToDiscounts = { selectedExtraScreenIndex = 1 },
                         onNavigateToFlyer = { selectedExtraScreenIndex = 2 },
@@ -1464,14 +1464,14 @@ fun DesignSystemCatalogApp() {
                 }
                 7 -> {
                     val currentScreen = pdaScreens[selectedPdaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPremiumGroceryFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPremiumGroceryFactory(
                         screen = currentScreen,
                             onNavItemClick = { navItem -> selectedPdaScreenIndex = navItem.ordinal }
                     )
                 }
                 8 -> {
                     val currentScreen = groceryScreens[selectedGroceryScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGroceryFactory(
+                    br.com.wgc.design_system.templates.factories.WgcGroceryFactory(
                         screen = currentScreen,
                         onTabSelected = { tab ->
                             selectedGroceryScreenIndex = when (tab) {
@@ -1486,7 +1486,7 @@ fun DesignSystemCatalogApp() {
                 }
                 9 -> {
                     val currentScreen = drogaRaiaScreens[selectedDrogaRaiaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPharmacyChainFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPharmacyChainFactory(
                         screen = currentScreen,
                         onTabSelected = { tab ->
                             selectedDrogaRaiaScreenIndex = when (tab) {
@@ -1501,307 +1501,307 @@ fun DesignSystemCatalogApp() {
                 }
                 10 -> {
                     val currentScreen = drogasilScreens[selectedDrogasilScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCarePharmacyFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCarePharmacyFactory(
                         screen = currentScreen
                     )
                 }
                 11 -> {
                     val currentScreen = pagueMenosScreens[selectedPagueMenosScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPopularPharmacyFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPopularPharmacyFactory(
                         screen = currentScreen
                     )
                 }
                 12 -> {
                     val currentScreen = fintechNeobankScreens[selectedFintechNeobankScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFintechNeobankFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFintechNeobankFactory(
                         screen = currentScreen
                     )
                 }
                 13 -> {
                     val currentScreen = interScreens[selectedInterScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFintechSuperAppFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFintechSuperAppFactory(
                         screen = currentScreen
                     )
                 }
                 14 -> {
                     val currentScreen = c6Screens[selectedC6ScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFintechCarbonFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFintechCarbonFactory(
                         screen = currentScreen
                     )
                 }
                 15 -> {
                     val currentScreen = noveNoveScreens[selectedNoveNoveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcUrbanMobilityFactory(
+                    br.com.wgc.design_system.templates.factories.WgcUrbanMobilityFactory(
                         screen = currentScreen
                     )
                 }
                 16 -> {
                     val currentScreen = inDriveScreens[selectedInDriveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBiddingRidesFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBiddingRidesFactory(
                         screen = currentScreen
                     )
                 }
                 17 -> {
                     val currentScreen = clickBusScreens[selectedClickBusScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBusTravelFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBusTravelFactory(
                         screen = currentScreen
                     )
                 }
                 18 -> {
                     val currentScreen = decolarScreens[selectedDecolarScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFlightTravelFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFlightTravelFactory(
                         screen = currentScreen
                     )
                 }
                 19 -> {
                     val currentScreen = hospitalityLodgingScreens[selectedHospitalityLodgingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHospitalityLodgingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHospitalityLodgingFactory(
                         screen = currentScreen
                     )
                 }
                 20 -> {
                     val currentScreen = bookingScreens[selectedHotelBookingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHotelBookingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHotelBookingFactory(
                         screen = currentScreen
                     )
                 }
                 21 -> {
                     val currentScreen = videoStreamScreens[selectedVideoStreamScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcVideoStreamFactory(
+                    br.com.wgc.design_system.templates.factories.WgcVideoStreamFactory(
                         screen = currentScreen
                     )
                 }
                 22 -> {
                     val currentScreen = audioStreamScreens[selectedAudioStreamScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcAudioStreamFactory(
+                    br.com.wgc.design_system.templates.factories.WgcAudioStreamFactory(
                         screen = currentScreen
                     )
                 }
                 23 -> {
                     val currentScreen = globoplayScreens[selectedGloboplayScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBroadcastStreamingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBroadcastStreamingFactory(
                         screen = currentScreen
                     )
                 }
                 24 -> {
                     val currentScreen = duolingoScreens[selectedDuolingoScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLanguageLearningFactory(
+                    br.com.wgc.design_system.templates.factories.WgcLanguageLearningFactory(
                         screen = currentScreen
                     )
                 }
                 25 -> {
                     val currentScreen = aluraScreens[selectedAluraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTechEducationFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTechEducationFactory(
                         screen = currentScreen
                     )
                 }
                 26 -> {
                     val currentScreen = udemyScreens[selectedUdemyScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCourseMarketplaceFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCourseMarketplaceFactory(
                         screen = currentScreen
                     )
                 }
                 27 -> {
                     val currentScreen = whatsAppScreens[selectedWhatsAppScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDirectMessagingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcDirectMessagingFactory(
                         screen = currentScreen
                     )
                 }
                 28 -> {
                     val currentScreen = telegramScreens[selectedTelegramScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcChannelMessagingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcChannelMessagingFactory(
                         screen = currentScreen
                     )
                 }
                 29 -> {
                     val currentScreen = pinterestScreens[selectedPinterestScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcVisualDiscoveryFactory(
+                    br.com.wgc.design_system.templates.factories.WgcVisualDiscoveryFactory(
                         screen = currentScreen
                     )
                 }
                 30 -> {
                     val currentScreen = steamScreens[selectedSteamScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGamingStoreFactory(
+                    br.com.wgc.design_system.templates.factories.WgcGamingStoreFactory(
                         screen = currentScreen
                     )
                 }
                 31 -> {
                     val currentScreen = twitchScreens[selectedTwitchScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcLiveStreamingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcLiveStreamingFactory(
                         screen = currentScreen
                     )
                 }
                 32 -> {
                     val currentScreen = communityChatScreens[selectedCommunityChatScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCommunityChatFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCommunityChatFactory(
                         screen = currentScreen
                     )
                 }
                 33 -> {
                     val currentScreen = notionScreens[selectedNotionScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcWorkspaceDocsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcWorkspaceDocsFactory(
                         screen = currentScreen
                     )
                 }
                 34 -> {
                     val currentScreen = trelloScreens[selectedTrelloScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcKanbanTasksFactory(
+                    br.com.wgc.design_system.templates.factories.WgcKanbanTasksFactory(
                         screen = currentScreen
                     )
                 }
                 35 -> {
                     val currentScreen = slackScreens[selectedSlackScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTeamCollaborationFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTeamCollaborationFactory(
                         screen = currentScreen
                     )
                 }
                 36 -> {
                     val currentScreen = burgerFastFoodScreens[selectedBurgerFastFoodScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBurgerFastFoodFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBurgerFastFoodFactory(
                         screen = currentScreen
                     )
                 }
                 37 -> {
                     val currentScreen = burgerKingScreens[selectedBurgerKingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFlameFastFoodFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFlameFastFoodFactory(
                         screen = currentScreen
                     )
                 }
                 38 -> {
                     val currentScreen = pizzaScreens[selectedPizzaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPizzaFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPizzaFactory(
                         screen = currentScreen
                     )
                 }
                 39 -> {
                     val currentScreen = carpoolingScreens[selectedCarpoolingScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCarpoolingFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCarpoolingFactory(
                         screen = currentScreen
                     )
                 }
                 40 -> {
                     val currentScreen = loggiScreens[selectedLoggiScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcExpressLogisticsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcExpressLogisticsFactory(
                         screen = currentScreen
                     )
                 }
                 41 -> {
                     val currentScreen = lalamoveScreens[selectedLalamoveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFreightLogisticsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFreightLogisticsFactory(
                         screen = currentScreen
                     )
                 }
                 42 -> {
                     val currentScreen = rennerScreens[selectedRennerScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDepartmentFashionFactory(
+                    br.com.wgc.design_system.templates.factories.WgcDepartmentFashionFactory(
                         screen = currentScreen
                     )
                 }
                 43 -> {
                     val currentScreen = ceaScreens[selectedCeaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcUrbanFashionFactory(
+                    br.com.wgc.design_system.templates.factories.WgcUrbanFashionFactory(
                         screen = currentScreen
                     )
                 }
                 44 -> {
                     val currentScreen = riachueloScreens[selectedRiachueloScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTrendApparelFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTrendApparelFactory(
                         screen = currentScreen
                     )
                 }
                 45 -> {
                     val currentScreen = boticarioScreens[selectedBoticarioScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFragranceBeautyFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFragranceBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 46 -> {
                     val currentScreen = naturaScreens[selectedNaturaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcNaturalBeautyFactory(
+                    br.com.wgc.design_system.templates.factories.WgcNaturalBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 47 -> {
                     val currentScreen = sephoraScreens[selectedSephoraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPrestigeBeautyFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPrestigeBeautyFactory(
                         screen = currentScreen
                     )
                 }
                 48 -> {
                     val currentScreen = petzScreens[selectedPetzScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPetCareFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPetCareFactory(
                         screen = currentScreen
                     )
                 }
                 49 -> {
                     val currentScreen = cobasiScreens[selectedCobasiScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPetSuperstoreFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPetSuperstoreFactory(
                         screen = currentScreen
                     )
                 }
                 50 -> {
                     val currentScreen = zeeDogScreens[selectedZeeDogScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPetLifestyleFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPetLifestyleFactory(
                         screen = currentScreen
                     )
                 }
                 51 -> {
                     val currentScreen = leroyMerlinScreens[selectedLeroyMerlinScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHomeImprovementFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHomeImprovementFactory(
                         screen = currentScreen
                     )
                 }
                 52 -> {
                     val currentScreen = tokStokScreens[selectedTokStokScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDesignerFurnitureFactory(
+                    br.com.wgc.design_system.templates.factories.WgcDesignerFurnitureFactory(
                         screen = currentScreen
                     )
                 }
                 53 -> {
                     val currentScreen = madeiraMadeiraScreens[selectedMadeiraMadeiraScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHomeMarketplaceFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHomeMarketplaceFactory(
                         screen = currentScreen
                     )
                 }
                 54 -> {
                     val currentScreen = g1Screens[selectedG1ScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDailyNewsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcDailyNewsFactory(
                         screen = currentScreen
                     )
                 }
                 55 -> {
                     val currentScreen = uolScreens[selectedUolScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcMediaNetworkFactory(
+                    br.com.wgc.design_system.templates.factories.WgcMediaNetworkFactory(
                         screen = currentScreen
                     )
                 }
                 56 -> {
                     val currentScreen = exameScreens[selectedExameScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBusinessNewsFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBusinessNewsFactory(
                         screen = currentScreen
                     )
                 }
                 57 -> {
                     val currentScreen = govBrScreens[selectedGovBrScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCitizenServicesFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCitizenServicesFactory(
                         screen = currentScreen
                     )
                 }
                 58 -> {
                     val currentScreen = cdtScreens[selectedCdtScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTransitDigitalFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTransitDigitalFactory(
                         screen = currentScreen
                     )
                 }
                 59 -> {
                     val currentScreen = ctpsScreens[selectedCtpsScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcEmploymentRecordFactory(
+                    br.com.wgc.design_system.templates.factories.WgcEmploymentRecordFactory(
                         screen = currentScreen
                     )
                 }
                 60 -> {
                     val currentScreen = organizzeScreens[selectedOrganizzeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcPersonalFinanceFactory(
+                    br.com.wgc.design_system.templates.factories.WgcPersonalFinanceFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedOrganizzeScreenIndex = organizzeScreens.indexOf(targetScreen)
@@ -1810,7 +1810,7 @@ fun DesignSystemCatalogApp() {
                 }
                 61 -> {
                     val currentScreen = lazaScreens[selectedLazaScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBoutiqueFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBoutiqueFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedLazaScreenIndex = lazaScreens.indexOf(targetScreen)
@@ -1819,7 +1819,7 @@ fun DesignSystemCatalogApp() {
                 }
                 62 -> {
                     val currentScreen = shopEaseScreens[selectedShopEaseScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcQuickShopFactory(
+                    br.com.wgc.design_system.templates.factories.WgcQuickShopFactory(
                         screen = currentScreen,
                         onNavigateToHome = { selectedShopEaseScreenIndex = 1 },
                         onNavigateToDetail = { selectedShopEaseScreenIndex = 2 },
@@ -1831,7 +1831,7 @@ fun DesignSystemCatalogApp() {
                 }
                 63 -> {
                     val currentScreen = nexkartScreens[selectedNexkartScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcGadgetShopFactory(
+                    br.com.wgc.design_system.templates.factories.WgcGadgetShopFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedNexkartScreenIndex = nexkartScreens.indexOf(targetScreen)
@@ -1840,7 +1840,7 @@ fun DesignSystemCatalogApp() {
                 }
                 64 -> {
                     val currentScreen = shopperScreens[selectedShopperScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcFreshGroceryFactory(
+                    br.com.wgc.design_system.templates.factories.WgcFreshGroceryFactory(
                         screen = currentScreen,
                         onNavigateToHome = { selectedShopperScreenIndex = 1 },
                         onNavigateToDetail = { selectedShopperScreenIndex = 2 },
@@ -1851,7 +1851,7 @@ fun DesignSystemCatalogApp() {
                 }
                 65 -> {
                     val currentScreen = tasselScreens[selectedTasselScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcCuratedMarketFactory(
+                    br.com.wgc.design_system.templates.factories.WgcCuratedMarketFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedTasselScreenIndex = tasselScreens.indexOf(targetScreen)
@@ -1860,7 +1860,7 @@ fun DesignSystemCatalogApp() {
                 }
                 66 -> {
                     val currentScreen = clotheeScreens[selectedClotheeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcApparelFactory(
+                    br.com.wgc.design_system.templates.factories.WgcApparelFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedClotheeScreenIndex = clotheeScreens.indexOf(targetScreen)
@@ -1869,7 +1869,7 @@ fun DesignSystemCatalogApp() {
                 }
                 67 -> {
                     val currentScreen = kutukuScreens[selectedKutukuScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcRetailFactory(
+                    br.com.wgc.design_system.templates.factories.WgcRetailFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedKutukuScreenIndex = kutukuScreens.indexOf(targetScreen)
@@ -1878,7 +1878,7 @@ fun DesignSystemCatalogApp() {
                 }
                 68 -> {
                     val currentScreen = shoppeScreens[selectedShoppeScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcMegaStoreFactory(
+                    br.com.wgc.design_system.templates.factories.WgcMegaStoreFactory(
                         screen = currentScreen,
                         onNavigate = { targetScreen ->
                             selectedShoppeScreenIndex = shoppeScreens.indexOf(targetScreen)
@@ -1887,7 +1887,7 @@ fun DesignSystemCatalogApp() {
                 }
                 69 -> {
                     val currentScreen = stylishScreens[selectedStylishScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTrendFashionFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTrendFashionFactory(
                         screen = currentScreen,
                         onNavigate = { targetScreen ->
                             selectedStylishScreenIndex = stylishScreens.indexOf(targetScreen)
@@ -1946,7 +1946,7 @@ fun DesignSystemCatalogApp() {
                 }
                 74 -> {
                     val currentScreen = dentalScreens[selectedDentalScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcDentalFactory(
+                    br.com.wgc.design_system.templates.factories.WgcDentalFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedDentalScreenIndex = dentalScreens.indexOf(targetScreen)
@@ -1955,7 +1955,7 @@ fun DesignSystemCatalogApp() {
                 }
                 75 -> {
                     val currentScreen = telemedicineScreens[selectedTelemedicineScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcTelemedicineFactory(
+                    br.com.wgc.design_system.templates.factories.WgcTelemedicineFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedTelemedicineScreenIndex = telemedicineScreens.indexOf(targetScreen)
@@ -1964,7 +1964,7 @@ fun DesignSystemCatalogApp() {
                 }
                 76 -> {
                     val currentScreen = beverageDeliveryScreens[selectedBeverageDeliveryScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcBeverageDeliveryFactory(
+                    br.com.wgc.design_system.templates.factories.WgcBeverageDeliveryFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedBeverageDeliveryScreenIndex = beverageDeliveryScreens.indexOf(targetScreen)
@@ -1973,7 +1973,7 @@ fun DesignSystemCatalogApp() {
                 }
                 77 -> {
                     val currentScreen = automotiveScreens[selectedAutomotiveScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcAutomotiveFactory(
+                    br.com.wgc.design_system.templates.factories.WgcAutomotiveFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedAutomotiveScreenIndex = automotiveScreens.indexOf(targetScreen)
@@ -1982,7 +1982,7 @@ fun DesignSystemCatalogApp() {
                 }
                 78 -> {
                     val currentScreen = hardwareScreens[selectedHardwareScreenIndex]
-                    br.com.wgc.ds_templates.factories.WgcHardwareFactory(
+                    br.com.wgc.design_system.templates.factories.WgcHardwareFactory(
                         screen = currentScreen,
                         onNavigateToScreen = { targetScreen ->
                             selectedHardwareScreenIndex = hardwareScreens.indexOf(targetScreen)

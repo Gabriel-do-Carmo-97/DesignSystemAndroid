@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.buttons
+﻿package br.com.wgc.design_system.components.buttons
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -17,7 +17,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.commons.WgcDevicePreviews
 
 /**

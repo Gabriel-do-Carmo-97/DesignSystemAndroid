@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.dialogs
+﻿package br.com.wgc.design_system.components.dialogs
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -6,7 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 @Composable
 fun WgcSimpleDialog(

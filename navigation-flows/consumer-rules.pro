@@ -1,5 +1,13 @@
-﻿# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in C:\Users\...\AppData\Local\Android\Sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.kts.
+# WGC Design System Navigation Flows - Consumer Proguard Rules
+-keep class br.com.wgc.design_system.navigation.** { *; }
+-keepclassmembers class br.com.wgc.design_system.navigation.** { *; }
+
+# Navigation Compose & Routes
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.SerializationKt
+-keepclassmembers class * {
+    *** Companion;
+}
+-keepclasseswithmembers class * {
+    kotlinx.serialization.KSerializer serializer(...);
+}

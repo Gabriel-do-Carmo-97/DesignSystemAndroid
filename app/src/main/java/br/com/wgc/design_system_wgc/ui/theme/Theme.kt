@@ -1,4 +1,4 @@
-package br.com.wgc.design_system_wgc.ui.theme
+﻿package br.com.wgc.design_system_wgc.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -6,7 +6,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import br.com.wgc.core_ds.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsColors
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(WgcCoreDsColors.primary),

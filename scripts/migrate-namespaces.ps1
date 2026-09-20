@@ -1,67 +1,69 @@
-# Script de Migração de Namespace para Design System WGC (PowerShell)
-# Este script ajuda a migrar automaticamente os namespaces para o novo padrão
+# Script de Migracao de Namespace para Design System WGC (PowerShell)
 
-Write-Host "🔄 Iniciando migração de namespace..." -ForegroundColor Cyan
-Write-Host "⚠️  Este script modificará arquivos no seu projeto" -ForegroundColor Yellow
-Write-Host ""
+param(
+    [switch]$Force = $false
+)
 
-$confirmation = Read-Host "Deseja continuar? (y/n)"
-if ($confirmation -ne "y" -and $confirmation -ne "Y") {
-    Write-Host "❌ Migração cancelada" -ForegroundColor Red
-    exit 1
-}
+Write-Host "Iniciando migracao de namespace..."
 
-$backupDir = "backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
-Write-Host "📋 Backup criado em: $backupDir" -ForegroundColor Green
-New-Item -ItemType Directory -Force -Path $backupDir | Out-Null
-Copy-Item -Recurse -Force . "$backupDir/"
+# 1. Substituir referencias em arquivos Kotlin
+Write-Host "Buscando arquivos Kotlin..."
+$ktFiles = Get-ChildItem -Path @("core", "components", "templates", "navigation-flows", "app") -Recurse -Filter "*.kt" -File
+Write-Host "Encontrados: $($ktFiles.Count) arquivos Kotlin"
 
-Write-Host "🔍 Buscando arquivos Kotlin..." -ForegroundColor Cyan
-$ktFiles = Get-ChildItem -Recurse -Filter "*.kt" -File
-Write-Host "Encontrados: $($ktFiles.Count) arquivos Kotlin" -ForegroundColor Green
-
-Write-Host "🔄 Migrando namespaces em arquivos Kotlin..." -ForegroundColor Cyan
+Write-Host "Migrando namespaces em arquivos Kotlin..."
 foreach ($file in $ktFiles) {
-    $content = Get-Content $file.FullName -Raw
-    $content = $content -replace 'br\.com\.wgc\.core_ds', 'br.com.wgc.design_system.core'
-    $content = $content -replace 'br\.com\.wgc\.design_system\.', 'br.com.wgc.design_system.components.'
-    $content = $content -replace 'br\.com\.wgc\.ds_templates', 'br.com.wgc.design_system.templates'
-    $content = $content -replace 'br\.com\.wgc\.ds_navigation_flows', 'br.com.wgc.design_system.navigation'
-    Set-Content $file.FullName $content -NoNewline
+    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $original = $content
+    $content = $content.Replace("br.com.wgc.core_ds", "br.com.wgc.design_system.core")
+    $content = $content.Replace("br.com.wgc.ds_templates", "br.com.wgc.design_system.templates")
+    $content = $content.Replace("br.com.wgc.ds_navigation_flows", "br.com.wgc.design_system.navigation")
+    if ($content -ne $original) {
+        [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    }
 }
 
-Write-Host "🔍 Buscando arquivos XML..." -ForegroundColor Cyan
-$xmlFiles = Get-ChildItem -Recurse -Filter "*.xml" -File
-Write-Host "Encontrados: $($xmlFiles.Count) arquivos XML" -ForegroundColor Green
+# 2. Substituir referencias em arquivos XML
+Write-Host "Buscando arquivos XML..."
+$xmlFiles = Get-ChildItem -Path @("core", "components", "templates", "navigation-flows", "app") -Recurse -Filter "*.xml" -File
+Write-Host "Encontrados: $($xmlFiles.Count) arquivos XML"
 
-Write-Host "🔄 Migrando namespaces em arquivos XML..." -ForegroundColor Cyan
+Write-Host "Migrando namespaces em arquivos XML..."
 foreach ($file in $xmlFiles) {
-    $content = Get-Content $file.FullName -Raw
-    $content = $content -replace 'br\.com\.wgc\.core_ds', 'br.com.wgc.design_system.core'
-    $content = $content -replace 'br\.com\.wgc\.ds_templates', 'br.com.wgc.design_system.templates'
-    $content = $content -replace 'br\.com\.wgc\.ds_navigation_flows', 'br.com.wgc.design_system.navigation'
-    Set-Content $file.FullName $content -NoNewline
+    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $original = $content
+    $content = $content.Replace("br.com.wgc.core_ds", "br.com.wgc.design_system.core")
+    $content = $content.Replace("br.com.wgc.ds_templates", "br.com.wgc.design_system.templates")
+    $content = $content.Replace("br.com.wgc.ds_navigation_flows", "br.com.wgc.design_system.navigation")
+    if ($content -ne $original) {
+        [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    }
 }
 
-Write-Host "🔍 Buscando arquivos Gradle..." -ForegroundColor Cyan
-$gradleFiles = Get-ChildItem -Recurse -Filter "*.gradle*" -File
-Write-Host "Encontrados: $($gradleFiles.Count) arquivos Gradle" -ForegroundColor Green
-
-Write-Host "🔄 Migrando namespaces em arquivos Gradle..." -ForegroundColor Cyan
-foreach ($file in $gradleFiles) {
-    $content = Get-Content $file.FullName -Raw
-    $content = $content -replace 'br\.com\.wgc\.core_ds', 'br.com.wgc.design_system.core'
-    $content = $content -replace 'br\.com\.wgc\.ds_templates', 'br.com.wgc.design_system.templates'
-    $content = $content -replace 'br\.com\.wgc\.ds_navigation_flows', 'br.com.wgc.design_system.navigation'
-    Set-Content $file.FullName $content -NoNewline
+# 3. Mover diretorios para refletir os novos packages
+function Move-DirSafe($src, $dst) {
+    if (Test-Path $src) {
+        Write-Host "Movendo $src -> $dst"
+        $parent = Split-Path -Parent $dst
+        if (-not (Test-Path $parent)) {
+            New-Item -ItemType Directory -Force -Path $parent | Out-Null
+        }
+        Move-Item -Path $src -Destination $dst -Force
+    }
 }
 
-Write-Host "✅ Migração concluída!" -ForegroundColor Green
-Write-Host ""
-Write-Host "📝 Próximos passos:" -ForegroundColor Cyan
-Write-Host "1. Revise as mudanças com: git diff"
-Write-Host "2. Execute os testes: ./gradlew test"
-Write-Host "3. Compile o projeto: ./gradlew build"
-Write-Host "4. Se tudo estiver correto, commit as mudanças"
-Write-Host ""
-Write-Host "📦 Backup disponível em: $backupDir/" -ForegroundColor Green
+# Core
+Move-DirSafe "core/src/main/java/br/com/wgc/core_ds" "core/src/main/java/br/com/wgc/design_system/core"
+Move-DirSafe "core/src/test/java/br/com/wgc/core_ds" "core/src/test/java/br/com/wgc/design_system/core"
+Move-DirSafe "core/src/androidTest/java/br/com/wgc/core_ds" "core/src/androidTest/java/br/com/wgc/design_system/core"
+
+# Templates
+Move-DirSafe "templates/src/main/java/br/com/wgc/ds_templates" "templates/src/main/java/br/com/wgc/design_system/templates"
+Move-DirSafe "templates/src/test/java/br/com/wgc/ds_templates" "templates/src/test/java/br/com/wgc/design_system/templates"
+Move-DirSafe "templates/src/androidTest/java/br/com/wgc/ds_templates" "templates/src/androidTest/java/br/com/wgc/design_system/templates"
+Move-DirSafe "templates/src/screenshotTest/kotlin/br/com/wgc/ds_templates" "templates/src/screenshotTest/kotlin/br/com/wgc/design_system/templates"
+
+# Navigation Flows
+Move-DirSafe "navigation-flows/src/main/java/br/com/wgc/ds_navigation_flows" "navigation-flows/src/main/java/br/com/wgc/design_system/navigation"
+
+Write-Host "Migracao concluida com sucesso!"

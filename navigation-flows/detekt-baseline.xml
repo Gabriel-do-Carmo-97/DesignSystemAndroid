@@ -11,10 +11,6 @@
     <ID>LongMethod:WgcOnboardingNavGraph.kt$@Composable private fun WgcOnboardingWelcomeNavScreen( onNext: () -> Unit, onSkip: () -> Unit )</ID>
     <ID>MagicNumber:WgcOnboardingNavGraph.kt$3</ID>
     <ID>MaxLineLength:WgcCheckoutNavGraph.kt$containerColor = if (selectedMethod == "credit_card") MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant</ID>
-    <ID>PackageNaming:DsNavigationFlowsInitializationTest.kt$package br.com.wgc.ds_navigation_flows</ID>
-    <ID>PackageNaming:WgcAuthNavGraph.kt$package br.com.wgc.ds_navigation_flows.auth</ID>
-    <ID>PackageNaming:WgcCheckoutNavGraph.kt$package br.com.wgc.ds_navigation_flows.checkout</ID>
-    <ID>PackageNaming:WgcOnboardingNavGraph.kt$package br.com.wgc.ds_navigation_flows.onboarding</ID>
     <ID>UnusedParameter:WgcCheckoutNavGraph.kt$onCloseCheckout: () -> Unit</ID>
   </CurrentIssues>
 </SmellBaseline>

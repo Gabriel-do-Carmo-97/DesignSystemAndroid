@@ -6,8 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "br.com.wgc.ds_navigation_flows"
-    compileSdk = 37
+    namespace = "br.com.wgc.design_system.navigation"
 
     buildTypes {
         release {
@@ -25,9 +24,6 @@ android {
         singleVariant("release") {
             withSourcesJar()
         }
-    }
-    testOptions {
-        unitTests.isReturnDefaultValues = true
     }
 }
 

@@ -1,8 +1,8 @@
-package br.com.wgc.design_system.integration
+﻿package br.com.wgc.design_system.integration
 
-import br.com.wgc.core_ds.WgcCoreDsSpacing
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColorsFacade
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColorsFacade
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Test
