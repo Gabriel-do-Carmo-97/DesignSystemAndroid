@@ -154,53 +154,49 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Suppress("LongMethod", "CyclomaticComplexMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DesignSystemCatalogApp() {
     var selectedModule by remember { mutableStateOf<br.com.wgc.design_system_wgc.showcase.DsModule?>(null) }
 
-    if (selectedModule == null) {
-        br.com.wgc.design_system_wgc.showcase.DsModuleHubScreen(
-            onSelectModule = { selectedModule = it }
-        )
-        return
-    }
-
     when (selectedModule) {
+        null -> {
+            br.com.wgc.design_system_wgc.showcase.DsModuleHubScreen(
+                onSelectModule = { selectedModule = it }
+            )
+        }
         br.com.wgc.design_system_wgc.showcase.DsModule.CORE -> {
             br.com.wgc.design_system_wgc.showcase.CoreTokensShowcase(
                 onBack = { selectedModule = null }
             )
-            return
         }
         br.com.wgc.design_system_wgc.showcase.DsModule.NAVIGATION_FLOWS -> {
             br.com.wgc.design_system_wgc.showcase.NavigationFlowsShowcase(
                 onBack = { selectedModule = null }
             )
-            return
         }
         br.com.wgc.design_system_wgc.showcase.DsModule.COMPONENTS -> {
             br.com.wgc.design_system_wgc.showcase.ComponentsShowcase(
                 onBack = { selectedModule = null }
             )
-            return
         }
-        else -> Unit
+        br.com.wgc.design_system_wgc.showcase.DsModule.TEMPLATES -> {
+            br.com.wgc.design_system_wgc.showcase.TemplatesShowcase(
+                onBack = { selectedModule = null }
+            )
+        }
     }
+}
 
+@Suppress("LongMethod", "CyclomaticComplexMethod")
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun LegacyMultiTabCatalogScreen(
+    onBack: () -> Unit = {}
+) {
     var primarySection by remember { mutableIntStateOf(0) }
     var selectedComponentSubTab by remember { mutableIntStateOf(0) }
     var selectedTemplateSubTab by remember { mutableIntStateOf(0) }
-
-    // Alinhamento automático com o módulo selecionado
-    LaunchedEffect(selectedModule) {
-        if (selectedModule == br.com.wgc.design_system_wgc.showcase.DsModule.COMPONENTS) {
-            primarySection = 71 // Tab de componentes (:design-system)
-        } else if (selectedModule == br.com.wgc.design_system_wgc.showcase.DsModule.TEMPLATES) {
-            primarySection = 73 // Tab de Fábricas & Templates (:ds-templates)
-        }
-    }
 
     val primaryTabs = listOf(
         // 0-2: Cat 1 - Imobiliárias
@@ -539,19 +535,19 @@ fun DesignSystemCatalogApp() {
                 title = {
                     Column {
                         Text(
-                            text = selectedModule?.title ?: "Catálogo Design System",
+                            text = "Catálogo Design System",
                             fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                             fontSize = 18.sp
                         )
                         Text(
-                            text = selectedModule?.moduleBadge ?: "",
+                            text = ":templates (Legacy)",
                             fontSize = 12.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 },
                 navigationIcon = {
-                    IconButton(onClick = { selectedModule = null }) {
+                    IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar ao Hub de Módulos")
                     }
                 }
@@ -1949,15 +1945,6 @@ fun DesignSystemCatalogApp() {
                     )
                 }
                 70 -> {
-                    PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
-                        figmaSubTabs.forEachIndexed { index, name ->
-                            Tab(
-                                selected = selectedFigmaSubTab == index,
-                                onClick = { selectedFigmaSubTab = index },
-                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
-                            )
-                        }
-                    }
                     when (selectedFigmaSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -1965,15 +1952,6 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 71 -> {
-                    PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
-                        componentSubTabs.forEachIndexed { index, name ->
-                            Tab(
-                                selected = selectedComponentSubTab == index,
-                                onClick = { selectedComponentSubTab = index },
-                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
-                            )
-                        }
-                    }
                     when (selectedComponentSubTab) {
                         0 -> WgcClassicButtonCatalogSection()
                         1 -> WgcSecondaryClassicButtonCatalogSection()
@@ -2007,15 +1985,6 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 72 -> {
-                    PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
-                        templateSubTabs.forEachIndexed { index, name ->
-                            Tab(
-                                selected = selectedTemplateSubTab == index,
-                                onClick = { selectedTemplateSubTab = index },
-                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
-                            )
-                        }
-                    }
                     when (selectedTemplateSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -2035,15 +2004,6 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 73 -> {
-                    PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
-                        factorySubTabs.forEachIndexed { index, name ->
-                            Tab(
-                                selected = selectedFactorySubTab == index,
-                                onClick = { selectedFactorySubTab = index },
-                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
-                            )
-                        }
-                    }
                     WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
                 }
                 74 -> {
