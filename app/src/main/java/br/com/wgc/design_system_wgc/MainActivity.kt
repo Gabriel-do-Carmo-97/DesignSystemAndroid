@@ -514,7 +514,8 @@ fun DesignSystemCatalogApp() {
         "WgcStoryAvatar", "WgcStoryTray", "WgcDeliveryComponents", "WgcFoodListingComponents", "WgcMarketplaceComponents",
         "WgcBiometricButton", "WgcSocialLoginPillButton", "WgcPillTabSwitch", "WgcColorPicker (Roda Cromática)",
         "WgcBadge", "WgcTag", "WgcSnackbar", "WgcOtpInput", "WgcTimeline",
-        "WgcRatingBar", "WgcStandardBottomSheet", "WgcSkeleton"
+        "WgcRatingBar", "WgcStandardBottomSheet", "WgcSkeleton",
+        "WgcBottomNavigation (2 a 5 Itens & Dock Elevado)"
     )
 
     val templateSubTabs = listOf(
@@ -2002,6 +2003,7 @@ fun DesignSystemCatalogApp() {
                         25 -> WgcRatingBarCatalogSection()
                         26 -> WgcBottomSheetCatalogSection()
                         27 -> WgcSkeletonCatalogSection()
+                        28 -> br.com.wgc.design_system_wgc.showcase.WgcBottomNavigationCatalogSection()
                     }
                 }
                 72 -> {
@@ -2597,6 +2599,15 @@ fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int) {
                 Text("3. CollapsibleHeader / Tabs:", style = MaterialTheme.typography.titleSmall)
                 WgcMenuFactory(
                     type = WgcMenuType.CollapsibleHeader,
+                    selectedIndex = menuIndex,
+                    onItemSelected = { menuIndex = it }
+                )
+
+                Spacer(Modifier.height(8.dp))
+                Text("4. ProminentCenter (Dock E-Commerce com Ícone Elevado):", style = MaterialTheme.typography.titleSmall)
+                WgcMenuFactory(
+                    type = WgcMenuType.ProminentCenter,
+                    items = br.com.wgc.design_system.components.navigation.defaultWgcProminentMenuItems(),
                     selectedIndex = menuIndex,
                     onItemSelected = { menuIndex = it }
                 )

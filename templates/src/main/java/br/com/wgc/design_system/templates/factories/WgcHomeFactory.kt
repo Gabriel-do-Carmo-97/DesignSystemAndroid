@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.factories
+package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -111,7 +111,22 @@ fun WgcHomeFactory(
             if (bottomNavSlot != null) {
                 bottomNavSlot()
             } else {
-                WgcMenuFactory(type = WgcMenuType.ClassicBottomBar)
+                val isEcommerceOrDelivery = brand in setOf<WgcBrand>(
+                    WgcBrand.DealMarketplace,
+                    WgcBrand.Marketplace,
+                    WgcBrand.GlobalMarketplace,
+                    WgcBrand.FoodDelivery,
+                    WgcBrand.QuickFoodDelivery,
+                    WgcBrand.MegaStore
+                )
+                if (isEcommerceOrDelivery) {
+                    WgcMenuFactory(
+                        type = WgcMenuType.ProminentCenter,
+                        items = br.com.wgc.design_system.components.navigation.defaultWgcProminentMenuItems()
+                    )
+                } else {
+                    WgcMenuFactory(type = WgcMenuType.ClassicBottomBar)
+                }
             }
         },
         floatingActionButton = {

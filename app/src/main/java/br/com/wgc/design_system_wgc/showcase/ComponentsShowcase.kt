@@ -14,11 +14,17 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Receipt
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,6 +49,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.components.navigation.WgcMenuItem
+import br.com.wgc.design_system.components.navigation.WgcMenuType
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system_wgc.WgcAlertCatalogSection
@@ -131,7 +139,13 @@ fun ComponentsShowcase(
             ComponentShowcaseItem(24, "WgcTimeline", ComponentCategory.STRUCTURE, "Linha do tempo e esteira de rastreamento"),
             ComponentShowcaseItem(25, "WgcRatingBar", ComponentCategory.FEEDBACK, "Avaliação por estrelas interativa e read-only"),
             ComponentShowcaseItem(26, "WgcBottomSheet", ComponentCategory.STRUCTURE, "Folha inferior modal padronizada"),
-            ComponentShowcaseItem(27, "WgcSkeleton", ComponentCategory.FEEDBACK, "Placeholders de carregamento para listas, perfis e cards")
+            ComponentShowcaseItem(27, "WgcSkeleton", ComponentCategory.FEEDBACK, "Placeholders de carregamento para listas, perfis e cards"),
+            ComponentShowcaseItem(
+                id = 28,
+                name = "WgcBottomNavigation",
+                category = ComponentCategory.STRUCTURE,
+                description = "Barra inferior de 2 a 5 itens com dock central elevado"
+            )
         )
     }
 
@@ -281,6 +295,7 @@ fun ComponentsShowcase(
                         25 -> WgcRatingBarCatalogSection()
                         26 -> WgcBottomSheetCatalogSection()
                         27 -> WgcSkeletonCatalogSection()
+                        28 -> WgcBottomNavigationCatalogSection()
                         else -> WgcClassicButtonCatalogSection()
                     }
                 }
@@ -309,3 +324,167 @@ fun ComponentsShowcase(
         }
     }
 }
+
+/**
+ * Seção de demonstração interativa da Bottom Navigation Bar.
+ * Demonstra a variação dinâmica de 2 a 5 itens e o botão central elevado estilo e-commerce (Dock / ProminentCenter).
+ */
+@Composable
+fun WgcBottomNavigationCatalogSection() {
+    var selectedType by remember { mutableStateOf(WgcMenuType.ProminentCenter) }
+    var itemCount by remember { mutableIntStateOf(5) }
+    var showBadges by remember { mutableStateOf(true) }
+    var selectedItemIndex by remember { mutableIntStateOf(2) }
+
+    val allPossibleItems = remember {
+        listOf(
+            WgcMenuItem(id = "home", label = "Início", icon = Icons.Default.Home),
+            WgcMenuItem(id = "search", label = "Buscar", icon = Icons.Default.Search),
+            WgcMenuItem(
+                id = "cart",
+                label = "Carrinho",
+                icon = Icons.Default.ShoppingCart,
+                isProminent = true,
+                badgeCount = 3
+            ),
+            WgcMenuItem(
+                id = "orders",
+                label = "Pedidos",
+                icon = Icons.Default.Receipt,
+                badgeCount = 1
+            ),
+            WgcMenuItem(id = "profile", label = "Perfil", icon = Icons.Default.Person)
+        )
+    }
+
+    val currentItems = remember(itemCount, showBadges) {
+        when (itemCount) {
+            2 -> listOf(
+                allPossibleItems[0].copy(badgeCount = 0),
+                allPossibleItems[4].copy(badgeCount = if (showBadges) 1 else 0)
+            )
+            3 -> listOf(
+                allPossibleItems[0].copy(badgeCount = 0),
+                allPossibleItems[2].copy(badgeCount = if (showBadges) 3 else 0),
+                allPossibleItems[4].copy(badgeCount = 0)
+            )
+            4 -> listOf(
+                allPossibleItems[0].copy(badgeCount = 0),
+                allPossibleItems[1].copy(badgeCount = 0),
+                allPossibleItems[3].copy(badgeCount = if (showBadges) 2 else 0),
+                allPossibleItems[4].copy(badgeCount = 0)
+            )
+            else -> allPossibleItems.map { it.copy(badgeCount = if (showBadges) it.badgeCount else 0) }
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcBottomNavBar & WgcMenuFactory",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Barra de navegação inferior dinâmica de 2 a 5 itens e estilo " +
+                "e-commerce com botão central elevado (Dock / ProminentCenter).",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        // 1. Controles: Tipo de Menu
+        Text("1. Variante da Barra Inferior:", style = MaterialTheme.typography.titleSmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            WgcMenuType.entries.forEach { type ->
+                FilterChip(
+                    selected = selectedType == type,
+                    onClick = { selectedType = type },
+                    label = {
+                        Text(
+                            when (type) {
+                                WgcMenuType.ProminentCenter -> "⭐ ProminentCenter"
+                                WgcMenuType.ClassicBottomBar -> "Clássica (M3)"
+                                WgcMenuType.FloatingPill -> "Pílula Flutuante"
+                                WgcMenuType.CollapsibleHeader -> "Abas Superiores"
+                            },
+                            fontSize = 12.sp
+                        )
+                    }
+                )
+            }
+        }
+
+        // 2. Controles: Quantidade de Itens (2 a 5)
+        Text("2. Quantidade de Itens Dinâmica ($itemCount itens):", style = MaterialTheme.typography.titleSmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            listOf(2, 3, 4, 5).forEach { count ->
+                FilterChip(
+                    selected = itemCount == count,
+                    onClick = {
+                        itemCount = count
+                        selectedItemIndex = if (count % 2 != 0) count / 2 else 0
+                    },
+                    label = { Text("$count Itens") }
+                )
+            }
+        }
+
+        // 3. Toggle de Badges
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        ) {
+            androidx.compose.material3.Checkbox(
+                checked = showBadges,
+                onCheckedChange = { showBadges = it }
+            )
+            Text("Exibir Badges de Notificação / Carrinho")
+        }
+
+        // 4. Área de Demonstração Interativa
+        Text("3. Demonstração Interativa em Tempo Real:", style = MaterialTheme.typography.titleSmall)
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            ) {
+                val activeItem = currentItems.getOrNull(selectedItemIndex.coerceIn(0, currentItems.size - 1))
+                Text(
+                    text = "Aba Ativa: ${activeItem?.label ?: "Nenhuma"}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(
+                            color = MaterialTheme.colorScheme.background,
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                        )
+                        .padding(top = WgcCoreDsSpacing.xl32.dp, bottom = WgcCoreDsSpacing.xs8.dp),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    br.com.wgc.design_system.components.navigation.WgcMenuFactory(
+                        type = selectedType,
+                        items = currentItems,
+                        selectedIndex = selectedItemIndex.coerceIn(0, currentItems.size - 1),
+                        onItemSelected = { selectedItemIndex = it }
+                    )
+                }
+            }
+        }
+    }
+}
+
