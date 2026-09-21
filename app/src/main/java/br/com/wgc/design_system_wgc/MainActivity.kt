@@ -180,6 +180,12 @@ fun DesignSystemCatalogApp() {
             )
             return
         }
+        br.com.wgc.design_system_wgc.showcase.DsModule.COMPONENTS -> {
+            br.com.wgc.design_system_wgc.showcase.ComponentsShowcase(
+                onBack = { selectedModule = null }
+            )
+            return
+        }
         else -> Unit
     }
 
@@ -556,15 +562,18 @@ fun DesignSystemCatalogApp() {
                 .padding(innerPadding)
                 .fillMaxSize()
         ) {
-            PrimaryTabRow(selectedTabIndex = primarySection) {
-            primaryTabs.forEachIndexed { index, title ->
-                Tab(
-                    selected = primarySection == index,
-                    onClick = { primarySection = index },
-                    text = { Text(text = title, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold) }
-                )
+            PrimaryScrollableTabRow(
+                selectedTabIndex = primarySection,
+                edgePadding = WgcCoreDsSpacing.md16.dp
+            ) {
+                primaryTabs.forEachIndexed { index, title ->
+                    Tab(
+                        selected = primarySection == index,
+                        onClick = { primarySection = index },
+                        text = { Text(text = title, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold) }
+                    )
+                }
             }
-        }
 
         when (primarySection) {
             0 -> {
@@ -1939,6 +1948,15 @@ fun DesignSystemCatalogApp() {
                     )
                 }
                 70 -> {
+                    PrimaryScrollableTabRow(selectedTabIndex = selectedFigmaSubTab) {
+                        figmaSubTabs.forEachIndexed { index, name ->
+                            Tab(
+                                selected = selectedFigmaSubTab == index,
+                                onClick = { selectedFigmaSubTab = index },
+                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
+                            )
+                        }
+                    }
                     when (selectedFigmaSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -1946,6 +1964,15 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 71 -> {
+                    PrimaryScrollableTabRow(selectedTabIndex = selectedComponentSubTab) {
+                        componentSubTabs.forEachIndexed { index, name ->
+                            Tab(
+                                selected = selectedComponentSubTab == index,
+                                onClick = { selectedComponentSubTab = index },
+                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
+                            )
+                        }
+                    }
                     when (selectedComponentSubTab) {
                         0 -> WgcClassicButtonCatalogSection()
                         1 -> WgcSecondaryClassicButtonCatalogSection()
@@ -1978,6 +2005,15 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 72 -> {
+                    PrimaryScrollableTabRow(selectedTabIndex = selectedTemplateSubTab) {
+                        templateSubTabs.forEachIndexed { index, name ->
+                            Tab(
+                                selected = selectedTemplateSubTab == index,
+                                onClick = { selectedTemplateSubTab = index },
+                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
+                            )
+                        }
+                    }
                     when (selectedTemplateSubTab) {
                         0 -> WgcWaveAuthScreenTemplate()
                         1 -> WgcSplitCardAuthScreenTemplate()
@@ -1997,6 +2033,15 @@ fun DesignSystemCatalogApp() {
                     }
                 }
                 73 -> {
+                    PrimaryScrollableTabRow(selectedTabIndex = selectedFactorySubTab) {
+                        factorySubTabs.forEachIndexed { index, name ->
+                            Tab(
+                                selected = selectedFactorySubTab == index,
+                                onClick = { selectedFactorySubTab = index },
+                                text = { Text(name, fontWeight = FontWeight.SemiBold) }
+                            )
+                        }
+                    }
                     WgcFactoriesAndSlotsCatalogSection(selectedSubTab = selectedFactorySubTab)
                 }
                 74 -> {
