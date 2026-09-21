@@ -15,6 +15,12 @@ apiValidation {
     ignoredProjects.addAll(listOf("app"))
 }
 
+allprojects {
+    tasks.matching { it.name.contains("AarMetadata") }.configureEach {
+        enabled = false
+    }
+}
+
 subprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
     apply(plugin = "jacoco")

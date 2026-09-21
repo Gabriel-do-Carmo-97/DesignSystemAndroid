@@ -46,10 +46,6 @@ android {
     }
 }
 
-tasks.withType<com.android.build.gradle.internal.tasks.CheckAarMetadataTask>().configureEach {
-    enabled = false
-}
-
 dependencies {
     implementation(project(":components"))
     implementation(project(":templates"))
