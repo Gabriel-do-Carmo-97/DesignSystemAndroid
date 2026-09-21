@@ -72,4 +72,35 @@ class WgcFactoriesTest {
         assertTrue(types.contains(WgcSettingsHubType.SECURITY))
         assertTrue(types.contains(WgcSettingsHubType.PREFERENCES))
     }
+
+    @Test
+    fun `WgcStatementType should contain all expected variants`() {
+        val types = WgcStatementType.entries
+        assertEquals(1, types.size)
+        assertTrue(types.contains(WgcStatementType.STANDARD))
+    }
+
+    @Test
+    fun `WgcProductDetailType should contain all expected variants`() {
+        val types = WgcProductDetailType.entries
+        assertEquals(3, types.size)
+        assertTrue(types.contains(WgcProductDetailType.STANDARD))
+        assertTrue(types.contains(WgcProductDetailType.APPAREL))
+        assertTrue(types.contains(WgcProductDetailType.BOUTIQUE))
+    }
+
+    @Test
+    fun `WgcHelpCenterType should contain all expected variants`() {
+        val types = WgcHelpCenterType.entries
+        assertEquals(1, types.size)
+        assertTrue(types.contains(WgcHelpCenterType.STANDARD))
+    }
+
+    @Test
+    fun `WgcReviewType should contain all expected variants`() {
+        val types = WgcReviewType.entries
+        assertEquals(2, types.size)
+        assertTrue(types.contains(WgcReviewType.STANDARD))
+        assertTrue(types.contains(WgcReviewType.BOUTIQUE))
+    }
 }

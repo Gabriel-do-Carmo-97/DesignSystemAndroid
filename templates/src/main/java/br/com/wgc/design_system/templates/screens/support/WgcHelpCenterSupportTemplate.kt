@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.support
+package br.com.wgc.design_system.templates.screens.support
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -121,12 +121,14 @@ class FakeHelpCenterViewModel : BaseHelpCenterViewModel() {
 
 @Composable
 fun WgcHelpCenterSupportTemplate(
+    modifier: Modifier = Modifier,
     viewModel: BaseHelpCenterViewModel = FakeHelpCenterViewModel(),
     headerSlot: (@Composable () -> Unit)? = null,
     contactActionSlot: (@Composable () -> Unit)? = null
 ) {
     val state by viewModel.uiState.collectAsState()
     WgcHelpCenterSupportContent(
+        modifier = modifier,
         state = state,
         onSearchQueryChange = viewModel::onSearchQueryChange,
         onCategorySelect = viewModel::onCategorySelect,

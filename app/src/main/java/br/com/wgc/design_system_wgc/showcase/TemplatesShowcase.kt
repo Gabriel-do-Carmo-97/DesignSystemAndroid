@@ -67,6 +67,16 @@ import br.com.wgc.design_system.templates.screens.search.FakeSearchAndFilterView
 import br.com.wgc.design_system.templates.screens.search.SearchAndFilterScreenTemplate
 import br.com.wgc.design_system.templates.screens.social.FakeInstagramStoryViewerViewModel
 import br.com.wgc.design_system.templates.screens.social.InstagramStoryViewerScreenTemplate
+import br.com.wgc.design_system.templates.screens.checkout.FakeCheckoutViewModel
+import br.com.wgc.design_system.templates.screens.checkout.WgcCheckoutTemplate
+import br.com.wgc.design_system.templates.screens.product.FakeProductDetailViewModel
+import br.com.wgc.design_system.templates.screens.product.WgcProductDetailTemplate
+import br.com.wgc.design_system.templates.screens.review.FakeFeedbackReviewViewModel
+import br.com.wgc.design_system.templates.screens.review.WgcFeedbackReviewTemplate
+import br.com.wgc.design_system.templates.screens.statement.FakeFinancialStatementViewModel
+import br.com.wgc.design_system.templates.screens.statement.WgcFinancialStatementTemplate
+import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
+import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportTemplate
 import br.com.wgc.design_system_wgc.MultiBrandAuthCatalogSection
 import br.com.wgc.design_system_wgc.WgcFactoriesAndSlotsCatalogSection
 import br.com.wgc.design_system_wgc.WgcProfileFactoryShowcase
@@ -217,6 +227,36 @@ fun TemplatesShowcase(
                 name = "Endereço Multi-Brand",
                 category = TemplateCategory.SYSTEM,
                 description = "Formulário de cadastro de endereço com CEP automático e validação"
+            ),
+            TemplateShowcaseItem(
+                id = 20,
+                name = "Checkout Corporativo",
+                category = TemplateCategory.ECOMMERCE,
+                description = "Checkout com seleção de endereço, pagamento, cupom e resumo financeiro"
+            ),
+            TemplateShowcaseItem(
+                id = 21,
+                name = "Extrato da Conta",
+                category = TemplateCategory.FINTECH,
+                description = "Extrato financeiro com saldo ocultável, filtros de período e lançamentos detalhados"
+            ),
+            TemplateShowcaseItem(
+                id = 22,
+                name = "Detalhes do Produto (PDP)",
+                category = TemplateCategory.ECOMMERCE,
+                description = "Página de produto com galeria de fotos, seleção de cores/tamanhos e sticky CTA"
+            ),
+            TemplateShowcaseItem(
+                id = 23,
+                name = "Central de Ajuda & FAQ",
+                category = TemplateCategory.SYSTEM,
+                description = "Central de ajuda com busca, categorias de dúvidas, chamados recentes e FAQ"
+            ),
+            TemplateShowcaseItem(
+                id = 24,
+                name = "Avaliação da Compra",
+                category = TemplateCategory.SYSTEM,
+                description = "Avaliação de compra com estrelas, tags rápidas, comentário e upload de fotos"
             )
         )
     }
@@ -389,6 +429,11 @@ fun TemplatesShowcase(
                     17 -> FintechHomeScreenTemplate(viewModel = FakeFintechHomeViewModel())
                     18 -> EcommerceHomeScreenTemplate(viewModel = FakeEcommerceHomeViewModel())
                     19 -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel())
+                    20 -> WgcCheckoutTemplate(viewModel = FakeCheckoutViewModel())
+                    21 -> WgcFinancialStatementTemplate(viewModel = FakeFinancialStatementViewModel())
+                    22 -> WgcProductDetailTemplate(viewModel = FakeProductDetailViewModel())
+                    23 -> WgcHelpCenterSupportTemplate(viewModel = FakeHelpCenterViewModel())
+                    24 -> WgcFeedbackReviewTemplate(viewModel = FakeFeedbackReviewViewModel())
                     else -> WgcNotificationCenterTemplate()
                 }
             }

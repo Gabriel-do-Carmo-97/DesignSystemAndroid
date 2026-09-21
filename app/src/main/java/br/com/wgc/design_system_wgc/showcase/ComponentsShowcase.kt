@@ -145,6 +145,36 @@ fun ComponentsShowcase(
                 name = "WgcBottomNavigation",
                 category = ComponentCategory.STRUCTURE,
                 description = "Barra inferior de 2 a 5 itens com dock central elevado"
+            ),
+            ComponentShowcaseItem(
+                id = 29,
+                name = "WgcMediaPicker",
+                category = ComponentCategory.INPUTS,
+                description = "Seletor e upload de mídia com suporte a preview, progresso e remoção"
+            ),
+            ComponentShowcaseItem(
+                id = 30,
+                name = "WgcDataTable",
+                category = ComponentCategory.STRUCTURE,
+                description = "Tabela de dados paginada com ordenação de colunas e seleção de linhas"
+            ),
+            ComponentShowcaseItem(
+                id = 31,
+                name = "WgcDatePicker",
+                category = ComponentCategory.INPUTS,
+                description = "Seletor de data única e intervalo de datas (DateRangePicker) M3"
+            ),
+            ComponentShowcaseItem(
+                id = 32,
+                name = "WgcFilterSheet",
+                category = ComponentCategory.STRUCTURE,
+                description = "Folha inferior de filtros com categorias, faixa de preço e contador"
+            ),
+            ComponentShowcaseItem(
+                id = 33,
+                name = "WgcAccordion",
+                category = ComponentCategory.STRUCTURE,
+                description = "Card expansível com transição animada e chevron rotativo"
             )
         )
     }
@@ -296,6 +326,11 @@ fun ComponentsShowcase(
                         26 -> WgcBottomSheetCatalogSection()
                         27 -> WgcSkeletonCatalogSection()
                         28 -> WgcBottomNavigationCatalogSection()
+                        29 -> WgcMediaPickerCatalogSection()
+                        30 -> WgcDataTableCatalogSection()
+                        31 -> WgcDatePickerCatalogSection()
+                        32 -> WgcFilterSheetCatalogSection()
+                        33 -> WgcAccordionCatalogSection()
                         else -> WgcClassicButtonCatalogSection()
                     }
                 }
@@ -487,4 +522,368 @@ fun WgcBottomNavigationCatalogSection() {
         }
     }
 }
+
+@Composable
+fun WgcMediaPickerCatalogSection() {
+    var uploadState by remember {
+        mutableStateOf<br.com.wgc.design_system.components.media.WgcMediaUploadState>(
+            br.com.wgc.design_system.components.media.WgcMediaUploadState.Idle
+        )
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text("WgcMediaPicker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(
+            "Componente corporativo de seleção e upload de mídia com suporte a preview, progresso, erro e remoção.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        Text("Simular Estados:", style = MaterialTheme.typography.titleSmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            FilterChip(
+                selected = uploadState is br.com.wgc.design_system.components.media.WgcMediaUploadState.Idle,
+                onClick = { uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Idle },
+                label = { Text("Idle") }
+            )
+            FilterChip(
+                selected = uploadState is br.com.wgc.design_system.components.media.WgcMediaUploadState.Uploading,
+                onClick = {
+                    uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Uploading(0.65f)
+                },
+                label = { Text("Uploading (65%)") }
+            )
+            FilterChip(
+                selected = uploadState is br.com.wgc.design_system.components.media.WgcMediaUploadState.Success,
+                onClick = {
+                    uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Success(
+                        fileName = "documento_assinado.pdf",
+                        fileSize = "1.2 MB"
+                    )
+                },
+                label = { Text("Success") }
+            )
+            FilterChip(
+                selected = uploadState is br.com.wgc.design_system.components.media.WgcMediaUploadState.Error,
+                onClick = {
+                    uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Error("Falha na conexão")
+                },
+                label = { Text("Error") }
+            )
+        }
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(WgcCoreDsSpacing.lg24.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                br.com.wgc.design_system.components.media.WgcMediaPicker(
+                    state = uploadState,
+                    onPickFile = {
+                        uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Uploading(0.3f)
+                    },
+                    onRemoveFile = {
+                        uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Idle
+                    },
+                    onRetry = {
+                        uploadState = br.com.wgc.design_system.components.media.WgcMediaUploadState.Uploading(0.5f)
+                    }
+                )
+            }
+        }
+    }
+}
+
+data class ShowcaseEmployee(val id: String, val name: String, val role: String, val status: String)
+
+@Composable
+fun WgcDataTableCatalogSection() {
+    val employees = remember {
+        listOf(
+            ShowcaseEmployee("001", "Ana Souza", "Tech Lead", "Ativo"),
+            ShowcaseEmployee("002", "Carlos Silva", "Dev Android", "Ativo"),
+            ShowcaseEmployee("003", "Beatriz Lima", "Designer UI/UX", "Ausente"),
+            ShowcaseEmployee("004", "Daniel Rocha", "Dev Backend", "Ativo"),
+            ShowcaseEmployee("005", "Eduarda Costa", "QA Engineer", "Férias")
+        )
+    }
+
+    val columns = remember {
+        listOf(
+            br.com.wgc.design_system.components.table.WgcTableColumn<ShowcaseEmployee>(
+                id = "id",
+                header = "ID",
+                width = 80,
+                sortable = true,
+                cell = { Text(it.id) }
+            ),
+            br.com.wgc.design_system.components.table.WgcTableColumn<ShowcaseEmployee>(
+                id = "name",
+                header = "Nome",
+                width = 160,
+                sortable = true,
+                cell = { Text(it.name, fontWeight = FontWeight.SemiBold) }
+            ),
+            br.com.wgc.design_system.components.table.WgcTableColumn<ShowcaseEmployee>(
+                id = "role",
+                header = "Função",
+                width = 140,
+                sortable = false,
+                cell = { Text(it.role) }
+            ),
+            br.com.wgc.design_system.components.table.WgcTableColumn<ShowcaseEmployee>(
+                id = "status",
+                header = "Status",
+                width = 100,
+                sortable = true,
+                cell = { Text(it.status) }
+            )
+        )
+    }
+
+    var sortState by remember {
+        mutableStateOf(
+            br.com.wgc.design_system.components.table.WgcSortState(
+                "id",
+                br.com.wgc.design_system.components.table.WgcSortDirection.ASCENDING
+            )
+        )
+    }
+    var selectedRowIds by remember { mutableStateOf(setOf<String>()) }
+    var currentPage by remember { mutableIntStateOf(1) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text("WgcDataTable", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(
+            "Tabela de dados corporativa com ordenação de colunas, seleção de linhas e paginação integrada.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        br.com.wgc.design_system.components.table.WgcDataTable(
+            columns = columns,
+            items = employees,
+            rowIdProvider = { it.id },
+            sortState = sortState,
+            onSortChange = { sortState = it },
+            selectedRowIds = selectedRowIds,
+            onRowSelect = { id ->
+                selectedRowIds = if (selectedRowIds.contains(id)) selectedRowIds - id else selectedRowIds + id
+            },
+            onSelectAll = {
+                selectedRowIds = if (selectedRowIds.size == employees.size) {
+                    emptySet()
+                } else {
+                    employees.map { it.id }.toSet()
+                }
+            },
+            isSelectable = true,
+            currentPage = currentPage,
+            totalPages = 3,
+            onPageChange = { currentPage = it }
+        )
+    }
+}
+
+@Composable
+fun WgcDatePickerCatalogSection() {
+    var singleDateMillis by remember { mutableStateOf<Long?>(null) }
+    var startDateMillis by remember { mutableStateOf<Long?>(null) }
+    var endDateMillis by remember { mutableStateOf<Long?>(null) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            "WgcDatePicker & WgcDateRangePicker",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            "Campos de seleção de data única e intervalo de datas utilizando Material 3 com tokens WGC.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        Text("1. Data Única (Single Date Picker):", style = MaterialTheme.typography.titleSmall)
+        br.com.wgc.design_system.components.picker.WgcDatePickerField(
+            selectedDateMillis = singleDateMillis,
+            onDateSelected = { singleDateMillis = it },
+            label = "Data de Nascimento",
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        Spacer(Modifier.height(WgcCoreDsSpacing.xs8.dp))
+
+        Text("2. Intervalo de Datas (Date Range Picker):", style = MaterialTheme.typography.titleSmall)
+        br.com.wgc.design_system.components.picker.WgcDateRangePickerField(
+            startDateMillis = startDateMillis,
+            endDateMillis = endDateMillis,
+            onDateRangeSelected = { start, end ->
+                startDateMillis = start
+                endDateMillis = end
+            },
+            label = "Período da Reserva",
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+@Composable
+fun WgcFilterSheetCatalogSection() {
+    var isSheetOpen by remember { mutableStateOf(false) }
+    val categories = remember {
+        listOf(
+            br.com.wgc.design_system.components.bottomsheet.WgcFilterCategoryOption("electronics", "Eletrônicos"),
+            br.com.wgc.design_system.components.bottomsheet.WgcFilterCategoryOption("clothing", "Vestuário"),
+            br.com.wgc.design_system.components.bottomsheet.WgcFilterCategoryOption("home", "Casa & Cozinha"),
+            br.com.wgc.design_system.components.bottomsheet.WgcFilterCategoryOption("books", "Livros")
+        )
+    }
+    var selectedCategoryIds by remember { mutableStateOf(setOf("electronics")) }
+    var priceRange by remember { mutableStateOf(50f..500f) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text("WgcFilterSheet", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(
+            "Folha modal inferior de filtros com categorias selecionáveis, " +
+                "controle deslizante de faixa de preço e contador.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+        ) {
+            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+                val hasPriceFilter = priceRange.start > 0f || priceRange.endInclusive < 1000f
+                Text(
+                    "Filtros Ativos: ${selectedCategoryIds.size + (if (hasPriceFilter) 1 else 0)}"
+                )
+                Text("Categorias: ${selectedCategoryIds.joinToString(", ")}")
+                Text("Preço: R$ ${priceRange.start.toInt()} - R$ ${priceRange.endInclusive.toInt()}")
+            }
+        }
+
+        br.com.wgc.design_system.components.buttons.WgcClassicButton(
+            textButton = "Abrir Filtros Avançados",
+            onClick = { isSheetOpen = true },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        br.com.wgc.design_system.components.bottomsheet.WgcFilterSheet(
+            isVisible = isSheetOpen,
+            onDismiss = { isSheetOpen = false },
+            categories = categories,
+            selectedCategoryIds = selectedCategoryIds,
+            onCategoryToggle = { id ->
+                selectedCategoryIds = if (selectedCategoryIds.contains(id)) {
+                    selectedCategoryIds - id
+                } else {
+                    selectedCategoryIds + id
+                }
+            },
+            priceRange = priceRange,
+            priceBounds = 0f..1000f,
+            onPriceRangeChange = { priceRange = it },
+            onClearFilters = {
+                selectedCategoryIds = emptySet()
+                priceRange = 0f..1000f
+            },
+            onApplyFilters = { isSheetOpen = false }
+        )
+    }
+}
+
+@Composable
+fun WgcAccordionCatalogSection() {
+    var expanded1 by remember { mutableStateOf(true) }
+    var expanded2 by remember { mutableStateOf(false) }
+    var expanded3 by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text("WgcAccordion", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(
+            "Card expansível com chevron rotativo animado (durationStandard300) e transição fluida " +
+                "para seções de FAQ e detalhes.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        br.com.wgc.design_system.components.accordion.WgcAccordion(
+            title = "Como funciona a garantia dos produtos?",
+            subtitle = "Informações sobre garantia legal e estendida",
+            isExpanded = expanded1,
+            onToggle = { expanded1 = !expanded1 }
+        ) {
+            Text(
+                "Todos os nossos produtos possuem garantia de 90 dias conforme o CDC. " +
+                    "Itens eletrônicos possuem garantia estendida de fábrica de até 12 meses.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        br.com.wgc.design_system.components.accordion.WgcAccordion(
+            title = "Quais são as formas de pagamento aceitas?",
+            subtitle = "Cartão, Pix, Boleto e Voucher",
+            isExpanded = expanded2,
+            onToggle = { expanded2 = !expanded2 }
+        ) {
+            Text(
+                "Aceitamos cartões de crédito Visa, Mastercard, Elo e Amex em até 12x. " +
+                    "Também oferecemos 5% de desconto no Pix e emissão de boleto bancário à vista.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        br.com.wgc.design_system.components.accordion.WgcAccordion(
+            title = "Como solicitar o cancelamento ou troca?",
+            subtitle = "Prazo de arrependimento em até 7 dias",
+            isExpanded = expanded3,
+            onToggle = { expanded3 = !expanded3 }
+        ) {
+            Text(
+                "Você pode solicitar a troca ou cancelamento em até 7 dias corridos após o " +
+                    "recebimento através do menu 'Meus Pedidos' no aplicativo.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
+}
+
+
 

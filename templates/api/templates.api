@@ -1010,6 +1010,17 @@ public final class br/com/wgc/design_system/templates/factories/WgcHardwareScree
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcHardwareScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcHelpCenterFactoryKt {
+	public static final fun WgcHelpCenterFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcHelpCenterType;Lbr/com/wgc/design_system/templates/screens/support/BaseHelpCenterViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcHelpCenterType : java/lang/Enum {
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcHelpCenterType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcHelpCenterType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcHelpCenterType;
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcHomeDecorFactoryKt {
 	public static final fun WgcHomeDecorFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcHomeDecorScreen;Landroidx/compose/runtime/Composer;II)V
 }
@@ -1415,6 +1426,19 @@ public final class br/com/wgc/design_system/templates/factories/WgcPrestigeBeaut
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcPrestigeBeautyScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcProductDetailFactoryKt {
+	public static final fun WgcProductDetailFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;Lbr/com/wgc/design_system/templates/screens/product/BaseProductDetailViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcProductDetailType : java/lang/Enum {
+	public static final field APPAREL Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;
+	public static final field BOUTIQUE Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcProductDetailType;
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcProductivityFactoryKt {
 	public static final fun WgcProductivityFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcProductivityScreen;Landroidx/compose/runtime/Composer;II)V
 }
@@ -1571,6 +1595,18 @@ public final class br/com/wgc/design_system/templates/factories/WgcRetailScreen 
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcRetailScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcReviewFactoryKt {
+	public static final fun WgcReviewFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcReviewType;Lbr/com/wgc/design_system/templates/screens/review/BaseFeedbackReviewViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcReviewType : java/lang/Enum {
+	public static final field BOUTIQUE Lbr/com/wgc/design_system/templates/factories/WgcReviewType;
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcReviewType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcReviewType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcReviewType;
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcSearchFactoryKt {
 	public static final fun WgcSearchFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcSearchType;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
 }
@@ -1596,6 +1632,17 @@ public final class br/com/wgc/design_system/templates/factories/WgcSettingsHubTy
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcSettingsHubType;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcSettingsHubType;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcStatementFactoryKt {
+	public static final fun WgcStatementFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcStatementType;Lbr/com/wgc/design_system/templates/screens/statement/BaseFinancialStatementViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcStatementType : java/lang/Enum {
+	public static final field STANDARD Lbr/com/wgc/design_system/templates/factories/WgcStatementType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcStatementType;
+	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcStatementType;
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcStreamingFactoryKt {
@@ -2886,6 +2933,102 @@ public final class br/com/wgc/design_system/templates/screens/channelmessaging/W
 	public static final fun WgcTelegramSavedTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcTelegramSecretTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcTelegramSettingsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public abstract class br/com/wgc/design_system/templates/screens/checkout/BaseCheckoutViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onApplyCoupon (Ljava/lang/String;)V
+	public abstract fun onChangeAddressClick ()V
+	public abstract fun onChangePaymentMethodClick ()V
+	public abstract fun onConfirmOrderClick ()V
+	public abstract fun onRemoveCoupon ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/checkout/ComposableSingletons$WgcCheckoutTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/checkout/ComposableSingletons$WgcCheckoutTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1728701633$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1129516668$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1490914416$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1706018783$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$991968161$templates_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class br/com/wgc/design_system/templates/screens/checkout/FakeCheckoutViewModel : br/com/wgc/design_system/templates/screens/checkout/BaseCheckoutViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onApplyCoupon (Ljava/lang/String;)V
+	public fun onChangeAddressClick ()V
+	public fun onChangePaymentMethodClick ()V
+	public fun onConfirmOrderClick ()V
+	public fun onRemoveCoupon ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/checkout/WgcCheckoutItem {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutItem;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutItem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getImageUrl ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getPrice ()Ljava/lang/String;
+	public final fun getQuantity ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/checkout/WgcCheckoutTemplateKt {
+	public static final fun WgcCheckoutContent (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+	public static final fun WgcCheckoutTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/checkout/BaseCheckoutViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Z
+	public final fun component11 ()Z
+	public final fun component12 ()Z
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/checkout/WgcCheckoutUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCouponCode ()Ljava/lang/String;
+	public final fun getDiscount ()Ljava/lang/String;
+	public final fun getItems ()Ljava/util/List;
+	public final fun getPaymentMethodName ()Ljava/lang/String;
+	public final fun getPaymentMethodType ()Ljava/lang/String;
+	public final fun getShippingAddress ()Ljava/lang/String;
+	public final fun getShippingFee ()Ljava/lang/String;
+	public final fun getSubtotal ()Ljava/lang/String;
+	public final fun getTotalPrice ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isCouponApplied ()Z
+	public final fun isLoading ()Z
+	public final fun isProcessingPayment ()Z
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class br/com/wgc/design_system/templates/screens/citizenservices/ComposableSingletons$WgcCitizenServicesTemplatesKt {
@@ -7914,6 +8057,107 @@ public final class br/com/wgc/design_system/templates/screens/prestigebeauty/Wgc
 	public static final fun WgcPrestigeBeautyTutorialsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/product/BaseProductDetailViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onAddToCartClick ()V
+	public abstract fun onBuyNowClick ()V
+	public abstract fun onFavoriteClick ()V
+	public abstract fun onQuantityChange (I)V
+	public abstract fun onSelectColor (Ljava/lang/String;)V
+	public abstract fun onSelectImage (I)V
+	public abstract fun onSelectSize (Ljava/lang/String;)V
+	public abstract fun onShareClick ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/product/ComposableSingletons$WgcProductDetailTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/product/ComposableSingletons$WgcProductDetailTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1055493851$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1095420795$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-40588818$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-529080217$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1152791355$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1385643255$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1664307375$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/product/FakeProductDetailViewModel : br/com/wgc/design_system/templates/screens/product/BaseProductDetailViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onAddToCartClick ()V
+	public fun onBuyNowClick ()V
+	public fun onFavoriteClick ()V
+	public fun onQuantityChange (I)V
+	public fun onSelectColor (Ljava/lang/String;)V
+	public fun onSelectImage (I)V
+	public fun onSelectSize (Ljava/lang/String;)V
+	public fun onShareClick ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/product/WgcProductDetailTemplateKt {
+	public static final fun WgcProductDetailContent (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+	public static final fun WgcProductDetailTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/product/BaseProductDetailViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;IZZ)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;IZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component12 ()I
+	public final fun component13 ()Ljava/util/List;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ljava/lang/String;
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Ljava/util/Map;
+	public final fun component19 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component20 ()Z
+	public final fun component21 ()Z
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()F
+	public final fun component5 ()I
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;IZZ)Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;IZZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/product/WgcProductDetailUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBadgeText ()Ljava/lang/String;
+	public final fun getBrand ()Ljava/lang/String;
+	public final fun getColors ()Ljava/util/List;
+	public final fun getCurrentPrice ()Ljava/lang/String;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getDiscountPercentage ()Ljava/lang/String;
+	public final fun getImages ()Ljava/util/List;
+	public final fun getInstallmentInfo ()Ljava/lang/String;
+	public final fun getOriginalPrice ()Ljava/lang/String;
+	public final fun getProductId ()Ljava/lang/String;
+	public final fun getQuantity ()I
+	public final fun getRating ()F
+	public final fun getReviewCount ()I
+	public final fun getSelectedColor ()Ljava/lang/String;
+	public final fun getSelectedImageIndex ()I
+	public final fun getSelectedSize ()Ljava/lang/String;
+	public final fun getSizes ()Ljava/util/List;
+	public final fun getSpecifications ()Ljava/util/Map;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isFavorite ()Z
+	public final fun isLoading ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract class br/com/wgc/design_system/templates/screens/profile/BaseSettingsHubViewModel : androidx/lifecycle/ViewModel {
 	public static final field $stable I
 	public fun <init> ()V
@@ -9627,6 +9871,86 @@ public final class br/com/wgc/design_system/templates/screens/retail/tracking/Wg
 	public static final fun WgcKutukuOrderTrackingScreen (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/review/BaseFeedbackReviewViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onAnonymousToggle (Z)V
+	public abstract fun onCommentChange (Ljava/lang/String;)V
+	public abstract fun onPickPhoto ()V
+	public abstract fun onRatingChange (I)V
+	public abstract fun onRecommendToggle (Z)V
+	public abstract fun onRemovePhoto ()V
+	public abstract fun onSubmitReview ()V
+	public abstract fun onTagToggle (Ljava/lang/String;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/review/ComposableSingletons$WgcFeedbackReviewTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/review/ComposableSingletons$WgcFeedbackReviewTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1151113823$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1307535937$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1728114911$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$899337236$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/review/FakeFeedbackReviewViewModel : br/com/wgc/design_system/templates/screens/review/BaseFeedbackReviewViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onAnonymousToggle (Z)V
+	public fun onCommentChange (Ljava/lang/String;)V
+	public fun onPickPhoto ()V
+	public fun onRatingChange (I)V
+	public fun onRecommendToggle (Z)V
+	public fun onRemovePhoto ()V
+	public fun onSubmitReview ()V
+	public fun onTagToggle (Ljava/lang/String;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewTemplateKt {
+	public static final fun WgcFeedbackReviewContent (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+	public static final fun WgcFeedbackReviewTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/review/BaseFeedbackReviewViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;ILjava/util/List;Ljava/util/Set;Ljava/lang/String;ILbr/com/wgc/design_system/components/media/WgcMediaUploadState;ZZZZ)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILjava/util/List;Ljava/util/Set;Ljava/lang/String;ILbr/com/wgc/design_system/components/media/WgcMediaUploadState;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Z
+	public final fun component11 ()Z
+	public final fun component12 ()Z
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/util/Set;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()I
+	public final fun component8 ()Lbr/com/wgc/design_system/components/media/WgcMediaUploadState;
+	public final fun component9 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;ILjava/util/List;Ljava/util/Set;Ljava/lang/String;ILbr/com/wgc/design_system/components/media/WgcMediaUploadState;ZZZZ)Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;Ljava/lang/String;Ljava/lang/String;ILjava/util/List;Ljava/util/Set;Ljava/lang/String;ILbr/com/wgc/design_system/components/media/WgcMediaUploadState;ZZZZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/review/WgcFeedbackReviewUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getComment ()Ljava/lang/String;
+	public final fun getMaxCommentLength ()I
+	public final fun getMediaUploadState ()Lbr/com/wgc/design_system/components/media/WgcMediaUploadState;
+	public final fun getQuickTags ()Ljava/util/List;
+	public final fun getRating ()I
+	public final fun getSelectedTags ()Ljava/util/Set;
+	public final fun getTargetSubtitle ()Ljava/lang/String;
+	public final fun getTargetTitle ()Ljava/lang/String;
+	public final fun getWouldRecommend ()Z
+	public fun hashCode ()I
+	public final fun isAnonymous ()Z
+	public final fun isSubmittedSuccess ()Z
+	public final fun isSubmitting ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract class br/com/wgc/design_system/templates/screens/ridehailing/auth/BaseRideHailingAuthViewModel : androidx/lifecycle/ViewModel {
 	public static final field $stable I
 	public fun <init> ()V
@@ -9785,6 +10109,103 @@ public final class br/com/wgc/design_system/templates/screens/social/InstagramSt
 	public fun toString ()Ljava/lang/String;
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/statement/BaseFinancialStatementViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onCategorySelected (Ljava/lang/String;)V
+	public abstract fun onExportStatementClick ()V
+	public abstract fun onPeriodSelected (Ljava/lang/String;)V
+	public abstract fun onToggleBalanceVisibility ()V
+	public abstract fun onTransactionClick (Lbr/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/statement/ComposableSingletons$WgcFinancialStatementTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/statement/ComposableSingletons$WgcFinancialStatementTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1245132762$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1665375023$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1809376525$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1442748614$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/statement/FakeFinancialStatementViewModel : br/com/wgc/design_system/templates/screens/statement/BaseFinancialStatementViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onCategorySelected (Ljava/lang/String;)V
+	public fun onExportStatementClick ()V
+	public fun onPeriodSelected (Ljava/lang/String;)V
+	public fun onToggleBalanceVisibility ()V
+	public fun onTransactionClick (Lbr/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementTemplateKt {
+	public static final fun WgcFinancialStatementContent (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
+	public static final fun WgcFinancialStatementTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/statement/BaseFinancialStatementViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11 ()Z
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Z
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Z)Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/statement/WgcFinancialStatementUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccountBalance ()Ljava/lang/String;
+	public final fun getCategories ()Ljava/util/List;
+	public final fun getMonthlyExpense ()Ljava/lang/String;
+	public final fun getMonthlyIncome ()Ljava/lang/String;
+	public final fun getPeriods ()Ljava/util/List;
+	public final fun getSelectedCategory ()Ljava/lang/String;
+	public final fun getSelectedPeriod ()Ljava/lang/String;
+	public final fun getTransactions ()Ljava/util/List;
+	public final fun getUserName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isBalanceVisible ()Z
+	public final fun isLoading ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Z
+	public final fun component7 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lbr/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/statement/WgcStatementTransactionItem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmount ()Ljava/lang/String;
+	public final fun getCategory ()Ljava/lang/String;
+	public final fun getDate ()Ljava/lang/String;
+	public final fun getIconType ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isCredit ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract class br/com/wgc/design_system/templates/screens/support/BaseHelpCenterViewModel : androidx/lifecycle/ViewModel {
 	public static final field $stable I
 	public fun <init> ()V
@@ -9818,7 +10239,7 @@ public final class br/com/wgc/design_system/templates/screens/support/FakeHelpCe
 
 public final class br/com/wgc/design_system/templates/screens/support/WgcHelpCenterSupportTemplateKt {
 	public static final fun WgcHelpCenterSupportContent (Lbr/com/wgc/design_system/templates/screens/support/WgcHelpCenterUiState;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
-	public static final fun WgcHelpCenterSupportTemplate (Lbr/com/wgc/design_system/templates/screens/support/BaseHelpCenterViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcHelpCenterSupportTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/support/BaseHelpCenterViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/templates/screens/support/WgcHelpCenterUiState {

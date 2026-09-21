@@ -26,6 +26,18 @@ public abstract interface annotation class br/com/wgc/design_system/commons/WgcS
 public abstract interface annotation class br/com/wgc/design_system/commons/WgcTabletDevicePreviews : java/lang/annotation/Annotation {
 }
 
+public final class br/com/wgc/design_system/components/accordion/ComposableSingletons$WgcAccordionKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/accordion/ComposableSingletons$WgcAccordionKt;
+	public fun <init> ()V
+	public final fun getLambda$-1041861058$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$32923452$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$566062515$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/accordion/WgcAccordionKt {
+	public static final fun WgcAccordion (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/alert/AlertType : java/lang/Enum {
 	public static final field ERROR Lbr/com/wgc/design_system/components/alert/AlertType;
 	public static final field INFO Lbr/com/wgc/design_system/components/alert/AlertType;
@@ -151,6 +163,12 @@ public final class br/com/wgc/design_system/components/badge/WgcBadgeVariant : j
 	public static fun values ()[Lbr/com/wgc/design_system/components/badge/WgcBadgeVariant;
 }
 
+public final class br/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcFilterSheetKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcFilterSheetKt;
+	public fun <init> ()V
+	public final fun getLambda$244377490$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcStandardBottomSheetKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/bottomsheet/ComposableSingletons$WgcStandardBottomSheetKt;
 	public fun <init> ()V
@@ -161,6 +179,24 @@ public final class br/com/wgc/design_system/components/bottomsheet/ComposableSin
 
 public final class br/com/wgc/design_system/components/bottomsheet/WgcBottomSheetKt {
 	public static final fun WgcBottomSheet (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Landroidx/compose/material3/SheetState;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/bottomsheet/WgcFilterCategoryOption {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/design_system/components/bottomsheet/WgcFilterCategoryOption;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/bottomsheet/WgcFilterCategoryOption;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/bottomsheet/WgcFilterCategoryOption;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/bottomsheet/WgcFilterSheetKt {
+	public static final fun WgcFilterSheet (ZLkotlin/jvm/functions/Function0;Ljava/util/List;Ljava/util/Set;Lkotlin/jvm/functions/Function1;Lkotlin/ranges/ClosedFloatingPointRange;Lkotlin/ranges/ClosedFloatingPointRange;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/bottomsheet/WgcStandardBottomSheetKt {
@@ -1286,6 +1322,70 @@ public final class br/com/wgc/design_system/components/list/WgcListItemKt {
 	public static final fun WgcListItem (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/media/ComposableSingletons$WgcMediaPickerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/media/ComposableSingletons$WgcMediaPickerKt;
+	public fun <init> ()V
+	public final fun getLambda$-503812766$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-595349837$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$2132719958$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/media/WgcMediaPickerKt {
+	public static final fun WgcMediaPicker (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/media/WgcMediaUploadState;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public abstract interface class br/com/wgc/design_system/components/media/WgcMediaUploadState {
+}
+
+public final class br/com/wgc/design_system/components/media/WgcMediaUploadState$Error : br/com/wgc/design_system/components/media/WgcMediaUploadState {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Error;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Error;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Error;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/media/WgcMediaUploadState$Idle : br/com/wgc/design_system/components/media/WgcMediaUploadState {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Idle;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/media/WgcMediaUploadState$Success : br/com/wgc/design_system/components/media/WgcMediaUploadState {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Success;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Success;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFileName ()Ljava/lang/String;
+	public final fun getFileSize ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/media/WgcMediaUploadState$Uploading : br/com/wgc/design_system/components/media/WgcMediaUploadState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (F)V
+	public synthetic fun <init> (FILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()F
+	public final fun copy (F)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Uploading;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Uploading;FILjava/lang/Object;)Lbr/com/wgc/design_system/components/media/WgcMediaUploadState$Uploading;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getProgress ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class br/com/wgc/design_system/components/navigation/ComposableSingletons$WgcAddressHeaderBarKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/navigation/ComposableSingletons$WgcAddressHeaderBarKt;
 	public fun <init> ()V
@@ -1680,6 +1780,21 @@ public final class br/com/wgc/design_system/components/navigation/WgcZapNavDesti
 	public static fun values ()[Lbr/com/wgc/design_system/components/navigation/WgcZapNavDestination;
 }
 
+public final class br/com/wgc/design_system/components/picker/ComposableSingletons$WgcDatePickerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/picker/ComposableSingletons$WgcDatePickerKt;
+	public fun <init> ()V
+	public final fun getLambda$-1075669819$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-259622589$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1211588915$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1301649205$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$2041574580$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/picker/WgcDatePickerKt {
+	public static final fun WgcDatePickerField (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/Long;Lkotlin/jvm/functions/Function1;ZLandroidx/compose/runtime/Composer;II)V
+	public static final fun WgcDateRangePickerField (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/jvm/functions/Function2;ZLandroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/pickers/WgcDatePickerKt {
 	public static final fun WgcDatePicker (Landroidx/compose/material3/DatePickerState;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcDatePickerDialog (Landroidx/compose/material3/DatePickerState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
@@ -2037,6 +2152,66 @@ public final class br/com/wgc/design_system/components/story/WgcMegaStoreStoryAv
 public final class br/com/wgc/design_system/components/story/WgcStoryAvatarKt {
 	public static final fun WgcStoryAvatar-0vH8DBg (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/story/StoryState;ZFLkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcStoryTray (Landroidx/compose/ui/Modifier;Ljava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/table/ComposableSingletons$WgcDataTableKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/table/ComposableSingletons$WgcDataTableKt;
+	public fun <init> ()V
+	public final fun getLambda$-118951504$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1566958351$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-1648543777$components_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1280002098$components_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$1903692296$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/table/WgcDataTableKt {
+	public static final fun WgcDataTable (Landroidx/compose/ui/Modifier;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/functions/Function1;Lbr/com/wgc/design_system/components/table/WgcSortState;Lkotlin/jvm/functions/Function1;Ljava/util/Set;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;ZIIILkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;III)V
+}
+
+public final class br/com/wgc/design_system/components/table/WgcSortDirection : java/lang/Enum {
+	public static final field ASCENDING Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public static final field DESCENDING Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public static final field NONE Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public static fun values ()[Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+}
+
+public final class br/com/wgc/design_system/components/table/WgcSortState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lbr/com/wgc/design_system/components/table/WgcSortDirection;)V
+	public synthetic fun <init> (Ljava/lang/String;Lbr/com/wgc/design_system/components/table/WgcSortDirection;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public final fun copy (Ljava/lang/String;Lbr/com/wgc/design_system/components/table/WgcSortDirection;)Lbr/com/wgc/design_system/components/table/WgcSortState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/table/WgcSortState;Ljava/lang/String;Lbr/com/wgc/design_system/components/table/WgcSortDirection;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/table/WgcSortState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColumnId ()Ljava/lang/String;
+	public final fun getDirection ()Lbr/com/wgc/design_system/components/table/WgcSortDirection;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/table/WgcTableColumn {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;IZLkotlin/jvm/functions/Function3;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;IZLkotlin/jvm/functions/Function3;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()Z
+	public final fun component5 ()Lkotlin/jvm/functions/Function3;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;IZLkotlin/jvm/functions/Function3;)Lbr/com/wgc/design_system/components/table/WgcTableColumn;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/table/WgcTableColumn;Ljava/lang/String;Ljava/lang/String;IZLkotlin/jvm/functions/Function3;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/table/WgcTableColumn;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCell ()Lkotlin/jvm/functions/Function3;
+	public final fun getHeader ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getSortable ()Z
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class br/com/wgc/design_system/components/tabs/WgcTabItem {
