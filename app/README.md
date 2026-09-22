@@ -5,7 +5,7 @@
 ![Target SDK](https://img.shields.io/badge/targetSdk-37-blue.svg)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-blue.svg)
 
-O módulo **`:app`** é o aplicativo de vitrine (*Catalog App* / *Storybook*) do ecossistema WGC. Ele funciona como ambiente interativo em tempo de execução para inspecionar, testar e validar todos os componentes de `:design-system` e telas de `:ds-templates`.
+O módulo **`:app`** é o aplicativo de vitrine (*Catalog App* / *Storybook*) do ecossistema WGC. Ele funciona como ambiente interativo em tempo de execução para inspecionar, testar e validar todos os componentes de `:components`, telas de `:templates` e grafos de `:navigation-flows`.
 
 ---
 
@@ -26,10 +26,10 @@ O app é estruturado em 4 abas mestras no topo para garantir acesso rápido a to
    - **Klok Brand Login:** Seletor pill duplo (Login/Register) e biometria dourada.
 
 2. **🧩 Componentes:**  
-   Catálogo atômico exibindo cada componente isoladamente em todos os seus estados (`Habilitado`, `Loading`, `Desabilitado` e variações). Inclui: `WgcClassicButton`, `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcPillTabSwitch`, `WgcSimpleTextField`, etc.
+   Catálogo atômico exibindo cada componente isoladamente em todos os seus estados (`Habilitado`, `Loading`, `Desabilitado` e variações). Inclui: `WgcClassicButton`, `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcPillTabSwitch`, `WgcSimpleTextField`, cards de múltiplos domínios, feedback `WgcEmptyState`/`WgcErrorState`, etc.
 
 3. **📱 Templates (Gerais):**  
-   Fluxos de telas completos do ecossistema (E-commerce, Fintech/Banking, iFood Home, Carrinho de Compras, Central de Configurações, Busca e Filtros).
+   Fluxos de telas completos do ecossistema (E-commerce, Fintech/Banking, Food Delivery, Marketplace, Carrinho de Compras, Central de Configurações, Busca e Filtros).
 
 4. **🏭 Fábricas & Slots:**  
    Laboratório interativo da arquitetura de **Factories & Injeção de Slots**. Permite alternar dinamicamente marcas (`WgcBrand`) e injetar componentes personalizados nos slots abertos.

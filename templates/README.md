@@ -1,12 +1,12 @@
-# 📱 Módulo `:ds-templates` (Templates de Telas & Fábricas de Fluxos)
+# 📱 Módulo `:templates` (Templates de Telas & Fábricas de Fluxos)
 
-[![Maven Package](https://img.shields.io/badge/GitHub%20Packages-br.com.wgc:ds--templates-blue.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/packages)
-[![Dokka API Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-templates/)
+[![Maven Package](https://img.shields.io/badge/GitHub%20Packages-br.com.wgc:templates-blue.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/packages)
+[![Dokka API Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/templates/)
 [![Detekt Passing](https://img.shields.io/badge/Detekt-Passing-brightgreen.svg)]()
 ![Min SDK](https://img.shields.io/badge/minSdk-29-green.svg)
 ![Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-blue.svg)
 
-O módulo **`:ds-templates`** orquestra e combina os componentes visuais do `:design-system` e os tokens do `:core-ds` para formar fluxos completos de negócio, telas desacopladas e **Fábricas de Telas Universais**.
+O módulo **`:templates`** orquestra e combina os componentes visuais do `:components` e os tokens do `:core` para formar fluxos completos de negócio, telas desacopladas e **Fábricas de Telas Universais**.
 
 ---
 
@@ -26,22 +26,32 @@ WgcAuthFactory(
 )
 ```
 
-### Fábricas Disponíveis:
+### Fábricas e Domínios Funcionais (75 Factories Prontas):
 - **`WgcAuthFactory`**: Autenticação unificada suportando marcas e estilos (`Standard`, `CleanWave`, `SplitCard`, `Klok`, etc.).
 - **`WgcHomeFactory`**: Telas iniciais (Home) multi-segmento com suporte a troca dinâmica de Menu, Header, Feed e BottomBar.
+- **Fábricas de Segmentos Neutros:**
+  - `WgcFoodDeliveryFactory` & `WgcBeverageDeliveryFactory` (Alimentação e bebidas)
+  - `WgcMarketplaceFactory` (Varejo e e-commerce)
+  - `WgcFintechFactory` & `WgcBankingFactory` (Serviços financeiros e banking)
+  - `WgcAutomotiveFactory` (Veículos e concessionárias)
+  - `WgcDentalFactory` & `WgcTelemedicineFactory` (Saúde e consultas)
+  - `WgcHardwareFactory` (Eletrônicos e tecnologia)
 
 ---
 
 ## 🎨 Catálogo de Templates Prontos
 
-| Categoria / Origem | Template / Screen | Descrição |
+O módulo possui 94 domínios de telas funcionais:
+
+| Categoria / Domínio | Templates Principais | Descrição |
 | :--- | :--- | :--- |
-| **Figma Community (Novos)** | `WgcWaveAuthScreenTemplate` | Template limpo com onda azul inferior decorativa e autenticação biométrica por digital. |
-| **Figma Community (Novos)** | `WgcSplitCardAuthScreenTemplate` | Card superior elevado, login limpo, botões lado a lado e biometria em card arredondado. |
-| **Figma Community (Novos)** | `WgcKlokAuthScreenTemplate` | Switch estilo pílula dupla (Login / Register), inputs pill e botão de biometria dourado. |
-| **E-Commerce & Food** | `EcommerceHomeScreenTemplate`, `IFoodHomeScreenTemplate`, `StandardCartScreenTemplate` | Home com carrossel de banners, grid de produtos, stories e carrinho de compras completo. |
-| **Fintech & Banking** | `FintechHomeScreenTemplate` | Visão de saldo, extrato com seções, atalhos PIX e transferências. |
-| **Geolocalização & Hubs** | `RealtimeLocationMapScreenTemplate`, `SettingsHubScreenTemplate`, `SearchAndFilterScreenTemplate` | Mapa em tempo real, central de configurações e busca com filtros. |
+| **Figma Community** | `WgcWaveAuthScreenTemplate`, `WgcSplitCardAuthScreenTemplate`, `WgcKlokAuthScreenTemplate` | Templates modernos com ondas orgânicas, cards flutuantes, seletores pílula e biometria integrada. |
+| **Food & Delivery** | `WgcFoodDeliveryHomeScreenTemplate`, `WgcBeverageDeliveryTemplates` | Feed com carrossel de restaurantes, busca de pratos, stories e carrinho de compras em tempo real. |
+| **Marketplace & Varejo** | `WgcMarketplaceHomeScreenTemplate`, `StandardCartScreenTemplate`, `EcommerceHomeScreenTemplate` | Home com carrossel de ofertas, grid de produtos, frete grátis e cálculo de desconto. |
+| **Fintech & Banking** | `FintechHomeScreenTemplate`, `WgcNubankHomeTemplate`, `WgcInterHomeTemplate` | Visão de saldo, extrato com seções, atalhos de transação, cartões físicos/virtuais e investimentos. |
+| **Saúde & Especialistas** | `WgcDentalTemplates`, `WgcTelemedicineTemplates` | Agendamento de consultas, perfis de profissionais e procedimentos médicos. |
+| **Automotivo & Hardware** | `WgcAutomotiveTemplates`, `WgcHardwareTemplates` | Ficha técnica de veículos, especificações de componentes e catálogo especializado. |
+| **Geolocalização & Central**| `RealtimeLocationMapScreenTemplate`, `SettingsHubScreenTemplate`, `SearchAndFilterScreenTemplate` | Mapa em tempo real, central de configurações, busca avançada e múltiplos filtros. |
 
 ---
 
@@ -56,6 +66,7 @@ screens/[feature]/
 
 1. **Separação Stateless vs Stateful:** Cada tela possui uma função que observa a ViewModel e outra pura que recebe apenas o `UiState` e callbacks lambdas.
 2. **Zero Dependência de Navegação Concreta:** O template nunca chama diretamente `NavController.navigate()`; ele emite eventos via lambdas (`onNavigateBack`, `onConfirmClick`).
+3. **Efeitos Unidirecionais (`UiEffectChannel`):** Suporte nativo a disparo de eventos únicos (Toasts, navegações, alertas de erro) via `UiEffectChannel`.
 
 ---
 
@@ -79,30 +90,33 @@ dependencyResolutionManagement {
 ### 2. Adicionar Dependência (`build.gradle.kts`)
 ```kotlin
 dependencies {
-    implementation("br.com.wgc:ds-templates:0.0.x")
-    implementation("br.com.wgc:design-system:0.0.x")
-    implementation("br.com.wgc:core-ds:0.0.x")
+    implementation("br.com.wgc:templates:0.0.x")
+    implementation("br.com.wgc:components:0.0.x")
+    implementation("br.com.wgc:core:0.0.x")
 }
 ```
+
+> [!NOTE]
+> O pacote Kotlin / Android namespace deste módulo é `br.com.wgc.ds_templates`.
 
 ---
 
 ## 🚀 Como Fazer o Deploy / Publicação
 
-O módulo utiliza o plugin `maven-publish` e publica o artefato `ds-templates-release.aar`.
+O módulo utiliza o plugin corporativo `wgc.android.library` e `maven-publish`, publicando o artefato `templates-release.aar`.
 
 ### Deploy Local:
 ```bash
-./gradlew :ds-templates:publishToMavenLocal
+./gradlew :templates:publishToMavenLocal
 ```
 
 ### Deploy Remoto Manual:
 ```bash
-./gradlew :ds-templates:publish -PVERSION_NAME=1.0.0
+./gradlew :templates:publish -PVERSION_NAME=1.0.0
 ```
 
 ### Deploy Automático (Esteira CI/CD):
-O pipeline hipergranular do GitHub Actions detecta alterações em `ds-templates/**` e publica automaticamente no GitHub Packages após o merge na branch `master`.
+O pipeline hipergranular do GitHub Actions detecta alterações em `templates/**` e publica automaticamente no GitHub Packages após o merge na branch `master`.
 
 ---
 
@@ -110,4 +124,4 @@ O pipeline hipergranular do GitHub Actions detecta alterações em `ds-templates
 
 A documentação KDoc com todas as telas, ViewModels, estados e parâmetros de Factories está disponível em:
 
-👉 **[Acessar Documentação de API do `:ds-templates`](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/ds-templates/)**
+👉 **[Acessar Documentação de API do `:templates`](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/templates/)**

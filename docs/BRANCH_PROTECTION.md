@@ -12,8 +12,11 @@ Para garantir que nenhum código quebre o Design System WGC ou viole nossos padr
      - [x] Dismiss stale pull request approvals when new commits are pushed
    - [x] **Require status checks to pass before merging**
      - [x] Require branches to be up to date before merging
-     - **Status checks obrigatórios:**
-       - `🧪 Build, Test & Lint`
-       - `🏷️ Validate PR Title` (Semantic Pull Request)
+      - **Status checks obrigatórios:**
+        - `🏷️ Validate PR Title` (Semantic Pull Request)
+        - `🧹 Detekt [:core]`, `🧹 Detekt [:components]`, `🧹 Detekt [:templates]`, `🧹 Detekt [:navigation-flows]`, `🧹 Detekt [:app]`
+        - `🧪 Tests [:core]`, `🧪 Tests [:components]`, `🧪 Tests [:templates]`, `🧪 Tests [:navigation-flows]`, `🧪 Tests [:app]`
+        - `📦 Assemble [:core]`, `📦 Assemble [:components]`, `📦 Assemble [:templates]`, `📦 Assemble [:navigation-flows]`
+        - `📱 Assemble Catalog App`
    - [x] **Require conversation resolution before merging**
    - [x] **Do not allow bypassing the above settings**

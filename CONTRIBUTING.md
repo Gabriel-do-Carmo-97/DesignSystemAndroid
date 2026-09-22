@@ -1,4 +1,4 @@
-﻿# Guia de Contribuição — DesignSystemAndroid 🎨
+# Guia de Contribuição — DesignSystemAndroid 🎨
 
 Obrigado pelo seu interesse em contribuir com o **DesignSystemAndroid**!
 Este repositório reúne os tokens de design, componentes atômicos/moleculares e templates de tela da organização **WGC**, operando sob os mais altos padrões de engenharia em Jetpack Compose, Material 3 e governança de agentes especialistas.
@@ -8,14 +8,15 @@ Este repositório reúne os tokens de design, componentes atômicos/moleculares 
 ## 🏛️ Princípios Arquiteturais Obrigatórios
 
 1. **Separação Estrita de Camadas (Atomic Design):**
-   - `:core-ds`: Tokens fundamentais puros (Cores primitivas/semânticas, Spacing, Radius, Size, Elevation, Motion). **Zero dependências de UI/Compose**.
-   - `:design-system`: Átomos e moléculas em Jetpack Compose (`WgcClassicButton`, `WgcChip`, `WgcAlert`, etc.). State Hoisting obrigatório (stateless por padrão).
-   - `:ds-templates`: Telas e fluxos completos desacoplados (`UiState` + `BaseViewModel` + `FakeViewModel`).
+   - `:core`: Tokens fundamentais puros (Cores primitivas/semânticas, Spacing, Radius, Size, Elevation, Motion). **Zero dependências de UI/Compose**.
+   - `:components`: Átomos e moléculas em Jetpack Compose (`WgcButton`, `WgcChip`, `WgcAlert`, etc.). State Hoisting obrigatório (stateless por padrão).
+   - `:templates`: Telas e fluxos completos desacoplados (`UiState` + `BaseViewModel` + `FakeViewModel` + `UiEffectChannel`).
+   - `:navigation-flows`: Grafos de navegação desacoplados com rotas Type-Safe (`@Serializable`).
    - `:app`: Storybook catalog interativo para validação visual.
 
 2. **Regra Inviolável de Tokens:**
    - Código novo **NUNCA** utiliza valores hexadecimais soltos, `Color(...)`, `.dp`, `.sp` ou números mágicos hardcoded.
-   - Sempre utilize os tokens semânticos do `:core-ds` e `MaterialTheme.colorScheme.*`.
+   - Sempre utilize os tokens semânticos do `:core` e `MaterialTheme.colorScheme.*`.
 
 3. **Acessibilidade e Usabilidade Obrigatórias:**
    - Target mínimo de toque de 48dp x 48dp para elementos interativos.

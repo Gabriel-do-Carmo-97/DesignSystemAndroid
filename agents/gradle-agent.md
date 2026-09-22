@@ -9,13 +9,12 @@ Gere `build.gradle.kts`, version catalog (`libs.versions.toml`), plugins e tooli
 
 ## 2. Contexto do Projeto
 
-- **Módulos:** `app/`, `core-ds/`, `design-system/`, `ds-templates/`
+- **Módulos:** `core/`, `components/`, `templates/`, `navigation-flows/`, `app/`
+- **Plugin de Convenção:** `build-logic` (`wgc.android.library`) unificando compileSdk (37), minSdk (29), Java 11 e packaging
 - **Arquivos de build:** `build.gradle.kts` (raiz + módulos), `settings.gradle.kts`, `gradle/libs.versions.toml`
-- **Versões principais:** AGP 8.13.0, Kotlin 2.2.0, Compose BOM 2025.09.01, Coil3 3.3.0
-- **Publicação (GitHub Packages):**
-  - `design-system` e `ds-templates`: `maven-publish` configurado, publicação operacional
-  - `core-ds`: **`maven-publish` NÃO configurado** — publicação planejada mas não operacional
-- **Tooling:** Screenshot Test habilitado. Detekt e Lint **não configurados** ainda.
+- **Versões principais:** AGP 8.13.0, Kotlin 2.2.20, Compose BOM 2025.09.01, Coil 3.3.0
+- **Publicação (GitHub Packages):** Os 4 módulos de biblioteca (`core`, `components`, `templates`, `navigation-flows`) têm `maven-publish` 100% operacional
+- **Tooling:** Screenshot Test habilitado, Detekt e Dokka multi-módulo configurados na raiz e subprojetos
 
 ---
 

@@ -1,29 +1,34 @@
-# 🧩 Módulo `:design-system` (Componentes Visuais Atômicos & Moleculares)
+# 🧩 Módulo `:components` (Componentes Visuais Atômicos & Moleculares)
 
-[![Maven Package](https://img.shields.io/badge/GitHub%20Packages-br.com.wgc:design--system-blue.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/packages)
-[![Dokka API Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/design-system/)
+[![Maven Package](https://img.shields.io/badge/GitHub%20Packages-br.com.wgc:components-blue.svg)](https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid/packages)
+[![Dokka API Docs](https://img.shields.io/badge/Dokka-API%20Reference-blueviolet.svg)](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/components/)
 [![Detekt Passing](https://img.shields.io/badge/Detekt-Passing-brightgreen.svg)]()
 ![Min SDK](https://img.shields.io/badge/minSdk-29-green.svg)
 ![Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-blue.svg)
 
-O módulo **`:design-system`** contém todos os componentes de interface de usuário (UI) atômicos e moleculares da organização WGC construídos em **Jetpack Compose** e **Material 3**.
+O módulo **`:components`** contém todos os componentes de interface de usuário (UI) atômicos e moleculares da organização WGC construídos em **Jetpack Compose** e **Material 3**.
 
 ---
 
 ## 🧱 Catálogo de Componentes
 
-| Categoria | Componentes Principais | Destaques de Acessibilidade & Estados |
+O módulo é estruturado em 25 categorias modulares com suporte a acessibilidade, feedback háptico e testes visuais:
+
+| Categoria | Componentes Principais | Destaques & Capacidades |
 | :--- | :--- | :--- |
-| **Botões de Ação** | `WgcClassicButton`, `WgcSecondaryClassicButton`, `WgcFAButton`, `WgcIconButton` | Estados Habilitado, Desabilitado e Loading (`CircularProgressIndicator`), alvo de toque mínimo de 48dp. |
-| **Autenticação & Social** | `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcSocialLoginPillGroup` | Biometria (`Circular`, `RoundedSquare`, `OutlinedSquare`), botões sociais padrão (Google, Apple, Facebook). |
-| **Alternadores & Switches** | `WgcPillTabSwitch`, `WgcSegmentedControl` | Alternador deslizante tipo pílula para Login/Cadastro com animação suave. |
-| **Campos de Texto (Inputs)** | `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField`, `WgcOtpInput` | Suporte a Leading/Trailing icons, estados de erro, máscara de senha/PIN e foco automatizado. |
-| **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButtonDefault`, `WgcSwitchDefault`, `WgcFilterChip` | Feedback háptico, suporte a estados desabilitados e `SemanticsProperties`. |
-| **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge` | Tipos Informativo, Sucesso, Alerta e Erro com ícones semânticos do `:core-ds`. |
-| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress`, `WgcSkeleton` | Skeletons modulares pré-moldados (Card, ListItem, Profile) com shimmer integrado. |
+| **Botões de Ação** | `WgcButton`, `WgcClassicButton`, `WgcSecondaryClassicButton`, `WgcFAButton`, `WgcIconButton`, `WgcSegmentedButton` | Estados Habilitado, Desabilitado e Loading (`CircularProgressIndicator`), alvo de toque mínimo de 48dp. |
+| **Autenticação & Social** | `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcSocialLoginPillGroup`, `WgcBrandAuthHeader` | Biometria (`Circular`, `RoundedSquare`, `OutlinedSquare`), botões sociais padrão (Google, Apple, Facebook). |
+| **Alternadores & Switches**| `WgcPillTabSwitch`, `WgcSegmentedControl`, `WgcSwitch`, `WgcSlider` | Alternador deslizante tipo pílula para Login/Cadastro, switches táteis e sliders. |
+| **Campos de Texto (Inputs)**| `WgcFieldFactory`, `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField`, `WgcOtpInput` | Leading/Trailing icons, estados de erro, máscara de senha, foco, OTP e **Transformações Visuais** (`CpfVisualTransformation`, `CepVisualTransformation`, `PhoneVisualTransformation`). |
+| **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButtonDefault`, `WgcSwitchDefault`, `WgcFilterChip`, `WgcChip` | Suporte a estados desabilitados, feedback háptico e `SemanticsProperties`. |
+| **Cards de Domínio (90+)** | `WgcCardFactory`, `WgcAutomotiveVehicleCard`, `WgcChilledBeverageCard`, `WgcDentalProcedureCard`, `WgcFinancialBalanceCard`, `WgcTechnicalHardwareCard`, `WgcPlasticCreditCard`, `WgcPractitionerProfileCard`, `WgcMerchantListingCard`, `WgcPromotionalProductCard` | Mais de 90 cards funcionais neutralizados cobrindo fintech, delivery, automotivo, saúde, marketplace e varejo. |
+| **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge`, `WgcEmptyState`, `WgcErrorState` | Componentes de feedback com ilustrações/ícones semânticos, estados vazios e tratamento de erro de rede. |
+| **Diálogos & Sheets** | `WgcStandardBottomSheet`, `WgcBottomSheet`, `WgcAlertDialog` | Folha modal padronizada com cabeçalho corporativo, botão de fechar, elevação e modais acessíveis. |
 | **Linha do Tempo (Timeline)**| `WgcTimeline` | Status (Completed, Current, Pending), nós customizáveis, data e slots de ação. |
 | **Avaliação & Feedback** | `WgcRatingBar` | Classificação de 1 a 5 estrelas, modo leitura com notas fracionárias e interativo com acessibilidade. |
-| **Folha Inferior (Bottom Sheet)**| `WgcStandardBottomSheet`, `WgcBottomSheet` | Folha modal padronizada com cabeçalho corporativo, botão de fechar, elevação e slots de ação. |
+| **Navegação & Barras** | `WgcMenuFactory`, `WgcAddressHeaderBar`, `WgcFloatingCartSummaryBar`, `WgcMarketplaceSearchHeaderBar` | Headers de pesquisa, endereço e barras flutuantes de carrinho. |
+| **Stories & Mídia** | `WgcStoryTray`, `WgcStoryAvatar`, `WgcAvatar` | Bandejas de stories interativas e avatares com estados lidos/não-lidos. |
+| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress`, `WgcSkeleton` | Skeletons modulares pré-moldados (Card, ListItem, Profile) com shimmer integrado. |
 
 ---
 
@@ -40,7 +45,7 @@ O módulo **`:design-system`** contém todos os componentes de interface de usu�
        ...
    )
    ```
-2. **Consumo Exclusivo de Tokens do `:core-ds`:**
+2. **Consumo Exclusivo de Tokens do `:core`:**
    Nenhum componente utiliza `Color(...)` solta, `.dp` ou `.sp` avulso. Todas as dimensões utilizam `WgcCoreDsSpacing`, `WgcCoreDsBorderRadius` ou `MaterialTheme.colorScheme`.
 3. **Padrão de Nomenclatura com Prefixo `Wgc`:**
    Todo componente corporativo é nomeado com o prefixo `Wgc` para evitar colisão com o Jetpack Compose padrão.
@@ -69,29 +74,32 @@ dependencyResolutionManagement {
 ### 2. Adicionar Dependência (`build.gradle.kts`)
 ```kotlin
 dependencies {
-    implementation("br.com.wgc:design-system:0.0.x")
-    implementation("br.com.wgc:core-ds:0.0.x")
+    implementation("br.com.wgc:components:0.0.x")
+    implementation("br.com.wgc:core:0.0.x")
 }
 ```
+
+> [!NOTE]
+> O pacote Kotlin / Android namespace deste módulo é `br.com.wgc.design_system`.
 
 ---
 
 ## 🚀 Como Fazer o Deploy / Publicação
 
-O módulo utiliza o plugin `maven-publish` e publica o artefato `design-system-release.aar`.
+O módulo utiliza o plugin corporativo `wgc.android.library` e `maven-publish`, publicando o artefato `components-release.aar`.
 
 ### Deploy Local (Maven Local):
 ```bash
-./gradlew :design-system:publishToMavenLocal
+./gradlew :components:publishToMavenLocal
 ```
 
 ### Deploy Remoto Manual (GitHub Packages):
 ```bash
-./gradlew :design-system:publish -PVERSION_NAME=1.0.0
+./gradlew :components:publish -PVERSION_NAME=1.0.0
 ```
 
 ### Deploy Automático (Esteira CI/CD):
-O pipeline hipergranular do GitHub Actions detecta alterações em `design-system/**` e realiza o deploy automaticamente no merge para a branch `master`.
+O pipeline hipergranular do GitHub Actions detecta alterações em `components/**` e realiza o deploy automaticamente no merge para a branch `master`.
 
 ---
 
@@ -99,4 +107,4 @@ O pipeline hipergranular do GitHub Actions detecta alterações em `design-syste
 
 A documentação KDoc completa com todas as funções `@Composable`, parâmetros e slots está disponível em:
 
-👉 **[Acessar Documentação de API do `:design-system`](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/design-system/)**
+👉 **[Acessar Documentação de API do `:components`](https://gabriel-do-carmo-97.github.io/DesignSystemAndroid/components/)**

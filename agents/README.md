@@ -4,9 +4,9 @@ Esta pasta reúne as diretrizes, prompts de sistema, regras e governança da equ
 
 - 🏛️ **Orquestrador:** [`design-system-orchestrator.md`](./design-system-orchestrator.md)
 - 🎨 **Figma & UI Analyser:** [`figma-analyser-agent.md`](./figma-analyser-agent.md)
-- 🪙 **Tokens Core (`:core`):** [`core-ds-agent.md`](./core-ds-agent.md)
-- 🧱 **Componentes (`:components`):** [`design-system-agent.md`](./design-system-agent.md)
-- 📱 **Templates de Telas (`:templates`):** [`ds-templates-agent.md`](./ds-templates-agent.md)
+- 🪙 **Tokens Core (`:core`):** [`core-agent.md`](./core-agent.md)
+- 🧱 **Componentes (`:components`):** [`components-agent.md`](./components-agent.md)
+- 📱 **Templates de Telas (`:templates`):** [`templates-agent.md`](./templates-agent.md)
 - 🧭 **Fluxos de Navegação (`:navigation-flows`):** [`navigation-flows-agent.md`](./navigation-flows-agent.md)
 - 🔍 **Revisor & Qualidade:** [`code-reviewer-agent.md`](./code-reviewer-agent.md)
 - 🐘 **Gradle & Tooling:** [`gradle-agent.md`](./gradle-agent.md)

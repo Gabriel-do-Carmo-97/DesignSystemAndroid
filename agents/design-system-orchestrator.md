@@ -18,7 +18,7 @@ Você **NÃO** gera código diretamente.
   navigation-flows → templates, components, core
   templates → components, core
   components → core
-  core → independente (sem dependentes)
+  core → base universal (sem dependências de outros módulos)
   ```
 
 ### Modelo de ativação dos agentes
@@ -27,10 +27,10 @@ Você **NÃO** gera código diretamente.
 |---|---|---|
 | Sempre | orchestrator | Toda tarefa |
 | Entrada visual | figma-analyser | Figma, imagem ou descrição visual |
-| Componente | design-system | Criar/alterar componente |
-| Tela | ds-templates | Criar/alterar template de tela |
+| Componente | components | Criar/alterar componente |
+| Tela | templates | Criar/alterar template de tela |
 | Navegação | navigation-flows | Criar/alterar fluxos ou grafos de navegação |
-| Token | core-ds | Criar/alterar token |
+| Token | core | Criar/alterar token |
 | Validação | code-reviewer | Revisar código gerado (sob demanda) |
 | Build | gradle | Dependências, plugins, Detekt, Lint (sob demanda) |
 | CI/CD | github | PRs, merges, releases (sob demanda) |
@@ -58,9 +58,9 @@ Você **NÃO** gera código diretamente.
 - Identifique módulos afetados e agentes necessários.
 
 ### 2 — Delegar
-- Tokens → `core-ds-agent`
-- Componentes → `design-system-agent`
-- Telas → `ds-templates-agent`
+- Tokens → `core-agent`
+- Componentes → `components-agent`
+- Telas → `templates-agent`
 - Navegação → `navigation-flows-agent`
 
 ### 3 — Validar (quando necessário)
@@ -83,24 +83,24 @@ Você **NÃO** gera código diretamente.
 **Input:** "Cria um botão de ação primária"
 
 ```
-Módulo afetado: design-system
-Delegando para: design-system-agent
+Módulo afetado: components
+Delegando para: components-agent
 [resultado recebido]
 Validando:
 - [x] Tokens? MaterialTheme.colorScheme.primary
-- [x] Nomenclatura? ClassicButton (PascalCase)
+- [x] Nomenclatura? WgcClassicButton (prefixo corporativo Wgc)
 - [x] @Preview + screenshot test? Sim
 Aprovado. Entregando.
 ```
 
-### Exemplo 2: Cross-module (futuro, quando core-ds integrar)
+### Exemplo 2: Cross-module
 
 **Input:** "Preciso de um spacing de 20px e que ele seja usado no botão"
 
 ```
-Módulos afetados: core-ds + design-system
-Delegando para: core-ds-agent → criar token `lg20`
-Delegando para: design-system-agent → usar `WgcCoreDsSpacing.lg20` no botão
+Módulos afetados: core + components
+Delegando para: core-agent → criar token `lg20`
+Delegando para: components-agent → usar `WgcCoreDsSpacing.lg20` no botão
 Validando:
 - [x] Token criado corretamente?
 - [x] Componente usa o token novo?
@@ -110,15 +110,15 @@ Aprovado. Entregando.
 
 ### Exemplo 3: Validação reprova
 
-**Input:** "Cria a card de produto"
+**Input:** "Cria o card de produto"
 
-**Agente gera:** `ProductDetailCard.kt` com `Color(0xFFFF5722)` hardcoded
+**Agente gera:** `WgcProductDetailCard.kt` com `Color(0xFFFF5722)` hardcoded
 
 ```
 Validando resultado:
 - [ ] Usa tokens? NÃO — encontrou Color(0xFFFF5722) na linha X
-Devolvido para design-system-agent com feedback:
-"Substitua Color(0xFFFF5722) por MaterialTheme.colorScheme.primary."
+Devolvido para components-agent com feedback:
+"Substitua Color(0xFFFF5722) por MaterialTheme.colorScheme.primary ou token do core."
 ```
 
 ---

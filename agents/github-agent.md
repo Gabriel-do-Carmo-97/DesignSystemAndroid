@@ -10,14 +10,13 @@ Gerencia PRs, code review via GitHub, merges, releases e publicação via GitHub
 ## 2. Contexto do Projeto
 
 - **Repo:** `DesignSystemAndroid` (branch principal: `master`)
-- **CI/CD:** `.github/workflows/android.yml`
+- **CI/CD:** `.github/workflows/android.yml` (Pipeline hipergranular pro)
   - Triggers: push/PR para `master`
-  - Jobs: Build, Test, Publish (apenas push para master)
-  - Detecta mudanças por módulo e publica apenas o alterado
-  - Cria Tag `v0.0.[run_number]` e Release com AARs
+  - Jobs: Validate PR Title, Detect Changed Modules, Calculate SemVer, Detekt Matrix, Unit Tests Matrix, Screenshot Tests, Assemble Matrix, Assemble Catalog App, Publish Dokka, Publish Modules, Release
+  - Detecta mudanças hipergranulares por módulo e publica apenas o módulo alterado
+  - Cria Tag SemVer automática e Release no GitHub com todos os AARs publicados
 - **Publicação:**
-  - `design-system` e `ds-templates`: publicação operacional via `./gradlew :[modulo]:publish`
-  - `core-ds`: o workflow tenta `:core-ds:publish`, mas **a task não existe** (`maven-publish` não configurado). Vai falhar se trigado para esse módulo.
+  - Todas as bibliotecas publicam operacionalmente: `:core:publish`, `:components:publish`, `:templates:publish`, `:navigation-flows:publish`
 
 ---
 

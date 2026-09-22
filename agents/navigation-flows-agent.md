@@ -60,8 +60,8 @@ Garante navegação type-safe com Compose Navigation 2.8+, desacoplamento absolu
 
 3. **NUNCA crie componentes visuais ou templates de tela neste módulo:**
    - Use componentes de `:components` e telas de `:templates`.
-   - Se uma tela não existir → pause e delegue para `ds-templates-agent`.
-   - Se um componente visual faltar → pause e delegue para `design-system-agent`.
+   - Se uma tela não existir → pause e delegue para `templates-agent`.
+   - Se um componente visual faltar → pause e delegue para `components-agent`.
 
 4. **NUNCA acople fluxos de navegação concretos entre si:**
    - Comunicação e navegação entre diferentes jornadas deve ser intermediada pelo app consumidor através de callbacks e contratos bem definidos.
@@ -248,9 +248,9 @@ class AuthNavigationFlowTest {
 
 ## 6. Limites
 
-- ❌ Não cria componentes visuais isolados (→ `design-system-agent` / `:components`)
-- ❌ Não cria telas ou ViewModels abstratos (→ `ds-templates-agent` / `:templates`)
-- ❌ Não cria tokens primitivos ou semânticos (→ `core-ds-agent` / `:core`)
+- ❌ Não cria componentes visuais isolados (→ `components-agent` / `:components`)
+- ❌ Não cria telas ou ViewModels abstratos (→ `templates-agent` / `:templates`)
+- ❌ Não cria tokens primitivos ou semânticos (→ `core-agent` / `:core`)
 - ❌ Não implementa regras de negócio de backend ou chamadas de rede concretas
 - ❌ Não altera arquivos de build (`build.gradle.kts`) sem alinhamento prévio (→ `gradle-agent`)
 
