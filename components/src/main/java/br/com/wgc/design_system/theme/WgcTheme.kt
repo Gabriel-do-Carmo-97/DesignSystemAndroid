@@ -13,7 +13,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsColors
 
 /**
  * Esquema de cores corporativo no modo escuro (Dark Mode).
