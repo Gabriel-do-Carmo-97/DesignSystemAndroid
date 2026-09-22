@@ -28,6 +28,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -75,8 +77,9 @@ fun NavGraphBuilder.wgcPixTransferNavGraph(
     navigation<WgcPixGraphRoute>(startDestination = WgcPixHomeRoute) {
         composable<WgcPixHomeRoute> {
             val fakeVm = FakePixTransferViewModel()
+            val state by fakeVm.uiState.collectAsState()
             WgcPixTransferContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onKeyChange = fakeVm::onKeyChange,
                 onKeyTypeSelect = fakeVm::onKeyTypeSelect,
                 onAmountChange = fakeVm::onAmountChange,
@@ -87,8 +90,8 @@ fun NavGraphBuilder.wgcPixTransferNavGraph(
                     navController.navigate(
                         WgcPixReceiptRoute(
                             transactionId = txId,
-                            amount = fakeVm.uiState.value.amount.ifBlank { "150,00" },
-                            recipient = fakeVm.uiState.value.recipientName ?: "Destinatário WGC"
+                            amount = state.amount.ifBlank { "150,00" },
+                            recipient = state.recipientName ?: "Destinatário WGC"
                         )
                     )
                 }

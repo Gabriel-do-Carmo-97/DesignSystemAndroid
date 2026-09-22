@@ -21,6 +21,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -70,8 +72,9 @@ fun NavGraphBuilder.wgcHelpCenterNavGraph(
     navigation<WgcHelpCenterGraphRoute>(startDestination = WgcHelpCenterHomeRoute) {
         composable<WgcHelpCenterHomeRoute> {
             val fakeVm = FakeHelpCenterViewModel()
+            val state by fakeVm.uiState.collectAsState()
             WgcHelpCenterSupportContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onSearchQueryChange = fakeVm::onSearchQueryChange,
                 onCategorySelect = fakeVm::onCategorySelect,
                 onContactSupportClick = onContactSupport,
@@ -80,7 +83,7 @@ fun NavGraphBuilder.wgcHelpCenterNavGraph(
                 },
                 headerSlot = {
                     TopAppBar(
-                        title = { Text(fakeVm.uiState.value.title, style = MaterialTheme.typography.titleLarge) },
+                        title = { Text(state.title, style = MaterialTheme.typography.titleLarge) },
                         navigationIcon = {
                             IconButton(onClick = onNavigateBack) {
                                 Icon(

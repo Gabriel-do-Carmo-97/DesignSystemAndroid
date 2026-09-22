@@ -23,6 +23,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -68,8 +70,9 @@ fun NavGraphBuilder.wgcStatementNavGraph(
     navigation<WgcStatementGraphRoute>(startDestination = WgcStatementHomeRoute) {
         composable<WgcStatementHomeRoute> {
             val fakeVm = FakeFinancialStatementViewModel()
+            val state by fakeVm.uiState.collectAsState()
             WgcFinancialStatementContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onBackClick = onNavigateBack,
                 onExportClick = onExportStatement,
                 onToggleBalance = fakeVm::onToggleBalanceVisibility,

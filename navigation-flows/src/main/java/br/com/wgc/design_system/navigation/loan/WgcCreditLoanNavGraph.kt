@@ -25,6 +25,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -70,8 +72,9 @@ fun NavGraphBuilder.wgcCreditLoanNavGraph(
     navigation<WgcLoanGraphRoute>(startDestination = WgcLoanHomeRoute) {
         composable<WgcLoanHomeRoute> {
             val fakeVm = FakeLoanSimulatorViewModel()
+            val state by fakeVm.uiState.collectAsState()
             WgcLoanSimulatorContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onBackClick = onNavigateBack,
                 onAmountChange = fakeVm::onAmountChange,
                 onInstallmentsSelect = fakeVm::onInstallmentsSelect,
@@ -82,7 +85,7 @@ fun NavGraphBuilder.wgcCreditLoanNavGraph(
                     navController.navigate(
                         WgcLoanSuccessRoute(
                             contractNumber = contractId,
-                            amount = fakeVm.uiState.value.requestedAmount
+                            amount = state.requestedAmount
                         )
                     )
                 }

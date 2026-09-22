@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.navigation.review
 
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
@@ -41,9 +43,10 @@ fun NavGraphBuilder.wgcReviewNavGraph(
                     targetSubtitle = route.productName
                 )
             )
+            val state by fakeVm.uiState.collectAsState()
 
             WgcFeedbackReviewContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onBackClick = onCloseReview,
                 onRatingChange = fakeVm::onRatingChange,
                 onTagToggle = fakeVm::onTagToggle,

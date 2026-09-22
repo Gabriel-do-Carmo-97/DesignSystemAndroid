@@ -23,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
@@ -69,15 +70,16 @@ fun NavGraphBuilder.wgcCardManagementNavGraph(
     navigation<WgcCardGraphRoute>(startDestination = WgcCardHomeRoute) {
         composable<WgcCardHomeRoute> {
             val fakeVm = FakeCardManagementViewModel()
+            val state by fakeVm.uiState.collectAsState()
             WgcCardManagementContent(
-                state = fakeVm.uiState.value,
+                state = state,
                 onBackClick = onNavigateBack,
                 onToggleLock = fakeVm::onToggleLock,
                 onLimitChange = { newLimit ->
                     navController.navigate(
                         WgcCardLimitAdjustRoute(
                             currentLimit = newLimit,
-                            maxLimit = fakeVm.uiState.value.maxLimit
+                            maxLimit = state.maxLimit
                         )
                     )
                 },
