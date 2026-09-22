@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -28,9 +28,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Card promocional de "Oferta do Dia" com contagem regressiva integrada (WgcDealOfTheDayCard).
@@ -41,7 +41,7 @@ fun WgcDealOfTheDayCard(
     title: String = "Deal of the Day",
     remainingTime: String = "22h 55m 20s remaining",
     actionLabel: String = "View all",
-    backgroundColor: Color = Color(WgcCoreDsColors.stylishBlue),
+    backgroundColor: Color = Color(WgcCoreDsColors.trendFashionBlue),
     onViewAllClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)

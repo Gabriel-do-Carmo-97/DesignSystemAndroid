@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,11 +21,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSize
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -40,7 +40,7 @@ fun WgcGameStoreCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.steamNavy)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gamingStoreNavy)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
@@ -57,7 +57,7 @@ fun WgcGameStoreCard(
             Text(
                 text = genre.uppercase(),
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.twitchPurple),
+                color = Color(WgcCoreDsColors.liveStreamingPurple),
                 fontWeight = FontWeight.Bold
             )
             Text(
@@ -77,7 +77,7 @@ fun WgcGameStoreCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.duolingoGreen))
+                            .background(Color(WgcCoreDsColors.languageLearningGreen))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
                     ) {
                         Text(

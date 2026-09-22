@@ -1,3 +1,5 @@
+package br.com.wgc.design_system.components.buttons
+
 import androidx.compose.ui.test.assertHeightIsEqualTo
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -8,7 +10,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import br.com.wgc.design_system.components.buttons.secondarybutton.SecondaryClassicButton
+import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import io.mockk.every
 import io.mockk.just
 import io.mockk.mockk
@@ -32,7 +34,7 @@ class SecondaryClassicButtonTest {
     @Test
     fun secondaryClassicButton_whenRendered_isDisplayed() {
         createComposeRule.setContent {
-            SecondaryClassicButton(textButton = buttonText)
+            WgcSecondaryClassicButton(textButton = buttonText)
         }
         createComposeRule.onNodeWithText(buttonText)
             .assertIsDisplayed()
@@ -50,7 +52,7 @@ class SecondaryClassicButtonTest {
             every { this@mockk.invoke() } just runs
         }
         createComposeRule.setContent {
-            SecondaryClassicButton(textButton = buttonText, onClick = isClicked)
+            WgcSecondaryClassicButton(textButton = buttonText, onClick = isClicked)
         }
         createComposeRule.onNodeWithText(buttonText)
             .assertIsEnabled()
@@ -69,7 +71,7 @@ class SecondaryClassicButtonTest {
             every { this@mockk.invoke() } just runs
         }
         createComposeRule.setContent {
-            SecondaryClassicButton(
+            WgcSecondaryClassicButton(
                 textButton = buttonText,
                 onClick = isClicked,
                 isEnabled = false

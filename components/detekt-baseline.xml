@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:WgcButton.kt$@Composable fun WgcButton( modifier: Modifier = Modifier, text: String = "Continuar", onClick: () -> Unit = {}, variant: WgcButtonVariant = WgcButtonVariant.Primary, size: WgcButtonSize = WgcButtonSize.Medium, isEnabled: Boolean = true, isLoading: Boolean = false, leadingIcon: (@Composable () -> Unit)? = null, trailingIcon: (@Composable () -> Unit)? = null )</ID>
+    <ID>CyclomaticComplexMethod:WgcCardFactory.kt$@Composable fun WgcCardFactory( modifier: Modifier = Modifier, type: WgcCardType = WgcCardType.ProductDetail, title: String = "Item em Destaque", subtitle: String = "Descrição do item selecionado", price: String = "R$ 29,90", imageUrl: String? = null, badgeText: String? = null, onClick: () -> Unit = {}, actionSlot: (@Composable () -> Unit)? = null, customCardSlot: (@Composable () -> Unit)? = null )</ID>
+    <ID>EmptyClassBlock:ProductDetailModel.kt$ProductDetailModel${ }</ID>
+    <ID>ImplicitDefaultLocale:WgcAutomotiveVehicleCard.kt$String.format("%.2f", fipePrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcAutomotiveVehicleCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcBeautyCosmeticCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcChilledBeverageCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcFashionItemCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcFastFoodMealCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcFinancialBalanceCard.kt$String.format("%.2f", balance)</ID>
+    <ID>ImplicitDefaultLocale:WgcGameStoreCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcHomeImprovementCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcMobilityRideCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcPetCareCard.kt$String.format("%.2f", subscriberPrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcPharmacyProductCard.kt$String.format("%.2f", originalPrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcPharmacyProductCard.kt$String.format("%.2f", pharmacyClientPrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcPharmacyProductCard.kt$String.format("%.2f", price)</ID>
+    <ID>ImplicitDefaultLocale:WgcPractitionerProfileCard.kt$String.format("%.2f", consultationFee)</ID>
+    <ID>ImplicitDefaultLocale:WgcRatingBar.kt$String.format("%.1f", clampedRating)</ID>
+    <ID>ImplicitDefaultLocale:WgcTechnicalHardwareCard.kt$String.format("%.2f", discountPrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcTechnicalHardwareCard.kt$String.format("%.2f", originalPrice)</ID>
+    <ID>ImplicitDefaultLocale:WgcTravelStayCard.kt$String.format("%.2f", nightPrice)</ID>
+    <ID>LongMethod:DesignSystemGallery.kt$@Composable fun DesignSystemGalleryScreen(modifier: Modifier = Modifier)</ID>
+    <ID>LongMethod:ItemSectionCard.kt$@Composable fun ItemSectionCard( modifier: Modifier = Modifier, model: ItemSectionCardModel )</ID>
+    <ID>LongMethod:SimpleTextField.kt$@Composable fun SimpleTextField( modifier: Modifier = Modifier, value: String = "", onValueChange: (String) -> Unit = {}, isEnabled: Boolean = true, isReadOnly: Boolean = false, label: String = "SimpleLabel", placeholderText: String = "SimplePlaceholder", leadingIcon: ImageVector? = Icons.Default.Info, trailingIcon: ImageVector? = null, onTrailingIconClick: () -> Unit = {}, isError: Boolean = false, errorMessage: String = "SimpleErrorMessage", keyboardType: KeyboardType = KeyboardType.Text, isPasswordField: Boolean = false )</ID>
+    <ID>LongMethod:WgcAlert.kt$@Composable fun WgcAlert( modifier: Modifier = Modifier, title: String, message: String, type: AlertType = AlertType.INFO, onDismiss: (() -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcApparelCartItemCard.kt$@Composable fun WgcApparelCartItemCard( modifier: Modifier = Modifier, title: String, size: String = "M", colorName: String = "Lemon", price: String, quantity: Int = 1, imageUrl: String? = null, onQuantityChange: (Int) -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcApparelOrderTimeline.kt$@Composable fun WgcApparelOrderTimeline( modifier: Modifier = Modifier, steps: List&lt;WgcClotheeTimelineStep> )</ID>
+    <ID>LongMethod:WgcApparelProductCard.kt$@Composable fun WgcApparelProductCard( modifier: Modifier = Modifier, title: String, price: String, originalPrice: String? = null, imageUrl: String? = null, isFavorite: Boolean = false, onFavoriteClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcBoutiqueCartItemRow.kt$@Composable fun WgcBoutiqueCartItemRow( modifier: Modifier = Modifier, title: String, price: String, taxInfo: String? = null, quantity: Int = 1, imageUrl: String? = null, onIncreaseQuantity: () -> Unit = {}, onDecreaseQuantity: () -> Unit = {}, onDeleteClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcBoutiqueProductCard.kt$@Composable fun WgcBoutiqueProductCard( modifier: Modifier = Modifier, title: String, price: String, subtitle: String? = null, imageUrl: String? = null, isFavorite: Boolean = false, onFavoriteClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcButton.kt$@Composable fun WgcButton( modifier: Modifier = Modifier, text: String = "Continuar", onClick: () -> Unit = {}, variant: WgcButtonVariant = WgcButtonVariant.Primary, size: WgcButtonSize = WgcButtonSize.Medium, isEnabled: Boolean = true, isLoading: Boolean = false, leadingIcon: (@Composable () -> Unit)? = null, trailingIcon: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcCardFactory.kt$@Composable fun WgcCardFactory( modifier: Modifier = Modifier, type: WgcCardType = WgcCardType.ProductDetail, title: String = "Item em Destaque", subtitle: String = "Descrição do item selecionado", price: String = "R$ 29,90", imageUrl: String? = null, badgeText: String? = null, onClick: () -> Unit = {}, actionSlot: (@Composable () -> Unit)? = null, customCardSlot: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcCuratedOrderTrackerCard.kt$@Composable fun WgcCuratedOrderTrackerCard( modifier: Modifier = Modifier, statusText: String = "Your package is on it's way", arrivalEstimate: String = "Arrival estimate: April 15", currentStep: Int = 2, totalSteps: Int = 4, productTitle: String = "Bershka Mom Jeans", productDetails: String = "28 - S | Blue | ID:0706502", productImageUrl: String? = null, onMoreInfoClick: () -> Unit = {}, onCancelOrderClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcCuratedProductCard.kt$@Composable fun WgcCuratedProductCard( modifier: Modifier = Modifier, title: String, price: String, brand: String? = null, imageUrl: String? = null, isBookmarked: Boolean = false, onBookmarkClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcDealOfTheDayCard.kt$@Composable fun WgcDealOfTheDayCard( modifier: Modifier = Modifier, title: String = "Deal of the Day", remainingTime: String = "22h 55m 20s remaining", actionLabel: String = "View all", backgroundColor: Color = Color(WgcCoreDsColors.trendFashionBlue), onViewAllClick: () -> Unit )</ID>
+    <ID>LongMethod:WgcEcommerceProductCard.kt$@Composable fun WgcEcommerceProductCard( modifier: Modifier = Modifier, title: String, subtitle: String? = null, price: String, originalPrice: String? = null, discountPercent: Int? = null, imageUrl: String? = null, rating: Float? = 4.5f, reviewCount: Int? = 56890, isFavorite: Boolean = false, onFavoriteToggle: (() -> Unit)? = null, onClick: () -> Unit )</ID>
+    <ID>LongMethod:WgcExtraDiscountCouponCard.kt$@Composable fun WgcExtraDiscountCouponCard( title: String, category: String, discountBadge: String, limitCondition: String, validUntil: String, modifier: Modifier = Modifier, isActivated: Boolean = false, onActivateToggle: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcExtraProductCard.kt$@Composable fun WgcExtraProductCard( name: String, unitDescription: String, regularPrice: String, clubPrice: String, discountPercentage: String, modifier: Modifier = Modifier, isDiscountActivated: Boolean = true, quantityInCart: Int = 0, onActivateDiscountToggle: (() -> Unit)? = null, onAddToCart: () -> Unit = {}, onIncrementQuantity: () -> Unit = {}, onDecrementQuantity: () -> Unit = {}, onClick: () -> Unit = {}, slotImage: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcExtraStampsLoyaltyCard.kt$@Composable fun WgcExtraStampsLoyaltyCard( currentStamps: Int, targetStamps: Int, rewardName: String, amountToNextStamp: String, modifier: Modifier = Modifier, onClick: () -> Unit = {}, onSeeCatalogClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcFitnessProgramCard.kt$@Composable fun WgcFitnessProgramCard( title: String, goal: String, trainerName: String, totalWeeks: Int, currentWeek: Int, completedWorkouts: Int, totalWorkouts: Int, modifier: Modifier = Modifier, isEnrolled: Boolean = false, onClick: () -> Unit = {}, onActionClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcFitnessTimerDisplay.kt$@Composable fun WgcFitnessTimerDisplay( exerciseName: String, exerciseIndex: Int, totalExercises: Int, timeRemainingFormatted: String, progressFraction: Float, isPlaying: Boolean, nextExerciseName: String, modifier: Modifier = Modifier, onPlayPauseToggle: () -> Unit = {}, onSkip: () -> Unit = {}, onRewind: () -> Unit = {}, onAudioToggle: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcFitnessWorkoutCard.kt$@Composable fun WgcFitnessWorkoutCard( title: String, trainerName: String, category: WgcFitnessWorkoutCategory, durationMinutes: Int, intensity: WgcFitnessWorkoutIntensity, equipment: String, modifier: Modifier = Modifier, isSaved: Boolean = false, onClick: () -> Unit = {}, onSaveToggle: () -> Unit = {}, onStartWorkout: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcFreshGroceryProductCard.kt$@Composable fun WgcFreshGroceryProductCard( title: String, price: String, originalPrice: String? = null, rating: String = "4.8", discountBadge: String? = "-20%", isFavorite: Boolean = false, onFavoriteToggle: () -> Unit = {}, onClick: () -> Unit = {}, imageSlot: (@Composable () -> Unit)? = null, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcFreshGroceryPromoBanner.kt$@Composable fun WgcFreshGroceryPromoBanner( title: String = "Don't Miss Out!", subtitle: String = "Get discount up to 50%", buttonText: String = "Check Now", onButtonClick: () -> Unit = {}, illustrationSlot: (@Composable () -> Unit)? = null, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcGadgetShopBottomNav.kt$@Composable fun WgcGadgetShopBottomNav( modifier: Modifier = Modifier, selectedIndex: Int = 0, cartItemCount: Int = 3, onItemSelected: (Int) -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGadgetShopCartItemRow.kt$@Composable fun WgcGadgetShopCartItemRow( modifier: Modifier = Modifier, title: String, subtitle: String, price: String, quantity: Int = 1, imageUrl: String? = null, onQuantityChange: (Int) -> Unit = {}, onRemoveClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGadgetShopProductCard.kt$@Composable fun WgcGadgetShopProductCard( modifier: Modifier = Modifier, title: String, price: String, originalPrice: String? = null, rating: Double? = null, reviewCount: Int? = null, tag: String? = null, imageUrl: String? = null, isFavorite: Boolean = false, onFavoriteClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGadgetShopTopProductRow.kt$@Composable fun WgcGadgetShopTopProductRow( modifier: Modifier = Modifier, rank: Int, title: String, description: String, price: String, imageUrl: String? = null, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGameStoreCard.kt$@Composable fun WgcGameStoreCard( gameTitle: String, genre: String, price: Double, discountPercentage: Int = 0, modifier: Modifier = Modifier, onBuyClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGroceryLoyaltyCard.kt$@Composable fun WgcGroceryLoyaltyCard( holderName: String, cardLastDigits: String, availableLimit: Double, coinsBalance: Int, bestPurchaseDay: Int, modifier: Modifier = Modifier, onShowBarcodeClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGroceryNutriScoreCard.kt$@Composable fun WgcGroceryNutriScoreCard( currentScore: String, modifier: Modifier = Modifier, explanation: String = "Classificação nutricional simplificada aprovada por autoridades de saúde pública.", bonusCoins: Int = 50, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGroceryProductCard.kt$@Composable fun WgcGroceryProductCard( title: String, brandLine: String, unit: String, regularPrice: Double, cardSupermercadoPrice: Double, modifier: Modifier = Modifier, nutriScore: String? = "A", discountPercentage: String? = "-15%", installmentsText: String? = "em até 10x sem juros", quantity: Int = 0, isFavorite: Boolean = false, onQuantityChange: (Int) -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcGymCrowdCard.kt$@Composable fun WgcGymCrowdCard( unitName: String, address: String, operatingHours: String, crowdLevel: WgcGymFitnessCrowdLevel, modifier: Modifier = Modifier, crowdPercentage: Int = 35, // 0 a 100% hourlyDistribution: List&lt;Float> = listOf(0.3f, 0.6f, 0.4f, 0.5f, 0.9f, 0.7f), onClick: (() -> Unit)? = null, onNavigateClick: (() -> Unit)? = null, slotHeader: (@Composable () -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcGymQrPassCard.kt$@Composable fun WgcGymQrPassCard( studentName: String, planTitle: String, membershipId: String, modifier: Modifier = Modifier, unitName: String = "Gym &amp; Fitness - Paulista", isValid: Boolean = true, expiresInSeconds: Int = 45, onRefreshCode: (() -> Unit)? = null, onCheckInClick: (() -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcGymWorkoutCard.kt$@Composable fun WgcGymWorkoutCard( exerciseName: String, targetMuscle: String, setsAndReps: String, weightKg: String, modifier: Modifier = Modifier, restSeconds: Int = 60, isCompleted: Boolean = false, onToggleCompleted: ((Boolean) -> Unit)? = null, onEditWeight: (() -> Unit)? = null, onClick: (() -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcHealthInsuranceCard.kt$@Composable fun WgcHealthInsuranceCard( insuranceName: String, cardNumberMasked: String, discountPercentage: Int, modifier: Modifier = Modifier, isLinked: Boolean = true, onManageInsurance: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcHealthLoyaltyCard.kt$@Composable fun WgcHealthLoyaltyCard( userName: String, cpfMasked: String, pointsBalance: Int, modifier: Modifier = Modifier, onShowBarcodeClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcHealthVaccineCard.kt$@Composable fun WgcHealthVaccineCard( vaccineName: String, targetAudience: String, price: Double, modifier: Modifier = Modifier, nextAvailableSlot: String = "Hoje disponível", onScheduleClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMarketplaceSearchHeaderBar.kt$@Composable fun WgcMarketplaceSearchHeaderBar( modifier: Modifier = Modifier, address: String = "Enviar para Cliente - Av. Central, 1000", searchQuery: String = "", searchPlaceholder: String = "Buscar produtos, marcas e mais...", headerColor: Color = Color(WgcCoreDsColors.marketplaceYellow), onAddressClick: () -> Unit = {}, onSearchQueryChange: (String) -> Unit = {}, onCartClick: () -> Unit = {}, onNotificationClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMedicalClinicCard.kt$@Composable fun WgcMedicalClinicCard( serviceTitle: String, description: String, price: Double, estimatedDuration: String, modifier: Modifier = Modifier, onBookClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMegaStoreProductCard.kt$@Composable fun WgcMegaStoreProductCard( modifier: Modifier = Modifier, title: String = "Pastel Long Sleeve", category: String = "Clothing", price: String = "$34.00", originalPrice: String? = "$45.00", discountPercent: Int? = 25, rating: Float = 4.8f, imageUrl: String = "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600", isFavorite: Boolean = false, onFavoriteToggle: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMegaStoreStoryAvatar.kt$@Composable fun WgcMegaStoreStoryAvatar( modifier: Modifier = Modifier, imageUrl: String = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300", name: String = "Summer Sale", isLive: Boolean = false, hasUnseenStory: Boolean = true, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMegaStoreVoucherCard.kt$@Composable fun WgcMegaStoreVoucherCard( modifier: Modifier = Modifier, discountTitle: String = "$15 OFF", minSpend: String = "Min. Spend $80", expiryDate: String = "Valid till 30 Sep", isCollected: Boolean = false, onCollectClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMenuFactory.kt$@Composable fun WgcMenuFactory( modifier: Modifier = Modifier, type: WgcMenuType = WgcMenuType.ClassicBottomBar, items: List&lt;WgcMenuItem> = defaultWgcMenuItems(), selectedIndex: Int = 0, onItemSelected: (Int) -> Unit = {}, customMenuSlot: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcMerchantListingCard.kt$@Composable fun WgcMerchantListingCard( modifier: Modifier = Modifier, name: String, rating: String = "4.8", category: String = "Lanches", distance: String = "1.2 km", deliveryTime: String = "20-30 min", deliveryFee: String = "Grátis", isFeatured: Boolean = true, accentColor: Color = Color(WgcCoreDsColors.foodDeliveryRed), onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcMessagingConversationCard.kt$@Composable fun WgcMessagingConversationCard( contactName: String, lastMessage: String, timestamp: String, unreadCount: Int = 0, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPaymentMethodRadioCard.kt$@Composable fun WgcPaymentMethodRadioCard( modifier: Modifier = Modifier, title: String = "Visa", subtitle: String? = "********* 2109", icon: ImageVector = Icons.Outlined.CreditCard, isSelected: Boolean = false, onSelect: () -> Unit )</ID>
+    <ID>LongMethod:WgcPersonalFinanceBalanceCard.kt$@Composable fun WgcPersonalFinanceBalanceCard( modifier: Modifier = Modifier, monthLabel: String = "Maio 2026", balance: String = "R$ 14.850,00", isBalanceVisible: Boolean = true, income: String = "R$ 8.200,00", expense: String = "R$ 3.450,00", onPreviousMonthClick: () -> Unit = {}, onNextMonthClick: () -> Unit = {}, onToggleBalanceVisibility: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPersonalFinanceBottomNav.kt$@Composable fun WgcPersonalFinanceBottomNav( modifier: Modifier = Modifier, selectedItem: WgcOrganizzeNavItem = WgcOrganizzeNavItem.Dashboard, onItemSelected: (WgcOrganizzeNavItem) -> Unit = {}, onAddClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPersonalFinanceCreditCardRow.kt$@Composable fun WgcPersonalFinanceCreditCardRow( modifier: Modifier = Modifier, bankName: String = "Neobank Mastercard", lastDigits: String = "•••• 8421", currentInvoice: String = "R$ 1.840,50", availableLimit: String = "R$ 3.159,50", totalLimit: String = "R$ 5.000,00", closingDate: String = "Fecha em 24/05", accentColor: Color = Color(WgcCoreDsColors.personalFinanceCardPurple), usageProgress: Float = 0.368f, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPersonalFinanceTransactionItem.kt$@Composable fun WgcPersonalFinanceTransactionItem( modifier: Modifier = Modifier, title: String = "Supermercado Gourmet", category: String = "Alimentação", account: String = "Neobank Cartão", amount: String = "R$ 248,90", type: WgcOrganizzeTransactionType = WgcOrganizzeTransactionType.Expense, categoryIcon: ImageVector = Icons.Default.Restaurant, categoryColor: Color = Color(WgcCoreDsColors.quickShopPrimary), isPaid: Boolean = true, onTogglePaid: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPharmacyPrescriptionCard.kt$@Composable fun WgcPharmacyPrescriptionCard( modifier: Modifier = Modifier, onUploadPrescription: () -> Unit = {}, onTalkToPharmacist: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPharmacyProductCard.kt$@Composable fun WgcPharmacyProductCard( title: String, laboratory: String, presentation: String, price: Double, modifier: Modifier = Modifier, originalPrice: Double? = null, pharmacyClientPrice: Double? = null, stripe: PharmacyMedicineStripe = PharmacyMedicineStripe.NONE, requiresPrescription: Boolean = false, hasSubscription: Boolean = false, isFavorite: Boolean = false, quantityInCart: Int = 0, onCardClick: () -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onQuantityChange: (Int) -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPharmacySubscriptionCard.kt$@Composable fun WgcPharmacySubscriptionCard( medicineName: String, dosageFrequency: String, nextDeliveryDate: String, monthlyPrice: Double, modifier: Modifier = Modifier, isActive: Boolean = true, onManageClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPlasticCreditCard.kt$@Composable fun WgcPlasticCreditCard( holderName: String, cardLastDigits: String, rewardPoints: Int, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPractitionerProfileCard.kt$@Composable fun WgcPractitionerProfileCard( doctorName: String, crm: String, specialty: String, rating: Double, reviewsCount: Int, consultationFee: Double, nextSlot: String, modifier: Modifier = Modifier, onBookClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPromotionalProductCard.kt$@Composable fun WgcPromotionalProductCard( modifier: Modifier = Modifier, title: String, originalPrice: String = "R$ 1.999", currentPrice: String = "R$ 1.499", discountPercent: String = "25% OFF", installments: String = "em 10x R$ 149,90 sem juros", isFreeShipping: Boolean = true, accentColor: Color = Color(WgcCoreDsColors.marketplaceGreen), onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPropertyClassifiedsCard.kt$@Composable fun WgcPropertyClassifiedsCard( title: String, price: String, pricePerSquareMeter: String? = null, condoAndIptu: String? = null, neighborhood: String, address: String, areaM2: Int, bedrooms: Int, suites: Int = 0, bathrooms: Int, parkingSpaces: Int, fipeStatus: WgcZapFipeStatus? = WgcZapFipeStatus.ON_AVERAGE, badgeText: String? = "Super Destaque", advertiserName: String = "Zap Prime Imóveis", hasVirtualTour: Boolean = false, isFavorite: Boolean = false, onCardClick: () -> Unit = {}, onFavoriteClick: () -> Unit = {}, onContactClick: () -> Unit = {}, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPropertyClassifiedsIndexCard.kt$@Composable fun WgcPropertyClassifiedsIndexCard( neighborhood: String, propertyM2Price: String, neighborhoodAverageM2Price: String, status: WgcZapFipeStatus, historicalVariation12m: String = "+5,8%", insightText: String = "Este imóvel está com valor por m² atrativo em relação à média apurada pela Fipe.", modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPropertyClassifiedsSearchBar.kt$@Composable fun WgcPropertyClassifiedsSearchBar( query: String, onQueryChange: (String) -> Unit, selectedRadius: WgcZapSearchRadius = WgcZapSearchRadius.RADIUS_5KM, onRadiusSelect: (WgcZapSearchRadius) -> Unit = {}, placeholderText: String = "Bairro, cidade, rua ou condomínio...", activeFiltersCount: Int = 0, onFilterClick: () -> Unit = {}, onClearQuery: () -> Unit = {}, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPropertyListingCard.kt$@Composable fun WgcPropertyListingCard( title: String, neighborhood: String, address: String, price: String, condoAndIptu: String? = "Condomínio R$ 550 • IPTU R$ 130", areaM2: Int = 68, bedrooms: Int = 2, suites: Int = 1, bathrooms: Int = 2, parkingSpots: Int = 1, agencyName: String = "Lopes Imóveis", badgeText: String? = "Super Destaque", photoCountText: String = "1/18", isFavorite: Boolean = false, onFavoriteToggle: () -> Unit = {}, onWhatsAppClick: () -> Unit = {}, onClick: () -> Unit = {}, imageSlot: (@Composable () -> Unit)? = null, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPropertyListingFilterChip.kt$@Composable fun WgcPropertyListingFilterChip( label: String, isSelected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier, leadingIcon: ImageVector? = null, badgeValue: String? = null )</ID>
+    <ID>LongMethod:WgcPropertyListingSearchBar.kt$@Composable fun WgcPropertyListingSearchBar( modifier: Modifier = Modifier, purpose: WgcPropertyListingPurpose = WgcPropertyListingPurpose.Buy, onPurposeChange: (WgcPropertyListingPurpose) -> Unit = {}, query: String = "", onQueryChange: (String) -> Unit = {}, placeholderText: String = "Digite a cidade, bairro ou rua", activeFilterCount: Int = 0, onFilterClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcPropertyRentalCard.kt$@Composable fun WgcPropertyRentalCard( title: String, neighborhood: String, address: String, price: String, totalPrice: String? = null, areaM2: Int = 65, bedrooms: Int = 2, bathrooms: Int = 1, parkingSpots: Int = 1, badgeText: String? = "Sem Fiador", metroProximity: String? = "350m do Metrô", isFavorite: Boolean = false, onFavoriteToggle: () -> Unit = {}, onClick: () -> Unit = {}, imageSlot: (@Composable () -> Unit)? = null, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcPropertyRentalFilterChip.kt$@Composable fun WgcPropertyRentalFilterChip( label: String, isSelected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier, leadingIcon: ImageVector? = null, badgeValue: String? = null )</ID>
+    <ID>LongMethod:WgcPropertyRentalSearchBar.kt$@Composable fun WgcPropertyRentalSearchBar( modifier: Modifier = Modifier, contractType: WgcPropertyRentalContractType = WgcPropertyRentalContractType.Rent, onContractTypeChange: (WgcPropertyRentalContractType) -> Unit = {}, query: String = "", onQueryChange: (String) -> Unit = {}, placeholderText: String = "Onde você quer morar?", activeFilterCount: Int = 0, onFilterClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcQuickShopProductCard.kt$@Composable fun WgcQuickShopProductCard( title: String, price: String, originalPrice: String? = null, discountBadge: String? = "20% off", backgroundColor: Color = Color(WgcCoreDsColors.quickShopCardRed), isFavorite: Boolean = false, onFavoriteToggle: () -> Unit = {}, onClick: () -> Unit = {}, illustrationSlot: (@Composable () -> Unit)? = null, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:WgcRetailCartItemRow.kt$@Composable fun WgcRetailCartItemRow( modifier: Modifier = Modifier, title: String, colorVariant: String, price: String, quantity: Int, imageUrl: String? = null, isSelected: Boolean = true, onSelectionChange: (Boolean) -> Unit = {}, onQuantityChange: (Int) -> Unit = {} )</ID>
+    <ID>LongMethod:WgcRetailOrderTrackingStepper.kt$@Composable fun WgcRetailOrderTrackingStepper( modifier: Modifier = Modifier, steps: List&lt;WgcKutukuTrackingStepItem> )</ID>
+    <ID>LongMethod:WgcRetailProductCard.kt$@Composable fun WgcRetailProductCard( modifier: Modifier = Modifier, title: String, subtitle: String, price: String, imageUrl: String? = null, isFavorite: Boolean = false, onFavoriteClick: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcSnackbarHost.kt$@Composable fun WgcSnackbar( message: String, modifier: Modifier = Modifier, actionLabel: String? = null, onActionClick: (() -> Unit)? = null, withDismissAction: Boolean = false, onDismissClick: (() -> Unit)? = null, variant: WgcSnackbarVariant = WgcSnackbarVariant.Default )</ID>
+    <ID>LongMethod:WgcStoryAvatar.kt$@Composable fun WgcStoryAvatar( modifier: Modifier = Modifier, userName: String, imageUrl: String? = null, initials: String? = null, storyState: StoryState = StoryState.UNSEEN, isUserStory: Boolean = false, avatarSize: Dp = 64.dp, onClick: () -> Unit )</ID>
+    <ID>LongMethod:WgcSupermarketLoyaltyCard.kt$@Composable fun WgcSupermarketLoyaltyCard( clientName: String, cpfMasked: String, tier: String, coinsBalance: Int, monthlySavings: Double, modifier: Modifier = Modifier, progressToNextTier: Float = 0.85f, onShowQrCode: () -> Unit = {}, onClick: () -> Unit = {} )</ID>
+    <ID>LongMethod:WgcSupermarketProductCard.kt$@Composable fun WgcSupermarketProductCard( title: String, brandOrOrigin: String, unit: String, originalPrice: Double, clienteMaisPrice: Double, modifier: Modifier = Modifier, imageUrl: String? = null, discountBadge: String? = null, isOrganic: Boolean = false, sommelierRating: Double? = null, isFavorite: Boolean = false, quantityInCart: Int = 0, onCardClick: () -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onQuantityChange: (Int) -> Unit = {} )</ID>
+    <ID>LongMethod:WgcWellnessCheckInCard.kt$@Composable fun WgcWellnessCheckInCard( gymName: String, userName: String, planTitle: String, tokenCode: String, validUntil: String, modifier: Modifier = Modifier, isConfirmed: Boolean = true, onCopyToken: (() -> Unit)? = null, onShowQr: (() -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcWellnessGymCard.kt$@Composable fun WgcWellnessGymCard( name: String, category: String, address: String, distance: String, rating: Double, reviewsCount: String, requiredTier: WgcCorporateWellnessPlanTier, modifier: Modifier = Modifier, isIncludedInUserPlan: Boolean = true, onClick: (() -> Unit)? = null, onCheckInClick: (() -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcWellnessPlanCard.kt$@Composable fun WgcWellnessPlanCard( tier: WgcCorporateWellnessPlanTier, monthlyPrice: String, gymCountLabel: String, benefits: List&lt;String>, modifier: Modifier = Modifier, isCurrentPlan: Boolean = false, discountBadge: String? = "Economia corporativa", onSelectPlan: (() -> Unit)? = null, slotAction: (@Composable () -> Unit)? = null )</ID>
+    <ID>LongMethod:WgcWineStoreCard.kt$@Composable fun WgcWineStoreCard( wineName: String, winery: String, countryAndRegion: String, year: Int, rating: Double, originalPrice: Double, clienteMaisPrice: Double, modifier: Modifier = Modifier, grape: String = "Cabernet Sauvignon", sommelierNote: String = "Notas de frutas vermelhas maduras com taninos macios.", isFavorite: Boolean = false, quantityInCart: Int = 0, onCardClick: () -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onQuantityChange: (Int) -> Unit = {} )</ID>
+    <ID>MagicNumber:ItemSectionCard.kt$100</ID>
+    <ID>MagicNumber:ItemSectionCard.kt$149.99</ID>
+    <ID>MagicNumber:ItemSectionCard.kt$400</ID>
+    <ID>MagicNumber:ItemSectionCard.kt$5</ID>
+    <ID>MagicNumber:ItemSectionCard.kt$700</ID>
+    <ID>MagicNumber:ItemSectionCardModel.kt$ItemSectionCardModel$30</ID>
+    <ID>MagicNumber:ItemSectionCategory.kt$100</ID>
+    <ID>MagicNumber:ItemSectionHorizontalCard.kt$149.99</ID>
+    <ID>MagicNumber:ItemSectionHorizontalCard.kt$5</ID>
+    <ID>MagicNumber:ProductDetailCard.kt$149.99</ID>
+    <ID>MagicNumber:SearchTextField.kt$100</ID>
+    <ID>MagicNumber:SectionCards.kt$100</ID>
+    <ID>MagicNumber:SectionCards.kt$400</ID>
+    <ID>MagicNumber:SectionCategories.kt$400</ID>
+    <ID>MagicNumber:SimpleTextField.kt$15</ID>
+    <ID>MagicNumber:WgcDepartmentCategoryGrid.kt$4</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.3f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.4f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.5f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.6f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.7f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$0.9f</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$36</ID>
+    <ID>MagicNumber:WgcGymCrowdCard.kt$4</ID>
+    <ID>MagicNumber:WgcMegaStoreProductCard.kt$0.85f</ID>
+    <ID>MagicNumber:WgcPullToRefreshBox.kt$5</ID>
+    <ID>MatchingDeclarationName:WgcAlert.kt$AlertType</ID>
+    <ID>MatchingDeclarationName:WgcBadge.kt$WgcBadgeVariant</ID>
+    <ID>MatchingDeclarationName:WgcBiometricButton.kt$WgcBiometricStyle</ID>
+    <ID>MatchingDeclarationName:WgcBottomNavBar.kt$NavItem</ID>
+    <ID>MatchingDeclarationName:WgcCardFactory.kt$WgcCardType</ID>
+    <ID>MatchingDeclarationName:WgcCircularCategoryRow.kt$WgcCircularCategoryItem</ID>
+    <ID>MatchingDeclarationName:WgcDepartmentCategoryGrid.kt$WgcSquareCategoryItem</ID>
+    <ID>MatchingDeclarationName:WgcExtraBottomNav.kt$WgcExtraNavItem</ID>
+    <ID>MatchingDeclarationName:WgcFieldFactory.kt$WgcFieldType</ID>
+    <ID>MatchingDeclarationName:WgcFitnessBottomNav.kt$WgcFitnessNavItem</ID>
+    <ID>MatchingDeclarationName:WgcFreshGroceryBottomNav.kt$WgcFreshGroceryNavItem</ID>
+    <ID>MatchingDeclarationName:WgcGymBottomNav.kt$WgcGymFitnessNavItem</ID>
+    <ID>MatchingDeclarationName:WgcGymCrowdCard.kt$WgcGymFitnessCrowdLevel</ID>
+    <ID>MatchingDeclarationName:WgcMegaStoreOrderStatusRow.kt$ShoppeOrderStatusItem</ID>
+    <ID>MatchingDeclarationName:WgcNavigationDrawer.kt$WgcDrawerItem</ID>
+    <ID>MatchingDeclarationName:WgcPersonalFinanceBottomNav.kt$WgcOrganizzeNavItem</ID>
+    <ID>MatchingDeclarationName:WgcPersonalFinanceTransactionItem.kt$WgcOrganizzeTransactionType</ID>
+    <ID>MatchingDeclarationName:WgcPharmacyBottomNav.kt$PharmacyNavTab</ID>
+    <ID>MatchingDeclarationName:WgcPharmacyProductCard.kt$PharmacyMedicineStripe</ID>
+    <ID>MatchingDeclarationName:WgcPropertyClassifiedsBottomNav.kt$WgcZapNavDestination</ID>
+    <ID>MatchingDeclarationName:WgcPropertyClassifiedsCard.kt$WgcZapFipeStatus</ID>
+    <ID>MatchingDeclarationName:WgcPropertyClassifiedsSearchBar.kt$WgcZapSearchRadius</ID>
+    <ID>MatchingDeclarationName:WgcPropertyListingBottomNav.kt$WgcPropertyListingNavItem</ID>
+    <ID>MatchingDeclarationName:WgcPropertyListingSearchBar.kt$WgcPropertyListingPurpose</ID>
+    <ID>MatchingDeclarationName:WgcPropertyRentalBottomNav.kt$WgcPropertyRentalNavItem</ID>
+    <ID>MatchingDeclarationName:WgcPropertyRentalSearchBar.kt$WgcPropertyRentalContractType</ID>
+    <ID>MatchingDeclarationName:WgcQuickShopBottomNav.kt$WgcShopEaseNavItem</ID>
+    <ID>MatchingDeclarationName:WgcSnackbarHost.kt$WgcSnackbarVariant</ID>
+    <ID>MatchingDeclarationName:WgcSocialLoginPillButton.kt$WgcSocialPillProvider</ID>
+    <ID>MatchingDeclarationName:WgcSupermarketBottomNav.kt$WgcSupermarketNavItem</ID>
+    <ID>MatchingDeclarationName:WgcTabs.kt$WgcTabItem</ID>
+    <ID>MatchingDeclarationName:WgcWellnessBottomNav.kt$WgcCorporateWellnessNavItem</ID>
+    <ID>MatchingDeclarationName:WgcWellnessGymCard.kt$WgcCorporateWellnessPlanTier</ID>
+    <ID>MaxLineLength:WgcMerchantListingCard.kt$color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.marketplaceGreen) else MaterialTheme.colorScheme.onSurfaceVariant</ID>
+    <ID>MaxLineLength:WgcRideShareCard.kt$Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.urbanMobilityYellow), modifier = Modifier.size(WgcCoreDsSize.s32.dp))</ID>
+    <ID>MaxLineLength:WgcRideShareCard.kt$border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.urbanMobilityYellow)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gray200))</ID>
+    <ID>UnusedParameter:WgcBrandAuthHeader.kt$brandName: String</ID>
+    <ID>UnusedParameter:WgcGovDigitalDocumentCard.kt$documentNumberMasked: String</ID>
+    <ID>UnusedParameter:WgcGroceryBottomNav.kt$cartBadgeCount: Int = 0</ID>
+    <ID>UnusedParameter:WgcGroceryLoyaltyCard.kt$holderName: String</ID>
+    <ID>UnusedParameter:WgcGymQrPassCard.kt$isValid: Boolean = true</ID>
+    <ID>UnusedParameter:WgcPersonalFinanceCreditCardRow.kt$totalLimit: String = "R$ 5.000,00"</ID>
+    <ID>UnusedParameter:WgcPetCareCard.kt$regularPrice: Double</ID>
+    <ID>UnusedParameter:WgcPharmacySubscriptionCard.kt$isActive: Boolean = true</ID>
+    <ID>UnusedParameter:WgcPropertyListingCard.kt$suites: Int = 1</ID>
+    <ID>UnusedParameter:WgcPullToRefreshBox.kt$enabled: Boolean = true</ID>
+    <ID>UnusedParameter:WgcSupermarketLoyaltyCard.kt$cpfMasked: String</ID>
+    <ID>UnusedParameter:WgcSupermarketProductCard.kt$imageUrl: String? = null</ID>
+    <ID>UnusedPrivateMember:CheckBoxDefault.kt$@Preview(showBackground = true, name = "Checkbox Default") @Composable private fun CheckBoxDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:CheckBoxDefault.kt$@Preview(showBackground = true, name = "Checkbox Disabled") @Composable private fun CheckBoxDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:DesignSystemGallery.kt$@WgcComponentPreviews @Composable private fun DesignSystemGalleryPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Description") @Composable private fun FAButtonDescriptionPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Large") @Composable private fun FAButtonLargePreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Medium") @Composable private fun FAButtonMediumPreview()</ID>
+    <ID>UnusedPrivateMember:FAButton.kt$@Preview(name = "FAB Small") @Composable private fun FAButtonSmallPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAddressCard.kt$@Preview(name = "Address Card Preview", showBackground = true) @Composable private fun WgcAddressCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAddressHeaderBar.kt$@WgcComponentPreviews @Composable private fun WgcAddressHeaderBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAlert.kt$@WgcComponentPreviews @Composable private fun WgcAlertPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelCartItemCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCartItemCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelCategoryAvatar.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCategoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelOrderTimeline.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeOrderTimelinePreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcApparelQuantityStepper.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcAutomotiveVehicleCard.kt$@Preview(showBackground = true) @Composable private fun WgcAutomotiveVehicleCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBadge.kt$@WgcComponentPreviews @Composable private fun WgcBadgePreview()</ID>
+    <ID>UnusedPrivateMember:WgcBiometricButton.kt$@Preview(name = "WgcBiometricButton - All Styles", showBackground = true) @Composable private fun WgcBiometricButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueBottomNavButton.kt$@Preview(showBackground = true) @Composable private fun WgcBoutiqueBottomNavButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcLazaCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcLazaProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcBoutiqueProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcLazaProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBrandAuthHeader.kt$@WgcComponentPreviews @Composable private fun WgcBrandAuthHeaderPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBrandPill.kt$@Preview(showBackground = true) @Composable private fun WgcLazaBrandPillPreview()</ID>
+    <ID>UnusedPrivateMember:WgcBrandPill.kt$@Preview(showBackground = true) @Composable private fun WgcLazaBrandPillUnselectedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcButton.kt$@Preview(name = "WgcButton - Variants", showBackground = true) @Composable private fun WgcButtonVariantsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCardFactory.kt$@Preview(name = "WgcCardFactory - All Variants", showBackground = true) @Composable private fun WgcCardFactoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcChilledBeverageCard.kt$@Preview(showBackground = true) @Composable private fun WgcChilledBeverageCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcChip.kt$@WgcComponentPreviews @Composable private fun WgcChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCircularCategoryRow.kt$@WgcComponentPreviews @Composable private fun WgcCircularCategoryRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Default - Enabled") @Composable private fun ButtonClassicDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Disabled State") @Composable private fun ButtonClassicDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:WgcClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Loading State") @Composable private fun ButtonClassicLoadingPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcTasselBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardCategoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardNewInPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedCollectionCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCollectionCardSalePreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedOrderTrackerCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselOrderTrackerCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcTasselProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcCuratedSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcTasselSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDatePicker.kt$@OptIn(ExperimentalMaterial3Api::class) @WgcComponentPreviews @Composable private fun WgcDatePickerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDealOfTheDayCard.kt$@Preview(name = "Deal of the Day Card Preview", showBackground = true) @Composable private fun WgcDealOfTheDayCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDentalProcedureCard.kt$@Preview(showBackground = true) @Composable private fun WgcDentalProcedureCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcDepartmentCategoryGrid.kt$@WgcComponentPreviews @Composable private fun WgcDepartmentCategoryGridPreview()</ID>
+    <ID>UnusedPrivateMember:WgcEcommerceProductCard.kt$@Preview(name = "Product Card Preview", showBackground = true) @Composable private fun WgcEcommerceProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFieldFactory.kt$@Preview(name = "WgcFieldFactory - All Types", showBackground = true) @Composable private fun WgcFieldFactoryPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFinancialBalanceCard.kt$@Preview(showBackground = true) @Composable private fun WgcFinancialBalanceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFintechSuperAppCard.kt$@Preview(showBackground = true) @Composable private fun WgcInterSuperAppCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessBottomNav.kt$@Preview(name = "Fitness Bottom Nav - Preview", showBackground = true) @Composable private fun WgcFitnessBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessProgramCard.kt$@Preview(name = "Fitness Program Card - Enrolled", showBackground = true) @Composable private fun WgcFitnessProgramCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessTimerDisplay.kt$@Preview(name = "Fitness Timer Display - Preview", showBackground = true) @Composable private fun WgcFitnessTimerDisplayPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFitnessWorkoutCard.kt$@Preview(name = "Fitness Workout Card - Default", showBackground = true) @Composable private fun WgcFitnessWorkoutCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFloatingCartSummaryBar.kt$@WgcComponentPreviews @Composable private fun WgcFloatingCartSummaryBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryBottomNav.kt$@Preview(name = "Fresh Grocery Bottom Nav", showBackground = true) @Composable private fun WgcFreshGroceryBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryCategoryItem.kt$@Preview(showBackground = true) @Composable private fun WgcShopperCategoryItemHighlightedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryCategoryItem.kt$@Preview(showBackground = true) @Composable private fun WgcShopperCategoryItemPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcShopperProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcFreshGroceryPromoBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShopperPromoBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopCategoryPill.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCategoryPillPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductCardSalePreview()</ID>
+    <ID>UnusedPrivateMember:WgcGadgetShopTopProductRow.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartTopProductRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryBottomNav.kt$@Preview(name = "Supermercado Bottom Nav - Selected Coupons", showBackground = true) @Composable private fun WgcSupermercadoBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryLoyaltyCard.kt$@Preview(name = "Supermercado Card Preview", showBackground = true) @Composable private fun WgcSupermercadoMeuCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryNutriScoreCard.kt$@Preview(name = "Nutri-Score Card - Grade A", showBackground = true) @Composable private fun WgcSupermercadoNutriScoreCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcGroceryProductCard.kt$@Preview(name = "Supermercado Product Card - Default", showBackground = true) @Composable private fun WgcSupermercadoProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthInsuranceCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthInsuranceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthLoyaltyCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthLoyaltyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcHealthVaccineCard.kt$@Preview(showBackground = true) @Composable private fun WgcHealthVaccineCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMarketplaceSearchHeaderBar.kt$@WgcComponentPreviews @Composable private fun WgcMarketplaceSearchHeaderBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMedicalClinicCard.kt$@Preview(showBackground = true) @Composable private fun WgcMedicalClinicCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreFlashSaleBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeFlashSaleBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreOrderStatusRow.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeOrderStatusRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreProductCard.kt$@Preview(showBackground = true, widthDp = 200) @Composable private fun WgcShoppeProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreStoryAvatar.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeStoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMegaStoreVoucherCard.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeVoucherCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - ClassicBottomBar", showBackground = true) @Composable private fun WgcMenuClassicPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - CollapsibleHeader", showBackground = true) @Composable private fun WgcMenuHeaderPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMenuFactory.kt$@Preview(name = "WgcMenuFactory - FloatingPill", showBackground = true) @Composable private fun WgcMenuFloatingPillPreview()</ID>
+    <ID>UnusedPrivateMember:WgcMerchantListingCard.kt$@WgcComponentPreviews @Composable private fun WgcMerchantListingCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcNavigationDrawer.kt$@WgcComponentPreviews @Composable private fun WgcModalNavigationDrawerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcOtpCodeInput.kt$@WgcComponentPreviews @Composable private fun WgcOtpCodeInputPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPaymentMethodRadioCard.kt$@Preview(name = "Payment Method Radio Preview", showBackground = true) @Composable private fun WgcPaymentMethodRadioCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceBalanceCard.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeBalanceCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceCreditCardRow.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeCreditCardRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceSpeedDialSheet.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeSpeedDialSheetPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPersonalFinanceTransactionItem.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeTransactionItemPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyPrescriptionCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyPrescriptionCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacyProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacyProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPharmacySubscriptionCard.kt$@Preview(showBackground = true) @Composable private fun WgcPharmacySubscriptionCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPillTabSwitch.kt$@Preview(name = "WgcPillTabSwitch", showBackground = true) @Composable private fun WgcPillTabSwitchPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPlasticCreditCard.kt$@Preview(showBackground = true) @Composable private fun WgcPlasticCreditCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPractitionerProfileCard.kt$@Preview(showBackground = true) @Composable private fun WgcPractitionerProfileCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcProgressIndicators.kt$@WgcComponentPreviews @Composable private fun WgcProgressIndicatorsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPromotionalProductCard.kt$@WgcComponentPreviews @Composable private fun WgcPromotionalProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsBottomNav.kt$@Preview(name = "WgcPropertyClassifiedsBottomNav - Search Selected", showBackground = true) @Composable private fun WgcZapBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsCard.kt$@Preview(name = "WgcPropertyClassifiedsCard - Default", showBackground = true) @Composable private fun WgcZapPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsIndexCard.kt$@Preview(name = "WgcPropertyClassifiedsIndexCard - Below Average", showBackground = true) @Composable private fun WgcZapFipeMeterCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyClassifiedsSearchBar.kt$@Preview(name = "WgcPropertyClassifiedsSearchBar - Default", showBackground = true) @Composable private fun WgcZapSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingFilterChip.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingFilterChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyListingSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalPropertyCardFavoritedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalCard.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalPropertyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalFilterChip.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalFilterChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPropertyRentalSearchBar.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalSearchBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcPullToRefreshBox.kt$@WgcComponentPreviews @Composable private fun WgcPullToRefreshBoxPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuantityStepper.kt$@Preview(name = "Quantity Stepper Preview", showBackground = true) @Composable private fun WgcQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopBottomNav.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopOfferBanner.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseOfferBannerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcQuickShopProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRadioButton.kt$@WgcComponentPreviews @Composable private fun WgcRadioButtonAllStatesPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRatingBar.kt$@Preview(name = "Rating Bar Preview", showBackground = true) @Composable private fun WgcRatingBarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCartItemRow.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCartItemRowPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCategoryCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCategoryCardInvertedPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailCategoryCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCategoryCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailOrderTrackingStepper.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuOrderTrackingStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuProductCardFavoritePreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailProductCard.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcRetailQuantityStepper.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuQuantityStepperPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Default - Enabled") @Composable private fun SecondaryClassicButtonDefaultPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Disabled State") @Composable private fun SecondaryClassicButtonDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSecondaryClassicButton.kt$@WgcDevicePreviews @Preview(showBackground = true, name = "Loading State") @Composable private fun SecondaryClassicButtonLoadingPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSegmentedButton.kt$@WgcComponentPreviews @Composable private fun WgcSegmentedButtonPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSizeSelectorChip.kt$@Preview(name = "Size Selector States", showBackground = true) @Composable private fun WgcSizeSelectorChipPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSnackbarHost.kt$@WgcComponentPreviews @Composable private fun WgcSnackbarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSocialLoginButtons.kt$@WgcComponentPreviews @Composable private fun WgcSocialLoginButtonsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSocialLoginPillButton.kt$@Preview(name = "WgcSocialLoginPillGroup", showBackground = true) @Composable private fun WgcSocialLoginPillGroupPreview()</ID>
+    <ID>UnusedPrivateMember:WgcStoryAvatar.kt$@WgcComponentPreviews @Composable private fun WgcStoryAvatarPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketBottomNav.kt$@Preview(name = "Supermarket Bottom Nav - Selected Adega", showBackground = true) @Composable private fun WgcSupermarketBottomNavPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketLoyaltyCard.kt$@Preview(name = "Supermarket Loyalty Card - Preview", showBackground = true) @Composable private fun WgcSupermarketLoyaltyCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSupermarketProductCard.kt$@Preview(name = "Supermarket Product Card - Preview", showBackground = true) @Composable private fun WgcSupermarketProductCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcSwitch.kt$@WgcComponentPreviews @Composable private fun WgcSwitchAllStatesPreview()</ID>
+    <ID>UnusedPrivateMember:WgcTabs.kt$@WgcComponentPreviews @Composable private fun WgcTabsPreview()</ID>
+    <ID>UnusedPrivateMember:WgcTechnicalHardwareCard.kt$@Preview(showBackground = true) @Composable private fun WgcTechnicalHardwareCardPreview()</ID>
+    <ID>UnusedPrivateMember:WgcTimePicker.kt$@OptIn(ExperimentalMaterial3Api::class) @WgcComponentPreviews @Composable private fun WgcTimePickerPreview()</ID>
+    <ID>UnusedPrivateMember:WgcWineStoreCard.kt$@Preview(name = "Wine Store Card - Preview", showBackground = true) @Composable private fun WgcWineStoreCardPreview()</ID>
+    <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DesignSystemGallery.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DesignSystemGallery.kt$import br.com.wgc.design_system.components.story.*</ID>
+    <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:WgcAddressHeaderBar.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcAddressHeaderBar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcAlert.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcAlert.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcAlertDialog.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcAvatar.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcAvatar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcBottomNavBar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcBottomSheet.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcBrandAuthHeader.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcBrandAuthHeader.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcChip.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcChip.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcCircularCategoryRow.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcCircularCategoryRow.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcConfirmationDialog.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcConfirmationDialog.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcConfirmationDialog.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:WgcDepartmentCategoryGrid.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcDepartmentCategoryGrid.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcFintechComponents.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcFintechComponents.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:WgcFintechComponents.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcFintechSuperAppComponents.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcFintechSuperAppComponents.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:WgcFintechSuperAppComponents.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcFloatingCartSummaryBar.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcFloatingCartSummaryBar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcIconButton.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcListItem.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcMarketplaceSearchHeaderBar.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcMarketplaceSearchHeaderBar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcMerchantListingCard.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcMerchantListingCard.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcOtpCodeInput.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcOtpCodeInput.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcPromotionalProductCard.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcPromotionalProductCard.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcRadioButton.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcRadioButton.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcRideShareCard.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcRideShareCard.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSegmentedButton.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSimpleDialog.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcSimpleDialog.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSlider.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSnackbar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSocialLoginButtons.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcSocialLoginButtons.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcStoryAvatar.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcStoryAvatar.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcSwitch.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:WgcSwitch.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcTooltip.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:WgcTopAppBar.kt$import androidx.compose.material3.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -7,13 +7,15 @@ plugins {
 }
 
 android {
-    namespace = "br.com.wgc.design_system"
+    namespace = "br.com.wgc.design_system.components"
 
     buildFeatures {
         compose = true
     }
     publishing {
-        singleVariant("release")
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
     experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
@@ -41,6 +43,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4-android:1.7.6")
+    androidTestImplementation("androidx.compose.ui:ui-test-manifest:1.7.6")
+    androidTestImplementation("androidx.test.espresso:espresso-accessibility:3.6.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 
     screenshotTestImplementation(libs.screenshot.validation.api)
     screenshotTestImplementation(libs.androidx.ui.tooling)
@@ -61,6 +67,30 @@ publishing {
             afterEvaluate {
                 from(components["release"])
             }
+
+            pom {
+                name.set("WGC Design System Components")
+                description.set("Core UI components, atoms and molecules for WGC Design System")
+                url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                licenses {
+                    license {
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("wgc")
+                        name.set("WGC Android Team")
+                        email.set("dev@wgc.com.br")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    developerConnection.set("scm:git:ssh://github.com:Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                }
+            }
         }
     }
 
@@ -75,10 +105,3 @@ publishing {
         }
     }
 }
-
-tasks.register<Jar>("sourcesJar") {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-}
-
-// Trigger components module deployment

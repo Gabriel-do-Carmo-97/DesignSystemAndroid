@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>LongMethod:WgcAuthNavGraph.kt$@Composable private fun WgcLoginNavScreen( onNavigateToRegister: () -> Unit, onNavigateToForgotPassword: () -> Unit, onLoginSuccess: () -> Unit )</ID>
+    <ID>LongMethod:WgcAuthNavGraph.kt$@Composable private fun WgcRegisterNavScreen( onNavigateToLogin: () -> Unit, onRegisterSuccess: (email: String) -> Unit )</ID>
+    <ID>LongMethod:WgcCheckoutNavGraph.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun WgcCheckoutAddressNavScreen( onNavigateBack: () -> Unit, onConfirmAddress: () -> Unit )</ID>
+    <ID>LongMethod:WgcCheckoutNavGraph.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun WgcCheckoutPaymentNavScreen( onNavigateBack: () -> Unit, onConfirmPayment: () -> Unit )</ID>
+    <ID>LongMethod:WgcOnboardingNavGraph.kt$@Composable private fun WgcOnboardingPermissionsNavScreen( onNext: () -> Unit, onBack: () -> Unit )</ID>
+    <ID>LongMethod:WgcOnboardingNavGraph.kt$@Composable private fun WgcOnboardingProfileSetupNavScreen( onComplete: () -> Unit, onBack: () -> Unit )</ID>
+    <ID>LongMethod:WgcOnboardingNavGraph.kt$@Composable private fun WgcOnboardingWelcomeNavScreen( onNext: () -> Unit, onSkip: () -> Unit )</ID>
+    <ID>MagicNumber:WgcOnboardingNavGraph.kt$3</ID>
+    <ID>MaxLineLength:WgcCheckoutNavGraph.kt$containerColor = if (selectedMethod == "credit_card") MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant</ID>
+    <ID>UnusedParameter:WgcCheckoutNavGraph.kt$onCloseCheckout: () -> Unit</ID>
+  </CurrentIssues>
+</SmellBaseline>

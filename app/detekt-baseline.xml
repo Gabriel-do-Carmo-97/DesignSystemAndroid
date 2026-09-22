@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$@Composable fun MultiBrandAuthCatalogSection()</ID>
+    <ID>LongMethod:MainActivity.kt$@Composable fun MultiBrandAuthCatalogSection()</ID>
+    <ID>LongMethod:MainActivity.kt$@Composable fun WgcFactoriesAndSlotsCatalogSection(selectedSubTab: Int)</ID>
+    <ID>MagicNumber:MainActivity.kt$0xFFFFA000</ID>
+    <ID>MagicNumber:MainActivity.kt$10</ID>
+    <ID>MagicNumber:MainActivity.kt$100</ID>
+    <ID>MagicNumber:MainActivity.kt$11</ID>
+    <ID>MagicNumber:MainActivity.kt$12</ID>
+    <ID>MagicNumber:MainActivity.kt$13</ID>
+    <ID>MagicNumber:MainActivity.kt$14</ID>
+    <ID>MagicNumber:MainActivity.kt$15</ID>
+    <ID>MagicNumber:MainActivity.kt$16</ID>
+    <ID>MagicNumber:MainActivity.kt$17</ID>
+    <ID>MagicNumber:MainActivity.kt$18</ID>
+    <ID>MagicNumber:MainActivity.kt$19</ID>
+    <ID>MagicNumber:MainActivity.kt$20</ID>
+    <ID>MagicNumber:MainActivity.kt$21</ID>
+    <ID>MagicNumber:MainActivity.kt$22</ID>
+    <ID>MagicNumber:MainActivity.kt$23</ID>
+    <ID>MagicNumber:MainActivity.kt$24</ID>
+    <ID>MagicNumber:MainActivity.kt$25</ID>
+    <ID>MagicNumber:MainActivity.kt$26</ID>
+    <ID>MagicNumber:MainActivity.kt$27</ID>
+    <ID>MagicNumber:MainActivity.kt$28</ID>
+    <ID>MagicNumber:MainActivity.kt$29</ID>
+    <ID>MagicNumber:MainActivity.kt$3</ID>
+    <ID>MagicNumber:MainActivity.kt$30</ID>
+    <ID>MagicNumber:MainActivity.kt$31</ID>
+    <ID>MagicNumber:MainActivity.kt$32</ID>
+    <ID>MagicNumber:MainActivity.kt$33</ID>
+    <ID>MagicNumber:MainActivity.kt$34</ID>
+    <ID>MagicNumber:MainActivity.kt$35</ID>
+    <ID>MagicNumber:MainActivity.kt$36</ID>
+    <ID>MagicNumber:MainActivity.kt$37</ID>
+    <ID>MagicNumber:MainActivity.kt$38</ID>
+    <ID>MagicNumber:MainActivity.kt$39</ID>
+    <ID>MagicNumber:MainActivity.kt$4</ID>
+    <ID>MagicNumber:MainActivity.kt$40</ID>
+    <ID>MagicNumber:MainActivity.kt$41</ID>
+    <ID>MagicNumber:MainActivity.kt$42</ID>
+    <ID>MagicNumber:MainActivity.kt$43</ID>
+    <ID>MagicNumber:MainActivity.kt$44</ID>
+    <ID>MagicNumber:MainActivity.kt$45</ID>
+    <ID>MagicNumber:MainActivity.kt$46</ID>
+    <ID>MagicNumber:MainActivity.kt$47</ID>
+    <ID>MagicNumber:MainActivity.kt$48</ID>
+    <ID>MagicNumber:MainActivity.kt$49</ID>
+    <ID>MagicNumber:MainActivity.kt$5</ID>
+    <ID>MagicNumber:MainActivity.kt$50</ID>
+    <ID>MagicNumber:MainActivity.kt$51</ID>
+    <ID>MagicNumber:MainActivity.kt$52</ID>
+    <ID>MagicNumber:MainActivity.kt$53</ID>
+    <ID>MagicNumber:MainActivity.kt$54</ID>
+    <ID>MagicNumber:MainActivity.kt$55</ID>
+    <ID>MagicNumber:MainActivity.kt$56</ID>
+    <ID>MagicNumber:MainActivity.kt$57</ID>
+    <ID>MagicNumber:MainActivity.kt$58</ID>
+    <ID>MagicNumber:MainActivity.kt$59</ID>
+    <ID>MagicNumber:MainActivity.kt$6</ID>
+    <ID>MagicNumber:MainActivity.kt$60</ID>
+    <ID>MagicNumber:MainActivity.kt$61</ID>
+    <ID>MagicNumber:MainActivity.kt$62</ID>
+    <ID>MagicNumber:MainActivity.kt$63</ID>
+    <ID>MagicNumber:MainActivity.kt$64</ID>
+    <ID>MagicNumber:MainActivity.kt$65</ID>
+    <ID>MagicNumber:MainActivity.kt$66</ID>
+    <ID>MagicNumber:MainActivity.kt$67</ID>
+    <ID>MagicNumber:MainActivity.kt$68</ID>
+    <ID>MagicNumber:MainActivity.kt$69</ID>
+    <ID>MagicNumber:MainActivity.kt$7</ID>
+    <ID>MagicNumber:MainActivity.kt$70</ID>
+    <ID>MagicNumber:MainActivity.kt$71</ID>
+    <ID>MagicNumber:MainActivity.kt$72</ID>
+    <ID>MagicNumber:MainActivity.kt$73</ID>
+    <ID>MagicNumber:MainActivity.kt$74</ID>
+    <ID>MagicNumber:MainActivity.kt$75</ID>
+    <ID>MagicNumber:MainActivity.kt$76</ID>
+    <ID>MagicNumber:MainActivity.kt$77</ID>
+    <ID>MagicNumber:MainActivity.kt$78</ID>
+    <ID>MagicNumber:MainActivity.kt$8</ID>
+    <ID>MagicNumber:MainActivity.kt$9</ID>
+    <ID>MaxLineLength:MainActivity.kt$Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Ativado &amp; Desabilitado"); WgcSwitch(checked = true, onCheckedChange = {}, isEnabled = false) }</ID>
+    <ID>MaxLineLength:MainActivity.kt$Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Ativado &amp; Habilitado"); WgcSwitch(checked = true, onCheckedChange = {}) }</ID>
+    <ID>MaxLineLength:MainActivity.kt$Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Desativado &amp; Desabilitado"); WgcSwitch(checked = false, onCheckedChange = {}, isEnabled = false) }</ID>
+    <ID>MaxLineLength:MainActivity.kt$Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Desativado &amp; Habilitado"); WgcSwitch(checked = false, onCheckedChange = {}) }</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Deal Marketplace", brandLogoText = "DM", brandColor = brandColors[2])</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Food Delivery", brandLogoText = "iF", brandColor = brandColors[0])</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Global Marketplace", brandLogoText = "GM", brandColor = brandColors[5])</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Marketplace", brandLogoText = "MP", brandColor = brandColors[3])</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Quick Food Delivery", brandLogoText = "QD", brandColor = brandColors[4])</ID>
+    <ID>MaxLineLength:MainActivity.kt$else -> WgcBrandAddressRegistrationScreenTemplate(viewModel = FakeBrandAddressAuthViewModel(), brandName = "Ride Hailing", brandLogoText = "Ride Hailing", brandColor = brandColors[1])</ID>
+    <ID>UnusedParameter:Theme.kt$dynamicColor: Boolean = false</ID>
+    <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.fooddelivery.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import br.com.wgc.design_system.templates.screens.ridehailing.auth.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

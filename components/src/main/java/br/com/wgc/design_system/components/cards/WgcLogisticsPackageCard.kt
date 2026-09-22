@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,11 +21,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSize
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 @Composable
 fun WgcLogisticsPackageCard(
@@ -47,7 +47,7 @@ fun WgcLogisticsPackageCard(
             Icon(
                 imageVector = Icons.Default.LocalShipping,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.loggiBlue),
+                tint = Color(WgcCoreDsColors.expressLogisticsBlue),
                 modifier = Modifier.size(WgcCoreDsSize.s32.dp)
             )
 
@@ -62,7 +62,7 @@ fun WgcLogisticsPackageCard(
                 Text(
                     text = statusText,
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.loggiBlue),
+                    color = Color(WgcCoreDsColors.expressLogisticsBlue),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(

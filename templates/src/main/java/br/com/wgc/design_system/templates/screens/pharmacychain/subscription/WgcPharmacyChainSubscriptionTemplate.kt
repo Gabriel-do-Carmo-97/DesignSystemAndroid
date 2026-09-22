@@ -1,0 +1,148 @@
+﻿package br.com.wgc.design_system.templates.screens.pharmacychain.subscription
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Percent
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.components.cards.WgcPharmacySubscriptionCard
+import br.com.wgc.design_system.components.navigation.PharmacyNavTab
+import br.com.wgc.design_system.components.navigation.WgcPharmacyBottomNav
+import br.com.wgc.design_system.templates.screens.pharmacychain.model.PharmacyMockData
+import br.com.wgc.design_system.templates.screens.pharmacychain.model.PharmacySubscriptionItem
+
+@Composable
+fun WgcDrogaRaiaSubscriptionTemplate(
+    modifier: Modifier = Modifier,
+    subscriptions: List<PharmacySubscriptionItem> = PharmacyMockData.sampleSubscriptions,
+    activeTab: PharmacyNavTab = PharmacyNavTab.SUBSCRIPTION,
+    onTabSelected: (PharmacyNavTab) -> Unit = {},
+    onAddNewSubscription: () -> Unit = {}
+) {
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        bottomBar = {
+            WgcPharmacyBottomNav(
+                selectedTab = activeTab,
+                onTabSelected = onTabSelected,
+                cartBadgeCount = 2
+            )
+        }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues),
+            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        ) {
+            item {
+                Text(
+                    text = "Sua Assinatura & Tratamento Contínuo",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                )
+                Text(
+                    text = "Receba seus medicamentos na data certa com 10% de desconto e frete grátis",
+                    fontSize = 10.sp,
+                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                )
+            }
+
+            item {
+                SubscriptionBenefitBanner()
+            }
+
+            items(subscriptions) { sub ->
+                WgcPharmacySubscriptionCard(
+                    medicineName = sub.medicineName,
+                    dosageFrequency = sub.frequency,
+                    nextDeliveryDate = sub.nextDeliveryDate,
+                    monthlyPrice = sub.price
+                )
+            }
+
+            item {
+                WgcClassicButton(
+                    textButton = "Adicionar Novo Medicamento à Assinatura",
+                    onClick = onAddNewSubscription,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SubscriptionBenefitBanner() {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainGreenLight)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(WgcCoreDsSpacing.md16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.Percent,
+                contentDescription = null,
+                tint = Color(WgcCoreDsColors.pharmacyChainGreen),
+                modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+            )
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Column {
+                Text(
+                    text = "Vantagens da Assinatura",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(WgcCoreDsColors.pharmacyChainGreen)
+                )
+                Text(
+                    text = "Cancele ou pause quando quiser sem nenhuma taxa adicional.",
+                    fontSize = 10.sp,
+                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                )
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WgcDrogaRaiaSubscriptionTemplatePreview() {
+    WgcDrogaRaiaSubscriptionTemplate()
+}

@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,10 +20,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 @Composable
 fun WgcAutomotiveVehicleCard(
@@ -62,7 +62,7 @@ fun WgcAutomotiveVehicleCard(
                 Text(
                     text = "FIPE: R$ " + String.format("%.2f", fipePrice),
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.cdtGreen),
+                    color = Color(WgcCoreDsColors.transitDigitalGreen),
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -70,7 +70,7 @@ fun WgcAutomotiveVehicleCard(
             Text(text = "$yearModel • $mileageKm km • $cityState", fontSize = 12.sp, color = Color.DarkGray)
             if (isReportApproved) {
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.cdtGreen), fontWeight = FontWeight.Bold)
+                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
             }
         }
     }

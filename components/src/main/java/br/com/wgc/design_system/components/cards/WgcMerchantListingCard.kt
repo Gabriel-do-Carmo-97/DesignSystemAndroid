@@ -12,12 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
 /**
- * Card Descritivo de Estabelecimento Comercial / Restaurante (WgcMerchantListingCard).
+ * Card de Restaurante/Loja no Padrão Food Delivery (WgcMerchantListingCard).
  */
 @Composable
 fun WgcMerchantListingCard(
@@ -29,7 +30,7 @@ fun WgcMerchantListingCard(
     deliveryTime: String = "20-30 min",
     deliveryFee: String = "Grátis",
     isFeatured: Boolean = true,
-    accentColor: Color = Color(0xFFEA1D2C),
+    accentColor: Color = Color(WgcCoreDsColors.foodDeliveryRed),
     onClick: () -> Unit = {}
 ) {
     Card(
@@ -85,14 +86,14 @@ fun WgcMerchantListingCard(
                     Icon(
                         imageVector = Icons.Default.Star,
                         contentDescription = null,
-                        tint = Color(0xFFFFC107),
+                        tint = Color(WgcCoreDsColors.warning),
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
                         text = rating,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFFFFC107)
+                        color = Color(WgcCoreDsColors.warning)
                     )
                     Text(text = "•", style = MaterialTheme.typography.bodySmall)
                     Text(text = category, style = MaterialTheme.typography.bodySmall)
@@ -109,7 +110,7 @@ fun WgcMerchantListingCard(
                     Text(
                         text = deliveryFee,
                         style = MaterialTheme.typography.bodySmall,
-                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(0xFF00A650) else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.marketplaceGreen) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }

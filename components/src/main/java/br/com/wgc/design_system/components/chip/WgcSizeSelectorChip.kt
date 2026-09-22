@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.chip
+﻿package br.com.wgc.design_system.components.chip
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -22,9 +22,9 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Chip para seleção de numeração e tamanhos de calçados e vestuário (WgcSizeSelectorChip).
@@ -41,9 +41,9 @@ fun WgcSizeSelectorChip(
     val stateDesc = if (isSelected) "Tamanho $size selecionado" else "Tamanho $size não selecionado"
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp)
 
-    val activeColor = Color(WgcCoreDsColors.stylishPink)
+    val activeColor = Color(WgcCoreDsColors.trendFashionPink)
     val inactiveBg = Color(WgcCoreDsColors.white)
-    val inactiveBorder = Color(WgcCoreDsColors.stylishBorderGray)
+    val inactiveBorder = Color(WgcCoreDsColors.trendFashionBorderGray)
 
     val backgroundColor = when {
         !isEnabled -> MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
@@ -54,7 +54,7 @@ fun WgcSizeSelectorChip(
     val textColor = when {
         !isEnabled -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
         isSelected -> Color.White
-        else -> Color(WgcCoreDsColors.stylishDark)
+        else -> Color(WgcCoreDsColors.trendFashionDark)
     }
 
     val border = if (isSelected || !isEnabled) null else BorderStroke(1.dp, inactiveBorder)

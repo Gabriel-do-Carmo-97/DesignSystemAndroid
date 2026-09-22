@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.alert
+﻿package br.com.wgc.design_system.components.alert
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,26 +16,92 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
+/**
+ * Tipos de alerta disponíveis no WgcAlert.
+ * 
+ * Cada tipo define uma paleta de cores e ícone específico seguindo o Material Design 3:
+ * - [SUCCESS]: Verde com ícone de check para confirmações positivas
+ * - [ERROR]: Vermelho com ícone de erro para falhas e problemas
+ * - [WARNING]: Amarelo/laranja com ícone de aviso para situações de atenção
+ * - [INFO]: Azul com ícone de informação para comunicados neutros
+ */
 enum class AlertType {
-    SUCCESS, ERROR, WARNING, INFO
+    /**
+     * Alerta de sucesso com fundo verde e ícone de check.
+     * Use para confirmar que uma ação foi concluída com sucesso.
+     */
+    SUCCESS,
+    
+    /**
+     * Alerta de erro com fundo vermelho e ícone de erro.
+     * Use para comunicar falhas, erros de validação ou problemas.
+     */
+    ERROR,
+    
+    /**
+     * Alerta de aviso com fundo amarelo/laranja e ícone de aviso.
+     * Use para situações que requerem atenção do usuário.
+     */
+    WARNING,
+    
+    /**
+     * Alerta informativo com fundo azul e ícone de informação.
+     * Use para comunicados, dicas ou informações adicionais.
+     */
+    INFO
 }
 
 /**
  * Componente de Alerta (WgcAlert) inspirado no Material UI / Material 3.
- *
- * Exemplo de uso:
+ * 
+ * Este componente exibe mensagens contextuais importantes que requerem atenção do usuário,
+ * seguindo os princípios de acessibilidade e design system corporativo.
+ * 
+ * ### Características:
+ * - **Type-Safe Styling**: Cores e ícones automáticos baseados no tipo de alerta
+ * - **Dismissable**: Botão de fechar opcional para dismiss do alerta
+ * - **Accessible**: Semântica apropriada para leitores de tela
+ * - **Responsive Layout**: Adapta-se automaticamente ao conteúdo
+ * - **Theme Integration**: Cores derivadas do MaterialTheme atual
+ * 
+ * ### Quando usar:
+ * - Após ações que resultaram em sucesso ou erro
+ * - Para avisos sobre mudanças de estado
+ * - Informações importantes sobre contexto atual
+ * 
+ * ### Quando não usar:
+ * - Para notificações temporárias (use Snackbar)
+ * - Para validação de campos (use TextField error)
+ * - Para diálogos complexos (use AlertDialog)
+ * 
+ * ### Uso Básico:
  * ```kotlin
  * WgcAlert(
  *     title = "Sucesso",
  *     message = "Operação realizada com sucesso.",
- *     type = AlertType.SUCCESS,
- *     onDismiss = { /* fechar */ }
+ *     type = AlertType.SUCCESS
  * )
  * ```
+ * 
+ * ### Uso com Dismiss:
+ * ```kotlin
+ * WgcAlert(
+ *     title = "Atenção",
+ *     message = "Seus dados serão perdidos.",
+ *     type = AlertType.WARNING,
+ *     onDismiss = { dismissAlert() }
+ * )
+ * ```
+ * 
+ * @param modifier Modificador para o componente
+ * @param title Título do alerta (obrigatório)
+ * @param message Mensagem descritiva do alerta (obrigatório)
+ * @param type Tipo do alerta que define cores e ícone (padrão: INFO)
+ * @param onDismiss Callback opcional para fechar o alerta
  */
 @Composable
 fun WgcAlert(

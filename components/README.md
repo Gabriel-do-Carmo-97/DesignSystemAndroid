@@ -17,16 +17,18 @@ O módulo é estruturado em 25 categorias modulares com suporte a acessibilidade
 | Categoria | Componentes Principais | Destaques & Capacidades |
 | :--- | :--- | :--- |
 | **Botões de Ação** | `WgcButton`, `WgcClassicButton`, `WgcSecondaryClassicButton`, `WgcFAButton`, `WgcIconButton`, `WgcSegmentedButton` | Estados Habilitado, Desabilitado e Loading (`CircularProgressIndicator`), alvo de toque mínimo de 48dp. |
-| **Autenticação & Social** | `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcSocialLoginPillGroup`, `WgcBrandAuthHeader`, `WgcOtpCodeInput` | Biometria (`Circular`, `RoundedSquare`, `OutlinedSquare`), botões sociais padrão (Google, Apple, Facebook) e código OTP. |
-| **Alternadores & Switches**| `WgcPillTabSwitch`, `WgcSwitch`, `WgcSlider` | Alternador deslizante tipo pílula para Login/Cadastro, switches táteis e sliders. |
-| **Campos de Texto (Inputs)**| `WgcFieldFactory`, `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField` | Leading/Trailing icons, estados de erro, máscara de senha, foco e **Máscaras/Transformações** (`CpfVisualTransformation`, `CepVisualTransformation`, `PhoneVisualTransformation`). |
-| **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButton`, `WgcChip` | Suporte a estados desabilitados, feedback háptico e `SemanticsProperties`. |
+| **Autenticação & Social** | `WgcBiometricButton`, `WgcSocialLoginPillButton`, `WgcSocialLoginPillGroup`, `WgcBrandAuthHeader` | Biometria (`Circular`, `RoundedSquare`, `OutlinedSquare`), botões sociais padrão (Google, Apple, Facebook). |
+| **Alternadores & Switches**| `WgcPillTabSwitch`, `WgcSegmentedControl`, `WgcSwitch`, `WgcSlider` | Alternador deslizante tipo pílula para Login/Cadastro, switches táteis e sliders. |
+| **Campos de Texto (Inputs)**| `WgcFieldFactory`, `WgcSimpleTextField`, `WgcSearchTextField`, `WgcPasswordTextField`, `WgcOtpInput` | Leading/Trailing icons, estados de erro, máscara de senha, foco, OTP e **Transformações Visuais** (`CpfVisualTransformation`, `CepVisualTransformation`, `PhoneVisualTransformation`). |
+| **Seleção & Seletores** | `WgcCheckBoxDefault`, `WgcRadioButtonDefault`, `WgcSwitchDefault`, `WgcFilterChip`, `WgcChip` | Suporte a estados desabilitados, feedback háptico e `SemanticsProperties`. |
 | **Cards de Domínio (90+)** | `WgcCardFactory`, `WgcAutomotiveVehicleCard`, `WgcChilledBeverageCard`, `WgcDentalProcedureCard`, `WgcFinancialBalanceCard`, `WgcTechnicalHardwareCard`, `WgcPlasticCreditCard`, `WgcPractitionerProfileCard`, `WgcMerchantListingCard`, `WgcPromotionalProductCard` | Mais de 90 cards funcionais neutralizados cobrindo fintech, delivery, automotivo, saúde, marketplace e varejo. |
-| **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge`, `WgcEmptyState`, `WgcErrorState` | Componentes de feedback com suporte a ilustrações/ícones, estados vazios e tratamento de erro de rede. |
-| **Diálogos & Sheets** | `WgcAlertDialog`, `WgcBottomSheet` | Modais acessíveis com suporte a gestos de arrasto e foco. |
+| **Feedback & Notificações** | `WgcAlert`, `WgcToast`, `WgcSnackbar`, `WgcBadge`, `WgcEmptyState`, `WgcErrorState` | Componentes de feedback com ilustrações/ícones semânticos, estados vazios e tratamento de erro de rede. |
+| **Diálogos & Sheets** | `WgcStandardBottomSheet`, `WgcBottomSheet`, `WgcAlertDialog` | Folha modal padronizada com cabeçalho corporativo, botão de fechar, elevação e modais acessíveis. |
+| **Linha do Tempo (Timeline)**| `WgcTimeline` | Status (Completed, Current, Pending), nós customizáveis, data e slots de ação. |
+| **Avaliação & Feedback** | `WgcRatingBar` | Classificação de 1 a 5 estrelas, modo leitura com notas fracionárias e interativo com acessibilidade. |
 | **Navegação & Barras** | `WgcMenuFactory`, `WgcAddressHeaderBar`, `WgcFloatingCartSummaryBar`, `WgcMarketplaceSearchHeaderBar` | Headers de pesquisa, endereço e barras flutuantes de carrinho. |
 | **Stories & Mídia** | `WgcStoryTray`, `WgcStoryAvatar`, `WgcAvatar` | Bandejas de stories interativas e avatares com estados lidos/não-lidos. |
-| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress` | Efeito shimmer personalizável para skeletons de carregamento. |
+| **Efeitos Visuais & Loaders**| `WgcShimmer`, `WgcCircularProgress`, `WgcLinearProgress`, `WgcSkeleton` | Skeletons modulares pré-moldados (Card, ListItem, Profile) com shimmer integrado. |
 
 ---
 

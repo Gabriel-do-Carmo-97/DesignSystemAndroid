@@ -10,7 +10,7 @@ Garante navegação type-safe com Compose Navigation 2.8+, desacoplamento absolu
 
 ## 2. Contexto do Projeto
 
-- **Módulo:** `navigation-flows/` (namespace: `br.com.wgc.ds_navigation_flows`)
+- **Módulo:** `:navigation-flows` (namespace: `br.com.wgc.design_system.navigation`)
 - **Dependências:**
   - `:templates` (templates de telas, UiStates e ViewModels abstratos)
   - `:components` (átomos e moléculas de UI)
@@ -100,7 +100,7 @@ Garante navegação type-safe com Compose Navigation 2.8+, desacoplamento absolu
 ### Exemplo 1: Rotas Type-Safe com Kotlinx Serialization
 
 ```kotlin
-package br.com.wgc.ds_navigation_flows.flows.auth.routes
+package br.com.wgc.design_system.navigation.flows.auth.routes
 
 import kotlinx.serialization.Serializable
 
@@ -119,16 +119,16 @@ sealed interface AuthRoute {
 ### Exemplo 2: Grafo Modular com Slots e Callbacks
 
 ```kotlin
-package br.com.wgc.ds_navigation_flows.flows.auth.graph
+package br.com.wgc.design_system.navigation.flows.auth.graph
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import br.com.wgc.ds_navigation_flows.flows.auth.routes.AuthRoute
-import br.com.wgc.ds_templates.screens.auth.login.screen.LoginScreenTemplate
-import br.com.wgc.ds_templates.screens.auth.register.screen.RegisterScreenTemplate
+import br.com.wgc.design_system.navigation.flows.auth.routes.AuthRoute
+import br.com.wgc.design_system.templates.screens.auth.login.screen.LoginScreenTemplate
+import br.com.wgc.design_system.templates.screens.auth.register.screen.RegisterScreenTemplate
 
 fun NavGraphBuilder.authNavGraph(
     navController: NavController,
@@ -164,15 +164,15 @@ fun NavGraphBuilder.authNavGraph(
 ### Exemplo 3: Flow Factory Unificada com Sensible Defaults e Slots
 
 ```kotlin
-package br.com.wgc.ds_navigation_flows.flows.auth.factory
+package br.com.wgc.design_system.navigation.flows.auth.factory
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import br.com.wgc.ds_navigation_flows.flows.auth.graph.authNavGraph
-import br.com.wgc.ds_navigation_flows.flows.auth.routes.AuthRoute
+import br.com.wgc.design_system.navigation.flows.auth.graph.authNavGraph
+import br.com.wgc.design_system.navigation.flows.auth.routes.AuthRoute
 
 /**
  * Factory unificada para o fluxo de Autenticação com Sensible Defaults e Slots.
@@ -213,13 +213,13 @@ fun WgcAuthFlow(
 ### Exemplo 4: Teste de Navegação com `TestNavHostController`
 
 ```kotlin
-package br.com.wgc.ds_navigation_flows.flows.auth
+package br.com.wgc.design_system.navigation.flows.auth
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.core.app.ApplicationProvider
-import br.com.wgc.ds_navigation_flows.flows.auth.factory.WgcAuthFlow
-import br.com.wgc.ds_navigation_flows.flows.auth.routes.AuthRoute
+import br.com.wgc.design_system.navigation.flows.auth.factory.WgcAuthFlow
+import br.com.wgc.design_system.navigation.flows.auth.routes.AuthRoute
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test

@@ -34,7 +34,7 @@ class ClassicButtonTest {
     @Test
     fun classicButton_whenRendered_isDisplayed() {
         createComposeRule.setContent {
-            ClassicButton(textButton = buttonText)
+            WgcClassicButton(textButton = buttonText)
         }
         createComposeRule.onNodeWithText(buttonText)
             .assertIsDisplayed()
@@ -52,7 +52,7 @@ class ClassicButtonTest {
             every { this@mockk.invoke() } just runs
         }
         createComposeRule.setContent {
-            ClassicButton(textButton = buttonText, onClick = isClicked)
+            WgcClassicButton(textButton = buttonText, onClick = isClicked)
         }
         createComposeRule.onNodeWithText(buttonText)
             .assertIsEnabled()
@@ -71,7 +71,7 @@ class ClassicButtonTest {
             every { this@mockk.invoke() } just runs
         }
         createComposeRule.setContent {
-            ClassicButton(
+            WgcClassicButton(
                 textButton = buttonText,
                 onClick = isClicked,
                 isEnabled = false

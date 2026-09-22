@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.auth
+﻿package br.com.wgc.design_system.components.auth
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -9,7 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 /**
@@ -65,9 +66,9 @@ fun WgcBrandAuthHeader(
 private fun WgcBrandAuthHeaderPreview() {
     MaterialTheme {
         WgcBrandAuthHeader(
-            brandName = "iFood",
-            brandLogoText = "iF",
-            brandColor = Color(0xFFEA1D2C),
+            brandName = "Food Delivery",
+            brandLogoText = "FD",
+            brandColor = Color(WgcCoreDsColors.foodDeliveryRed),
             title = "Falta pouco para matar sua fome!",
             subtitle = "Como deseja continuar?"
         )

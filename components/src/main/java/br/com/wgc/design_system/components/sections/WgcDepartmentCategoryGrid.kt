@@ -15,14 +15,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.WgcComponentPreviews
 
 data class WgcSquareCategoryItem(
     val id: String,
     val name: String,
     val emoji: String,
-    val backgroundColor: Color = Color(0xFFF5F5F5)
+    val backgroundColor: Color = Color(WgcCoreDsColors.grey100)
 )
 
 /**

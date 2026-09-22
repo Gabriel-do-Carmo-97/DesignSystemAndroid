@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.buttons
+﻿package br.com.wgc.design_system.components.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -24,7 +24,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Seletor de Abas em Formato Pill Unificado (WgcPillTabSwitch).

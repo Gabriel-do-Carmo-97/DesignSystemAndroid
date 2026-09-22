@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.navigation
+﻿package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.size
@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSize
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSize
 
 /**
  * Itens da barra de navegação inferior do Clube Extra.
@@ -51,7 +51,7 @@ fun WgcExtraBottomNav(
     NavigationBar(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.extraBorder)
+            color = Color(WgcCoreDsColors.hypermarketBorder)
         )) {
         WgcExtraNavItem.entries.forEach { item ->
             val isSelected = item == selectedItem
@@ -73,11 +73,11 @@ fun WgcExtraBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.extraRed),
-                    selectedTextColor = Color(WgcCoreDsColors.extraRed),
-                    indicatorColor = Color(WgcCoreDsColors.extraRedLight),
-                    unselectedIconColor = Color(WgcCoreDsColors.extraSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.extraSecondaryText)
+                    selectedIconColor = Color(WgcCoreDsColors.hypermarketRed),
+                    selectedTextColor = Color(WgcCoreDsColors.hypermarketRed),
+                    indicatorColor = Color(WgcCoreDsColors.hypermarketRedLight),
+                    unselectedIconColor = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    unselectedTextColor = Color(WgcCoreDsColors.hypermarketSecondaryText)
                 )
             )
         }

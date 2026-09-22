@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -26,9 +26,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Card de exibição e edição de endereço de entrega (WgcAddressCard).
@@ -42,7 +42,7 @@ fun WgcAddressCard(
     onChangeClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val borderColor = Color(WgcCoreDsColors.stylishBorderGray).copy(alpha = 0.3f)
+    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.3f)
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -61,7 +61,7 @@ fun WgcAddressCard(
                 Icon(
                     imageVector = Icons.Outlined.LocationOn,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.stylishPink),
+                    tint = Color(WgcCoreDsColors.trendFashionPink),
                     modifier = Modifier
                         .size(24.dp)
                         .padding(top = 2.dp)
@@ -71,7 +71,7 @@ fun WgcAddressCard(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.stylishDark)
+                        color = Color(WgcCoreDsColors.trendFashionDark)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
                     Text(
@@ -84,7 +84,7 @@ fun WgcAddressCard(
                         Text(
                             text = "Contact: $contactPhone",
                             style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Medium),
-                            color = Color(WgcCoreDsColors.stylishDark)
+                            color = Color(WgcCoreDsColors.trendFashionDark)
                         )
                     }
                 }
@@ -94,7 +94,7 @@ fun WgcAddressCard(
                 Icon(
                     imageVector = Icons.Outlined.Edit,
                     contentDescription = "Editar endereço",
-                    tint = Color(WgcCoreDsColors.stylishPink),
+                    tint = Color(WgcCoreDsColors.trendFashionPink),
                     modifier = Modifier.size(20.dp)
                 )
             }

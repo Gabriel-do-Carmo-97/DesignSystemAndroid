@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.cards
+﻿package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -35,9 +35,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
-import br.com.wgc.core_ds.WgcCoreDsColors
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.feedback.WgcRatingBar
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
@@ -62,7 +62,7 @@ fun WgcEcommerceProductCard(
     onClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val borderColor = Color(WgcCoreDsColors.stylishBorderGray).copy(alpha = 0.25f)
+    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.25f)
 
     Card(
         modifier = modifier
@@ -80,7 +80,7 @@ fun WgcEcommerceProductCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(160.dp)
-                    .background(Color(WgcCoreDsColors.stylishLightGray))
+                    .background(Color(WgcCoreDsColors.trendFashionLightGray))
             ) {
                 AsyncImageDefault(
                     image = imageUrl,
@@ -96,7 +96,7 @@ fun WgcEcommerceProductCard(
                             .align(Alignment.TopStart)
                             .padding(WgcCoreDsSpacing.xs.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.stylishPink))
+                            .background(Color(WgcCoreDsColors.trendFashionPink))
                             .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
                     ) {
                         Text(
@@ -120,7 +120,7 @@ fun WgcEcommerceProductCard(
                         Icon(
                             imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                             contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                            tint = if (isFavorite) Color(WgcCoreDsColors.stylishPink) else Color(WgcCoreDsColors.stylishDark),
+                            tint = if (isFavorite) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
                             modifier = Modifier.size(18.dp)
                         )
                     }
@@ -136,7 +136,7 @@ fun WgcEcommerceProductCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.stylishDark),
+                    color = Color(WgcCoreDsColors.trendFashionDark),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -161,7 +161,7 @@ fun WgcEcommerceProductCard(
                     Text(
                         text = price,
                         style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.stylishDark)
+                        color = Color(WgcCoreDsColors.trendFashionDark)
                     )
 
                     if (originalPrice != null) {

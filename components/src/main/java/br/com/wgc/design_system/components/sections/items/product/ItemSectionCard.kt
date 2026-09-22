@@ -15,6 +15,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,7 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.R
+import br.com.wgc.design_system.components.R
 import br.com.wgc.design_system.commons.toBrazilianCurrency
 import coil3.compose.AsyncImage
 import java.math.BigDecimal
@@ -58,8 +59,8 @@ fun ItemSectionCard(
                     .background(
                         brush = Brush.horizontalGradient(
                             colors = listOf(
-                                Color(0xFF6200EE),
-                                Color(0xFF03DAC5)
+                                MaterialTheme.colorScheme.primary,
+                                MaterialTheme.colorScheme.secondary
                             )
                         )
                     )
@@ -99,7 +100,7 @@ fun ItemSectionCard(
                 Text(
                     text = model.description,
                     Modifier
-                        .background(Color(0xFF6200EE))
+                        .background(MaterialTheme.colorScheme.primary)
                         .padding(
                             start = 16.dp,
                             end = 16.dp,

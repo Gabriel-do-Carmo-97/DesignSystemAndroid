@@ -1,10 +1,12 @@
-package br.com.wgc.design_system.components.buttons
+﻿package br.com.wgc.design_system.components.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -16,7 +18,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.core_ds.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.commons.WgcDevicePreviews
 
 /**
  * Botão Secundário do Design System (WgcSecondaryClassicButton).
@@ -26,6 +29,7 @@ fun WgcSecondaryClassicButton(
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
     isEnabled: Boolean = true,
+    isLoading: Boolean = false,
     textButton: String = "Button"
 ) {
     OutlinedButton(
@@ -33,30 +37,40 @@ fun WgcSecondaryClassicButton(
             .fillMaxWidth()
             .heightIn(56.dp)
             .semantics { role = Role.Button },
-        onClick = onClick,
+        onClick = { if (!isLoading) onClick() },
         colors = ButtonDefaults.outlinedButtonColors(
             contentColor = MaterialTheme.colorScheme.primary,
         ),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
-        enabled = isEnabled,
+        enabled = isEnabled && !isLoading,
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         content = {
-            Text(text = textButton, fontSize = 14.sp)
+            if (isLoading) {
+                CircularProgressIndicator(modifier = Modifier.size(20.dp), color = MaterialTheme.colorScheme.primary, strokeWidth = 2.dp)
+            } else {
+                Text(text = textButton, fontSize = 14.sp)
+            }
         },
     )
 }
 
-@Deprecated("Utilize WgcSecondaryClassicButton para manter a padronização", ReplaceWith("WgcSecondaryClassicButton(modifier, onClick, isEnabled, textButton)"))
+@WgcDevicePreviews
+@Preview(showBackground = true, name = "Default - Enabled")
 @Composable
-fun SecondaryClassicButton(
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
-    isEnabled: Boolean = true,
-    textButton: String = "Button"
-) {
-    WgcSecondaryClassicButton(modifier, onClick, isEnabled, textButton)
-}
+private fun SecondaryClassicButtonDefaultPreview() = WgcSecondaryClassicButton(
+    isEnabled = true
+)
 
-@Preview(showBackground = true)
+@WgcDevicePreviews
+@Preview(showBackground = true, name = "Disabled State")
 @Composable
-private fun SecondaryClassicButtonPreview() = WgcSecondaryClassicButton()
+private fun SecondaryClassicButtonDisabledPreview() = WgcSecondaryClassicButton(
+    isEnabled = false
+)
+
+@WgcDevicePreviews
+@Preview(showBackground = true, name = "Loading State")
+@Composable
+private fun SecondaryClassicButtonLoadingPreview() = WgcSecondaryClassicButton(
+    isLoading = true
+)

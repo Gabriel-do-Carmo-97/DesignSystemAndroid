@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.components.auth
+﻿package br.com.wgc.design_system.components.auth
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -31,8 +31,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.core_ds.WgcCoreDsElevation
-import br.com.wgc.core_ds.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.WgcCoreDsElevation
+import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
  * Provedores sociais suportados nos botões pill.
@@ -41,9 +42,9 @@ enum class WgcSocialPillProvider(
     val defaultLabel: String,
     val brandColor: Color
 ) {
-    Facebook("Login with Facebook", Color(0xFF1877F2)),
-    Instagram("Login with Instagram", Color(0xFFE4405F)),
-    LinkedIn("Login with LinkedIn", Color(0xFF0A66C2))
+    Facebook("Login with Facebook", Color(WgcCoreDsColors.socialFacebook)),
+    Instagram("Login with Instagram", Color(WgcCoreDsColors.socialInstagram)),
+    LinkedIn("Login with LinkedIn", Color(WgcCoreDsColors.socialLinkedIn))
 }
 
 /**

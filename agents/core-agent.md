@@ -9,7 +9,7 @@ Gere cores, espaçamentos, tamanhos, raios de borda, elevações e animações n
 
 ## 2. Contexto do Projeto
 
-- **Módulo:** `core/` (namespace: `br.com.wgc.core_ds`, artifactId: `core`)
+- **Módulo:** `:core` (namespace: `br.com.wgc.design_system.core`, artifactId: `core`)
 - **Estado:** Módulo alicerce fundamental do monorepo — `:components`, `:templates` e `:navigation-flows` dependem diretamente de `:core`.
 - **Publicação:** 100% operacional via plugin `wgc.android.library` e `maven-publish` (`./gradlew :core:publishToMavenLocal` ou `./gradlew :core:publish`).
 

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "br.com.wgc.ds_templates"
+    namespace = "br.com.wgc.design_system.templates"
 
     buildTypes {
         release {
@@ -22,7 +22,9 @@ android {
         compose = true
     }
     publishing {
-        singleVariant("release")
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
     experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
@@ -41,7 +43,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.core)
 
     testImplementation(libs.mockk)
-    androidTestImplementation( libs.mockk.android)
+    androidTestImplementation(libs.mockk.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,6 +68,30 @@ publishing {
             afterEvaluate {
                 from(components["release"])
             }
+
+            pom {
+                name.set("WGC Design System Templates")
+                description.set("Full screen templates, decoupled layouts and patterns for WGC Design System")
+                url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                licenses {
+                    license {
+                        name.set("Apache-2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("wgc")
+                        name.set("WGC Android Team")
+                        email.set("dev@wgc.com.br")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    developerConnection.set("scm:git:ssh://github.com:Gabriel-do-Carmo-97/DesignSystemAndroid.git")
+                    url.set("https://github.com/Gabriel-do-Carmo-97/DesignSystemAndroid")
+                }
+            }
         }
     }
 
@@ -80,9 +106,3 @@ publishing {
         }
     }
 }
-tasks.register<Jar>("sourcesJar") {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-}
-
-// Trigger templates module deployment
