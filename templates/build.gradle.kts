@@ -44,7 +44,6 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.coil.compose)
-    implementation(libs.core.ktx)
     implementation(libs.kotlinx.serialization.core)
 
     testImplementation(libs.mockk)

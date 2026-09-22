@@ -2,12 +2,52 @@ public final class br/com/wgc/design_system/commons/BigDecimalExtensionsKt {
 	public static final fun toBrazilianCurrency (Ljava/math/BigDecimal;)Ljava/lang/String;
 }
 
+public final class br/com/wgc/design_system/commons/DefaultImageCompressor : br/com/wgc/design_system/commons/ImageCompressor {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;)V
+	public synthetic fun <init> (Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun compressBitmap (Landroid/graphics/Bitmap;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun compressFile (Ljava/io/File;Ljava/io/File;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/DevicePreviews : java/lang/annotation/Annotation {
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/FontScalePreviews : java/lang/annotation/Annotation {
+}
+
+public abstract interface class br/com/wgc/design_system/commons/ImageCompressor {
+	public abstract fun compressBitmap (Landroid/graphics/Bitmap;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun compressBitmap$default (Lbr/com/wgc/design_system/commons/ImageCompressor;Landroid/graphics/Bitmap;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public abstract fun compressFile (Ljava/io/File;Ljava/io/File;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun compressFile$default (Lbr/com/wgc/design_system/commons/ImageCompressor;Ljava/io/File;Ljava/io/File;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class br/com/wgc/design_system/commons/ImageCompressor$DefaultImpls {
+	public static synthetic fun compressBitmap$default (Lbr/com/wgc/design_system/commons/ImageCompressor;Landroid/graphics/Bitmap;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun compressFile$default (Lbr/com/wgc/design_system/commons/ImageCompressor;Ljava/io/File;Ljava/io/File;IIILandroid/graphics/Bitmap$CompressFormat;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class br/com/wgc/design_system/commons/ModifierExtensionsKt {
+	public static final fun debouncedClick-O2vRcR0 (Landroidx/compose/ui/Modifier;JZZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Lkotlin/jvm/functions/Function0;)Landroidx/compose/ui/Modifier;
+	public static synthetic fun debouncedClick-O2vRcR0$default (Landroidx/compose/ui/Modifier;JZZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Landroidx/compose/ui/Modifier;
+	public static final fun debouncedClick-n0RszrM (Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/Indication;JZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Lkotlin/jvm/functions/Function0;)Landroidx/compose/ui/Modifier;
+	public static synthetic fun debouncedClick-n0RszrM$default (Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/Indication;JZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Landroidx/compose/ui/Modifier;
+}
+
 public final class br/com/wgc/design_system/commons/PermissionExtensionKt {
 	public static final fun RequestPermission (Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/commons/ShimmerEffectExtensionsKt {
 	public static final fun shimmerEffect (Landroidx/compose/ui/Modifier;Z)Landroidx/compose/ui/Modifier;
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/ThemePreviews : java/lang/annotation/Annotation {
+}
+
+public abstract interface annotation class br/com/wgc/design_system/commons/WgcCompletePreviews : java/lang/annotation/Annotation {
 }
 
 public abstract interface annotation class br/com/wgc/design_system/commons/WgcComponentPreviews : java/lang/annotation/Annotation {
@@ -1136,6 +1176,18 @@ public final class br/com/wgc/design_system/components/dialogs/WgcSimpleDialogKt
 	public static final fun WgcSimpleDialog (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/feedback/ComposableSingletons$WgcEmptyStateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/feedback/ComposableSingletons$WgcEmptyStateKt;
+	public fun <init> ()V
+	public final fun getLambda$-681989157$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/feedback/ComposableSingletons$WgcErrorStateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/feedback/ComposableSingletons$WgcErrorStateKt;
+	public fun <init> ()V
+	public final fun getLambda$1753764155$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/feedback/ComposableSingletons$WgcSnackbarKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/feedback/ComposableSingletons$WgcSnackbarKt;
 	public fun <init> ()V
@@ -1144,6 +1196,14 @@ public final class br/com/wgc/design_system/components/feedback/ComposableSingle
 	public final fun getLambda$-1560885317$components_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$-1741228958$components_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda$1419100071$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/feedback/WgcEmptyStateKt {
+	public static final fun WgcEmptyState (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/components/feedback/WgcErrorStateKt {
+	public static final fun WgcErrorState (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/graphics/vector/ImageVector;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/feedback/WgcRatingBarKt {
@@ -1209,7 +1269,7 @@ public final class br/com/wgc/design_system/components/fields/SearchTextFieldKt 
 }
 
 public final class br/com/wgc/design_system/components/fields/SimpleTextFieldKt {
-	public static final fun SimpleTextField-t-Rc4Gc (Landroidx/compose/ui/Modifier;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ZZLjava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/vector/ImageVector;Lkotlin/jvm/functions/Function0;ZLjava/lang/String;IZLandroidx/compose/runtime/Composer;III)V
+	public static final fun SimpleTextField-kp8Ccfo (Landroidx/compose/ui/Modifier;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ZZLjava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/vector/ImageVector;Lkotlin/jvm/functions/Function0;ZLjava/lang/String;IZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/runtime/Composer;III)V
 }
 
 public final class br/com/wgc/design_system/components/fields/WgcCuratedSearchBarKt {
@@ -1268,6 +1328,32 @@ public final class br/com/wgc/design_system/components/fields/WgcZapSearchRadius
 	public final fun getLabel ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/fields/WgcZapSearchRadius;
 	public static fun values ()[Lbr/com/wgc/design_system/components/fields/WgcZapSearchRadius;
+}
+
+public final class br/com/wgc/design_system/components/fields/transformations/CepVisualTransformation : androidx/compose/ui/text/input/VisualTransformation {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun filter (Landroidx/compose/ui/text/AnnotatedString;)Landroidx/compose/ui/text/input/TransformedText;
+}
+
+public final class br/com/wgc/design_system/components/fields/transformations/CpfVisualTransformation : androidx/compose/ui/text/input/VisualTransformation {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun filter (Landroidx/compose/ui/text/AnnotatedString;)Landroidx/compose/ui/text/input/TransformedText;
+}
+
+public final class br/com/wgc/design_system/components/fields/transformations/PhoneVisualTransformation : androidx/compose/ui/text/input/VisualTransformation {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun filter (Landroidx/compose/ui/text/AnnotatedString;)Landroidx/compose/ui/text/input/TransformedText;
+}
+
+public final class br/com/wgc/design_system/components/fields/transformations/WgcVisualTransformations {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/fields/transformations/WgcVisualTransformations;
+	public final fun cep ()Landroidx/compose/ui/text/input/VisualTransformation;
+	public final fun cpf ()Landroidx/compose/ui/text/input/VisualTransformation;
+	public final fun phone ()Landroidx/compose/ui/text/input/VisualTransformation;
 }
 
 public final class br/com/wgc/design_system/components/filter/SearchTextFieldKt {
@@ -2500,5 +2586,12 @@ public final class br/com/wgc/design_system/previews/ComposableSingletons$Design
 public final class br/com/wgc/design_system/previews/DesignSystemGalleryKt {
 	public static final fun DesignSystemGalleryScreen (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun GallerySection (Ljava/lang/String;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class br/com/wgc/design_system/theme/WgcThemeKt {
+	public static final fun WgcTheme (ZLkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun getWgcDarkColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getWgcLightColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getWgcTypography ()Landroidx/compose/material3/Typography;
 }
 

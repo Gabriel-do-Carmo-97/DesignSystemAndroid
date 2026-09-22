@@ -7,7 +7,8 @@ plugins {
     alias(libs.plugins.sonarqube) apply false
     alias(libs.plugins.dokka)
     alias(libs.plugins.binary.compatibility.validator)
-    alias(libs.plugins.dependency.check) apply false
+    alias(libs.plugins.dependency.check)
+    alias(libs.plugins.dependency.versions)
     alias(libs.plugins.license.report) apply false
 }
 
@@ -15,11 +16,6 @@ apiValidation {
     ignoredProjects.addAll(listOf("app"))
 }
 
-allprojects {
-    tasks.matching { it.name.contains("AarMetadata") }.configureEach {
-        enabled = false
-    }
-}
 
 subprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")

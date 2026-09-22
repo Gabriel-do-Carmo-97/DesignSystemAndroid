@@ -95,7 +95,7 @@ fun WgcErrorState(
 
 @ThemePreviews
 @Composable
-private fun WgcErrorStatePreview() {
+internal fun WgcErrorStatePreview() {
     MaterialTheme {
         WgcErrorState(
             onRetry = {}

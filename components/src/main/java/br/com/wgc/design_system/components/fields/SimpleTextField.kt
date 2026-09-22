@@ -1,3 +1,5 @@
+@file:Suppress("LongMethod")
+
 package br.com.wgc.design_system.components.fields
 
 import androidx.compose.foundation.clickable

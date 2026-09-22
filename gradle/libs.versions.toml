@@ -8,7 +8,7 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 lifecycle = "2.8.7"
 activityCompose = "1.11.0"
-composeBom = "2026.09.00"
+composeBom = "2025.09.01"
 appcompat = "1.8.0"
 material = "1.13.0"
 mockk = "1.14.11"
@@ -20,8 +20,7 @@ sonarqube = "7.4.0.8496"
 dokka = "1.9.20"
 bcv = "0.18.2"
 
-navigationCompose = "2.10.1"
-coreKtxVersion = "1.19.0"
+navigationCompose = "2.8.8"
 
 [libraries]
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
@@ -55,7 +54,6 @@ material = { group = "com.google.android.material", name = "material", version.r
 screenshot-validation-api = { group = "com.android.tools.screenshot", name = "screenshot-validation-api", version.ref = "screenshot"}
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling"}
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -70,3 +68,4 @@ dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 binary-compatibility-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "bcv" }
 dependency-check = { id = "org.owasp.dependencycheck", version = "10.0.4" }
 license-report = { id = "com.github.jk1.dependency-license-report", version = "2.5" }
+dependency-versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }

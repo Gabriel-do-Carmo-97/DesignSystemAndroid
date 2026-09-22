@@ -90,7 +90,7 @@ fun WgcEmptyState(
 
 @ThemePreviews
 @Composable
-private fun WgcEmptyStatePreview() {
+internal fun WgcEmptyStatePreview() {
     MaterialTheme {
         WgcEmptyState()
     }

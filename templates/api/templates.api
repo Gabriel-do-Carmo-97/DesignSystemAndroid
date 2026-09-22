@@ -1,3 +1,19 @@
+public final class br/com/wgc/design_system/templates/base/DefaultUiEffectChannel : br/com/wgc/design_system/templates/base/UiEffectChannel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (ILkotlinx/coroutines/channels/BufferOverflow;)V
+	public synthetic fun <init> (ILkotlinx/coroutines/channels/BufferOverflow;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getEffects ()Lkotlinx/coroutines/flow/Flow;
+	public fun sendEffect (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun trySendEffect (Ljava/lang/Object;)Z
+}
+
+public abstract interface class br/com/wgc/design_system/templates/base/UiEffectChannel {
+	public abstract fun getEffects ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun sendEffect (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun trySendEffect (Ljava/lang/Object;)Z
+}
+
 public final class br/com/wgc/design_system/templates/brand/WgcBrand : java/lang/Enum {
 	public static final field Apparel Lbr/com/wgc/design_system/templates/brand/WgcBrand;
 	public static final field AudioStream Lbr/com/wgc/design_system/templates/brand/WgcBrand;
