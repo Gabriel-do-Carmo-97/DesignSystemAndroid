@@ -572,6 +572,8 @@ public final class br/com/wgc/design_system/core/WgcCoreDsMotion {
 	public static final field INSTANCE Lbr/com/wgc/design_system/core/WgcCoreDsMotion;
 	public static final field durationFast100 I
 	public static final field durationNormal200 I
+	public static final field durationShort150 I
+	public static final field durationShort200 I
 	public static final field durationSlow500 I
 	public static final field durationStandard300 I
 	public final fun getEasingEmphasized ()Lbr/com/wgc/design_system/core/WgcCubicBezier;

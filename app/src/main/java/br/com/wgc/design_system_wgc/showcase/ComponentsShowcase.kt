@@ -47,6 +47,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.navigation.WgcMenuItem
@@ -175,6 +176,36 @@ fun ComponentsShowcase(
                 name = "WgcAccordion",
                 category = ComponentCategory.STRUCTURE,
                 description = "Card expansível com transição animada e chevron rotativo"
+            ),
+            ComponentShowcaseItem(
+                id = 34,
+                name = "WgcSignaturePad",
+                category = ComponentCategory.INPUTS,
+                description = "Captura de assinatura digital via canvas com Bézier curves, desfazer e limpar"
+            ),
+            ComponentShowcaseItem(
+                id = 35,
+                name = "WgcBarcodeScanner",
+                category = ComponentCategory.STRUCTURE,
+                description = "Overlay e mira de escaneamento de códigos de barra e QR codes com animação laser"
+            ),
+            ComponentShowcaseItem(
+                id = 36,
+                name = "WgcAudioWavePlayer",
+                category = ComponentCategory.FEEDBACK,
+                description = "Player de áudio com visualizador de ondas sonoras, play/pause e velocidade"
+            ),
+            ComponentShowcaseItem(
+                id = 37,
+                name = "WgcTimelineTracker",
+                category = ComponentCategory.STRUCTURE,
+                description = "Linha do tempo visual vertical e horizontal para esteiras e entregas"
+            ),
+            ComponentShowcaseItem(
+                id = 38,
+                name = "WgcGaugeScoreMeter",
+                category = ComponentCategory.FEEDBACK,
+                description = "Medidor semicircular de score com gradientes semânticos e arco dinâmico"
             )
         )
     }
@@ -331,6 +362,11 @@ fun ComponentsShowcase(
                         31 -> WgcDatePickerCatalogSection()
                         32 -> WgcFilterSheetCatalogSection()
                         33 -> WgcAccordionCatalogSection()
+                        34 -> WgcSignaturePadCatalogSection()
+                        35 -> WgcBarcodeScannerCatalogSection()
+                        36 -> WgcAudioWavePlayerCatalogSection()
+                        37 -> WgcTimelineTrackerCatalogSection()
+                        38 -> WgcGaugeScoreMeterCatalogSection()
                         else -> WgcClassicButtonCatalogSection()
                     }
                 }
@@ -885,5 +921,211 @@ fun WgcAccordionCatalogSection() {
     }
 }
 
+@Composable
+fun WgcSignaturePadCatalogSection() {
+    var strokes by remember { mutableStateOf(emptyList<List<Offset>>()) }
 
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcSignaturePad (Assinatura Digital)",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Desenhe sua assinatura na área abaixo utilizando o dedo ou caneta stylus.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
 
+        br.com.wgc.design_system.components.signature.WgcSignaturePad(
+            strokes = strokes,
+            onStrokesChange = { strokes = it },
+            onClear = { strokes = emptyList() },
+            onUndo = { if (strokes.isNotEmpty()) strokes = strokes.dropLast(1) },
+            onExport = {}
+        )
+    }
+}
+
+@Composable
+fun WgcBarcodeScannerCatalogSection() {
+    var isTorchOn by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcBarcodeScanner (Mira & Viewfinder)",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Simulação da mira de leitura para boletos bancários e QR Codes com animação contínua de laser.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(300.dp)
+        ) {
+            br.com.wgc.design_system.components.scanner.WgcBarcodeScanner(
+                isTorchOn = isTorchOn,
+                onToggleTorch = { isTorchOn = !isTorchOn }
+            )
+        }
+    }
+}
+
+@Composable
+fun WgcAudioWavePlayerCatalogSection() {
+    var isPlaying by remember { mutableStateOf(false) }
+    var progress by remember { mutableStateOf(0.35f) }
+    var speed by remember { mutableStateOf(1.0f) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcAudioWavePlayer (Player de Voz & Áudio)",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Componente para mensagens de voz, gravações e podcasts com visualizador de ondas e ajuste de velocidade.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        br.com.wgc.design_system.components.audio.WgcAudioWavePlayer(
+            isPlaying = isPlaying,
+            progress = progress,
+            currentTimeText = "00:45",
+            durationText = "02:10",
+            playbackSpeed = speed,
+            onPlayPauseClick = { isPlaying = !isPlaying },
+            onSeek = { progress = it },
+            onSpeedChange = { speed = it }
+        )
+    }
+}
+
+@Composable
+fun WgcTimelineTrackerCatalogSection() {
+    val items = remember {
+        listOf(
+            br.com.wgc.design_system.components.timeline.WgcTimelineStep(
+                id = "1",
+                title = "Proposta Enviada",
+                description = "Proposta de crédito submetida para avaliação",
+                timestamp = "09:00",
+                state = br.com.wgc.design_system.components.timeline.WgcTimelineState.Completed
+            ),
+            br.com.wgc.design_system.components.timeline.WgcTimelineStep(
+                id = "2",
+                title = "Análise Documental",
+                description = "Validação de comprovantes de renda e identidade",
+                timestamp = "10:30",
+                state = br.com.wgc.design_system.components.timeline.WgcTimelineState.Completed
+            ),
+            br.com.wgc.design_system.components.timeline.WgcTimelineStep(
+                id = "3",
+                title = "Assinatura de Contrato",
+                description = "Aguardando assinatura digital das partes",
+                timestamp = "Em andamento",
+                state = br.com.wgc.design_system.components.timeline.WgcTimelineState.InProgress
+            ),
+            br.com.wgc.design_system.components.timeline.WgcTimelineStep(
+                id = "4",
+                title = "Liberação do Valor",
+                description = "Crédito em conta corrente via Pix",
+                state = br.com.wgc.design_system.components.timeline.WgcTimelineState.Pending
+            )
+        )
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcTimelineTracker (Esteira de Etapas)",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Linha do tempo vertical com status de progresso, pendência e conclusão para esteiras financeiras.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        br.com.wgc.design_system.components.timeline.WgcTimelineTracker(items = items)
+    }
+}
+
+@Composable
+fun WgcGaugeScoreMeterCatalogSection() {
+    var score by remember { mutableIntStateOf(750) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        Text(
+            text = "WgcGaugeScoreMeter (Medidor de Score)",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Medidor semicircular com arco dinâmico e cores semânticas para pontuação de crédito.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        br.com.wgc.design_system.components.gauge.WgcGaugeScoreMeter(
+            score = score,
+            scoreLabel = when {
+                score < 350 -> "Baixo"
+                score < 700 -> "Regular"
+                else -> "Excelente"
+            }
+        )
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        ) {
+            FilterChip(
+                selected = score == 280,
+                onClick = { score = 280 },
+                label = { Text("Score Baixo (280)") }
+            )
+            FilterChip(
+                selected = score == 550,
+                onClick = { score = 550 },
+                label = { Text("Score Médio (550)") }
+            )
+            FilterChip(
+                selected = score == 850,
+                onClick = { score = 850 },
+                label = { Text("Score Alto (850)") }
+            )
+        }
+    }
+}

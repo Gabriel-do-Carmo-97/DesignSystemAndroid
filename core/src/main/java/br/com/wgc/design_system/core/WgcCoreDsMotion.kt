@@ -4,8 +4,14 @@ object WgcCoreDsMotion {
     /** 100ms - Duração muito rápida */
     const val durationFast100 = 100
 
+    /** 150ms - Duração rápida para microinterações e fade outs */
+    const val durationShort150 = 150
+
     /** 200ms - Duração rápida */
     const val durationNormal200 = 200
+
+    /** 200ms - Alias ergonômico para duração rápida */
+    const val durationShort200 = durationNormal200
 
     /** 300ms - Duração padrão */
     const val durationStandard300 = 300

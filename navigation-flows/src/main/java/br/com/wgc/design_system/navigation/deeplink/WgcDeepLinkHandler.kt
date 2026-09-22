@@ -3,10 +3,13 @@
 package br.com.wgc.design_system.navigation.deeplink
 
 import androidx.navigation.NavController
+import br.com.wgc.design_system.navigation.card.WgcCardHomeRoute
 import br.com.wgc.design_system.navigation.checkout.WgcCheckoutCartRoute
 import br.com.wgc.design_system.navigation.help.WgcHelpCenterFaqDetailRoute
 import br.com.wgc.design_system.navigation.help.WgcHelpCenterHomeRoute
 import br.com.wgc.design_system.navigation.help.WgcHelpCenterTicketDetailRoute
+import br.com.wgc.design_system.navigation.loan.WgcLoanHomeRoute
+import br.com.wgc.design_system.navigation.pix.WgcPixHomeRoute
 import br.com.wgc.design_system.navigation.review.WgcReviewFormRoute
 import br.com.wgc.design_system.navigation.search.WgcSearchMainRoute
 import br.com.wgc.design_system.navigation.statement.WgcStatementDetailRoute
@@ -38,6 +41,9 @@ object WgcDeepLinkHandler {
             }
             "checkout" -> WgcCheckoutCartRoute
             "search" -> WgcSearchMainRoute
+            "pix" -> WgcPixHomeRoute
+            "card" -> WgcCardHomeRoute
+            "loan" -> WgcLoanHomeRoute
             else -> null
         }
     }
@@ -55,6 +61,9 @@ object WgcDeepLinkHandler {
             is WgcReviewFormRoute -> "$SCHEME_CUSTOM://review/${route.orderId}"
             is WgcCheckoutCartRoute -> "$SCHEME_CUSTOM://checkout"
             is WgcSearchMainRoute -> "$SCHEME_CUSTOM://search"
+            is WgcPixHomeRoute -> "$SCHEME_CUSTOM://pix"
+            is WgcCardHomeRoute -> "$SCHEME_CUSTOM://card"
+            is WgcLoanHomeRoute -> "$SCHEME_CUSTOM://loan"
             else -> "$SCHEME_CUSTOM://home"
         }
     }

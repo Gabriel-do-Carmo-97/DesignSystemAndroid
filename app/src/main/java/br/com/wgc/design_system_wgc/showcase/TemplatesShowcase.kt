@@ -77,6 +77,16 @@ import br.com.wgc.design_system.templates.screens.statement.FakeFinancialStateme
 import br.com.wgc.design_system.templates.screens.statement.WgcFinancialStatementTemplate
 import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
 import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportTemplate
+import br.com.wgc.design_system.templates.screens.card.FakeCardManagementViewModel
+import br.com.wgc.design_system.templates.screens.card.WgcCardManagementTemplate
+import br.com.wgc.design_system.templates.screens.loan.FakeLoanSimulatorViewModel
+import br.com.wgc.design_system.templates.screens.loan.WgcLoanSimulatorTemplate
+import br.com.wgc.design_system.templates.screens.notification.FakeNotificationHubViewModel
+import br.com.wgc.design_system.templates.screens.notification.WgcNotificationHubTemplate
+import br.com.wgc.design_system.templates.screens.pix.FakePixTransferViewModel
+import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferTemplate
+import br.com.wgc.design_system.templates.screens.security.FakeSecuritySettingsViewModel
+import br.com.wgc.design_system.templates.screens.security.WgcSecuritySettingsTemplate
 import br.com.wgc.design_system_wgc.MultiBrandAuthCatalogSection
 import br.com.wgc.design_system_wgc.WgcFactoriesAndSlotsCatalogSection
 import br.com.wgc.design_system_wgc.WgcProfileFactoryShowcase
@@ -257,6 +267,36 @@ fun TemplatesShowcase(
                 name = "Avaliação da Compra",
                 category = TemplateCategory.SYSTEM,
                 description = "Avaliação de compra com estrelas, tags rápidas, comentário e upload de fotos"
+            ),
+            TemplateShowcaseItem(
+                id = 25,
+                name = "Área Pix & Transferência",
+                category = TemplateCategory.FINTECH,
+                description = "Fluxo completo de Pix com escolha de chave, valor e confirmação"
+            ),
+            TemplateShowcaseItem(
+                id = 26,
+                name = "Gestão de Cartões",
+                category = TemplateCategory.FINTECH,
+                description = "Gestão de cartões com efeito 3D flip, ajuste de limite e bloqueio temporário"
+            ),
+            TemplateShowcaseItem(
+                id = 27,
+                name = "Simulador de Empréstimo",
+                category = TemplateCategory.FINTECH,
+                description = "Simulação de crédito, parcelamento, taxa CET e contratação"
+            ),
+            TemplateShowcaseItem(
+                id = 28,
+                name = "Central de Notificações Unificada",
+                category = TemplateCategory.SYSTEM,
+                description = "Central com abas de categorias, contadores de não lidas e exclusão"
+            ),
+            TemplateShowcaseItem(
+                id = 29,
+                name = "Segurança & Acesso",
+                category = TemplateCategory.SYSTEM,
+                description = "Configurações de biometria, autenticação em duas etapas e dispositivos"
             )
         )
     }
@@ -434,6 +474,11 @@ fun TemplatesShowcase(
                     22 -> WgcProductDetailTemplate(viewModel = FakeProductDetailViewModel())
                     23 -> WgcHelpCenterSupportTemplate(viewModel = FakeHelpCenterViewModel())
                     24 -> WgcFeedbackReviewTemplate(viewModel = FakeFeedbackReviewViewModel())
+                    25 -> WgcPixTransferTemplate(viewModel = FakePixTransferViewModel())
+                    26 -> WgcCardManagementTemplate(viewModel = FakeCardManagementViewModel())
+                    27 -> WgcLoanSimulatorTemplate(viewModel = FakeLoanSimulatorViewModel())
+                    28 -> WgcNotificationHubTemplate(viewModel = FakeNotificationHubViewModel())
+                    29 -> WgcSecuritySettingsTemplate(viewModel = FakeSecuritySettingsViewModel())
                     else -> WgcNotificationCenterTemplate()
                 }
             }

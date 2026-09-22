@@ -462,6 +462,12 @@ public final class br/com/wgc/design_system/templates/factories/WgcBusinessNewsS
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcBusinessNewsScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcCardFactory {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/WgcCardFactory;
+	public final fun Create (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/card/BaseCardManagementViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcCarePharmacyFactoryKt {
 	public static final fun WgcCarePharmacyFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcCarePharmacyScreen;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
@@ -607,6 +613,12 @@ public final class br/com/wgc/design_system/templates/factories/WgcCourseMarketp
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcCourseMarketplaceScreen;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcCourseMarketplaceScreen;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcCreditFactory {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/WgcCreditFactory;
+	public final fun Create (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/loan/BaseLoanSimulatorViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcCuratedMarketFactoryKt {
@@ -1262,6 +1274,12 @@ public final class br/com/wgc/design_system/templates/factories/WgcNewsScreen : 
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcNewsScreen;
 }
 
+public final class br/com/wgc/design_system/templates/factories/WgcNotificationFactory {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/WgcNotificationFactory;
+	public final fun Create (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/notification/BaseNotificationHubViewModel;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/templates/factories/WgcOnboardingFactoryKt {
 	public static final fun WgcOnboardingFactory (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/factories/WgcOnboardingType;IILjava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
 }
@@ -1364,6 +1382,12 @@ public final class br/com/wgc/design_system/templates/factories/WgcPharmacyChain
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcPharmacyChainScreen;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcPharmacyChainScreen;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcPixFactory {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/WgcPixFactory;
+	public final fun Create (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/pix/BasePixTransferViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcPizzaFactoryKt {
@@ -1619,6 +1643,12 @@ public final class br/com/wgc/design_system/templates/factories/WgcSearchType : 
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/templates/factories/WgcSearchType;
 	public static fun values ()[Lbr/com/wgc/design_system/templates/factories/WgcSearchType;
+}
+
+public final class br/com/wgc/design_system/templates/factories/WgcSecurityFactory {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/factories/WgcSecurityFactory;
+	public final fun Create (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/security/BaseSecuritySettingsViewModel;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/templates/factories/WgcSettingsHubFactoryKt {
@@ -2695,6 +2725,72 @@ public final class br/com/wgc/design_system/templates/screens/bustravel/WgcBusTr
 	public static final fun WgcClickBusSearchTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcClickBusSeatsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 	public static final fun WgcClickBusTicketsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public abstract class br/com/wgc/design_system/templates/screens/card/BaseCardManagementViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onCreateVirtualCard ()V
+	public abstract fun onLimitChange (F)V
+	public abstract fun onToggleLock ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/card/ComposableSingletons$WgcCardManagementTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/card/ComposableSingletons$WgcCardManagementTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-884265696$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$196259926$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/card/FakeCardManagementViewModel : br/com/wgc/design_system/templates/screens/card/BaseCardManagementViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onCreateVirtualCard ()V
+	public fun onLimitChange (F)V
+	public fun onToggleLock ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/card/WgcCardManagementTemplateKt {
+	public static final fun WgcCardManagementContent (Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcCardManagementTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/card/BaseCardManagementViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FFFZZ)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FFFZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Z
+	public final fun component11 ()Z
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()F
+	public final fun component8 ()F
+	public final fun component9 ()F
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FFFZZ)Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FFFZZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/card/WgcCardManagementUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCardBrand ()Ljava/lang/String;
+	public final fun getCardNumberMasked ()Ljava/lang/String;
+	public final fun getCardholderName ()Ljava/lang/String;
+	public final fun getCurrentLimit ()F
+	public final fun getCvv ()Ljava/lang/String;
+	public final fun getExpirationDate ()Ljava/lang/String;
+	public final fun getMaxLimit ()F
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getUsedLimit ()F
+	public fun hashCode ()I
+	public final fun isLocked ()Z
+	public final fun isVirtual ()Z
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class br/com/wgc/design_system/templates/screens/carepharmacy/cart/ComposableSingletons$WgcCarePharmacyCartTemplateKt {
@@ -6577,6 +6673,80 @@ public final class br/com/wgc/design_system/templates/screens/livestreaming/WgcL
 	public static final fun WgcLiveStreamingSubsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/loan/BaseLoanSimulatorViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onAmountChange (F)V
+	public abstract fun onGracePeriodSelect (I)V
+	public abstract fun onHireLoan ()V
+	public abstract fun onInstallmentsSelect (I)V
+	public abstract fun onTermsToggle (Z)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/loan/ComposableSingletons$WgcLoanSimulatorTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/loan/ComposableSingletons$WgcLoanSimulatorTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-405652712$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1744098530$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/loan/FakeLoanSimulatorViewModel : br/com/wgc/design_system/templates/screens/loan/BaseLoanSimulatorViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onAmountChange (F)V
+	public fun onGracePeriodSelect (I)V
+	public fun onHireLoan ()V
+	public fun onInstallmentsSelect (I)V
+	public fun onTermsToggle (Z)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorTemplateKt {
+	public static final fun WgcLoanSimulatorContent (Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcLoanSimulatorTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/loan/BaseLoanSimulatorViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;FFFLjava/util/List;ILjava/util/List;ILjava/lang/String;Ljava/lang/String;ZZ)V
+	public synthetic fun <init> (Ljava/lang/String;FFFLjava/util/List;ILjava/util/List;ILjava/lang/String;Ljava/lang/String;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Z
+	public final fun component12 ()Z
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()I
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()I
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;FFFLjava/util/List;ILjava/util/List;ILjava/lang/String;Ljava/lang/String;ZZ)Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;Ljava/lang/String;FFFLjava/util/List;ILjava/util/List;ILjava/lang/String;Ljava/lang/String;ZZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/loan/WgcLoanSimulatorUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnnualCet ()Ljava/lang/String;
+	public final fun getAvailableGracePeriodsDays ()Ljava/util/List;
+	public final fun getAvailableInstallments ()Ljava/util/List;
+	public final fun getEstimatedMonthlyPayment ()F
+	public final fun getMaxAmount ()F
+	public final fun getMinAmount ()F
+	public final fun getMonthlyInterestRate ()Ljava/lang/String;
+	public final fun getRequestedAmount ()F
+	public final fun getSelectedGracePeriodDays ()I
+	public final fun getSelectedInstallments ()I
+	public final fun getTermsAccepted ()Z
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getTotalPayableAmount ()F
+	public fun hashCode ()I
+	public final fun isContractHired ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class br/com/wgc/design_system/templates/screens/login/screen/LoginScreenTemplateKt {
 	public static final fun LoginScreenTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/login/state/LoginScreenUiState;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 	public static final fun LoginScreenTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/login/viewmodel/BaseLoginScreenTemplateViewModel;Landroidx/compose/runtime/Composer;II)V
@@ -7142,6 +7312,94 @@ public final class br/com/wgc/design_system/templates/screens/naturalbeauty/WgcN
 	public static final fun WgcNaturaRefillsTemplate (Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
 
+public abstract class br/com/wgc/design_system/templates/screens/notification/BaseNotificationHubViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onCategorySelect (Ljava/lang/String;)V
+	public abstract fun onDeleteNotification (Ljava/lang/String;)V
+	public abstract fun onMarkAllAsRead ()V
+	public abstract fun onMarkAsRead (Ljava/lang/String;)V
+	public abstract fun onNotificationClick (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationItem;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notification/ComposableSingletons$WgcNotificationHubTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/notification/ComposableSingletons$WgcNotificationHubTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-2100609465$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-423081192$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-494729339$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1565975361$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1983945428$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notification/FakeNotificationHubViewModel : br/com/wgc/design_system/templates/screens/notification/BaseNotificationHubViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onCategorySelect (Ljava/lang/String;)V
+	public fun onDeleteNotification (Ljava/lang/String;)V
+	public fun onMarkAllAsRead ()V
+	public fun onMarkAsRead (Ljava/lang/String;)V
+	public fun onNotificationClick (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationItem;)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notification/WgcNotificationHubTemplateKt {
+	public static final fun WgcNotificationHubContent (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcNotificationHubTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/notification/BaseNotificationHubViewModel;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Z)Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationHubUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCategories ()Ljava/util/List;
+	public final fun getFilteredNotifications ()Ljava/util/List;
+	public final fun getNotifications ()Ljava/util/List;
+	public final fun getSelectedCategory ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getUnreadCount ()I
+	public fun hashCode ()I
+	public final fun isLoading ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/notification/WgcNotificationItem {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Z
+	public final fun component7 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationItem;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/notification/WgcNotificationItem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCategory ()Ljava/lang/String;
+	public final fun getDeepLink ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isRead ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
 public abstract class br/com/wgc/design_system/templates/screens/notifications/BaseNotificationCenterViewModel : androidx/lifecycle/ViewModel {
 	public static final field $stable I
 	public fun <init> ()V
@@ -7694,6 +7952,85 @@ public final class br/com/wgc/design_system/templates/screens/pharmacychain/subs
 
 public final class br/com/wgc/design_system/templates/screens/pharmacychain/subscription/WgcPharmacyChainSubscriptionTemplateKt {
 	public static final fun WgcDrogaRaiaSubscriptionTemplate (Landroidx/compose/ui/Modifier;Ljava/util/List;Lbr/com/wgc/design_system/components/navigation/PharmacyNavTab;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public abstract class br/com/wgc/design_system/templates/screens/pix/BasePixTransferViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onAmountChange (Ljava/lang/String;)V
+	public abstract fun onConfirmTransfer ()V
+	public abstract fun onDescriptionChange (Ljava/lang/String;)V
+	public abstract fun onKeyChange (Ljava/lang/String;)V
+	public abstract fun onKeyTypeSelect (Ljava/lang/String;)V
+	public abstract fun onReset ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/pix/ComposableSingletons$WgcPixTransferTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/pix/ComposableSingletons$WgcPixTransferTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1328516725$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1539401650$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-2064207761$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-830550601$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-927324793$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$165679472$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$690485583$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/pix/FakePixTransferViewModel : br/com/wgc/design_system/templates/screens/pix/BasePixTransferViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onAmountChange (Ljava/lang/String;)V
+	public fun onConfirmTransfer ()V
+	public fun onDescriptionChange (Ljava/lang/String;)V
+	public fun onKeyChange (Ljava/lang/String;)V
+	public fun onKeyTypeSelect (Ljava/lang/String;)V
+	public fun onReset ()V
+}
+
+public final class br/com/wgc/design_system/templates/screens/pix/WgcPixTransferTemplateKt {
+	public static final fun WgcPixTransferContent (Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcPixTransferTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/pix/BasePixTransferViewModel;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Z
+	public final fun component11 ()Z
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/pix/WgcPixTransferUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmount ()Ljava/lang/String;
+	public final fun getAvailableKeyTypes ()Ljava/util/List;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getPixKey ()Ljava/lang/String;
+	public final fun getRecipientBank ()Ljava/lang/String;
+	public final fun getRecipientDocumentMasked ()Ljava/lang/String;
+	public final fun getRecipientName ()Ljava/lang/String;
+	public final fun getSelectedKeyType ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isConfirmed ()Z
+	public final fun isLoading ()Z
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class br/com/wgc/design_system/templates/screens/pizza/ComposableSingletons$WgcPizzaTemplatesKt {
@@ -10051,6 +10388,83 @@ public final class br/com/wgc/design_system/templates/screens/search/SearchAndFi
 	public final fun getSearchQuery ()Ljava/lang/String;
 	public final fun getSelectedCategory ()Ljava/lang/String;
 	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class br/com/wgc/design_system/templates/screens/security/BaseSecuritySettingsViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun onChangePassword ()V
+	public abstract fun onRevokeDevice (Ljava/lang/String;)V
+	public abstract fun onToggleBiometrics (Z)V
+	public abstract fun onToggleTwoFactor (Z)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/security/ComposableSingletons$WgcSecuritySettingsTemplateKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/templates/screens/security/ComposableSingletons$WgcSecuritySettingsTemplateKt;
+	public fun <init> ()V
+	public final fun getLambda$-1083990457$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-259223999$templates_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1557472924$templates_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$366858864$templates_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/templates/screens/security/FakeSecuritySettingsViewModel : br/com/wgc/design_system/templates/screens/security/BaseSecuritySettingsViewModel {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;)V
+	public synthetic fun <init> (Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getUiState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun onChangePassword ()V
+	public fun onRevokeDevice (Ljava/lang/String;)V
+	public fun onToggleBiometrics (Z)V
+	public fun onToggleTwoFactor (Z)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/security/WgcConnectedDevice {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lbr/com/wgc/design_system/templates/screens/security/WgcConnectedDevice;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/security/WgcConnectedDevice;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/security/WgcConnectedDevice;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDeviceName ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLastActive ()Ljava/lang/String;
+	public final fun getLocation ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isCurrentDevice ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsTemplateKt {
+	public static final fun WgcSecuritySettingsContent (Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun WgcSecuritySettingsTemplate (Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/templates/screens/security/BaseSecuritySettingsViewModel;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class br/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;ZZLjava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;ZZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;ZZLjava/util/List;)Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;Ljava/lang/String;ZZLjava/util/List;ILjava/lang/Object;)Lbr/com/wgc/design_system/templates/screens/security/WgcSecuritySettingsUiState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConnectedDevices ()Ljava/util/List;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isBiometricsEnabled ()Z
+	public final fun isTwoFactorEnabled ()Z
 	public fun toString ()Ljava/lang/String;
 }
 

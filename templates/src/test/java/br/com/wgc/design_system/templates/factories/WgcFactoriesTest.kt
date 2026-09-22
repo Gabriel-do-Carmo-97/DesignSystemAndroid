@@ -103,4 +103,13 @@ class WgcFactoriesTest {
         assertTrue(types.contains(WgcReviewType.STANDARD))
         assertTrue(types.contains(WgcReviewType.BOUTIQUE))
     }
+
+    @Test
+    fun `New specialized factories instantiate cleanly`() {
+        assertNotNull(WgcPixFactory)
+        assertNotNull(WgcCardFactory)
+        assertNotNull(WgcCreditFactory)
+        assertNotNull(WgcNotificationFactory)
+        assertNotNull(WgcSecurityFactory)
+    }
 }

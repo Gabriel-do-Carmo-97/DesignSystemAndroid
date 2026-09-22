@@ -59,6 +59,16 @@ public final class br/com/wgc/design_system/components/alert/WgcAlertKt {
 	public static final fun WgcAlert (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/alert/AlertType;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/audio/ComposableSingletons$WgcAudioWavePlayerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/audio/ComposableSingletons$WgcAudioWavePlayerKt;
+	public fun <init> ()V
+	public final fun getLambda$1968050800$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/audio/WgcAudioWavePlayerKt {
+	public static final fun WgcAudioWavePlayer (Landroidx/compose/ui/Modifier;ZFLjava/lang/String;Ljava/lang/String;Ljava/util/List;FLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/auth/ComposableSingletons$WgcBiometricButtonKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/auth/ComposableSingletons$WgcBiometricButtonKt;
 	public fun <init> ()V
@@ -1278,6 +1288,16 @@ public final class br/com/wgc/design_system/components/fitness/WgcFitnessTimerDi
 	public static final fun WgcFitnessTimerDisplay (Ljava/lang/String;IILjava/lang/String;FZLjava/lang/String;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;III)V
 }
 
+public final class br/com/wgc/design_system/components/gauge/ComposableSingletons$WgcGaugeScoreMeterKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/gauge/ComposableSingletons$WgcGaugeScoreMeterKt;
+	public fun <init> ()V
+	public final fun getLambda$2018502509$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/gauge/WgcGaugeScoreMeterKt {
+	public static final fun WgcGaugeScoreMeter (ILandroidx/compose/ui/Modifier;IILjava/lang/String;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/images/AsyncImageDefaultKt {
 	public static final fun AsyncImageDefault (Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 }
@@ -1905,6 +1925,16 @@ public final class br/com/wgc/design_system/components/radio/WgcRadioButtonKt {
 	public static final fun WgcRadioButton (Landroidx/compose/ui/Modifier;ZLjava/lang/String;Lkotlin/jvm/functions/Function0;ZLandroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/scanner/ComposableSingletons$WgcBarcodeScannerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/scanner/ComposableSingletons$WgcBarcodeScannerKt;
+	public fun <init> ()V
+	public final fun getLambda$-673254088$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/scanner/WgcBarcodeScannerKt {
+	public static final fun WgcBarcodeScanner (Landroidx/compose/ui/Modifier;Ljava/lang/String;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
 public final class br/com/wgc/design_system/components/sections/ComposableSingletons$WgcCircularCategoryRowKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/components/sections/ComposableSingletons$WgcCircularCategoryRowKt;
 	public fun <init> ()V
@@ -2070,6 +2100,16 @@ public final class br/com/wgc/design_system/components/sections/type/ItemSection
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/sections/type/ItemSectionType;
 	public static fun values ()[Lbr/com/wgc/design_system/components/sections/type/ItemSectionType;
+}
+
+public final class br/com/wgc/design_system/components/signature/ComposableSingletons$WgcSignaturePadKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/signature/ComposableSingletons$WgcSignaturePadKt;
+	public fun <init> ()V
+	public final fun getLambda$1306115704$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/components/signature/WgcSignaturePadKt {
+	public static final fun WgcSignaturePad-mwpFuRA (Ljava/util/List;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;JZZLandroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/snackbar/ComposableSingletons$WgcSnackbarHostKt {
@@ -2285,6 +2325,12 @@ public final class br/com/wgc/design_system/components/timeline/ComposableSingle
 	public final fun getLambda$663758967$components_release ()Lkotlin/jvm/functions/Function2;
 }
 
+public final class br/com/wgc/design_system/components/timeline/ComposableSingletons$WgcTimelineTrackerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/components/timeline/ComposableSingletons$WgcTimelineTrackerKt;
+	public fun <init> ()V
+	public final fun getLambda$-1444818181$components_release ()Lkotlin/jvm/functions/Function2;
+}
+
 public final class br/com/wgc/design_system/components/timeline/WgcTimelineItem {
 	public static final field $stable I
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;Lkotlin/jvm/functions/Function2;)V
@@ -2310,6 +2356,24 @@ public final class br/com/wgc/design_system/components/timeline/WgcTimelineKt {
 	public static final fun WgcTimeline (Ljava/util/List;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineOrientation : java/lang/Enum {
+	public static final field Horizontal Lbr/com/wgc/design_system/components/timeline/WgcTimelineOrientation;
+	public static final field Vertical Lbr/com/wgc/design_system/components/timeline/WgcTimelineOrientation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineOrientation;
+	public static fun values ()[Lbr/com/wgc/design_system/components/timeline/WgcTimelineOrientation;
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineState : java/lang/Enum {
+	public static final field Completed Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public static final field Failed Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public static final field InProgress Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public static final field Pending Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public static fun values ()[Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+}
+
 public final class br/com/wgc/design_system/components/timeline/WgcTimelineStatus : java/lang/Enum {
 	public static final field COMPLETED Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
 	public static final field CURRENT Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
@@ -2317,6 +2381,31 @@ public final class br/com/wgc/design_system/components/timeline/WgcTimelineStatu
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
 	public static fun values ()[Lbr/com/wgc/design_system/components/timeline/WgcTimelineStatus;
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineStep {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineStep;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/components/timeline/WgcTimelineStep;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;ILjava/lang/Object;)Lbr/com/wgc/design_system/components/timeline/WgcTimelineStep;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getState ()Lbr/com/wgc/design_system/components/timeline/WgcTimelineState;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class br/com/wgc/design_system/components/timeline/WgcTimelineTrackerKt {
+	public static final fun WgcTimelineTracker (Ljava/util/List;Landroidx/compose/ui/Modifier;Lbr/com/wgc/design_system/components/timeline/WgcTimelineOrientation;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/components/tooltip/WgcTooltipKt {

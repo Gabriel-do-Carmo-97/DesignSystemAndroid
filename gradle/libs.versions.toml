@@ -21,6 +21,7 @@ dokka = "1.9.20"
 bcv = "0.18.2"
 
 navigationCompose = "2.10.1"
+coreKtxVersion = "1.19.0"
 
 [libraries]
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
@@ -54,10 +55,11 @@ material = { group = "com.google.android.material", name = "material", version.r
 screenshot-validation-api = { group = "com.android.tools.screenshot", name = "screenshot-validation-api", version.ref = "screenshot"}
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling"}
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.3.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}

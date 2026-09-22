@@ -4,6 +4,7 @@ plugins {
     id("maven-publish")
     alias(libs.plugins.screenshot)
     alias(libs.plugins.jetbrains.kotlin.serialization)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -20,6 +21,9 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    kotlinOptions {
+        jvmTarget = "11"
     }
     publishing {
         singleVariant("release") {
@@ -40,6 +44,7 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.coil.compose)
+    implementation(libs.core.ktx)
     implementation(libs.kotlinx.serialization.core)
 
     testImplementation(libs.mockk)

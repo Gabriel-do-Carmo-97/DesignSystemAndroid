@@ -10,6 +10,12 @@ import br.com.wgc.design_system.navigation.help.WgcHelpCenterHomeRoute
 import br.com.wgc.design_system.navigation.help.WgcHelpCenterTicketDetailRoute
 import br.com.wgc.design_system.navigation.review.WgcReviewFormRoute
 import br.com.wgc.design_system.navigation.review.WgcReviewGraphRoute
+import br.com.wgc.design_system.navigation.card.WgcCardGraphRoute
+import br.com.wgc.design_system.navigation.card.WgcCardHomeRoute
+import br.com.wgc.design_system.navigation.loan.WgcLoanGraphRoute
+import br.com.wgc.design_system.navigation.loan.WgcLoanHomeRoute
+import br.com.wgc.design_system.navigation.pix.WgcPixGraphRoute
+import br.com.wgc.design_system.navigation.pix.WgcPixHomeRoute
 import br.com.wgc.design_system.navigation.statement.WgcStatementDetailRoute
 import br.com.wgc.design_system.navigation.statement.WgcStatementGraphRoute
 import br.com.wgc.design_system.navigation.statement.WgcStatementHomeRoute
@@ -88,6 +94,27 @@ class WgcNewNavGraphsTest {
         assertEquals("wgc://help", WgcDeepLinkHandler.createDeepLink(WgcHelpCenterHomeRoute))
         assertEquals("wgc://help/faq/f-1", WgcDeepLinkHandler.createDeepLink(WgcHelpCenterFaqDetailRoute("f-1")))
         assertEquals("wgc://review/888", WgcDeepLinkHandler.createDeepLink(WgcReviewFormRoute("888")))
+        assertEquals("wgc://pix", WgcDeepLinkHandler.createDeepLink(WgcPixHomeRoute))
+        assertEquals("wgc://card", WgcDeepLinkHandler.createDeepLink(WgcCardHomeRoute))
+        assertEquals("wgc://loan", WgcDeepLinkHandler.createDeepLink(WgcLoanHomeRoute))
+    }
+
+    @Test
+    fun `pix routes and deeplinks resolve correctly`() {
+        assertNotNull(WgcPixGraphRoute)
+        assertEquals(WgcPixHomeRoute, WgcDeepLinkHandler.parseUri("wgc://pix"))
+    }
+
+    @Test
+    fun `card routes and deeplinks resolve correctly`() {
+        assertNotNull(WgcCardGraphRoute)
+        assertEquals(WgcCardHomeRoute, WgcDeepLinkHandler.parseUri("wgc://card"))
+    }
+
+    @Test
+    fun `loan routes and deeplinks resolve correctly`() {
+        assertNotNull(WgcLoanGraphRoute)
+        assertEquals(WgcLoanHomeRoute, WgcDeepLinkHandler.parseUri("wgc://loan"))
     }
 
     @Test

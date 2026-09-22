@@ -75,6 +75,61 @@ public final class br/com/wgc/design_system/navigation/auth/WgcAuthRegisterRoute
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class br/com/wgc/design_system/navigation/card/ComposableSingletons$WgcCardManagementNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/card/ComposableSingletons$WgcCardManagementNavGraphKt;
+	public fun <init> ()V
+	public final fun getLambda$1540452646$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$259091590$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/navigation/card/WgcCardGraphRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/card/WgcCardGraphRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/card/WgcCardHomeRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/card/WgcCardHomeRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute {
+	public static final field $stable I
+	public static final field Companion Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute$Companion;
+	public fun <init> (FF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun copy (FF)Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute;FFILjava/lang/Object;)Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrentLimit ()F
+	public final fun getMaxLimit ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class br/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/card/WgcCardLimitAdjustRoute$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/card/WgcCardManagementNavGraphKt {
+	public static final fun wgcCardManagementNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;)V
+	public static synthetic fun wgcCardManagementNavGraph$default (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+}
+
 public final class br/com/wgc/design_system/navigation/checkout/ComposableSingletons$WgcCheckoutNavGraphKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/checkout/ComposableSingletons$WgcCheckoutNavGraphKt;
 	public fun <init> ()V
@@ -277,6 +332,72 @@ public final class br/com/wgc/design_system/navigation/help/WgcHelpCenterTicketD
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class br/com/wgc/design_system/navigation/loan/ComposableSingletons$WgcCreditLoanNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/loan/ComposableSingletons$WgcCreditLoanNavGraphKt;
+	public fun <init> ()V
+	public final fun getLambda$-1041302255$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$1260541005$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/navigation/loan/WgcCreditLoanNavGraphKt {
+	public static final fun wgcCreditLoanNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
+	public static synthetic fun wgcCreditLoanNavGraph$default (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+}
+
+public final class br/com/wgc/design_system/navigation/loan/WgcLoanGraphRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/loan/WgcLoanGraphRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/loan/WgcLoanHomeRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/loan/WgcLoanHomeRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute {
+	public static final field $stable I
+	public static final field Companion Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute$Companion;
+	public fun <init> (Ljava/lang/String;F)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()F
+	public final fun copy (Ljava/lang/String;F)Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute;Ljava/lang/String;FILjava/lang/Object;)Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmount ()F
+	public final fun getContractNumber ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class br/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/loan/WgcLoanSuccessRoute$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/motion/WgcNavigationTransitionCoordinator {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/motion/WgcNavigationTransitionCoordinator;
+	public final fun getFadeThroughEnter ()Lkotlin/jvm/functions/Function1;
+	public final fun getFadeThroughExit ()Lkotlin/jvm/functions/Function1;
+	public final fun getSlideInBackward ()Lkotlin/jvm/functions/Function1;
+	public final fun getSlideInForward ()Lkotlin/jvm/functions/Function1;
+	public final fun getSlideOutBackward ()Lkotlin/jvm/functions/Function1;
+	public final fun getSlideOutForward ()Lkotlin/jvm/functions/Function1;
+}
+
 public final class br/com/wgc/design_system/navigation/notifications/ComposableSingletons$WgcNotificationsNavGraphKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/notifications/ComposableSingletons$WgcNotificationsNavGraphKt;
 	public fun <init> ()V
@@ -369,6 +490,66 @@ public final class br/com/wgc/design_system/navigation/onboarding/WgcOnboardingW
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class br/com/wgc/design_system/navigation/pix/ComposableSingletons$WgcPixTransferNavGraphKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/pix/ComposableSingletons$WgcPixTransferNavGraphKt;
+	public fun <init> ()V
+	public final fun getLambda$-758146080$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$309340992$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/navigation/pix/WgcPixGraphRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/pix/WgcPixGraphRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/pix/WgcPixHomeRoute {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/pix/WgcPixHomeRoute;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute {
+	public static final field $stable I
+	public static final field Companion Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute;
+	public static synthetic fun copy$default (Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmount ()Ljava/lang/String;
+	public final fun getDate ()Ljava/lang/String;
+	public final fun getRecipient ()Ljava/lang/String;
+	public final fun getTransactionId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class br/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lbr/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/pix/WgcPixReceiptRoute$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class br/com/wgc/design_system/navigation/pix/WgcPixTransferNavGraphKt {
+	public static final fun wgcPixTransferNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun wgcPixTransferNavGraph$default (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+}
+
 public final class br/com/wgc/design_system/navigation/profile/ComposableSingletons$WgcProfileNavGraphKt {
 	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/profile/ComposableSingletons$WgcProfileNavGraphKt;
 	public fun <init> ()V
@@ -411,6 +592,17 @@ public final class br/com/wgc/design_system/navigation/profile/WgcProfileNavGrap
 	public static final fun WgcProfileNavHost (Landroidx/compose/ui/Modifier;Landroidx/navigation/NavHostController;Lbr/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 	public static final fun wgcProfileNavGraph (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lbr/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun wgcProfileNavGraph$default (Landroidx/navigation/NavGraphBuilder;Landroidx/navigation/NavController;Lbr/com/wgc/design_system/templates/screens/profile/BaseUserProfileEditViewModel;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+}
+
+public final class br/com/wgc/design_system/navigation/resilience/ComposableSingletons$WgcOfflineBannerKt {
+	public static final field INSTANCE Lbr/com/wgc/design_system/navigation/resilience/ComposableSingletons$WgcOfflineBannerKt;
+	public fun <init> ()V
+	public final fun getLambda$-1688675777$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-580726215$navigation_flows_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class br/com/wgc/design_system/navigation/resilience/WgcOfflineBannerKt {
+	public static final fun WgcOfflineBanner (ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class br/com/wgc/design_system/navigation/review/WgcReviewFormRoute {
