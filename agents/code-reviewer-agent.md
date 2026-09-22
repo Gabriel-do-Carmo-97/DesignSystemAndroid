@@ -10,9 +10,8 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 
 ## 2. Contexto do Projeto
 
-- **Módulos:** `core/` (tokens), `components/` (componentes), `templates/` (telas), `navigation-flows/` (grafos e fluxos)
-- **Tooling ativo:** Screenshot Test (nativo), JUnit, MockK
-- **Tooling planejado:** Detekt, Lint (não configurados ainda)
+- **Módulos:** `core/` (tokens), `components/` (componentes), `templates/` (telas e factories), `navigation-flows/` (grafos e fluxos)
+- **Tooling ativo:** Screenshot Test (nativo), JUnit, MockK, Detekt (análise estática), Dokka (KDocs)
 - **Imagens:** Coil 3 — `AsyncImage`, `SubcomposeAsyncImage`, `AsyncImagePainter`
 
 ---
@@ -29,23 +28,26 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 
 ## 4. Checklists
 
-### Padrões (`design-system`)
-- [ ] PascalCase sem prefixo obrigatório?
+### Padrões (`:components`)
+- [ ] Prefixo corporativo `Wgc` obrigatório em componentes públicos (ex: `WgcClassicButton`, `WgcSimpleTextField`)?
 - [ ] `modifier: Modifier = Modifier` primeiro parâmetro?
 - [ ] Stateless (state hoisted)?
-- [ ] `@Preview` por estado/variante?
+- [ ] `@Preview` para cada estado/variante?
 - [ ] Screenshot test em `src/screenshotTest/`?
 - [ ] Zero hex, `Color(...)`, `.dp`, `.sp` ou valores mágicos em código novo?
-- [ ] Cores via `MaterialTheme.colorScheme.*`?
+- [ ] Cores via `MaterialTheme.colorScheme.*` ou `:core`?
+- [ ] Espaçamentos e raios via `WgcCoreDsSpacing` e `WgcCoreDsBorderRadius`?
 
-### Padrões (`ds-templates`)
+### Padrões (`:templates`)
 - [ ] Stateless + stateful split?
 - [ ] `UiState` data class + `BaseViewModel` + `FakeViewModel`?
+- [ ] Efeitos únicos via `UiEffectChannel`?
+- [ ] Fábrica com Sensible Defaults e Slots de customização?
 - [ ] `@Preview` (default + loading + error)?
 - [ ] Sem API/navegação concreta (apenas callbacks)?
 - [ ] Zero valores mágicos em código novo?
 
-### Padrões (`navigation-flows`)
+### Padrões (`:navigation-flows`)
 - [ ] Rotas Type-Safe com `@Serializable` (classes/objetos tipados)?
 - [ ] Extensões no `NavGraphBuilder` (ex: `NavGraphBuilder.authGraph(...)`)?
 - [ ] Desacoplamento entre fluxos (saídas e ramificações via callbacks)?
@@ -55,7 +57,7 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 - [ ] Gestão segura de backstack (`launchSingleTop`, `popUpTo`)?
 - [ ] Testes de navegação implementados (`TestNavHostController`)?
 
-### Padrões (`core-ds`)
+### Padrões (`:core`)
 - [ ] Primitivas usam hex corretamente?
 - [ ] Semânticas referenciam primitivas (não hex)?
 - [ ] Nomenclatura: `nomeSemântico + valorNumérico`?
@@ -118,13 +120,13 @@ Você **NÃO** gera código novo e **NÃO** aplica correções.
 **Problemas:**
 1. **Linha 15:** `.background(Color(0xFF5722))` — hex hardcoded.
    → Sugestão: `MaterialTheme.colorScheme.primary`
-   → Delegar: `design-system-agent`
+   → Delegar: `components-agent`
 
 2. **Linha 22:** `.padding(16.dp)` — valor avulso.
-   → Token não disponível. Perguntar ao dev qual usar.
-   → Delegar: `design-system-agent`
+   → Usar `WgcCoreDsSpacing.md16`.
+   → Delegar: `components-agent`
 
-**Conclusão:** Devolver para `design-system-agent` corrigir item 1. Item 2 requer decisão.
+**Conclusão:** Devolver para `components-agent` corrigir os itens apontados.
 ```
 
 ---

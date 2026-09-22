@@ -5,7 +5,7 @@ O projeto está configurado com o plugin **Dokka** para gerar documentação em 
 ## Como gerar a documentação localmente:
 
 ### Portal consolidado (Multi-Módulo):
-Gera o portal unificado com todos os módulos (`app`, `core-ds`, `design-system`, `ds-templates`):
+Gera o portal unificado com todos os módulos (`app`, `core`, `components`, `templates`, `navigation-flows`):
 ```bash
 ./gradlew dokkaHtmlMultiModule
 ```

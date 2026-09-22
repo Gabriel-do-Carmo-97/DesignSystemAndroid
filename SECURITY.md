@@ -1,4 +1,4 @@
-﻿# Política de Segurança — DesignSystemAndroid 🔒
+# Política de Segurança — DesignSystemAndroid 🔒
 
 O **DesignSystemAndroid** é a base visual corporativa da organização **WGC**, fornecendo componentes de UI, campos de dados sensíveis (inputs de senha, dados de pagamento, cartões) e fluxos completos de autenticação consumidos em produção por diversos aplicativos móveis.
 
@@ -27,7 +27,7 @@ Se você identificou uma falha de segurança (ex: vazamento de credenciais em pr
    `[SECURITY VULNERABILITY] DesignSystemAndroid - <Resumo Breve>`
 3. No corpo da mensagem, inclua:
    - **Descrição detalhada:** Explicação do problema ou vetor de vulnerabilidade.
-   - **Módulos afetados:** (ex: `:core-ds`, `:design-system`, `:ds-templates`).
+   - **Módulos afetados:** (ex: `:core`, `:components`, `:templates`, `:navigation-flows`).
    - **Passos para reprodução:** Trecho de código ou cenário demonstrativo.
    - **Impacto potencial:** Avaliação de risco.
 

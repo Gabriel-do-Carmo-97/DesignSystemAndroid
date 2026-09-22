@@ -1,28 +1,10 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("wgc.android.library")
     id("maven-publish")
 }
 
 android {
     namespace = "br.com.wgc.core_ds"
-    compileSdk = 37
-
-    defaultConfig {
-        minSdk = 29
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
-        }
-    }
 
     publishing {
         singleVariant("release")
@@ -71,4 +53,4 @@ tasks.register<Jar>("sourcesJar") {
     from(android.sourceSets.getByName("main").java.srcDirs)
 }
 
-// Trigger core-ds module deployment
+// Trigger core module deployment

@@ -43,14 +43,15 @@ fun SimpleTextField(
     isError: Boolean = false,
     errorMessage: String = "SimpleErrorMessage",
     keyboardType: KeyboardType = KeyboardType.Text,
-    isPasswordField: Boolean = false
+    isPasswordField: Boolean = false,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
 ) {
     var isPasswordVisible by rememberSaveable { mutableStateOf(false) }
 
     val finalVisualTransformation = when {
         isPasswordField && !isPasswordVisible -> PasswordVisualTransformation()
         isPasswordField && isPasswordVisible -> VisualTransformation.None
-        else -> VisualTransformation.None
+        else -> visualTransformation
     }
 
     val finalTrailingIcon = when {
