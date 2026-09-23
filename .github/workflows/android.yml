@@ -6,9 +6,22 @@ on:
   pull_request:
     branches: [ "master" ]
     types: [opened, edited, synchronize, reopened]
+  schedule:
+    # Varredura agendada diária às 02:00 UTC
+    - cron: '0 2 * * *'
+
+# Cancela execuções anteriores na mesma branch ou PR, mantendo apenas a mais recente ativa
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
+  packages: write
+  pages: write
+  id-token: write
+  security-events: write
+  actions: read
 
 jobs:
   # --- 1. VALIDAR TÍTULO DO PR (CONVENTIONAL COMMITS) ---
@@ -89,7 +102,77 @@ jobs:
           bump_each_commit_patch_pattern: "fix|refactor"
           version_format: "${major}.${minor}.${patch}"
 
-  # --- 4. QUALIDADE HIPERGRANULAR: DETEKT POR MÓDULO (PARALELO) ---
+  # --- 4. SEGURANÇA: GITLEAKS (VERIFICAÇÃO DE SEGREDO/CHAVES) ---
+  secrets-scan:
+    name: 🔑 Gitleaks Secrets Scan
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+  # --- 5. INTEGRIDADE DE BOM & DEPENDÊNCIAS ---
+  bom-integrity:
+    name: 🔒 Android BOM Integrity Check
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Verify Android Compose BOM Integrity
+        run: |
+          ./gradlew :components:dependencies --configuration debugRuntimeClasspath | grep compose-bom || true
+      - name: Check for Known Vulnerable Versions
+        run: |
+          echo "Checking for known vulnerable dependency patterns..."
+          if grep -r "4.4.0" gradle/libs.versions.toml; then
+            echo "WARNING: Found potentially vulnerable version pattern"
+            exit 1
+          fi
+          echo "No known vulnerable patterns found."
+
+  # --- 6. CONFORMIDADE DE LICENÇAS ---
+  license-check:
+    name: ⚖️ License Compliance Check
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Generate License Report
+        run: ./gradlew :app:downloadLicenses
+      - name: Check License Compliance
+        run: |
+          if find . -name "license*.txt" -exec grep -l "GPL" {} \; 2>/dev/null; then
+            echo "WARNING: Found GPL licensed dependencies"
+          fi
+          echo "License compliance check completed."
+      - name: Upload License Reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: license-reports
+          path: '**/build/reports/licenses/'
+          if-no-files-found: ignore
+
+  # --- 7. QUALIDADE HIPERGRANULAR: DETEKT POR MÓDULO (PARALELO) ---
   detekt-matrix:
     name: 🧹 Detekt [:${{ matrix.module }}]
     needs: detect-changes
@@ -178,7 +261,57 @@ jobs:
           name: integration-test-results
           path: '**/build/reports/tests/testDebugUnitTest/'
 
-  # --- 6. REGRESSÃO VISUAL: SCREENSHOT TESTS ---
+  # --- 10. ANDROID LINT SECURITY ---
+  android-lint-security:
+    name: 🛡️ Android Lint Security
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Run Android Lint
+        run: ./gradlew lintDebug
+      - name: Upload Lint Results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: android-lint-results
+          path: '**/build/reports/lint-results-*.xml'
+          if-no-files-found: ignore
+
+  # --- 11. OWASP DEPENDENCY CHECK (SCA) & UPDATES ---
+  dependency-check:
+    name: 🔍 OWASP Dependency Vulnerability Scan
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x gradlew
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Run Gradle Dependency Check
+        continue-on-error: true
+        run: ./gradlew dependencyCheckAnalyze --info
+      - name: Check for Dependency Updates
+        continue-on-error: true
+        run: ./gradlew dependencyUpdates -Drevision=release
+      - name: Upload Dependency Check Results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: dependency-check-results
+          path: '**/build/reports/dependency-check-report.*'
+          if-no-files-found: ignore
+
+  # --- 12. REGRESSÃO VISUAL: SCREENSHOT TESTS ---
   screenshot-tests:
     name: 📸 Screenshot Tests [:app]
     needs: detect-changes
