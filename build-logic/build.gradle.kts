@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.android.tools.build:gradle:8.13.0")
+    compileOnly("com.android.tools.build:gradle:9.4.1")
     compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20")
 }
 
