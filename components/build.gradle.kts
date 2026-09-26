@@ -49,7 +49,7 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation("androidx.compose.ui:ui-test-junit4-android:1.7.6")
     androidTestImplementation("androidx.compose.ui:ui-test-manifest:1.7.6")
-    androidTestImplementation("androidx.test.espresso:espresso-accessibility:3.6.1")
+    androidTestImplementation("androidx.test.espresso:espresso-accessibility:3.7.0")
     androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 
     screenshotTestImplementation(libs.screenshot.validation.api)
