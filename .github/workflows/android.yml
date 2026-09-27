@@ -444,12 +444,13 @@ jobs:
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v3
       - name: Generate Dokka HTML Docs
-        run: ./gradlew dokkaHtmlMultiModule
+        run: ./gradlew dokkaGenerateHtml
       - name: Deploy Docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/dokka/htmlMultiModule
+          publish_dir: ./build/dokka/html
 
   # --- 10. PUBLICAÇÃO HIPERGRANULAR: PUBLICAR APENAS MÓDULOS ALTERADOS ---
   publish-modules:
