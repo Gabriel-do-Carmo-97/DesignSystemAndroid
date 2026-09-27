@@ -9,13 +9,13 @@ class ClassicButtonScreenshotTest {
     @Preview(showBackground = true, showSystemUi = true, name = "Enabled ")
     @Composable
     private fun ClassicButtonDefaultPreview() {
-        ClassicButton(textButton = "Classic Button")
+        WgcClassicButton(textButton = "Classic Button")
     }
 
     @PreviewTest
     @Preview(showBackground = true, showSystemUi = true, name = "Disabled")
     @Composable
     private fun ClassicButtonDisablePreview() {
-        ClassicButton(textButton = "Classic Button", isEnabled = false)
+        WgcClassicButton(textButton = "Classic Button", isEnabled = false)
     }
 }

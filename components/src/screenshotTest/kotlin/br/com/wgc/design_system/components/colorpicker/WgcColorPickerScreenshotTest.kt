@@ -17,8 +17,10 @@ class WgcColorPickerScreenshotTest {
     private fun ColorWheelScreenshotPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             WgcColorWheel(
-                selectedColor = Color(0xFF6750A4),
-                onColorChanged = {}
+                hue = 260f,
+                saturation = 0.5f,
+                value = 0.8f,
+                onHsvChange = { _, _, _ -> }
             )
         }
     }
@@ -53,10 +55,11 @@ class WgcColorPickerScreenshotTest {
     @Preview(showBackground = true, name = "Color Picker Dialog Content")
     @Composable
     private fun ColorPickerDialogContentScreenshotPreview() {
-        WgcColorPickerDialogContent(
-            selectedColor = Color(0xFF1976D2),
-            onConfirm = {},
-            onDismiss = {}
+        WgcColorPickerDialog(
+            isOpen = true,
+            initialColor = Color(0xFF1976D2),
+            onDismiss = {},
+            onColorConfirmed = {}
         )
     }
 
@@ -64,10 +67,11 @@ class WgcColorPickerScreenshotTest {
     @Preview(showBackground = true, name = "Color Picker BottomSheet Content")
     @Composable
     private fun ColorPickerBottomSheetContentScreenshotPreview() {
-        WgcColorPickerBottomSheetContent(
-            selectedColor = Color(0xFFFF8F00),
-            onConfirm = {},
-            onDismiss = {}
+        WgcColorPickerBottomSheet(
+            isOpen = true,
+            initialColor = Color(0xFFFF8F00),
+            onDismiss = {},
+            onColorConfirmed = {}
         )
     }
 }
