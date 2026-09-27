@@ -8,9 +8,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
@@ -125,22 +127,27 @@ fun WgcTag(
     style: WgcTagStyle = WgcTagStyle.Filled,
     size: WgcTagSize = WgcTagSize.Medium,
     leadingIcon: (@Composable () -> Unit)? = null,
-    trailingIcon: (@Composable () -> Unit)? = null
+    trailingIcon: (@Composable () -> Unit)? = null,
+    onClick: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null,
+    selected: Boolean = false
 ) {
     val tagColors = resolveTagColors(variant)
 
-    val backgroundColor = when (style) {
+    val effectiveStyle = if (selected) WgcTagStyle.Filled else style
+
+    val backgroundColor = when (effectiveStyle) {
         WgcTagStyle.Filled -> tagColors.container
         WgcTagStyle.Outlined -> Color.Transparent
     }
 
-    val contentColor = when (style) {
+    val contentColor = when (effectiveStyle) {
         WgcTagStyle.Filled -> tagColors.onContainer
         WgcTagStyle.Outlined -> tagColors.primary
     }
 
-    val border = when (style) {
-        WgcTagStyle.Filled -> null
+    val border = when (effectiveStyle) {
+        WgcTagStyle.Filled -> if (selected) BorderStroke(1.dp, tagColors.primary) else null
         WgcTagStyle.Outlined -> BorderStroke(1.dp, tagColors.primary)
     }
 
@@ -161,8 +168,14 @@ fun WgcTag(
 
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
 
+    val surfaceModifier = if (onClick != null) {
+        modifier.clickable(onClick = onClick)
+    } else {
+        modifier
+    }
+
     Surface(
-        modifier = modifier,
+        modifier = surfaceModifier,
         shape = shape,
         color = backgroundColor,
         contentColor = contentColor,
@@ -183,6 +196,20 @@ fun WgcTag(
             )
             if (trailingIcon != null) {
                 trailingIcon()
+            } else if (onDismiss != null) {
+                androidx.compose.foundation.layout.Box(
+                    modifier = Modifier
+                        .size(14.dp)
+                        .clickable(onClick = onDismiss),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Close,
+                        contentDescription = "Remover tag",
+                        modifier = Modifier.size(10.dp),
+                        tint = contentColor
+                    )
+                }
             }
         }
     }

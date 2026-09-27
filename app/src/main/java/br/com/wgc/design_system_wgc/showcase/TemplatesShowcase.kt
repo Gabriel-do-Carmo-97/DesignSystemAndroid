@@ -297,6 +297,12 @@ fun TemplatesShowcase(
                 name = "Segurança & Acesso",
                 category = TemplateCategory.SYSTEM,
                 description = "Configurações de biometria, autenticação em duas etapas e dispositivos"
+            ),
+            TemplateShowcaseItem(
+                id = 30,
+                name = "Telas de Erro & Resiliência",
+                category = TemplateCategory.SYSTEM,
+                description = "Telas completas de erro de rede, manutenção, estado vazio e falhas genéricas com slots de ação"
             )
         )
     }
@@ -479,6 +485,7 @@ fun TemplatesShowcase(
                     27 -> WgcLoanSimulatorTemplate(viewModel = FakeLoanSimulatorViewModel())
                     28 -> WgcNotificationHubTemplate(viewModel = FakeNotificationHubViewModel())
                     29 -> WgcSecuritySettingsTemplate(viewModel = FakeSecuritySettingsViewModel())
+                    30 -> br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateTemplate()
                     else -> WgcNotificationCenterTemplate()
                 }
             }

@@ -19,6 +19,28 @@ object WgcCoreDsMotion {
     /** 500ms - Duração lenta / ênfase */
     const val durationSlow500 = 500
 
+    /** 700ms - Duração muito lenta para fluxos complexos de onboarding e celebração */
+    const val durationExtraSlow700 = 700
+
+    // --- ESPECIFICAÇÕES DE FÍSICA DE MOLA (SPRING PHYSICS) ---
+    /** Amortecimento sem quique (sem overshoot) */
+    const val springDampingNoBouncy = 1.0f
+
+    /** Amortecimento padrão suave e responsivo */
+    const val springDampingMediumBouncy = 0.75f
+
+    /** Amortecimento com alto quique para microinterações lúdicas */
+    const val springDampingHighBouncy = 0.5f
+
+    /** Rigidez baixa (movimento lento e fluido) */
+    const val springStiffnessLow = 50.0f
+
+    /** Rigidez média (movimento natural para elementos normais) */
+    const val springStiffnessMedium = 300.0f
+
+    /** Rigidez alta (movimento instantâneo e ágil para botões e toques rápidos) */
+    const val springStiffnessHigh = 800.0f
+
     /** Curva de aceleração e desaceleração com ênfase (Emphasized) */
     val easingEmphasized = WgcCubicBezier(0.2f, 0.0f, 0.0f, 1.0f)
 

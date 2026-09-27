@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 /**
  * Tokens de Tipografia Oficial do Design System WGC.
@@ -77,4 +77,14 @@ object WgcCoreDsTypography {
     const val labelSmallSize: Double = 11.0
     const val labelSmallLineHeight: Double = 16.0
     const val labelSmallTracking: Double = 0.5
+
+    // --- DIRETRIZES DE ACESSIBILIDADE E FONT SCALING ---
+    /** Escala padrão do sistema (100%) */
+    const val fontScaleStandard: Float = 1.0f
+
+    /** Escala máxima recomendada pela WCAG / Android Accessibility antes de acionar quebra de layout responsivo (200%) */
+    const val fontScaleMaxAccessible: Float = 2.0f
+
+    /** Dimensão mínima de alvo de toque recomendada pela WCAG 2.1 AA (48dp) */
+    const val minTouchTargetDp: Double = 48.0
 }

@@ -57,6 +57,29 @@ class WgcAccessibilityAuditorTest {
         assertTrue("O contraste de erro deve ser >= 4.5:1 (Obtido: $ratio)", ratio >= 4.5)
     }
 
+    @Test
+    fun `whitelabel brand themes comply with WCAG 2_1 contrast thresholds`() {
+        val themes = listOf(
+            WgcBrandTheme.default(),
+            WgcBrandTheme.finance(),
+            WgcBrandTheme.foodDelivery(),
+            WgcBrandTheme.ecommerce(),
+            WgcBrandTheme.fashion(),
+            WgcBrandTheme.fitness()
+        )
+
+        for (theme in themes) {
+            val onSurface = Argb(theme.onSurfaceColor.toLong() and 0xFFFFFFFFL)
+            val surface = Argb(theme.surfaceColor.toLong() and 0xFFFFFFFFL)
+            val textContrast = calculateContrastRatio(onSurface, surface)
+
+            assertTrue(
+                "Marca ${theme.brandType}: Contraste onSurface/surface deve ser >= 4.5:1 (Obtido: $textContrast)",
+                textContrast >= 4.5
+            )
+        }
+    }
+
     /**
      * Calcula a taxa de contraste (1.0 a 21.0) entre duas cores conforme algoritmo W3C WCAG 2.1.
      */

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system_wgc.showcase
+package br.com.wgc.design_system_wgc.showcase
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -58,7 +58,7 @@ fun CoreTokensShowcase(
     onBack: () -> Unit
 ) {
     var selectedTab by remember { mutableIntStateOf(0) }
-    val tabs = listOf("🎨 Cores", "📐 Espaçamentos", "🔲 Raios de Borda", "⛰️ Elevações")
+    val tabs = listOf("🎨 Cores", "📐 Espaçamentos", "🔲 Raios de Borda", "⛰️ Elevações", "⚡ Motion & Hápticos")
 
     Scaffold(
         topBar = {
@@ -97,6 +97,7 @@ fun CoreTokensShowcase(
                 1 -> SpacingSection()
                 2 -> BorderRadiusSection()
                 3 -> ElevationSection()
+                4 -> MotionAndHapticsSection()
             }
         }
     }
@@ -280,6 +281,73 @@ private fun ElevationSection() {
                 ) {
                     Text(name, fontWeight = FontWeight.Bold)
                     Text("WgcCoreDsElevation.$name", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun MotionAndHapticsSection() {
+    val motionDurations = listOf(
+        Pair("durationFast100", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationFast100}ms"),
+        Pair("durationShort150", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationShort150}ms"),
+        Pair("durationNormal200", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationNormal200}ms"),
+        Pair("durationStandard300", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationStandard300}ms"),
+        Pair("durationSlow500", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationSlow500}ms"),
+        Pair("durationExtraSlow700", "${br.com.wgc.design_system.core.WgcCoreDsMotion.durationExtraSlow700}ms")
+    )
+
+    val hapticPatterns = listOf(
+        Pair("patternLightClick", br.com.wgc.design_system.core.WgcCoreDsHaptics.patternLightClick),
+        Pair("patternMediumConfirm", br.com.wgc.design_system.core.WgcCoreDsHaptics.patternMediumConfirm),
+        Pair("patternHeavySuccess", br.com.wgc.design_system.core.WgcCoreDsHaptics.patternHeavySuccess),
+        Pair("patternWarningAlert", br.com.wgc.design_system.core.WgcCoreDsHaptics.patternWarningAlert),
+        Pair("patternErrorReject", br.com.wgc.design_system.core.WgcCoreDsHaptics.patternErrorReject)
+    )
+
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+    ) {
+        item {
+            Text("⏱️ Durações e Curvas de Animação", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        }
+        items(motionDurations.size) { index ->
+            val (name, value) = motionDurations[index]
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(name, fontWeight = FontWeight.SemiBold)
+                    Text(value, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+
+        item {
+            Spacer(Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Text("📳 Padrões Hápticos Corporativos", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        }
+        items(hapticPatterns.size) { index ->
+            val (name, value) = hapticPatterns[index]
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(name, fontWeight = FontWeight.SemiBold)
+                    Text(value, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
                 }
             }
         }
