@@ -37,7 +37,7 @@ class WgcFactoriesScreenshotTest {
     @Preview(showBackground = true, name = "Onboarding Factory Boutique")
     @Composable
     private fun OnboardingFactoryBoutiquePreview() {
-        WgcOnboardingFactory(type = WgcOnboardingType.BOUTIQUE)
+        WgcOnboardingFactory(type = WgcOnboardingType.TREND_FASHION)
     }
 
     @PreviewTest

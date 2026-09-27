@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens
+package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -18,7 +18,7 @@ class WgcLifestyleScreenshotsTest {
     @Preview(name = "Mobilidade - 99 Screen", showBackground = true)
     @Composable
     fun mobilityScreenPreview() {
-        WgcMobilityFactory(screen = WgcMobilityScreen.NINETY_NINE)
+        WgcMobilityFactory(screen = WgcMobilityScreen.URBAN)
     }
 
     @Preview(name = "Viagem - Hospedagem Screen", showBackground = true)
