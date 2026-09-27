@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-// Module: WGC Design System Core
+// Module: WGC Design System Core - Publication trigger v1.0.1
 android {
     namespace = "br.com.wgc.design_system.core"
 

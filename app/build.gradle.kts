@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.license.report)
 }
-
+// Module: WGC Design System Catalog App - Publication trigger v1.0.1
 android {
     namespace = "br.com.wgc.design_system_wgc"
     compileSdk = 37
