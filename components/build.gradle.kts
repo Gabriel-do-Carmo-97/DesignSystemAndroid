@@ -13,9 +13,6 @@ android {
     buildFeatures {
         compose = true
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     publishing {
         singleVariant("release") {
             withSourcesJar()
@@ -37,6 +34,7 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.core.ktx)
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
     implementation(libs.kotlinx.serialization.core)

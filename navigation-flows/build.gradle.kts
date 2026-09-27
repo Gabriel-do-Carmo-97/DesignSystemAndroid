@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
+// Module: WGC Design System Navigation Flows
 android {
     namespace = "br.com.wgc.design_system.navigation"
 

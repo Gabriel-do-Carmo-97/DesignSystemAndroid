@@ -3,6 +3,7 @@ plugins {
     id("maven-publish")
 }
 
+// Module: WGC Design System Core
 android {
     namespace = "br.com.wgc.design_system.core"
 

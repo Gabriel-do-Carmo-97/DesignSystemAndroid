@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.detekt) apply false
-    alias(libs.plugins.sonarqube) apply false
+    alias(libs.plugins.sonarqube)
     alias(libs.plugins.dokka)
     alias(libs.plugins.binary.compatibility.validator)
     alias(libs.plugins.dependency.check)

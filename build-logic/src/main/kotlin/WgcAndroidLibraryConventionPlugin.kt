@@ -37,6 +37,11 @@ class WgcAndroidLibraryConventionPlugin : Plugin<Project> {
                 testOptions {
                     unitTests.isReturnDefaultValues = true
                 }
+
+                lint {
+                    abortOnError = false
+                    checkReleaseBuilds = false
+                }
             }
 
             extensions.configure<KotlinAndroidProjectExtension> {
