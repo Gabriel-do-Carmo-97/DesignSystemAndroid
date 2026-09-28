@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.layout.padding

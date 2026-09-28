@@ -287,6 +287,7 @@ private fun ElevationSection() {
     }
 }
 
+@Suppress("LongMethod")
 @Composable
 private fun MotionAndHapticsSection() {
     val motionDurations = listOf(

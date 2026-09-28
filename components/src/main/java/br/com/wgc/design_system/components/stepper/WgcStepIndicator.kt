@@ -51,6 +51,7 @@ data class WgcStepItem(
  * @param steps Lista ordenada de etapas do fluxo.
  * @param modifier Modificador de layout.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcStepIndicator(
     steps: List<WgcStepItem>,

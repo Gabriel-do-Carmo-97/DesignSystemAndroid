@@ -23,14 +23,14 @@ object WgcCoreDsElevation {
     const val level12 = 12.0
 
     // --- ALIASES SEMÂNTICOS DE ELEVAÇÃO ---
-    val cardFlat = level0
-    val cardDefault = level1
-    val navigationBar = level2
-    val buttonRaised = level3
-    val dropdownMenu = level6
-    val modalBottomSheet = level8
-    val dialog = level8
-    val floatingDrawer = level12
+    const val cardFlat = level0
+    const val cardDefault = level1
+    const val navigationBar = level2
+    const val buttonRaised = level3
+    const val dropdownMenu = level6
+    const val modalBottomSheet = level8
+    const val dialog = level8
+    const val floatingDrawer = level12
 
     // --- PROPRIEDADES DE SOMBRA DINÂMICA (AMBIENT & SPOT) ---
     /** Transparência de sombra ambiente em tema claro */

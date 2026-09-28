@@ -122,6 +122,7 @@ fun WgcProgressBarGroup(
     }
 }
 
+@Suppress("MagicNumber")
 @Preview(showBackground = true)
 @WgcComponentPreviews
 @Composable

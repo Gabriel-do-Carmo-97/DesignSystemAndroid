@@ -98,6 +98,7 @@ class FakeErrorStateViewModel(
  * @param illustrationSlot Slot customizável para ilustração vetorial ou animação Lottie.
  * @param actionsSlot Slot customizável para botões de ação alternativos.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcErrorStateTemplate(
     modifier: Modifier = Modifier,
