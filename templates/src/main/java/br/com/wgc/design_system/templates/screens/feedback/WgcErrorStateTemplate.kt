@@ -75,18 +75,21 @@ abstract class BaseErrorStateViewModel : ViewModel() {
 /**
  * Fake ViewModel para renderização em @Preview e testes unitários rápidos.
  */
-class FakeErrorStateViewModel(
-    initialState: WgcErrorStateUiState = WgcErrorStateUiState()
+open class FakeErrorStateViewModel(
+    initialState: WgcErrorStateUiState = WgcErrorStateUiState(),
+    private val onPrimaryClick: (() -> Unit)? = null,
+    private val onSecondaryClick: (() -> Unit)? = null
 ) : BaseErrorStateViewModel() {
     private val _uiState = MutableStateFlow(initialState)
     override val uiState: StateFlow<WgcErrorStateUiState> = _uiState.asStateFlow()
 
     override fun onPrimaryActionClick() {
         _uiState.value = _uiState.value.copy(isLoading = true)
+        onPrimaryClick?.invoke()
     }
 
     override fun onSecondaryActionClick() {
-        // Ação secundária simulada
+        onSecondaryClick?.invoke()
     }
 }
 

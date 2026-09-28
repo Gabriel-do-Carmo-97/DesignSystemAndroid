@@ -23,19 +23,15 @@ object WgcErrorStateFactory {
         onRetryClick: () -> Unit = {},
         illustrationSlot: (@Composable () -> Unit)? = null
     ) {
-        val viewModel = object : FakeErrorStateViewModel(
+        val viewModel = FakeErrorStateViewModel(
             initialState = WgcErrorStateUiState(
                 type = WgcErrorStateType.GENERIC_ERROR,
                 title = "Ops! Algo deu errado",
                 description = "Ocorreu uma instabilidade momentânea em nossos servidores. Por favor, tente novamente.",
                 actionButtonText = "Tentar Novamente"
-            )
-        ) {
-            override fun onPrimaryActionClick() {
-                super.onPrimaryActionClick()
-                onRetryClick()
-            }
-        }
+            ),
+            onPrimaryClick = onRetryClick
+        )
         WgcErrorStateTemplate(
             modifier = modifier,
             viewModel = viewModel,
@@ -52,19 +48,15 @@ object WgcErrorStateFactory {
         onRetryClick: () -> Unit = {},
         illustrationSlot: (@Composable () -> Unit)? = null
     ) {
-        val viewModel = object : FakeErrorStateViewModel(
+        val viewModel = FakeErrorStateViewModel(
             initialState = WgcErrorStateUiState(
                 type = WgcErrorStateType.NO_INTERNET,
                 title = "Sem Conexão à Internet",
                 description = "Verifique sua conexão Wi-Fi ou dados móveis e tente novamente para continuar navegando.",
                 actionButtonText = "Recarregar"
-            )
-        ) {
-            override fun onPrimaryActionClick() {
-                super.onPrimaryActionClick()
-                onRetryClick()
-            }
-        }
+            ),
+            onPrimaryClick = onRetryClick
+        )
         WgcErrorStateTemplate(
             modifier = modifier,
             viewModel = viewModel,
