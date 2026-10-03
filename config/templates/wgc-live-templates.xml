@@ -1,0 +1,16 @@
+<templateSet group="WGC Design System">
+  <template name="wgcbtn" value="WgcClassicButton(&#10;    text = &quot;$TEXT$&quot;,&#10;    onClick = { $ACTION$ }&#10;)" description="Insere um WgcClassicButton padrão" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="&quot;Confirmar&quot;" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+
+  <template name="wgctemplate" value="@Composable&#10;fun Wgc$NAME$Template(&#10;    uiState: Wgc$NAME$UiState,&#10;    modifier: Modifier = Modifier&#10;) {&#10;    Scaffold(modifier = modifier.fillMaxSize()) { padding -&gt;&#10;        $END$&#10;    }&#10;}" description="Esqueleto de um novo Wgc Template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="Feature" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+</templateSet>
