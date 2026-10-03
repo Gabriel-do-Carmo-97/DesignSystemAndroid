@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.buttons
+package br.com.wgc.design_system.components.buttons
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -99,6 +99,26 @@ fun WgcClassicButton(
                 Text(text = textButton, fontSize = 14.sp)
             }
         },
+    )
+}
+
+/**
+ * Sobrecarga ergonômica de [WgcClassicButton] aceitando parâmetro `text`.
+ */
+@Composable
+fun WgcClassicButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    isEnabled: Boolean = true,
+    isLoading: Boolean = false
+) {
+    WgcClassicButton(
+        modifier = modifier,
+        onClick = onClick,
+        isEnabled = isEnabled,
+        isLoading = isLoading,
+        textButton = text
     )
 }
 

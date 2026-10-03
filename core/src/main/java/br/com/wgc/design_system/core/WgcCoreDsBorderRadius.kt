@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 object WgcCoreDsBorderRadius {
     const val none0 = 0.0
@@ -40,4 +40,5 @@ object WgcCoreDsBorderRadius {
     const val sl = sl18
     const val xxl = xxl24
     const val circular = circular999
+    const val pill = circular999
 }
