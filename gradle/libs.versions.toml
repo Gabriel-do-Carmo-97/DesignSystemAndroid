@@ -20,7 +20,7 @@ sonarqube = "7.5.0.8588"
 dokka = "2.2.0"
 bcv = "0.18.2"
 
-navigationCompose = "2.8.8"
+navigationCompose = "2.10.2"
 coreKtxVersion = "1.15.0"
 
 [libraries]
