@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 object WgcCoreDsSpacing {
     /** 0px */
@@ -43,6 +43,8 @@ object WgcCoreDsSpacing {
     const val xxs = xxs4
     const val xs = xs8
     const val sm = sm12
+    const val sm8 = xs8
+    const val xs6 = xxs4
     const val md = md16
     const val lg = lg24
     const val xl = xl32
