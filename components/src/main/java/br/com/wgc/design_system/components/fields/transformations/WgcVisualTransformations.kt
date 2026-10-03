@@ -24,4 +24,9 @@ object WgcVisualTransformations {
      * Máscara adaptativa de Telefone brasileiro: celular `(XX) XXXXX-XXXX` ou fixo `(XX) XXXX-XXXX`.
      */
     fun phone(): VisualTransformation = PhoneVisualTransformation()
+
+    /**
+     * Máscara dinâmica de CNPJ (`00.000.000/0000-00`) com mapeamento bidirecional de cursor.
+     */
+    fun cnpj(): VisualTransformation = CnpjVisualTransformation()
 }
