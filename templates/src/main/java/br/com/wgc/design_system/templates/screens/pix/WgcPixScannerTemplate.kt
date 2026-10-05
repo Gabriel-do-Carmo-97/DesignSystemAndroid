@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.pix
 
 import androidx.compose.foundation.border
@@ -40,6 +42,7 @@ data class WgcPixScannerUiState(
 /**
  * Template de escaneamento de QR Code Pix com mira iluminada e slot para CameraX.
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcPixScannerTemplate(

@@ -47,6 +47,7 @@ object WgcKycSuccessRoute
 /**
  * Subgrafo de navegação modular para validação cadastral (KYC).
  */
+@Suppress("LongMethod")
 fun NavGraphBuilder.kycNavGraph(
     navController: NavController,
     onKycCompleted: () -> Unit = {}

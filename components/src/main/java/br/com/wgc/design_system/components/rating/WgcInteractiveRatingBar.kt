@@ -22,6 +22,7 @@ import java.util.Locale
 /**
  * Barra de avaliação interativa com suporte a frações de meia estrela (0.5f) e nota textual.
  */
+@Suppress("MagicNumber")
 @Composable
 fun WgcInteractiveRatingBar(
     rating: Float,

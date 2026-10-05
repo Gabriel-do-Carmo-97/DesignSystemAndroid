@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.tracking
 
 import androidx.compose.foundation.layout.Arrangement
@@ -46,6 +48,7 @@ data class WgcOrderTrackingUiState(
 /**
  * Template completo de rastreamento de entregas com slot de mapa e card do entregador.
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcOrderTrackingTemplate(

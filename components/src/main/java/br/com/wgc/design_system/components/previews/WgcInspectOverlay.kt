@@ -15,6 +15,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 /**
  * Overlay de inspeção de layout ("Inspect Mode") para depuração visual no Showcase.
  */
+@Suppress("MagicNumber")
 @Composable
 fun WgcInspectOverlay(
     tokenLabel: String,

@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.security
 
 import androidx.compose.foundation.background
@@ -45,6 +47,7 @@ data class WgcTwoFactorAuthUiState(
 /**
  * Template completo de configuração de autenticação em 2 fatores (2FA).
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcTwoFactorAuthTemplate(

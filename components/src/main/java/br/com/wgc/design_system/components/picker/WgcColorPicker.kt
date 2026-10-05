@@ -31,6 +31,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 /**
  * Seletor de cores corporativo para personalização visual dinâmica e whitelabel.
  */
+@Suppress("MagicNumber")
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun WgcColorPicker(

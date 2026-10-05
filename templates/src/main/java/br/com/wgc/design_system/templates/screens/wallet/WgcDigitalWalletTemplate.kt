@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.wallet
 
 import androidx.compose.animation.core.animateFloatAsState
@@ -59,6 +61,7 @@ data class WgcDigitalWalletUiState(
 /**
  * Template de Carteira Digital com efeito de virada 3D do cartão para visualização de CVV.
  */
+@Suppress("LongMethod", "MagicNumber")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcDigitalWalletTemplate(

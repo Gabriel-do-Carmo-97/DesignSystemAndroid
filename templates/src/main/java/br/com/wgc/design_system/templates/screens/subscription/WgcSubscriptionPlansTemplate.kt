@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.subscription
 
 import androidx.compose.foundation.border
@@ -69,6 +71,7 @@ data class WgcSubscriptionPlansUiState(
 /**
  * Template completo de Planos e Assinaturas (SaaS/Billing).
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcSubscriptionPlansTemplate(

@@ -19,7 +19,7 @@ object WgcNetworkSimulator {
             delay(condition.delayMs)
         }
         if (condition.isFailure) {
-            throw IllegalStateException("Simulated Network Error: ${condition.name}")
+            error("Simulated Network Error: ${condition.name}")
         }
     }
 }

@@ -17,7 +17,8 @@ fun WgcRootDetectionDialog(
     onAcknowledgeRisk: () -> Unit,
     onExitApp: () -> Unit,
     title: String = "Alerta de Segurança",
-    message: String = "Identificamos que seu dispositivo possui privilégios de administrador (Root). Por razões de segurança financeira, algumas funções podem ser restritas."
+    message: String = "Identificamos que seu dispositivo possui privilégios de administrador (Root). " +
+        "Por razões de segurança financeira, algumas funções podem ser restritas."
 ) {
     AlertDialog(
         onDismissRequest = {},

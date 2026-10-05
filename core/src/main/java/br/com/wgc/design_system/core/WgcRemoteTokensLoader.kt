@@ -16,6 +16,7 @@ object WgcRemoteTokensLoader {
     /**
      * Interpreta cor no formato hexadecimal (#RRGGBB ou #AARRGGBB) para inteiro ARGB de 32 bits.
      */
+    @Suppress("MagicNumber")
     fun parseColorHex(hex: String): Int {
         val cleanHex = hex.trim().removePrefix("#")
         return when (cleanHex.length) {

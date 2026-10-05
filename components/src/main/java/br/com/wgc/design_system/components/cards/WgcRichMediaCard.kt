@@ -27,6 +27,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 /**
  * Card de mídia rica com suporte a banner de imagem/vídeo, tags contextuais e rodapé de autor.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcRichMediaCard(
     title: String,

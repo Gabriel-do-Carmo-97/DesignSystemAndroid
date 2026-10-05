@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.error
 
 import androidx.compose.foundation.layout.Arrangement
@@ -33,6 +35,7 @@ data class WgcErrorFallbackUiState(
 /**
  * Template genérico de contingência e erro para falhas de rede e indisponibilidade de serviços.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcErrorFallbackTemplate(
     uiState: WgcErrorFallbackUiState = WgcErrorFallbackUiState(),

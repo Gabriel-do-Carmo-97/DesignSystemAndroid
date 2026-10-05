@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.components.banner
 
 import androidx.compose.foundation.background
@@ -36,6 +38,7 @@ enum class WgcBannerSeverity {
 /**
  * Banner persistente para avisos de sistema, manutenção e informações operacionais.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcBanner(
     title: String,

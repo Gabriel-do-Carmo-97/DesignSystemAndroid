@@ -13,6 +13,7 @@ object WgcDeepLinkValidator {
     /**
      * Valida se uma URI de Deep Link possui esquema seguro e domínio autorizado.
      */
+    @Suppress("TooGenericExceptionCaught")
     fun isValid(uriString: String): Boolean {
         return try {
             val uri = Uri.parse(uriString)
