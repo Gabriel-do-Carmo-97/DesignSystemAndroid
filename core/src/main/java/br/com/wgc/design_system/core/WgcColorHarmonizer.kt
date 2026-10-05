@@ -6,6 +6,7 @@ import kotlin.math.min
 /**
  * Utilitário matemático para harmonização cromática e geração procedural de paletas no espaço HSL.
  */
+@Suppress("MagicNumber")
 object WgcColorHarmonizer {
 
     data class HslColor(val hue: Float, val saturation: Float, val lightness: Float)

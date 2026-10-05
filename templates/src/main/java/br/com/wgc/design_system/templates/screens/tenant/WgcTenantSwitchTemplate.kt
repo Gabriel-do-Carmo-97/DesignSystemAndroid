@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.tenant
 
 import androidx.compose.foundation.clickable
@@ -51,6 +53,7 @@ data class WgcTenantSwitchUiState(
 /**
  * Template de alternância de organização multi-tenant corporativa.
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcTenantSwitchTemplate(
     uiState: WgcTenantSwitchUiState = WgcTenantSwitchUiState(),
@@ -86,7 +89,11 @@ fun WgcTenantSwitchTemplate(
                         .clickable { onSelectTenant(tenant) },
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = CardDefaults.cardColors(
-                        containerColor = if (tenant.isCurrent) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
+                        containerColor = if (tenant.isCurrent) {
+                            MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
+                        } else {
+                            MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
+                        }
                     )
                 ) {
                     Row(

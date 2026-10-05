@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.invoice
 
 import androidx.compose.foundation.layout.Arrangement
@@ -49,6 +51,7 @@ data class WgcInvoiceReceiptUiState(
 /**
  * Template completo de comprovante financeiro e fatura com hash de autenticidade e ações de download/compartilhamento.
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcInvoiceReceiptTemplate(

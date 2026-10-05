@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.components.filter
 
 import androidx.compose.animation.AnimatedVisibility

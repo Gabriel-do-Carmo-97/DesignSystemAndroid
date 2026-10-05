@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.navigation.fallback
 
 import androidx.compose.foundation.layout.Box

@@ -93,8 +93,13 @@ class FakeProductDetailViewModel : BaseProductDetailViewModel() {
         _uiState.value = _uiState.value.copy(isFavorite = !_uiState.value.isFavorite)
     }
 
-    override fun onAddToCart() {}
-    override fun onShare() {}
+    override fun onAddToCart() {
+        // No-op for preview/fake
+    }
+
+    override fun onShare() {
+        // No-op for preview/fake
+    }
 }
 
 /**
@@ -134,6 +139,7 @@ fun WgcProductDetailTemplate(
 /**
  * Conteúdo visual desacoplado (stateless) para a tela de detalhes de produto.
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcProductDetailContent(
@@ -197,8 +203,17 @@ fun WgcProductDetailContent(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(text = "Total à vista", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
-                            Text(text = uiState.price, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                            Text(
+                                text = "Total à vista",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.outline
+                            )
+                            Text(
+                                text = uiState.price,
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
                         }
 
                         WgcClassicButton(

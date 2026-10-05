@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package br.com.wgc.design_system.templates.screens.chat
 
 import androidx.compose.foundation.background
@@ -51,6 +53,7 @@ data class WgcChatSupportUiState(
 /**
  * Template completo para chat de atendimento e suporte corporativo.
  */
+@Suppress("LongMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WgcChatSupportTemplate(
