@@ -16,6 +16,14 @@ apiValidation {
     ignoredProjects.addAll(listOf("app"))
 }
 
+allprojects {
+    configurations.all {
+        resolutionStrategy {
+            force("androidx.core:core:1.18.0")
+            force("androidx.core:core-ktx:1.18.0")
+        }
+    }
+}
 
 subprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
