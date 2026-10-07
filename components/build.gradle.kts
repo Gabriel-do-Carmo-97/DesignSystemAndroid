@@ -4,7 +4,6 @@ plugins {
     id("maven-publish")
     alias(libs.plugins.screenshot)
     alias(libs.plugins.jetbrains.kotlin.serialization)
-    alias(libs.plugins.kotlin.android)
 }
 // Module: WGC Design System Components - Publication trigger v1.0.1
 android {

@@ -1,3 +1,11 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        gradlePluginPortal()
+    }
+}
+
 plugins {
     `kotlin-dsl`
 }
@@ -9,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.android.tools.build:gradle:8.13.0")
+    compileOnly("com.android.tools.build:gradle:9.1.0")
     compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20")
 }
 
