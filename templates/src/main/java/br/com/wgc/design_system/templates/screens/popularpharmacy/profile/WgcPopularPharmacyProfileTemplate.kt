@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.popularpharmacy.profile
+package br.com.wgc.design_system.templates.screens.popularpharmacy.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

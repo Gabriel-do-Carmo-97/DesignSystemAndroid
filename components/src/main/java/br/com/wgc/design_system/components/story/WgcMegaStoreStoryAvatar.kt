@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.story
+package br.com.wgc.design_system.components.story
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hypermarket.discounts
+package br.com.wgc.design_system.templates.screens.hypermarket.discounts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

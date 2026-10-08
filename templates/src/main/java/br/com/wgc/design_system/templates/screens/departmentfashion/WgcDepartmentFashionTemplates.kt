@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.departmentfashion
+package br.com.wgc.design_system.templates.screens.departmentfashion
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

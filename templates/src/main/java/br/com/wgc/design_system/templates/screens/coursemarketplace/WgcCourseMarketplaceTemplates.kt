@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.coursemarketplace
+package br.com.wgc.design_system.templates.screens.coursemarketplace
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

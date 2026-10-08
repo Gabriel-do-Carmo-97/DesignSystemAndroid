@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.petsuperstore
+package br.com.wgc.design_system.templates.screens.petsuperstore
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

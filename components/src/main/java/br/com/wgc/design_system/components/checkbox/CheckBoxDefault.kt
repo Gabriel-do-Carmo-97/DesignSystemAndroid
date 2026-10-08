@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.checkbox
+package br.com.wgc.design_system.components.checkbox
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource

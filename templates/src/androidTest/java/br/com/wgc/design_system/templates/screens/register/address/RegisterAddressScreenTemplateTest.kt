@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.address
+package br.com.wgc.design_system.templates.screens.register.address
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

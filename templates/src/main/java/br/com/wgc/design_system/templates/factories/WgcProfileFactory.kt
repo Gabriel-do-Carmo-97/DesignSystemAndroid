@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.factories
+package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -47,8 +47,8 @@ import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcDevicePreviews
-import br.com.wgc.design_system.commons.WgcStatusDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.status.WgcStatusDevicePreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 

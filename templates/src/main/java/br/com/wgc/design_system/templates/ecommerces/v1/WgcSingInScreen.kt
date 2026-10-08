@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.ecommerces.v1
+package br.com.wgc.design_system.templates.ecommerces.v1
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

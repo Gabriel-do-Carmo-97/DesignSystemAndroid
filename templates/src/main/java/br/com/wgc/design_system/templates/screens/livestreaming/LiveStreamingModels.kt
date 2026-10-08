@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.livestreaming
+package br.com.wgc.design_system.templates.screens.livestreaming
 
 data class TwitchStreamer(val id: String, val streamer: String, val game: String, val viewers: String)
 

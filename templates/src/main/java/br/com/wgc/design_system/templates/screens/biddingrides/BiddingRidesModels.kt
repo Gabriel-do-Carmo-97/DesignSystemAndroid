@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.biddingrides
+package br.com.wgc.design_system.templates.screens.biddingrides
 
 data class InDriveOffer(val id: String, val driverName: String, val carModel: String, val rating: Double, val distance: String, val proposedPrice: Double)
 

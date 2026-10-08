@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.popularpharmacy.clinic
+package br.com.wgc.design_system.templates.screens.popularpharmacy.clinic
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

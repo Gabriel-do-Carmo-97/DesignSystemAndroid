@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.login.screen
+package br.com.wgc.design_system.templates.screens.login.screen
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -31,7 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.shimmerEffect
+import br.com.wgc.design_system.commons.shimmer.shimmerEffect
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults

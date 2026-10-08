@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.transitdigital
+package br.com.wgc.design_system.templates.screens.transitdigital
 
 data class CdtVehicle(val plate: String, val model: String, val year: String, val licensingStatus: String)
 

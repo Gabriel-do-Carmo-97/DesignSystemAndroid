@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.urbanfashion
+package br.com.wgc.design_system.templates.screens.urbanfashion
 
 data class CeaLook(val id: String, val title: String, val collection: String, val price: Double)
 

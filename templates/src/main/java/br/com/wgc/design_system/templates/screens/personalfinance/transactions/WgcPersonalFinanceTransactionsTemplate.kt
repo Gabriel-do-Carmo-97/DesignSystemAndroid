@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.personalfinance.transactions
+package br.com.wgc.design_system.templates.screens.personalfinance.transactions
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

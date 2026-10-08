@@ -35,7 +35,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
-import br.com.wgc.design_system.commons.WgcDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.templates.factories.WgcSettingsHubFactory
 import br.com.wgc.design_system.templates.factories.WgcSettingsHubType

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.map
+package br.com.wgc.design_system.templates.screens.map
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

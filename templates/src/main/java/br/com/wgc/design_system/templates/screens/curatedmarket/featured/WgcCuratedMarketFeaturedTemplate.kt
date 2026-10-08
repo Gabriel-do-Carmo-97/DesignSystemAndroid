@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.curatedmarket.featured
+package br.com.wgc.design_system.templates.screens.curatedmarket.featured
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

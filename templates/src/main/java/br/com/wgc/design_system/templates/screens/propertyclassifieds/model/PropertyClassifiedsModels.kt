@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyclassifieds.model
+package br.com.wgc.design_system.templates.screens.propertyclassifieds.model
 
 import br.com.wgc.design_system.components.cards.WgcZapFipeStatus
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.burgerfastfood
+package br.com.wgc.design_system.templates.screens.burgerfastfood
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

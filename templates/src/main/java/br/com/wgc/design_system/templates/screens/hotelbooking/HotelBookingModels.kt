@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hotelbooking
+package br.com.wgc.design_system.templates.screens.hotelbooking
 
 data class HotelBookingHotel(val id: String, val name: String, val city: String, val score: Double, val reviewsCount: Int, val geniusDiscount: String, val price: Double)
 

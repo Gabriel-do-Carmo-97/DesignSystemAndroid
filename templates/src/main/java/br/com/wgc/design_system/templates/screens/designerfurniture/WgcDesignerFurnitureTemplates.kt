@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.designerfurniture
+package br.com.wgc.design_system.templates.screens.designerfurniture
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

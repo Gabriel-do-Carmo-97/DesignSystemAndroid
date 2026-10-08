@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.boutique.model
+package br.com.wgc.design_system.templates.screens.boutique.model
 
 data class LazaProduct(
     val id: String,

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendfashion.auth
+package br.com.wgc.design_system.templates.screens.trendfashion.auth
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

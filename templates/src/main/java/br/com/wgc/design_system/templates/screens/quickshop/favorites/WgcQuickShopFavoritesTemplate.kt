@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.quickshop.favorites
+package br.com.wgc.design_system.templates.screens.quickshop.favorites
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

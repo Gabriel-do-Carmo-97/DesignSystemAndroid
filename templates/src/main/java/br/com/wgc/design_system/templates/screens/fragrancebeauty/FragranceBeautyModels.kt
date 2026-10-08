@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fragrancebeauty
+package br.com.wgc.design_system.templates.screens.fragrancebeauty
 
 data class BoticarioProduct(val id: String, val name: String, val line: String, val price: Double)
 

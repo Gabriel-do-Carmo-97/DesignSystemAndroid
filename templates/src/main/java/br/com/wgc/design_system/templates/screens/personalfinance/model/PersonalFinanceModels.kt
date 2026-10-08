@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.personalfinance.model
+package br.com.wgc.design_system.templates.screens.personalfinance.model
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DirectionsCar

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.carepharmacy.profile
+package br.com.wgc.design_system.templates.screens.carepharmacy.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -18,7 +18,7 @@ import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.cards.WgcHealthLoyaltyCard
 
-import br.com.wgc.design_system.commons.WgcDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 
 @Composable
 fun WgcCarePharmacyProfileTemplate(

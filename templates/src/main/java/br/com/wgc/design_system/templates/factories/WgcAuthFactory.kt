@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.factories
+package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

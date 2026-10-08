@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fintechcarbon
+package br.com.wgc.design_system.templates.screens.fintechcarbon
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn

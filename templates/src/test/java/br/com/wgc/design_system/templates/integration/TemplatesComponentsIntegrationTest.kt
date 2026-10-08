@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.integration
+package br.com.wgc.design_system.templates.integration
 
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.core.WgcCoreDsColorsFacade

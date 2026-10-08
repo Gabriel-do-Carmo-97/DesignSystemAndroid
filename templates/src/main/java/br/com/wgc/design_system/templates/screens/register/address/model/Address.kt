@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.address.model
+package br.com.wgc.design_system.templates.screens.register.address.model
 
 import kotlinx.serialization.Serializable
 

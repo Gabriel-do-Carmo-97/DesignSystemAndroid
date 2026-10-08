@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.beveragedelivery
+package br.com.wgc.design_system.templates.screens.beveragedelivery
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

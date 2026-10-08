@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.freightlogistics
+package br.com.wgc.design_system.templates.screens.freightlogistics
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.carpooling
+package br.com.wgc.design_system.templates.screens.carpooling
 
 data class CarpoolRide(val id: String, val driver: String, val origin: String, val destination: String, val departureTime: String, val price: Double)
 

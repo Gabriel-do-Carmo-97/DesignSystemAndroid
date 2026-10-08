@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.expresslogistics
+package br.com.wgc.design_system.templates.screens.expresslogistics
 
 data class LoggiPackage(val trackingCode: String, val destination: String, val status: String, val eta: String)
 

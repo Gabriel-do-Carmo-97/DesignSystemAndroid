@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.marketplacescreen
+package br.com.wgc.design_system.templates.screens.marketplacescreen
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

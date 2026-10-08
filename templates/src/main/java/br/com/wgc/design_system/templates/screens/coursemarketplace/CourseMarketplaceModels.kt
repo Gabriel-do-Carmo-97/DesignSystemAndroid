@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.coursemarketplace
+package br.com.wgc.design_system.templates.screens.coursemarketplace
 
 data class UdemyCourse(val id: String, val title: String, val instructor: String, val rating: Double, val price: Double)
 

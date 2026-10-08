@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.common.auth
+package br.com.wgc.design_system.templates.screens.common.auth
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

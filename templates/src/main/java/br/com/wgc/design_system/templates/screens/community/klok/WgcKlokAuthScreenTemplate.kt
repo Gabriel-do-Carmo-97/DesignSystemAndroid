@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.community.klok
+package br.com.wgc.design_system.templates.screens.community.klok
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable

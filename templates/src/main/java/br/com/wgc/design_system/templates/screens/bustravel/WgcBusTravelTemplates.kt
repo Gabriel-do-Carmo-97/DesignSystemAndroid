@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.bustravel
+package br.com.wgc.design_system.templates.screens.bustravel
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

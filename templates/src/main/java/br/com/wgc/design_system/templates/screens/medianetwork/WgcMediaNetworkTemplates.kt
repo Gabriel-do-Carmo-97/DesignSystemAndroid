@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.medianetwork
+package br.com.wgc.design_system.templates.screens.medianetwork
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

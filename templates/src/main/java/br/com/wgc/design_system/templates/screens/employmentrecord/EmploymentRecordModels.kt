@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.employmentrecord
+package br.com.wgc.design_system.templates.screens.employmentrecord
 
 data class CtpsContract(val company: String, val role: String, val admissionDate: String, val isActive: Boolean)
 

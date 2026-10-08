@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyclassifieds.fipezap
+package br.com.wgc.design_system.templates.screens.propertyclassifieds.fipezap
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

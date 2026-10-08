@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.integration
+package br.com.wgc.design_system.integration
 
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius

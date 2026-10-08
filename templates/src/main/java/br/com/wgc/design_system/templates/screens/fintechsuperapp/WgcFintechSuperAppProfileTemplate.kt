@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fintechsuperapp
+package br.com.wgc.design_system.templates.screens.fintechsuperapp
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape

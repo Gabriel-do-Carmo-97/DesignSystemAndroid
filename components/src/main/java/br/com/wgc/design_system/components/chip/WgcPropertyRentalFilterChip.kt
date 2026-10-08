@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.chip
+package br.com.wgc.design_system.components.chip
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

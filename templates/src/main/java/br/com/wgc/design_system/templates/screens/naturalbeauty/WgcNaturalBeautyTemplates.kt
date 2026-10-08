@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.naturalbeauty
+package br.com.wgc.design_system.templates.screens.naturalbeauty
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

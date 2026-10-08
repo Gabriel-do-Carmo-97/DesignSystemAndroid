@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates
+package br.com.wgc.design_system.templates
 
 import org.junit.Test
 

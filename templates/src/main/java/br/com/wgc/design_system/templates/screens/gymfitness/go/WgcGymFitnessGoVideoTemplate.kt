@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.gymfitness.go
+package br.com.wgc.design_system.templates.screens.gymfitness.go
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

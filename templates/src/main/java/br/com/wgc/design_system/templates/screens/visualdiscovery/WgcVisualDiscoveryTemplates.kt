@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.visualdiscovery
+package br.com.wgc.design_system.templates.screens.visualdiscovery
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

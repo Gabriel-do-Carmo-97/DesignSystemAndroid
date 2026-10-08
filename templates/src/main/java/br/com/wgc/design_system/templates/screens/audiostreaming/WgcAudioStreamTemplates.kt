@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.audiostreaming
+package br.com.wgc.design_system.templates.screens.audiostreaming
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

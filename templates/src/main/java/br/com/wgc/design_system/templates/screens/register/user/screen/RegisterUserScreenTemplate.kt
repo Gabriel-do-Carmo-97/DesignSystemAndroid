@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.user.screen
+package br.com.wgc.design_system.templates.screens.register.user.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,7 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.commons.shimmerEffect
+import br.com.wgc.design_system.commons.shimmer.shimmerEffect
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.checkbox.CheckboxDefaults
 import br.com.wgc.design_system.components.fields.SimpleTextField

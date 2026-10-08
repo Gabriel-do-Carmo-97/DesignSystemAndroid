@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.personalfinance.cards
+package br.com.wgc.design_system.templates.screens.personalfinance.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

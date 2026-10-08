@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.grocery.cart
+package br.com.wgc.design_system.templates.screens.grocery.cart
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

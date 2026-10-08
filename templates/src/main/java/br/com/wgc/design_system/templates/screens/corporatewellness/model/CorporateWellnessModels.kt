@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.corporatewellness.model
+package br.com.wgc.design_system.templates.screens.corporatewellness.model
 
 import br.com.wgc.design_system.components.cards.WgcCorporateWellnessPlanTier
 

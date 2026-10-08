@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.carepharmacy.model
+package br.com.wgc.design_system.templates.screens.carepharmacy.model
 
 data class DrogasilOffer(
     val id: String,

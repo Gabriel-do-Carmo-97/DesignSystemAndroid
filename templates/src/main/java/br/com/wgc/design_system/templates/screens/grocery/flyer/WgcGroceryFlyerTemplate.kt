@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.grocery.flyer
+package br.com.wgc.design_system.templates.screens.grocery.flyer
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

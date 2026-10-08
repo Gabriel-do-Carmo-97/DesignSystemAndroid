@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.flighttravel
+package br.com.wgc.design_system.templates.screens.flighttravel
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

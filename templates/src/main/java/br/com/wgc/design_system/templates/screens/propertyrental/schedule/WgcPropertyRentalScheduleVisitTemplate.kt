@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyrental.schedule
+package br.com.wgc.design_system.templates.screens.propertyrental.schedule
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

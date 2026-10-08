@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.premiumgrocery.home
+package br.com.wgc.design_system.templates.screens.premiumgrocery.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

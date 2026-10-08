@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.telemedicine
+package br.com.wgc.design_system.templates.screens.telemedicine
 
 data class DoctorSpecialist(
     val id: String,

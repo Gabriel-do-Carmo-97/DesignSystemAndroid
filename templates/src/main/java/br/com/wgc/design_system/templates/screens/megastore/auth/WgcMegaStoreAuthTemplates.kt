@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.megastore.auth
+package br.com.wgc.design_system.templates.screens.megastore.auth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

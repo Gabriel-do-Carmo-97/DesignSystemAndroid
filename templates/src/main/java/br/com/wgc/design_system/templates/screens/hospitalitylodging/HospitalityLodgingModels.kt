@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hospitalitylodging
+package br.com.wgc.design_system.templates.screens.hospitalitylodging
 
 data class HospedagemStay(val id: String, val title: String, val location: String, val rating: Double, val pricePerNight: Double, val tag: String)
 

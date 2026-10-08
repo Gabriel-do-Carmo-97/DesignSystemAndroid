@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.car.screen
+package br.com.wgc.design_system.templates.screens.register.car.screen
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically

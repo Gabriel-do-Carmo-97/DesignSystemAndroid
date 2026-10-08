@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.prestigebeauty
+package br.com.wgc.design_system.templates.screens.prestigebeauty
 
 data class SephoraItem(val id: String, val brand: String, val name: String, val pointsReward: Int, val price: Double)
 

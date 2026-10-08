@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.megastore.model
+package br.com.wgc.design_system.templates.screens.megastore.model
 
 /**
  * Modelo de Produto para a loja Shoppe.

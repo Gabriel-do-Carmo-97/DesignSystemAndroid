@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation.onboarding
+package br.com.wgc.design_system.navigation.onboarding
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

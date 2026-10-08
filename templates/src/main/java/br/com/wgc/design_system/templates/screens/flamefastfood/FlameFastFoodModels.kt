@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.flamefastfood
+package br.com.wgc.design_system.templates.screens.flamefastfood
 
 data class BKMeal(val id: String, val name: String, val fireGrilled: Boolean, val price: Double)
 

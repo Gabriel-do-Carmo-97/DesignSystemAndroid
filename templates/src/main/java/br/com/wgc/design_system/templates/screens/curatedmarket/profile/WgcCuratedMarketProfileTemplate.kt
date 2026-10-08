@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.curatedmarket.profile
+package br.com.wgc.design_system.templates.screens.curatedmarket.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

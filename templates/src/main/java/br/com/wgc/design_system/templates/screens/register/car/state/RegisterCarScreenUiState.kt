@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.car.state
+package br.com.wgc.design_system.templates.screens.register.car.state
 
 import kotlinx.serialization.Serializable
 

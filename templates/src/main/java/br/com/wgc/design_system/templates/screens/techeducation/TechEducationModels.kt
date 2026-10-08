@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.techeducation
+package br.com.wgc.design_system.templates.screens.techeducation
 
 data class AluraCourse(val id: String, val title: String, val track: String, val durationHours: Int, val progressPercent: Int)
 

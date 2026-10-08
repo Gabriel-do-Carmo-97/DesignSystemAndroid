@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.techeducation
+package br.com.wgc.design_system.templates.screens.techeducation
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

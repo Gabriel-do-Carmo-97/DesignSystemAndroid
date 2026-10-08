@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.workspacedocs
+package br.com.wgc.design_system.templates.screens.workspacedocs
 
 data class NotionDoc(val id: String, val icon: String, val title: String, val workspace: String)
 

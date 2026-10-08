@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.carepharmacy.vaccines
+package br.com.wgc.design_system.templates.screens.carepharmacy.vaccines
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

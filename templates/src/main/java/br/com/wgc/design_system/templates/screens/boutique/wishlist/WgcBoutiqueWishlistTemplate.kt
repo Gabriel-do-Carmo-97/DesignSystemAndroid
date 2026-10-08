@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.boutique.wishlist
+package br.com.wgc.design_system.templates.screens.boutique.wishlist
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

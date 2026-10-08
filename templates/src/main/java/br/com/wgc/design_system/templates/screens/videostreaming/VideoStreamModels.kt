@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.videostreaming
+package br.com.wgc.design_system.templates.screens.videostreaming
 
 data class VideoStreamTitle(val id: String, val title: String, val matchPercentage: String, val maturity: String, val genre: String)
 

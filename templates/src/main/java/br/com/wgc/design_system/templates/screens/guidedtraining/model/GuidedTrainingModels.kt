@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.guidedtraining.model
+package br.com.wgc.design_system.templates.screens.guidedtraining.model
 
 import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutCategory
 import br.com.wgc.design_system.components.cards.WgcFitnessWorkoutIntensity

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.pizza
+package br.com.wgc.design_system.templates.screens.pizza
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

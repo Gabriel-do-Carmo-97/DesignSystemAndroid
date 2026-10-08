@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.urbanmobility
+package br.com.wgc.design_system.templates.screens.urbanmobility
 
 data class UrbanMobilityRideOption(val id: String, val name: String, val eta: String, val price: Double, val discount: String? = null)
 data class UrbanMobilityTripHistory(val id: String, val destination: String, val date: String, val price: Double, val driver: String)

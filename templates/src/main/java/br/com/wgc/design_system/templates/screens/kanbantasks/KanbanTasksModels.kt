@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.kanbantasks
+package br.com.wgc.design_system.templates.screens.kanbantasks
 
 data class TrelloCard(val id: String, val title: String, val list: String, val checklistCount: String)
 

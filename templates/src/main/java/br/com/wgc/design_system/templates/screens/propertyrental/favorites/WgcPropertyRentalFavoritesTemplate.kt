@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyrental.favorites
+package br.com.wgc.design_system.templates.screens.propertyrental.favorites
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

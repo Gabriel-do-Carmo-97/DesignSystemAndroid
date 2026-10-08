@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.fields
+package br.com.wgc.design_system.components.fields
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

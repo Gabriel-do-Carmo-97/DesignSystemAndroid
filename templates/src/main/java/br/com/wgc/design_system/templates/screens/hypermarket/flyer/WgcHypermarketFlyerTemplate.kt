@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hypermarket.flyer
+package br.com.wgc.design_system.templates.screens.hypermarket.flyer
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

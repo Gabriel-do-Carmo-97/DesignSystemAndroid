@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.dealmarketplace.auth
+package br.com.wgc.design_system.templates.screens.dealmarketplace.auth
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fragrancebeauty
+package br.com.wgc.design_system.templates.screens.fragrancebeauty
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.buttons.fab
+package br.com.wgc.design_system.components.buttons.fab
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width

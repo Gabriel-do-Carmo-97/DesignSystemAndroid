@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.flamefastfood
+package br.com.wgc.design_system.templates.screens.flamefastfood
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

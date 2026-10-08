@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.pharmacychain.subscription
+package br.com.wgc.design_system.templates.screens.pharmacychain.subscription
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

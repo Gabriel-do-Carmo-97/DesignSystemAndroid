@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation.checkout
+package br.com.wgc.design_system.navigation.checkout
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

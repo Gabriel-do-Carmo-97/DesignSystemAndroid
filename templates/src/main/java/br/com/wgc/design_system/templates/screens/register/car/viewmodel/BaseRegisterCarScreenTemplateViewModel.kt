@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.car.viewmodel
+package br.com.wgc.design_system.templates.screens.register.car.viewmodel
 
 import android.icu.util.Calendar
 import android.util.Patterns

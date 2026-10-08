@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation
+package br.com.wgc.design_system.navigation
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.curatedmarket.model
+package br.com.wgc.design_system.templates.screens.curatedmarket.model
 
 data class TasselProduct(
     val id: String,

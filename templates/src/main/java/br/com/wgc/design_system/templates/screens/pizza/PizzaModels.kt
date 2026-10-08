@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.pizza
+package br.com.wgc.design_system.templates.screens.pizza
 
 data class PizzaPizza(val id: String, val name: String, val ingredients: String, val price: Double)
 object PizzaMockData {

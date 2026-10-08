@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.quickfooddelivery
+package br.com.wgc.design_system.templates.screens.quickfooddelivery
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.resetpassword.screen
+package br.com.wgc.design_system.templates.screens.resetpassword.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.commons.shimmerEffect
+import br.com.wgc.design_system.commons.shimmer.shimmerEffect
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.templates.screens.resetpassword.state.ResetPasswordScreenUiState

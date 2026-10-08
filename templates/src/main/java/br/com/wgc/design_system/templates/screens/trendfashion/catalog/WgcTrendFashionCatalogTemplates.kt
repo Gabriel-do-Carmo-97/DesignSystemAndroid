@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendfashion.catalog
+package br.com.wgc.design_system.templates.screens.trendfashion.catalog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

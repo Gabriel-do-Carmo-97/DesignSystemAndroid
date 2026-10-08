@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.audiostreaming
+package br.com.wgc.design_system.templates.screens.audiostreaming
 
 data class AudioStreamTrack(val id: String, val title: String, val artist: String, val duration: String)
 

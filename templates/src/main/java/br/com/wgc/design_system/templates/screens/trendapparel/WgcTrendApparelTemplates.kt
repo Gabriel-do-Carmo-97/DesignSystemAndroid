@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendapparel
+package br.com.wgc.design_system.templates.screens.trendapparel
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

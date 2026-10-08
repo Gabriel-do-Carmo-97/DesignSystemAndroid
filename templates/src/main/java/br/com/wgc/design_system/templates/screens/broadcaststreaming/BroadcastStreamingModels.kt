@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.broadcaststreaming
+package br.com.wgc.design_system.templates.screens.broadcaststreaming
 
 data class GloboplayContent(val id: String, val title: String, val category: String, val channel: String)
 

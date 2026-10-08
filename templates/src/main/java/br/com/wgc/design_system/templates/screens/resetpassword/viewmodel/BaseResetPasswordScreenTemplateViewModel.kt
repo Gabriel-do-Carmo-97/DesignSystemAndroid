@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.resetpassword.viewmodel
+package br.com.wgc.design_system.templates.screens.resetpassword.viewmodel
 
 import android.util.Patterns
 import androidx.lifecycle.ViewModel

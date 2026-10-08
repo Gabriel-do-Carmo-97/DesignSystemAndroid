@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.globalmarketplace.auth
+package br.com.wgc.design_system.templates.screens.globalmarketplace.auth
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

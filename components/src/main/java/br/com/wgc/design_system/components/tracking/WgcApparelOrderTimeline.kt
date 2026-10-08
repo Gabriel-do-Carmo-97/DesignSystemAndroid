@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.tracking
+package br.com.wgc.design_system.components.tracking
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

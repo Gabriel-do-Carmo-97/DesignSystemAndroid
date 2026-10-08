@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.citizenservices
+package br.com.wgc.design_system.templates.screens.citizenservices
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

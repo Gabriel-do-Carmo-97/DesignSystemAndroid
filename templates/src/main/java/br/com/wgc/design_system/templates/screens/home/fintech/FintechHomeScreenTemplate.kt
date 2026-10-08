@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.home.fintech
+package br.com.wgc.design_system.templates.screens.home.fintech
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

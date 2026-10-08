@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.pharmacychain.profile
+package br.com.wgc.design_system.templates.screens.pharmacychain.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.login.viewmodel
+package br.com.wgc.design_system.templates.screens.login.viewmodel
 
 class FakeLoginViewModel: BaseLoginScreenTemplateViewModel() {
     override fun onLoginClick() {}

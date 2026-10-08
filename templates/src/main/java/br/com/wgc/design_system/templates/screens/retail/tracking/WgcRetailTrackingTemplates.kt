@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.retail.tracking
+package br.com.wgc.design_system.templates.screens.retail.tracking
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

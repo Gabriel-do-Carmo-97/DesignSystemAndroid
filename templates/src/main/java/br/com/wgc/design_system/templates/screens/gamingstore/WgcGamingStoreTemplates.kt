@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.gamingstore
+package br.com.wgc.design_system.templates.screens.gamingstore
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

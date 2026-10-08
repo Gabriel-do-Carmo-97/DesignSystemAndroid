@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.channelmessaging
+package br.com.wgc.design_system.templates.screens.channelmessaging
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.story
+package br.com.wgc.design_system.components.story
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
 enum class StoryState {

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.premiumgrocery.adega
+package br.com.wgc.design_system.templates.screens.premiumgrocery.adega
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

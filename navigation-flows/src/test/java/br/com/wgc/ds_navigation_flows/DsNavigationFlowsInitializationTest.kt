@@ -1,5 +1,6 @@
-﻿package br.com.wgc.design_system.navigation
+package br.com.wgc.ds_navigation_flows
 
+import br.com.wgc.design_system.navigation.WgcNavigationFlowsInfo
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Test

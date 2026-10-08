@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertylisting.favorites
+package br.com.wgc.design_system.templates.screens.propertylisting.favorites
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

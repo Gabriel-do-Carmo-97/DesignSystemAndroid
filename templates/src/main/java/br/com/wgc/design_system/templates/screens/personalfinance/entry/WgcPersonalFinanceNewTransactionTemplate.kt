@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.personalfinance.entry
+package br.com.wgc.design_system.templates.screens.personalfinance.entry
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

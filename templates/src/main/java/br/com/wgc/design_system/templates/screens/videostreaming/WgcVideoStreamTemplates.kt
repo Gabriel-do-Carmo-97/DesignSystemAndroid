@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.videostreaming
+package br.com.wgc.design_system.templates.screens.videostreaming
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

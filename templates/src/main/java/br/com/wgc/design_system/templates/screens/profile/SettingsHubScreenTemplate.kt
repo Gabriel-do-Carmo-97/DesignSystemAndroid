@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.profile
+package br.com.wgc.design_system.templates.screens.profile
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

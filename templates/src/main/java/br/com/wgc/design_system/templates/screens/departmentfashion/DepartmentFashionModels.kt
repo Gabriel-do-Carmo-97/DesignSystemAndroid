@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.departmentfashion
+package br.com.wgc.design_system.templates.screens.departmentfashion
 
 data class RennerItem(val id: String, val title: String, val category: String, val price: Double)
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.guidedtraining.activity
+package br.com.wgc.design_system.templates.screens.guidedtraining.activity
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

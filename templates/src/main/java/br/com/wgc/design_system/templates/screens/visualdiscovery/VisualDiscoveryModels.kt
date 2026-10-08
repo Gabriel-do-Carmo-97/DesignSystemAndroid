@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.visualdiscovery
+package br.com.wgc.design_system.templates.screens.visualdiscovery
 
 data class PinterestPin(val id: String, val title: String, val author: String, val saves: Int)
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.user.state
+package br.com.wgc.design_system.templates.screens.register.user.state
 
 import kotlinx.serialization.Serializable
 

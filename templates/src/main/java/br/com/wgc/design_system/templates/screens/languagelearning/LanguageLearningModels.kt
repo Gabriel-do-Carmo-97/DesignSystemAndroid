@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.languagelearning
+package br.com.wgc.design_system.templates.screens.languagelearning
 
 data class DuolingoLesson(val id: String, val title: String, val level: Int, val isCompleted: Boolean, val xp: Int)
 

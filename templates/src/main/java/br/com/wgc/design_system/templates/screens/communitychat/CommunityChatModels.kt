@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.communitychat
+package br.com.wgc.design_system.templates.screens.communitychat
 
 data class CommunityChatServerItem(val id: String, val name: String, val channelsCount: Int, val activeUsers: Int)
 

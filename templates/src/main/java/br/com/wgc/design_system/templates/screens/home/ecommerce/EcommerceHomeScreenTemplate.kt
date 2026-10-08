@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.home.ecommerce
+package br.com.wgc.design_system.templates.screens.home.ecommerce
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

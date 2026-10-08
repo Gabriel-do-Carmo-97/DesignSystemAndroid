@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.directmessaging
+package br.com.wgc.design_system.templates.screens.directmessaging
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

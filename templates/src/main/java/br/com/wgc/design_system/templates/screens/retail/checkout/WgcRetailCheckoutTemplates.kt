@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.retail.checkout
+package br.com.wgc.design_system.templates.screens.retail.checkout
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

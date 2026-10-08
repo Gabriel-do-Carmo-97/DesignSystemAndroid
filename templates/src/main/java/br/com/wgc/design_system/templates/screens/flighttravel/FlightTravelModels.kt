@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.flighttravel
+package br.com.wgc.design_system.templates.screens.flighttravel
 
 data class DecolarPackage(val id: String, val destination: String, val nights: Int, val flightIncluded: Boolean, val price: Double)
 

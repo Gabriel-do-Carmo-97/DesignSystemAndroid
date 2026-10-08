@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.automotive
+package br.com.wgc.design_system.templates.screens.automotive
 
 data class VehicleItem(
     val id: String,

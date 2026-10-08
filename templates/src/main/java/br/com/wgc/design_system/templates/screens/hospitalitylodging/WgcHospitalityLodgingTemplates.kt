@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hospitalitylodging
+package br.com.wgc.design_system.templates.screens.hospitalitylodging
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

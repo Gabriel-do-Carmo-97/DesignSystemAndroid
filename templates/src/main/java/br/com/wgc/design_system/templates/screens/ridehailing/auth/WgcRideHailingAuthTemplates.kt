@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.ridehailing.auth
+package br.com.wgc.design_system.templates.screens.ridehailing.auth
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

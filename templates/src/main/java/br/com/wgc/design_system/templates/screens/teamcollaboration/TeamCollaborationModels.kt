@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.teamcollaboration
+package br.com.wgc.design_system.templates.screens.teamcollaboration
 
 data class SlackChannel(val id: String, val name: String, val topic: String, val hasUnread: Boolean)
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.navigation
+package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

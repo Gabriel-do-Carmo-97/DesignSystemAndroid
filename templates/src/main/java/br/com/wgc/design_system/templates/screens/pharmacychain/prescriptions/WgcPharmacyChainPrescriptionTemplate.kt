@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.pharmacychain.prescriptions
+package br.com.wgc.design_system.templates.screens.pharmacychain.prescriptions
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

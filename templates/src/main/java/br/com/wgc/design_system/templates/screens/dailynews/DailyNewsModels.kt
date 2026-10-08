@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.dailynews
+package br.com.wgc.design_system.templates.screens.dailynews
 
 data class G1NewsItem(val id: String, val headline: String, val section: String, val publishedAgo: String)
 

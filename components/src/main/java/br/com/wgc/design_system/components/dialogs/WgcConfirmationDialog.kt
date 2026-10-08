@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.dialogs
+package br.com.wgc.design_system.components.dialogs
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

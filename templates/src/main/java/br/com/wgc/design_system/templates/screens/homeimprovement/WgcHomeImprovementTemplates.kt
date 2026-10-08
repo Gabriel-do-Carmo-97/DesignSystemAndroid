@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.homeimprovement
+package br.com.wgc.design_system.templates.screens.homeimprovement
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.address.screen
+package br.com.wgc.design_system.templates.screens.register.address.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

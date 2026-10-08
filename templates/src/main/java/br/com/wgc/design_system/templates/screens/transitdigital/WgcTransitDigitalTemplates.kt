@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.transitdigital
+package br.com.wgc.design_system.templates.screens.transitdigital
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

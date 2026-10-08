@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.quickfooddelivery.auth
+package br.com.wgc.design_system.templates.screens.quickfooddelivery.auth
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

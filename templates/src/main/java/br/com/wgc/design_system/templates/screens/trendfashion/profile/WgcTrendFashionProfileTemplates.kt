@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendfashion.profile
+package br.com.wgc.design_system.templates.screens.trendfashion.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

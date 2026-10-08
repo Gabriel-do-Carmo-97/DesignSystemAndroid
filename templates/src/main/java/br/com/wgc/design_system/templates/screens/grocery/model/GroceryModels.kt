@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.grocery.model
+package br.com.wgc.design_system.templates.screens.grocery.model
 
 /**
  * Modelo de item de produto do hipermercado Supermercado Brasil.

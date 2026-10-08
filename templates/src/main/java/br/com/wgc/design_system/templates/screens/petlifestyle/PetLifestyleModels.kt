@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.petlifestyle
+package br.com.wgc.design_system.templates.screens.petlifestyle
 
 data class ZeeDogProduct(val id: String, val name: String, val category: String, val price: Double)
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.user.viewmodel
+package br.com.wgc.design_system.templates.screens.register.user.viewmodel
 
 class FakeUserViewModel: BaseRegisterUserTemplateViewModel() {
     override fun onRegisterClick() {}

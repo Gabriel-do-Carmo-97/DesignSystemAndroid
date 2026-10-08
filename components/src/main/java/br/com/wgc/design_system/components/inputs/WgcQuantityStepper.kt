@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.inputs
+package br.com.wgc.design_system.components.inputs
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertylisting.detail
+package br.com.wgc.design_system.templates.screens.propertylisting.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.freightlogistics
+package br.com.wgc.design_system.templates.screens.freightlogistics
 
 data class LalamoveVehicle(val id: String, val type: String, val capacityKg: Int, val basePrice: Double)
 

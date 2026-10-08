@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.marketplacescreen
+package br.com.wgc.design_system.templates.screens.marketplacescreen
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

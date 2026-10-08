@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.resetpassword.state
+package br.com.wgc.design_system.templates.screens.resetpassword.state
 
 import kotlinx.serialization.Serializable
 

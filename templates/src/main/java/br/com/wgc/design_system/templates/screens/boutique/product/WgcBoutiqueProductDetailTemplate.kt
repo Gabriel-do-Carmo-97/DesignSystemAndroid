@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.boutique.product
+package br.com.wgc.design_system.templates.screens.boutique.product
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

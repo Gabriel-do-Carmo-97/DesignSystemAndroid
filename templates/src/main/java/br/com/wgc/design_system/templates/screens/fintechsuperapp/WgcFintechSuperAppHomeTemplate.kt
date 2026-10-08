@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fintechsuperapp
+package br.com.wgc.design_system.templates.screens.fintechsuperapp
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll

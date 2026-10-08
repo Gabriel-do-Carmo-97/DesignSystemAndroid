@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.corporatewellness.wellness
+package br.com.wgc.design_system.templates.screens.corporatewellness.wellness
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

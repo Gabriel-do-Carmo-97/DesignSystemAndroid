@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.businessnews
+package br.com.wgc.design_system.templates.screens.businessnews
 
 data class ExameArticle(val id: String, val title: String, val category: String)
 

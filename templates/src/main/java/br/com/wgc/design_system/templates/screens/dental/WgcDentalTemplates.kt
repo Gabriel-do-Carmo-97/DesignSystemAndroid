@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.dental
+package br.com.wgc.design_system.templates.screens.dental
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

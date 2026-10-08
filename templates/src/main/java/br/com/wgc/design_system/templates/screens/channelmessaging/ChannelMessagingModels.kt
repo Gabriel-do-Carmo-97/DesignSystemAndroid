@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.channelmessaging
+package br.com.wgc.design_system.templates.screens.channelmessaging
 
 data class TelegramChannel(val id: String, val name: String, val subscribers: String, val unread: Boolean)
 

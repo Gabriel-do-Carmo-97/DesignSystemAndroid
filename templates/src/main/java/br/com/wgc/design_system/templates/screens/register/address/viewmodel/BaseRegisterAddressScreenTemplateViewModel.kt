@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.address.viewmodel
+package br.com.wgc.design_system.templates.screens.register.address.viewmodel
 
 import androidx.lifecycle.ViewModel
 import br.com.wgc.design_system.templates.screens.register.address.state.RegisterAddressScreenUiState

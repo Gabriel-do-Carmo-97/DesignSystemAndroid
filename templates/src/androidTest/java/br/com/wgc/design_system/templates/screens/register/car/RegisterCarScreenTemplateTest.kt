@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.register.car
+package br.com.wgc.design_system.templates.screens.register.car
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

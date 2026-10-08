@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.homeimprovement
+package br.com.wgc.design_system.templates.screens.homeimprovement
 
 data class LeroyItem(val id: String, val title: String, val department: String, val price: Double)
 

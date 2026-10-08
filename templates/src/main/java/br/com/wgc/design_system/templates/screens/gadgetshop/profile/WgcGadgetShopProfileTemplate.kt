@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.gadgetshop.profile
+package br.com.wgc.design_system.templates.screens.gadgetshop.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

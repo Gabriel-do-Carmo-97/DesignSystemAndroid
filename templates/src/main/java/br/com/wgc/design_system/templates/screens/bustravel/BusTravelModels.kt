@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.bustravel
+package br.com.wgc.design_system.templates.screens.bustravel
 
 data class ClickBusTrip(val id: String, val company: String, val departureTime: String, val arrivalTime: String, val seatType: String, val price: Double)
 

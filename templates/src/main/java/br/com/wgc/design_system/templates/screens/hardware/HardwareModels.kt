@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hardware
+package br.com.wgc.design_system.templates.screens.hardware
 
 data class HardwareItem(
     val id: String,

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fintechcarbon
+package br.com.wgc.design_system.templates.screens.fintechcarbon
 
 data class C6AtomosReward(
     val id: String,

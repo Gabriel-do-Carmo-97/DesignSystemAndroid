@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation
+package br.com.wgc.design_system.navigation
 
 /**
  * Ponto de entrada e metadados estruturais do módulo ds-navigation-flows.

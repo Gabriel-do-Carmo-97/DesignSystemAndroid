@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.gamingstore
+package br.com.wgc.design_system.templates.screens.gamingstore
 
 data class SteamGame(val id: String, val title: String, val discount: String, val price: Double)
 

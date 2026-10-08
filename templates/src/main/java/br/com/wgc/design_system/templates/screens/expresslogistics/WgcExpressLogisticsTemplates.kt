@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.expresslogistics
+package br.com.wgc.design_system.templates.screens.expresslogistics
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

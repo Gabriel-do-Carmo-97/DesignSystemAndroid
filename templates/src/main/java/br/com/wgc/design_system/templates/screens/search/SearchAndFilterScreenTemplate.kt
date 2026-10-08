@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.search
+package br.com.wgc.design_system.templates.screens.search
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

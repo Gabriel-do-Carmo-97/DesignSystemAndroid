@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertylisting.model
+package br.com.wgc.design_system.templates.screens.propertylisting.model
 
 import br.com.wgc.design_system.components.fields.WgcPropertyListingPurpose
 

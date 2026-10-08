@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.employmentrecord
+package br.com.wgc.design_system.templates.screens.employmentrecord
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

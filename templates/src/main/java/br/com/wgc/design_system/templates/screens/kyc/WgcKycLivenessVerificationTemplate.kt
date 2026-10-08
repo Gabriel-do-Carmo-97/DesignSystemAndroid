@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.kyc
+package br.com.wgc.design_system.templates.screens.kyc
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

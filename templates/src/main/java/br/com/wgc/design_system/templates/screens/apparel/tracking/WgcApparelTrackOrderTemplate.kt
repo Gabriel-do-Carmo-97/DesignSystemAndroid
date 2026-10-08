@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.apparel.tracking
+package br.com.wgc.design_system.templates.screens.apparel.tracking
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

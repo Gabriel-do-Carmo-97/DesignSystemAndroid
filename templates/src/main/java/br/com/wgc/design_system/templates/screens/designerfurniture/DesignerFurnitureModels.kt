@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.designerfurniture
+package br.com.wgc.design_system.templates.screens.designerfurniture
 
 data class TokStokItem(val id: String, val title: String, val room: String, val price: Double)
 

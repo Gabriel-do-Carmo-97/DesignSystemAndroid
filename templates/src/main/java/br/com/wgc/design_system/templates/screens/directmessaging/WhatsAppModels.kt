@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.directmessaging
+package br.com.wgc.design_system.templates.screens.directmessaging
 
 data class WhatsAppChat(val id: String, val name: String, val lastMessage: String, val time: String, val unreadCount: Int = 0)
 

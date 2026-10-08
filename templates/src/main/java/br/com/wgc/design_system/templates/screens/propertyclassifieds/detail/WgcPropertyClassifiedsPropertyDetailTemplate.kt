@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyclassifieds.detail
+package br.com.wgc.design_system.templates.screens.propertyclassifieds.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

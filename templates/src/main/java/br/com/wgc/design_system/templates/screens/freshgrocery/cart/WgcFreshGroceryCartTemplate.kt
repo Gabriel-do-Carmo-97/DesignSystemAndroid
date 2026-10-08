@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.freshgrocery.cart
+package br.com.wgc.design_system.templates.screens.freshgrocery.cart
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

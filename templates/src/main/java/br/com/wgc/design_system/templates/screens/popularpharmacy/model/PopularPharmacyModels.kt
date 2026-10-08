@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.popularpharmacy.model
+package br.com.wgc.design_system.templates.screens.popularpharmacy.model
 
 data class PagueMenosOffer(
     val id: String,

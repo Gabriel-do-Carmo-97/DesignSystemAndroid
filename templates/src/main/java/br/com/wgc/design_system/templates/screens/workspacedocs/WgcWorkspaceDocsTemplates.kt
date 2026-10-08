@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.workspacedocs
+package br.com.wgc.design_system.templates.screens.workspacedocs
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

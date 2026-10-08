@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.buttons
+package br.com.wgc.design_system.components.buttons
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape

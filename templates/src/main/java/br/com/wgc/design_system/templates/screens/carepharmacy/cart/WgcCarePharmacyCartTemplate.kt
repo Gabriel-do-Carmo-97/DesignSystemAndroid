@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.carepharmacy.cart
+package br.com.wgc.design_system.templates.screens.carepharmacy.cart
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

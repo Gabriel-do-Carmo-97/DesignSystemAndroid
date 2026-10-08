@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.medianetwork
+package br.com.wgc.design_system.templates.screens.medianetwork
 
 data class UolNews(val id: String, val headline: String, val author: String)
 

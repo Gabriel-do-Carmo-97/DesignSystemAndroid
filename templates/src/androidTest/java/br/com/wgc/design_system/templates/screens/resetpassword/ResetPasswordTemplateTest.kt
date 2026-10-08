@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.resetpassword
+package br.com.wgc.design_system.templates.screens.resetpassword
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

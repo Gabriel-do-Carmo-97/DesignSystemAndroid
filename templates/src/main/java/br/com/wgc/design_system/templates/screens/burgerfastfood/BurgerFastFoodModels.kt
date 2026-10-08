@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.burgerfastfood
+package br.com.wgc.design_system.templates.screens.burgerfastfood
 
 data class McItem(val id: String, val name: String, val points: Int, val price: Double)
 

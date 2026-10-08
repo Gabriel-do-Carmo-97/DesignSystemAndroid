@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.community.split
+package br.com.wgc.design_system.templates.screens.community.split
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

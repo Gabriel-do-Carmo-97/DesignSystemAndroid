@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.quickshop.checkout
+package br.com.wgc.design_system.templates.screens.quickshop.checkout
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

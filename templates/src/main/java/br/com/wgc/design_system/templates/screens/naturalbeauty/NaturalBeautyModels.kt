@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.naturalbeauty
+package br.com.wgc.design_system.templates.screens.naturalbeauty
 
 data class NaturalBeautyItem(val id: String, val name: String, val line: String, val refillAvailable: Boolean, val price: Double)
 

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.gadgetshop.home
+package br.com.wgc.design_system.templates.screens.gadgetshop.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendfashion.model
+package br.com.wgc.design_system.templates.screens.trendfashion.model
 
 /**
  * Modelos de dados para o ecossistema Stylish eCommerce UI Kit.

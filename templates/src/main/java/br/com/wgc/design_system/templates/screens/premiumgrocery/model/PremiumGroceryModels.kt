@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.premiumgrocery.model
+package br.com.wgc.design_system.templates.screens.premiumgrocery.model
 
 /**
  * Modelo de dados de um produto do Supermercado Gourmet.

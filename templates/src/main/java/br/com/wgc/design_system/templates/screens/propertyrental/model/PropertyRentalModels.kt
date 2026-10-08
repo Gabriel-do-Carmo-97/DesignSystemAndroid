@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.propertyrental.model
+package br.com.wgc.design_system.templates.screens.propertyrental.model
 
 import br.com.wgc.design_system.components.fields.WgcPropertyRentalContractType
 

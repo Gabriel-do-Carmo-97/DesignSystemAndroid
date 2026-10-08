@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.trendapparel
+package br.com.wgc.design_system.templates.screens.trendapparel
 
 data class TrendApparelProduct(val id: String, val title: String, val department: String, val price: Double)
 

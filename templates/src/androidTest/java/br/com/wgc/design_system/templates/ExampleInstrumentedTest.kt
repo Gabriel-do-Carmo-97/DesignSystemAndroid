@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates
+package br.com.wgc.design_system.templates
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

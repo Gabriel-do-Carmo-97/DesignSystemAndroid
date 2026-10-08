@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.kanbantasks
+package br.com.wgc.design_system.templates.screens.kanbantasks
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

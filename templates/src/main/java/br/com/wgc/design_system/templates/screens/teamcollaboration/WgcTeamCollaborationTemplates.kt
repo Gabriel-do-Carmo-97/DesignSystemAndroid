@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.teamcollaboration
+package br.com.wgc.design_system.templates.screens.teamcollaboration
 
 import br.com.wgc.design_system.templates.screens.common.placeholder.WgcGenericPlaceholderTemplate
 

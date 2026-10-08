@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.beveragedelivery
+package br.com.wgc.design_system.templates.screens.beveragedelivery
 
 data class BeverageItem(
     val id: String,

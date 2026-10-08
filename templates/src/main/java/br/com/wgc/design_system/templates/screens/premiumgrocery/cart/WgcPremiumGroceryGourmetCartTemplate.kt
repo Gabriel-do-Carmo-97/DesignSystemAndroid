@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.premiumgrocery.cart
+package br.com.wgc.design_system.templates.screens.premiumgrocery.cart
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

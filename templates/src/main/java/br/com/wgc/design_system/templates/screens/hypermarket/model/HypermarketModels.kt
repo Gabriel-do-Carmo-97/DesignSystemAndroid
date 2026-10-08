@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.hypermarket.model
+package br.com.wgc.design_system.templates.screens.hypermarket.model
 
 /**
  * Modelo de Produto de Supermercado do Clube Extra.

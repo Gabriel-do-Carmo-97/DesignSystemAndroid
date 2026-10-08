@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.boutique.cart
+package br.com.wgc.design_system.templates.screens.boutique.cart
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

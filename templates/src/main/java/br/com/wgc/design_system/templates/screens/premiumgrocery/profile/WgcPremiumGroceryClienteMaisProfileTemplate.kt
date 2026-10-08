@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.premiumgrocery.profile
+package br.com.wgc.design_system.templates.screens.premiumgrocery.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

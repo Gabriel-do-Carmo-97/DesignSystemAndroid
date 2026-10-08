@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.apparel.model
+package br.com.wgc.design_system.templates.screens.apparel.model
 
 import androidx.compose.ui.graphics.Color
 import br.com.wgc.design_system.core.WgcCoreDsColors

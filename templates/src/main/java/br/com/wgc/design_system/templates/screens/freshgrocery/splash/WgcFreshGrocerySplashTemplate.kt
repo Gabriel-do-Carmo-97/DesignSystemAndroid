@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.freshgrocery.splash
+package br.com.wgc.design_system.templates.screens.freshgrocery.splash
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

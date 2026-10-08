@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.petcare
+package br.com.wgc.design_system.templates.screens.petcare
 
 data class PetzProduct(val id: String, val title: String, val category: String, val price: Double, val subscriptionPrice: Double)
 
