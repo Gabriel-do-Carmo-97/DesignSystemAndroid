@@ -10,16 +10,16 @@ class WgcAndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.library")
+                apply(DSBuildLogicConstants.ANDROID_LIBRARY_PLUGIN_ID)
             }
 
             extensions.configure<LibraryExtension> {
-                compileSdk = 37
+                compileSdk = DSBuildLogicConstants.COMPILE_SDK_VERSION
 
                 defaultConfig {
-                    minSdk = 29
-                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-                    consumerProguardFiles("consumer-rules.pro")
+                    minSdk = DSBuildLogicConstants.MIN_SDK_VERSION
+                    testInstrumentationRunner = DSBuildLogicConstants.TEST_INSTRUMENTATION_RUNNER
+                    consumerProguardFiles(DSBuildLogicConstants.CONSUMER_RULES_PRO)
                 }
 
                 compileOptions {
@@ -29,7 +29,7 @@ class WgcAndroidLibraryConventionPlugin : Plugin<Project> {
 
                 packaging {
                     resources {
-                        excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
+                        excludes += DSBuildLogicConstants.EXCLUDES
                     }
                 }
 
