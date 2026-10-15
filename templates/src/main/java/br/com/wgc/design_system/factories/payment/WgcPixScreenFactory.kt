@@ -13,10 +13,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.pix.FakePixTransferViewModel
-import br.com.wgc.design_system.templates.screens.pix.WgcPixQrCodePaymentTemplate
-import br.com.wgc.design_system.templates.screens.pix.WgcPixQrPaymentUiState
-import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferTemplate
+import br.com.wgc.design_system.factories.payment.templates.FakePixTransferViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcPixQrCodePaymentTemplate
+import br.com.wgc.design_system.factories.payment.templates.WgcPixQrPaymentUiState
+import br.com.wgc.design_system.factories.payment.templates.WgcPixTransferTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.map
+package br.com.wgc.design_system.factories.map.templates
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

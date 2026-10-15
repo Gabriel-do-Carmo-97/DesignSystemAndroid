@@ -3,16 +3,16 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcFitnessNavItem
-import br.com.wgc.design_system.templates.screens.guidedtraining.activity.WgcNtcActivityTemplate
-import br.com.wgc.design_system.templates.screens.guidedtraining.detail.WgcNtcWorkoutDetailTemplate
-import br.com.wgc.design_system.templates.screens.guidedtraining.home.WgcNtcHomeTemplate
-import br.com.wgc.design_system.templates.screens.guidedtraining.model.NtcActivityStats
-import br.com.wgc.design_system.templates.screens.guidedtraining.model.GuidedTrainingMockData
-import br.com.wgc.design_system.templates.screens.guidedtraining.model.NtcProgramItem
-import br.com.wgc.design_system.templates.screens.guidedtraining.model.NtcUserProfile
-import br.com.wgc.design_system.templates.screens.guidedtraining.model.NtcWorkoutItem
-import br.com.wgc.design_system.templates.screens.guidedtraining.player.WgcNtcWorkoutPlayerTemplate
-import br.com.wgc.design_system.templates.screens.guidedtraining.programs.WgcNtcProgramsTemplate
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.activity.WgcNtcActivityTemplate
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.detail.WgcNtcWorkoutDetailTemplate
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.home.WgcNtcHomeTemplate
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.model.NtcActivityStats
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.model.GuidedTrainingMockData
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.model.NtcProgramItem
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.model.NtcUserProfile
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.model.NtcWorkoutItem
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.player.WgcNtcWorkoutPlayerTemplate
+import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.programs.WgcNtcProgramsTemplate
 
 enum class WgcGuidedTrainingScreen {
     HOME,

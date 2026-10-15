@@ -2,11 +2,11 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.telemedicine.WgcTelemedicineHomeTemplate
-import br.com.wgc.design_system.templates.screens.telemedicine.WgcTelemedicinePrescriptionsTemplate
-import br.com.wgc.design_system.templates.screens.telemedicine.WgcTelemedicineProfileTemplate
-import br.com.wgc.design_system.templates.screens.telemedicine.WgcTelemedicineSpecialistsTemplate
-import br.com.wgc.design_system.templates.screens.telemedicine.WgcTelemedicineVideoCallTemplate
+import br.com.wgc.design_system.factories.verticals.telemedicine.templates.WgcTelemedicineHomeTemplate
+import br.com.wgc.design_system.factories.verticals.telemedicine.templates.WgcTelemedicinePrescriptionsTemplate
+import br.com.wgc.design_system.factories.verticals.telemedicine.templates.WgcTelemedicineProfileTemplate
+import br.com.wgc.design_system.factories.verticals.telemedicine.templates.WgcTelemedicineSpecialistsTemplate
+import br.com.wgc.design_system.factories.verticals.telemedicine.templates.WgcTelemedicineVideoCallTemplate
 
 enum class WgcTelemedicineScreen {
     HOME,

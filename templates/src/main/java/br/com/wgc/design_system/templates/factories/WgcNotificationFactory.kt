@@ -2,9 +2,9 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.notification.BaseNotificationHubViewModel
-import br.com.wgc.design_system.templates.screens.notification.FakeNotificationHubViewModel
-import br.com.wgc.design_system.templates.screens.notification.WgcNotificationHubTemplate
+import br.com.wgc.design_system.factories.notification.templates.BaseNotificationHubViewModel
+import br.com.wgc.design_system.factories.notification.templates.FakeNotificationHubViewModel
+import br.com.wgc.design_system.factories.notification.templates.WgcNotificationHubTemplate
 
 /**
  * Fábrica universal para instanciação padronizada da Central de Notificações.

@@ -2,11 +2,11 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.beveragedelivery.WgcBeverageDeliveryCartTemplate
-import br.com.wgc.design_system.templates.screens.beveragedelivery.WgcBeverageDeliveryColdTrackerTemplate
-import br.com.wgc.design_system.templates.screens.beveragedelivery.WgcBeverageDeliveryHomeTemplate
-import br.com.wgc.design_system.templates.screens.beveragedelivery.WgcBeverageDeliveryOffersTemplate
-import br.com.wgc.design_system.templates.screens.beveragedelivery.WgcBeverageDeliveryProfileTemplate
+import br.com.wgc.design_system.factories.verticals.beveragedelivery.templates.WgcBeverageDeliveryCartTemplate
+import br.com.wgc.design_system.factories.verticals.beveragedelivery.templates.WgcBeverageDeliveryColdTrackerTemplate
+import br.com.wgc.design_system.factories.verticals.beveragedelivery.templates.WgcBeverageDeliveryHomeTemplate
+import br.com.wgc.design_system.factories.verticals.beveragedelivery.templates.WgcBeverageDeliveryOffersTemplate
+import br.com.wgc.design_system.factories.verticals.beveragedelivery.templates.WgcBeverageDeliveryProfileTemplate
 
 enum class WgcBeverageDeliveryScreen {
     HOME,

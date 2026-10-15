@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.checkout
+package br.com.wgc.design_system.factories.checkout.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

@@ -31,8 +31,8 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.kyc.WgcKycDocumentUiState
-import br.com.wgc.design_system.templates.screens.kyc.WgcKycDocumentVerificationTemplate
+import br.com.wgc.design_system.factories.kyc.templates.WgcKycDocumentUiState
+import br.com.wgc.design_system.factories.kyc.templates.WgcKycDocumentVerificationTemplate
 import kotlinx.serialization.Serializable
 
 @Serializable

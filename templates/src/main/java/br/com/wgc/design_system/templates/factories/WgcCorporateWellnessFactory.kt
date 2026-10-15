@@ -4,17 +4,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.cards.WgcCorporateWellnessPlanTier
 import br.com.wgc.design_system.components.navigation.WgcCorporateWellnessNavItem
-import br.com.wgc.design_system.templates.screens.corporatewellness.checkin.WgcCorporateWellnessCheckInTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.explore.WgcCorporateWellnessExploreGymsTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.home.WgcCorporateWellnessHomeTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessCheckIn
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessGym
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessMockData
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessPlan
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessUserProfile
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessWellnessApp
-import br.com.wgc.design_system.templates.screens.corporatewellness.plans.WgcCorporateWellnessPlansTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.wellness.WgcCorporateWellnessWellnessAppsTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.checkin.WgcCorporateWellnessCheckInTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.explore.WgcCorporateWellnessExploreGymsTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.home.WgcCorporateWellnessHomeTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessCheckIn
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessGym
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessMockData
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessPlan
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessUserProfile
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessWellnessApp
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.plans.WgcCorporateWellnessPlansTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.wellness.WgcCorporateWellnessWellnessAppsTemplate
 
 /**
  * Variantes de Telas suportadas pela Fábrica Corporate Wellness (Wellness Network).

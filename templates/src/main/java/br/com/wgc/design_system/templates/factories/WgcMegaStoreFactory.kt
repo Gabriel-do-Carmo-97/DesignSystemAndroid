@@ -3,18 +3,18 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeOtpRecoveryScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppePasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeStartScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.chat.WgcShoppeChatScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.checkout.WgcShoppeCartScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.checkout.WgcShoppePaymentScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.checkout.WgcShoppeToReceiveTrackingScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.home.WgcShoppeHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.product.WgcShoppeProductDetailsScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.profile.WgcShoppeProfileScreenTemplate
-import br.com.wgc.design_system.templates.screens.megastore.search.WgcShoppeVisualSearchScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.auth.WgcShoppeLoginScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.auth.WgcShoppeOtpRecoveryScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.auth.WgcShoppePasswordScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.auth.WgcShoppeStartScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.chat.WgcShoppeChatScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.checkout.WgcShoppeCartScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.checkout.WgcShoppePaymentScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.checkout.WgcShoppeToReceiveTrackingScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.home.WgcShoppeHomeScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.product.WgcShoppeProductDetailsScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.profile.WgcShoppeProfileScreenTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.search.WgcShoppeVisualSearchScreenTemplate
 
 /**
  * Os Principais Fluxos Oficiais do Shoppe Fashion eCommerce UI Kit.

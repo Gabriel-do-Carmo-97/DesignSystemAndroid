@@ -3,17 +3,17 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcGymFitnessNavItem
-import br.com.wgc.design_system.templates.screens.gymfitness.classes.WgcGymFitnessClassesTemplate
-import br.com.wgc.design_system.templates.screens.gymfitness.go.WgcGymFitnessGoVideoTemplate
-import br.com.wgc.design_system.templates.screens.gymfitness.home.WgcGymFitnessHomeTemplate
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessClass
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessGymUnit
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessMockData
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessUserProfile
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessVideoWorkout
-import br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessWorkoutRoutine
-import br.com.wgc.design_system.templates.screens.gymfitness.profile.WgcGymFitnessProfilePassTemplate
-import br.com.wgc.design_system.templates.screens.gymfitness.workouts.WgcGymFitnessWorkoutRoutineTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.classes.WgcGymFitnessClassesTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.go.WgcGymFitnessGoVideoTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.home.WgcGymFitnessHomeTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessClass
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessGymUnit
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessMockData
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessUserProfile
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessVideoWorkout
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessWorkoutRoutine
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.profile.WgcGymFitnessProfilePassTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.workouts.WgcGymFitnessWorkoutRoutineTemplate
 
 /**
  * Variantes de Telas suportadas pela Fábrica Gym & Fitness.

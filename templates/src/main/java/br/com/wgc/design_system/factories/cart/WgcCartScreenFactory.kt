@@ -13,11 +13,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.apparel.cart.WgcClotheeCartTemplate
-import br.com.wgc.design_system.templates.screens.boutique.cart.WgcLazaCartTemplate
-import br.com.wgc.design_system.templates.screens.carepharmacy.cart.WgcDrogasilCartTemplate
-import br.com.wgc.design_system.templates.screens.cart.FakeStandardCartViewModel
-import br.com.wgc.design_system.templates.screens.cart.StandardCartScreenTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.cart.WgcClotheeCartTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.cart.WgcLazaCartTemplate
+import br.com.wgc.design_system.factories.verticals.carepharmacy.templates.cart.WgcDrogasilCartTemplate
+import br.com.wgc.design_system.factories.cart.templates.FakeStandardCartViewModel
+import br.com.wgc.design_system.factories.cart.templates.StandardCartScreenTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

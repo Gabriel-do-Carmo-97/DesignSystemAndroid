@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.home.fintech.FakeFintechHomeViewModel
-import br.com.wgc.design_system.templates.screens.home.fintech.FintechHomeScreenTemplate
+import br.com.wgc.design_system.factories.home.templates.fintech.FakeFintechHomeViewModel
+import br.com.wgc.design_system.factories.home.templates.fintech.FintechHomeScreenTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

@@ -3,12 +3,12 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcOrganizzeNavItem
-import br.com.wgc.design_system.templates.screens.personalfinance.cards.WgcOrganizzeCardsTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.dashboard.WgcOrganizzeDashboardTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.entry.WgcOrganizzeNewTransactionTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.onboarding.WgcOrganizzeOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.reports.WgcOrganizzeReportsTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.transactions.WgcOrganizzeTransactionsTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.cards.WgcOrganizzeCardsTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.dashboard.WgcOrganizzeDashboardTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.entry.WgcOrganizzeNewTransactionTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.onboarding.WgcOrganizzeOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.reports.WgcOrganizzeReportsTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.transactions.WgcOrganizzeTransactionsTemplate
 
 enum class WgcPersonalFinanceScreen {
     Dashboard,

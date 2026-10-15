@@ -3,13 +3,13 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcZapNavDestination
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.detail.WgcZapPropertyDetailTemplate
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.favorites.WgcZapFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.fipezap.WgcZapFipeZapCalculatorTemplate
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.home.WgcZapHomeTemplate
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.model.PropertyClassifiedsMockData
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.model.ZapPropertyModel
-import br.com.wgc.design_system.templates.screens.propertyclassifieds.profile.WgcZapProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.detail.WgcZapPropertyDetailTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.favorites.WgcZapFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.fipezap.WgcZapFipeZapCalculatorTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.home.WgcZapHomeTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.model.PropertyClassifiedsMockData
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.model.ZapPropertyModel
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.profile.WgcZapProfileTemplate
 
 /**
  * Telas disponíveis no ecossistema do Zap Imóveis.

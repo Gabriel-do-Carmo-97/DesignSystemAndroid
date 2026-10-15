@@ -4,10 +4,10 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.boutique.reviews.WgcLazaReviewsTemplate
-import br.com.wgc.design_system.templates.screens.review.BaseFeedbackReviewViewModel
-import br.com.wgc.design_system.templates.screens.review.FakeFeedbackReviewViewModel
-import br.com.wgc.design_system.templates.screens.review.WgcFeedbackReviewTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.reviews.WgcLazaReviewsTemplate
+import br.com.wgc.design_system.factories.review.templates.BaseFeedbackReviewViewModel
+import br.com.wgc.design_system.factories.review.templates.FakeFeedbackReviewViewModel
+import br.com.wgc.design_system.factories.review.templates.WgcFeedbackReviewTemplate
 
 /**
  * Variantes de Avaliação suportadas pela [WgcReviewFactory].

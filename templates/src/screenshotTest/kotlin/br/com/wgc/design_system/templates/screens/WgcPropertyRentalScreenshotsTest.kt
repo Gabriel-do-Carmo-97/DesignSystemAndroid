@@ -4,11 +4,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.templates.factories.WgcPropertyRentalFactory
 import br.com.wgc.design_system.templates.factories.WgcPropertyRentalScreen
-import br.com.wgc.design_system.templates.screens.propertyrental.detail.WgcPropertyRentalPropertyDetailTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.favorites.WgcPropertyRentalFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.home.WgcPropertyRentalHomeTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.schedule.WgcPropertyRentalScheduleVisitTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.detail.WgcPropertyRentalPropertyDetailTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.favorites.WgcPropertyRentalFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.home.WgcPropertyRentalHomeTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.profile.WgcPropertyRentalProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.schedule.WgcPropertyRentalScheduleVisitTemplate
 
 class WgcPropertyRentalScreenshotsTest {
 

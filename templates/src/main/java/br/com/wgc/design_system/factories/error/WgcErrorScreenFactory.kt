@@ -3,10 +3,10 @@ package br.com.wgc.design_system.factories.error
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.feedback.FakeErrorStateViewModel
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateTemplate
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateType
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateUiState
+import br.com.wgc.design_system.factories.review.templates.FakeErrorStateViewModel
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateTemplate
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateType
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateUiState
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

@@ -2,11 +2,11 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.feedback.BaseErrorStateViewModel
-import br.com.wgc.design_system.templates.screens.feedback.FakeErrorStateViewModel
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateTemplate
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateType
-import br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateUiState
+import br.com.wgc.design_system.factories.review.templates.BaseErrorStateViewModel
+import br.com.wgc.design_system.factories.review.templates.FakeErrorStateViewModel
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateTemplate
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateType
+import br.com.wgc.design_system.factories.review.templates.WgcErrorStateUiState
 
 /**
  * Fábrica Universal Corporativa para Telas de Erro e Resiliência (WgcErrorStateFactory).

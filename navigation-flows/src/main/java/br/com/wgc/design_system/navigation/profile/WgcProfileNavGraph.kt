@@ -35,9 +35,9 @@ import androidx.navigation.compose.rememberNavController
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.templates.factories.WgcProfileFactory
-import br.com.wgc.design_system.templates.screens.profile.BaseUserProfileEditViewModel
-import br.com.wgc.design_system.templates.screens.profile.FakeUserProfileEditViewModel
-import br.com.wgc.design_system.templates.screens.profile.WgcUserProfileEditTemplate
+import br.com.wgc.design_system.factories.profile.templates.BaseUserProfileEditViewModel
+import br.com.wgc.design_system.factories.profile.templates.FakeUserProfileEditViewModel
+import br.com.wgc.design_system.factories.profile.templates.WgcUserProfileEditTemplate
 import kotlinx.serialization.Serializable
 
 /**

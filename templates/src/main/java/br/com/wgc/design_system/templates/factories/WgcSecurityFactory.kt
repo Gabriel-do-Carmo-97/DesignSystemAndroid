@@ -2,9 +2,9 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.security.BaseSecuritySettingsViewModel
-import br.com.wgc.design_system.templates.screens.security.FakeSecuritySettingsViewModel
-import br.com.wgc.design_system.templates.screens.security.WgcSecuritySettingsTemplate
+import br.com.wgc.design_system.factories.security.templates.BaseSecuritySettingsViewModel
+import br.com.wgc.design_system.factories.security.templates.FakeSecuritySettingsViewModel
+import br.com.wgc.design_system.factories.security.templates.WgcSecuritySettingsTemplate
 
 /**
  * Fábrica universal para instanciação padronizada da Central de Segurança e Acesso.

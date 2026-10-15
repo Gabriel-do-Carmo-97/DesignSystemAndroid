@@ -4,8 +4,8 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import br.com.wgc.design_system.templates.screens.register.user.screen.RegisterUserScreenTemplate
-import br.com.wgc.design_system.templates.screens.register.user.viewmodel.FakeUserViewModel
+import br.com.wgc.design_system.factories.auth.templates.user.screen.RegisterUserScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.user.viewmodel.FakeUserViewModel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

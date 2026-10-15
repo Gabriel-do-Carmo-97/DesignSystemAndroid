@@ -2,11 +2,11 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.hardware.WgcHardwareCartTemplate
-import br.com.wgc.design_system.templates.screens.hardware.WgcHardwareHomeTemplate
-import br.com.wgc.design_system.templates.screens.hardware.WgcHardwarePcBuilderTemplate
-import br.com.wgc.design_system.templates.screens.hardware.WgcHardwareProfileTemplate
-import br.com.wgc.design_system.templates.screens.hardware.WgcHardwareSpecsTemplate
+import br.com.wgc.design_system.factories.verticals.hardware.templates.WgcHardwareCartTemplate
+import br.com.wgc.design_system.factories.verticals.hardware.templates.WgcHardwareHomeTemplate
+import br.com.wgc.design_system.factories.verticals.hardware.templates.WgcHardwarePcBuilderTemplate
+import br.com.wgc.design_system.factories.verticals.hardware.templates.WgcHardwareProfileTemplate
+import br.com.wgc.design_system.factories.verticals.hardware.templates.WgcHardwareSpecsTemplate
 
 enum class WgcHardwareScreen {
     HOME,

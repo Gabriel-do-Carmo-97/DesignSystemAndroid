@@ -3,7 +3,7 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.audiostreaming.*
+import br.com.wgc.design_system.factories.verticals.audiostreaming.templates.*
 import br.com.wgc.design_system.theme.WgcTheme
 
 enum class WgcAudioStreamScreen {

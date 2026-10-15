@@ -2,7 +2,7 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.kanbantasks.*
+import br.com.wgc.design_system.factories.verticals.kanbantasks.templates.*
 
 enum class WgcKanbanTasksScreen {
     BOARD,

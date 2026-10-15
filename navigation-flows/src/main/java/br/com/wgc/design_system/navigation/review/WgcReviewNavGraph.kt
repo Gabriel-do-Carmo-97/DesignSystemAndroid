@@ -7,9 +7,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import androidx.navigation.toRoute
-import br.com.wgc.design_system.templates.screens.review.FakeFeedbackReviewViewModel
-import br.com.wgc.design_system.templates.screens.review.WgcFeedbackReviewContent
-import br.com.wgc.design_system.templates.screens.review.WgcFeedbackReviewUiState
+import br.com.wgc.design_system.factories.review.templates.FakeFeedbackReviewViewModel
+import br.com.wgc.design_system.factories.review.templates.WgcFeedbackReviewContent
+import br.com.wgc.design_system.factories.review.templates.WgcFeedbackReviewUiState
 import kotlinx.serialization.Serializable
 
 @Serializable

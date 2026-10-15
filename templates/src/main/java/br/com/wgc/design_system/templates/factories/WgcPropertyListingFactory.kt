@@ -3,13 +3,13 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcPropertyListingNavItem
-import br.com.wgc.design_system.templates.screens.propertylisting.contact.WgcPropertyListingContactLeadTemplate
-import br.com.wgc.design_system.templates.screens.propertylisting.detail.WgcPropertyListingPropertyDetailTemplate
-import br.com.wgc.design_system.templates.screens.propertylisting.favorites.WgcPropertyListingFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.propertylisting.home.WgcPropertyListingHomeTemplate
-import br.com.wgc.design_system.templates.screens.propertylisting.model.PropertyListingMockData
-import br.com.wgc.design_system.templates.screens.propertylisting.model.PropertyListingPropertyModel
-import br.com.wgc.design_system.templates.screens.propertylisting.profile.WgcPropertyListingProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.contact.WgcPropertyListingContactLeadTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.detail.WgcPropertyListingPropertyDetailTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.favorites.WgcPropertyListingFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.home.WgcPropertyListingHomeTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.model.PropertyListingMockData
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.model.PropertyListingPropertyModel
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.profile.WgcPropertyListingProfileTemplate
 
 enum class WgcPropertyListingScreen {
     Home,

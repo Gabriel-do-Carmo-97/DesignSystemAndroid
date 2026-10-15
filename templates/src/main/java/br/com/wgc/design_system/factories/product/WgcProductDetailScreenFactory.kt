@@ -3,10 +3,10 @@ package br.com.wgc.design_system.factories.product
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.apparel.product.WgcClotheeProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.boutique.product.WgcLazaProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.product.FakeProductDetailViewModel
-import br.com.wgc.design_system.templates.screens.product.WgcProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.product.WgcClotheeProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.product.WgcLazaProductDetailTemplate
+import br.com.wgc.design_system.factories.product.templates.FakeProductDetailViewModel
+import br.com.wgc.design_system.factories.product.templates.WgcProductDetailTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

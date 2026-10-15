@@ -3,17 +3,17 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.GroceryNavTab
-import br.com.wgc.design_system.templates.screens.grocery.cart.WgcSupermercadoCartTemplate
-import br.com.wgc.design_system.templates.screens.grocery.coupons.WgcSupermercadoCouponsTemplate
-import br.com.wgc.design_system.templates.screens.grocery.flyer.WgcSupermercadoFlyerTemplate
-import br.com.wgc.design_system.templates.screens.grocery.home.WgcSupermercadoHomeTemplate
-import br.com.wgc.design_system.templates.screens.grocery.model.SupermercadoCartItem
-import br.com.wgc.design_system.templates.screens.grocery.model.SupermercadoCouponItem
-import br.com.wgc.design_system.templates.screens.grocery.model.SupermercadoFlyerOffer
-import br.com.wgc.design_system.templates.screens.grocery.model.GroceryMockData
-import br.com.wgc.design_system.templates.screens.grocery.model.SupermercadoProductItem
-import br.com.wgc.design_system.templates.screens.grocery.model.SupermercadoUserProfile
-import br.com.wgc.design_system.templates.screens.grocery.profile.WgcSupermercadoProfileTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.cart.WgcSupermercadoCartTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.coupons.WgcSupermercadoCouponsTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.flyer.WgcSupermercadoFlyerTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.home.WgcSupermercadoHomeTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.SupermercadoCartItem
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.SupermercadoCouponItem
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.SupermercadoFlyerOffer
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.GroceryMockData
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.SupermercadoProductItem
+import br.com.wgc.design_system.factories.verticals.grocery.templates.model.SupermercadoUserProfile
+import br.com.wgc.design_system.factories.verticals.grocery.templates.profile.WgcSupermercadoProfileTemplate
 
 enum class WgcGroceryScreen {
     HOME,

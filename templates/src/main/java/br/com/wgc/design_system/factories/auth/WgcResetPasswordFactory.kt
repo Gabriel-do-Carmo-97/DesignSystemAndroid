@@ -18,9 +18,9 @@ import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.resetpassword.screen.ResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.resetpassword.viewmodel.BaseResetPasswordScreenTemplateViewModel
-import br.com.wgc.design_system.templates.screens.resetpassword.viewmodel.FakeResetPasswordViewModel
+import br.com.wgc.design_system.factories.auth.templates.screen.ResetPasswordScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.BaseResetPasswordScreenTemplateViewModel
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.FakeResetPasswordViewModel
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

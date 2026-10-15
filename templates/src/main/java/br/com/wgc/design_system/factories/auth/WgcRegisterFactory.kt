@@ -18,9 +18,9 @@ import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.register.user.screen.RegisterUserScreenTemplate
-import br.com.wgc.design_system.templates.screens.register.user.viewmodel.BaseRegisterUserTemplateViewModel
-import br.com.wgc.design_system.templates.screens.register.user.viewmodel.FakeUserViewModel
+import br.com.wgc.design_system.factories.auth.templates.user.screen.RegisterUserScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.user.viewmodel.BaseRegisterUserTemplateViewModel
+import br.com.wgc.design_system.factories.auth.templates.user.viewmodel.FakeUserViewModel
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

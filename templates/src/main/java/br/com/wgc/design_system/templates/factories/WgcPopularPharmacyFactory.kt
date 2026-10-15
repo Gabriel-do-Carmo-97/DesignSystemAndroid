@@ -19,27 +19,27 @@ fun WgcPopularPharmacyFactory(
 ) {
     when (screen) {
         WgcPopularPharmacyScreen.HOME -> {
-            br.com.wgc.design_system.templates.screens.popularpharmacy.home.WgcPagueMenosHomeTemplate(
+            br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.home.WgcPagueMenosHomeTemplate(
                 modifier = modifier
             )
         }
         WgcPopularPharmacyScreen.CLINIC -> {
-            br.com.wgc.design_system.templates.screens.popularpharmacy.clinic.WgcPagueMenosClinicTemplate(
+            br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.clinic.WgcPagueMenosClinicTemplate(
                 modifier = modifier
             )
         }
         WgcPopularPharmacyScreen.CONVENIO -> {
-            br.com.wgc.design_system.templates.screens.popularpharmacy.profile.WgcPagueMenosProfileTemplate(
+            br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.profile.WgcPagueMenosProfileTemplate(
                 modifier = modifier
             )
         }
         WgcPopularPharmacyScreen.CART -> {
-            br.com.wgc.design_system.templates.screens.popularpharmacy.cart.WgcPagueMenosCartTemplate(
+            br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.cart.WgcPagueMenosCartTemplate(
                 modifier = modifier
             )
         }
         WgcPopularPharmacyScreen.PROFILE -> {
-            br.com.wgc.design_system.templates.screens.popularpharmacy.profile.WgcPagueMenosProfileTemplate(
+            br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.profile.WgcPagueMenosProfileTemplate(
                 modifier = modifier
             )
         }

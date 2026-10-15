@@ -2,14 +2,14 @@ package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.cart.FakeStandardCartViewModel
-import br.com.wgc.design_system.templates.screens.cart.StandardCartScreenTemplate
-import br.com.wgc.design_system.templates.screens.home.fintech.FakeFintechHomeViewModel
-import br.com.wgc.design_system.templates.screens.home.fintech.FintechHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.login.screen.LoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.login.viewmodel.FakeLoginViewModel
-import br.com.wgc.design_system.templates.screens.profile.FakeSettingsHubViewModel
-import br.com.wgc.design_system.templates.screens.profile.SettingsHubScreenTemplate
+import br.com.wgc.design_system.factories.cart.templates.FakeStandardCartViewModel
+import br.com.wgc.design_system.factories.cart.templates.StandardCartScreenTemplate
+import br.com.wgc.design_system.factories.home.templates.fintech.FakeFintechHomeViewModel
+import br.com.wgc.design_system.factories.home.templates.fintech.FintechHomeScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.screen.LoginScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.FakeLoginViewModel
+import br.com.wgc.design_system.factories.profile.templates.FakeSettingsHubViewModel
+import br.com.wgc.design_system.factories.profile.templates.SettingsHubScreenTemplate
 import com.android.tools.screenshot.PreviewTest
 
 class TemplateScreenshotsTest {

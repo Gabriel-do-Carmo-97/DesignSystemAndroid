@@ -5,12 +5,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.components.cards.WgcCorporateWellnessPlanTier
 import br.com.wgc.design_system.templates.factories.WgcCorporateWellnessFactory
 import br.com.wgc.design_system.templates.factories.WgcCorporateWellnessScreen
-import br.com.wgc.design_system.templates.screens.corporatewellness.checkin.WgcCorporateWellnessCheckInTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.explore.WgcCorporateWellnessExploreGymsTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.home.WgcCorporateWellnessHomeTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessMockData
-import br.com.wgc.design_system.templates.screens.corporatewellness.plans.WgcCorporateWellnessPlansTemplate
-import br.com.wgc.design_system.templates.screens.corporatewellness.wellness.WgcCorporateWellnessWellnessAppsTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.checkin.WgcCorporateWellnessCheckInTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.explore.WgcCorporateWellnessExploreGymsTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.home.WgcCorporateWellnessHomeTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.model.CorporateWellnessMockData
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.plans.WgcCorporateWellnessPlansTemplate
+import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.wellness.WgcCorporateWellnessWellnessAppsTemplate
 
 class WgcCorporateWellnessScreenshotsTest {
 

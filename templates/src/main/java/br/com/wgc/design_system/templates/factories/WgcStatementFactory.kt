@@ -4,10 +4,10 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.statement.BaseFinancialStatementViewModel
-import br.com.wgc.design_system.templates.screens.statement.FakeFinancialStatementViewModel
-import br.com.wgc.design_system.templates.screens.statement.WgcFinancialStatementTemplate
-import br.com.wgc.design_system.templates.screens.statement.WgcStatementTransactionItem
+import br.com.wgc.design_system.factories.statement.templates.BaseFinancialStatementViewModel
+import br.com.wgc.design_system.factories.statement.templates.FakeFinancialStatementViewModel
+import br.com.wgc.design_system.factories.statement.templates.WgcFinancialStatementTemplate
+import br.com.wgc.design_system.factories.statement.templates.WgcStatementTransactionItem
 
 /**
  * Variantes de Extrato Financeiro suportadas pela [WgcStatementFactory].

@@ -3,8 +3,8 @@ package br.com.wgc.design_system.factories.security
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.security.FakeSecuritySettingsViewModel
-import br.com.wgc.design_system.templates.screens.security.WgcSecuritySettingsTemplate
+import br.com.wgc.design_system.factories.security.templates.FakeSecuritySettingsViewModel
+import br.com.wgc.design_system.factories.security.templates.WgcSecuritySettingsTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

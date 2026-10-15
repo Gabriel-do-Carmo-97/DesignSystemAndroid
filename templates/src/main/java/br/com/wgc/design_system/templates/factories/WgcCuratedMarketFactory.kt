@@ -2,14 +2,14 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.curatedmarket.cart.WgcTasselCartTemplate
-import br.com.wgc.design_system.templates.screens.curatedmarket.featured.WgcTasselFeaturedTemplate
-import br.com.wgc.design_system.templates.screens.curatedmarket.market.WgcTasselMarketTemplate
-import br.com.wgc.design_system.templates.screens.curatedmarket.model.CuratedMarketMockData
-import br.com.wgc.design_system.templates.screens.curatedmarket.model.TasselProduct
-import br.com.wgc.design_system.templates.screens.curatedmarket.product.WgcTasselProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.curatedmarket.profile.WgcTasselProfileTemplate
-import br.com.wgc.design_system.templates.screens.curatedmarket.tracking.WgcTasselOrderTrackingTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.cart.WgcTasselCartTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.featured.WgcTasselFeaturedTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.market.WgcTasselMarketTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.model.CuratedMarketMockData
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.model.TasselProduct
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.product.WgcTasselProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.profile.WgcTasselProfileTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.tracking.WgcTasselOrderTrackingTemplate
 
 /**
  * Telas suportadas pela fábrica unificada Tassel.

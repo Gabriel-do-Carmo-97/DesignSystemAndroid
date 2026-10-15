@@ -3,17 +3,17 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcSupermarketNavItem
-import br.com.wgc.design_system.templates.screens.premiumgrocery.adega.WgcPdaAdegaTemplate
-import br.com.wgc.design_system.templates.screens.premiumgrocery.cart.WgcPdaGourmetCartTemplate
-import br.com.wgc.design_system.templates.screens.premiumgrocery.discounts.WgcPdaDiscountsTemplate
-import br.com.wgc.design_system.templates.screens.premiumgrocery.home.WgcPdaHomeTemplate
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PdaCartItem
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PdaDiscountItem
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PremiumGroceryMockData
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PdaProductItem
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PdaUserProfile
-import br.com.wgc.design_system.templates.screens.premiumgrocery.model.PdaWineItem
-import br.com.wgc.design_system.templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.adega.WgcPdaAdegaTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.cart.WgcPdaGourmetCartTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.discounts.WgcPdaDiscountsTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.home.WgcPdaHomeTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PdaCartItem
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PdaDiscountItem
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PremiumGroceryMockData
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PdaProductItem
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PdaUserProfile
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.model.PdaWineItem
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.profile.WgcPdaClienteMaisProfileTemplate
 
 enum class WgcPremiumGroceryScreen {
     HOME,

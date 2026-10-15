@@ -2,18 +2,18 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.retail.auth.WgcKutukuLoginScreen
-import br.com.wgc.design_system.templates.screens.retail.auth.WgcKutukuOnboardingScreen
-import br.com.wgc.design_system.templates.screens.retail.chat.WgcKutukuMessageScreen
-import br.com.wgc.design_system.templates.screens.retail.checkout.WgcKutukuCartScreen
-import br.com.wgc.design_system.templates.screens.retail.checkout.WgcKutukuPaymentScreen
-import br.com.wgc.design_system.templates.screens.retail.home.WgcKutukuCategoryScreen
-import br.com.wgc.design_system.templates.screens.retail.home.WgcKutukuHomeScreen
-import br.com.wgc.design_system.templates.screens.retail.model.RetailMockData
-import br.com.wgc.design_system.templates.screens.retail.model.KutukuProduct
-import br.com.wgc.design_system.templates.screens.retail.product.WgcKutukuProductDetailScreen
-import br.com.wgc.design_system.templates.screens.retail.profile.WgcKutukuSettingsScreen
-import br.com.wgc.design_system.templates.screens.retail.tracking.WgcKutukuOrderTrackingScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.auth.WgcKutukuLoginScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.auth.WgcKutukuOnboardingScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.chat.WgcKutukuMessageScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.checkout.WgcKutukuCartScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.checkout.WgcKutukuPaymentScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.home.WgcKutukuCategoryScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.home.WgcKutukuHomeScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.model.RetailMockData
+import br.com.wgc.design_system.factories.verticals.retail.templates.model.KutukuProduct
+import br.com.wgc.design_system.factories.verticals.retail.templates.product.WgcKutukuProductDetailScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.profile.WgcKutukuSettingsScreen
+import br.com.wgc.design_system.factories.verticals.retail.templates.tracking.WgcKutukuOrderTrackingScreen
 
 /**
  * Telas suportadas pela fábrica unificada Kutuku.

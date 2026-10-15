@@ -3,16 +3,16 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcExtraNavItem
-import br.com.wgc.design_system.templates.screens.hypermarket.cart.WgcExtraCartTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.discounts.WgcExtraDiscountsTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.flyer.WgcExtraFlyerTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.home.WgcExtraHomeTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.loyalty.WgcExtraLoyaltyTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.model.ExtraCartItem
-import br.com.wgc.design_system.templates.screens.hypermarket.model.ExtraCouponItem
-import br.com.wgc.design_system.templates.screens.hypermarket.model.HypermarketMockData
-import br.com.wgc.design_system.templates.screens.hypermarket.model.ExtraProductItem
-import br.com.wgc.design_system.templates.screens.hypermarket.model.ExtraUserProfile
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.cart.WgcExtraCartTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.discounts.WgcExtraDiscountsTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.flyer.WgcExtraFlyerTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.home.WgcExtraHomeTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.loyalty.WgcExtraLoyaltyTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.ExtraCartItem
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.ExtraCouponItem
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.HypermarketMockData
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.ExtraProductItem
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.ExtraUserProfile
 
 /**
  * Telas suportadas pela Fábrica Clube Extra (WgcHypermarketFactory).

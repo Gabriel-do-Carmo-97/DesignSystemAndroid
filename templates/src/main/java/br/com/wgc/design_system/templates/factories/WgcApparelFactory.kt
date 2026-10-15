@@ -3,18 +3,18 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeForgotPasswordTemplate
-import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeResetPasswordSentTemplate
-import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeSignInTemplate
-import br.com.wgc.design_system.templates.screens.apparel.cart.WgcClotheeCartTemplate
-import br.com.wgc.design_system.templates.screens.apparel.categories.WgcClotheeCategoryListTemplate
-import br.com.wgc.design_system.templates.screens.apparel.checkout.WgcClotheeOrderPlacedTemplate
-import br.com.wgc.design_system.templates.screens.apparel.home.WgcClotheeHomeTemplate
-import br.com.wgc.design_system.templates.screens.apparel.model.ApparelMockData
-import br.com.wgc.design_system.templates.screens.apparel.model.ClotheeProduct
-import br.com.wgc.design_system.templates.screens.apparel.product.WgcClotheeProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.apparel.profile.WgcClotheeSettingsTemplate
-import br.com.wgc.design_system.templates.screens.apparel.tracking.WgcClotheeTrackOrderTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.auth.WgcClotheeForgotPasswordTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.auth.WgcClotheeResetPasswordSentTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.auth.WgcClotheeSignInTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.cart.WgcClotheeCartTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.categories.WgcClotheeCategoryListTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.checkout.WgcClotheeOrderPlacedTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.home.WgcClotheeHomeTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.model.ApparelMockData
+import br.com.wgc.design_system.factories.verticals.apparel.templates.model.ClotheeProduct
+import br.com.wgc.design_system.factories.verticals.apparel.templates.product.WgcClotheeProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.profile.WgcClotheeSettingsTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.tracking.WgcClotheeTrackOrderTemplate
 
 /**
  * Telas suportadas pela fábrica unificada Clothee.

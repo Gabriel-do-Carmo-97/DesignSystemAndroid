@@ -3,8 +3,8 @@ package br.com.wgc.design_system.factories.notification
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.notification.FakeNotificationHubViewModel
-import br.com.wgc.design_system.templates.screens.notification.WgcNotificationHubTemplate
+import br.com.wgc.design_system.factories.notification.templates.FakeNotificationHubViewModel
+import br.com.wgc.design_system.factories.notification.templates.WgcNotificationHubTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

@@ -13,8 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.card.FakeCardManagementViewModel
-import br.com.wgc.design_system.templates.screens.card.WgcCardManagementTemplate
+import br.com.wgc.design_system.factories.payment.templates.FakeCardManagementViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcCardManagementTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

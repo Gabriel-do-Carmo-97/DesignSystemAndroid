@@ -4,12 +4,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.templates.factories.WgcQuickShopFactory
 import br.com.wgc.design_system.templates.factories.WgcQuickShopScreen
-import br.com.wgc.design_system.templates.screens.quickshop.checkout.WgcShopEaseCheckoutTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.detail.WgcShopEaseProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.favorites.WgcShopEaseFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.home.WgcShopEaseHomeTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.onboarding.WgcShopEaseOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.profile.WgcShopEaseProfileTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.checkout.WgcShopEaseCheckoutTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.detail.WgcShopEaseProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.favorites.WgcShopEaseFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.home.WgcShopEaseHomeTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.onboarding.WgcShopEaseOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.profile.WgcShopEaseProfileTemplate
 
 class WgcShopEaseScreenshotsTest {
 

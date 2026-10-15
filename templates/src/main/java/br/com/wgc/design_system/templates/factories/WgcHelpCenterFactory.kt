@@ -4,9 +4,9 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.support.BaseHelpCenterViewModel
-import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
-import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportTemplate
+import br.com.wgc.design_system.factories.support.templates.BaseHelpCenterViewModel
+import br.com.wgc.design_system.factories.support.templates.FakeHelpCenterViewModel
+import br.com.wgc.design_system.factories.support.templates.WgcHelpCenterSupportTemplate
 
 /**
  * Variantes da Central de Ajuda suportadas pela [WgcHelpCenterFactory].

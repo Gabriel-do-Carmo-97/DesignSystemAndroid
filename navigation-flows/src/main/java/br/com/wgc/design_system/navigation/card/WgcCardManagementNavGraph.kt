@@ -39,8 +39,8 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.card.FakeCardManagementViewModel
-import br.com.wgc.design_system.templates.screens.card.WgcCardManagementContent
+import br.com.wgc.design_system.factories.payment.templates.FakeCardManagementViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcCardManagementContent
 import kotlinx.serialization.Serializable
 import kotlin.math.roundToInt
 
@@ -129,45 +129,58 @@ private fun CardLimitAdjustScreen(
                 .padding(WgcCoreDsSpacing.md16.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.lg24.dp)
         ) {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-            ) {
-                Column(
-                    modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
-                ) {
-                    Text(text = "Novo Limite Escolhido", style = MaterialTheme.typography.labelMedium)
-                    Text(
-                        text = "R$ ${limit.roundToInt()},00",
-                        style = MaterialTheme.typography.headlineMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-
-                    Slider(
-                        value = limit,
-                        onValueChange = { limit = it },
-                        valueRange = 500f..maxLimit,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text(text = "Mín: R$ 500", style = MaterialTheme.typography.labelSmall)
-                        Text(text = "Disponível: R$ ${maxLimit.roundToInt()}", style = MaterialTheme.typography.labelSmall)
-                    }
-                }
-            }
+            LimitSliderCard(
+                limit = limit,
+                maxLimit = maxLimit,
+                onLimitChange = { limit = it }
+            )
 
             WgcClassicButton(
                 textButton = "Salvar Novo Limite",
                 onClick = { onSaveLimit(limit) },
                 modifier = Modifier.fillMaxWidth()
             )
+        }
+    }
+}
+
+@Composable
+private fun LimitSliderCard(
+    limit: Float,
+    maxLimit: Float,
+    onLimitChange: (Float) -> Unit
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+    ) {
+        Column(
+            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        ) {
+            Text(text = "Novo Limite Escolhido", style = MaterialTheme.typography.labelMedium)
+            Text(
+                text = "R$ ${limit.roundToInt()},00",
+                style = MaterialTheme.typography.headlineMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+
+            Slider(
+                value = limit,
+                onValueChange = onLimitChange,
+                valueRange = 500f..maxLimit,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(text = "Mín: R$ 500", style = MaterialTheme.typography.labelSmall)
+                Text(text = "Disponível: R$ ${maxLimit.roundToInt()}", style = MaterialTheme.typography.labelSmall)
+            }
         }
     }
 }

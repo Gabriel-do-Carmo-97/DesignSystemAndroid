@@ -34,8 +34,8 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
-import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportContent
+import br.com.wgc.design_system.factories.support.templates.FakeHelpCenterViewModel
+import br.com.wgc.design_system.factories.support.templates.WgcHelpCenterSupportContent
 import kotlinx.serialization.Serializable
 
 @Serializable

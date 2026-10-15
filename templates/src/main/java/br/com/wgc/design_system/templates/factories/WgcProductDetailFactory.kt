@@ -4,11 +4,11 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.apparel.product.WgcClotheeProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.boutique.product.WgcLazaProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.product.BaseProductDetailViewModel
-import br.com.wgc.design_system.templates.screens.product.FakeProductDetailViewModel
-import br.com.wgc.design_system.templates.screens.product.WgcProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.apparel.templates.product.WgcClotheeProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.product.WgcLazaProductDetailTemplate
+import br.com.wgc.design_system.factories.product.templates.BaseProductDetailViewModel
+import br.com.wgc.design_system.factories.product.templates.FakeProductDetailViewModel
+import br.com.wgc.design_system.factories.product.templates.WgcProductDetailTemplate
 
 /**
  * Variantes de Detalhes do Produto suportadas pela [WgcProductDetailFactory].

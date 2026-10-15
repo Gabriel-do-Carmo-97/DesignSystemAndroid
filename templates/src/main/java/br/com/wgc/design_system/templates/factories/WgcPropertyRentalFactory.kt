@@ -3,13 +3,13 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import br.com.wgc.design_system.components.navigation.WgcPropertyRentalNavItem
-import br.com.wgc.design_system.templates.screens.propertyrental.detail.WgcPropertyRentalPropertyDetailTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.favorites.WgcPropertyRentalFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.home.WgcPropertyRentalHomeTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.model.PropertyRentalMockData
-import br.com.wgc.design_system.templates.screens.propertyrental.model.PropertyRentalPropertyModel
-import br.com.wgc.design_system.templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate
-import br.com.wgc.design_system.templates.screens.propertyrental.schedule.WgcPropertyRentalScheduleVisitTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.detail.WgcPropertyRentalPropertyDetailTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.favorites.WgcPropertyRentalFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.home.WgcPropertyRentalHomeTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.model.PropertyRentalMockData
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.model.PropertyRentalPropertyModel
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.profile.WgcPropertyRentalProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.schedule.WgcPropertyRentalScheduleVisitTemplate
 
 enum class WgcPropertyRentalScreen {
     Home,

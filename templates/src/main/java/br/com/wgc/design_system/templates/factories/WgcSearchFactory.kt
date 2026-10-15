@@ -40,9 +40,9 @@ import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.components.fields.SearchTextField
 import br.com.wgc.design_system.components.list.WgcListItem
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.megastore.search.WgcShoppeVisualSearchScreenTemplate
-import br.com.wgc.design_system.templates.screens.search.SearchAndFilterScreenContent
-import br.com.wgc.design_system.templates.screens.search.SearchAndFilterUiState
+import br.com.wgc.design_system.factories.verticals.megastore.templates.search.WgcShoppeVisualSearchScreenTemplate
+import br.com.wgc.design_system.factories.search.templates.SearchAndFilterScreenContent
+import br.com.wgc.design_system.factories.search.templates.SearchAndFilterUiState
 
 /**
  * Variantes de Busca e Catálogo suportadas pela [WgcSearchFactory].

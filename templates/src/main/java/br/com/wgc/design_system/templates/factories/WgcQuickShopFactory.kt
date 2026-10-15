@@ -2,14 +2,14 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.quickshop.checkout.WgcShopEaseCheckoutTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.detail.WgcShopEaseProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.favorites.WgcShopEaseFavoritesTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.home.WgcShopEaseHomeTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.model.ShopEaseMockData
-import br.com.wgc.design_system.templates.screens.quickshop.model.ShopEaseProduct
-import br.com.wgc.design_system.templates.screens.quickshop.onboarding.WgcShopEaseOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.profile.WgcShopEaseProfileTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.checkout.WgcShopEaseCheckoutTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.detail.WgcShopEaseProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.favorites.WgcShopEaseFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.home.WgcShopEaseHomeTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.model.ShopEaseMockData
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.model.ShopEaseProduct
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.onboarding.WgcShopEaseOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.profile.WgcShopEaseProfileTemplate
 
 /**
  * Telas disponíveis para renderização na [WgcQuickShopFactory].

@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.factories.checkout.WgcCheckoutScreenFactory
-import br.com.wgc.design_system.factories.checkout.WgcCheckoutVariant
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -17,8 +16,9 @@ import br.com.wgc.design_system.theme.WgcTheme
 @Composable
 fun WgcCheckoutFactory(
     modifier: Modifier = Modifier,
-    variant: WgcCheckoutVariant = WgcCheckoutVariant.STANDARD,
-    summarySlot: (@Composable () -> Unit)? = null,
+    type: WgcCheckoutType = WgcCheckoutType.STANDARD,
+    orderSummarySlot: (@Composable () -> Unit)? = null,
+    summarySlot: (@Composable () -> Unit)? = orderSummarySlot,
     addressSlot: (@Composable () -> Unit)? = null,
     paymentSlot: (@Composable () -> Unit)? = null,
     finishButtonSlot: (@Composable () -> Unit)? = null,
@@ -26,7 +26,7 @@ fun WgcCheckoutFactory(
 ) {
     WgcCheckoutScreenFactory(
         modifier = modifier,
-        variant = variant,
+        variant = type,
         summarySlot = summarySlot,
         addressSlot = addressSlot,
         paymentSlot = paymentSlot,

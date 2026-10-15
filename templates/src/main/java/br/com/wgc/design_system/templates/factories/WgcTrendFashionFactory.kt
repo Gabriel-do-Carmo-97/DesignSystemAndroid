@@ -3,20 +3,20 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishForgotPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.catalog.WgcStylishProductDetailsScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.catalog.WgcStylishTrendingScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.checkout.WgcStylishCheckoutScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.checkout.WgcStylishPlaceOrderScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.checkout.WgcStylishShippingScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.checkout.WgcStylishSuccessScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.home.WgcStylishHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.onboarding.WgcStylishGetStartedScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.onboarding.WgcStylishOnboardingScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.onboarding.WgcStylishSplashScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.profile.WgcStylishProfileScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.auth.WgcStylishForgotPasswordScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.auth.WgcStylishLoginScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.auth.WgcStylishRegisterScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.catalog.WgcStylishProductDetailsScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.catalog.WgcStylishTrendingScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.checkout.WgcStylishCheckoutScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.checkout.WgcStylishPlaceOrderScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.checkout.WgcStylishShippingScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.checkout.WgcStylishSuccessScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.home.WgcStylishHomeScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.onboarding.WgcStylishGetStartedScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.onboarding.WgcStylishOnboardingScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.onboarding.WgcStylishSplashScreenTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.profile.WgcStylishProfileScreenTemplate
 
 /**
  * As 16 Telas Oficiais do Stylish eCommerce UI Kit.

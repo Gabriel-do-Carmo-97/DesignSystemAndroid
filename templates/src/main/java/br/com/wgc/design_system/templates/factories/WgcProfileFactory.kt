@@ -51,6 +51,28 @@ import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 import br.com.wgc.design_system.commons.previews.devices.status.WgcStatusDevicePreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.factories.verticals.carepharmacy.templates.profile.WgcCarePharmacyProfileTemplate
+import br.com.wgc.design_system.factories.verticals.curatedmarket.templates.profile.WgcTasselProfileTemplate
+import br.com.wgc.design_system.factories.verticals.fintechcarbon.templates.WgcC6ProfileTemplate
+import br.com.wgc.design_system.factories.verticals.fintechneobank.templates.WgcNeobankProfileTemplate
+import br.com.wgc.design_system.factories.verticals.fintechsuperapp.templates.WgcInterProfileTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.profile.WgcFreshGroceryProfileTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.profile.WgcNexkartProfileTemplate
+import br.com.wgc.design_system.factories.verticals.gamingstore.templates.WgcGamingStoreProfileTemplate
+import br.com.wgc.design_system.factories.verticals.grocery.templates.profile.WgcSupermercadoProfileTemplate
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.model.GymFitnessMockData
+import br.com.wgc.design_system.factories.verticals.gymfitness.templates.profile.WgcGymFitnessProfilePassTemplate
+import br.com.wgc.design_system.factories.verticals.livestreaming.templates.WgcLiveStreamingProfileTemplate
+import br.com.wgc.design_system.factories.verticals.megastore.templates.profile.WgcShoppeProfileScreenTemplate
+import br.com.wgc.design_system.factories.verticals.pharmacychain.templates.profile.WgcDrogaRaiaProfileTemplate
+import br.com.wgc.design_system.factories.verticals.popularpharmacy.templates.profile.WgcPagueMenosProfileTemplate
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.templates.profile.WgcPdaClienteMaisProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.profile.WgcZapProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertylisting.templates.profile.WgcPropertyListingProfileTemplate
+import br.com.wgc.design_system.factories.verticals.propertyrental.templates.profile.WgcPropertyRentalProfileTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.profile.WgcShopEaseProfileTemplate
+import br.com.wgc.design_system.factories.verticals.retail.templates.profile.WgcKutukuSettingsScreen
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.profile.WgcStylishProfileScreenTemplate
 
 /**
  * Catálogo Universal de Variantes de Perfil do Design System.
@@ -157,40 +179,40 @@ fun WgcProfileFactory(
     }
 
     when (type) {
-        WgcProfileType.CARE_PHARMACY -> br.com.wgc.design_system.templates.screens.carepharmacy.profile.WgcCarePharmacyProfileTemplate(modifier = modifier)
+        WgcProfileType.CARE_PHARMACY -> WgcCarePharmacyProfileTemplate(modifier = modifier)
         // Pharmacy chain templates are named per brand (Droga Raia)
-        WgcProfileType.PHARMACY_CHAIN -> br.com.wgc.design_system.templates.screens.pharmacychain.profile.WgcDrogaRaiaProfileTemplate(modifier = modifier)
+        WgcProfileType.PHARMACY_CHAIN -> WgcDrogaRaiaProfileTemplate(modifier = modifier)
         // Popular pharmacy mapped to Pague Menos template
-        WgcProfileType.POPULAR_PHARMACY -> br.com.wgc.design_system.templates.screens.popularpharmacy.profile.WgcPagueMenosProfileTemplate(modifier = modifier)
-        WgcProfileType.FRESH_GROCERY -> br.com.wgc.design_system.templates.screens.freshgrocery.profile.WgcFreshGroceryProfileTemplate(modifier = modifier)
+        WgcProfileType.POPULAR_PHARMACY -> WgcPagueMenosProfileTemplate(modifier = modifier)
+        WgcProfileType.FRESH_GROCERY -> WgcFreshGroceryProfileTemplate(modifier = modifier)
         // Grocery uses Supermercado template with default mock user
-        WgcProfileType.GROCERY -> br.com.wgc.design_system.templates.screens.grocery.profile.WgcSupermercadoProfileTemplate(modifier = modifier)
+        WgcProfileType.GROCERY -> WgcSupermercadoProfileTemplate(modifier = modifier)
         // Premium grocery mapped to PDA Cliente Mais template
-        WgcProfileType.PREMIUM_GROCERY -> br.com.wgc.design_system.templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate(modifier = modifier)
+        WgcProfileType.PREMIUM_GROCERY -> WgcPdaClienteMaisProfileTemplate(modifier = modifier)
         // Fintech mappings follow concrete template names
-        WgcProfileType.FINTECH_NEOBANK -> br.com.wgc.design_system.templates.screens.fintechneobank.WgcNeobankProfileTemplate(modifier = modifier)
-        WgcProfileType.FINTECH_CARBON -> br.com.wgc.design_system.templates.screens.fintechcarbon.WgcC6ProfileTemplate(modifier = modifier)
-        WgcProfileType.FINTECH_SUPERAPP -> br.com.wgc.design_system.templates.screens.fintechsuperapp.WgcInterProfileTemplate(modifier = modifier)
+        WgcProfileType.FINTECH_NEOBANK -> WgcNeobankProfileTemplate(modifier = modifier)
+        WgcProfileType.FINTECH_CARBON -> WgcC6ProfileTemplate(modifier = modifier)
+        WgcProfileType.FINTECH_SUPERAPP -> WgcInterProfileTemplate(modifier = modifier)
         // Curated market mapped to Tassel profile
-        WgcProfileType.CURATED_MARKET -> br.com.wgc.design_system.templates.screens.curatedmarket.profile.WgcTasselProfileTemplate(modifier = modifier)
+        WgcProfileType.CURATED_MARKET -> WgcTasselProfileTemplate(modifier = modifier)
         // Gadget shop mapped to Nexkart profile
-        WgcProfileType.GADGET_SHOP -> br.com.wgc.design_system.templates.screens.gadgetshop.profile.WgcNexkartProfileTemplate(modifier = modifier)
+        WgcProfileType.GADGET_SHOP -> WgcNexkartProfileTemplate(modifier = modifier)
         // Gym requires an explicit mock user instance
-        WgcProfileType.GYM_FITNESS -> br.com.wgc.design_system.templates.screens.gymfitness.profile.WgcGymFitnessProfilePassTemplate(
-            user = br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessMockData.mockUser,
+        WgcProfileType.GYM_FITNESS -> WgcGymFitnessProfilePassTemplate(
+            user = GymFitnessMockData.mockUser,
             modifier = modifier
         )
-        WgcProfileType.MEGA_STORE -> br.com.wgc.design_system.templates.screens.megastore.profile.WgcShoppeProfileScreenTemplate(modifier = modifier)
+        WgcProfileType.MEGA_STORE -> WgcShoppeProfileScreenTemplate(modifier = modifier)
         // Property classifieds use Zap profile
-        WgcProfileType.PROPERTY_CLASSIFIEDS -> br.com.wgc.design_system.templates.screens.propertyclassifieds.profile.WgcZapProfileTemplate(modifier = modifier)
-        WgcProfileType.PROPERTY_LISTING -> br.com.wgc.design_system.templates.screens.propertylisting.profile.WgcPropertyListingProfileTemplate(modifier = modifier)
-        WgcProfileType.PROPERTY_RENTAL -> br.com.wgc.design_system.templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate(modifier = modifier)
+        WgcProfileType.PROPERTY_CLASSIFIEDS -> WgcZapProfileTemplate(modifier = modifier)
+        WgcProfileType.PROPERTY_LISTING -> WgcPropertyListingProfileTemplate(modifier = modifier)
+        WgcProfileType.PROPERTY_RENTAL -> WgcPropertyRentalProfileTemplate(modifier = modifier)
         // Quick shop uses ShopEase branded template
-        WgcProfileType.QUICK_SHOP -> br.com.wgc.design_system.templates.screens.quickshop.profile.WgcShopEaseProfileTemplate(modifier = modifier)
-        WgcProfileType.RETAIL -> br.com.wgc.design_system.templates.screens.retail.profile.WgcKutukuSettingsScreen(modifier = modifier)
-        WgcProfileType.TREND_FASHION -> br.com.wgc.design_system.templates.screens.trendfashion.profile.WgcStylishProfileScreenTemplate(modifier = modifier)
-        WgcProfileType.GAMING_STORE -> br.com.wgc.design_system.templates.screens.gamingstore.WgcGamingStoreProfileTemplate(modifier = modifier)
-        WgcProfileType.LIVE_STREAMING -> br.com.wgc.design_system.templates.screens.livestreaming.WgcLiveStreamingProfileTemplate(modifier = modifier)
+        WgcProfileType.QUICK_SHOP -> WgcShopEaseProfileTemplate(modifier = modifier)
+        WgcProfileType.RETAIL -> WgcKutukuSettingsScreen(modifier = modifier)
+        WgcProfileType.TREND_FASHION -> WgcStylishProfileScreenTemplate(modifier = modifier)
+        WgcProfileType.GAMING_STORE -> WgcGamingStoreProfileTemplate(modifier = modifier)
+        WgcProfileType.LIVE_STREAMING -> WgcLiveStreamingProfileTemplate(modifier = modifier)
         WgcProfileType.STANDARD -> WgcStandardProfileLayout(
             modifier = modifier,
             user = user,

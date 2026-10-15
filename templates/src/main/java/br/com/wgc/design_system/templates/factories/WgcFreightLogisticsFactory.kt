@@ -2,7 +2,7 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.freightlogistics.*
+import br.com.wgc.design_system.factories.verticals.freightlogistics.templates.*
 
 enum class WgcFreightLogisticsScreen {
     QUOTE,

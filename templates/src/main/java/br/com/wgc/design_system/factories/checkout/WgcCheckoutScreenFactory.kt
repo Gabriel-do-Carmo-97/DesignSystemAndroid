@@ -13,8 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.checkout.FakeCheckoutViewModel
-import br.com.wgc.design_system.templates.screens.checkout.WgcCheckoutTemplate
+import br.com.wgc.design_system.factories.checkout.templates.FakeCheckoutViewModel
+import br.com.wgc.design_system.factories.checkout.templates.WgcCheckoutTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

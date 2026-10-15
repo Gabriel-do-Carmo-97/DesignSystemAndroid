@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 /**
  * Categorias de Tamanho de Janela / Layout Adaptativo.

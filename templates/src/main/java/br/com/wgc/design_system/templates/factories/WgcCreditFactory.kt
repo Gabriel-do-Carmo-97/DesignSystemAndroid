@@ -2,9 +2,9 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.loan.BaseLoanSimulatorViewModel
-import br.com.wgc.design_system.templates.screens.loan.FakeLoanSimulatorViewModel
-import br.com.wgc.design_system.templates.screens.loan.WgcLoanSimulatorTemplate
+import br.com.wgc.design_system.factories.loan.templates.BaseLoanSimulatorViewModel
+import br.com.wgc.design_system.factories.loan.templates.FakeLoanSimulatorViewModel
+import br.com.wgc.design_system.factories.loan.templates.WgcLoanSimulatorTemplate
 
 /**
  * Fábrica universal para instanciação padronizada do template de Simulação e Contratação de Empréstimos.

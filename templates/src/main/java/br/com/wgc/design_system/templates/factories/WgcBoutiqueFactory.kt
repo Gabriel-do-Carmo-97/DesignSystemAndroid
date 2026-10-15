@@ -2,17 +2,17 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaEmailSignInTemplate
-import br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaIntroScreenTemplate
-import br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaSignInScreenTemplate
-import br.com.wgc.design_system.templates.screens.boutique.cart.WgcLazaCartTemplate
-import br.com.wgc.design_system.templates.screens.boutique.checkout.WgcLazaOrderConfirmedTemplate
-import br.com.wgc.design_system.templates.screens.boutique.home.WgcLazaHomeTemplate
-import br.com.wgc.design_system.templates.screens.boutique.model.BoutiqueMockData
-import br.com.wgc.design_system.templates.screens.boutique.model.LazaProduct
-import br.com.wgc.design_system.templates.screens.boutique.product.WgcLazaProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.boutique.reviews.WgcLazaReviewsTemplate
-import br.com.wgc.design_system.templates.screens.boutique.wishlist.WgcLazaWishlistTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.auth.WgcLazaEmailSignInTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.auth.WgcLazaIntroScreenTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.auth.WgcLazaSignInScreenTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.cart.WgcLazaCartTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.checkout.WgcLazaOrderConfirmedTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.home.WgcLazaHomeTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.model.BoutiqueMockData
+import br.com.wgc.design_system.factories.verticals.boutique.templates.model.LazaProduct
+import br.com.wgc.design_system.factories.verticals.boutique.templates.product.WgcLazaProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.reviews.WgcLazaReviewsTemplate
+import br.com.wgc.design_system.factories.verticals.boutique.templates.wishlist.WgcLazaWishlistTemplate
 
 /**
  * Telas suportadas pela fábrica unificada Laza.

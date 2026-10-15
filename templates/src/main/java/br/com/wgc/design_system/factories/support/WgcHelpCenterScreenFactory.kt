@@ -3,8 +3,8 @@ package br.com.wgc.design_system.factories.support
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
-import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportTemplate
+import br.com.wgc.design_system.factories.support.templates.FakeHelpCenterViewModel
+import br.com.wgc.design_system.factories.support.templates.WgcHelpCenterSupportTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**

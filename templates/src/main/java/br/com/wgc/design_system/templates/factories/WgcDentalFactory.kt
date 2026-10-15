@@ -2,12 +2,12 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.dental.DentalMockData
-import br.com.wgc.design_system.templates.screens.dental.WgcDentalAppointmentTemplate
-import br.com.wgc.design_system.templates.screens.dental.WgcDentalHomeTemplate
-import br.com.wgc.design_system.templates.screens.dental.WgcDentalOdontogramTemplate
-import br.com.wgc.design_system.templates.screens.dental.WgcDentalProfileTemplate
-import br.com.wgc.design_system.templates.screens.dental.WgcDentalXRayTemplate
+import br.com.wgc.design_system.factories.verticals.dental.templates.DentalMockData
+import br.com.wgc.design_system.factories.verticals.dental.templates.WgcDentalAppointmentTemplate
+import br.com.wgc.design_system.factories.verticals.dental.templates.WgcDentalHomeTemplate
+import br.com.wgc.design_system.factories.verticals.dental.templates.WgcDentalOdontogramTemplate
+import br.com.wgc.design_system.factories.verticals.dental.templates.WgcDentalProfileTemplate
+import br.com.wgc.design_system.factories.verticals.dental.templates.WgcDentalXRayTemplate
 
 enum class WgcDentalScreen {
     HOME,

@@ -32,10 +32,10 @@ import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.gadgetshop.onboarding.WgcNexkartOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.personalfinance.onboarding.WgcOrganizzeOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.quickshop.onboarding.WgcShopEaseOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.onboarding.WgcStylishOnboardingScreenTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.onboarding.WgcNexkartOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.personalfinance.templates.onboarding.WgcOrganizzeOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.onboarding.WgcShopEaseOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.trendfashion.templates.onboarding.WgcStylishOnboardingScreenTemplate
 
 /**
  * Variantes de Onboarding suportadas pela [WgcOnboardingFactory].

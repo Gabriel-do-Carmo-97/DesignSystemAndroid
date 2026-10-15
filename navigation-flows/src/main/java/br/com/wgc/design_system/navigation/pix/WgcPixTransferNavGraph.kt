@@ -42,9 +42,9 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.pix.FakePixTransferViewModel
-import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferContent
-import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferUiState
+import br.com.wgc.design_system.factories.payment.templates.FakePixTransferViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcPixTransferContent
+import br.com.wgc.design_system.factories.payment.templates.WgcPixTransferUiState
 import kotlinx.serialization.Serializable
 
 @Serializable

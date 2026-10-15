@@ -2,16 +2,16 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.gadgetshop.cart.WgcNexkartCartTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.checkout.WgcNexkartCheckoutTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.checkout.WgcNexkartOrderSuccessTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.home.WgcNexkartHomeTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.model.GadgetShopMockData
-import br.com.wgc.design_system.templates.screens.gadgetshop.model.NexkartProduct
-import br.com.wgc.design_system.templates.screens.gadgetshop.onboarding.WgcNexkartOnboardingTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.product.WgcNexkartProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.product.WgcNexkartProductListTemplate
-import br.com.wgc.design_system.templates.screens.gadgetshop.profile.WgcNexkartProfileTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.cart.WgcNexkartCartTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.checkout.WgcNexkartCheckoutTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.checkout.WgcNexkartOrderSuccessTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.home.WgcNexkartHomeTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.model.GadgetShopMockData
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.model.NexkartProduct
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.onboarding.WgcNexkartOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.product.WgcNexkartProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.product.WgcNexkartProductListTemplate
+import br.com.wgc.design_system.factories.verticals.gadgetshop.templates.profile.WgcNexkartProfileTemplate
 
 /**
  * Telas suportadas pela fábrica unificada Nexkart.

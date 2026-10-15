@@ -38,8 +38,8 @@ import br.com.wgc.design_system.components.avatar.WgcAvatar
 import br.com.wgc.design_system.components.inputs.WgcSwitch
 import br.com.wgc.design_system.components.list.WgcListItem
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.profile.SettingsHubScreenContent
-import br.com.wgc.design_system.templates.screens.profile.SettingsHubUiState
+import br.com.wgc.design_system.factories.profile.templates.SettingsHubScreenContent
+import br.com.wgc.design_system.factories.profile.templates.SettingsHubUiState
 
 /**
  * Variantes de Configurações suportadas pela [WgcSettingsHubFactory].

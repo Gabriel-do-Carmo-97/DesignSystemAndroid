@@ -3,11 +3,11 @@ package br.com.wgc.design_system.templates.factories
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.screens.automotive.WgcAutomotiveDetailTemplate
-import br.com.wgc.design_system.templates.screens.automotive.WgcAutomotiveFinancingTemplate
-import br.com.wgc.design_system.templates.screens.automotive.WgcAutomotiveFipeTemplate
-import br.com.wgc.design_system.templates.screens.automotive.WgcAutomotiveHomeTemplate
-import br.com.wgc.design_system.templates.screens.automotive.WgcAutomotiveProfileTemplate
+import br.com.wgc.design_system.factories.verticals.automotive.templates.WgcAutomotiveDetailTemplate
+import br.com.wgc.design_system.factories.verticals.automotive.templates.WgcAutomotiveFinancingTemplate
+import br.com.wgc.design_system.factories.verticals.automotive.templates.WgcAutomotiveFipeTemplate
+import br.com.wgc.design_system.factories.verticals.automotive.templates.WgcAutomotiveHomeTemplate
+import br.com.wgc.design_system.factories.verticals.automotive.templates.WgcAutomotiveProfileTemplate
 import br.com.wgc.design_system.theme.WgcTheme
 
 enum class WgcAutomotiveScreen {

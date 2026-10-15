@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 interface WgcThemeTokens {
     val primaryColor: Int
