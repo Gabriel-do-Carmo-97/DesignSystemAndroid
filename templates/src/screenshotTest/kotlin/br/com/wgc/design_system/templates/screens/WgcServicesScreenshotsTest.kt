@@ -1,27 +1,27 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcBeautyFactory
-import br.com.wgc.design_system.templates.factories.WgcBeautyScreen
-import br.com.wgc.design_system.templates.factories.WgcFashionFactory
-import br.com.wgc.design_system.templates.factories.WgcFashionScreen
-import br.com.wgc.design_system.templates.factories.WgcFastFoodFactory
-import br.com.wgc.design_system.templates.factories.WgcFastFoodScreen
-import br.com.wgc.design_system.templates.factories.WgcGamesFactory
-import br.com.wgc.design_system.templates.factories.WgcGamesScreen
-import br.com.wgc.design_system.templates.factories.WgcGovFactory
-import br.com.wgc.design_system.templates.factories.WgcGovScreen
-import br.com.wgc.design_system.templates.factories.WgcHomeDecorFactory
-import br.com.wgc.design_system.templates.factories.WgcHomeDecorScreen
-import br.com.wgc.design_system.templates.factories.WgcLogisticsFactory
-import br.com.wgc.design_system.templates.factories.WgcLogisticsScreen
-import br.com.wgc.design_system.templates.factories.WgcNewsFactory
-import br.com.wgc.design_system.templates.factories.WgcNewsScreen
-import br.com.wgc.design_system.templates.factories.WgcPetShopFactory
-import br.com.wgc.design_system.templates.factories.WgcPetShopScreen
-import br.com.wgc.design_system.templates.factories.WgcProductivityFactory
-import br.com.wgc.design_system.templates.factories.WgcProductivityScreen
+import br.com.wgc.design_system.factories.categories.WgcBeautyFactory
+import br.com.wgc.design_system.factories.categories.WgcBeautyScreen
+import br.com.wgc.design_system.factories.categories.WgcFashionFactory
+import br.com.wgc.design_system.factories.categories.WgcFashionScreen
+import br.com.wgc.design_system.factories.categories.WgcFastFoodFactory
+import br.com.wgc.design_system.factories.categories.WgcFastFoodScreen
+import br.com.wgc.design_system.factories.categories.WgcGamesFactory
+import br.com.wgc.design_system.factories.categories.WgcGamesScreen
+import br.com.wgc.design_system.factories.categories.WgcGovFactory
+import br.com.wgc.design_system.factories.categories.WgcGovScreen
+import br.com.wgc.design_system.factories.categories.WgcHomeDecorFactory
+import br.com.wgc.design_system.factories.categories.WgcHomeDecorScreen
+import br.com.wgc.design_system.factories.categories.WgcLogisticsFactory
+import br.com.wgc.design_system.factories.categories.WgcLogisticsScreen
+import br.com.wgc.design_system.factories.categories.WgcNewsFactory
+import br.com.wgc.design_system.factories.categories.WgcNewsScreen
+import br.com.wgc.design_system.factories.categories.WgcPetShopFactory
+import br.com.wgc.design_system.factories.categories.WgcPetShopScreen
+import br.com.wgc.design_system.factories.categories.WgcProductivityFactory
+import br.com.wgc.design_system.factories.categories.WgcProductivityScreen
 
 class WgcServicesScreenshotsTest {
 

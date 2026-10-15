@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcHypermarketFactory
-import br.com.wgc.design_system.templates.factories.WgcHypermarketScreen
+import br.com.wgc.design_system.factories.verticals.hypermarket.WgcHypermarketFactory
+import br.com.wgc.design_system.factories.verticals.hypermarket.WgcHypermarketScreen
 import br.com.wgc.design_system.factories.verticals.hypermarket.templates.cart.WgcExtraCartTemplate
 import br.com.wgc.design_system.factories.verticals.hypermarket.templates.discounts.WgcExtraDiscountsTemplate
 import br.com.wgc.design_system.factories.verticals.hypermarket.templates.flyer.WgcExtraFlyerTemplate

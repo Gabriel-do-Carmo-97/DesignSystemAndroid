@@ -1,0 +1,47 @@
+package br.com.wgc.design_system.factories.verticals.carepharmacy
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+
+enum class WgcCarePharmacyScreen {
+    HOME,
+    VACCINES,
+    LOYALTY,
+    CART,
+    PROFILE
+}
+
+@Composable
+fun WgcCarePharmacyFactory(
+    modifier: Modifier = Modifier,
+    screen: WgcCarePharmacyScreen = WgcCarePharmacyScreen.HOME,
+    onNavigate: (WgcCarePharmacyScreen) -> Unit = {}
+) {
+    when (screen) {
+        WgcCarePharmacyScreen.HOME -> {
+            br.com.wgc.design_system.factories.verticals.carepharmacy.templates.home.WgcDrogasilHomeTemplate(
+                modifier = modifier
+            )
+        }
+        WgcCarePharmacyScreen.VACCINES -> {
+            br.com.wgc.design_system.factories.verticals.carepharmacy.templates.vaccines.WgcDrogasilVaccinesTemplate(
+                modifier = modifier
+            )
+        }
+        WgcCarePharmacyScreen.LOYALTY -> {
+            br.com.wgc.design_system.factories.verticals.carepharmacy.templates.profile.WgcCarePharmacyProfileTemplate(
+                modifier = modifier
+            )
+        }
+        WgcCarePharmacyScreen.CART -> {
+            br.com.wgc.design_system.factories.verticals.carepharmacy.templates.cart.WgcDrogasilCartTemplate(
+                modifier = modifier
+            )
+        }
+        WgcCarePharmacyScreen.PROFILE -> {
+            br.com.wgc.design_system.factories.verticals.carepharmacy.templates.profile.WgcCarePharmacyProfileTemplate(
+                modifier = modifier
+            )
+        }
+    }
+}

@@ -34,7 +34,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.factories.WgcProfileFactory
+import br.com.wgc.design_system.factories.profile.WgcProfileScreenFactory
 import br.com.wgc.design_system.factories.profile.templates.BaseUserProfileEditViewModel
 import br.com.wgc.design_system.factories.profile.templates.FakeUserProfileEditViewModel
 import br.com.wgc.design_system.factories.profile.templates.WgcUserProfileEditTemplate
@@ -64,14 +64,14 @@ fun NavGraphBuilder.wgcProfileNavGraph(
     onNavigateBack: (() -> Unit)? = null
 ) {
     composable<ProfileRoute.View> {
-        WgcProfileFactory(
+        WgcProfileScreenFactory(
             onLogoutClick = { onNavigateBack?.invoke() },
             footerSlot = {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(WgcCoreDsSpacing.md.dp),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+                        .padding(WgcCoreDsSpacing.md16.dp),
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
                 ) {
                     WgcClassicButton(
                         textButton = "Editar Dados Cadastrais",

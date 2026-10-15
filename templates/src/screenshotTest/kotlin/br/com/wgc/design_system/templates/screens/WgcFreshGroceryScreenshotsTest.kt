@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcFreshGroceryFactory
-import br.com.wgc.design_system.templates.factories.WgcFreshGroceryScreen
+import br.com.wgc.design_system.factories.verticals.freshgrocery.WgcFreshGroceryFactory
+import br.com.wgc.design_system.factories.verticals.freshgrocery.WgcFreshGroceryScreen
 import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.cart.WgcFreshGroceryCartTemplate
 import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.detail.WgcFreshGroceryProductDetailTemplate
 import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.home.WgcFreshGroceryHomeTemplate

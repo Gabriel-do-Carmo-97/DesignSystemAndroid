@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcApparelFactory
-import br.com.wgc.design_system.templates.factories.WgcApparelScreen
+import br.com.wgc.design_system.factories.verticals.apparel.WgcApparelFactory
+import br.com.wgc.design_system.factories.verticals.apparel.WgcApparelScreen
 import com.android.tools.screenshot.PreviewTest
 
 class WgcClotheeScreenshotsTest {

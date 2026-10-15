@@ -1,13 +1,13 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcFintechCarbonFactory
-import br.com.wgc.design_system.templates.factories.WgcFintechCarbonScreen
-import br.com.wgc.design_system.templates.factories.WgcFintechSuperAppFactory
-import br.com.wgc.design_system.templates.factories.WgcFintechSuperAppScreen
-import br.com.wgc.design_system.templates.factories.WgcFintechNeobankFactory
-import br.com.wgc.design_system.templates.factories.WgcFintechNeobankScreen
+import br.com.wgc.design_system.factories.verticals.fintechcarbon.WgcFintechCarbonFactory
+import br.com.wgc.design_system.factories.verticals.fintechcarbon.WgcFintechCarbonScreen
+import br.com.wgc.design_system.factories.verticals.fintechsuperapp.WgcFintechSuperAppFactory
+import br.com.wgc.design_system.factories.verticals.fintechsuperapp.WgcFintechSuperAppScreen
+import br.com.wgc.design_system.factories.verticals.fintechneobank.WgcFintechNeobankFactory
+import br.com.wgc.design_system.factories.verticals.fintechneobank.WgcFintechNeobankScreen
 
 class WgcFintechScreenshotsTest {
 

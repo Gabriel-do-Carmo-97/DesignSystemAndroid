@@ -1,10 +1,10 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.components.cards.WgcCorporateWellnessPlanTier
-import br.com.wgc.design_system.templates.factories.WgcCorporateWellnessFactory
-import br.com.wgc.design_system.templates.factories.WgcCorporateWellnessScreen
+import br.com.wgc.design_system.factories.verticals.corporatewellness.WgcCorporateWellnessFactory
+import br.com.wgc.design_system.factories.verticals.corporatewellness.WgcCorporateWellnessScreen
 import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.checkin.WgcCorporateWellnessCheckInTemplate
 import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.explore.WgcCorporateWellnessExploreGymsTemplate
 import br.com.wgc.design_system.factories.verticals.corporatewellness.templates.home.WgcCorporateWellnessHomeTemplate

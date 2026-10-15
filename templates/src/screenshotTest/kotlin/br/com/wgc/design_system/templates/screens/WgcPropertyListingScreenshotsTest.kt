@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcPropertyListingFactory
-import br.com.wgc.design_system.templates.factories.WgcPropertyListingScreen
+import br.com.wgc.design_system.factories.verticals.propertylisting.WgcPropertyListingFactory
+import br.com.wgc.design_system.factories.verticals.propertylisting.WgcPropertyListingScreen
 import br.com.wgc.design_system.factories.verticals.propertylisting.templates.contact.WgcPropertyListingContactLeadTemplate
 import br.com.wgc.design_system.factories.verticals.propertylisting.templates.detail.WgcPropertyListingPropertyDetailTemplate
 import br.com.wgc.design_system.factories.verticals.propertylisting.templates.favorites.WgcPropertyListingFavoritesTemplate

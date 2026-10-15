@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcQuickShopFactory
-import br.com.wgc.design_system.templates.factories.WgcQuickShopScreen
+import br.com.wgc.design_system.factories.verticals.quickshop.WgcQuickShopFactory
+import br.com.wgc.design_system.factories.verticals.quickshop.WgcQuickShopScreen
 import br.com.wgc.design_system.factories.verticals.quickshop.templates.checkout.WgcShopEaseCheckoutTemplate
 import br.com.wgc.design_system.factories.verticals.quickshop.templates.detail.WgcShopEaseProductDetailTemplate
 import br.com.wgc.design_system.factories.verticals.quickshop.templates.favorites.WgcShopEaseFavoritesTemplate

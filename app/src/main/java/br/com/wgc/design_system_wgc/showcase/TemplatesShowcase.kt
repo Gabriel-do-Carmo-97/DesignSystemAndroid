@@ -38,8 +38,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.brand.WgcBrand
-import br.com.wgc.design_system.templates.factories.WgcHomeFactory
+import br.com.wgc.design_system.factories.home.WgcHomeScreenFactory
+import br.com.wgc.design_system.factories.home.WgcHomeVariant
 import br.com.wgc.design_system.factories.cart.templates.FakeStandardCartViewModel
 import br.com.wgc.design_system.factories.cart.templates.StandardCartScreenTemplate
 import br.com.wgc.design_system.factories.auth.templates.auth.FakeBrandAddressAuthViewModel
@@ -423,29 +423,28 @@ fun TemplatesShowcase(
                 when (selectedTemplateId) {
                     0 -> WgcProfileFactoryShowcase()
                     1 -> {
-                        var selectedBrandIndex by remember { mutableIntStateOf(0) }
-                        val brands = listOf(
-                            WgcBrand.FoodDelivery,
-                            WgcBrand.Marketplace,
-                            WgcBrand.FintechNeobank,
-                            WgcBrand.GymFitness,
-                            WgcBrand.UrbanMobility
+                        var selectedVariantIndex by remember { mutableIntStateOf(0) }
+                        val variants = listOf(
+                            WgcHomeVariant.FINTECH,
+                            WgcHomeVariant.ECOMMERCE,
+                            WgcHomeVariant.STREAMING,
+                            WgcHomeVariant.FITNESS
                         )
                         Column(
                             modifier = Modifier.fillMaxSize(),
                             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
                         ) {
                             Text(
-                                text = "WgcHomeFactory (Marca Selecionada: ${brands[selectedBrandIndex].brandName})",
+                                text = "WgcHomeScreenFactory (Variante: ${variants[selectedVariantIndex].name})",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold
                             )
                             Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                                brands.forEachIndexed { index, brand ->
+                                variants.forEachIndexed { index, variant ->
                                     FilterChip(
-                                        selected = selectedBrandIndex == index,
-                                        onClick = { selectedBrandIndex = index },
-                                        label = { Text(brand.brandName) }
+                                        selected = selectedVariantIndex == index,
+                                        onClick = { selectedVariantIndex = index },
+                                        label = { Text(variant.name) }
                                     )
                                 }
                             }
@@ -454,7 +453,7 @@ fun TemplatesShowcase(
                                     .fillMaxWidth()
                                     .weight(1f)
                             ) {
-                                WgcHomeFactory(brand = brands[selectedBrandIndex])
+                                WgcHomeScreenFactory(variant = variants[selectedVariantIndex])
                             }
                         }
                     }

@@ -50,8 +50,8 @@ import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.factories.WgcSearchFactory
-import br.com.wgc.design_system.templates.factories.WgcSearchType
+import br.com.wgc.design_system.factories.search.WgcSearchScreenFactory
+import br.com.wgc.design_system.factories.search.WgcSearchVariant
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -84,8 +84,8 @@ fun NavGraphBuilder.wgcSearchNavGraph(
             var query by remember { mutableStateOf("") }
             var category by remember { mutableStateOf("Todos") }
 
-            WgcSearchFactory(
-                type = WgcSearchType.STANDARD,
+            WgcSearchScreenFactory(
+                variant = WgcSearchVariant.STANDARD,
                 searchQuery = query,
                 onSearchQueryChange = { query = it },
                 selectedCategory = category,

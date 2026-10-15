@@ -1,13 +1,13 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcPharmacyChainFactory
-import br.com.wgc.design_system.templates.factories.WgcPharmacyChainScreen
-import br.com.wgc.design_system.templates.factories.WgcCarePharmacyFactory
-import br.com.wgc.design_system.templates.factories.WgcCarePharmacyScreen
-import br.com.wgc.design_system.templates.factories.WgcPopularPharmacyFactory
-import br.com.wgc.design_system.templates.factories.WgcPopularPharmacyScreen
+import br.com.wgc.design_system.factories.verticals.pharmacychain.WgcPharmacyChainFactory
+import br.com.wgc.design_system.factories.verticals.pharmacychain.WgcPharmacyChainScreen
+import br.com.wgc.design_system.factories.verticals.carepharmacy.WgcCarePharmacyFactory
+import br.com.wgc.design_system.factories.verticals.carepharmacy.WgcCarePharmacyScreen
+import br.com.wgc.design_system.factories.verticals.popularpharmacy.WgcPopularPharmacyFactory
+import br.com.wgc.design_system.factories.verticals.popularpharmacy.WgcPopularPharmacyScreen
 
 class WgcPharmaScreenshotsTest {
 

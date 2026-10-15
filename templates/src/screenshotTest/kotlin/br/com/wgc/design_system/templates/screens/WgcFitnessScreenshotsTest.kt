@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcGuidedTrainingFactory
-import br.com.wgc.design_system.templates.factories.WgcGuidedTrainingScreen
+import br.com.wgc.design_system.factories.verticals.guidedtraining.WgcGuidedTrainingFactory
+import br.com.wgc.design_system.factories.verticals.guidedtraining.WgcGuidedTrainingScreen
 import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.activity.WgcNtcActivityTemplate
 import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.detail.WgcNtcWorkoutDetailTemplate
 import br.com.wgc.design_system.factories.verticals.guidedtraining.templates.home.WgcNtcHomeTemplate

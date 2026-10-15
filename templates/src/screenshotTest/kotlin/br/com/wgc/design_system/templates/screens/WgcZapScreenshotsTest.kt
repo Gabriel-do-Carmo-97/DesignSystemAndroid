@@ -1,9 +1,9 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcPropertyClassifiedsFactory
-import br.com.wgc.design_system.templates.factories.WgcPropertyClassifiedsScreen
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.WgcPropertyClassifiedsFactory
+import br.com.wgc.design_system.factories.verticals.propertyclassifieds.WgcPropertyClassifiedsScreen
 import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.detail.WgcZapPropertyDetailTemplate
 import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.favorites.WgcZapFavoritesTemplate
 import br.com.wgc.design_system.factories.verticals.propertyclassifieds.templates.fipezap.WgcZapFipeZapCalculatorTemplate

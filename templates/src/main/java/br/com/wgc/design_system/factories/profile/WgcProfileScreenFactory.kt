@@ -48,6 +48,7 @@ fun WgcProfileScreenFactory(
     userEmail: String = "usuario@wgc.com.br",
     headerSlot: (@Composable () -> Unit)? = null,
     menuSlot: (@Composable () -> Unit)? = null,
+    footerSlot: (@Composable () -> Unit)? = null,
     onLogoutClick: () -> Unit = {}
 ) {
     Scaffold(modifier = modifier.fillMaxSize()) { innerPadding ->
@@ -66,6 +67,8 @@ fun WgcProfileScreenFactory(
             )
 
             menuSlot?.invoke() ?: DefaultProfileMenu(onLogoutClick = onLogoutClick)
+
+            footerSlot?.invoke()
         }
     }
 }

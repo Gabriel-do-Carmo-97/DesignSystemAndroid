@@ -1,0 +1,91 @@
+package br.com.wgc.design_system.factories.verticals.quickshop
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.checkout.WgcShopEaseCheckoutTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.detail.WgcShopEaseProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.favorites.WgcShopEaseFavoritesTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.home.WgcShopEaseHomeTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.model.ShopEaseMockData
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.model.ShopEaseProduct
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.onboarding.WgcShopEaseOnboardingTemplate
+import br.com.wgc.design_system.factories.verticals.quickshop.templates.profile.WgcShopEaseProfileTemplate
+
+/**
+ * Telas disponÃ­veis para renderizaÃ§Ã£o na [WgcQuickShopFactory].
+ */
+enum class WgcQuickShopScreen {
+    Onboarding,
+    Home,
+    ProductDetail,
+    Checkout,
+    Favorites,
+    Profile
+}
+
+/**
+ * FÃ¡brica Universal de Telas do ShopEase (Sunset Orange eCommerce UI Kit).
+ * ExpÃµe ponto de entrada Ãºnico com defaults sensatos e slots de customizaÃ§Ã£o granulares.
+ */
+@Composable
+fun WgcQuickShopFactory(
+    screen: WgcQuickShopScreen = WgcQuickShopScreen.Home,
+    selectedProduct: ShopEaseProduct = ShopEaseMockData.products[0],
+    onNavigateToHome: () -> Unit = {},
+    onNavigateToDetail: (ShopEaseProduct) -> Unit = {},
+    onNavigateToCheckout: () -> Unit = {},
+    onNavigateToFavorites: () -> Unit = {},
+    onNavigateToProfile: () -> Unit = {},
+    onBackClick: () -> Unit = {},
+    customContentSlot: (@Composable () -> Unit)? = null,
+    modifier: Modifier = Modifier
+) {
+    if (customContentSlot != null) {
+        customContentSlot()
+        return
+    }
+
+    when (screen) {
+        WgcQuickShopScreen.Onboarding -> {
+            WgcShopEaseOnboardingTemplate(
+                onNextClick = onNavigateToHome,
+                modifier = modifier
+            )
+        }
+        WgcQuickShopScreen.Home -> {
+            WgcShopEaseHomeTemplate(
+                onProductClick = onNavigateToDetail,
+                onCartClick = onNavigateToCheckout,
+                modifier = modifier
+            )
+        }
+        WgcQuickShopScreen.ProductDetail -> {
+            WgcShopEaseProductDetailTemplate(
+                product = selectedProduct,
+                onBackClick = onBackClick,
+                onAddToCartClick = onNavigateToCheckout,
+                onBuyNowClick = onNavigateToCheckout,
+                modifier = modifier
+            )
+        }
+        WgcQuickShopScreen.Checkout -> {
+            WgcShopEaseCheckoutTemplate(
+                onBackClick = onBackClick,
+                onConfirmOrderClick = { /* confirm */ },
+                modifier = modifier
+            )
+        }
+        WgcQuickShopScreen.Favorites -> {
+            WgcShopEaseFavoritesTemplate(
+                onProductClick = onNavigateToDetail,
+                onBackClick = onBackClick,
+                modifier = modifier
+            )
+        }
+        WgcQuickShopScreen.Profile -> {
+            WgcShopEaseProfileTemplate(
+                modifier = modifier
+            )
+        }
+    }
+}
