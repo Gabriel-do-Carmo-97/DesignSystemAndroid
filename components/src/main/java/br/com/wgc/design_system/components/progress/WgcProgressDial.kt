@@ -16,8 +16,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcProgressDial
@@ -75,6 +77,16 @@ fun WgcProgressDial(
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "WgcProgressDial - 75%")
+@Composable
+private fun WgcProgressDialPreview() {
+    WgcTheme {
+        WgcProgressDial(
+            progress = 0.75f
         )
     }
 }

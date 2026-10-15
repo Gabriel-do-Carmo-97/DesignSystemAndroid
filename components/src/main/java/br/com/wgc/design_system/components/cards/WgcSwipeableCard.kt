@@ -20,6 +20,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -27,9 +28,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcSwipeableCard
@@ -109,6 +112,30 @@ fun WgcSwipeableCard(
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
         ) {
             content()
+        }
+    }
+}
+
+@Preview(name = "WgcSwipeableCard Preview", showBackground = true)
+@Composable
+private fun WgcSwipeableCardPreview() {
+    WgcTheme {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+            WgcSwipeableCard(
+                onDismissToStart = {},
+                onDismissToEnd = {}
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(WgcCoreDsSpacing.md.dp)
+                ) {
+                    Text(
+                        text = "Arraste para o lado para excluir ou favoritar",
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
+            }
         }
     }
 }

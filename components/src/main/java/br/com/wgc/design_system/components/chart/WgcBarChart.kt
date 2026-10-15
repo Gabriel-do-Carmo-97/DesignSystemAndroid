@@ -23,7 +23,9 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Ponto de dado para barra vertical.
@@ -90,6 +92,23 @@ fun WgcBarChart(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcBarChartPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcBarChart(
+                data = listOf(
+                    WgcBarData("Jan", 120f),
+                    WgcBarData("Fev", 240f),
+                    WgcBarData("Mar", 180f),
+                    WgcBarData("Abr", 320f)
+                )
+            )
         }
     }
 }

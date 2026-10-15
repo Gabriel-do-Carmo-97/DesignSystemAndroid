@@ -19,9 +19,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcSegmentedControl
@@ -77,6 +79,20 @@ fun WgcSegmentedControl(
                     )
                 }
             }
+        }
+    }
+}
+
+@Preview(name = "WgcSegmentedControl", showBackground = true)
+@Composable
+private fun WgcSegmentedControlPreview() {
+    WgcTheme {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcSegmentedControl(
+                items = listOf("Visão Geral", "Extrato", "Investimentos"),
+                selectedIndex = 0,
+                onItemSelected = {}
+            )
         }
     }
 }

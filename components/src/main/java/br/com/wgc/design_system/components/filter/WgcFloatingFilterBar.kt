@@ -23,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
@@ -75,5 +76,22 @@ fun WgcFloatingFilterBar(
                 }
             }
         }
+    }
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcFloatingFilterBarPreview() {
+    MaterialTheme {
+        WgcFloatingFilterBar(
+            filters = listOf(
+                WgcFilterOption(id = "1", label = "Todos", isSelected = true),
+                WgcFilterOption(id = "2", label = "Eletrônicos"),
+                WgcFilterOption(id = "3", label = "Moda"),
+                WgcFilterOption(id = "4", label = "Casa & Decoração"),
+                WgcFilterOption(id = "5", label = "Esportes")
+            ),
+            onFilterToggle = {}
+        )
     }
 }

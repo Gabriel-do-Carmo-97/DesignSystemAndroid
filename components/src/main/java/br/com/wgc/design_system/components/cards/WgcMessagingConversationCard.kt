@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -27,6 +28,7 @@ import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcMessagingConversationCard(
@@ -99,6 +101,21 @@ fun WgcMessagingConversationCard(
                     }
                 }
             }
+        }
+    }
+}
+
+@Preview(name = "WgcMessagingConversationCard Preview", showBackground = true)
+@Composable
+private fun WgcMessagingConversationCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcMessagingConversationCard(
+                contactName = "Ana Silva",
+                lastMessage = "Olá! Tudo bem? Vamos alinhar a reunião de design amanhã?",
+                timestamp = "14:32",
+                unreadCount = 3
+            )
         }
     }
 }

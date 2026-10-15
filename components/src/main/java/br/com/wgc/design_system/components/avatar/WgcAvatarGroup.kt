@@ -18,6 +18,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Avatar individual com iniciais ou placeholder.
@@ -81,6 +85,24 @@ fun WgcAvatarGroup(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcAvatarGroupPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcAvatarGroup(
+                avatars = listOf(
+                    WgcAvatarData("1", "Alice"),
+                    WgcAvatarData("2", "Bob"),
+                    WgcAvatarData("3", "Charlie"),
+                    WgcAvatarData("4", "David"),
+                    WgcAvatarData("5", "Eva")
+                )
+            )
         }
     }
 }

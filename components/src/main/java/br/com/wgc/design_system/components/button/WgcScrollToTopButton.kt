@@ -13,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import androidx.compose.foundation.layout.Box
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Botão flutuante para retorno rápido ao topo de listas com animação de fade in/out.
@@ -39,6 +42,16 @@ fun WgcScrollToTopButton(
                 imageVector = Icons.Default.KeyboardArrowUp,
                 contentDescription = "Voltar ao topo"
             )
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcScrollToTopButtonPreview() {
+    WgcTheme {
+        Box(modifier = Modifier.padding(16.dp)) {
+            WgcScrollToTopButton(visible = true, onClick = {})
         }
     }
 }

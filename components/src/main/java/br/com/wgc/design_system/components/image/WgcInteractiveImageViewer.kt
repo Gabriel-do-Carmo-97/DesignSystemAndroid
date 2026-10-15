@@ -3,6 +3,7 @@ package br.com.wgc.design_system.components.image
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -14,6 +15,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.components.images.AsyncImageDefault
+import br.com.wgc.design_system.mock.MockData
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Visualizador interativo de imagens com suporte a gestos de zoom (pinch-to-zoom) e pan.
@@ -57,6 +63,22 @@ fun WgcInteractiveImageViewer(
             )
         ) {
             content()
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "WgcInteractiveImageViewer Preview")
+@Composable
+private fun WgcInteractiveImageViewerPreview() {
+    WgcTheme {
+        WgcInteractiveImageViewer(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            AsyncImageDefault(
+                modifier = Modifier.size(250.dp),
+                image = MockData.listItemSectionCardModel.first().image,
+                contentDescription = "Interactive Image Preview"
+            )
         }
     }
 }

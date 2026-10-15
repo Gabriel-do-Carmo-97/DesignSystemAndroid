@@ -31,11 +31,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Gaveta inferior modal (ModalBottomSheet) de seleção de cores baseada em Roda Cromática.
@@ -194,5 +196,19 @@ fun WgcColorPickerBottomSheet(
                 }
             }
         }
+    }
+}
+
+@Preview(name = "WgcColorPickerBottomSheet - Preview", showBackground = true)
+@Composable
+@Suppress("MagicNumber")
+private fun WgcColorPickerBottomSheetPreview() {
+    WgcTheme {
+        WgcColorPickerBottomSheet(
+            isOpen = true,
+            initialColor = Color(0xFF4CAF50),
+            onDismiss = {},
+            onColorConfirmed = {}
+        )
     }
 }

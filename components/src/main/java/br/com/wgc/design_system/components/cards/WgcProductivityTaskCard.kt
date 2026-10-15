@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -75,3 +76,14 @@ fun WgcProductivityTaskCard(
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+private fun WgcProductivityTaskCardPreview() {
+    WgcProductivityTaskCard(
+        taskTitle = "Revisar especificações de componentes",
+        tag = "Design System",
+        dueDate = "15/10/2026"
+    )
+}
+

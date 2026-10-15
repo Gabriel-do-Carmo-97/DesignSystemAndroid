@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -105,5 +106,23 @@ fun WgcWalkthroughCard(
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WgcWalkthroughCardPreview() {
+    MaterialTheme {
+        WgcWalkthroughCard(
+            step = WgcTourStep(
+                stepIndex = 0,
+                title = "Bem-vindo ao app",
+                description = "Este é um tour guiado pelas principais funcionalidades do sistema.",
+                totalSteps = 3
+            ),
+            onNext = {},
+            onPrevious = {},
+            onDismiss = {}
+        )
     }
 }

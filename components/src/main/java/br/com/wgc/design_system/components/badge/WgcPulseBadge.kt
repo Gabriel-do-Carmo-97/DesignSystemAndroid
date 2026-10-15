@@ -21,6 +21,11 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.padding
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Indicador de status em tempo real com efeito de pulso contínuo (WgcPulseBadge).
@@ -69,5 +74,20 @@ fun WgcPulseBadge(
                 .size(size)
                 .background(color, CircleShape)
         )
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcPulseBadgePreview() {
+    WgcTheme {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WgcPulseBadge(color = MaterialTheme.colorScheme.primary, isPulsing = true)
+            WgcPulseBadge(color = MaterialTheme.colorScheme.error, isPulsing = false)
+        }
     }
 }

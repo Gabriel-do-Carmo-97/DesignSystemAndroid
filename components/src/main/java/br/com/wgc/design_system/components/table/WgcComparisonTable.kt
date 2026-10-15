@@ -24,9 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Feature comparada de um plano.
@@ -123,5 +125,28 @@ fun WgcComparisonCard(
                 modifier = Modifier.fillMaxWidth()
             )
         }
+    }
+}
+
+@Preview(name = "WgcComparisonCard - Preview", showBackground = true)
+@Composable
+private fun WgcComparisonCardPreview() {
+    WgcTheme {
+        WgcComparisonCard(
+            modifier = Modifier.padding(16.dp),
+            plan = WgcPricingPlan(
+                id = "plan_pro",
+                name = "Plano Profissional",
+                price = "R$ 49,90/mês",
+                isHighlighted = true,
+                features = listOf(
+                    WgcPlanFeature(name = "Acesso ilimitado a todos os recursos", included = true),
+                    WgcPlanFeature(name = "Suporte prioritário 24/7", included = true),
+                    WgcPlanFeature(name = "Exportação avançada em PDF", included = false)
+                ),
+                buttonLabel = "Escolher Plano"
+            ),
+            onSelectPlan = {}
+        )
     }
 }

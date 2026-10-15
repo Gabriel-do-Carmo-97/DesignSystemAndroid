@@ -2,7 +2,10 @@
 
 package br.com.wgc.design_system.components.fields
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -10,6 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
+import br.com.wgc.design_system.theme.WgcTheme
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -56,4 +62,27 @@ fun WgcCurrencyInput(
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         singleLine = true
     )
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcCurrencyInputPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            WgcCurrencyInput(
+                amountInCents = 1250L,
+                onAmountChange = {}
+            )
+            WgcCurrencyInput(
+                amountInCents = 150000L,
+                onAmountChange = {},
+                label = "Valor com Erro",
+                isError = true,
+                errorMessage = "Valor inválido"
+            )
+        }
+    }
 }

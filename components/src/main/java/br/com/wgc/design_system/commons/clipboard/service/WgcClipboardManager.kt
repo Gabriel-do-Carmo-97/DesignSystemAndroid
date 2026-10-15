@@ -65,6 +65,7 @@ class WgcClipboardManager(
     /**
      * Limpa o conteúdo atualmente retido na área de transferência.
      */
+
     fun clear() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             clipboard?.clearPrimaryClip()

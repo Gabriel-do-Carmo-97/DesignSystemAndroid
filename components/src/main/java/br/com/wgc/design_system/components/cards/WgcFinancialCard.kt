@@ -19,12 +19,18 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcFinancialCard
@@ -92,5 +98,39 @@ fun WgcFinancialCard(
 
             actionRowSlot?.invoke()
         }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcFinancialCardPreview() {
+    var isBalanceVisible by remember { mutableStateOf(true) }
+
+    WgcTheme {
+        WgcFinancialCard(
+            accountName = "Conta Corrente",
+            balance = "R$ 12.450,80",
+            isBalanceVisible = isBalanceVisible,
+            onToggleBalanceVisibility = { isBalanceVisible = !isBalanceVisible },
+            percentageVariation = "+2,5% este mês",
+            isPositiveVariation = true,
+            modifier = Modifier.padding(16.dp)
+        )
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcFinancialCardHiddenPreview() {
+    WgcTheme {
+        WgcFinancialCard(
+            accountName = "Conta Investimento",
+            balance = "R$ 45.000,00",
+            isBalanceVisible = false,
+            onToggleBalanceVisibility = {},
+            percentageVariation = "-0,5% hoje",
+            isPositiveVariation = false,
+            modifier = Modifier.padding(16.dp)
+        )
     }
 }

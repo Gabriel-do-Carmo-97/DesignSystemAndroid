@@ -29,6 +29,8 @@ import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcPetCareCard(
@@ -92,6 +94,22 @@ fun WgcPetCareCard(
                     onClick = onSubscribeClick
                     )
             }
+        }
+    }
+}
+
+@Preview(name = "WgcPetCareCard Preview", showBackground = true)
+@Composable
+private fun WgcPetCareCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcPetCareCard(
+                petProductTitle = "Ração Premium para Cães Adultos Raças Médias e Grandes 15kg",
+                weightOrSize = "15 kg",
+                subscriberPrice = 129.90,
+                regularPrice = 159.90,
+                onSubscribeClick = {}
+            )
         }
     }
 }

@@ -15,6 +15,11 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Fatia individual do gráfico Donut.
@@ -63,5 +68,21 @@ fun WgcDonutChart(
         }
 
         centerContentSlot?.invoke()
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcDonutChartPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcDonutChart(
+                slices = listOf(
+                    WgcDonutSlice(40f, MaterialTheme.colorScheme.primary, "Alimentação"),
+                    WgcDonutSlice(30f, MaterialTheme.colorScheme.secondary, "Transporte"),
+                    WgcDonutSlice(30f, MaterialTheme.colorScheme.tertiary, "Lazer")
+                )
+            )
+        }
     }
 }

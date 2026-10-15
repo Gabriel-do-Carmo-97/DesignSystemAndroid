@@ -1,6 +1,15 @@
 package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
@@ -9,6 +18,8 @@ import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcNavigationRail
@@ -49,5 +60,23 @@ fun WgcNavigationRail(
                 label = { Text(text = item.label) }
             )
         }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcNavigationRailPreview() {
+    WgcTheme {
+        val sampleItems = listOf(
+            WgcNavItem(route = "home", label = "Home", icon = Icons.Outlined.Home, selectedIcon = Icons.Filled.Home),
+            WgcNavItem(route = "search", label = "Search", icon = Icons.Outlined.Search, selectedIcon = Icons.Filled.Search),
+            WgcNavItem(route = "favorites", label = "Favorites", icon = Icons.Outlined.Favorite, selectedIcon = Icons.Filled.Favorite, badgeCount = 3),
+            WgcNavItem(route = "profile", label = "Profile", icon = Icons.Outlined.Person, selectedIcon = Icons.Filled.Person)
+        )
+        WgcNavigationRail(
+            items = sampleItems,
+            selectedRoute = "home",
+            onItemSelected = {}
+        )
     }
 }

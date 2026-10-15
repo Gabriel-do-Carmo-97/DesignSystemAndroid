@@ -99,3 +99,13 @@ fun WgcMobilityRideCard(
         }
     }
 }
+
+@Preview(showBackground = true, name = "WgcMobilityRideCard Preview")
+@Composable
+private fun WgcMobilityRideCardPreview() {
+    WgcMobilityRideCard(
+        categoryName = "WGC Comfort",
+        estimatedTime = "3 min",
+        price = 24.90
+    )
+}

@@ -28,6 +28,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 enum class WgcBannerSeverity {
     INFO,
@@ -121,6 +123,26 @@ fun WgcBanner(
                     )
                 }
             }
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcBannerPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            WgcBanner(
+                title = "Aviso Importante",
+                message = "Manutenção agendada para hoje às 23:00.",
+                severity = WgcBannerSeverity.WARNING,
+                actionLabel = "Detalhes",
+                onActionClick = {},
+                onDismiss = {}
+            )
         }
     }
 }

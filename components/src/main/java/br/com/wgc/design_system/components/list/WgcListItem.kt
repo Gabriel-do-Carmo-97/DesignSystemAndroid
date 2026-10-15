@@ -1,8 +1,18 @@
 package br.com.wgc.design_system.components.list
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Item de lista padronizado do Design System (WgcListItem) baseado no Material 3.
@@ -36,5 +46,40 @@ fun WgcListItem(
             leadingContent = leadingContent,
             trailingContent = trailingContent
         )
+    }
+}
+
+@Preview(showBackground = true, name = "WgcListItem Preview")
+@Composable
+private fun WgcListItemPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(WgcCoreDsSpacing.sm8.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp)
+        ) {
+            WgcListItem(
+                headlineText = "Item Simples"
+            )
+            WgcListItem(
+                headlineText = "Item com Suporte",
+                supportingText = "Texto de suporte detalhado"
+            )
+            WgcListItem(
+                headlineText = "Item Completo",
+                supportingText = "Com leading e trailing",
+                leadingContent = {
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = null
+                    )
+                },
+                trailingContent = {
+                    Text(text = "R$ 99,00")
+                },
+                onClick = {}
+            )
+        }
     }
 }

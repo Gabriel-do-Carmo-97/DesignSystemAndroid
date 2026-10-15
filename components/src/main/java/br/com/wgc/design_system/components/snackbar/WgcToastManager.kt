@@ -16,8 +16,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import kotlinx.coroutines.delay
@@ -78,5 +80,19 @@ fun WgcToastHost(
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WgcToastHostPreview() {
+    MaterialTheme {
+        WgcToastHost(
+            toast = WgcToastMessage(
+                message = "Operação realizada com sucesso!",
+                variant = WgcSnackbarVariant.Success
+            ),
+            onDismiss = {}
+        )
     }
 }

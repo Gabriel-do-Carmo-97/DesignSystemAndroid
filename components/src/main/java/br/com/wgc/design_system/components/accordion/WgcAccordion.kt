@@ -31,6 +31,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Card expansível corporativo (Accordion) com rotação suave de chevron e slots customizáveis.
@@ -111,6 +113,26 @@ fun WgcAccordion(
                 ) {
                     content()
                 }
+            }
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcAccordionPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcAccordion(
+                title = "Detalhes da Transação",
+                subtitle = "Toque para expandir",
+                isExpanded = true,
+                onToggle = {}
+            ) {
+                Text(
+                    text = "ID: #983475\nStatus: Aprovado\nValor: R$ 150,00",
+                    style = MaterialTheme.typography.bodyMedium
+                )
             }
         }
     }

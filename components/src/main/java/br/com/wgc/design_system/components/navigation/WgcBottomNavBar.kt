@@ -1,9 +1,16 @@
 package br.com.wgc.design_system.components.navigation
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Receipt
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 data class NavItem(
     val label: String,
@@ -53,4 +60,27 @@ fun WgcBottomNavBar(
         }
     )
 }
+
+@Preview(showBackground = true)
+@WgcComponentPreviews
+@Composable
+private fun WgcBottomNavBarPreview() {
+    MaterialTheme {
+        Surface {
+            val sampleItems = listOf(
+                NavItem(label = "Início", icon = Icons.Default.Home, onClick = {}),
+                NavItem(label = "Buscar", icon = Icons.Default.Search, onClick = {}),
+                NavItem(label = "Pedidos", icon = Icons.Default.Receipt, badgeCount = 3, onClick = {}),
+                NavItem(label = "Perfil", icon = Icons.Default.Person, onClick = {})
+            )
+            WgcBottomNavBar(
+                items = sampleItems,
+                selectedIndex = 0,
+                type = WgcMenuType.ClassicBottomBar,
+                onItemSelected = {}
+            )
+        }
+    }
+}
+
 

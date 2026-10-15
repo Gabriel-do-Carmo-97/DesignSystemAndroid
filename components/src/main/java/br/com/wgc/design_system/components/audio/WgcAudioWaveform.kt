@@ -14,6 +14,10 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcAudioWaveform
@@ -61,6 +65,19 @@ fun WgcAudioWaveform(
                 topLeft = Offset(x, y),
                 size = Size(barWidth, barHeight),
                 cornerRadius = CornerRadius(4f, 4f)
+            )
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcAudioWaveformPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcAudioWaveform(
+                amplitudes = listOf(0.2f, 0.5f, 0.8f, 0.3f, 0.9f, 0.6f, 0.4f, 0.7f),
+                playbackProgress = 0.5f
             )
         }
     }

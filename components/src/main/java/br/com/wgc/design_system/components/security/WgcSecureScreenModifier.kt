@@ -5,6 +5,8 @@ import android.view.WindowManager
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Aplica WindowManager.LayoutParams.FLAG_SECURE na Activity enquanto o Composable estiver ativo,
