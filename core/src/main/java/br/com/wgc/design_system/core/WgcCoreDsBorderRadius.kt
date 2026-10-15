@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 object WgcCoreDsBorderRadius {
     const val none0 = CoreConstants.CoreDsBorderRadius.NONE0
 

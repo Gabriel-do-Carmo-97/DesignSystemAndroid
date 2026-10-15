@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Identificadores semânticos de efeitos sonoros (Sound FX) padronizados no Design System.
  */

@@ -2,6 +2,8 @@
 
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Utilitário de Tipografia Fluida (Fluid Typography) para dimensionamento harmônico
  * entre smartphones compactos, dispositivos dobráveis (foldables) e tablets.

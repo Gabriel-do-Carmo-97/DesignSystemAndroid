@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens de Tipografia Oficial do Design System WGC.
  * Padroniza escalas de display, headline, title, body e label para garantir hierarquia consistente.

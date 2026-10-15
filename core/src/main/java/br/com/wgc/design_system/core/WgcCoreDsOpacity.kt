@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens de Opacidade e Transparência Semântica do Design System WGC.
  * Define constantes numéricas de alfa para estados de interação e superfícies.

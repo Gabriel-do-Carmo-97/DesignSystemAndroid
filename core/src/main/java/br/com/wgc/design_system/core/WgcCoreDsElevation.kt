@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 object WgcCoreDsElevation {
     /** 0dp - Sem elevação */
     const val level0 = CoreConstants.CoreDsElevation.LEVEL0

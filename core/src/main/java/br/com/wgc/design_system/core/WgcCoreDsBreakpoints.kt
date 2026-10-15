@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Categorias de Tamanho de Janela / Layout Adaptativo.
  */

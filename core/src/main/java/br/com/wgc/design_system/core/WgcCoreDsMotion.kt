@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 object WgcCoreDsMotion {
     /** 100ms - Duração muito rápida */
     const val durationFast100 = CoreConstants.CoreDsMotion.DURATION_FAST100

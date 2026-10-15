@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Esquema unificado de eventos de telemetria e analytics corporativos (Mixpanel, Amplitude, GA4).
  */

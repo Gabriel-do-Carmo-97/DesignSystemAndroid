@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens de coreografia de movimento e transições escalonadas (stagger) para o Design System.
  */

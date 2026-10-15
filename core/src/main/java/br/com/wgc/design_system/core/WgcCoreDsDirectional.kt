@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens de Direcionalidade para suporte a layouts LTR (Left-to-Right) e RTL (Right-to-Left).
  * Facilita o espelhamento consistente de padding, alinhamento e ícones direcionais.

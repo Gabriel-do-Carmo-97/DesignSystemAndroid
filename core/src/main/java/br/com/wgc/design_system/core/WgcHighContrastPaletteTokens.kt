@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens da paleta de Alto Contraste com garantia estrita de conformidade WCAG 2.1/2.2 nível AAA (>= 7:1).
  */

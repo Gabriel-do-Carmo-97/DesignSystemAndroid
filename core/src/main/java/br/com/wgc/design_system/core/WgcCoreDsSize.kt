@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 object WgcCoreDsSize {
     /** 0px */
     const val s0 = CoreConstants.CoreDsSize.S0

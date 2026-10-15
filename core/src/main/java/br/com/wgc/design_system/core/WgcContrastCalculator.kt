@@ -2,6 +2,7 @@
 
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow

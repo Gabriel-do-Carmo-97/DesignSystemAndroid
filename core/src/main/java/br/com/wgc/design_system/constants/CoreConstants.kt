@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.core
+package br.com.wgc.design_system.constants
 
 /** Central source for compile-time constants owned by the core module. */
 object CoreConstants {

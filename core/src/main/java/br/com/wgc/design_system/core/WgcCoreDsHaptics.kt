@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Padrões de Feedback Tátil (Háptico) padronizados para o Design System WGC.
  * Garante que microinterações críticas (confirmação de compra, erro em senhas, alternância de switches)

@@ -1,5 +1,7 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.constants.CoreConstants
+
 /**
  * Tokens de raio para efeitos de Glassmorphism e Backdrop Blur no WGC Design System.
  */
