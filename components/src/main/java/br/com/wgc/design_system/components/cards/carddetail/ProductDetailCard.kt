@@ -23,7 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.R
-import br.com.wgc.design_system.commons.toBrazilianCurrency
+import br.com.wgc.design_system.commons.currency.toBrazilianCurrency
 import coil3.compose.AsyncImage
 import java.math.BigDecimal
 

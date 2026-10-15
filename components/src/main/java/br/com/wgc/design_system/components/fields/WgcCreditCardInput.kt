@@ -2,7 +2,14 @@
 
 package br.com.wgc.design_system.components.fields
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
+import br.com.wgc.design_system.theme.WgcTheme
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CreditCard
@@ -133,4 +140,27 @@ fun WgcCreditCardInput(
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         singleLine = true
     )
+}
+
+@WgcComponentPreviews
+@Preview(showBackground = true, name = "WgcCreditCardInput - Default & Error")
+@Composable
+private fun WgcCreditCardInputPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            WgcCreditCardInput(
+                cardNumber = "4532123456789012",
+                onCardNumberChange = {}
+            )
+            WgcCreditCardInput(
+                cardNumber = "1234567890123456",
+                onCardNumberChange = {},
+                isError = true,
+                errorMessage = "Número de cartão inválido"
+            )
+        }
+    }
 }

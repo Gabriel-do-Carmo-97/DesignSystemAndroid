@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.navigation
+package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
 /**

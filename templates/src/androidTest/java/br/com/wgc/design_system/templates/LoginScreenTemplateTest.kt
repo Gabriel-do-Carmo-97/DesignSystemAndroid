@@ -1,11 +1,11 @@
-﻿package br.com.wgc.design_system.templates
+package br.com.wgc.design_system.templates
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import br.com.wgc.design_system.templates.screens.login.screen.LoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.login.viewmodel.FakeLoginViewModel
+import br.com.wgc.design_system.factories.auth.templates.screen.LoginScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.FakeLoginViewModel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

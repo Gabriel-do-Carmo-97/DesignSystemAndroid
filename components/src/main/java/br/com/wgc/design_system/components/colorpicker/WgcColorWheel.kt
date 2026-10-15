@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
@@ -217,4 +218,18 @@ private fun calculateHueAndSaturation(offset: Offset, width: Float, height: Floa
     }
 
     return Pair(angleDeg, saturation)
+}
+
+@Preview(name = "WgcColorWheel - Default", showBackground = true)
+@Composable
+private fun WgcColorWheelPreview() {
+    MaterialTheme {
+        WgcColorWheel(
+            hue = 180f,
+            saturation = 0.8f,
+            value = 0.9f,
+            onHsvChange = { _, _, _ -> },
+            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+        )
+    }
 }

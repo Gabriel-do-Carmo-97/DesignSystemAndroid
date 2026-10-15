@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -53,5 +54,27 @@ fun WgcRideShareCard(
             }
             Text("R$ " + String.format(Locale.getDefault(), "%,.2f", price), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
         }
+    }
+}
+
+@Preview(showBackground = true, name = "Default Ride Share Card")
+@Composable
+private fun WgcRideShareCardPreview() {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        WgcRideShareCard(
+            name = "Wgc Comfort",
+            eta = "3 min",
+            price = 24.50,
+            discount = "R$ 5,00 de desconto"
+        )
+        WgcRideShareCard(
+            name = "Wgc Black",
+            eta = "5 min",
+            price = 42.80,
+            isSelected = true
+        )
     }
 }

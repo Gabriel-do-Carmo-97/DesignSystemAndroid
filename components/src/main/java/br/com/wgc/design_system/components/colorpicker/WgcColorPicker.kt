@@ -32,7 +32,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.commons.WgcDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsSpacing

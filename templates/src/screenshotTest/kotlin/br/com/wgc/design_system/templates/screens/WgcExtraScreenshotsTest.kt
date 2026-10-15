@@ -2,15 +2,15 @@
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcHypermarketFactory
-import br.com.wgc.design_system.templates.factories.WgcHypermarketScreen
-import br.com.wgc.design_system.templates.screens.hypermarket.cart.WgcExtraCartTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.discounts.WgcExtraDiscountsTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.flyer.WgcExtraFlyerTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.home.WgcExtraHomeTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.loyalty.WgcExtraLoyaltyTemplate
-import br.com.wgc.design_system.templates.screens.hypermarket.model.ExtraCartItem
-import br.com.wgc.design_system.templates.screens.hypermarket.model.HypermarketMockData
+import br.com.wgc.design_system.factories.verticals.hypermarket.WgcHypermarketFactory
+import br.com.wgc.design_system.factories.verticals.hypermarket.WgcHypermarketScreen
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.cart.WgcExtraCartTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.discounts.WgcExtraDiscountsTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.flyer.WgcExtraFlyerTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.home.WgcExtraHomeTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.loyalty.WgcExtraLoyaltyTemplate
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.ExtraCartItem
+import br.com.wgc.design_system.factories.verticals.hypermarket.templates.model.HypermarketMockData
 
 class WgcExtraScreenshotsTest {
 

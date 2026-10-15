@@ -26,7 +26,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Seletor de cores corporativo para personalização visual dinâmica e whitelabel.
@@ -104,6 +106,22 @@ fun WgcColorPicker(
                     }
                 }
             }
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+@Suppress("MagicNumber")
+private fun WgcColorPickerPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            WgcColorPicker(
+                selectedColor = Color(0xFF1E88E5),
+                onColorSelected = {}
+            )
         }
     }
 }

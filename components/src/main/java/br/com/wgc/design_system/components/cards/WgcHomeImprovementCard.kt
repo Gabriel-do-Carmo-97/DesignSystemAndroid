@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,11 +17,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcHomeImprovementCard(
@@ -67,8 +69,22 @@ fun WgcHomeImprovementCard(
                 WgcClassicButton(
                     textButton = "Comprar",
                     onClick = onAddToCart
-                    )
+                )
             }
         }
+    }
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcHomeImprovementCardPreview() {
+    WgcTheme {
+        WgcHomeImprovementCard(
+            productName = "Furadeira e Parafusadeira de Impacto Bivolt",
+            department = "Ferramentas Elétricas",
+            price = 349.90,
+            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            onAddToCart = {}
+        )
     }
 }

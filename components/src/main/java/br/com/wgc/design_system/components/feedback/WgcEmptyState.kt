@@ -21,7 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.ThemePreviews
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 
 /**
  * Componente oficial de Estado Vazio (Empty State) do Design System WGC.

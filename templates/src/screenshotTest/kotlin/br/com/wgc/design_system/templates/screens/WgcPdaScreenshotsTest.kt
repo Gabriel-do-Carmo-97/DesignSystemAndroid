@@ -2,8 +2,8 @@
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcPremiumGroceryFactory
-import br.com.wgc.design_system.templates.factories.WgcPremiumGroceryScreen
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.WgcPremiumGroceryFactory
+import br.com.wgc.design_system.factories.verticals.premiumgrocery.WgcPremiumGroceryScreen
 
 class WgcPdaScreenshotsTest {
 

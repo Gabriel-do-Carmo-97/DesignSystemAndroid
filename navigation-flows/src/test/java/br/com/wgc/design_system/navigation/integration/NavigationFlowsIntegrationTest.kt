@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation.integration
+package br.com.wgc.design_system.navigation.integration
 
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.core.WgcCoreDsColorsFacade

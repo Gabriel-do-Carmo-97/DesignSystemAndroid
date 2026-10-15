@@ -38,55 +38,55 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.brand.WgcBrand
-import br.com.wgc.design_system.templates.factories.WgcHomeFactory
-import br.com.wgc.design_system.templates.screens.cart.FakeStandardCartViewModel
-import br.com.wgc.design_system.templates.screens.cart.StandardCartScreenTemplate
-import br.com.wgc.design_system.templates.screens.common.auth.FakeBrandAddressAuthViewModel
-import br.com.wgc.design_system.templates.screens.common.auth.WgcBrandAddressRegistrationScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.klok.WgcKlokAuthScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.split.WgcSplitCardAuthScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.wave.WgcWaveAuthScreenTemplate
-import br.com.wgc.design_system.templates.screens.fooddelivery.FakeFoodDeliveryHomeViewModel
-import br.com.wgc.design_system.templates.screens.fooddelivery.WgcFoodDeliveryHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.home.ecommerce.EcommerceHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.home.ecommerce.FakeEcommerceHomeViewModel
-import br.com.wgc.design_system.templates.screens.home.fintech.FakeFintechHomeViewModel
-import br.com.wgc.design_system.templates.screens.home.fintech.FintechHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.login.screen.LoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.login.viewmodel.FakeLoginViewModel
-import br.com.wgc.design_system.templates.screens.map.FakeRealtimeLocationViewModel
-import br.com.wgc.design_system.templates.screens.map.RealtimeLocationMapScreenTemplate
-import br.com.wgc.design_system.templates.screens.marketplacescreen.FakeMarketplaceHomeViewModel
-import br.com.wgc.design_system.templates.screens.marketplacescreen.WgcMarketplaceHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.notifications.WgcNotificationCenterTemplate
-import br.com.wgc.design_system.templates.screens.profile.WgcUserProfileEditTemplate
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.FakeQuickFoodDeliveryHomeViewModel
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.WgcQuickFoodDeliveryHomeScreenTemplate
-import br.com.wgc.design_system.templates.screens.search.FakeSearchAndFilterViewModel
-import br.com.wgc.design_system.templates.screens.search.SearchAndFilterScreenTemplate
-import br.com.wgc.design_system.templates.screens.social.FakeInstagramStoryViewerViewModel
-import br.com.wgc.design_system.templates.screens.social.InstagramStoryViewerScreenTemplate
-import br.com.wgc.design_system.templates.screens.checkout.FakeCheckoutViewModel
-import br.com.wgc.design_system.templates.screens.checkout.WgcCheckoutTemplate
-import br.com.wgc.design_system.templates.screens.product.FakeProductDetailViewModel
-import br.com.wgc.design_system.templates.screens.product.WgcProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.review.FakeFeedbackReviewViewModel
-import br.com.wgc.design_system.templates.screens.review.WgcFeedbackReviewTemplate
-import br.com.wgc.design_system.templates.screens.statement.FakeFinancialStatementViewModel
-import br.com.wgc.design_system.templates.screens.statement.WgcFinancialStatementTemplate
-import br.com.wgc.design_system.templates.screens.support.FakeHelpCenterViewModel
-import br.com.wgc.design_system.templates.screens.support.WgcHelpCenterSupportTemplate
-import br.com.wgc.design_system.templates.screens.card.FakeCardManagementViewModel
-import br.com.wgc.design_system.templates.screens.card.WgcCardManagementTemplate
-import br.com.wgc.design_system.templates.screens.loan.FakeLoanSimulatorViewModel
-import br.com.wgc.design_system.templates.screens.loan.WgcLoanSimulatorTemplate
-import br.com.wgc.design_system.templates.screens.notification.FakeNotificationHubViewModel
-import br.com.wgc.design_system.templates.screens.notification.WgcNotificationHubTemplate
-import br.com.wgc.design_system.templates.screens.pix.FakePixTransferViewModel
-import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferTemplate
-import br.com.wgc.design_system.templates.screens.security.FakeSecuritySettingsViewModel
-import br.com.wgc.design_system.templates.screens.security.WgcSecuritySettingsTemplate
+import br.com.wgc.design_system.factories.home.WgcHomeScreenFactory
+import br.com.wgc.design_system.factories.home.WgcHomeVariant
+import br.com.wgc.design_system.factories.cart.templates.FakeStandardCartViewModel
+import br.com.wgc.design_system.factories.cart.templates.StandardCartScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.auth.FakeBrandAddressAuthViewModel
+import br.com.wgc.design_system.factories.auth.templates.auth.WgcBrandAddressRegistrationScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.klok.WgcKlokAuthScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.split.WgcSplitCardAuthScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.wave.WgcWaveAuthScreenTemplate
+import br.com.wgc.design_system.factories.verticals.fooddelivery.templates.FakeFoodDeliveryHomeViewModel
+import br.com.wgc.design_system.factories.verticals.fooddelivery.templates.WgcFoodDeliveryHomeScreenTemplate
+import br.com.wgc.design_system.factories.home.templates.ecommerce.EcommerceHomeScreenTemplate
+import br.com.wgc.design_system.factories.home.templates.ecommerce.FakeEcommerceHomeViewModel
+import br.com.wgc.design_system.factories.home.templates.fintech.FakeFintechHomeViewModel
+import br.com.wgc.design_system.factories.home.templates.fintech.FintechHomeScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.screen.LoginScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.FakeLoginViewModel
+import br.com.wgc.design_system.factories.map.templates.FakeRealtimeLocationViewModel
+import br.com.wgc.design_system.factories.map.templates.RealtimeLocationMapScreenTemplate
+import br.com.wgc.design_system.factories.verticals.marketplacescreen.templates.FakeMarketplaceHomeViewModel
+import br.com.wgc.design_system.factories.verticals.marketplacescreen.templates.WgcMarketplaceHomeScreenTemplate
+import br.com.wgc.design_system.factories.notification.templates.WgcNotificationCenterTemplate
+import br.com.wgc.design_system.factories.profile.templates.WgcUserProfileEditTemplate
+import br.com.wgc.design_system.factories.verticals.quickfooddelivery.templates.FakeQuickFoodDeliveryHomeViewModel
+import br.com.wgc.design_system.factories.verticals.quickfooddelivery.templates.WgcQuickFoodDeliveryHomeScreenTemplate
+import br.com.wgc.design_system.factories.search.templates.FakeSearchAndFilterViewModel
+import br.com.wgc.design_system.factories.search.templates.SearchAndFilterScreenTemplate
+import br.com.wgc.design_system.factories.social.templates.FakeInstagramStoryViewerViewModel
+import br.com.wgc.design_system.factories.social.templates.InstagramStoryViewerScreenTemplate
+import br.com.wgc.design_system.factories.checkout.templates.FakeCheckoutViewModel
+import br.com.wgc.design_system.factories.checkout.templates.WgcCheckoutTemplate
+import br.com.wgc.design_system.factories.product.templates.FakeProductDetailViewModel
+import br.com.wgc.design_system.factories.product.templates.WgcProductDetailTemplate
+import br.com.wgc.design_system.factories.review.templates.FakeFeedbackReviewViewModel
+import br.com.wgc.design_system.factories.review.templates.WgcFeedbackReviewTemplate
+import br.com.wgc.design_system.factories.statement.templates.FakeFinancialStatementViewModel
+import br.com.wgc.design_system.factories.statement.templates.WgcFinancialStatementTemplate
+import br.com.wgc.design_system.factories.support.templates.FakeHelpCenterViewModel
+import br.com.wgc.design_system.factories.support.templates.WgcHelpCenterSupportTemplate
+import br.com.wgc.design_system.factories.payment.templates.FakeCardManagementViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcCardManagementTemplate
+import br.com.wgc.design_system.factories.loan.templates.FakeLoanSimulatorViewModel
+import br.com.wgc.design_system.factories.loan.templates.WgcLoanSimulatorTemplate
+import br.com.wgc.design_system.factories.notification.templates.FakeNotificationHubViewModel
+import br.com.wgc.design_system.factories.notification.templates.WgcNotificationHubTemplate
+import br.com.wgc.design_system.factories.payment.templates.FakePixTransferViewModel
+import br.com.wgc.design_system.factories.payment.templates.WgcPixTransferTemplate
+import br.com.wgc.design_system.factories.security.templates.FakeSecuritySettingsViewModel
+import br.com.wgc.design_system.factories.security.templates.WgcSecuritySettingsTemplate
 import br.com.wgc.design_system_wgc.MultiBrandAuthCatalogSection
 import br.com.wgc.design_system_wgc.WgcFactoriesAndSlotsCatalogSection
 import br.com.wgc.design_system_wgc.WgcProfileFactoryShowcase
@@ -111,6 +111,7 @@ data class TemplateShowcaseItem(
  * Showcase oficial interativo do módulo :templates.
  * Fornece navegação categorizada, busca em tempo real e visualização isolada de cada tela sem sobreposição.
  */
+@Suppress("MagicNumber", "LongMethod", "CyclomaticComplexMethod")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TemplatesShowcase(
@@ -422,29 +423,28 @@ fun TemplatesShowcase(
                 when (selectedTemplateId) {
                     0 -> WgcProfileFactoryShowcase()
                     1 -> {
-                        var selectedBrandIndex by remember { mutableIntStateOf(0) }
-                        val brands = listOf(
-                            WgcBrand.FoodDelivery,
-                            WgcBrand.Marketplace,
-                            WgcBrand.FintechNeobank,
-                            WgcBrand.GymFitness,
-                            WgcBrand.UrbanMobility
+                        var selectedVariantIndex by remember { mutableIntStateOf(0) }
+                        val variants = listOf(
+                            WgcHomeVariant.FINTECH,
+                            WgcHomeVariant.ECOMMERCE,
+                            WgcHomeVariant.STREAMING,
+                            WgcHomeVariant.FITNESS
                         )
                         Column(
                             modifier = Modifier.fillMaxSize(),
                             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
                         ) {
                             Text(
-                                text = "WgcHomeFactory (Marca Selecionada: ${brands[selectedBrandIndex].brandName})",
+                                text = "WgcHomeScreenFactory (Variante: ${variants[selectedVariantIndex].name})",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold
                             )
                             Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                                brands.forEachIndexed { index, brand ->
+                                variants.forEachIndexed { index, variant ->
                                     FilterChip(
-                                        selected = selectedBrandIndex == index,
-                                        onClick = { selectedBrandIndex = index },
-                                        label = { Text(brand.brandName) }
+                                        selected = selectedVariantIndex == index,
+                                        onClick = { selectedVariantIndex = index },
+                                        label = { Text(variant.name) }
                                     )
                                 }
                             }
@@ -453,7 +453,7 @@ fun TemplatesShowcase(
                                     .fillMaxWidth()
                                     .weight(1f)
                             ) {
-                                WgcHomeFactory(brand = brands[selectedBrandIndex])
+                                WgcHomeScreenFactory(variant = variants[selectedVariantIndex])
                             }
                         }
                     }
@@ -485,7 +485,7 @@ fun TemplatesShowcase(
                     27 -> WgcLoanSimulatorTemplate(viewModel = FakeLoanSimulatorViewModel())
                     28 -> WgcNotificationHubTemplate(viewModel = FakeNotificationHubViewModel())
                     29 -> WgcSecuritySettingsTemplate(viewModel = FakeSecuritySettingsViewModel())
-                    30 -> br.com.wgc.design_system.templates.screens.feedback.WgcErrorStateTemplate()
+                    30 -> br.com.wgc.design_system.factories.review.templates.WgcErrorStateTemplate()
                     else -> WgcNotificationCenterTemplate()
                 }
             }

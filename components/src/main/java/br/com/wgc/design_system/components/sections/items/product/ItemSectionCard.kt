@@ -33,7 +33,7 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.R
-import br.com.wgc.design_system.commons.toBrazilianCurrency
+import br.com.wgc.design_system.commons.currency.toBrazilianCurrency
 import coil3.compose.AsyncImage
 import java.math.BigDecimal
 

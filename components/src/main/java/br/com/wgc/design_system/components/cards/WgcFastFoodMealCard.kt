@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -27,6 +27,8 @@ import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcFastFoodMealCard(
@@ -82,6 +84,21 @@ fun WgcFastFoodMealCard(
                     onClick = onAddMeal
                     )
             }
+        }
+    }
+}
+
+@Preview(name = "WgcFastFoodMealCard Preview", showBackground = true)
+@Composable
+private fun WgcFastFoodMealCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcFastFoodMealCard(
+                comboName = "Combo X-Burguer Duplo",
+                description = "Hambúrguer duplo com queijo, batata frita média e refrigerante 500ml",
+                price = 34.90,
+                onAddMeal = {}
+            )
         }
     }
 }

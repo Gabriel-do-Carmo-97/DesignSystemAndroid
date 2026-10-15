@@ -17,6 +17,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcCheckboxGroup
@@ -79,6 +81,20 @@ fun WgcCheckboxGroup(
                     if (checked) newSet.add(item) else newSet.remove(item)
                     onSelectionChange(newSet)
                 }
+            )
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcCheckboxGroupPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcCheckboxGroup(
+                items = listOf("Item 1", "Item 2", "Item 3"),
+                selectedItems = setOf("Item 1"),
+                onSelectionChange = {}
             )
         }
     }

@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.profile
+package br.com.wgc.design_system.factories.profile.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

@@ -35,10 +35,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
-import br.com.wgc.design_system.commons.WgcDevicePreviews
+import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.factories.WgcSettingsHubFactory
-import br.com.wgc.design_system.templates.factories.WgcSettingsHubType
+import br.com.wgc.design_system.factories.settings.WgcSettingsScreenFactory
+import br.com.wgc.design_system.factories.settings.WgcSettingsVariant
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -72,8 +72,8 @@ fun NavGraphBuilder.wgcSettingsNavGraph(
         composable<WgcSettingsOverviewRoute> {
             var showLogoutDialog by remember { mutableStateOf(false) }
 
-            WgcSettingsHubFactory(
-                type = WgcSettingsHubType.STANDARD,
+            WgcSettingsScreenFactory(
+                variant = WgcSettingsVariant.STANDARD,
                 onPrivacyClick = { navController.navigate(WgcSettingsSecurityRoute) },
                 onTermsClick = { navController.navigate(WgcSettingsTermsRoute) },
                 onLogoutClick = { showLogoutDialog = true },
@@ -103,16 +103,16 @@ fun NavGraphBuilder.wgcSettingsNavGraph(
         }
 
         composable<WgcSettingsSecurityRoute> {
-            WgcSettingsHubFactory(
-                type = WgcSettingsHubType.SECURITY,
+            WgcSettingsScreenFactory(
+                variant = WgcSettingsVariant.SECURITY,
                 onBackClick = { navController.popBackStack() },
                 onPrivacyClick = { navController.navigate(WgcSettingsTermsRoute) }
             )
         }
 
         composable<WgcSettingsPreferencesRoute> {
-            WgcSettingsHubFactory(
-                type = WgcSettingsHubType.PREFERENCES,
+            WgcSettingsScreenFactory(
+                variant = WgcSettingsVariant.PREFERENCES,
                 onBackClick = { navController.popBackStack() },
                 onTermsClick = { navController.navigate(WgcSettingsTermsRoute) },
                 onLogoutClick = onLogoutConfirmed

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -98,4 +98,14 @@ fun WgcMobilityRideCard(
             }
         }
     }
+}
+
+@Preview(showBackground = true, name = "WgcMobilityRideCard Preview")
+@Composable
+private fun WgcMobilityRideCardPreview() {
+    WgcMobilityRideCard(
+        categoryName = "WGC Comfort",
+        estimatedTime = "3 min",
+        price = 24.90
+    )
 }

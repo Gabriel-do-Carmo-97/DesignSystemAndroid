@@ -1,11 +1,11 @@
-﻿package br.com.wgc.design_system.templates.screens.resetpassword
+package br.com.wgc.design_system.templates.screens.resetpassword
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import br.com.wgc.design_system.templates.screens.resetpassword.screen.ResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.resetpassword.viewmodel.FakeResetPasswordViewModel
+import br.com.wgc.design_system.factories.auth.templates.screen.ResetPasswordScreenTemplate
+import br.com.wgc.design_system.factories.auth.templates.viewmodel.FakeResetPasswordViewModel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

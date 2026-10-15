@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.stepper
+package br.com.wgc.design_system.components.stepper
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

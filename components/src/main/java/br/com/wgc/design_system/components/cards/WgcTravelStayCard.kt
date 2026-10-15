@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -98,5 +99,19 @@ fun WgcTravelStayCard(
                     )
             }
         }
+    }
+}
+
+@Preview(name = "WgcTravelStayCard Preview", showBackground = true)
+@Composable
+private fun WgcTravelStayCardPreview() {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        WgcTravelStayCard(
+            title = "Resort & Spa Beira Mar",
+            location = "Florianópolis, SC",
+            rating = 4.8,
+            nightPrice = 320.00,
+            onBookClick = {}
+        )
     }
 }

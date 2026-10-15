@@ -39,8 +39,8 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.loan.FakeLoanSimulatorViewModel
-import br.com.wgc.design_system.templates.screens.loan.WgcLoanSimulatorContent
+import br.com.wgc.design_system.factories.loan.templates.FakeLoanSimulatorViewModel
+import br.com.wgc.design_system.factories.loan.templates.WgcLoanSimulatorContent
 import kotlinx.serialization.Serializable
 import kotlin.math.roundToInt
 

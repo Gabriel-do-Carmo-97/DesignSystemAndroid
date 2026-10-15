@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation.checkout
+package br.com.wgc.design_system.navigation.checkout
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -45,11 +45,11 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.templates.screens.cart.FakeStandardCartViewModel
-import br.com.wgc.design_system.templates.screens.cart.StandardCartScreenContent
-import br.com.wgc.design_system.templates.screens.cart.StandardCartUiState
-import br.com.wgc.design_system.templates.screens.receipt.WgcTransactionReceiptContent
-import br.com.wgc.design_system.templates.screens.receipt.WgcTransactionReceiptUiState
+import br.com.wgc.design_system.factories.cart.templates.FakeStandardCartViewModel
+import br.com.wgc.design_system.factories.cart.templates.StandardCartScreenContent
+import br.com.wgc.design_system.factories.cart.templates.StandardCartUiState
+import br.com.wgc.design_system.factories.receipt.templates.WgcTransactionReceiptContent
+import br.com.wgc.design_system.factories.receipt.templates.WgcTransactionReceiptUiState
 import kotlinx.serialization.Serializable
 
 @Serializable

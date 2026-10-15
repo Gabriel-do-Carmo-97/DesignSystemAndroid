@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -83,6 +83,20 @@ fun WgcGovDigitalDocumentCard(
                     )
                 }
             }
+        }
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
+@Composable
+private fun WgcGovDigitalDocumentCardPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcGovDigitalDocumentCard(
+                documentTitle = "Carteira de Identidade Nacional",
+                citizenName = "João da Silva",
+                documentNumberMasked = "***.123.456-**"
+            )
         }
     }
 }

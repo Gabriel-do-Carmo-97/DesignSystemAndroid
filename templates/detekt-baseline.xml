@@ -3,7 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:WgcApparelFactory.kt$@Composable fun WgcApparelFactory( screen: WgcApparelScreen = WgcApparelScreen.Home, modifier: Modifier = Modifier, selectedProduct: ClotheeProduct = ApparelMockData.products[0], onNavigateToScreen: (WgcApparelScreen) -> Unit = {}, customSlot: (@Composable () -> Unit)? = null )</ID>
-    <ID>CyclomaticComplexMethod:WgcAuthFactory.kt$@Composable fun WgcAuthFactory( modifier: Modifier = Modifier, brand: WgcBrand = WgcBrand.FoodDelivery, flow: WgcAuthFlow = WgcAuthFlow.Login, headerSlot: (@Composable () -> Unit)? = null, inputSlot: (@Composable () -> Unit)? = null, primaryButtonSlot: (@Composable () -> Unit)? = null, footerSlot: (@Composable () -> Unit)? = null, onNavigateToRegister: () -> Unit = {}, onNavigateToLogin: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}, onVerified: () -> Unit = {} )</ID>
     <ID>CyclomaticComplexMethod:WgcBoutiqueFactory.kt$@Composable fun WgcBoutiqueFactory( screen: WgcBoutiqueScreen = WgcBoutiqueScreen.Home, modifier: Modifier = Modifier, selectedProduct: LazaProduct = BoutiqueMockData.products[0], onNavigateToScreen: (WgcBoutiqueScreen) -> Unit = {}, customSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcBoutiqueProductDetailTemplate.kt$@Composable fun WgcLazaProductDetailTemplate( modifier: Modifier = Modifier, product: LazaProduct = BoutiqueMockData.products[0], cartCount: Int = 2, selectedSize: String = "M", selectedImageIndex: Int = 0, reviews: List&lt;LazaReview> = BoutiqueMockData.reviews, onBackClick: () -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onCartClick: () -> Unit = {}, onSizeSelected: (String) -> Unit = {}, onImageSelected: (Int) -> Unit = {}, onViewAllReviews: () -> Unit = {}, onAddToCartClick: () -> Unit = {}, customGallerySlot: (@Composable () -> Unit)? = null, customSizeSelectorSlot: (@Composable () -> Unit)? = null, customReviewsSlot: (@Composable () -> Unit)? = null, customBottomBarSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcCorporateWellnessFactory.kt$WgcCorporateWellnessFactory$@Composable fun Screen( screen: WgcCorporateWellnessScreen, modifier: Modifier = Modifier, user: CorporateWellnessUserProfile = CorporateWellnessMockData.mockUser, gyms: List&lt;CorporateWellnessGym> = CorporateWellnessMockData.mockGyms, plans: List&lt;CorporateWellnessPlan> = CorporateWellnessMockData.mockPlans, wellnessApps: List&lt;CorporateWellnessWellnessApp> = CorporateWellnessMockData.mockWellnessApps, currentCheckIn: CorporateWellnessCheckIn = CorporateWellnessMockData.mockUser.todayCheckIn!!, selectedFilterIndex: Int = 0, onNavigateScreen: ((WgcCorporateWellnessScreen) -> Unit)? = null, onSelectFilter: (Int) -> Unit = {}, onSelectGym: ((CorporateWellnessGym) -> Unit)? = null, onSelectPlan: ((CorporateWellnessPlan) -> Unit)? = null, onToggleActivateApp: ((appId: String, activate: Boolean) -> Unit)? = null, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
@@ -12,7 +11,6 @@
     <ID>CyclomaticComplexMethod:WgcGuidedTrainingWorkoutPlayerTemplate.kt$@Composable fun WgcNtcWorkoutPlayerTemplate( workout: NtcWorkoutItem, currentExerciseIndex: Int, timeRemainingFormatted: String, progressFraction: Float, isPlaying: Boolean, modifier: Modifier = Modifier, onCloseClick: () -> Unit = {}, onPlayPauseToggle: () -> Unit = {}, onPreviousClick: () -> Unit = {}, onNextClick: () -> Unit = {}, onFinishWorkout: () -> Unit = {}, slotTimer: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcGymFitnessClassesTemplate.kt$@Composable fun WgcGymFitnessClassesTemplate( classes: List&lt;GymFitnessClass>, selectedDayIndex: Int, onSelectDay: (Int) -> Unit, selectedCategoryIndex: Int, onSelectCategory: (Int) -> Unit, modifier: Modifier = Modifier, unitName: String = "Gym &amp; Fitness - Paulista Bela Cintra", onBackClick: (() -> Unit)? = null, onToggleBooking: ((classId: String, booked: Boolean) -> Unit)? = null, selectedNavItem: WgcGymFitnessNavItem = WgcGymFitnessNavItem.CLASSES, onNavItemClick: (WgcGymFitnessNavItem) -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcGymFitnessFactory.kt$WgcGymFitnessFactory$@Composable fun Screen( screen: WgcGymFitnessScreen, modifier: Modifier = Modifier, user: GymFitnessUserProfile = GymFitnessMockData.mockUser, currentUnit: GymFitnessGymUnit = GymFitnessMockData.mockUnits.first(), routines: List&lt;GymFitnessWorkoutRoutine> = GymFitnessMockData.mockRoutines, selectedRoutineIndex: Int = 0, classes: List&lt;GymFitnessClass> = GymFitnessMockData.mockClasses, selectedDayIndex: Int = 0, selectedCategoryIndex: Int = 0, videos: List&lt;GymFitnessVideoWorkout> = GymFitnessMockData.mockGoVideos, onNavigateScreen: ((WgcGymFitnessScreen) -> Unit)? = null, onSelectRoutine: (Int) -> Unit = {}, onSelectDay: (Int) -> Unit = {}, onSelectCategory: (Int) -> Unit = {}, onToggleExercise: ((exerciseId: String, completed: Boolean) -> Unit)? = null, onToggleBooking: ((classId: String, booked: Boolean) -> Unit)? = null, onSelectVideo: ((GymFitnessVideoWorkout) -> Unit)? = null, onRefreshQr: () -> Unit = {}, onCheckIn: () -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
-    <ID>CyclomaticComplexMethod:WgcHomeFactory.kt$@Composable fun WgcHomeFactory( modifier: Modifier = Modifier, brand: WgcBrand = WgcBrand.FoodDelivery, topBarSlot: (@Composable () -> Unit)? = null, bottomNavSlot: (@Composable () -> Unit)? = null, floatingActionSlot: (@Composable () -> Unit)? = null, bannerSlot: (@Composable () -> Unit)? = null, contentSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcMegaStoreFactory.kt$@Composable fun WgcMegaStoreFactory( modifier: Modifier = Modifier, screen: WgcMegaStoreScreen = WgcMegaStoreScreen.HomeShop, topBarSlot: (@Composable () -> Unit)? = null, bottomBarSlot: (@Composable () -> Unit)? = null, onNavigate: ((WgcMegaStoreScreen) -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcPropertyListingFactory.kt$@Composable fun WgcPropertyListingFactory( modifier: Modifier = Modifier, screen: WgcPropertyListingScreen = WgcPropertyListingScreen.Home, selectedProperty: PropertyListingPropertyModel = PropertyListingMockData.sampleProperty, onNavigateToScreen: (WgcPropertyListingScreen) -> Unit = {}, customScreenSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>CyclomaticComplexMethod:WgcPropertyListingHomeTemplate.kt$@Composable fun WgcPropertyListingHomeTemplate( modifier: Modifier = Modifier, properties: List&lt;PropertyListingPropertyModel> = PropertyListingMockData.properties, searchQuery: String = "", onSearchQueryChange: (String) -> Unit = {}, purpose: WgcPropertyListingPurpose = WgcPropertyListingPurpose.Buy, onPurposeChange: (WgcPropertyListingPurpose) -> Unit = {}, selectedNavItem: WgcPropertyListingNavItem = WgcPropertyListingNavItem.Search, onNavItemSelect: (WgcPropertyListingNavItem) -> Unit = {}, onPropertyClick: (PropertyListingPropertyModel) -> Unit = {}, onFavoriteToggle: (String) -> Unit = {}, onWhatsAppClick: (PropertyListingPropertyModel) -> Unit = {}, onFilterClick: () -> Unit = {}, onNotificationsClick: () -> Unit = {}, topBarSlot: (@Composable () -> Unit)? = null, bottomBarSlot: (@Composable () -> Unit)? = null )</ID>
@@ -69,6 +67,21 @@
     <ID>ImplicitDefaultLocale:WgcHardwareTemplates.kt$String.format("%.2f", total)</ID>
     <ID>ImplicitDefaultLocale:WgcRetailCheckoutTemplates.kt$String.format("%.2f", totalAmount)</ID>
     <ID>ImplicitDefaultLocale:WgcTelemedicineTemplates.kt$String.format("%.2f", doc.consultationFee)</ID>
+    <ID>InvalidPackageDeclaration:FintechHomeViewModelTest.kt$package br.com.wgc.design_system.factories.home.templates.fintech</ID>
+    <ID>InvalidPackageDeclaration:FoodDeliveryHomeViewModelTest.kt$package br.com.wgc.design_system.factories.verticals.fooddelivery.templates</ID>
+    <ID>InvalidPackageDeclaration:MarketplaceHomeViewModelTest.kt$package br.com.wgc.design_system.factories.verticals.marketplacescreen.templates</ID>
+    <ID>InvalidPackageDeclaration:QuickFoodDeliveryHomeViewModelTest.kt$package br.com.wgc.design_system.factories.verticals.quickfooddelivery.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcCardManagementTemplateTest.kt$package br.com.wgc.design_system.factories.payment.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcCheckoutTemplateTest.kt$package br.com.wgc.design_system.factories.checkout.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcFeedbackReviewTemplateTest.kt$package br.com.wgc.design_system.factories.review.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcFinancialStatementTemplateTest.kt$package br.com.wgc.design_system.factories.statement.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcLoanSimulatorTemplateTest.kt$package br.com.wgc.design_system.factories.loan.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcNotificationCenterTemplateTest.kt$package br.com.wgc.design_system.factories.notification.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcNotificationHubTemplateTest.kt$package br.com.wgc.design_system.factories.notification.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcPixTransferTemplateTest.kt$package br.com.wgc.design_system.factories.payment.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcProductDetailTemplateTest.kt$package br.com.wgc.design_system.factories.product.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcSecuritySettingsTemplateTest.kt$package br.com.wgc.design_system.factories.security.templates</ID>
+    <ID>InvalidPackageDeclaration:WgcUserProfileEditTemplateTest.kt$package br.com.wgc.design_system.factories.profile.templates</ID>
     <ID>LongMethod:InstagramStoryViewerScreenTemplate.kt$@Composable fun InstagramStoryViewerScreenContent( modifier: Modifier = Modifier, state: InstagramStoryViewerUiState, onToggleLike: () -> Unit, onReplyChange: (String) -> Unit, onCloseClick: () -> Unit )</ID>
     <ID>LongMethod:LoginScreenTemplate.kt$@Composable fun LoginScreenTemplate( modifier: Modifier = Modifier, state: LoginScreenUiState, onEmailChange: (String) -> Unit, onPasswordChange: (String) -> Unit, onTogglePasswordVisibility: () -> Unit, onRememberMeCheckedChange: (Boolean) -> Unit, onLoginClick: () -> Unit, onRegisterClick: () -> Unit, onForgotPasswordClick: () -> Unit )</ID>
     <ID>LongMethod:QuickFoodDeliveryFoodHomeScreenTemplate.kt$@Composable fun WgcQuickFoodDeliveryHomeScreenContent( modifier: Modifier = Modifier, state: QuickFoodDeliveryHomeUiState, onSearchQueryChange: (String) -> Unit, onAddressClick: () -> Unit, onCartClick: () -> Unit )</ID>
@@ -87,7 +100,6 @@
     <ID>LongMethod:WgcApparelProductDetailTemplate.kt$@Composable fun WgcClotheeProductDetailTemplate( modifier: Modifier = Modifier, product: ClotheeProduct = ApparelMockData.products[0], selectedSize: String = "M", selectedColor: ClotheeColorOption = product.availableColors[0], quantity: Int = 1, reviews: List&lt;ClotheeReview> = ApparelMockData.reviews, onSizeSelected: (String) -> Unit = {}, onColorSelected: (ClotheeColorOption) -> Unit = {}, onQuantityChange: (Int) -> Unit = {}, onFavoriteToggle: () -> Unit = {}, onAddToCart: () -> Unit = {}, onBackClick: () -> Unit = {}, customBottomBarSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcApparelSettingsTemplate.kt$@Composable fun WgcClotheeSettingsTemplate( modifier: Modifier = Modifier, userName: String = "Gilbert Jones", userEmail: String = "Gilbertjones001@gmail.com", userPhone: String = "121-224-7890", avatarUrl: String? = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200", onEditProfileClick: () -> Unit = {}, onAddressClick: () -> Unit = {}, onWishlistClick: () -> Unit = {}, onPaymentClick: () -> Unit = {}, onHelpClick: () -> Unit = {}, onSupportClick: () -> Unit = {}, onSignOutClick: () -> Unit = {}, customHeaderSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcApparelTrackOrderTemplate.kt$@Composable fun WgcClotheeTrackOrderTemplate( modifier: Modifier = Modifier, orderNumber: String = "#456765", timelineSteps: List&lt;WgcClotheeTimelineStep> = ApparelMockData.trackingSteps, itemCount: Int = 3, shippingAddress: ClotheeAddress = ApparelMockData.defaultAddress, onBackClick: () -> Unit = {}, onViewItemsClick: () -> Unit = {}, customHeaderSlot: (@Composable () -> Unit)? = null )</ID>
-    <ID>LongMethod:WgcAuthFactory.kt$@Composable fun WgcAuthFactory( modifier: Modifier = Modifier, brand: WgcBrand = WgcBrand.FoodDelivery, flow: WgcAuthFlow = WgcAuthFlow.Login, headerSlot: (@Composable () -> Unit)? = null, inputSlot: (@Composable () -> Unit)? = null, primaryButtonSlot: (@Composable () -> Unit)? = null, footerSlot: (@Composable () -> Unit)? = null, onNavigateToRegister: () -> Unit = {}, onNavigateToLogin: () -> Unit = {}, onNavigateToResetPassword: () -> Unit = {}, onVerified: () -> Unit = {} )</ID>
     <ID>LongMethod:WgcBoutiqueAuthTemplates.kt$@Composable fun WgcLazaEmailSignInTemplate( modifier: Modifier = Modifier, usernameOrEmail: String = "", password: String = "", rememberMe: Boolean = true, onUsernameOrEmailChange: (String) -> Unit = {}, onPasswordChange: (String) -> Unit = {}, onRememberMeChange: (Boolean) -> Unit = {}, onForgotPasswordClick: () -> Unit = {}, onLoginClick: () -> Unit = {}, onSignInClick: () -> Unit = {}, onBackClick: () -> Unit = {} )</ID>
     <ID>LongMethod:WgcBoutiqueAuthTemplates.kt$@Composable fun WgcLazaIntroScreenTemplate( modifier: Modifier = Modifier, selectedGender: String = "Men", onGenderSelected: (String) -> Unit = {}, onGetStartedClick: () -> Unit = {}, onSkipClick: () -> Unit = {} )</ID>
     <ID>LongMethod:WgcBoutiqueAuthTemplates.kt$@Composable fun WgcLazaSignInScreenTemplate( modifier: Modifier = Modifier, onFacebookClick: () -> Unit = {}, onTwitterClick: () -> Unit = {}, onGoogleClick: () -> Unit = {}, onEmailSignInClick: () -> Unit = {}, onCreateAccountClick: () -> Unit = {}, onBackClick: () -> Unit = {} )</ID>
@@ -153,7 +165,6 @@
     <ID>LongMethod:WgcGymFitnessProfilePassTemplate.kt$@Composable fun WgcGymFitnessProfilePassTemplate( user: GymFitnessUserProfile, modifier: Modifier = Modifier, onBackClick: (() -> Unit)? = null, onRefreshQr: () -> Unit = {}, onCheckIn: () -> Unit = {}, onManagePlan: () -> Unit = {}, selectedNavItem: WgcGymFitnessNavItem = WgcGymFitnessNavItem.PROFILE, onNavItemClick: (WgcGymFitnessNavItem) -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotPassCard: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcGymFitnessWorkoutRoutineTemplate.kt$@Composable fun WgcGymFitnessWorkoutRoutineTemplate( routines: List&lt;GymFitnessWorkoutRoutine>, selectedRoutineIndex: Int, onSelectRoutine: (Int) -> Unit, modifier: Modifier = Modifier, onBackClick: (() -> Unit)? = null, onToggleExercise: ((exerciseId: String, completed: Boolean) -> Unit)? = null, onFinishWorkout: () -> Unit = {}, selectedNavItem: WgcGymFitnessNavItem = WgcGymFitnessNavItem.WORKOUTS, onNavItemClick: (WgcGymFitnessNavItem) -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotTimerBar: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcHelpCenterSupportTemplate.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun WgcHelpCenterSupportContent( state: WgcHelpCenterUiState, onSearchQueryChange: (String) -> Unit, onCategorySelect: (String) -> Unit, onContactSupportClick: () -> Unit, onTicketClick: (String) -> Unit, modifier: Modifier = Modifier, headerSlot: (@Composable () -> Unit)? = null, contactActionSlot: (@Composable () -> Unit)? = null )</ID>
-    <ID>LongMethod:WgcHomeFactory.kt$@Composable fun WgcHomeFactory( modifier: Modifier = Modifier, brand: WgcBrand = WgcBrand.FoodDelivery, topBarSlot: (@Composable () -> Unit)? = null, bottomNavSlot: (@Composable () -> Unit)? = null, floatingActionSlot: (@Composable () -> Unit)? = null, bannerSlot: (@Composable () -> Unit)? = null, contentSlot: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcHypermarketCartTemplate.kt$@Composable fun WgcExtraCartTemplate( cartItems: List&lt;ExtraCartItem>, modifier: Modifier = Modifier, deliveryFee: String = "R$ 9,90", totalSavings: String = "R$ 42,40", totalAmount: String = "R$ 132,20", onIncrementItem: (ExtraCartItem) -> Unit = {}, onDecrementItem: (ExtraCartItem) -> Unit = {}, onCheckoutClick: () -> Unit = {}, selectedNavItem: WgcExtraNavItem = WgcExtraNavItem.CART, onNavItemClick: (WgcExtraNavItem) -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcHypermarketDiscountsTemplate.kt$@Composable fun WgcExtraDiscountsTemplate( coupons: List&lt;ExtraCouponItem>, userCpfMasked: String, modifier: Modifier = Modifier, selectedCategory: String? = null, onSelectCategory: (String?) -> Unit = {}, onActivateAllClick: () -> Unit = {}, onToggleCoupon: (ExtraCouponItem) -> Unit = {}, selectedNavItem: WgcExtraNavItem = WgcExtraNavItem.DISCOUNTS, onNavItemClick: (WgcExtraNavItem) -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null )</ID>
     <ID>LongMethod:WgcHypermarketFactory.kt$@Composable fun WgcHypermarketFactory( modifier: Modifier = Modifier, screen: WgcHypermarketScreen = WgcHypermarketScreen.HOME, user: ExtraUserProfile = HypermarketMockData.mockUser, products: List&lt;ExtraProductItem> = HypermarketMockData.mockProducts, coupons: List&lt;ExtraCouponItem> = HypermarketMockData.mockCoupons, cartItems: List&lt;ExtraCartItem> = listOf( ExtraCartItem(HypermarketMockData.mockProducts[0], 1), ExtraCartItem(HypermarketMockData.mockProducts[1], 2), ExtraCartItem(HypermarketMockData.mockProducts[2], 6) ), selectedNavItem: WgcExtraNavItem = WgcExtraNavItem.HOME, onNavItemClick: (WgcExtraNavItem) -> Unit = {}, onSelectProduct: (ExtraProductItem) -> Unit = {}, onAddToCart: (ExtraProductItem) -> Unit = {}, onNavigateToDiscounts: () -> Unit = {}, onNavigateToFlyer: () -> Unit = {}, onNavigateToCart: () -> Unit = {}, onNavigateToLoyalty: () -> Unit = {}, slotHeader: (@Composable () -> Unit)? = null, slotBottomNav: (@Composable () -> Unit)? = null, customScreenSlot: (@Composable () -> Unit)? = null )</ID>
@@ -503,9 +514,6 @@
     <ID>MaxLineLength:WgcPrestigeBeautyTemplates.kt$Card</ID>
     <ID>MaxLineLength:WgcPrestigeBeautyTemplates.kt$LazyColumn</ID>
     <ID>MaxLineLength:WgcPrestigeBeautyTemplates.kt$Text("+${item.pointsReward} Beauty Club pts", color = Color(WgcCoreDsColors.gadgetShopAccentPink), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)</ID>
-    <ID>MaxLineLength:WgcProfileFactory.kt$WgcProfileType.PREMIUM_GROCERY -> br.com.wgc.design_system.templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate(modifier = modifier)</ID>
-    <ID>MaxLineLength:WgcProfileFactory.kt$WgcProfileType.PROPERTY_LISTING -> br.com.wgc.design_system.templates.screens.propertylisting.profile.WgcPropertyListingProfileTemplate(modifier = modifier)</ID>
-    <ID>MaxLineLength:WgcProfileFactory.kt$WgcProfileType.PROPERTY_RENTAL -> br.com.wgc.design_system.templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate(modifier = modifier)</ID>
     <ID>MaxLineLength:WgcQuickFoodDeliveryAuthTemplates.kt$fun</ID>
     <ID>MaxLineLength:WgcRetailProductTemplates.kt$"${product.description} Handcrafted with premium genuine materials, water-resistant coating, robust zippers, and interior compartments designed for modern tech and everyday carry."</ID>
     <ID>MaxLineLength:WgcRideHailingAuthTemplates.kt$fun</ID>
@@ -542,7 +550,6 @@
     <ID>MaxLineLength:WgcWorkspaceDocsTemplates.kt$LazyColumn</ID>
     <ID>SpreadOperator:WgcRetailCheckoutTemplates.kt$(*initialItems.toTypedArray())</ID>
     <ID>UnusedParameter:WgcApparelProductDetailTemplate.kt$quantity: Int</ID>
-    <ID>UnusedParameter:WgcAuthFactory.kt$onVerified: () -> Unit = {}</ID>
     <ID>UnusedParameter:WgcAutomotiveFactory.kt$modifier: Modifier = Modifier</ID>
     <ID>UnusedParameter:WgcBeautyFactory.kt$screen: WgcBeautyScreen = WgcBeautyScreen.FRAGRANCE</ID>
     <ID>UnusedParameter:WgcBeverageDeliveryFactory.kt$modifier: Modifier = Modifier</ID>
@@ -615,177 +622,8 @@
     <ID>UnusedParameter:WgcTrendFashionCatalogTemplates.kt$selectedFilter: String = "All"</ID>
     <ID>UnusedParameter:WgcTrendFashionOnboardingTemplates.kt$onTimeout: () -> Unit = {}</ID>
     <ID>UnusedParameter:WgcWaveAuthScreenTemplate.kt$onTermsClick: () -> Unit = {}</ID>
-    <ID>UnusedPrivateMember:EcommerceHomeScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun EcommerceHomePreview()</ID>
-    <ID>UnusedPrivateMember:FintechHomeScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun FintechHomePreview()</ID>
-    <ID>UnusedPrivateMember:InstagramStoryViewerScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun InstagramStoryViewerPreview()</ID>
-    <ID>UnusedPrivateMember:LoginScreenTemplate.kt$@Preview(showBackground = true, name = "Stateful (Old) Preview") @Composable private fun LoginScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:LoginScreenTemplate.kt$@Preview(showBackground = true, name = "Stateless Light Theme") @Composable private fun LoginScreenTemplateStatelessPreview()</ID>
-    <ID>UnusedPrivateMember:LoginScreenTemplate.kt$@Preview(showBackground = true, name = "Stateless Loading") @Composable private fun LoginScreenTemplateStatelessLoadingPreview()</ID>
-    <ID>UnusedPrivateMember:QuickFoodDeliveryFoodHomeScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun QuickFoodDeliveryHomePreview()</ID>
-    <ID>UnusedPrivateMember:RealtimeLocationMapScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun RealtimeLocationMapPreview()</ID>
-    <ID>UnusedPrivateMember:RegisterAddressScreenTemplate.kt$@Preview(showBackground = true, name = "Com Erros") @Composable private fun RegisterAddressScreenTemplateWithErrorPreview()</ID>
-    <ID>UnusedPrivateMember:RegisterAddressScreenTemplate.kt$@Preview(showBackground = true, name = "Estado Padrão") @Composable private fun RegisterAddressScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:RegisterCarScreenTemplate.kt$@Preview(showBackground = true, name = "Cadastro de Food Truck") @Composable private fun RegisterFoodTruckScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:RegisterCarScreenTemplate.kt$@Preview(showBackground = true, name = "Cadastro de Veículo Genérico") @Composable private fun RegisterCarScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:RegisterUserScreenTemplate.kt$@Preview(showBackground = true, name = "Estado Padrão") @Composable private fun RegisterUserScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:RegisterUserScreenTemplate.kt$@Preview(showBackground = true, name = "Estado de Carregamento") @Composable private fun RegisterUserScreenTemplateLoadingPreview()</ID>
-    <ID>UnusedPrivateMember:ResetPasswordTemplate.kt$@Preview(showBackground = true, name = "Estado Padrão") @Composable private fun ResetPasswordScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:ResetPasswordTemplate.kt$@Preview(showBackground = true, name = "Estado de Carregamento") @Composable private fun ResetPasswordScreenTemplateLoadingPreview()</ID>
-    <ID>UnusedPrivateMember:SearchAndFilterScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun SearchAndFilterPreview()</ID>
-    <ID>UnusedPrivateMember:SettingsHubScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun SettingsHubPreview()</ID>
-    <ID>UnusedPrivateMember:StandardCartScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun StandardCartPreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeForgotPasswordTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeResetPasswordSentTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeSignInTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelCartTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelCategoryListTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeCategoryListTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelHomeTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelOrderPlacedTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeOrderPlacedTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelSettingsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeSettingsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcApparelTrackOrderTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcClotheeTrackOrderTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcAuthFactory.kt$@Preview(name = "WgcAuthFactory - Default Food Delivery", showBackground = true) @Composable private fun WgcAuthFactoryDefaultPreview()</ID>
-    <ID>UnusedPrivateMember:WgcAuthFactory.kt$@Preview(name = "WgcAuthFactory - Ride Hailing Register", showBackground = true) @Composable private fun WgcAuthFactoryRideHailingRegisterPreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcLazaEmailSignInTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcLazaIntroScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcLazaSignInScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcLazaCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueHomeTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcLazaHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueOrderConfirmedTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcLazaOrderConfirmedTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcLazaProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueReviewsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcLazaReviewsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBoutiqueWishlistTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcLazaWishlistTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcBrandAddressRegistrationScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun BrandAddressAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcCarePharmacyCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogasilCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCarePharmacyHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogasilHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCarePharmacyProfileTemplate.kt$@WgcDevicePreviews @Preview(showBackground = true) @Composable private fun WgcCarePharmacyProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCarePharmacyVaccinesTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogasilVaccinesTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketFeaturedTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselFeaturedTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketMarketTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselMarketTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketOrderTrackingTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselOrderTrackingTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcCuratedMarketProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcTasselProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcDealMarketplaceAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcDealMarketplaceAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcFoodDeliveryAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun FoodDeliveryAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcFoodDeliveryHomeScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun FoodDeliveryHomePreview()</ID>
-    <ID>UnusedPrivateMember:WgcFreshGroceryCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcFreshGroceryCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcFreshGroceryHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcFreshGroceryHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcFreshGroceryProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcFreshGroceryProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcFreshGroceryProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcFreshGroceryProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcFreshGrocerySplashTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcFreshGrocerySplashTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopCheckoutTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartCheckoutTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopOnboardingTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartOnboardingTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopOrderSuccessTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartOrderSuccessTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopProductListTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProductListTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGadgetShopProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcNexkartProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGenericPlaceholderTemplate.kt$@Preview(name = "WgcGenericPlaceholderTemplate - Preview", showBackground = true) @Composable private fun WgcGenericPlaceholderTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGlobalMarketplaceAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun GlobalMarketplaceAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcGroceryCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcSupermercadoCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGroceryCouponsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcSupermercadoCouponsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGroceryFlyerTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcSupermercadoFlyerTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGroceryHomeTemplate.kt$@Preview(name = "Supermercado Home Template", showBackground = true) @Composable private fun WgcSupermercadoHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcGroceryProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcSupermercadoProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcHelpCenterSupportTemplate.kt$@Preview(name = "Light Mode", showBackground = true) @Composable private fun WgcHelpCenterSupportTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcHomeFactory.kt$@Preview(name = "WgcHomeFactory - Default Food Delivery", showBackground = true) @Composable private fun WgcHomeFactoryDefaultPreview()</ID>
-    <ID>UnusedPrivateMember:WgcHomeFactory.kt$@Preview(name = "WgcHomeFactory - Marketplace", showBackground = true) @Composable private fun WgcHomeFactoryMLPreview()</ID>
-    <ID>UnusedPrivateMember:WgcKlokAuthScreenTemplate.kt$@Preview(name = "WgcKlokAuthScreenTemplate", showBackground = true) @Composable private fun WgcKlokAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcKycLivenessVerificationTemplate.kt$@Preview(name = "Light Mode", showBackground = true) @Composable private fun WgcKycLivenessVerificationTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMarketplaceAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun MarketplaceAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcMarketplaceHomeScreenTemplate.kt$@Preview(showBackground = true) @Composable private fun MarketplaceHomePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeStartScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreChatTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeChatScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreCheckoutTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeCartScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreFactory.kt$@Preview(showBackground = true) @Composable private fun WgcMegaStoreFactoryPreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreHomeTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeHomeScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreProductTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeProductDetailsScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreProfileTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeProfileScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcMegaStoreVisualSearchTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcShoppeVisualSearchScreenTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceCardsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeCardsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceDashboardTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeDashboardTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceNewTransactionTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeNewTransactionTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceOnboardingTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeOnboardingTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceReportsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeReportsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPersonalFinanceTransactionsTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcOrganizzeTransactionsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPharmacyChainCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogaRaiaCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPharmacyChainHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogaRaiaHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPharmacyChainPrescriptionTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogaRaiaPrescriptionTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPharmacyChainProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogaRaiaProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPharmacyChainSubscriptionTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcDrogaRaiaSubscriptionTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPopularPharmacyCartTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPagueMenosCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPopularPharmacyClinicTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPagueMenosClinicTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPopularPharmacyHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPagueMenosHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPopularPharmacyProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPagueMenosProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPremiumGroceryAdegaTemplate.kt$@Preview(name = "Wine Store Adega Template", showBackground = true) @Composable private fun WgcPdaAdegaTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPremiumGroceryClienteMaisProfileTemplate.kt$@Preview(name = "Supermarket Profile Template", showBackground = true) @Composable private fun WgcPdaClienteMaisProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPremiumGroceryDiscountsTemplate.kt$@Preview(name = "Supermarket Discounts Template", showBackground = true) @Composable private fun WgcPdaDiscountsTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPremiumGroceryGourmetCartTemplate.kt$@Preview(name = "Supermarket Cart Template", showBackground = true) @Composable private fun WgcPdaGourmetCartTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPremiumGroceryHomeTemplate.kt$@Preview(name = "Supermarket Home Template", showBackground = true) @Composable private fun WgcPdaHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Care Pharmacy", showBackground = true) @Composable private fun WgcProfileFactoryCarePharmacyPreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Disabled", showBackground = true) @Composable private fun WgcProfileFactoryDisabledPreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Error", showBackground = true) @Composable private fun WgcProfileFactoryErrorPreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Fresh Grocery", showBackground = true) @Composable private fun WgcProfileFactoryFreshGroceryPreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Gaming Store", showBackground = true) @Composable private fun WgcProfileFactoryGamingStorePreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Loading", showBackground = true) @Composable private fun WgcProfileFactoryLoadingPreview()</ID>
-    <ID>UnusedPrivateMember:WgcProfileFactory.kt$@WgcDevicePreviews @Preview(name = "Profile Factory - Standard Default", showBackground = true) @Composable private fun WgcProfileFactoryDefaultPreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyClassifiedsFavoritesTemplate.kt$@Preview(name = "WgcZapFavoritesTemplate - Default", showBackground = true) @Composable private fun WgcZapFavoritesTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyClassifiedsFipePropertyClassifiedsCalculatorTemplate.kt$@Preview(name = "WgcZapFipeZapCalculatorTemplate - Default", showBackground = true) @Composable private fun WgcZapFipeZapCalculatorTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyClassifiedsHomeTemplate.kt$@Preview(name = "WgcZapHomeTemplate - Default", showBackground = true) @Composable private fun WgcZapHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyClassifiedsProfileTemplate.kt$@Preview(name = "WgcZapProfileTemplate - Default", showBackground = true) @Composable private fun WgcZapProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyClassifiedsPropertyDetailTemplate.kt$@Preview(name = "WgcZapPropertyDetailTemplate - Default", showBackground = true) @Composable private fun WgcZapPropertyDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyListingContactLeadTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingContactLeadTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyListingFavoritesTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingFavoritesTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyListingHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyListingProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyListingPropertyDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyListingPropertyDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyRentalFavoritesTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalFavoritesTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyRentalHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyRentalProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyRentalPropertyDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalPropertyDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcPropertyRentalScheduleVisitTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcPropertyRentalScheduleVisitTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickFoodDeliveryAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun QuickFoodDeliveryAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopCheckoutTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseCheckoutTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopFavoritesTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseFavoritesTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopHomeTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseHomeTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopOnboardingTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseOnboardingTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopProductDetailTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseProductDetailTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcQuickShopProfileTemplate.kt$@Preview(showBackground = true) @Composable private fun WgcShopEaseProfileTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuLoginPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuOnboardingPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailChatTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuMessageScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailCheckoutTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCartScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailCheckoutTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuPaymentScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailHomeTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuCategoryScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailHomeTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuHomeScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailProductTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuProductDetailScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailProfileTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuSettingsScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRetailTrackingTemplates.kt$@Preview(showBackground = true) @Composable private fun WgcKutukuOrderTrackingScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcRideHailingAuthTemplates.kt$@Preview(showBackground = true) @Composable private fun RideHailingAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcSplitCardAuthScreenTemplate.kt$@Preview(name = "WgcSplitCardAuthScreenTemplate", showBackground = true) @Composable private fun WgcSplitCardAuthPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTransactionReceiptTemplate.kt$@Preview(name = "Light Mode", showBackground = true) @Composable private fun WgcTransactionReceiptTemplatePreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionAuthTemplates.kt$@Preview(name = "Forgot Password Preview", showBackground = true) @Composable private fun WgcStylishForgotPasswordPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionAuthTemplates.kt$@Preview(name = "Login Screen Preview", showBackground = true) @Composable private fun WgcStylishLoginScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionAuthTemplates.kt$@Preview(name = "Register Screen Preview", showBackground = true) @Composable private fun WgcStylishRegisterScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCatalogTemplates.kt$@Preview(name = "Product Details Preview", showBackground = true) @Composable private fun WgcStylishProductDetailsPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCatalogTemplates.kt$@Preview(name = "Trending Products Preview", showBackground = true) @Composable private fun WgcStylishTrendingPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCheckoutTemplates.kt$@Preview(name = "Checkout Screen Preview", showBackground = true) @Composable private fun WgcStylishCheckoutPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCheckoutTemplates.kt$@Preview(name = "Place Order Preview", showBackground = true) @Composable private fun WgcStylishPlaceOrderPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCheckoutTemplates.kt$@Preview(name = "Shipping Screen Preview", showBackground = true) @Composable private fun WgcStylishShippingPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionCheckoutTemplates.kt$@Preview(name = "Success Screen Preview", showBackground = true) @Composable private fun WgcStylishSuccessPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionFactory.kt$@Preview(name = "Stylish Factory - Checkout", showBackground = true) @Composable private fun WgcTrendFashionFactoryCheckoutPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionFactory.kt$@Preview(name = "Stylish Factory - Home", showBackground = true) @Composable private fun WgcTrendFashionFactoryHomePreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionHomeTemplates.kt$@Preview(name = "Home Screen Preview", showBackground = true) @Composable private fun WgcStylishHomeScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionOnboardingTemplates.kt$@Preview(name = "Get Started Screen Preview", showBackground = true) @Composable private fun WgcStylishGetStartedScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionOnboardingTemplates.kt$@Preview(name = "Onboarding Screen Preview", showBackground = true) @Composable private fun WgcStylishOnboardingScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionOnboardingTemplates.kt$@Preview(name = "Splash Screen Preview", showBackground = true) @Composable private fun WgcStylishSplashScreenPreview()</ID>
-    <ID>UnusedPrivateMember:WgcTrendFashionProfileTemplates.kt$@Preview(name = "Profile Screen Preview", showBackground = true) @Composable private fun WgcStylishProfilePreview()</ID>
-    <ID>UnusedPrivateMember:WgcWaveAuthScreenTemplate.kt$@Preview(name = "WgcWaveAuthScreenTemplate", showBackground = true) @Composable private fun WgcWaveAuthPreview()</ID>
     <ID>UnusedPrivateProperty:WgcPremiumGroceryGourmetCartTemplate.kt$val totalDiscount = subtotalRegular - subtotalMais</ID>
     <ID>UnusedPrivateProperty:WgcPremiumGroceryGourmetCartTemplate.kt$var includeThermalBag by remember { mutableStateOf(true) }</ID>
-    <ID>UnusedPrivateProperty:WgcSingInScreen.kt$val amber = Color(WgcCoreDsColors.warning)</ID>
     <ID>WildcardImport:EcommerceHomeScreenTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:EcommerceHomeScreenTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:EcommerceHomeScreenTemplate.kt$import androidx.compose.runtime.*</ID>
@@ -811,68 +649,68 @@
     <ID>WildcardImport:StandardCartScreenTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:StandardCartScreenTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:StandardCartScreenTemplate.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcAudioStreamFactory.kt$import br.com.wgc.design_system.templates.screens.audiostreaming.*</ID>
+    <ID>WildcardImport:WgcAudioStreamFactory.kt$import br.com.wgc.design_system.factories.verticals.audiostreaming.templates.*</ID>
     <ID>WildcardImport:WgcAudioStreamTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcAudioStreamTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcBiddingRidesFactory.kt$import br.com.wgc.design_system.templates.screens.biddingrides.*</ID>
+    <ID>WildcardImport:WgcBiddingRidesFactory.kt$import br.com.wgc.design_system.factories.verticals.biddingrides.templates.*</ID>
     <ID>WildcardImport:WgcBiddingRidesTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBiddingRidesTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcBiddingRidesTemplates.kt$import androidx.compose.runtime.*</ID>
     <ID>WildcardImport:WgcBrandAddressRegistrationScreenTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBrandAddressRegistrationScreenTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcBrandAddressRegistrationScreenTemplate.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcBroadcastStreamingFactory.kt$import br.com.wgc.design_system.templates.screens.broadcaststreaming.*</ID>
+    <ID>WildcardImport:WgcBroadcastStreamingFactory.kt$import br.com.wgc.design_system.factories.verticals.broadcaststreaming.templates.*</ID>
     <ID>WildcardImport:WgcBroadcastStreamingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBroadcastStreamingTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcBurgerFastFoodFactory.kt$import br.com.wgc.design_system.templates.screens.burgerfastfood.*</ID>
+    <ID>WildcardImport:WgcBurgerFastFoodFactory.kt$import br.com.wgc.design_system.factories.verticals.burgerfastfood.templates.*</ID>
     <ID>WildcardImport:WgcBurgerFastFoodTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBurgerFastFoodTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcBusTravelFactory.kt$import br.com.wgc.design_system.templates.screens.bustravel.*</ID>
+    <ID>WildcardImport:WgcBusTravelFactory.kt$import br.com.wgc.design_system.factories.verticals.bustravel.templates.*</ID>
     <ID>WildcardImport:WgcBusTravelTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBusTravelTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcBusTravelTemplates.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcBusinessNewsFactory.kt$import br.com.wgc.design_system.templates.screens.businessnews.*</ID>
+    <ID>WildcardImport:WgcBusinessNewsFactory.kt$import br.com.wgc.design_system.factories.verticals.businessnews.templates.*</ID>
     <ID>WildcardImport:WgcBusinessNewsTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcBusinessNewsTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcCarpoolingFactory.kt$import br.com.wgc.design_system.templates.screens.carpooling.*</ID>
+    <ID>WildcardImport:WgcCarpoolingFactory.kt$import br.com.wgc.design_system.factories.verticals.carpooling.templates.*</ID>
     <ID>WildcardImport:WgcCarpoolingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcCarpoolingTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcChannelMessagingFactory.kt$import br.com.wgc.design_system.templates.screens.channelmessaging.*</ID>
+    <ID>WildcardImport:WgcChannelMessagingFactory.kt$import br.com.wgc.design_system.factories.chat.templates.*</ID>
     <ID>WildcardImport:WgcChannelMessagingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcChannelMessagingTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcCitizenServicesFactory.kt$import br.com.wgc.design_system.templates.screens.citizenservices.*</ID>
+    <ID>WildcardImport:WgcCitizenServicesFactory.kt$import br.com.wgc.design_system.factories.verticals.citizenservices.templates.*</ID>
     <ID>WildcardImport:WgcCitizenServicesTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcCitizenServicesTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcCommunityChatFactory.kt$import br.com.wgc.design_system.templates.screens.communitychat.*</ID>
+    <ID>WildcardImport:WgcCommunityChatFactory.kt$import br.com.wgc.design_system.factories.chat.templates.*</ID>
     <ID>WildcardImport:WgcCommunityChatTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcCommunityChatTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcCourseMarketplaceFactory.kt$import br.com.wgc.design_system.templates.screens.coursemarketplace.*</ID>
+    <ID>WildcardImport:WgcCourseMarketplaceFactory.kt$import br.com.wgc.design_system.factories.verticals.coursemarketplace.templates.*</ID>
     <ID>WildcardImport:WgcCourseMarketplaceTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcCourseMarketplaceTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcDailyNewsFactory.kt$import br.com.wgc.design_system.templates.screens.dailynews.*</ID>
+    <ID>WildcardImport:WgcDailyNewsFactory.kt$import br.com.wgc.design_system.factories.verticals.dailynews.templates.*</ID>
     <ID>WildcardImport:WgcDailyNewsTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcDailyNewsTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcDealMarketplaceAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcDealMarketplaceAuthTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcDealMarketplaceAuthTemplates.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcDepartmentFashionFactory.kt$import br.com.wgc.design_system.templates.screens.departmentfashion.*</ID>
+    <ID>WildcardImport:WgcDepartmentFashionFactory.kt$import br.com.wgc.design_system.factories.verticals.departmentfashion.templates.*</ID>
     <ID>WildcardImport:WgcDepartmentFashionTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcDepartmentFashionTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcDesignerFurnitureFactory.kt$import br.com.wgc.design_system.templates.screens.designerfurniture.*</ID>
+    <ID>WildcardImport:WgcDesignerFurnitureFactory.kt$import br.com.wgc.design_system.factories.verticals.designerfurniture.templates.*</ID>
     <ID>WildcardImport:WgcDesignerFurnitureTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcDesignerFurnitureTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcDirectMessagingFactory.kt$import br.com.wgc.design_system.templates.screens.directmessaging.*</ID>
-    <ID>WildcardImport:WgcEmploymentRecordFactory.kt$import br.com.wgc.design_system.templates.screens.employmentrecord.*</ID>
+    <ID>WildcardImport:WgcDirectMessagingFactory.kt$import br.com.wgc.design_system.factories.chat.templates.*</ID>
+    <ID>WildcardImport:WgcEmploymentRecordFactory.kt$import br.com.wgc.design_system.factories.verticals.employmentrecord.templates.*</ID>
     <ID>WildcardImport:WgcEmploymentRecordTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcEmploymentRecordTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcExpressLogisticsFactory.kt$import br.com.wgc.design_system.templates.screens.expresslogistics.*</ID>
+    <ID>WildcardImport:WgcExpressLogisticsFactory.kt$import br.com.wgc.design_system.factories.verticals.expresslogistics.templates.*</ID>
     <ID>WildcardImport:WgcExpressLogisticsTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcExpressLogisticsTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechCarbonAtomosTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechCarbonAtomosTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechCarbonCarbonTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechCarbonCarbonTemplate.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFintechCarbonFactory.kt$import br.com.wgc.design_system.templates.screens.fintechcarbon.*</ID>
+    <ID>WildcardImport:WgcFintechCarbonFactory.kt$import br.com.wgc.design_system.factories.verticals.fintechcarbon.templates.*</ID>
     <ID>WildcardImport:WgcFintechCarbonGlobalTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechCarbonGlobalTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechCarbonHomeTemplate.kt$import androidx.compose.foundation.layout.*</ID>
@@ -882,7 +720,7 @@
     <ID>WildcardImport:WgcFintechCarbonProfileTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechNeobankCardTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechNeobankCardTemplate.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFintechNeobankFactory.kt$import br.com.wgc.design_system.templates.screens.fintechneobank.*</ID>
+    <ID>WildcardImport:WgcFintechNeobankFactory.kt$import br.com.wgc.design_system.factories.verticals.fintechneobank.templates.*</ID>
     <ID>WildcardImport:WgcFintechNeobankHomeTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechNeobankHomeTemplate.kt$import androidx.compose.material.icons.filled.*</ID>
     <ID>WildcardImport:WgcFintechNeobankHomeTemplate.kt$import androidx.compose.material3.*</ID>
@@ -896,7 +734,7 @@
     <ID>WildcardImport:WgcFintechNeobankProfileTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppCardTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppCardTemplate.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFintechSuperAppFactory.kt$import br.com.wgc.design_system.templates.screens.fintechsuperapp.*</ID>
+    <ID>WildcardImport:WgcFintechSuperAppFactory.kt$import br.com.wgc.design_system.factories.verticals.fintechsuperapp.templates.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppHomeTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppHomeTemplate.kt$import androidx.compose.material.icons.filled.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppHomeTemplate.kt$import androidx.compose.material3.*</ID>
@@ -907,10 +745,10 @@
     <ID>WildcardImport:WgcFintechSuperAppProfileTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppShopTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFintechSuperAppShopTemplate.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFlameFastFoodFactory.kt$import br.com.wgc.design_system.templates.screens.flamefastfood.*</ID>
+    <ID>WildcardImport:WgcFlameFastFoodFactory.kt$import br.com.wgc.design_system.factories.verticals.flamefastfood.templates.*</ID>
     <ID>WildcardImport:WgcFlameFastFoodTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFlameFastFoodTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFlightTravelFactory.kt$import br.com.wgc.design_system.templates.screens.flighttravel.*</ID>
+    <ID>WildcardImport:WgcFlightTravelFactory.kt$import br.com.wgc.design_system.factories.verticals.flighttravel.templates.*</ID>
     <ID>WildcardImport:WgcFlightTravelTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFlightTravelTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFoodDeliveryAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
@@ -919,37 +757,37 @@
     <ID>WildcardImport:WgcFoodDeliveryHomeScreenTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFoodDeliveryHomeScreenTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcFoodDeliveryHomeScreenTemplate.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcFragranceBeautyFactory.kt$import br.com.wgc.design_system.templates.screens.fragrancebeauty.*</ID>
+    <ID>WildcardImport:WgcFragranceBeautyFactory.kt$import br.com.wgc.design_system.factories.verticals.fragrancebeauty.templates.*</ID>
     <ID>WildcardImport:WgcFragranceBeautyTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFragranceBeautyTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcFreightLogisticsFactory.kt$import br.com.wgc.design_system.templates.screens.freightlogistics.*</ID>
+    <ID>WildcardImport:WgcFreightLogisticsFactory.kt$import br.com.wgc.design_system.factories.verticals.freightlogistics.templates.*</ID>
     <ID>WildcardImport:WgcFreightLogisticsTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcFreightLogisticsTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcGamingStoreFactory.kt$import br.com.wgc.design_system.templates.screens.gamingstore.*</ID>
+    <ID>WildcardImport:WgcGamingStoreFactory.kt$import br.com.wgc.design_system.factories.verticals.gamingstore.templates.*</ID>
     <ID>WildcardImport:WgcGamingStoreTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcGamingStoreTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcGlobalMarketplaceAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcGlobalMarketplaceAuthTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcGlobalMarketplaceAuthTemplates.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcHomeImprovementFactory.kt$import br.com.wgc.design_system.templates.screens.homeimprovement.*</ID>
+    <ID>WildcardImport:WgcHomeImprovementFactory.kt$import br.com.wgc.design_system.factories.verticals.homeimprovement.templates.*</ID>
     <ID>WildcardImport:WgcHomeImprovementTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcHomeImprovementTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcHomeMarketplaceFactory.kt$import br.com.wgc.design_system.templates.screens.homemarketplace.*</ID>
+    <ID>WildcardImport:WgcHomeMarketplaceFactory.kt$import br.com.wgc.design_system.factories.verticals.homemarketplace.templates.*</ID>
     <ID>WildcardImport:WgcHomeMarketplaceTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcHomeMarketplaceTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcHospitalityLodgingFactory.kt$import br.com.wgc.design_system.templates.screens.hospitalitylodging.*</ID>
+    <ID>WildcardImport:WgcHospitalityLodgingFactory.kt$import br.com.wgc.design_system.factories.verticals.hospitalitylodging.templates.*</ID>
     <ID>WildcardImport:WgcHospitalityLodgingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcHospitalityLodgingTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcHotelBookingFactory.kt$import br.com.wgc.design_system.templates.screens.hotelbooking.*</ID>
+    <ID>WildcardImport:WgcHotelBookingFactory.kt$import br.com.wgc.design_system.factories.verticals.hotelbooking.templates.*</ID>
     <ID>WildcardImport:WgcHotelBookingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcHotelBookingTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcKanbanTasksFactory.kt$import br.com.wgc.design_system.templates.screens.kanbantasks.*</ID>
+    <ID>WildcardImport:WgcKanbanTasksFactory.kt$import br.com.wgc.design_system.factories.verticals.kanbantasks.templates.*</ID>
     <ID>WildcardImport:WgcKanbanTasksTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcKanbanTasksTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcLanguageLearningFactory.kt$import br.com.wgc.design_system.templates.screens.languagelearning.*</ID>
+    <ID>WildcardImport:WgcLanguageLearningFactory.kt$import br.com.wgc.design_system.factories.verticals.languagelearning.templates.*</ID>
     <ID>WildcardImport:WgcLanguageLearningTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcLanguageLearningTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcLiveStreamingFactory.kt$import br.com.wgc.design_system.templates.screens.livestreaming.*</ID>
+    <ID>WildcardImport:WgcLiveStreamingFactory.kt$import br.com.wgc.design_system.factories.verticals.livestreaming.templates.*</ID>
     <ID>WildcardImport:WgcLiveStreamingTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcLiveStreamingTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcMarketplaceAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
@@ -958,25 +796,25 @@
     <ID>WildcardImport:WgcMarketplaceHomeScreenTemplate.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcMarketplaceHomeScreenTemplate.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcMarketplaceHomeScreenTemplate.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcMediaNetworkFactory.kt$import br.com.wgc.design_system.templates.screens.medianetwork.*</ID>
+    <ID>WildcardImport:WgcMediaNetworkFactory.kt$import br.com.wgc.design_system.factories.verticals.medianetwork.templates.*</ID>
     <ID>WildcardImport:WgcMediaNetworkTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcMediaNetworkTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcNaturalBeautyFactory.kt$import br.com.wgc.design_system.templates.screens.naturalbeauty.*</ID>
+    <ID>WildcardImport:WgcNaturalBeautyFactory.kt$import br.com.wgc.design_system.factories.verticals.naturalbeauty.templates.*</ID>
     <ID>WildcardImport:WgcNaturalBeautyTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcNaturalBeautyTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcPetCareFactory.kt$import br.com.wgc.design_system.templates.screens.petcare.*</ID>
+    <ID>WildcardImport:WgcPetCareFactory.kt$import br.com.wgc.design_system.factories.verticals.petcare.templates.*</ID>
     <ID>WildcardImport:WgcPetCareTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcPetCareTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcPetLifestyleFactory.kt$import br.com.wgc.design_system.templates.screens.petlifestyle.*</ID>
+    <ID>WildcardImport:WgcPetLifestyleFactory.kt$import br.com.wgc.design_system.factories.verticals.petlifestyle.templates.*</ID>
     <ID>WildcardImport:WgcPetLifestyleTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcPetLifestyleTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcPetSuperstoreFactory.kt$import br.com.wgc.design_system.templates.screens.petsuperstore.*</ID>
+    <ID>WildcardImport:WgcPetSuperstoreFactory.kt$import br.com.wgc.design_system.factories.verticals.petsuperstore.templates.*</ID>
     <ID>WildcardImport:WgcPetSuperstoreTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcPetSuperstoreTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcPizzaFactory.kt$import br.com.wgc.design_system.templates.screens.pizza.*</ID>
+    <ID>WildcardImport:WgcPizzaFactory.kt$import br.com.wgc.design_system.factories.verticals.pizza.templates.*</ID>
     <ID>WildcardImport:WgcPizzaTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcPizzaTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcPrestigeBeautyFactory.kt$import br.com.wgc.design_system.templates.screens.prestigebeauty.*</ID>
+    <ID>WildcardImport:WgcPrestigeBeautyFactory.kt$import br.com.wgc.design_system.factories.verticals.prestigebeauty.templates.*</ID>
     <ID>WildcardImport:WgcPrestigeBeautyTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcPrestigeBeautyTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcQuickFoodDeliveryAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
@@ -985,34 +823,34 @@
     <ID>WildcardImport:WgcRideHailingAuthTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcRideHailingAuthTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcRideHailingAuthTemplates.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcTeamCollaborationFactory.kt$import br.com.wgc.design_system.templates.screens.teamcollaboration.*</ID>
+    <ID>WildcardImport:WgcTeamCollaborationFactory.kt$import br.com.wgc.design_system.factories.verticals.teamcollaboration.templates.*</ID>
     <ID>WildcardImport:WgcTeamCollaborationTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcTeamCollaborationTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcTechEducationFactory.kt$import br.com.wgc.design_system.templates.screens.techeducation.*</ID>
+    <ID>WildcardImport:WgcTechEducationFactory.kt$import br.com.wgc.design_system.factories.verticals.techeducation.templates.*</ID>
     <ID>WildcardImport:WgcTechEducationTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcTechEducationTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcTransitDigitalFactory.kt$import br.com.wgc.design_system.templates.screens.transitdigital.*</ID>
+    <ID>WildcardImport:WgcTransitDigitalFactory.kt$import br.com.wgc.design_system.factories.verticals.transitdigital.templates.*</ID>
     <ID>WildcardImport:WgcTransitDigitalTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcTransitDigitalTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcTrendApparelFactory.kt$import br.com.wgc.design_system.templates.screens.trendapparel.*</ID>
+    <ID>WildcardImport:WgcTrendApparelFactory.kt$import br.com.wgc.design_system.factories.verticals.trendapparel.templates.*</ID>
     <ID>WildcardImport:WgcTrendApparelTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcTrendApparelTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcUrbanFashionFactory.kt$import br.com.wgc.design_system.templates.screens.urbanfashion.*</ID>
+    <ID>WildcardImport:WgcUrbanFashionFactory.kt$import br.com.wgc.design_system.factories.verticals.urbanfashion.templates.*</ID>
     <ID>WildcardImport:WgcUrbanFashionTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcUrbanFashionTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcUrbanMobilityFactory.kt$import br.com.wgc.design_system.templates.screens.urbanmobility.*</ID>
+    <ID>WildcardImport:WgcUrbanMobilityFactory.kt$import br.com.wgc.design_system.factories.verticals.urbanmobility.templates.*</ID>
     <ID>WildcardImport:WgcUrbanMobilityTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcUrbanMobilityTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcUrbanMobilityTemplates.kt$import androidx.compose.runtime.*</ID>
-    <ID>WildcardImport:WgcVideoStreamFactory.kt$import br.com.wgc.design_system.templates.screens.videostreaming.*</ID>
+    <ID>WildcardImport:WgcVideoStreamFactory.kt$import br.com.wgc.design_system.factories.verticals.videostreaming.templates.*</ID>
     <ID>WildcardImport:WgcVideoStreamTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcVideoStreamTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcVisualDiscoveryFactory.kt$import br.com.wgc.design_system.templates.screens.visualdiscovery.*</ID>
+    <ID>WildcardImport:WgcVisualDiscoveryFactory.kt$import br.com.wgc.design_system.factories.verticals.visualdiscovery.templates.*</ID>
     <ID>WildcardImport:WgcVisualDiscoveryTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcVisualDiscoveryTemplates.kt$import androidx.compose.material3.*</ID>
     <ID>WildcardImport:WgcWhatsAppTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcWhatsAppTemplates.kt$import androidx.compose.material3.*</ID>
-    <ID>WildcardImport:WgcWorkspaceDocsFactory.kt$import br.com.wgc.design_system.templates.screens.workspacedocs.*</ID>
+    <ID>WildcardImport:WgcWorkspaceDocsFactory.kt$import br.com.wgc.design_system.factories.verticals.workspacedocs.templates.*</ID>
     <ID>WildcardImport:WgcWorkspaceDocsTemplates.kt$import androidx.compose.foundation.layout.*</ID>
     <ID>WildcardImport:WgcWorkspaceDocsTemplates.kt$import androidx.compose.material3.*</ID>
   </CurrentIssues>

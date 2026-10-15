@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.pickers
+package br.com.wgc.design_system.components.pickers
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
  * WgcDatePicker

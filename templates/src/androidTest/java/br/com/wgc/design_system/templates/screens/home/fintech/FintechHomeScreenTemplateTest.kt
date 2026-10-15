@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.home.fintech
+package br.com.wgc.design_system.factories.home.templates.fintech
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule

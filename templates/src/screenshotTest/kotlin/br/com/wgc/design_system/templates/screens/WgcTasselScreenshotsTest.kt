@@ -2,8 +2,8 @@
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcCuratedMarketFactory
-import br.com.wgc.design_system.templates.factories.WgcCuratedMarketScreen
+import br.com.wgc.design_system.factories.verticals.curatedmarket.WgcCuratedMarketFactory
+import br.com.wgc.design_system.factories.verticals.curatedmarket.WgcCuratedMarketScreen
 import com.android.tools.screenshot.PreviewTest
 
 class WgcTasselScreenshotsTest {

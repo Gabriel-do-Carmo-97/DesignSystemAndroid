@@ -8,6 +8,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Diálogo de alerta corporativo exibido ao detectar ambiente rooteado ou adulterado (OWASP MASVS).
@@ -18,7 +20,7 @@ fun WgcRootDetectionDialog(
     onExitApp: () -> Unit,
     title: String = "Alerta de Segurança",
     message: String = "Identificamos que seu dispositivo possui privilégios de administrador (Root). " +
-        "Por razões de segurança financeira, algumas funções podem ser restritas."
+        "Por razões de segurança financeira, algumas funções podem ser restritas.",
 ) {
     AlertDialog(
         onDismissRequest = {},
@@ -42,4 +44,15 @@ fun WgcRootDetectionDialog(
             }
         }
     )
+}
+
+@ThemePreviews
+@Composable
+private fun WgcRootDetectionDialogPreview() {
+    WgcTheme {
+        WgcRootDetectionDialog(
+            onAcknowledgeRisk = {},
+            onExitApp = {}
+        )
+    }
 }

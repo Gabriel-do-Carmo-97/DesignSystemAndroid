@@ -11,8 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Padrão de estado vazio contextual corporativo (WgcEmptyDataPlaceholder).
@@ -50,5 +52,16 @@ fun WgcEmptyDataPlaceholder(
         )
 
         actionSlot?.invoke()
+    }
+}
+
+@Preview(showBackground = true, name = "WgcEmptyDataPlaceholder - Default")
+@Composable
+private fun WgcEmptyDataPlaceholderPreview() {
+    WgcTheme {
+        WgcEmptyDataPlaceholder(
+            title = "Nenhum resultado encontrado",
+            description = "Tente buscar por outros termos ou ajustar os filtros da sua pesquisa."
+        )
     }
 }

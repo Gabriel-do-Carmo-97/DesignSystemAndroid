@@ -2,7 +2,6 @@
 
 package br.com.wgc.design_system.components.tabs
 
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
@@ -27,10 +26,12 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcElasticTabRow
@@ -71,6 +72,20 @@ fun WgcElasticTabRow(
                     )
                 }
             }
+        }
+    }
+}
+
+@Preview(name = "WgcElasticTabRow", showBackground = true)
+@Composable
+private fun WgcElasticTabRowPreview() {
+    WgcTheme {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcElasticTabRow(
+                selectedTabIndex = 0,
+                tabs = listOf("Geral", "Segurança", "Notificações"),
+                onTabSelected = {}
+            )
         }
     }
 }

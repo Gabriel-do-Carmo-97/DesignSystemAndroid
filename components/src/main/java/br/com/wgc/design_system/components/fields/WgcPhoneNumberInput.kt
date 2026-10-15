@@ -3,7 +3,9 @@
 package br.com.wgc.design_system.components.fields
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -24,7 +26,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
 /**
@@ -100,4 +104,39 @@ fun WgcPhoneNumberInput(
         },
         singleLine = true
     )
+}
+
+@Preview(showBackground = true)
+@WgcComponentPreviews
+@Composable
+private fun WgcPhoneNumberInputPreview() {
+    MaterialTheme {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            WgcPhoneNumberInput(
+                phoneNumber = "987654321",
+                onPhoneNumberChange = {},
+                selectedDdi = "+55",
+                onDdiChange = {}
+            )
+
+            WgcPhoneNumberInput(
+                phoneNumber = "5551234567",
+                onPhoneNumberChange = {},
+                selectedDdi = "+1",
+                onDdiChange = {}
+            )
+
+            WgcPhoneNumberInput(
+                phoneNumber = "12345",
+                onPhoneNumberChange = {},
+                selectedDdi = "+55",
+                onDdiChange = {},
+                isError = true,
+                errorMessage = "Número de telefone incompleto ou inválido."
+            )
+        }
+    }
 }

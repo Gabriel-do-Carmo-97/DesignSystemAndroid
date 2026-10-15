@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core
+package br.com.wgc.design_system.core
 
 /**
  * Facade unificada para as cores do WGC Design System.

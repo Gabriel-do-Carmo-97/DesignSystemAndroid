@@ -1,12 +1,12 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -18,14 +18,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcEducationCourseCard(
@@ -33,7 +35,7 @@ fun WgcEducationCourseCard(
     instructorOrTrack: String,
     progressPercentage: Float,
     modifier: Modifier = Modifier,
-    onContinueClick: () -> Unit = {}
+    onContinueClick: () -> Unit = {},
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -78,9 +80,26 @@ fun WgcEducationCourseCard(
 
                 WgcClassicButton(
                     textButton = "Continuar",
-                    onClick = onContinueClick
-                    )
+                    onClick = onContinueClick,
+                    modifier = Modifier.width(130.dp)
+                )
             }
         }
     }
 }
+
+@Preview(name = "WgcEducationCourseCard Preview", showBackground = true)
+@Composable
+private fun WgcEducationCourseCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcEducationCourseCard(
+                courseTitle = "Android Jetpack Compose do Zero ao Avançado",
+                instructorOrTrack = "Formação Mobile Master",
+                progressPercentage = 0.65f,
+                onContinueClick = {}
+            )
+        }
+    }
+}
+

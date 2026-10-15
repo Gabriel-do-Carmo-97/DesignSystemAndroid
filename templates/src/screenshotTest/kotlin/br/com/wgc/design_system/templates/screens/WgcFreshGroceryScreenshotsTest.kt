@@ -2,13 +2,13 @@
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcFreshGroceryFactory
-import br.com.wgc.design_system.templates.factories.WgcFreshGroceryScreen
-import br.com.wgc.design_system.templates.screens.freshgrocery.cart.WgcFreshGroceryCartTemplate
-import br.com.wgc.design_system.templates.screens.freshgrocery.detail.WgcFreshGroceryProductDetailTemplate
-import br.com.wgc.design_system.templates.screens.freshgrocery.home.WgcFreshGroceryHomeTemplate
-import br.com.wgc.design_system.templates.screens.freshgrocery.profile.WgcFreshGroceryProfileTemplate
-import br.com.wgc.design_system.templates.screens.freshgrocery.splash.WgcFreshGrocerySplashTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.WgcFreshGroceryFactory
+import br.com.wgc.design_system.factories.verticals.freshgrocery.WgcFreshGroceryScreen
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.cart.WgcFreshGroceryCartTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.detail.WgcFreshGroceryProductDetailTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.home.WgcFreshGroceryHomeTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.profile.WgcFreshGroceryProfileTemplate
+import br.com.wgc.design_system.factories.verticals.freshgrocery.templates.splash.WgcFreshGrocerySplashTemplate
 
 class WgcFreshGroceryScreenshotsTest {
 

@@ -1,17 +1,17 @@
-package br.com.wgc.design_system.templates.screens
+﻿package br.com.wgc.design_system.templates.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcEducationFactory
-import br.com.wgc.design_system.templates.factories.WgcEducationScreen
-import br.com.wgc.design_system.templates.factories.WgcMessagingFactory
-import br.com.wgc.design_system.templates.factories.WgcMessagingScreen
-import br.com.wgc.design_system.templates.factories.WgcMobilityFactory
-import br.com.wgc.design_system.templates.factories.WgcMobilityScreen
-import br.com.wgc.design_system.templates.factories.WgcStreamingFactory
-import br.com.wgc.design_system.templates.factories.WgcStreamingScreen
-import br.com.wgc.design_system.templates.factories.WgcTravelFactory
-import br.com.wgc.design_system.templates.factories.WgcTravelScreen
+import br.com.wgc.design_system.factories.categories.WgcEducationFactory
+import br.com.wgc.design_system.factories.categories.WgcEducationScreen
+import br.com.wgc.design_system.factories.categories.WgcMessagingFactory
+import br.com.wgc.design_system.factories.categories.WgcMessagingScreen
+import br.com.wgc.design_system.factories.categories.WgcMobilityFactory
+import br.com.wgc.design_system.factories.categories.WgcMobilityScreen
+import br.com.wgc.design_system.factories.categories.WgcStreamingFactory
+import br.com.wgc.design_system.factories.categories.WgcStreamingScreen
+import br.com.wgc.design_system.factories.categories.WgcTravelFactory
+import br.com.wgc.design_system.factories.categories.WgcTravelScreen
 
 class WgcLifestyleScreenshotsTest {
 

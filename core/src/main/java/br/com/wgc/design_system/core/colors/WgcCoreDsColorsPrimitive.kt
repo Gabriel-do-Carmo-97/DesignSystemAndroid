@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core.colors
+package br.com.wgc.design_system.core.colors
 
 import android.graphics.Color
 import androidx.core.graphics.toColorInt

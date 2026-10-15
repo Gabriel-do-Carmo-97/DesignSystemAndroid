@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.dialogs
+package br.com.wgc.design_system.components.dialogs
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -7,6 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcSimpleDialog(
@@ -39,5 +41,18 @@ fun WgcSimpleDialog(
                 }
             }
         }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcSimpleDialogPreview() {
+    WgcTheme {
+        WgcSimpleDialog(
+            onDismissRequest = {},
+            title = "Opções da Conta",
+            options = listOf("Editar Perfil", "Configurações", "Sair"),
+            onOptionSelected = {}
+        )
     }
 }

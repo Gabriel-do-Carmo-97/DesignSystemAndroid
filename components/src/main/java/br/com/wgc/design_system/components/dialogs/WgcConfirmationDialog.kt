@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.dialogs
+package br.com.wgc.design_system.components.dialogs
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -7,6 +7,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.radio.WgcRadioButton
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcConfirmationDialog(
@@ -51,4 +53,18 @@ fun WgcConfirmationDialog(
             }
         }
     )
+}
+
+@ThemePreviews
+@Composable
+private fun WgcConfirmationDialogPreview() {
+    WgcTheme {
+        WgcConfirmationDialog(
+            onDismissRequest = {},
+            title = "Selecione a Forma de Pagamento",
+            options = listOf("Cartão de Crédito", "PIX", "Boleto"),
+            initialSelected = "PIX",
+            onConfirmSelection = {}
+        )
+    }
 }

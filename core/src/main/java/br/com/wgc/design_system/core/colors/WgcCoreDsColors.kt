@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.core.colors
+package br.com.wgc.design_system.core.colors
 
 /**
  * Coleção consolidada de todas as cores do Design System WGC.

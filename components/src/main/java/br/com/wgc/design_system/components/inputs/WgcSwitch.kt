@@ -9,7 +9,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
  * Componente de Switch (WgcSwitch) baseado no Material 3.

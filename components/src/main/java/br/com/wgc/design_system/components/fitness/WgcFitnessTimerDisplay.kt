@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.fitness
+package br.com.wgc.design_system.components.fitness
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

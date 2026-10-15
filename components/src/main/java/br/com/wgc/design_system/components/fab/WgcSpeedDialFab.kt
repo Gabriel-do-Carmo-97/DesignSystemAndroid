@@ -9,6 +9,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -26,7 +27,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Ação individual de um Speed Dial FAB.
@@ -103,6 +106,36 @@ fun WgcSpeedDialFab(
                 imageVector = Icons.Default.Add,
                 contentDescription = if (isOpen) "Fechar menu de ações" else "Abrir menu de ações",
                 modifier = Modifier.rotate(rotation)
+            )
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcSpeedDialFabPreview() {
+    WgcTheme {
+        Box(
+            modifier = Modifier.padding(16.dp),
+            contentAlignment = Alignment.BottomEnd
+        ) {
+            WgcSpeedDialFab(
+                isOpen = true,
+                onToggle = {},
+                actions = listOf(
+                    WgcSpeedDialAction(
+                        id = "1",
+                        label = "Criar novo",
+                        icon = Icons.Default.Add,
+                        onClick = {}
+                    ),
+                    WgcSpeedDialAction(
+                        id = "2",
+                        label = "Compartilhar",
+                        icon = Icons.Default.Add,
+                        onClick = {}
+                    )
+                )
             )
         }
     }

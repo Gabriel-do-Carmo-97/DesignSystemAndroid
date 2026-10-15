@@ -36,8 +36,8 @@ import androidx.navigation.toRoute
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.statement.FakeFinancialStatementViewModel
-import br.com.wgc.design_system.templates.screens.statement.WgcFinancialStatementContent
+import br.com.wgc.design_system.factories.statement.templates.FakeFinancialStatementViewModel
+import br.com.wgc.design_system.factories.statement.templates.WgcFinancialStatementContent
 import kotlinx.serialization.Serializable
 
 @Serializable

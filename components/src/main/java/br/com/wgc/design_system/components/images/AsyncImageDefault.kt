@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.commons.shimmerEffect
+import br.com.wgc.design_system.commons.shimmer.shimmerEffect
 import br.com.wgc.design_system.components.placeholder.PlaceholderDefault
 import br.com.wgc.design_system.mock.MockData
 import coil3.compose.AsyncImagePainter

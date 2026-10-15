@@ -7,6 +7,15 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Warning
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Botão de ícone do Design System (WgcIconButton) baseado no Material 3.
@@ -28,5 +37,28 @@ fun WgcIconButton(
             imageVector = icon,
             contentDescription = contentDescription
         )
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcIconButtonPreview() {
+    WgcTheme {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            WgcIconButton(
+                onClick = {},
+                icon = Icons.Default.Info,
+                contentDescription = "Informação"
+            )
+            WgcIconButton(
+                onClick = {},
+                icon = Icons.Default.Warning,
+                contentDescription = "Aviso",
+                isEnabled = false
+            )
+        }
     }
 }

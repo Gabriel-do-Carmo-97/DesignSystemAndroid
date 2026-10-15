@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.review
+package br.com.wgc.design_system.factories.review.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

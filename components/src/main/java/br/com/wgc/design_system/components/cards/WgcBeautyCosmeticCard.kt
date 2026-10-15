@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -18,14 +18,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcBeautyCosmeticCard(
@@ -87,3 +89,17 @@ fun WgcBeautyCosmeticCard(
         }
     }
 }
+
+@Preview(name = "Beauty Cosmetic Card Preview", showBackground = true)
+@Composable
+private fun WgcBeautyCosmeticCardPreview() {
+    WgcTheme {
+        WgcBeautyCosmeticCard(
+            perfumeOrBrand = "O Boticário",
+            productName = "Malbec Gold Desodorante Colônia",
+            volume = "100ml",
+            price = 219.90
+        )
+    }
+}
+

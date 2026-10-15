@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,6 +26,8 @@ import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcFashionItemCard(
@@ -90,6 +92,21 @@ fun WgcFashionItemCard(
                     onClick = onBuy
                     )
             }
+        }
+    }
+}
+
+@Preview(name = "WgcFashionItemCard Preview", showBackground = true)
+@Composable
+private fun WgcFashionItemCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcFashionItemCard(
+                brandName = "Zara",
+                itemTitle = "Jaqueta de Couro Slim Fit",
+                price = 299.90,
+                installments = "6x de R$ 49,98 sem juros"
+            )
         }
     }
 }

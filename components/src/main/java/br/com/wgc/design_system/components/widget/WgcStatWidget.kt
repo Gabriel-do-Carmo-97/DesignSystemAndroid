@@ -21,8 +21,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * WgcStatWidget
@@ -78,6 +80,36 @@ fun WgcStatWidget(
             }
 
             supplementarySlot?.invoke()
+        }
+    }
+}
+
+@Preview(name = "Positive Stat Widget Preview", showBackground = true)
+@Composable
+private fun WgcStatWidgetPositivePreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+            WgcStatWidget(
+                title = "Receita Total",
+                value = "R$ 45.890,00",
+                delta = "+12,5% vs. mês anterior",
+                isPositiveDelta = true
+            )
+        }
+    }
+}
+
+@Preview(name = "Negative Stat Widget Preview", showBackground = true)
+@Composable
+private fun WgcStatWidgetNegativePreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+            WgcStatWidget(
+                title = "Custos Operacionais",
+                value = "R$ 12.450,00",
+                delta = "-4,2% vs. mês anterior",
+                isPositiveDelta = false
+            )
         }
     }
 }

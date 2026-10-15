@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.pulltorefresh
+package br.com.wgc.design_system.components.pulltorefresh
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
  * WgcPullToRefreshBox

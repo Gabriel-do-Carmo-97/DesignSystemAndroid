@@ -11,6 +11,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Componente de Avatar do Design System (WgcAvatar) baseado no Material 3 e Coil 3.
@@ -48,6 +50,20 @@ fun WgcAvatar(
                     .fillMaxSize()
                     .background(MaterialTheme.colorScheme.secondaryContainer)
             )
+        }
+    }
+}
+
+@ThemePreviews
+@Composable
+private fun WgcAvatarPreview() {
+    WgcTheme {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            WgcAvatar(initials = "WG")
+            WgcAvatar(initials = "AB")
         }
     }
 }

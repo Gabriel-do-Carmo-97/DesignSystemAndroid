@@ -2,8 +2,8 @@
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.templates.factories.WgcGadgetShopFactory
-import br.com.wgc.design_system.templates.factories.WgcGadgetShopScreen
+import br.com.wgc.design_system.factories.verticals.gadgetshop.WgcGadgetShopFactory
+import br.com.wgc.design_system.factories.verticals.gadgetshop.WgcGadgetShopScreen
 import com.android.tools.screenshot.PreviewTest
 
 class WgcNexkartScreenshotsTest {

@@ -31,9 +31,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.templates.screens.notifications.BaseNotificationCenterViewModel
-import br.com.wgc.design_system.templates.screens.notifications.FakeNotificationCenterViewModel
-import br.com.wgc.design_system.templates.screens.notifications.WgcNotificationCenterTemplate
+import br.com.wgc.design_system.factories.notification.templates.BaseNotificationCenterViewModel
+import br.com.wgc.design_system.factories.notification.templates.FakeNotificationCenterViewModel
+import br.com.wgc.design_system.factories.notification.templates.WgcNotificationCenterTemplate
 import kotlinx.serialization.Serializable
 
 /**

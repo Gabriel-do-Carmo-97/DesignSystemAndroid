@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.tabs
+package br.com.wgc.design_system.components.tabs
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
@@ -40,7 +40,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.commons.WgcComponentPreviews
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
  * Modelo de dados para aba no WgcTabRow.

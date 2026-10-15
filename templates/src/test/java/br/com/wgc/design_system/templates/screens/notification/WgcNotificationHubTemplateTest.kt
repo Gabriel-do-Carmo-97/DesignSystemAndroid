@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.notification
+package br.com.wgc.design_system.factories.notification.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

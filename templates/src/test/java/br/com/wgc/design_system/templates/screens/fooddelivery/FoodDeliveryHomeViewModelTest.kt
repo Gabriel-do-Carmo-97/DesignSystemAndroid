@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.templates.screens.fooddelivery
+package br.com.wgc.design_system.factories.verticals.fooddelivery.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

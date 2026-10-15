@@ -16,20 +16,26 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Preferências de consentimento LGPD / GDPR.
  */
 data class WgcPrivacyPreferences(
     val analyticsAccepted: Boolean = false,
-    val marketingAccepted: Boolean = false
+    val marketingAccepted: Boolean = false,
 )
 
 /**
@@ -126,5 +132,21 @@ fun WgcPrivacyConsentDialog(
                 }
             }
         }
+    }
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcPrivacyConsentDialogPreview() {
+    WgcTheme {
+        var preferences by remember { mutableStateOf(WgcPrivacyPreferences()) }
+        WgcPrivacyConsentDialog(
+            isOpen = true,
+            preferences = preferences,
+            onPreferencesChange = { preferences = it },
+            onAcceptAll = { preferences = WgcPrivacyPreferences(analyticsAccepted = true, marketingAccepted = true) },
+            onConfirmSelection = {},
+            onDismissRequest = {}
+        )
     }
 }

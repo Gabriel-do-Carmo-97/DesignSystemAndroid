@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.navigation.auth
+package br.com.wgc.design_system.navigation.auth
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

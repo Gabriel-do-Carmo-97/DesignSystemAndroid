@@ -1,10 +1,9 @@
 package br.com.wgc.design_system.components.cards
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,7 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.wgc.design_system.theme.WgcTheme
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 
@@ -99,6 +100,36 @@ fun WgcRichMediaCard(
                     )
                 }
             }
+        }
+    }
+}
+
+@Preview(name = "WgcRichMediaCard Preview", showBackground = true)
+@Composable
+private fun WgcRichMediaCardPreview() {
+    WgcTheme {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcRichMediaCard(
+                title = "Explorando as Novidades do Jetpack Compose no Android",
+                subtitle = "Descubra como os novos recursos de UI declarativa facilitam o desenvolvimento de aplicativos modernos e responsivos.",
+                tag = "Tecnologia",
+                author = "WGC Engineering Team",
+                onClick = {},
+                mediaSlot = {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(MaterialTheme.colorScheme.primaryContainer),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Mídia / Banner",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
+                    }
+                }
+            )
         }
     }
 }

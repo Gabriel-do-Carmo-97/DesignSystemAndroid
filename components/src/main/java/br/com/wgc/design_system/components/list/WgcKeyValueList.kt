@@ -14,8 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
  * Item chave-valor para comprovantes e extratos.
@@ -62,6 +64,27 @@ fun WgcKeyValueList(
             if (showDividers && index < entries.lastIndex) {
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
             }
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "WgcKeyValueList Preview")
+@Composable
+private fun WgcKeyValueListPreview() {
+    WgcTheme {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(WgcCoreDsSpacing.md.dp)
+        ) {
+            WgcKeyValueList(
+                entries = listOf(
+                    WgcKeyValueEntry("Data", "14/10/2026 - 19:45"),
+                    WgcKeyValueEntry("Beneficiário", "WGC Serviços Digitais S.A."),
+                    WgcKeyValueEntry("Método de Pagamento", "PIX"),
+                    WgcKeyValueEntry("Total", "R$ 1.250,00", isHighlighted = true)
+                )
+            )
         }
     }
 }

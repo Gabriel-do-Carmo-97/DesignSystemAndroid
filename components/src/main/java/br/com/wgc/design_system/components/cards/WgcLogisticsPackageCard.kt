@@ -1,10 +1,9 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
@@ -26,6 +26,7 @@ import br.com.wgc.design_system.core.WgcCoreDsColors
 import br.com.wgc.design_system.core.WgcCoreDsElevation
 import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
 fun WgcLogisticsPackageCard(
@@ -71,6 +72,20 @@ fun WgcLogisticsPackageCard(
                     color = Color.Gray
                 )
             }
+        }
+    }
+}
+
+@Preview(name = "WgcLogisticsPackageCard Preview", showBackground = true)
+@Composable
+private fun WgcLogisticsPackageCardPreview() {
+    WgcTheme {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+            WgcLogisticsPackageCard(
+                trackingCode = "BR123456789X",
+                statusText = "Em trânsito para a unidade de distribuição",
+                deliveryDate = "18/10/2026"
+            )
         }
     }
 }

@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
  * Item de trilha de navegação (Breadcrumb).
@@ -58,5 +59,20 @@ fun WgcBreadcrumb(
                 )
             }
         }
+    }
+}
+
+@WgcComponentPreviews
+@Composable
+private fun WgcBreadcrumbPreview() {
+    MaterialTheme {
+        WgcBreadcrumb(
+            items = listOf(
+                WgcBreadcrumbItem(id = "1", title = "Início"),
+                WgcBreadcrumbItem(id = "2", title = "Eletrônicos"),
+                WgcBreadcrumbItem(id = "3", title = "Smartphones")
+            ),
+            onItemClick = {}
+        )
     }
 }

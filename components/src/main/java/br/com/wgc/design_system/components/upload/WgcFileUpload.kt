@@ -24,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
@@ -127,6 +128,55 @@ fun WgcFileUpload(
                     )
                 }
             }
+        }
+    }
+}
+
+@Preview(name = "WgcFileUpload - Idle", showBackground = true)
+@Composable
+private fun WgcFileUploadIdlePreview() {
+    MaterialTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcFileUpload(
+                fileName = null,
+                uploadProgress = 0f,
+                status = WgcUploadStatus.IDLE,
+                onSelectFile = {},
+                onRemoveFile = {}
+            )
+        }
+    }
+}
+
+@Preview(name = "WgcFileUpload - Uploading", showBackground = true)
+@Composable
+private fun WgcFileUploadUploadingPreview() {
+    MaterialTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcFileUpload(
+                fileName = "documento_fiscal.pdf",
+                uploadProgress = 0.45f,
+                status = WgcUploadStatus.UPLOADING,
+                onSelectFile = {},
+                onRemoveFile = {}
+            )
+        }
+    }
+}
+
+@Preview(name = "WgcFileUpload - Error", showBackground = true)
+@Composable
+private fun WgcFileUploadErrorPreview() {
+    MaterialTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            WgcFileUpload(
+                fileName = "arquivo_invalido.pdf",
+                uploadProgress = 0f,
+                status = WgcUploadStatus.ERROR,
+                onSelectFile = {},
+                onRemoveFile = {},
+                errorMessage = "Formato de arquivo não suportado."
+            )
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿package br.com.wgc.design_system.components.cards
+package br.com.wgc.design_system.components.cards
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -106,3 +106,32 @@ fun WgcGameStoreCard(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(showBackground = true)
+@Composable
+fun WgcGameStoreCardPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcGameStoreCard(
+            gameTitle = "Cyberpunk 2077",
+            genre = "RPG",
+            price = 199.99,
+            discountPercentage = 0,
+            modifier = Modifier.padding(16.dp)
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(showBackground = true)
+@Composable
+fun WgcGameStoreCardDiscountPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcGameStoreCard(
+            gameTitle = "The Witcher 3: Wild Hunt",
+            genre = "RPG",
+            price = 149.99,
+            discountPercentage = 50,
+            modifier = Modifier.padding(16.dp)
+        )
+    }
+}
+

@@ -1,4 +1,4 @@
-package br.com.wgc.design_system.templates.screens.statement
+package br.com.wgc.design_system.factories.statement.templates
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

@@ -1,9 +1,9 @@
 package br.com.wgc.design_system.mock
 
-import br.com.wgc.design_system.commons.isValidCep
-import br.com.wgc.design_system.commons.isValidCnpj
-import br.com.wgc.design_system.commons.isValidCpf
-import br.com.wgc.design_system.commons.isValidPhone
+import br.com.wgc.design_system.commons.validators.isValidCep
+import br.com.wgc.design_system.commons.validators.isValidCnpj
+import br.com.wgc.design_system.commons.validators.isValidCpf
+import br.com.wgc.design_system.commons.validators.isValidPhone
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
