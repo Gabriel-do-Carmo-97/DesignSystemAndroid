@@ -29,11 +29,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 @Composable
@@ -54,20 +54,20 @@ fun WgcSupermarketLoyaltyCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (isBlackTier) Color(WgcCoreDsColors.cyanDark3) else Color(WgcCoreDsColors.greenDark5)
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = WgcCoreDsElevation.level3.dp
+            defaultElevation = WgcCoreDsElevation.LEVEL3.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.orange34)
         )
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -76,12 +76,12 @@ fun WgcSupermarketLoyaltyCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s32.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .size(WgcCoreDsSize.S32.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color(WgcCoreDsColors.orangeLight12)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -89,7 +89,7 @@ fun WgcSupermarketLoyaltyCard(
                             imageVector = if (isBlackTier) Icons.Default.Diamond else Icons.Default.Star,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.orange34),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
                     Column {
@@ -110,21 +110,21 @@ fun WgcSupermarketLoyaltyCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(Color(WgcCoreDsColors.white))
                         .clickable(onClick = onShowQrCode)
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+                        .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XS8.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.QrCode,
                             contentDescription = "QR Code",
                             tint = Color(WgcCoreDsColors.greenDark5),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                         Text(
                             text = "Apresentar",
@@ -136,7 +136,7 @@ fun WgcSupermarketLoyaltyCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -172,11 +172,11 @@ fun WgcSupermarketLoyaltyCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -198,8 +198,8 @@ fun WgcSupermarketLoyaltyCard(
                     progress = { progressToNextTier },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s6.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
+                        .height(WgcCoreDsSize.S6.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
                     color = Color(WgcCoreDsColors.orange34),
                     trackColor = Color(WgcCoreDsColors.greenDark5)
                 )

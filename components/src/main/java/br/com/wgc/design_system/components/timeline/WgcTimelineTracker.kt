@@ -33,8 +33,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 private const val LINE_WIDTH_DP = 2
 private const val NODE_SIZE_DP = 28
@@ -84,13 +84,13 @@ fun WgcTimelineTracker(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             if (orientation == WgcTimelineOrientation.Vertical) {
                 VerticalTimeline(items = items)
@@ -110,7 +110,7 @@ private fun VerticalTimeline(items: List<WgcTimelineStep>) {
 
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 TimelineNodeIndicator(state = item.state)
@@ -118,7 +118,7 @@ private fun VerticalTimeline(items: List<WgcTimelineStep>) {
                     Box(
                         modifier = Modifier
                             .width(LINE_WIDTH_DP.dp)
-                            .height(WgcCoreDsSpacing.xxxl48.dp)
+                            .height(WgcCoreDsSpacing.XXXL48.dp)
                             .background(resolveLineColor(item.state))
                     )
                 }
@@ -127,7 +127,7 @@ private fun VerticalTimeline(items: List<WgcTimelineStep>) {
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .padding(bottom = if (isLast) 0.dp else WgcCoreDsSpacing.md16.dp)
+                    .padding(bottom = if (isLast) 0.dp else WgcCoreDsSpacing.MD16.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -149,7 +149,7 @@ private fun VerticalTimeline(items: List<WgcTimelineStep>) {
                     }
                 }
                 if (item.description != null) {
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = item.description,
                         style = MaterialTheme.typography.bodySmall,
@@ -178,7 +178,7 @@ private fun HorizontalTimeline(items: List<WgcTimelineStep>) {
                 modifier = Modifier.weight(1f)
             ) {
                 TimelineNodeIndicator(state = item.state)
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
                 Text(
                     text = item.title,
                     style = MaterialTheme.typography.labelSmall,

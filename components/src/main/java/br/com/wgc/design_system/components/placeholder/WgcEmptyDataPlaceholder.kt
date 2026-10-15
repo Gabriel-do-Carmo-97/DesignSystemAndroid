@@ -13,7 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -30,9 +30,9 @@ fun WgcEmptyDataPlaceholder(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.xl.dp),
+            .padding(WgcCoreDsSpacing.XL.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp)
     ) {
         illustrationSlot?.invoke()
 

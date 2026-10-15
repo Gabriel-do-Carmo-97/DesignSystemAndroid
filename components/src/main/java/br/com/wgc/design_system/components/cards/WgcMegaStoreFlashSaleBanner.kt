@@ -24,9 +24,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Banner Oficial de Promoção Relâmpago com Contagem Regressiva do Shoppe (WgcMegaStoreFlashSaleBanner).
@@ -42,14 +42,14 @@ fun WgcMegaStoreFlashSaleBanner(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blue28)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
+                .padding(WgcCoreDsSpacing.MD.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -59,7 +59,7 @@ fun WgcMegaStoreFlashSaleBanner(
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
                     color = Color(WgcCoreDsColors.white)
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                 Text(
                     text = discountTag,
                     style = MaterialTheme.typography.bodySmall,
@@ -68,7 +68,7 @@ fun WgcMegaStoreFlashSaleBanner(
             }
 
             Row(
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 FlashTimeBox(hours)
@@ -86,7 +86,7 @@ private fun FlashTimeBox(time: String) {
     Box(
         modifier = Modifier
             .size(32.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
             .background(Color.White.copy(alpha = 0.2f)),
         contentAlignment = Alignment.Center
     ) {

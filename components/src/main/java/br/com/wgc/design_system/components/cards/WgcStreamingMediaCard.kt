@@ -26,11 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcStreamingMediaCard(
@@ -42,22 +42,22 @@ fun WgcStreamingMediaCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark12)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .size(WgcCoreDsSize.S48.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color.DarkGray)
             )
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -78,7 +78,7 @@ fun WgcStreamingMediaCard(
                     imageVector = Icons.Default.PlayArrow,
                     contentDescription = "Tocar",
                     tint = Color(WgcCoreDsColors.green20),
-                    modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                 )
             }
         }
@@ -88,7 +88,7 @@ fun WgcStreamingMediaCard(
 @Preview(name = "WgcStreamingMediaCard Preview", showBackground = true)
 @Composable
 private fun WgcStreamingMediaCardPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
         WgcStreamingMediaCard(
             title = "Midnight Serenade",
             artistOrCreator = "WGC Jazz Ensemble",

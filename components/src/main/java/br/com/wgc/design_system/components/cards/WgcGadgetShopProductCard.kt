@@ -33,9 +33,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -61,17 +61,17 @@ fun WgcGadgetShopProductCard(
     Column(
         modifier = modifier
             .width(164.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
             .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xs8.dp)
+            .padding(WgcCoreDsSpacing.XS8.dp)
     ) {
         // Container da imagem com cantos arredondados
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(140.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                 .background(Color.White)
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -101,8 +101,8 @@ fun WgcGadgetShopProductCard(
                 Box(
                     modifier = Modifier
                         .align(Alignment.TopStart)
-                        .padding(WgcCoreDsSpacing.xxs4.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .padding(WgcCoreDsSpacing.XXS4.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(
                             if (tag.contains("%") || tag.contains("Sale", ignoreCase = true)) {
                                 Color(WgcCoreDsColors.pink5)
@@ -110,7 +110,7 @@ fun WgcGadgetShopProductCard(
                                 Color(WgcCoreDsColors.blue39)
                             }
                         )
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = tag,
@@ -126,7 +126,7 @@ fun WgcGadgetShopProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xxs4.dp)
+                    .padding(WgcCoreDsSpacing.XXS4.dp)
                     .size(28.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.9f))
@@ -140,7 +140,7 @@ fun WgcGadgetShopProductCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Nome do produto
         Text(
@@ -154,7 +154,7 @@ fun WgcGadgetShopProductCard(
 
         // Linha de avaliação opcional
         if (rating != null) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -164,7 +164,7 @@ fun WgcGadgetShopProductCard(
                     tint = Color(WgcCoreDsColors.orange23),
                     modifier = Modifier.size(12.dp)
                 )
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXXS2.dp))
                 Text(
                     text = rating.toString(),
                     style = MaterialTheme.typography.labelSmall,
@@ -172,7 +172,7 @@ fun WgcGadgetShopProductCard(
                     fontWeight = FontWeight.Bold
                 )
                 if (reviewCount != null) {
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = "($reviewCount)",
                         style = MaterialTheme.typography.labelSmall,
@@ -182,7 +182,7 @@ fun WgcGadgetShopProductCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Linha de Preços
         Row(

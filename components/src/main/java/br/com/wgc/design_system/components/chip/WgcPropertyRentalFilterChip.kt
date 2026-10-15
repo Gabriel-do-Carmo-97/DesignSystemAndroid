@@ -29,10 +29,10 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Chip de Filtro rápido no estilo Property Rental (WgcPropertyRentalFilterChip):
@@ -75,17 +75,17 @@ fun WgcPropertyRentalFilterChip(
                 role = Role.Checkbox
                 stateDescription = stateDesc
             }
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
             .background(backgroundColor)
             .border(
-                width = WgcCoreDsSpacing.xxxs2.dp,
+                width = WgcCoreDsSpacing.XXXS2.dp,
                 color = borderColor,
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
             )
             .clickable(onClick = onClick)
             .padding(
-                horizontal = WgcCoreDsSpacing.sm12.dp,
-                vertical = WgcCoreDsSpacing.xs8.dp
+                horizontal = WgcCoreDsSpacing.SM12.dp,
+                vertical = WgcCoreDsSpacing.XS8.dp
             ),
         contentAlignment = Alignment.Center
     ) {
@@ -98,9 +98,9 @@ fun WgcPropertyRentalFilterChip(
                     imageVector = leadingIcon,
                     contentDescription = null,
                     tint = if (isSelected) Color(WgcCoreDsColors.yellow6) else contentColor,
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
             }
 
             Text(
@@ -111,7 +111,7 @@ fun WgcPropertyRentalFilterChip(
             )
 
             if (badgeValue != null) {
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                 Text(
                     text = "($badgeValue)",
                     style = MaterialTheme.typography.labelSmall,
@@ -121,12 +121,12 @@ fun WgcPropertyRentalFilterChip(
             }
 
             if (isSelected) {
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                 Icon(
                     imageVector = Icons.Default.Close,
                     contentDescription = "Remover filtro",
                     tint = Color.White,
-                    modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                 )
             }
         }
@@ -137,8 +137,8 @@ fun WgcPropertyRentalFilterChip(
 @Composable
 private fun WgcPropertyRentalFilterChipPreview() {
     Row(
-        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         WgcPropertyRentalFilterChip(
             label = "Preço",

@@ -22,8 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -38,13 +38,13 @@ fun WgcReorderableListItem(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.sm8.dp),
+                .padding(WgcCoreDsSpacing.SM8.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -57,7 +57,7 @@ fun WgcReorderableListItem(
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .padding(horizontal = WgcCoreDsSpacing.sm8.dp)
+                    .padding(horizontal = WgcCoreDsSpacing.SM8.dp)
             ) {
                 content()
             }
@@ -93,8 +93,8 @@ private fun WgcReorderableListItemPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp)
+                .padding(WgcCoreDsSpacing.MD.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp)
         ) {
             WgcReorderableListItem(
                 onMoveUp = {},

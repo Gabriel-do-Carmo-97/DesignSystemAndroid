@@ -15,10 +15,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 @Composable
@@ -33,26 +33,53 @@ fun WgcRideShareCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth().clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = if (isSelected) Color(WgcCoreDsColors.yellow4).copy(alpha = 0.15f) else Color.White),
-        border = if (isSelected) BorderStroke(WgcCoreDsSize.s2.dp, Color(WgcCoreDsColors.yellow4)) else BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayLight7))
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (isSelected) {
+                Color(WgcCoreDsColors.yellow4).copy(alpha = 0.15f)
+            } else {
+                Color.White
+            }
+        ),
+        border = if (isSelected) {
+            BorderStroke(WgcCoreDsSize.S2.dp, Color(WgcCoreDsColors.yellow4))
+        } else {
+            BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.grayLight7))
+        }
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp), verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.DirectionsCar, contentDescription = null, tint = Color(WgcCoreDsColors.yellow4), modifier = Modifier.size(WgcCoreDsSize.s32.dp))
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    Icons.Default.DirectionsCar,
+                    contentDescription = null,
+                    tint = Color(WgcCoreDsColors.yellow4),
+                    modifier = Modifier.size(WgcCoreDsSize.S32.dp)
+                )
                 Column {
                     Text(name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Text("Chega em $eta", fontSize = 14.sp, color = Color.Gray)
                     discount?.let {
-                        Text(it, fontSize = 14.sp, color = Color(WgcCoreDsColors.green12), fontWeight = FontWeight.SemiBold)
+                        Text(
+                            it,
+                            fontSize = 14.sp,
+                            color = Color(WgcCoreDsColors.green12),
+                            fontWeight = FontWeight.SemiBold
+                        )
                     }
                 }
             }
-            Text("R$ " + String.format(Locale.getDefault(), "%,.2f", price), fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+            Text(
+                "R$ " + String.format(Locale.getDefault(), "%,.2f", price),
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 14.sp
+            )
         }
     }
 }

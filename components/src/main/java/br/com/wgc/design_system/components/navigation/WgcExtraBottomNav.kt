@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
 /**
  * Itens da barra de navegação inferior do Clube Extra.
@@ -50,7 +50,7 @@ fun WgcExtraBottomNav(
 ) {
     NavigationBar(
         modifier = modifier.border(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.blueLight6)
         )) {
         WgcExtraNavItem.entries.forEach { item ->
@@ -62,7 +62,7 @@ fun WgcExtraBottomNav(
                     Icon(
                         imageVector = item.icon,
                         contentDescription = item.label,
-                        modifier = Modifier.size(WgcCoreDsSize.s22.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S22.dp)
                     )
                 },
                 label = {

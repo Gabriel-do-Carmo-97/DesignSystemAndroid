@@ -37,8 +37,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Direção de ordenação da coluna.
@@ -90,7 +90,7 @@ fun <T> WgcDataTable(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = MaterialTheme.colorScheme.surface,
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
@@ -123,7 +123,7 @@ fun <T> WgcDataTable(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(WgcCoreDsSpacing.xl32.dp),
+                            .padding(WgcCoreDsSpacing.XL32.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -177,7 +177,7 @@ private fun <T> WgcTableHeaderRow(
     Row(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (isSelectable) {
@@ -185,7 +185,7 @@ private fun <T> WgcTableHeaderRow(
                 checked = isAllSelected,
                 onCheckedChange = { onSelectAll() }
             )
-            Spacer(Modifier.width(WgcCoreDsSpacing.xs8.dp))
+            Spacer(Modifier.width(WgcCoreDsSpacing.XS8.dp))
         }
 
         columns.forEach { col ->
@@ -206,7 +206,7 @@ private fun <T> WgcTableHeaderRow(
                         } else Modifier
                     ),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = col.header,
@@ -256,7 +256,7 @@ private fun <T> WgcDataTableRow(
         modifier = Modifier
             .background(rowBg)
             .clickable(enabled = isSelectable) { onRowSelect(rowId) }
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (isSelectable) {
@@ -264,7 +264,7 @@ private fun <T> WgcDataTableRow(
                 checked = isSelected,
                 onCheckedChange = { onRowSelect(rowId) }
             )
-            Spacer(Modifier.width(WgcCoreDsSpacing.xs8.dp))
+            Spacer(Modifier.width(WgcCoreDsSpacing.XS8.dp))
         }
 
         columns.forEach { col ->
@@ -288,7 +288,7 @@ private fun WgcTablePaginationFooter(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -300,7 +300,7 @@ private fun WgcTablePaginationFooter(
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             IconButton(
                 onClick = { onPageChange((currentPage - 1).coerceAtLeast(1)) },

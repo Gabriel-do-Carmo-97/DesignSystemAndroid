@@ -28,11 +28,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente do Índice FipeZAP.
@@ -52,14 +52,14 @@ fun WgcPropertyClassifiedsIndexCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Cabeçalho FipeZAP
             Row(
@@ -70,11 +70,11 @@ fun WgcPropertyClassifiedsIndexCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color(WgcCoreDsColors.blueDark31))
                             .padding(
-                                horizontal = WgcCoreDsSpacing.xs8.dp,
-                                vertical = WgcCoreDsSpacing.xxs4.dp
+                                horizontal = WgcCoreDsSpacing.XS8.dp,
+                                vertical = WgcCoreDsSpacing.XXS4.dp
                             )
                     ) {
                         Text(
@@ -84,7 +84,7 @@ fun WgcPropertyClassifiedsIndexCard(
                             color = Color.White
                         )
                     }
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Text(
                         text = neighborhood,
                         style = MaterialTheme.typography.bodyMedium,
@@ -99,9 +99,9 @@ fun WgcPropertyClassifiedsIndexCard(
                         imageVector = Icons.Default.TrendingUp,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.green4),
-                        modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = "$historicalVariation12m em 12m",
                         style = MaterialTheme.typography.labelSmall,
@@ -111,7 +111,7 @@ fun WgcPropertyClassifiedsIndexCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             // Comparativo de Valores
             Row(
@@ -124,7 +124,7 @@ fun WgcPropertyClassifiedsIndexCard(
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(WgcCoreDsColors.blue22)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = propertyM2Price,
                         style = MaterialTheme.typography.titleMedium,
@@ -139,7 +139,7 @@ fun WgcPropertyClassifiedsIndexCard(
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(WgcCoreDsColors.blue22)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = neighborhoodAverageM2Price,
                         style = MaterialTheme.typography.titleMedium,
@@ -149,21 +149,21 @@ fun WgcPropertyClassifiedsIndexCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             // Régua Visual do Índice FipeZAP (Verde - Azul - Laranja)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s8.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+                    .height(WgcCoreDsSize.S8.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
             ) {
                 // Abaixo da média (Verde)
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .height(WgcCoreDsSize.s8.dp)
+                        .height(WgcCoreDsSize.S8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.BELOW_AVERAGE) {
                                 Color(WgcCoreDsColors.green4)
@@ -176,7 +176,7 @@ fun WgcPropertyClassifiedsIndexCard(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .height(WgcCoreDsSize.s8.dp)
+                        .height(WgcCoreDsSize.S8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.ON_AVERAGE) {
                                 Color(WgcCoreDsColors.blue17)
@@ -189,7 +189,7 @@ fun WgcPropertyClassifiedsIndexCard(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .height(WgcCoreDsSize.s8.dp)
+                        .height(WgcCoreDsSize.S8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.ABOVE_AVERAGE) {
                                 Color(WgcCoreDsColors.orange17)
@@ -200,7 +200,7 @@ fun WgcPropertyClassifiedsIndexCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
             // Legenda da Régua
             Row(
@@ -239,15 +239,15 @@ fun WgcPropertyClassifiedsIndexCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             // Caixa de Insight
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color(WgcCoreDsColors.blueLight37))
-                    .padding(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
             ) {
                 Row(verticalAlignment = Alignment.Top) {
                     Icon(
@@ -255,10 +255,10 @@ fun WgcPropertyClassifiedsIndexCard(
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.blue17),
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s16.dp)
-                            .padding(top = WgcCoreDsSpacing.xxxs2.dp)
+                            .size(WgcCoreDsSize.S16.dp)
+                            .padding(top = WgcCoreDsSpacing.XXXS2.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Text(
                         text = insightText,
                         style = MaterialTheme.typography.bodySmall,
@@ -274,7 +274,7 @@ fun WgcPropertyClassifiedsIndexCard(
 @Composable
 private fun WgcZapFipeMeterCardPreview() {
     MaterialTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcPropertyClassifiedsIndexCard(
                 neighborhood = "Pinheiros, SP",
                 propertyM2Price = "R$ 11.200/m²",

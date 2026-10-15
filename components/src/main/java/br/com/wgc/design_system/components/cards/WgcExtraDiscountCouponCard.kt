@@ -31,11 +31,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Cupom Personalizado "Meu Desconto" do Clube Extra.
@@ -61,19 +61,19 @@ fun WgcExtraDiscountCouponCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = if (isActivated) Color(WgcCoreDsColors.green4) else Color(WgcCoreDsColors.blueLight6)
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             // Top: Categoria + Badge de Desconto
             Row(
@@ -83,13 +83,13 @@ fun WgcExtraDiscountCouponCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.ConfirmationNumber,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.red12),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                     Text(
                         text = category.uppercase(),
@@ -102,9 +102,9 @@ fun WgcExtraDiscountCouponCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(WgcCoreDsColors.red12))
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = discountBadge,
@@ -116,7 +116,7 @@ fun WgcExtraDiscountCouponCard(
             }
 
             // Título e Condição
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
                 Text(
                     text = title,
                     color = Color(WgcCoreDsColors.grayDark7),
@@ -134,13 +134,13 @@ fun WgcExtraDiscountCouponCard(
             // Validade
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Icon(
                     imageVector = Icons.Default.Schedule,
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.blue27),
-                    modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                 )
                 Text(
                     text = validUntil,
@@ -154,8 +154,8 @@ fun WgcExtraDiscountCouponCard(
                 onClick = onActivateToggle,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s40.dp),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
+                    .height(WgcCoreDsSize.S40.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isActivated) {
                         Color(WgcCoreDsColors.greenLight10)
@@ -169,7 +169,7 @@ fun WgcExtraDiscountCouponCard(
                     }
                 ),
                 border = androidx.compose.foundation.BorderStroke(
-                    width = WgcCoreDsSize.s1.dp,
+                    width = WgcCoreDsSize.S1.dp,
                     color = if (isActivated) {
                         Color(WgcCoreDsColors.green4)
                     } else {
@@ -179,13 +179,13 @@ fun WgcExtraDiscountCouponCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     if (isActivated) {
                         Icon(
                             imageVector = Icons.Default.Check,
                             contentDescription = null,
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                     }
                     Text(

@@ -28,8 +28,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Estado de uma etapa de rastreamento.
@@ -117,12 +117,12 @@ fun WgcRetailOrderTrackingStepper(
                     }
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.MD.dp))
 
                 // Texto da etapa
                 Column(
                     modifier = Modifier
-                        .padding(top = WgcCoreDsSpacing.xs.dp)
+                        .padding(top = WgcCoreDsSpacing.XS.dp)
                         .weight(1f)
                 ) {
                     Text(
@@ -131,14 +131,14 @@ fun WgcRetailOrderTrackingStepper(
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.grayDark2)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS.dp))
                     Text(
                         text = "${step.subtitle} • ${step.time}",
                         style = MaterialTheme.typography.bodySmall,
                         color = Color(WgcCoreDsColors.gray4)
                     )
                     if (!isLast) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
                     }
                 }
             }

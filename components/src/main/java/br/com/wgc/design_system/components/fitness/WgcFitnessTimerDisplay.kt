@@ -34,11 +34,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcFitnessTimerDisplay(
@@ -57,17 +57,17 @@ fun WgcFitnessTimerDisplay(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(WgcCoreDsColors.grayDark11)
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL3.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -76,9 +76,9 @@ fun WgcFitnessTimerDisplay(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(WgcCoreDsColors.grayDark20))
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = "EXERCÍCIO $exerciseIndex DE $totalExercises",
@@ -90,7 +90,7 @@ fun WgcFitnessTimerDisplay(
 
                 IconButton(
                     onClick = onAudioToggle,
-                    modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.VolumeUp,
@@ -103,7 +103,7 @@ fun WgcFitnessTimerDisplay(
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = exerciseName,
@@ -121,14 +121,14 @@ fun WgcFitnessTimerDisplay(
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 LinearProgressIndicator(
                     progress = { progressFraction },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s8.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
+                        .height(WgcCoreDsSize.S8.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
                     color = Color(WgcCoreDsColors.green28),
                     trackColor = Color(WgcCoreDsColors.grayDark20)
                 )
@@ -137,9 +137,9 @@ fun WgcFitnessTimerDisplay(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color(WgcCoreDsColors.grayDark3))
-                    .padding(WgcCoreDsSpacing.sm12.dp),
+                    .padding(WgcCoreDsSpacing.SM12.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -171,7 +171,7 @@ fun WgcFitnessTimerDisplay(
             ) {
                 IconButton(
                     onClick = onRewind,
-                    modifier = Modifier.size(WgcCoreDsSize.s40.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S40.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.FastRewind,
@@ -182,7 +182,7 @@ fun WgcFitnessTimerDisplay(
 
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s56.dp)
+                        .size(WgcCoreDsSize.S56.dp)
                         .clip(CircleShape)
                         .background(Color(WgcCoreDsColors.green28))
                         .clickable(onClick = onPlayPauseToggle),
@@ -192,13 +192,13 @@ fun WgcFitnessTimerDisplay(
                         imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                         contentDescription = if (isPlaying) "Pausar" else "Reproduzir",
                         tint = Color(WgcCoreDsColors.grayDark3),
-                        modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                     )
                 }
 
                 IconButton(
                     onClick = onSkip,
-                    modifier = Modifier.size(WgcCoreDsSize.s40.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S40.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.FastForward,

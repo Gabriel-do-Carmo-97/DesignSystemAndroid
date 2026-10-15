@@ -31,10 +31,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Destinos oficiais de navegação do PropertyListing.
@@ -66,14 +66,14 @@ fun WgcPropertyListingBottomNav(
     Surface(
         modifier = modifier.fillMaxWidth(),
         color = Color(WgcCoreDsColors.white),
-        shadowElevation = WgcCoreDsSpacing.xs8.dp
+        shadowElevation = WgcCoreDsSpacing.XS8.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    horizontal = WgcCoreDsSpacing.md16.dp,
-                    vertical = WgcCoreDsSpacing.xs8.dp
+                    horizontal = WgcCoreDsSpacing.MD16.dp,
+                    vertical = WgcCoreDsSpacing.XS8.dp
                 ),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
@@ -111,11 +111,11 @@ private fun PropertyListingNavItemButton(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .clickable(onClick = onClick)
             .padding(
-                horizontal = WgcCoreDsSpacing.sm12.dp,
-                vertical = WgcCoreDsSpacing.xxs4.dp
+                horizontal = WgcCoreDsSpacing.SM12.dp,
+                vertical = WgcCoreDsSpacing.XXS4.dp
             )
     ) {
         Box(contentAlignment = Alignment.TopEnd) {
@@ -123,13 +123,13 @@ private fun PropertyListingNavItemButton(
                 imageVector = item.icon,
                 contentDescription = item.title,
                 tint = contentColor,
-                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
             )
 
             if (badgeCount > 0) {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s14.dp)
+                        .size(WgcCoreDsSize.S14.dp)
                         .clip(CircleShape)
                         .background(Color(WgcCoreDsColors.orange18)),
                     contentAlignment = Alignment.Center
@@ -144,7 +144,7 @@ private fun PropertyListingNavItemButton(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = item.title,
@@ -153,13 +153,13 @@ private fun PropertyListingNavItemButton(
             color = contentColor
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Indicador em linha no verde Property Listing
         Box(
             modifier = Modifier
-                .size(width = WgcCoreDsSize.s16.dp, height = WgcCoreDsSize.s2.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                .size(width = WgcCoreDsSize.S16.dp, height = WgcCoreDsSize.S2.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                 .background(
                     if (isSelected) activeColor else Color.Transparent
                 )

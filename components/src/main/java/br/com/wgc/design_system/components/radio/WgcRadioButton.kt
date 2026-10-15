@@ -10,7 +10,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -30,7 +30,7 @@ fun WgcRadioButton(
             .semantics { role = Role.RadioButton }
             .clickable(enabled = isEnabled, onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         RadioButton(
             selected = selected,

@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 class WgcStandardBottomSheetScreenshotTest {
 
@@ -23,13 +23,13 @@ class WgcStandardBottomSheetScreenshotTest {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.lg.dp)
+                    .padding(WgcCoreDsSpacing.LG.dp)
             ) {
                 Text(
                     text = "Título da Folha Inferior",
                     style = MaterialTheme.typography.titleLarge
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
                 Text(
                     text = "Descrição explicativa de opções para o usuário.",
                     style = MaterialTheme.typography.bodyMedium

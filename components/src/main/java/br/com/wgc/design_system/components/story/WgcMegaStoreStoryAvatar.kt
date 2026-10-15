@@ -25,9 +25,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import coil3.compose.AsyncImage
 
 /**
@@ -80,9 +80,9 @@ fun WgcMegaStoreStoryAvatar(
                 Box(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(Color(WgcCoreDsColors.red500))
-                        .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = 2.dp)
                 ) {
                     Text(
                         text = "LIVE",
@@ -94,7 +94,7 @@ fun WgcMegaStoreStoryAvatar(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
         Text(
             text = name,

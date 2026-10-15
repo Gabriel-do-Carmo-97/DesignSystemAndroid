@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -41,7 +41,7 @@ fun WgcKeyValueList(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
     ) {
         entries.forEachIndexed { index, entry ->
             Row(
@@ -75,7 +75,7 @@ private fun WgcKeyValueListPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp)
+                .padding(WgcCoreDsSpacing.MD.dp)
         ) {
             WgcKeyValueList(
                 entries = listOf(

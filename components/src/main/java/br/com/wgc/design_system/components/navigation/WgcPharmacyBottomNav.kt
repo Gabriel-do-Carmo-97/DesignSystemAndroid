@@ -23,9 +23,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
 enum class PharmacyNavTab(val title: String, val icon: ImageVector) {
     HOME("Início", Icons.Default.Home),
@@ -44,7 +44,7 @@ fun WgcPharmacyBottomNav(
 ) {
     NavigationBar(
         modifier = modifier.background(Color(WgcCoreDsColors.white)),
-        tonalElevation = WgcCoreDsElevation.level3.dp
+        tonalElevation = WgcCoreDsElevation.LEVEL3.dp
     ) {
         PharmacyNavTab.entries.forEach { tab ->
             val isSelected = selectedTab == tab
@@ -64,14 +64,14 @@ fun WgcPharmacyBottomNav(
                             Icon(
                                 imageVector = tab.icon,
                                 contentDescription = tab.title,
-                                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                             )
                         }
                     } else {
                         Icon(
                             imageVector = tab.icon,
                             contentDescription = tab.title,
-                            modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                         )
                     }
                 },

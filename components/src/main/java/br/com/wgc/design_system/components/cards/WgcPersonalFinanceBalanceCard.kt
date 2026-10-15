@@ -35,9 +35,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Saldo e Visão Geral Mensal do Organizze.
@@ -58,16 +58,16 @@ fun WgcPersonalFinanceBalanceCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(WgcCoreDsColors.cyan3)
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.xxs4.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.XXS4.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Seletor de Mês
             Row(
@@ -77,13 +77,13 @@ fun WgcPersonalFinanceBalanceCard(
             ) {
                 IconButton(
                     onClick = onPreviousMonthClick,
-                    modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
+                    modifier = Modifier.size(WgcCoreDsSpacing.XL32.dp)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Mês anterior",
                         tint = Color.White.copy(alpha = 0.9f),
-                        modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                        modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                     )
                 }
 
@@ -96,18 +96,18 @@ fun WgcPersonalFinanceBalanceCard(
 
                 IconButton(
                     onClick = onNextMonthClick,
-                    modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
+                    modifier = Modifier.size(WgcCoreDsSpacing.XL32.dp)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Próximo mês",
                         tint = Color.White.copy(alpha = 0.9f),
-                        modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                        modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             // Linha do Saldo Consolidado
             Row(
@@ -121,7 +121,7 @@ fun WgcPersonalFinanceBalanceCard(
                         style = MaterialTheme.typography.bodySmall,
                         color = Color.White.copy(alpha = 0.8f)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = if (isBalanceVisible) balance else "R$ ••••••",
                         style = MaterialTheme.typography.headlineMedium,
@@ -135,36 +135,36 @@ fun WgcPersonalFinanceBalanceCard(
                     modifier = Modifier
                         .clip(CircleShape)
                         .background(Color.White.copy(alpha = 0.15f))
-                        .size(WgcCoreDsSpacing.xxl40.dp)
+                        .size(WgcCoreDsSpacing.XXL40.dp)
                 ) {
                     Icon(
                         imageVector = if (isBalanceVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
                         contentDescription = if (isBalanceVisible) "Ocultar saldo" else "Mostrar saldo",
                         tint = Color.White,
-                        modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
+                        modifier = Modifier.size(WgcCoreDsSpacing.LG24.dp)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             // Cards de Receita e Despesa
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
             ) {
                 // Bloco de Receitas
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                         .background(Color.White.copy(alpha = 0.15f))
-                        .padding(WgcCoreDsSpacing.sm12.dp)
+                        .padding(WgcCoreDsSpacing.SM12.dp)
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
-                                .size(WgcCoreDsSpacing.xl32.dp)
+                                .size(WgcCoreDsSpacing.XL32.dp)
                                 .clip(CircleShape)
                                 .background(Color(WgcCoreDsColors.green26)),
                             contentAlignment = Alignment.Center
@@ -173,10 +173,10 @@ fun WgcPersonalFinanceBalanceCard(
                                 imageVector = Icons.Default.ArrowUpward,
                                 contentDescription = null,
                                 tint = Color.White,
-                                modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                                modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                             )
                         }
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                         Column {
                             Text(
                                 text = "Receitas",
@@ -197,14 +197,14 @@ fun WgcPersonalFinanceBalanceCard(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                         .background(Color.White.copy(alpha = 0.15f))
-                        .padding(WgcCoreDsSpacing.sm12.dp)
+                        .padding(WgcCoreDsSpacing.SM12.dp)
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
-                                .size(WgcCoreDsSpacing.xl32.dp)
+                                .size(WgcCoreDsSpacing.XL32.dp)
                                 .clip(CircleShape)
                                 .background(Color(WgcCoreDsColors.red23)),
                             contentAlignment = Alignment.Center
@@ -213,10 +213,10 @@ fun WgcPersonalFinanceBalanceCard(
                                 imageVector = Icons.Default.ArrowDownward,
                                 contentDescription = null,
                                 tint = Color.White,
-                                modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                                modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                             )
                         }
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                         Column {
                             Text(
                                 text = "Despesas",
@@ -241,6 +241,6 @@ fun WgcPersonalFinanceBalanceCard(
 @Composable
 private fun WgcOrganizzeBalanceCardPreview() {
     WgcPersonalFinanceBalanceCard(
-        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+        modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
     )
 }

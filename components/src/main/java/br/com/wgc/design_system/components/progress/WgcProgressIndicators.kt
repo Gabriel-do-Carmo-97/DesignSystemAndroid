@@ -21,7 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -58,7 +58,7 @@ fun WgcCircularProgressIndicator(
             strokeCap = StrokeCap.Round
         )
         if (!label.isNullOrBlank()) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Text(
                 text = label,
                 style = MaterialTheme.typography.bodyMedium,
@@ -105,7 +105,7 @@ fun WgcCircularProgressIndicator(
             strokeCap = StrokeCap.Round
         )
         if (!label.isNullOrBlank()) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Text(
                 text = label,
                 style = MaterialTheme.typography.bodyMedium,
@@ -134,7 +134,7 @@ fun WgcLinearProgressIndicator(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
     ) {
         if (!label.isNullOrBlank()) {
             Text(
@@ -176,7 +176,7 @@ fun WgcLinearProgressIndicator(
     val currentProgress = progress()
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
     ) {
         if (!label.isNullOrBlank() || showPercentage) {
             Row(
@@ -219,8 +219,8 @@ private fun WgcProgressIndicatorsPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 WgcCircularProgressIndicator(label = "Carregando dados...")

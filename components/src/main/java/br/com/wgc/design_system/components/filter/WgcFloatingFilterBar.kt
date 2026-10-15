@@ -24,8 +24,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 data class WgcFilterOption(
     val id: String,
@@ -51,20 +51,20 @@ fun WgcFloatingFilterBar(
     ) {
         Surface(
             modifier = Modifier
-                .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm8.dp)
+                .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.SM8.dp)
                 .shadow(
                     elevation = 6.dp,
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
                 ),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp),
             color = MaterialTheme.colorScheme.surface
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .horizontalScroll(rememberScrollState())
-                    .padding(horizontal = WgcCoreDsSpacing.sm8.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs6.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.SM8.dp, vertical = WgcCoreDsSpacing.XXS4.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 filters.forEach { filter ->

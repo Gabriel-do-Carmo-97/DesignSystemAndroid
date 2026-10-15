@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import java.util.Locale
 
@@ -48,15 +48,15 @@ fun WgcHealthVaccineCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight11))
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.blueLight11))
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -66,8 +66,8 @@ fun WgcHealthVaccineCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                            .size(WgcCoreDsSize.S36.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                             .background(Color(WgcCoreDsColors.greenLight5)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -75,10 +75,10 @@ fun WgcHealthVaccineCard(
                             imageVector = Icons.Default.Vaccines,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.cyan1),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Column {
                         Text(
                             text = "Serviços Farmacêuticos",
@@ -103,7 +103,7 @@ fun WgcHealthVaccineCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Text(
                 text = "Público: $targetAudience",
@@ -111,7 +111,7 @@ fun WgcHealthVaccineCard(
                 color = Color(WgcCoreDsColors.gray5)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -123,9 +123,9 @@ fun WgcHealthVaccineCard(
                         imageVector = Icons.Default.CalendarMonth,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.blue3),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = nextAvailableSlot,
                         fontSize = 14.sp,

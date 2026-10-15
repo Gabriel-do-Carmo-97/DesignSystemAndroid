@@ -23,8 +23,8 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Mini Gráfico de Linha (Sparkline) Corporativo (WgcSparklineChart).
@@ -93,10 +93,10 @@ fun WgcProgressBarGroup(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         segments.forEach { segment ->
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
@@ -113,7 +113,7 @@ fun WgcProgressBarGroup(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(8.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
                     color = segment.color,
                     trackColor = MaterialTheme.colorScheme.surfaceVariant
                 )
@@ -128,8 +128,8 @@ fun WgcProgressBarGroup(
 @Composable
 private fun WgcSparklineChartPreview() {
     MaterialTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)) {
                 WgcSparklineChart(dataPoints = listOf(10f, 25f, 15f, 40f, 35f, 60f, 85f))
                 WgcProgressBarGroup(
                     segments = listOf(

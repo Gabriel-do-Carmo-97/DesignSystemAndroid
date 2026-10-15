@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Overlay de inspeção de layout ("Inspect Mode") para depuração visual no Showcase.
@@ -38,7 +38,7 @@ fun WgcInspectOverlay(
             color = Color.White,
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(WgcCoreDsSpacing.xxs4.dp)
+                .padding(WgcCoreDsSpacing.XXS4.dp)
         )
     }
 }

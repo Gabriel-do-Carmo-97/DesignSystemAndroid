@@ -22,9 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Barra de navegação inferior oficial do ecossistema Tassel (WgcCuratedBottomNav).
@@ -39,7 +39,7 @@ fun WgcCuratedBottomNav(
     NavigationBar(
         modifier = modifier,
         containerColor = Color.White,
-        tonalElevation = WgcCoreDsSpacing.none0.dp
+        tonalElevation = WgcCoreDsSpacing.NONE0.dp
     ) {
         val navItems = listOf(
             Triple("Home", Icons.Outlined.Home to Icons.Filled.Home, 0),
@@ -57,7 +57,7 @@ fun WgcCuratedBottomNav(
                     Icon(
                         imageVector = if (isSelected) icons.second else icons.first,
                         contentDescription = title,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
                 },
                 label = {

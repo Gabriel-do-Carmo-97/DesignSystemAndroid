@@ -42,11 +42,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Status de precificação em relação ao Índice FipeZAP.
@@ -90,16 +90,16 @@ fun WgcPropertyClassifiedsCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onCardClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Column {
             // Imagem Placeholder com Tags e Ações
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s200.dp)
+                    .height(WgcCoreDsSize.S200.dp)
                     .background(Color(WgcCoreDsColors.blueLight1))
             ) {
                 // Ícone ilustrativo de imóvel no centro do placeholder
@@ -108,7 +108,7 @@ fun WgcPropertyClassifiedsCard(
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.blueLight8),
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s56.dp)
+                        .size(WgcCoreDsSize.S56.dp)
                         .align(Alignment.Center)
                 )
 
@@ -116,17 +116,17 @@ fun WgcPropertyClassifiedsCard(
                 Row(
                     modifier = Modifier
                         .align(Alignment.TopStart)
-                        .padding(WgcCoreDsSpacing.sm12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        .padding(WgcCoreDsSpacing.SM12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     if (badgeText != null) {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                                 .background(Color(WgcCoreDsColors.orange17))
                                 .padding(
-                                    horizontal = WgcCoreDsSpacing.xs8.dp,
-                                    vertical = WgcCoreDsSpacing.xxs4.dp
+                                    horizontal = WgcCoreDsSpacing.XS8.dp,
+                                    vertical = WgcCoreDsSpacing.XXS4.dp
                                 )
                         ) {
                             Text(
@@ -141,11 +141,11 @@ fun WgcPropertyClassifiedsCard(
                     if (hasVirtualTour) {
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                                 .background(Color(WgcCoreDsColors.blue17))
                                 .padding(
-                                    horizontal = WgcCoreDsSpacing.xs8.dp,
-                                    vertical = WgcCoreDsSpacing.xxs4.dp
+                                    horizontal = WgcCoreDsSpacing.XS8.dp,
+                                    vertical = WgcCoreDsSpacing.XXS4.dp
                                 )
                         ) {
                             Text(
@@ -163,8 +163,8 @@ fun WgcPropertyClassifiedsCard(
                     onClick = onFavoriteClick,
                     modifier = Modifier
                         .align(Alignment.TopEnd)
-                        .padding(WgcCoreDsSpacing.xs8.dp)
-                        .size(WgcCoreDsSize.s36.dp)
+                        .padding(WgcCoreDsSpacing.XS8.dp)
+                        .size(WgcCoreDsSize.S36.dp)
                         .clip(CircleShape)
                         .background(Color.White.copy(alpha = 0.9f))
                 ) {
@@ -172,7 +172,7 @@ fun WgcPropertyClassifiedsCard(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar imóvel",
                         tint = if (isFavorite) Color(WgcCoreDsColors.orange17) else Color(WgcCoreDsColors.blueDark10),
-                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                     )
                 }
 
@@ -186,12 +186,12 @@ fun WgcPropertyClassifiedsCard(
                     Box(
                         modifier = Modifier
                             .align(Alignment.BottomStart)
-                            .padding(WgcCoreDsSpacing.sm12.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .padding(WgcCoreDsSpacing.SM12.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(fipeBg)
                             .padding(
-                                horizontal = WgcCoreDsSpacing.xs8.dp,
-                                vertical = WgcCoreDsSpacing.xxs4.dp
+                                horizontal = WgcCoreDsSpacing.XS8.dp,
+                                vertical = WgcCoreDsSpacing.XXS4.dp
                             )
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -199,9 +199,9 @@ fun WgcPropertyClassifiedsCard(
                                 imageVector = Icons.Default.TrendingDown,
                                 contentDescription = null,
                                 tint = Color.White,
-                                modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                             )
-                            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                             Text(
                                 text = "FipeZAP: ${fipeStatus.label}",
                                 style = MaterialTheme.typography.labelSmall,
@@ -217,7 +217,7 @@ fun WgcPropertyClassifiedsCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp)
+                    .padding(WgcCoreDsSpacing.MD16.dp)
             ) {
                 // Preço Principal e Preço m²
                 Row(
@@ -242,7 +242,7 @@ fun WgcPropertyClassifiedsCard(
                 }
 
                 if (condoAndIptu != null) {
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = condoAndIptu,
                         style = MaterialTheme.typography.bodySmall,
@@ -250,7 +250,7 @@ fun WgcPropertyClassifiedsCard(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
                 // Título do Imóvel
                 Text(
@@ -265,15 +265,15 @@ fun WgcPropertyClassifiedsCard(
                 // Localização
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.padding(top = WgcCoreDsSpacing.xxs4.dp)
+                    modifier = Modifier.padding(top = WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.blue22),
-                        modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = "$neighborhood • $address",
                         style = MaterialTheme.typography.bodySmall,
@@ -283,22 +283,22 @@ fun WgcPropertyClassifiedsCard(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
                 // Faixa de Especificações Estruturais
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(Color(WgcCoreDsColors.blueLight37))
                         .border(
-                            width = WgcCoreDsSpacing.xxxs2.dp,
+                            width = WgcCoreDsSpacing.XXXS2.dp,
                             color = Color(WgcCoreDsColors.blueLight8),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
                         )
                         .padding(
-                            horizontal = WgcCoreDsSpacing.sm12.dp,
-                            vertical = WgcCoreDsSpacing.xs8.dp
+                            horizontal = WgcCoreDsSpacing.SM12.dp,
+                            vertical = WgcCoreDsSpacing.XS8.dp
                         ),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
@@ -319,9 +319,9 @@ fun WgcPropertyClassifiedsCard(
                             imageVector = Icons.Default.Bed,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.blue22),
-                            modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                         )
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                         Text(
                             text = if (suites > 0) "$bedrooms ($suites suíte)" else "$bedrooms qts",
                             style = MaterialTheme.typography.labelMedium,
@@ -336,9 +336,9 @@ fun WgcPropertyClassifiedsCard(
                             imageVector = Icons.Default.Bathtub,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.blue22),
-                            modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                         )
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                         Text(
                             text = "$bathrooms",
                             style = MaterialTheme.typography.labelMedium,
@@ -353,9 +353,9 @@ fun WgcPropertyClassifiedsCard(
                             imageVector = Icons.Default.DirectionsCar,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.blue22),
-                            modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                         )
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                         Text(
                             text = "$parkingSpaces vagas",
                             style = MaterialTheme.typography.labelMedium,
@@ -365,9 +365,9 @@ fun WgcPropertyClassifiedsCard(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
                 HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
                 // Rodapé: Anunciante e Ação Rápida de Contato
                 Row(
@@ -380,9 +380,9 @@ fun WgcPropertyClassifiedsCard(
                             imageVector = Icons.Default.Verified,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.blue17),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                         Text(
                             text = advertiserName,
                             style = MaterialTheme.typography.bodySmall,
@@ -394,12 +394,12 @@ fun WgcPropertyClassifiedsCard(
                     // Botão Laranja Zap de Contato
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                             .background(Color(WgcCoreDsColors.orange17))
                             .clickable(onClick = onContactClick)
                             .padding(
-                                horizontal = WgcCoreDsSpacing.sm12.dp,
-                                vertical = WgcCoreDsSpacing.xxs4.dp
+                                horizontal = WgcCoreDsSpacing.SM12.dp,
+                                vertical = WgcCoreDsSpacing.XXS4.dp
                             )
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -407,9 +407,9 @@ fun WgcPropertyClassifiedsCard(
                                 imageVector = Icons.Default.Phone,
                                 contentDescription = "Contatar anunciante",
                                 tint = Color.White,
-                                modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                             )
-                            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                             Text(
                                 text = "Contatar",
                                 style = MaterialTheme.typography.labelSmall,
@@ -428,7 +428,7 @@ fun WgcPropertyClassifiedsCard(
 @Composable
 private fun WgcZapPropertyCardPreview() {
     MaterialTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcPropertyClassifiedsCard(
                 title = "Apartamento Alto Padrão com Varanda Gourmet",
                 price = "R$ 1.850.000",

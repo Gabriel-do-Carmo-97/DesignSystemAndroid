@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Modelo de passo para tours interativos guiados (Walkthrough).
@@ -47,13 +47,13 @@ fun WgcWalkthroughCard(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         color = MaterialTheme.colorScheme.surfaceVariant,
         tonalElevation = 6.dp
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),

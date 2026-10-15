@@ -37,11 +37,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Produto de Supermercado do Clube Extra.
@@ -72,19 +72,19 @@ fun WgcExtraProductCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.blueLight6)
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.sm12.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                .padding(WgcCoreDsSpacing.SM12.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             // Header do Card: Tag de Desconto + Status de Ativação
             Row(
@@ -94,9 +94,9 @@ fun WgcExtraProductCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(WgcCoreDsColors.red12))
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = "$discountPercentage OFF",
@@ -109,7 +109,7 @@ fun WgcExtraProductCard(
                 if (onActivateDiscountToggle != null) {
                     Row(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                             .background(
                                 if (isDiscountActivated) {
                                     Color(WgcCoreDsColors.greenLight10)
@@ -118,18 +118,18 @@ fun WgcExtraProductCard(
                                 }
                             )
                             .border(
-                                width = WgcCoreDsSize.s1.dp,
+                                width = WgcCoreDsSize.S1.dp,
                                 color = if (isDiscountActivated) {
                                     Color(WgcCoreDsColors.green4)
                                 } else {
                                     Color(WgcCoreDsColors.yellow5)
                                 },
-                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
                             )
                             .clickable { onActivateDiscountToggle() }
-                            .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp),
+                            .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp),
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
                     ) {
                         Icon(
                             imageVector = if (isDiscountActivated) Icons.Default.Check else Icons.Default.LocalOffer,
@@ -139,7 +139,7 @@ fun WgcExtraProductCard(
                             } else {
                                 Color(WgcCoreDsColors.red12)
                             },
-                            modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                         )
                         Text(
                             text = if (isDiscountActivated) "ATIVADO NO CPF" else "ATIVAR DESCONTO",
@@ -162,8 +162,8 @@ fun WgcExtraProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s100.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .height(WgcCoreDsSize.S100.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(WgcCoreDsColors.blueLight33)),
                     contentAlignment = Alignment.Center
                 ) {
@@ -171,13 +171,13 @@ fun WgcExtraProductCard(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.blueLight8),
-                        modifier = Modifier.size(WgcCoreDsSize.s40.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S40.dp)
                     )
                 }
             }
 
             // Detalhes do Produto
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)) {
                 Text(
                     text = name,
                     color = Color(WgcCoreDsColors.grayDark7),
@@ -195,7 +195,7 @@ fun WgcExtraProductCard(
             }
 
             // Bloco de Preços (De / Por Clube)
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)) {
                 Text(
                     text = "De $regularPrice",
                     color = Color(WgcCoreDsColors.blue27),
@@ -205,7 +205,7 @@ fun WgcExtraProductCard(
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Text(
                         text = clubPrice,
@@ -216,9 +216,9 @@ fun WgcExtraProductCard(
 
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color(WgcCoreDsColors.yellow5))
-                            .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                            .padding(horizontal = WgcCoreDsSpacing.XXS4.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                     ) {
                         Text(
                             text = "CLUBE EXTRA",
@@ -237,8 +237,8 @@ fun WgcExtraProductCard(
                     onClick = onAddToCart,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s36.dp),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
+                        .height(WgcCoreDsSize.S36.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(WgcCoreDsColors.red12),
                         contentColor = Color.White
@@ -246,12 +246,12 @@ fun WgcExtraProductCard(
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = null,
-                            modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                         )
                         Text(
                             text = "ADICIONAR",
@@ -264,27 +264,27 @@ fun WgcExtraProductCard(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s36.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .height(WgcCoreDsSize.S36.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(WgcCoreDsColors.blueLight33))
                         .border(
-                            width = WgcCoreDsSize.s1.dp,
+                            width = WgcCoreDsSize.S1.dp,
                             color = Color(WgcCoreDsColors.blueLight6),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)
                         )
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp),
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     IconButton(
                         onClick = onDecrementQuantity,
-                        modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Remove,
                             contentDescription = "Diminuir",
                             tint = Color(WgcCoreDsColors.red12),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                     }
 
@@ -297,13 +297,13 @@ fun WgcExtraProductCard(
 
                     IconButton(
                         onClick = onIncrementQuantity,
-                        modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = "Aumentar",
                             tint = Color(WgcCoreDsColors.red12),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                     }
                 }

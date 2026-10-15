@@ -29,10 +29,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -53,15 +53,15 @@ fun WgcCuratedProductCard(
 ) {
     Column(
         modifier = modifier
-            .width(WgcCoreDsSize.s160.dp)
+            .width(WgcCoreDsSize.S160.dp)
             .clickable(onClick = onClick)
     ) {
         // Container da Imagem com cantos suaves
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s180.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .height(WgcCoreDsSize.S180.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                 .background(Color(WgcCoreDsColors.blueLight26))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -91,8 +91,8 @@ fun WgcCuratedProductCard(
                 onClick = onBookmarkClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs8.dp)
-                    .size(WgcCoreDsSize.s32.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
+                    .size(WgcCoreDsSize.S32.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.9f))
             ) {
@@ -100,12 +100,12 @@ fun WgcCuratedProductCard(
                     imageVector = if (isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
                     contentDescription = if (isBookmarked) "Remover dos salvos" else "Salvar produto",
                     tint = if (isBookmarked) Color(WgcCoreDsColors.blue37) else Color(WgcCoreDsColors.gray10),
-                    modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         if (!brand.isNullOrEmpty()) {
             Text(
@@ -114,7 +114,7 @@ fun WgcCuratedProductCard(
                 color = Color(WgcCoreDsColors.gray10),
                 maxLines = 1
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
         }
 
         Text(
@@ -126,7 +126,7 @@ fun WgcCuratedProductCard(
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = price,

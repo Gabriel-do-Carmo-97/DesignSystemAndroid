@@ -21,7 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import kotlinx.coroutines.delay
 
 /**
@@ -60,7 +60,7 @@ fun WgcToastHost(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.md.dp),
+            .padding(WgcCoreDsSpacing.MD.dp),
         contentAlignment = Alignment.TopCenter
     ) {
         AnimatedVisibility(

@@ -13,8 +13,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 data class WgcCircularCategoryItem(
@@ -41,8 +41,8 @@ fun WgcCircularCategoryRow(
 ) {
     LazyRow(
         modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
     ) {
         items(categories, key = { it.id }) { category ->
             Column(
@@ -60,7 +60,7 @@ fun WgcCircularCategoryRow(
                         Text(text = category.initials, style = MaterialTheme.typography.titleLarge)
                     }
                 }
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
                 Text(
                     text = category.name,
                     style = MaterialTheme.typography.labelMedium,

@@ -36,11 +36,11 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 @Composable
@@ -65,18 +65,18 @@ fun WgcWineStoreCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onCardClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.greenLight1)
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -84,14 +84,14 @@ fun WgcWineStoreCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color(WgcCoreDsColors.pinkLight3))
-                            .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                            .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                     ) {
                         Text(
                             text = "$countryAndRegion • $year",
@@ -103,20 +103,20 @@ fun WgcWineStoreCard(
 
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color(WgcCoreDsColors.orangeLight12))
-                            .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp),
+                            .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null,
                                 tint = Color(WgcCoreDsColors.orange34),
-                                modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                             )
                             Text(
                                 text = String.format(Locale.getDefault(), "%.1f", rating) + " Sommelier",
@@ -130,18 +130,18 @@ fun WgcWineStoreCard(
 
                 IconButton(
                     onClick = onFavoriteToggle,
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 ) {
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
                         tint = if (isFavorite) Color(WgcCoreDsColors.pink1) else Color(WgcCoreDsColors.cyan7),
-                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -149,8 +149,8 @@ fun WgcWineStoreCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s80.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .size(WgcCoreDsSize.S80.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(Color(WgcCoreDsColors.pinkLight3)),
                     contentAlignment = Alignment.Center
                 ) {
@@ -158,15 +158,15 @@ fun WgcWineStoreCard(
                         imageVector = Icons.Default.WineBar,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.pink1),
-                        modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                     )
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
                 Column(
                     modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = winery.uppercase(),
@@ -190,14 +190,14 @@ fun WgcWineStoreCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                     .background(Color(WgcCoreDsColors.greenLight1).copy(alpha = 0.5f))
-                    .padding(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
             ) {
                 Text(
                     text = "Nota do Sommelier: \"$sommelierNote\"",
@@ -207,7 +207,7 @@ fun WgcWineStoreCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -223,7 +223,7 @@ fun WgcWineStoreCard(
                     )
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                     ) {
                         Text(
                             text = "R$ " + String.format(Locale.getDefault(), "%.2f", clienteMaisPrice),
@@ -233,9 +233,9 @@ fun WgcWineStoreCard(
                         )
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                                 .background(Color(WgcCoreDsColors.orangeLight12))
-                                .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                                .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                         ) {
                             Text(
                                 text = "Cliente Mais",
@@ -251,13 +251,13 @@ fun WgcWineStoreCard(
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                             .background(Color(WgcCoreDsColors.pinkLight3))
-                            .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                            .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                     ) {
                         IconButton(
                             onClick = { onQuantityChange(quantityInCart - 1) },
-                            modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Remove,
@@ -269,11 +269,11 @@ fun WgcWineStoreCard(
                             text = quantityInCart.toString(),
                             color = Color(WgcCoreDsColors.pink1),
                             fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
+                            modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XS8.dp)
                         )
                         IconButton(
                             onClick = { onQuantityChange(quantityInCart + 1) },
-                            modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Add,

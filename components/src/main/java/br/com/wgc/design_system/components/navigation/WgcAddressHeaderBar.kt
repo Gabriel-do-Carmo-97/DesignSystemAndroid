@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
@@ -33,8 +33,8 @@ fun WgcAddressHeaderBar(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),

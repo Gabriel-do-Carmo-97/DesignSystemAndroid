@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -45,9 +45,9 @@ fun WgcSegmentedControl(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.pill.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.PILL.dp))
             .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(WgcCoreDsSpacing.xxs.dp)
+            .padding(WgcCoreDsSpacing.XXS.dp)
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {
             items.forEachIndexed { index, title ->
@@ -64,10 +64,10 @@ fun WgcSegmentedControl(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.pill.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.PILL.dp))
                         .background(backgroundColor)
                         .clickable { onItemSelected(index) }
-                        .padding(vertical = WgcCoreDsSpacing.sm.dp),
+                        .padding(vertical = WgcCoreDsSpacing.SM.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -87,7 +87,7 @@ fun WgcSegmentedControl(
 @Composable
 private fun WgcSegmentedControlPreview() {
     WgcTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcSegmentedControl(
                 items = listOf("Visão Geral", "Extrato", "Investimentos"),
                 selectedIndex = 0,

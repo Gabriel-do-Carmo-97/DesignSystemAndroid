@@ -25,11 +25,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -43,29 +43,29 @@ fun WgcTravelStayCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp)) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s120.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .height(WgcCoreDsSize.S120.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color.LightGray)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.yellow4),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
-                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XXS4.dp))
                 Text(
                     text = "$rating • $location",
                     fontSize = 14.sp,
@@ -79,7 +79,7 @@ fun WgcTravelStayCard(
                 fontWeight = FontWeight.Bold
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -105,7 +105,7 @@ fun WgcTravelStayCard(
 @Preview(name = "WgcTravelStayCard Preview", showBackground = true)
 @Composable
 private fun WgcTravelStayCardPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
         WgcTravelStayCard(
             title = "Resort & Spa Beira Mar",
             location = "Florianópolis, SC",

@@ -22,8 +22,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -42,12 +42,12 @@ fun WgcStatWidget(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
         ) {
             Text(
                 text = title,
@@ -64,7 +64,7 @@ fun WgcStatWidget(
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS.dp)
             ) {
                 Icon(
                     imageVector = if (isPositiveDelta) Icons.Default.TrendingUp else Icons.Default.TrendingDown,
@@ -88,7 +88,7 @@ fun WgcStatWidget(
 @Composable
 private fun WgcStatWidgetPositivePreview() {
     WgcTheme {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcStatWidget(
                 title = "Receita Total",
                 value = "R$ 45.890,00",
@@ -103,7 +103,7 @@ private fun WgcStatWidgetPositivePreview() {
 @Composable
 private fun WgcStatWidgetNegativePreview() {
     WgcTheme {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcStatWidget(
                 title = "Custos Operacionais",
                 value = "R$ 12.450,00",

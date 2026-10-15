@@ -27,9 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 import br.com.wgc.design_system.components.stepper.WgcRetailQuantityStepper
 
@@ -54,7 +54,7 @@ fun WgcRetailCartItemRow(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = WgcCoreDsSpacing.sm.dp),
+                .padding(vertical = WgcCoreDsSpacing.SM.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Checkbox(
@@ -66,13 +66,13 @@ fun WgcRetailCartItemRow(
                 )
             )
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS.dp))
 
             // Imagem do produto
             Box(
                 modifier = Modifier
                     .size(80.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG.dp))
                     .background(Color(WgcCoreDsColors.blueLight39)),
                 contentAlignment = Alignment.Center
             ) {
@@ -99,12 +99,12 @@ fun WgcRetailCartItemRow(
                 }
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM.dp))
 
             // Conteúdo e Stepper
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS.dp)
             ) {
                 Text(
                     text = title,

@@ -28,14 +28,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card promocional de "Oferta do Dia" com contagem regressiva integrada (WgcDealOfTheDayCard).
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcDealOfTheDayCard(
     modifier: Modifier = Modifier,
     title: String = "Deal of the Day",
@@ -44,7 +45,7 @@ fun WgcDealOfTheDayCard(
     backgroundColor: Color = Color(WgcCoreDsColors.blue42),
     onViewAllClick: () -> Unit
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -54,7 +55,7 @@ fun WgcDealOfTheDayCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
+                .padding(WgcCoreDsSpacing.MD.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -64,7 +65,7 @@ fun WgcDealOfTheDayCard(
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                     color = Color.White
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
                         imageVector = Icons.Outlined.Schedule,
@@ -72,7 +73,7 @@ fun WgcDealOfTheDayCard(
                         tint = Color.White.copy(alpha = 0.85f),
                         modifier = Modifier.size(16.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS.dp))
                     Text(
                         text = remainingTime,
                         style = MaterialTheme.typography.bodySmall,
@@ -82,16 +83,16 @@ fun WgcDealOfTheDayCard(
             }
 
             Surface(
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM.dp),
                 color = Color.White.copy(alpha = 0.2f),
                 modifier = Modifier
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM.dp))
                     .clickable(onClick = onViewAllClick)
             ) {
                 Row(
                     modifier = Modifier.padding(
-                        horizontal = WgcCoreDsSpacing.sm.dp,
-                        vertical = WgcCoreDsSpacing.xs.dp
+                        horizontal = WgcCoreDsSpacing.SM.dp,
+                        vertical = WgcCoreDsSpacing.XS.dp
                     ),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -100,7 +101,7 @@ fun WgcDealOfTheDayCard(
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                         color = Color.White
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS.dp))
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = null,
@@ -116,7 +117,7 @@ fun WgcDealOfTheDayCard(
 @Preview(name = "Deal of the Day Card Preview", showBackground = true)
 @Composable
 private fun WgcDealOfTheDayCardPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcDealOfTheDayCard(
             onViewAllClick = {}
         )

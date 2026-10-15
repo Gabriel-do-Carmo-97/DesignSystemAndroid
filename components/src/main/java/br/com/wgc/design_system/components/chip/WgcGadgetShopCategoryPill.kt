@@ -18,9 +18,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Pílula de categoria do ecossistema Nexkart (WgcGadgetShopCategoryPill).
@@ -37,12 +37,12 @@ fun WgcGadgetShopCategoryPill(
 ) {
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
             .background(
                 if (isSelected) Color(WgcCoreDsColors.blue39) else backgroundColor
             )
             .clickable(onClick = onClick)
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(

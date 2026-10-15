@@ -28,7 +28,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.min
@@ -70,7 +70,7 @@ fun WgcColorWheel(
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         Canvas(
             modifier = Modifier
@@ -165,8 +165,8 @@ fun WgcColorWheel(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = WgcCoreDsSpacing.sm12.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    .padding(horizontal = WgcCoreDsSpacing.SM12.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -229,7 +229,7 @@ private fun WgcColorWheelPreview() {
             saturation = 0.8f,
             value = 0.9f,
             onHsvChange = { _, _, _ -> },
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
         )
     }
 }

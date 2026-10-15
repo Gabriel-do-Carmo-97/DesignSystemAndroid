@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -78,19 +78,19 @@ private fun WgcPullToRefreshBoxPreview() {
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(WgcCoreDsSpacing.md16.dp)
+                        .padding(WgcCoreDsSpacing.MD16.dp)
                 ) {
                     items(5) { index ->
                         Surface(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(vertical = WgcCoreDsSpacing.xxs4.dp),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                                .padding(vertical = WgcCoreDsSpacing.XXS4.dp),
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
                             color = MaterialTheme.colorScheme.surfaceVariant
                         ) {
                             Text(
                                 text = "Item de teste #$index",
-                                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                                modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }

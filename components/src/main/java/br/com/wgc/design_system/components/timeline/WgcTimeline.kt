@@ -29,7 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Estado de cada etapa da linha do tempo.
@@ -112,13 +112,13 @@ private fun WgcTimelineRow(
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Conteúdo textual da etapa
         Column(
             modifier = Modifier
                 .weight(1f)
-                .padding(bottom = if (isLast) 0.dp else WgcCoreDsSpacing.md16.dp)
+                .padding(bottom = if (isLast) 0.dp else WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -146,7 +146,7 @@ private fun WgcTimelineRow(
             }
 
             if (!item.description.isNullOrBlank()) {
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                 Text(
                     text = item.description,
                     style = MaterialTheme.typography.bodySmall,

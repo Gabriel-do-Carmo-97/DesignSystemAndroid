@@ -22,8 +22,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.theme.WgcTheme
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de mídia rica com suporte a banner de imagem/vídeo, tags contextuais e rodapé de autor.
@@ -43,7 +43,7 @@ fun WgcRichMediaCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
@@ -53,7 +53,7 @@ fun WgcRichMediaCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(180.dp)
-                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.md8.dp, topEnd = WgcCoreDsBorderRadius.md8.dp))
+                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.MD8.dp, topEnd = WgcCoreDsBorderRadius.MD8.dp))
             ) {
                 mediaSlot()
             }
@@ -61,7 +61,7 @@ fun WgcRichMediaCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp)
+                    .padding(WgcCoreDsSpacing.MD16.dp)
             ) {
                 if (tag != null) {
                     Text(
@@ -69,7 +69,7 @@ fun WgcRichMediaCard(
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(bottom = WgcCoreDsSpacing.xxs4.dp)
+                        modifier = Modifier.padding(bottom = WgcCoreDsSpacing.XXS4.dp)
                     )
                 }
 
@@ -88,11 +88,11 @@ fun WgcRichMediaCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 3,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(top = WgcCoreDsSpacing.xxs4.dp)
+                    modifier = Modifier.padding(top = WgcCoreDsSpacing.XXS4.dp)
                 )
 
                 if (author != null) {
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm8.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM8.dp))
                     Text(
                         text = "Por $author",
                         style = MaterialTheme.typography.bodySmall,
@@ -108,7 +108,7 @@ fun WgcRichMediaCard(
 @Composable
 private fun WgcRichMediaCardPreview() {
     WgcTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcRichMediaCard(
                 title = "Explorando as Novidades do Jetpack Compose no Android",
                 subtitle = "Descubra como os novos recursos de UI declarativa facilitam o desenvolvimento de aplicativos modernos e responsivos.",

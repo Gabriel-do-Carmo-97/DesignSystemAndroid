@@ -26,8 +26,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -61,15 +61,15 @@ fun WgcPrivacyConsentDialog(
         modifier = modifier
     ) {
         Surface(
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
             color = MaterialTheme.colorScheme.surface,
             tonalElevation = 6.dp
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.lg.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
+                    .padding(WgcCoreDsSpacing.LG.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp)
             ) {
                 Text(
                     text = "Privacidade e Proteção de Dados",
@@ -116,7 +116,7 @@ fun WgcPrivacyConsentDialog(
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
                 ) {
                     WgcClassicButton(
                         text = "Aceitar Todos",

@@ -26,8 +26,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Variantes suportadas pelo WgcButton.
@@ -96,7 +96,7 @@ enum class WgcButtonSize(
      */
     Small(
         minHeight = 36.dp,
-        horizontalPadding = WgcCoreDsSpacing.sm12.dp,
+        horizontalPadding = WgcCoreDsSpacing.SM12.dp,
         fontSize = 12.sp,
         indicatorSize = 16.dp
     ),
@@ -107,7 +107,7 @@ enum class WgcButtonSize(
      */
     Medium(
         minHeight = 56.dp,
-        horizontalPadding = WgcCoreDsSpacing.md16.dp,
+        horizontalPadding = WgcCoreDsSpacing.MD16.dp,
         fontSize = 14.sp,
         indicatorSize = 24.dp
     ),
@@ -118,7 +118,7 @@ enum class WgcButtonSize(
      */
     Large(
         minHeight = 64.dp,
-        horizontalPadding = WgcCoreDsSpacing.lg24.dp,
+        horizontalPadding = WgcCoreDsSpacing.LG24.dp,
         fontSize = 16.sp,
         indicatorSize = 28.dp
     )
@@ -187,7 +187,7 @@ fun WgcButton(
     leadingIcon: (@Composable () -> Unit)? = null,
     trailingIcon: (@Composable () -> Unit)? = null
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
     val buttonModifier = modifier
         .fillMaxWidth()
         .heightIn(min = size.minHeight)
@@ -208,7 +208,7 @@ fun WgcButton(
             )
         } else {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(horizontal = size.horizontalPadding)
             ) {
@@ -307,8 +307,8 @@ fun WgcButton(
 private fun WgcButtonVariantsPreview() {
     MaterialTheme {
         androidx.compose.foundation.layout.Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             WgcButton(text = "Primary (Default)")
             WgcButton(text = "Secondary", variant = WgcButtonVariant.Secondary)

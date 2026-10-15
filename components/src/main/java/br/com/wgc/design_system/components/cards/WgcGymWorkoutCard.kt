@@ -29,11 +29,11 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Exercício de Treino do Gym & Fitness Design System.
@@ -73,23 +73,23 @@ fun WgcGymWorkoutCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(enabled = onClick != null) { onClick?.invoke() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(containerColor = cardBackground),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, borderColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        border = BorderStroke(WgcCoreDsSize.S1.dp, borderColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Ícone circular com estado visual
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .size(WgcCoreDsSize.S48.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(
                         if (isCompleted) Color(WgcCoreDsColors.green17).copy(alpha = 0.2f)
                         else Color(WgcCoreDsColors.grayDark21)
@@ -101,18 +101,18 @@ fun WgcGymWorkoutCard(
                     contentDescription = null,
                     tint = if (isCompleted) Color(WgcCoreDsColors.green17)
                     else Color(WgcCoreDsColors.orange23),
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
 
             // Informações do exercício
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Text(
                         text = exerciseName,
@@ -134,8 +134,8 @@ fun WgcGymWorkoutCard(
                 // Séries, peso e descanso
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp),
-                    modifier = Modifier.padding(top = WgcCoreDsSpacing.xxs4.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp),
+                    modifier = Modifier.padding(top = WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Text(
                         text = setsAndReps,
@@ -145,7 +145,7 @@ fun WgcGymWorkoutCard(
 
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp),
                         modifier = Modifier.clickable(enabled = onEditWeight != null) {
                             onEditWeight?.invoke()
                         }
@@ -160,13 +160,13 @@ fun WgcGymWorkoutCard(
 
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Timer,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.gray16),
-                            modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                         )
                         Text(
                             text = "${restSeconds}s",
@@ -183,8 +183,8 @@ fun WgcGymWorkoutCard(
             } else {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s36.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .size(WgcCoreDsSize.S36.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(
                             if (isCompleted) Color(WgcCoreDsColors.green17)
                             else Color(WgcCoreDsColors.gray1).copy(alpha = 0.3f)
@@ -199,7 +199,7 @@ fun WgcGymWorkoutCard(
                             imageVector = Icons.Default.Check,
                             contentDescription = "Exercício Concluído",
                             tint = Color(WgcCoreDsColors.black),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
                 }

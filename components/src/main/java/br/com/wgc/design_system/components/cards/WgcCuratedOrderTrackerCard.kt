@@ -28,10 +28,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -55,14 +55,14 @@ fun WgcCuratedOrderTrackerCard(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
             .background(Color.White)
             .border(
-                width = WgcCoreDsSpacing.xxxs2.dp,
+                width = WgcCoreDsSpacing.XXXS2.dp,
                 color = Color(WgcCoreDsColors.blueLight26),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp)
             )
-            .padding(WgcCoreDsSpacing.lg24.dp)
+            .padding(WgcCoreDsSpacing.LG24.dp)
     ) {
         // Linha de Progresso / Stepper
         Row(
@@ -76,7 +76,7 @@ fun WgcCuratedOrderTrackerCard(
                 // Ponto do Stepper
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s12.dp)
+                        .size(WgcCoreDsSize.S12.dp)
                         .clip(CircleShape)
                         .background(
                             if (isCompleted) Color(WgcCoreDsColors.blue37)
@@ -90,7 +90,7 @@ fun WgcCuratedOrderTrackerCard(
                     Box(
                         modifier = Modifier
                             .weight(1f)
-                            .height(WgcCoreDsSpacing.xxxs2.dp)
+                            .height(WgcCoreDsSpacing.XXXS2.dp)
                             .background(
                                 if (lineActive) Color(WgcCoreDsColors.blue37)
                                 else Color(WgcCoreDsColors.blueLight5)
@@ -100,7 +100,7 @@ fun WgcCuratedOrderTrackerCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
 
         // Status & Estimativa de Chegada
         Text(
@@ -110,7 +110,7 @@ fun WgcCuratedOrderTrackerCard(
             color = Color(WgcCoreDsColors.grayDark9)
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = arrivalEstimate,
@@ -118,21 +118,21 @@ fun WgcCuratedOrderTrackerCard(
             color = Color(WgcCoreDsColors.gray10)
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
 
         // Resumo do Produto Comprado
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                 .background(Color(WgcCoreDsColors.blueLight26))
-                .padding(WgcCoreDsSpacing.sm12.dp),
+                .padding(WgcCoreDsSpacing.SM12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                    .size(WgcCoreDsSize.S48.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                     .background(Color.White),
                 contentAlignment = Alignment.Center
             ) {
@@ -152,7 +152,7 @@ fun WgcCuratedOrderTrackerCard(
                 }
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -161,7 +161,7 @@ fun WgcCuratedOrderTrackerCard(
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.grayDark9)
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
                 Text(
                     text = productDetails,
                     style = MaterialTheme.typography.labelSmall,
@@ -170,15 +170,15 @@ fun WgcCuratedOrderTrackerCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
 
         // Botões de Ação
         OutlinedButton(
             onClick = onMoreInfoClick,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s48.dp),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                .height(WgcCoreDsSize.S48.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
         ) {
             Text(
                 text = "More info",
@@ -188,14 +188,14 @@ fun WgcCuratedOrderTrackerCard(
             )
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         Button(
             onClick = onCancelOrderClick,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s48.dp),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                .height(WgcCoreDsSize.S48.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(WgcCoreDsColors.blueLight26))
         ) {

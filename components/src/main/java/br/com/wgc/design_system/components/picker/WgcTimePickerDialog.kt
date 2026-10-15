@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -43,7 +43,7 @@ fun WgcTimePickerDialog(
         onDismissRequest = onDismiss,
         title = { Text(text = "Selecionar Horário") },
         text = {
-            Column(modifier = Modifier.padding(top = WgcCoreDsSpacing.sm8.dp)) {
+            Column(modifier = Modifier.padding(top = WgcCoreDsSpacing.SM8.dp)) {
                 TimePicker(state = state)
             }
         },

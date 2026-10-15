@@ -21,8 +21,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
@@ -116,7 +116,7 @@ fun WgcStoryAvatar(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = userName,
@@ -142,8 +142,8 @@ fun WgcStoryTray(
 ) {
     LazyRow(
         modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         items(stories, key = { it.id }) { story ->
             WgcStoryAvatar(

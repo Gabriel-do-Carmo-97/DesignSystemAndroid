@@ -17,10 +17,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcFintechPixActionItem(
@@ -32,11 +32,11 @@ fun WgcFintechPixActionItem(
     Column(
         modifier = modifier.clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s60.dp)
+                .size(WgcCoreDsSize.S60.dp)
                 .clip(CircleShape)
                 .background(Color(WgcCoreDsColors.gray100)),
             contentAlignment = Alignment.Center
@@ -45,7 +45,7 @@ fun WgcFintechPixActionItem(
                 imageVector = icon,
                 contentDescription = label,
                 tint = Color.Black,
-                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
             )
         }
         Text(
@@ -67,20 +67,20 @@ fun WgcFintechCreditCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.s2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.S2.dp)
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)) {
                     Icon(Icons.Default.CreditCard, contentDescription = null, tint = Color(WgcCoreDsColors.purple3))
                     Text("Cartão de Crédito", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
@@ -93,7 +93,7 @@ fun WgcFintechCreditCard(
             Button(
                 onClick = onPayInvoiceClick,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.purple3)),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
             ) {
                 Text("Pagar Fatura", fontWeight = FontWeight.Bold, color = Color.White)
             }
@@ -111,13 +111,13 @@ fun WgcFintechSavingsBoxCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.s2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.S2.dp)
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -131,7 +131,7 @@ fun WgcFintechSavingsBoxCard(
             val progress = (currentAmount / targetAmount).toFloat().coerceIn(0f, 1f)
             LinearProgressIndicator(
                 progress = { progress },
-                modifier = Modifier.fillMaxWidth().height(WgcCoreDsSize.s8.dp).clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)),
+                modifier = Modifier.fillMaxWidth().height(WgcCoreDsSize.S8.dp).clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)),
                 color = Color(WgcCoreDsColors.purple3),
                 trackColor = Color(WgcCoreDsColors.grayLight7)
             )

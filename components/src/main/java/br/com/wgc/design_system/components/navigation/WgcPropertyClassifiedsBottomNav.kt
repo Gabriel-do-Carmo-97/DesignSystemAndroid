@@ -31,10 +31,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Destinos da barra de navegação do Zap Imóveis.
@@ -66,7 +66,7 @@ fun WgcPropertyClassifiedsBottomNav(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = WgcCoreDsSpacing.xs8.dp),
+                .padding(vertical = WgcCoreDsSpacing.XS8.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -82,16 +82,16 @@ fun WgcPropertyClassifiedsBottomNav(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier
                         .clickable { onDestinationSelect(destination) }
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.SM12.dp)
                 ) {
                     Icon(
                         imageVector = destination.icon,
                         contentDescription = destination.label,
                         tint = itemColor,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
 
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
                     Text(
                         text = destination.label,
@@ -100,18 +100,18 @@ fun WgcPropertyClassifiedsBottomNav(
                         color = itemColor
                     )
 
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
                     // Indicador inferior ativo em Azul Zap
                     if (isSelected) {
                         Box(
                             modifier = Modifier
-                                .size(width = WgcCoreDsSize.s24.dp, height = WgcCoreDsSize.s4.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                                .size(width = WgcCoreDsSize.S24.dp, height = WgcCoreDsSize.S4.dp)
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                                 .background(Color(WgcCoreDsColors.blueDark31))
                         )
                     } else {
-                        Box(modifier = Modifier.height(WgcCoreDsSize.s4.dp))
+                        Box(modifier = Modifier.height(WgcCoreDsSize.S4.dp))
                     }
                 }
             }

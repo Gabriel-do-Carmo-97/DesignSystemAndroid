@@ -35,9 +35,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import coil3.compose.AsyncImage
 
 /**
@@ -62,7 +62,7 @@ fun WgcMegaStoreProductCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
@@ -71,7 +71,7 @@ fun WgcMegaStoreProductCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(0.85f)
-                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.md.dp, topEnd = WgcCoreDsBorderRadius.md.dp))
+                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.MD.dp, topEnd = WgcCoreDsBorderRadius.MD.dp))
                     .background(Color(WgcCoreDsColors.gray100))
             ) {
                 AsyncImage(
@@ -85,10 +85,10 @@ fun WgcMegaStoreProductCard(
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopStart)
-                            .padding(WgcCoreDsSpacing.sm.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
+                            .padding(WgcCoreDsSpacing.SM.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
                             .background(Color(WgcCoreDsColors.blue28))
-                            .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = WgcCoreDsSpacing.xxs.dp)
+                            .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = WgcCoreDsSpacing.XXS.dp)
                     ) {
                         Text(
                             text = "-$discountPercent%",
@@ -103,7 +103,7 @@ fun WgcMegaStoreProductCard(
                     onClick = onFavoriteToggle,
                     modifier = Modifier
                         .align(Alignment.TopEnd)
-                        .padding(WgcCoreDsSpacing.xs.dp)
+                        .padding(WgcCoreDsSpacing.XS.dp)
                         .size(32.dp)
                         .clip(CircleShape)
                         .background(Color.White.copy(alpha = 0.85f))
@@ -120,7 +120,7 @@ fun WgcMegaStoreProductCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.sm.dp)
+                    .padding(WgcCoreDsSpacing.SM.dp)
             ) {
                 Text(
                     text = category.uppercase(),
@@ -129,7 +129,7 @@ fun WgcMegaStoreProductCard(
                     fontSize = 10.sp
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
                 Text(
                     text = title,
@@ -139,7 +139,7 @@ fun WgcMegaStoreProductCard(
                     overflow = TextOverflow.Ellipsis
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -152,7 +152,7 @@ fun WgcMegaStoreProductCard(
                     )
 
                     if (!originalPrice.isNullOrBlank()) {
-                        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs.dp))
+                        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XS.dp))
                         Text(
                             text = originalPrice,
                             style = MaterialTheme.typography.bodySmall.copy(textDecoration = TextDecoration.LineThrough),

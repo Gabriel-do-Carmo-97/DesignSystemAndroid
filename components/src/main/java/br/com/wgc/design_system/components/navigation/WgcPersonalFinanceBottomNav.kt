@@ -32,9 +32,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 enum class WgcOrganizzeNavItem(
     val title: String,
@@ -63,14 +63,14 @@ fun WgcPersonalFinanceBottomNav(
         Surface(
             modifier = Modifier.fillMaxWidth(),
             color = Color.White,
-            shadowElevation = WgcCoreDsSpacing.xs8.dp
+            shadowElevation = WgcCoreDsSpacing.XS8.dp
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(
-                        horizontal = WgcCoreDsSpacing.md16.dp,
-                        vertical = WgcCoreDsSpacing.xs8.dp
+                        horizontal = WgcCoreDsSpacing.MD16.dp,
+                        vertical = WgcCoreDsSpacing.XS8.dp
                     ),
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
@@ -90,7 +90,7 @@ fun WgcPersonalFinanceBottomNav(
                 )
 
                 // Espaço para o FAB Central
-                Box(modifier = Modifier.size(WgcCoreDsSize.s48.dp))
+                Box(modifier = Modifier.size(WgcCoreDsSize.S48.dp))
 
                 // Item 3: Relatórios
                 NavItemButton(
@@ -111,9 +111,9 @@ fun WgcPersonalFinanceBottomNav(
         // FAB Central Elevado "+"
         Box(
             modifier = Modifier
-                .offset(y = (-WgcCoreDsSpacing.md16).dp)
-                .size(WgcCoreDsSize.s56.dp)
-                .shadow(elevation = WgcCoreDsSpacing.xs8.dp, shape = CircleShape)
+                .offset(y = (-WgcCoreDsSpacing.MD16).dp)
+                .size(WgcCoreDsSize.S56.dp)
+                .shadow(elevation = WgcCoreDsSpacing.XS8.dp, shape = CircleShape)
                 .clip(CircleShape)
                 .background(Color(WgcCoreDsColors.cyan3))
                 .clickable(onClick = onAddClick),
@@ -123,7 +123,7 @@ fun WgcPersonalFinanceBottomNav(
                 imageVector = Icons.Default.Add,
                 contentDescription = "Novo lançamento",
                 tint = Color.White,
-                modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
+                modifier = Modifier.size(WgcCoreDsSpacing.XL32.dp)
             )
         }
     }
@@ -145,13 +145,13 @@ private fun NavItemButton(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xxs4.dp)
+            .padding(WgcCoreDsSpacing.XXS4.dp)
     ) {
         Icon(
             imageVector = item.icon,
             contentDescription = item.title,
             tint = tint,
-            modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
+            modifier = Modifier.size(WgcCoreDsSpacing.LG24.dp)
         )
         Text(
             text = item.title,

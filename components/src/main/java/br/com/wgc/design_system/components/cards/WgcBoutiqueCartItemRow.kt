@@ -32,10 +32,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -58,17 +58,17 @@ fun WgcBoutiqueCartItemRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .background(Color(WgcCoreDsColors.blueLight32))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp),
+            .padding(WgcCoreDsSpacing.SM12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Thumbnail do produto
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s100.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .size(WgcCoreDsSize.S100.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
@@ -88,12 +88,12 @@ fun WgcBoutiqueCartItemRow(
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Informações centrais
         Column(
             modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
         ) {
             Text(
                 text = title,
@@ -113,7 +113,7 @@ fun WgcBoutiqueCartItemRow(
                 )
 
                 if (!taxInfo.isNullOrEmpty()) {
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = taxInfo,
                         style = MaterialTheme.typography.labelSmall,
@@ -122,17 +122,17 @@ fun WgcBoutiqueCartItemRow(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             // Controles de quantidade (setas up/down)
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
             ) {
                 // Diminuir
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s28.dp)
+                        .size(WgcCoreDsSize.S28.dp)
                         .clip(CircleShape)
                         .background(Color.White)
                         .clickable(enabled = quantity > 1, onClick = onDecreaseQuantity),
@@ -142,7 +142,7 @@ fun WgcBoutiqueCartItemRow(
                         imageVector = Icons.Default.KeyboardArrowDown,
                         contentDescription = "Diminuir",
                         tint = Color(WgcCoreDsColors.grayDark13),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                 }
 
@@ -156,7 +156,7 @@ fun WgcBoutiqueCartItemRow(
                 // Aumentar
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s28.dp)
+                        .size(WgcCoreDsSize.S28.dp)
                         .clip(CircleShape)
                         .background(Color.White)
                         .clickable(onClick = onIncreaseQuantity),
@@ -166,7 +166,7 @@ fun WgcBoutiqueCartItemRow(
                         imageVector = Icons.Default.KeyboardArrowUp,
                         contentDescription = "Aumentar",
                         tint = Color(WgcCoreDsColors.grayDark13),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                 }
             }
@@ -176,7 +176,7 @@ fun WgcBoutiqueCartItemRow(
         IconButton(
             onClick = onDeleteClick,
             modifier = Modifier
-                .size(WgcCoreDsSize.s36.dp)
+                .size(WgcCoreDsSize.S36.dp)
                 .clip(CircleShape)
                 .background(Color.White)
         ) {
@@ -184,7 +184,7 @@ fun WgcBoutiqueCartItemRow(
                 imageVector = Icons.Default.DeleteOutline,
                 contentDescription = "Remover item",
                 tint = Color(WgcCoreDsColors.gray13),
-                modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                modifier = Modifier.size(WgcCoreDsSize.S18.dp)
             )
         }
     }

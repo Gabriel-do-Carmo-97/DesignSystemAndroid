@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -47,21 +47,21 @@ fun WgcHealthInsuranceCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueLight19)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight3))
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL0.dp),
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.blueLight3))
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s40.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .size(WgcCoreDsSize.S40.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color(WgcCoreDsColors.blue7)),
                 contentAlignment = Alignment.Center
             ) {
@@ -69,11 +69,11 @@ fun WgcHealthInsuranceCard(
                     imageVector = Icons.Default.Badge,
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.white),
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -83,13 +83,13 @@ fun WgcHealthInsuranceCard(
                         fontWeight = FontWeight.Bold,
                         color = Color(WgcCoreDsColors.blueDark29)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     if (isLinked) {
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = "Vinculado",
                             tint = Color(WgcCoreDsColors.green10),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                     }
                 }

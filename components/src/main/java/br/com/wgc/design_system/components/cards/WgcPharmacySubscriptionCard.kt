@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import java.util.Locale
 
@@ -49,15 +49,15 @@ fun WgcPharmacySubscriptionCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight8))
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.blueLight8))
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -67,8 +67,8 @@ fun WgcPharmacySubscriptionCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                            .size(WgcCoreDsSize.S36.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                             .background(Color(WgcCoreDsColors.greenLight6)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -76,10 +76,10 @@ fun WgcPharmacySubscriptionCard(
                             imageVector = Icons.Default.EventRepeat,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.green3),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Column {
                         Text(
                             text = "Assinatura Ativa",
@@ -104,7 +104,7 @@ fun WgcPharmacySubscriptionCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -114,9 +114,9 @@ fun WgcPharmacySubscriptionCard(
                     imageVector = Icons.Default.CalendarToday,
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.blue20),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                 Text(
                     text = "Frequência: $dosageFrequency",
                     fontSize = 14.sp,
@@ -131,7 +131,7 @@ fun WgcPharmacySubscriptionCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             WgcClassicButton(
                 textButton = "Gerenciar Assinatura",

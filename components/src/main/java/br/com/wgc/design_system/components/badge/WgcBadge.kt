@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -122,8 +122,8 @@ private fun WgcBadgePreview() {
     MaterialTheme {
         Surface(color = MaterialTheme.colorScheme.background) {
             Row(
-                modifier = Modifier.padding(WgcCoreDsSpacing.lg24.dp),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.lg24.dp),
+                modifier = Modifier.padding(WgcCoreDsSpacing.LG24.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.LG24.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // Dot badge

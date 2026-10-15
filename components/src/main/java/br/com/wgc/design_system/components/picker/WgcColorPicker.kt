@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -55,7 +55,7 @@ fun WgcColorPicker(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -77,8 +77,8 @@ fun WgcColorPicker(
         }
 
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp)
         ) {
             colorsPalette.forEach { color ->
                 val isSelected = color == selectedColor

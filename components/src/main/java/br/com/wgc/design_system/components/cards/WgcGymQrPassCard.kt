@@ -30,11 +30,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Cartão Virtual de Acesso e Catraca Gym & Fitness (Digital Pass).
@@ -59,19 +59,19 @@ fun WgcGymQrPassCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(WgcCoreDsColors.grayDark7)
         ),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.orange23)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level6.dp)
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.orange23)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL6.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Cabeçalho da carteirinha
             Row(
@@ -103,22 +103,22 @@ fun WgcGymQrPassCard(
                 // Badge do Plano Black
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(Color(WgcCoreDsColors.orange23))
                         .padding(
-                            horizontal = WgcCoreDsSpacing.sm12.dp,
-                            vertical = WgcCoreDsSpacing.xxs4.dp
+                            horizontal = WgcCoreDsSpacing.SM12.dp,
+                            vertical = WgcCoreDsSpacing.XXS4.dp
                         )
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.black),
-                            modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                         )
                         Text(
                             text = planTitle.uppercase(),
@@ -133,10 +133,10 @@ fun WgcGymQrPassCard(
             // Bloco central do QR Code
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s180.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                    .size(WgcCoreDsSize.S180.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                     .background(Color.White)
-                    .padding(WgcCoreDsSpacing.md16.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Column(
@@ -147,7 +147,7 @@ fun WgcGymQrPassCard(
                         imageVector = Icons.Default.QrCode,
                         contentDescription = "QR Code Catraca",
                         tint = Color.Black,
-                        modifier = Modifier.size(WgcCoreDsSize.s140.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S140.dp)
                     )
                 }
             }
@@ -163,7 +163,7 @@ fun WgcGymQrPassCard(
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.gray16),
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s16.dp)
+                        .size(WgcCoreDsSize.S16.dp)
                         .clickable(enabled = onRefreshCode != null) { onRefreshCode?.invoke() }
                 )
                 Text(
@@ -180,21 +180,21 @@ fun WgcGymQrPassCard(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s48.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .height(WgcCoreDsSize.S48.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(Color(WgcCoreDsColors.orange23))
                         .clickable { onCheckInClick() },
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Lock,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.black),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                         Text(
                             text = "LIBERAR CATRACA AGORA",

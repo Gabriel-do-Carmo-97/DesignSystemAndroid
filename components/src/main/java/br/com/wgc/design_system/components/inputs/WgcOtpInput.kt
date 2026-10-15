@@ -29,8 +29,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente corporativo para entrada de código PIN ou OTP (One-Time Password) de 4 ou 6 dígitos.
@@ -78,7 +78,7 @@ fun WgcOtpInput(
             decorationBox = {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp, Alignment.CenterHorizontally),
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp, Alignment.CenterHorizontally),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     repeat(length) { index ->
@@ -96,7 +96,7 @@ fun WgcOtpInput(
         )
 
         if (isError && !errorMessage.isNullOrBlank()) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
             Text(
                 text = errorMessage,
                 style = MaterialTheme.typography.bodySmall,
@@ -122,7 +122,7 @@ private fun WgcOtpCell(
         else -> MaterialTheme.colorScheme.outlineVariant
     }
 
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
 
     Surface(
         modifier = Modifier

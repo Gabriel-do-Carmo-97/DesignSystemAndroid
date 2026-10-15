@@ -32,9 +32,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -57,17 +57,17 @@ fun WgcGadgetShopCartItemRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
             .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp),
+            .padding(WgcCoreDsSpacing.SM12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Thumbnail do produto
         Box(
             modifier = Modifier
                 .size(72.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
@@ -87,7 +87,7 @@ fun WgcGadgetShopCartItemRow(
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Dados do produto
         Column(
@@ -102,7 +102,7 @@ fun WgcGadgetShopCartItemRow(
                 overflow = TextOverflow.Ellipsis
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
 
             Text(
                 text = subtitle,
@@ -112,7 +112,7 @@ fun WgcGadgetShopCartItemRow(
                 overflow = TextOverflow.Ellipsis
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
             Text(
                 text = price,
@@ -122,12 +122,12 @@ fun WgcGadgetShopCartItemRow(
             )
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
 
         // Controles de quantidade e exclusão
         Column(
             horizontalAlignment = Alignment.End,
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
         ) {
             IconButton(
                 onClick = onRemoveClick,
@@ -143,7 +143,7 @@ fun WgcGadgetShopCartItemRow(
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Box(
                     modifier = Modifier
@@ -166,7 +166,7 @@ fun WgcGadgetShopCartItemRow(
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = Color(WgcCoreDsColors.blueDark6),
-                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xxs4.dp)
+                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XXS4.dp)
                 )
 
                 Box(

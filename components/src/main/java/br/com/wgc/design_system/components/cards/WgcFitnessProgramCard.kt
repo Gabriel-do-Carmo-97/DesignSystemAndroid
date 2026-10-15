@@ -30,11 +30,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcFitnessProgramCard(
@@ -54,17 +54,17 @@ fun WgcFitnessProgramCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(WgcCoreDsColors.grayDark11)
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -73,7 +73,7 @@ fun WgcFitnessProgramCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(
                             if (isEnrolled) {
                                 Color(WgcCoreDsColors.green28).copy(alpha = 0.18f)
@@ -82,15 +82,15 @@ fun WgcFitnessProgramCard(
                             }
                         )
                         .border(
-                            width = WgcCoreDsSize.s1.dp,
+                            width = WgcCoreDsSize.S1.dp,
                             color = if (isEnrolled) {
                                 Color(WgcCoreDsColors.green28).copy(alpha = 0.5f)
                             } else {
                                 Color(WgcCoreDsColors.grayDark23)
                             },
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)
                         )
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = if (isEnrolled) "EM ANDAMENTO • SEMANA $currentWeek DE $totalWeeks" else "PROGRAMA • $totalWeeks SEMANAS",
@@ -102,13 +102,13 @@ fun WgcFitnessProgramCard(
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.FitnessCenter,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.grayDark23),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                     Text(
                         text = "$totalWorkouts treinos",
@@ -118,7 +118,7 @@ fun WgcFitnessProgramCard(
                 }
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
                 Text(
                     text = title,
                     color = Color(WgcCoreDsColors.white),
@@ -139,7 +139,7 @@ fun WgcFitnessProgramCard(
             }
 
             if (isEnrolled) {
-                Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
@@ -160,8 +160,8 @@ fun WgcFitnessProgramCard(
                         progress = { if (totalWorkouts > 0) completedWorkouts.toFloat() / totalWorkouts.toFloat() else 0f },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(WgcCoreDsSize.s8.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
+                            .height(WgcCoreDsSize.S8.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
                         color = Color(WgcCoreDsColors.green28),
                         trackColor = Color(WgcCoreDsColors.grayDark20)
                     )
@@ -174,7 +174,7 @@ fun WgcFitnessProgramCard(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isEnrolled) Color(WgcCoreDsColors.grayDark20) else Color(WgcCoreDsColors.green28)
                 ),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
             ) {
                 Text(
                     text = if (isEnrolled) "Continuar Programa" else "Iniciar Programa",

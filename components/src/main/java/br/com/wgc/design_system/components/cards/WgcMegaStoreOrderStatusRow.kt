@@ -34,9 +34,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Item de status de pedido do Shoppe.
@@ -65,14 +65,14 @@ fun WgcMegaStoreOrderStatusRow(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = WgcCoreDsSpacing.md.dp, horizontal = WgcCoreDsSpacing.xs.dp),
+                .padding(vertical = WgcCoreDsSpacing.MD.dp, horizontal = WgcCoreDsSpacing.XS.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -82,7 +82,7 @@ fun WgcMegaStoreOrderStatusRow(
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier
                         .clickable(onClick = item.onClick)
-                        .padding(WgcCoreDsSpacing.xxs.dp)
+                        .padding(WgcCoreDsSpacing.XXS.dp)
                 ) {
                     Box {
                         Icon(
@@ -110,7 +110,7 @@ fun WgcMegaStoreOrderStatusRow(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                     Text(
                         text = item.title,

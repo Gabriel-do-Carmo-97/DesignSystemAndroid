@@ -22,8 +22,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Seletor de quantidade no estilo Clothee (WgcApparelQuantityStepper).
@@ -40,7 +40,7 @@ fun WgcApparelQuantityStepper(
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
     ) {
         // Botão de diminuir
         Box(

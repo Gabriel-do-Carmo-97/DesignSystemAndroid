@@ -29,9 +29,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -60,7 +60,7 @@ fun WgcRetailProductCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(180.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL.dp))
                 .background(Color(WgcCoreDsColors.blueLight39))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -90,8 +90,8 @@ fun WgcRetailProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs.dp)
-                    .size(WgcCoreDsSpacing.xl.dp)
+                    .padding(WgcCoreDsSpacing.XS.dp)
+                    .size(WgcCoreDsSpacing.XL.dp)
                     .clip(CircleShape)
                     .background(Color.Black.copy(alpha = 0.35f))
             ) {
@@ -104,7 +104,7 @@ fun WgcRetailProductCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
         // Título do produto
         Text(
@@ -116,7 +116,7 @@ fun WgcRetailProductCard(
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS.dp))
 
         // Subtítulo / Loja
         Text(
@@ -127,7 +127,7 @@ fun WgcRetailProductCard(
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
         // Preço
         Text(

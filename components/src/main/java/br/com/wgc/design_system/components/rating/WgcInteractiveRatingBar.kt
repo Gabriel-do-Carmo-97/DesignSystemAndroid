@@ -22,7 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
@@ -41,7 +41,7 @@ fun WgcInteractiveRatingBar(
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs6.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS6.dp)
     ) {
         for (i in 1..maxStars) {
             val starIndex = i.toFloat()
@@ -82,7 +82,7 @@ fun WgcInteractiveRatingBar(
 @Composable
 private fun WgcInteractiveRatingBarPreview() {
     var rating by remember { mutableFloatStateOf(4.0f) }
-    Row(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Row(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcInteractiveRatingBar(
             rating = rating,
             onRatingChange = { rating = it }
@@ -93,7 +93,7 @@ private fun WgcInteractiveRatingBarPreview() {
 @Preview(name = "WgcInteractiveRatingBar - ReadOnly", showBackground = true)
 @Composable
 private fun WgcInteractiveRatingBarReadOnlyPreview() {
-    Row(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Row(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcInteractiveRatingBar(
             rating = 4.5f,
             onRatingChange = {},

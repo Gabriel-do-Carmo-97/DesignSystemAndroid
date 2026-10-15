@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.fields.SearchTextField
 
@@ -23,6 +23,7 @@ import br.com.wgc.design_system.components.fields.SearchTextField
  * Cabeçalho de Marketplace com Busca, Localização e Ações Rápidas (WgcMarketplaceSearchHeaderBar).
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcMarketplaceSearchHeaderBar(
     modifier: Modifier = Modifier,
     address: String = "Enviar para Cliente - Av. Central, 1000",
@@ -41,8 +42,8 @@ fun WgcMarketplaceSearchHeaderBar(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -81,7 +82,7 @@ fun WgcMarketplaceSearchHeaderBar(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable(onClick = onAddressClick)
-                    .padding(bottom = WgcCoreDsSpacing.xxs4.dp)
+                    .padding(bottom = WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Icon(
                     imageVector = Icons.Default.LocationOn,

@@ -15,8 +15,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 data class WgcSquareCategoryItem(
@@ -49,9 +49,9 @@ fun WgcDepartmentCategoryGrid(
         modifier = modifier
             .fillMaxWidth()
             .height(200.dp),
-        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         items(categories, key = { it.id }) { category ->
             Column(

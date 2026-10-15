@@ -20,7 +20,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 
 /**
@@ -47,20 +47,20 @@ fun WgcEmptyState(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.lg24.dp)
+            .padding(WgcCoreDsSpacing.LG24.dp)
             .semantics(mergeDescendants = true) {},
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
         if (iconSlot != null) {
             iconSlot()
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
         } else if (icon != null) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-                modifier = Modifier.padding(bottom = WgcCoreDsSpacing.md16.dp)
+                modifier = Modifier.padding(bottom = WgcCoreDsSpacing.MD16.dp)
             )
         }
 
@@ -72,7 +72,7 @@ fun WgcEmptyState(
             modifier = Modifier.semantics { heading() },
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         Text(
             text = message,
@@ -82,7 +82,7 @@ fun WgcEmptyState(
         )
 
         if (actionSlot != null) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
             actionSlot()
         }
     }

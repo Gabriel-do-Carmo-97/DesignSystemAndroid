@@ -12,7 +12,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import androidx.compose.foundation.layout.Box
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
@@ -36,7 +36,7 @@ fun WgcScrollToTopButton(
             onClick = onClick,
             containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
-            modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.KeyboardArrowUp,

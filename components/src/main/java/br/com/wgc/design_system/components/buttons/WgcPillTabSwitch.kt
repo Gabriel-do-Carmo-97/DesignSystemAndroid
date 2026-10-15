@@ -24,7 +24,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Seletor de Abas em Formato Pill Unificado (WgcPillTabSwitch).
@@ -50,7 +50,7 @@ fun WgcPillTabSwitch(
     ) {
         Row(
             modifier = Modifier
-                .padding(WgcCoreDsSpacing.xxs4.dp)
+                .padding(WgcCoreDsSpacing.XXS4.dp)
                 .clip(CircleShape)
         ) {
             tabs.forEachIndexed { index, title ->
@@ -81,7 +81,7 @@ fun WgcPillTabSwitch(
 @Composable
 private fun WgcPillTabSwitchPreview() {
     MaterialTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcPillTabSwitch(selectedIndex = 0)
         }
     }

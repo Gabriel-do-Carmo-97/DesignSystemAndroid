@@ -32,9 +32,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 enum class WgcOrganizzeTransactionType {
     Expense,
@@ -47,6 +47,7 @@ enum class WgcOrganizzeTransactionType {
  * Mostra o ícone de categoria, descrição, conta/cartão, valor e botão de conciliação (pago/pendente).
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcPersonalFinanceTransactionItem(
     modifier: Modifier = Modifier,
     title: String = "Supermercado Gourmet",
@@ -76,16 +77,16 @@ fun WgcPersonalFinanceTransactionItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.none0.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.NONE0.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    horizontal = WgcCoreDsSpacing.md16.dp,
-                    vertical = WgcCoreDsSpacing.sm12.dp
+                    horizontal = WgcCoreDsSpacing.MD16.dp,
+                    vertical = WgcCoreDsSpacing.SM12.dp
                 ),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -97,7 +98,7 @@ fun WgcPersonalFinanceTransactionItem(
             ) {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSpacing.xxl40.dp)
+                        .size(WgcCoreDsSpacing.XXL40.dp)
                         .clip(CircleShape)
                         .background(categoryColor.copy(alpha = 0.15f)),
                     contentAlignment = Alignment.Center
@@ -106,11 +107,11 @@ fun WgcPersonalFinanceTransactionItem(
                         imageVector = categoryIcon,
                         contentDescription = category,
                         tint = categoryColor,
-                        modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
+                        modifier = Modifier.size(WgcCoreDsSpacing.LG24.dp)
                     )
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
                 Column {
                     Text(
@@ -127,7 +128,7 @@ fun WgcPersonalFinanceTransactionItem(
                 }
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
 
             // Valor e Toggle Pago/Pendente
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -140,13 +141,13 @@ fun WgcPersonalFinanceTransactionItem(
 
                 IconButton(
                     onClick = onTogglePaid,
-                    modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
+                    modifier = Modifier.size(WgcCoreDsSpacing.XL32.dp)
                 ) {
                     Icon(
                         imageVector = if (isPaid) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
                         contentDescription = if (isPaid) "Pago" else "Pendente",
                         tint = if (isPaid) Color(WgcCoreDsColors.green26) else Color(WgcCoreDsColors.blueLight7),
-                        modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                        modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                     )
                 }
             }
@@ -158,6 +159,6 @@ fun WgcPersonalFinanceTransactionItem(
 @Composable
 private fun WgcOrganizzeTransactionItemPreview() {
     WgcPersonalFinanceTransactionItem(
-        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+        modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
     )
 }

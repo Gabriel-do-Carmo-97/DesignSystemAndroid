@@ -38,8 +38,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 private const val WAVEFORM_HEIGHT_DP = 48
 private const val BAR_WIDTH_DP = 3
@@ -77,19 +77,19 @@ fun WgcAudioWavePlayer(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
             ) {
                 PlayPauseButton(
                     isPlaying = isPlaying,
@@ -125,7 +125,7 @@ private fun PlayPauseButton(
         onClick = onClick,
         shape = CircleShape,
         color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.size(WgcCoreDsSpacing.xxl40.dp)
+        modifier = Modifier.size(WgcCoreDsSpacing.XXL40.dp)
     ) {
         Box(contentAlignment = Alignment.Center) {
             Icon(
@@ -204,14 +204,14 @@ private fun AudioTimeAndSpeedRow(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
-        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
             val speeds = listOf(SPEED_NORMAL, SPEED_FAST, SPEED_DOUBLE)
             for (speed in speeds) {
                 FilterChip(
                     selected = playbackSpeed == speed,
                     onClick = { onSpeedChange(speed) },
                     label = { Text("${speed}x", style = MaterialTheme.typography.labelSmall) },
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp),
                     colors = FilterChipDefaults.filterChipColors(
                         selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
                         selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer

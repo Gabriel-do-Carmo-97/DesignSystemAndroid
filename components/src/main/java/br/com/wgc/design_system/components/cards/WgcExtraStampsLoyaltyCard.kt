@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card da Campanha de Fidelidade "Juntou Ganhou" do Clube Extra.
@@ -59,19 +59,19 @@ fun WgcExtraStampsLoyaltyCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.orange19).copy(alpha = 0.3f)
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             // Header: Selos + Tag Juntou Ganhou
             Row(
@@ -81,13 +81,13 @@ fun WgcExtraStampsLoyaltyCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.Stars,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.orange19),
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
                     Text(
                         text = "JUNTOU & GANHOU",
@@ -100,9 +100,9 @@ fun WgcExtraStampsLoyaltyCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(Color(WgcCoreDsColors.orangeLight5))
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = "$currentStamps / $targetStamps SELOS",
@@ -114,7 +114,7 @@ fun WgcExtraStampsLoyaltyCard(
             }
 
             // Título do Prêmio Escolhido
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)) {
                 Text(
                     text = "Prêmio Alvo: $rewardName",
                     color = Color(WgcCoreDsColors.grayDark7),
@@ -129,13 +129,13 @@ fun WgcExtraStampsLoyaltyCard(
             }
 
             // Barra de Progresso
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
                 LinearProgressIndicator(
                     progress = { progress },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s8.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
+                        .height(WgcCoreDsSize.S8.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
                     color = Color(WgcCoreDsColors.orange19),
                     trackColor = Color(WgcCoreDsColors.orangeLight5)
                 )
@@ -163,7 +163,7 @@ fun WgcExtraStampsLoyaltyCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onSeeCatalogClick() }
-                    .padding(top = WgcCoreDsSpacing.xxs4.dp),
+                    .padding(top = WgcCoreDsSpacing.XXS4.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -177,7 +177,7 @@ fun WgcExtraStampsLoyaltyCard(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                     contentDescription = null,
                     tint = Color(WgcCoreDsColors.blueDark34),
-                    modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S14.dp)
                 )
             }
         }

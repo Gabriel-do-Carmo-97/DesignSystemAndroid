@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
@@ -21,6 +21,7 @@ import br.com.wgc.design_system.components.avatar.WgcAvatar
  * Card de Restaurante/Loja no Padrão Food Delivery (WgcMerchantListingCard).
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcMerchantListingCard(
     modifier: Modifier = Modifier,
     name: String,
@@ -44,9 +45,9 @@ fun WgcMerchantListingCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             WgcAvatar(initials = name.take(2), size = 56.dp)
 
@@ -110,7 +111,11 @@ fun WgcMerchantListingCard(
                     Text(
                         text = deliveryFee,
                         style = MaterialTheme.typography.bodySmall,
-                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.green9) else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) {
+                            Color(WgcCoreDsColors.green9)
+                        } else {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        }
                     )
                 }
             }
@@ -123,8 +128,8 @@ fun WgcMerchantListingCard(
 private fun WgcMerchantListingCardPreview() {
     MaterialTheme {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             WgcMerchantListingCard(name = "Burger House", rating = "4.8", deliveryFee = "Grátis")
             WgcMerchantListingCard(name = "Pizza Prime", rating = "4.9", deliveryFee = "R$ 7,99", isFeatured = false)

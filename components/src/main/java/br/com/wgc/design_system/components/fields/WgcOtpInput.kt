@@ -20,8 +20,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Campo de Entrada de Código PIN / OTP Corporativo (WgcOtpInput).
@@ -57,7 +57,7 @@ fun WgcOtpInput(
         modifier = modifier,
         decorationBox = {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 repeat(otpLength) { index ->
@@ -83,7 +83,7 @@ fun WgcOtpInput(
                             .border(
                                 width = if (isFocused) 2.dp else 1.dp,
                                 color = borderColor,
-                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
                             ),
                         contentAlignment = Alignment.Center
                     ) {

@@ -1,7 +1,7 @@
 package br.com.wgc.design_system.components.colorpicker
 
 import androidx.compose.ui.graphics.Color
-import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.roundToInt

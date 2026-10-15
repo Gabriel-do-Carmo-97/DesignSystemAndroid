@@ -33,10 +33,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Modalidade imobiliária Property Listing: Comprar, Alugar ou Lançamentos.
@@ -66,19 +66,19 @@ fun WgcPropertyListingSearchBar(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         // Seletor em Pílula: Comprar / Alugar / Lançamentos
         Row(
             modifier = Modifier
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                 .background(Color(WgcCoreDsColors.blueLight37))
                 .border(
-                    width = WgcCoreDsSpacing.xxxs2.dp,
+                    width = WgcCoreDsSpacing.XXXS2.dp,
                     color = Color(WgcCoreDsColors.blueLight8),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
                 )
-                .padding(WgcCoreDsSpacing.xxs4.dp),
+                .padding(WgcCoreDsSpacing.XXS4.dp),
             horizontalArrangement = Arrangement.Start
         ) {
             PurposePill(
@@ -102,14 +102,14 @@ fun WgcPropertyListingSearchBar(
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             OutlinedTextField(
                 value = query,
                 onValueChange = onQueryChange,
                 modifier = Modifier
                     .weight(1f)
-                    .height(WgcCoreDsSize.s52.dp),
+                    .height(WgcCoreDsSize.S52.dp),
                 placeholder = {
                     Text(
                         text = placeholderText,
@@ -122,7 +122,7 @@ fun WgcPropertyListingSearchBar(
                         imageVector = Icons.Default.Search,
                         contentDescription = "Buscar",
                         tint = Color(WgcCoreDsColors.green14),
-                        modifier = Modifier.size(WgcCoreDsSize.s22.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S22.dp)
                     )
                 },
                 trailingIcon = {
@@ -132,13 +132,13 @@ fun WgcPropertyListingSearchBar(
                                 imageVector = Icons.Default.Close,
                                 contentDescription = "Limpar busca",
                                 tint = Color(WgcCoreDsColors.blue22),
-                                modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                             )
                         }
                     }
                 },
                 singleLine = true,
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = Color(WgcCoreDsColors.green14),
                     unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8),
@@ -151,8 +151,8 @@ fun WgcPropertyListingSearchBar(
             // Botão de Filtro com destaque Property Listing
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s52.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+                    .size(WgcCoreDsSize.S52.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
                     .background(Color(WgcCoreDsColors.green14))
                     .clickable(onClick = onFilterClick),
                 contentAlignment = Alignment.Center
@@ -161,15 +161,15 @@ fun WgcPropertyListingSearchBar(
                     imageVector = Icons.Default.Tune,
                     contentDescription = "Filtros avançados",
                     tint = Color.White,
-                    modifier = Modifier.size(WgcCoreDsSize.s22.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S22.dp)
                 )
 
                 if (activeFilterCount > 0) {
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
-                            .padding(WgcCoreDsSpacing.xxs4.dp)
-                            .size(WgcCoreDsSize.s18.dp)
+                            .padding(WgcCoreDsSpacing.XXS4.dp)
+                            .size(WgcCoreDsSize.S18.dp)
                             .clip(CircleShape)
                             .background(Color(WgcCoreDsColors.orange18)),
                         contentAlignment = Alignment.Center
@@ -195,14 +195,14 @@ private fun PurposePill(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
             .background(
                 if (isSelected) Color(WgcCoreDsColors.green14) else Color.Transparent
             )
             .clickable(onClick = onClick)
             .padding(
-                horizontal = WgcCoreDsSpacing.md16.dp,
-                vertical = WgcCoreDsSpacing.xs8.dp
+                horizontal = WgcCoreDsSpacing.MD16.dp,
+                vertical = WgcCoreDsSpacing.XS8.dp
             ),
         contentAlignment = Alignment.Center
     ) {

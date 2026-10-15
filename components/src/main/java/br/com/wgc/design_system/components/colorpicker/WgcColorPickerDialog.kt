@@ -34,8 +34,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -68,15 +68,15 @@ fun WgcColorPickerDialog(
     Dialog(onDismissRequest = onDismiss) {
         Card(
             modifier = modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
             ) {
                 // 1. Título do Diálogo
                 Text(
@@ -103,7 +103,7 @@ fun WgcColorPickerDialog(
                 if (quickPalette.isNotEmpty()) {
                     Column(
                         modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                     ) {
                         Text(
                             text = "Paleta Rápida",
@@ -111,7 +111,7 @@ fun WgcColorPickerDialog(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         LazyRow(
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             items(quickPalette) { paletteColor ->
@@ -141,22 +141,22 @@ fun WgcColorPickerDialog(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(MaterialTheme.colorScheme.surfaceVariant)
-                        .padding(WgcCoreDsSpacing.sm12.dp),
+                        .padding(WgcCoreDsSpacing.SM12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
                     ) {
                         Box(
                             modifier = Modifier
                                 .size(36.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                                 .background(currentColor)
-                                .border(1.dp, Color.LightGray, RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                                .border(1.dp, Color.LightGray, RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         )
                         Column {
                             Text(
@@ -178,7 +178,7 @@ fun WgcColorPickerDialog(
                 // 5. Botões de Ação
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Box(modifier = Modifier.weight(1f)) {
                         WgcSecondaryClassicButton(

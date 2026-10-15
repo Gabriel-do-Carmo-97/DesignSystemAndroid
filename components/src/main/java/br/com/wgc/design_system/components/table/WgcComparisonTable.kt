@@ -26,8 +26,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -66,17 +66,17 @@ fun WgcComparisonCard(
             .fillMaxWidth()
             .then(
                 if (plan.isHighlighted) {
-                    Modifier.border(2.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
+                    Modifier.border(2.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp))
                 } else Modifier
             ),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (plan.isHighlighted) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface
         )
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.lg.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.LG.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -97,12 +97,12 @@ fun WgcComparisonCard(
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
             ) {
                 plan.features.forEach { feature ->
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(

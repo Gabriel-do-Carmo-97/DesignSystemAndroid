@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente de Avaliação Corporativo Interativo (WgcRating).
@@ -39,7 +39,7 @@ fun WgcRating(
 ) {
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         for (i in 1..maxRating) {
@@ -67,7 +67,7 @@ fun WgcRating(
 @Composable
 private fun WgcRatingPreview() {
     MaterialTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcRating(
                 rating = 4,
                 onRatingChange = {}

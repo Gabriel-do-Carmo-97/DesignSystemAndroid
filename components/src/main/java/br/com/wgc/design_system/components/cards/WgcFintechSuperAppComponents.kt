@@ -17,10 +17,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcFintechSuperAppActionItem(
@@ -32,12 +32,12 @@ fun WgcFintechSuperAppActionItem(
     Column(
         modifier = modifier.clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s56.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+                .size(WgcCoreDsSize.S56.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
                 .background(Color(WgcCoreDsColors.gray100)),
             contentAlignment = Alignment.Center
         ) {
@@ -45,7 +45,7 @@ fun WgcFintechSuperAppActionItem(
                 imageVector = icon,
                 contentDescription = label,
                 tint = Color(WgcCoreDsColors.orange20),
-                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
             )
         }
         Text(
@@ -67,25 +67,25 @@ fun WgcInterCashbackBanner(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.s2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSize.S2.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)) {
                 Text(storeName, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 Text(description, fontSize = 14.sp, color = Color.Gray)
                 Surface(
                     color = Color(WgcCoreDsColors.orange20).copy(alpha = 0.1f),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
                 ) {
                     Text(
                         cashback,
-                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
+                        modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXS4.dp),
                         color = Color(WgcCoreDsColors.orange20),
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
@@ -95,7 +95,7 @@ fun WgcInterCashbackBanner(
             Button(
                 onClick = onShopClick,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.orange20)),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
             ) {
                 Text("Ir à Loja", color = Color.White, fontWeight = FontWeight.Bold)
             }

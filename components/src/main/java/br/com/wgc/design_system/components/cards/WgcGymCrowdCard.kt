@@ -31,11 +31,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Nível de lotação da unidade Gym & Fitness.
@@ -78,18 +78,18 @@ fun WgcGymCrowdCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(enabled = onClick != null) { onClick?.invoke() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(WgcCoreDsColors.grayDark7)
         ),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.grayDark21)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL3.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             // Slot opcional de cabeçalho
             if (slotHeader != null) {
@@ -109,14 +109,14 @@ fun WgcGymCrowdCard(
                         )
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
-                            modifier = Modifier.padding(top = WgcCoreDsSpacing.xxs4.dp)
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp),
+                            modifier = Modifier.padding(top = WgcCoreDsSpacing.XXS4.dp)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.LocationOn,
                                 contentDescription = null,
                                 tint = Color(WgcCoreDsColors.orange23),
-                                modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                                modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                             )
                             Text(
                                 text = address,
@@ -129,22 +129,22 @@ fun WgcGymCrowdCard(
                     // Badge de Lotação
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                             .background(crowdColor.copy(alpha = 0.18f))
                             .padding(
-                                horizontal = WgcCoreDsSpacing.sm12.dp,
-                                vertical = WgcCoreDsSpacing.xxs4.dp
+                                horizontal = WgcCoreDsSpacing.SM12.dp,
+                                vertical = WgcCoreDsSpacing.XXS4.dp
                             ),
                         contentAlignment = Alignment.Center
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                         ) {
                             Box(
                                 modifier = Modifier
-                                    .size(WgcCoreDsSize.s8.dp)
-                                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                                    .size(WgcCoreDsSize.S8.dp)
+                                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                                     .background(crowdColor)
                             )
                             Text(
@@ -169,10 +169,10 @@ fun WgcGymCrowdCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color(WgcCoreDsColors.grayDark1))
-                    .padding(WgcCoreDsSpacing.sm12.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.SM12.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -181,13 +181,13 @@ fun WgcGymCrowdCard(
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.People,
                             contentDescription = null,
                             tint = Color(WgcCoreDsColors.orange23),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                         Text(
                             text = "Frequência estimada agora: $crowdPercentage%",
@@ -203,7 +203,7 @@ fun WgcGymCrowdCard(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s48.dp),
+                        .height(WgcCoreDsSize.S48.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.Bottom
                 ) {
@@ -215,9 +215,9 @@ fun WgcGymCrowdCard(
                         ) {
                             Box(
                                 modifier = Modifier
-                                    .width(WgcCoreDsSize.s16.dp)
+                                    .width(WgcCoreDsSize.S16.dp)
                                     .height((fraction * 36).dp)
-                                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.xs2.dp, topEnd = WgcCoreDsBorderRadius.xs2.dp))
+                                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.XS2.dp, topEnd = WgcCoreDsBorderRadius.XS2.dp))
                                     .background(
                                         if (index == 4) crowdColor // Horário de pico (18h)
                                         else Color(WgcCoreDsColors.gray1)
@@ -227,7 +227,7 @@ fun WgcGymCrowdCard(
                                 text = hours[index],
                                 color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 10.sp,
-                                modifier = Modifier.padding(top = WgcCoreDsSpacing.xxxs2.dp)
+                                modifier = Modifier.padding(top = WgcCoreDsSpacing.XXXS2.dp)
                             )
                         }
                     }
@@ -241,9 +241,9 @@ fun WgcGymCrowdCard(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .clickable { onNavigateClick() }
-                        .padding(vertical = WgcCoreDsSpacing.xxs4.dp),
+                        .padding(vertical = WgcCoreDsSpacing.XXS4.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -257,7 +257,7 @@ fun WgcGymCrowdCard(
                         imageVector = Icons.Default.ChevronRight,
                         contentDescription = null,
                         tint = Color(WgcCoreDsColors.orange23),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                 }
             }

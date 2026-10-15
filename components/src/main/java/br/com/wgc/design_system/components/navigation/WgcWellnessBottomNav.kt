@@ -28,11 +28,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Abas de navegação do Corporate Wellness (Wellness Network).
@@ -59,14 +59,14 @@ fun WgcWellnessBottomNav(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .height(WgcCoreDsSize.s64.dp),
+            .height(WgcCoreDsSize.S64.dp),
         color = Color(WgcCoreDsColors.white),
-        shadowElevation = WgcCoreDsElevation.level8.dp
+        shadowElevation = WgcCoreDsElevation.LEVEL8.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = WgcCoreDsSpacing.xs8.dp),
+                .padding(horizontal = WgcCoreDsSpacing.XS8.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -79,22 +79,22 @@ fun WgcWellnessBottomNav(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .clickable { onItemSelected(item) }
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Icon(
                         imageVector = item.icon,
                         contentDescription = item.label,
                         tint = itemColor,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
                     Text(
                         text = item.label,
                         color = itemColor,
                         fontSize = 10.sp,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                        modifier = Modifier.padding(top = WgcCoreDsSpacing.xxxs2.dp)
+                        modifier = Modifier.padding(top = WgcCoreDsSpacing.XXXS2.dp)
                     )
                 }
             }

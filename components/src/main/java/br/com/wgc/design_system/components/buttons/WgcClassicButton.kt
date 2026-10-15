@@ -17,7 +17,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
 
 /**
@@ -87,7 +87,7 @@ fun WgcClassicButton(
             disabledContentColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
         ),
         enabled = isEnabled && !isLoading,
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         content = {
             if (isLoading) {
                 CircularProgressIndicator(

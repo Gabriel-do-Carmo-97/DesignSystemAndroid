@@ -27,8 +27,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -89,20 +89,20 @@ fun WgcSnackbar(
 
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = containerColor,
         contentColor = contentColor,
-        tonalElevation = WgcCoreDsSpacing.xxs4.dp
+        tonalElevation = WgcCoreDsSpacing.XXS4.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    horizontal = WgcCoreDsSpacing.md16.dp,
-                    vertical = WgcCoreDsSpacing.sm12.dp
+                    horizontal = WgcCoreDsSpacing.MD16.dp,
+                    vertical = WgcCoreDsSpacing.SM12.dp
                 ),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             if (icon != null) {
                 Icon(
@@ -183,8 +183,8 @@ private fun WgcSnackbarPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                    .padding(WgcCoreDsSpacing.MD16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
             ) {
                 WgcSnackbar(
                     message = "Item adicionado ao carrinho com sucesso.",

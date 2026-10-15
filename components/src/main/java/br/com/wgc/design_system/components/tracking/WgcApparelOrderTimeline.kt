@@ -24,8 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Estado de cada etapa do rastreamento Clothee.
@@ -111,12 +111,12 @@ fun WgcApparelOrderTimeline(
                     }
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.MD16.dp))
 
                 // Detalhes da etapa
                 Column(
                     modifier = Modifier
-                        .padding(top = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(top = WgcCoreDsSpacing.XXS4.dp)
                         .weight(1f)
                 ) {
                     Text(
@@ -129,14 +129,14 @@ fun WgcApparelOrderTimeline(
                             Color(WgcCoreDsColors.grayDark18)
                         }
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
                     Text(
                         text = step.subtitle,
                         style = MaterialTheme.typography.bodySmall,
                         color = Color(WgcCoreDsColors.gray12)
                     )
                     if (!isLast) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
                     }
                 }
             }

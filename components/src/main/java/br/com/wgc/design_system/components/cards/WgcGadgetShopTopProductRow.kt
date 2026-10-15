@@ -24,9 +24,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -47,17 +47,17 @@ fun WgcGadgetShopTopProductRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
             .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp),
+            .padding(WgcCoreDsSpacing.SM12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Badge de ranking (ex: 1, 2)
         Box(
             modifier = Modifier
                 .size(24.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                 .background(Color(WgcCoreDsColors.blue39)),
             contentAlignment = Alignment.Center
         ) {
@@ -69,13 +69,13 @@ fun WgcGadgetShopTopProductRow(
             )
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Miniatura da imagem do produto
         Box(
             modifier = Modifier
                 .size(64.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                 .background(Color.White)
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -101,7 +101,7 @@ fun WgcGadgetShopTopProductRow(
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Detalhes do Produto: Título e Descrição
         Column(
@@ -115,7 +115,7 @@ fun WgcGadgetShopTopProductRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodySmall,
@@ -125,7 +125,7 @@ fun WgcGadgetShopTopProductRow(
             )
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Preço
         Text(

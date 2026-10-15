@@ -35,10 +35,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 enum class WgcFreshGroceryNavItem(
     val title: String,
@@ -64,14 +64,14 @@ fun WgcFreshGroceryBottomNav(
     Surface(
         modifier = modifier.fillMaxWidth(),
         color = Color.White,
-        shadowElevation = WgcCoreDsElevation.level2.dp
+        shadowElevation = WgcCoreDsElevation.LEVEL2.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
                 .height(60.dp)
-                .padding(horizontal = WgcCoreDsSpacing.md16.dp),
+                .padding(horizontal = WgcCoreDsSpacing.MD16.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -83,13 +83,13 @@ fun WgcFreshGroceryBottomNav(
                     modifier = Modifier
                         .clip(CircleShape)
                         .clickable { onItemSelected(item) }
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Icon(
                         imageVector = if (isSelected) item.selectedIcon else item.unselectedIcon,
                         contentDescription = item.title,
                         tint = if (isSelected) Color(WgcCoreDsColors.green13) else Color.Gray,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
                     if (isSelected) {
                         Text(

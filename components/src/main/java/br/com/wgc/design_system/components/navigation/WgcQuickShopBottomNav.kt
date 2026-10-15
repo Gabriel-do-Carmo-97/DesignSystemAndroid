@@ -32,10 +32,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 enum class WgcShopEaseNavItem(
     val title: String,
@@ -61,14 +61,14 @@ fun WgcQuickShopBottomNav(
     Surface(
         modifier = modifier.fillMaxWidth(),
         color = Color.White,
-        shadowElevation = WgcCoreDsElevation.level1.dp
+        shadowElevation = WgcCoreDsElevation.LEVEL1.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
-                .height(WgcCoreDsSize.s64.dp)
-                .padding(horizontal = WgcCoreDsSpacing.md16.dp),
+                .height(WgcCoreDsSize.S64.dp)
+                .padding(horizontal = WgcCoreDsSpacing.MD16.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -85,20 +85,20 @@ fun WgcQuickShopBottomNav(
                     modifier = Modifier
                         .clip(CircleShape)
                         .clickable { onItemSelected(item) }
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Icon(
                         imageVector = if (isSelected) item.selectedIcon else item.unselectedIcon,
                         contentDescription = item.title,
                         tint = iconColor,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
 
                     if (isSelected) {
                         Box(
                             modifier = Modifier
-                                .padding(top = WgcCoreDsSpacing.xxs4.dp)
-                                .size(WgcCoreDsSize.s4.dp)
+                                .padding(top = WgcCoreDsSpacing.XXS4.dp)
+                                .size(WgcCoreDsSize.S4.dp)
                                 .clip(CircleShape)
                                 .background(Color(WgcCoreDsColors.orange37))
                         )

@@ -36,8 +36,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -67,7 +67,7 @@ fun WgcDatePickerField(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
     ) {
         Text(
             text = label,
@@ -80,12 +80,12 @@ fun WgcDatePickerField(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable(enabled = isEnabled) { showDialog = true },
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.SM12.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
@@ -163,7 +163,7 @@ fun WgcDateRangePickerField(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
     ) {
         Text(
             text = label,
@@ -176,12 +176,12 @@ fun WgcDateRangePickerField(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable(enabled = isEnabled) { showDialog = true },
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.SM12.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {

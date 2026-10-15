@@ -11,8 +11,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 
 @Composable
 fun WgcBoutiqueBottomNavButton(
@@ -27,7 +27,7 @@ fun WgcBoutiqueBottomNavButton(
         onClick = onClick,
         modifier = modifier.fillMaxWidth(),
         enabled = enabled,
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = Color(WgcCoreDsColors.purple8),
             contentColor = Color.White

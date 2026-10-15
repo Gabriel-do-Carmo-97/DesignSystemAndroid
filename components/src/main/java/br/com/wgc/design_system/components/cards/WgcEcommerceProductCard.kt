@@ -35,9 +35,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.feedback.WgcRatingBar
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
@@ -61,7 +61,7 @@ fun WgcEcommerceProductCard(
     onFavoriteToggle: (() -> Unit)? = null,
     onClick: () -> Unit
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
     val borderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.25f)
 
     Card(
@@ -94,10 +94,10 @@ fun WgcEcommerceProductCard(
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopStart)
-                            .padding(WgcCoreDsSpacing.xs.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
+                            .padding(WgcCoreDsSpacing.XS.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
                             .background(Color(WgcCoreDsColors.pink4))
-                            .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
+                            .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = 2.dp)
                     ) {
                         Text(
                             text = "$discountPercent% OFF",
@@ -112,7 +112,7 @@ fun WgcEcommerceProductCard(
                         onClick = onFavoriteToggle,
                         modifier = Modifier
                             .align(Alignment.TopEnd)
-                            .padding(WgcCoreDsSpacing.xxs.dp)
+                            .padding(WgcCoreDsSpacing.XXS.dp)
                             .size(32.dp)
                             .clip(CircleShape)
                             .background(Color.White.copy(alpha = 0.8f))
@@ -131,7 +131,7 @@ fun WgcEcommerceProductCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.sm.dp)
+                    .padding(WgcCoreDsSpacing.SM.dp)
             ) {
                 Text(
                     text = title,
@@ -152,7 +152,7 @@ fun WgcEcommerceProductCard(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                 // Price Row
                 Row(
@@ -165,7 +165,7 @@ fun WgcEcommerceProductCard(
                     )
 
                     if (originalPrice != null) {
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS.dp))
                         Text(
                             text = originalPrice,
                             style = MaterialTheme.typography.bodySmall.copy(
@@ -177,7 +177,7 @@ fun WgcEcommerceProductCard(
                 }
 
                 if (rating != null) {
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
                     WgcRatingBar(
                         rating = rating,
                         reviewCount = reviewCount,
@@ -195,7 +195,7 @@ private fun WgcEcommerceProductCardPreview() {
     Box(
         modifier = Modifier
             .width(180.dp)
-            .padding(WgcCoreDsSpacing.sm.dp)
+            .padding(WgcCoreDsSpacing.SM.dp)
     ) {
         WgcEcommerceProductCard(
             title = "Nike Sneakers",

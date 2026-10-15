@@ -31,9 +31,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -62,7 +62,7 @@ fun WgcApparelProductCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                 .background(Color(WgcCoreDsColors.grayLight8))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -92,7 +92,7 @@ fun WgcApparelProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
                     .size(28.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.85f))
@@ -106,7 +106,7 @@ fun WgcApparelProductCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Nome do produto
         Text(
@@ -118,7 +118,7 @@ fun WgcApparelProductCard(
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Preço e Preço Antigo
         Row(
@@ -132,7 +132,7 @@ fun WgcApparelProductCard(
             )
 
             if (!originalPrice.isNullOrEmpty()) {
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                 Text(
                     text = originalPrice,
                     style = MaterialTheme.typography.bodySmall,

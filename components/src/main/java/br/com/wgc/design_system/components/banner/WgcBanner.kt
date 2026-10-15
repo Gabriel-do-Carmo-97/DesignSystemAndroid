@@ -26,8 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
@@ -72,13 +72,13 @@ fun WgcBanner(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .background(containerColor)
-            .padding(WgcCoreDsSpacing.md16.dp)
+            .padding(WgcCoreDsSpacing.MD16.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp),
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp),
             verticalAlignment = Alignment.Top
         ) {
             Icon(
@@ -90,7 +90,7 @@ fun WgcBanner(
 
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = title,
@@ -107,7 +107,7 @@ fun WgcBanner(
                 if (actionLabel != null && onActionClick != null) {
                     TextButton(
                         onClick = onActionClick,
-                        modifier = Modifier.padding(top = WgcCoreDsSpacing.xxs4.dp)
+                        modifier = Modifier.padding(top = WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Text(text = actionLabel, color = contentColor, fontWeight = FontWeight.Bold)
                     }

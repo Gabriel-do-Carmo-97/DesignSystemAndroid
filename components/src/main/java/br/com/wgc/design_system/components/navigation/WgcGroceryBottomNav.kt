@@ -21,8 +21,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
 /**
  * Itens da barra de navegação inferior do Supermercado Brasil.
@@ -54,7 +54,7 @@ fun WgcGroceryBottomNav(
 ) {
     NavigationBar(
         modifier = modifier.border(
-            width = WgcCoreDsSize.s1.dp,
+            width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.blueLight4)
         )) {
         WgcSupermercadoNavItem.entries.forEachIndexed { index, item ->
@@ -66,7 +66,7 @@ fun WgcGroceryBottomNav(
                     Icon(
                         imageVector = item.icon,
                         contentDescription = item.label,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                     )
                 },
                 label = {

@@ -26,10 +26,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Estilo visual do botão de biometria.
@@ -59,12 +59,12 @@ fun WgcBiometricButton(
     Column(
         modifier = modifier.semantics { role = Role.Button },
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         val shape = when (style) {
             WgcBiometricStyle.Circular -> CircleShape
             WgcBiometricStyle.RoundedSquare,
-            WgcBiometricStyle.OutlinedSquare -> RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp)
+            WgcBiometricStyle.OutlinedSquare -> RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp)
         }
 
         val border = when {
@@ -80,7 +80,7 @@ fun WgcBiometricButton(
             shape = shape,
             color = containerColor,
             border = border,
-            shadowElevation = if (style == WgcBiometricStyle.Circular) WgcCoreDsElevation.level3.dp else WgcCoreDsElevation.level0.dp
+            shadowElevation = if (style == WgcBiometricStyle.Circular) WgcCoreDsElevation.LEVEL3.dp else WgcCoreDsElevation.LEVEL0.dp
         ) {
             Box(
                 modifier = Modifier.size(size),
@@ -110,8 +110,8 @@ fun WgcBiometricButton(
 private fun WgcBiometricButtonPreview() {
     MaterialTheme {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             WgcBiometricButton(
                 label = "Login with touch",

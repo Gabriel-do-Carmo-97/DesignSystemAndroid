@@ -9,7 +9,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 import br.com.wgc.design_system.commons.haptics.contract.WgcHapticFeedback
-import br.com.wgc.design_system.core.WgcCoreDsHaptics
+import br.com.wgc.design_system.core.feedback.WgcCoreDsHaptics
 
 /**
  * Implementação padrão de [WgcHapticFeedback] utilizando o [HapticFeedback] do Jetpack Compose
@@ -39,7 +39,7 @@ class DefaultWgcHapticFeedback(
         try {
             composeHaptic?.performHapticFeedback(HapticFeedbackType.TextHandleMove)
         } catch (_: Exception) {
-            vibrate(WgcCoreDsHaptics.durationMicroMs)
+            vibrate(WgcCoreDsHaptics.DURATION_MICRO_MS)
         }
     }
 
@@ -47,16 +47,16 @@ class DefaultWgcHapticFeedback(
         try {
             composeHaptic?.performHapticFeedback(HapticFeedbackType.LongPress)
         } catch (_: Exception) {
-            vibrate(WgcCoreDsHaptics.durationStandardMs)
+            vibrate(WgcCoreDsHaptics.DURATION_STANDARD_MS)
         }
     }
 
     override fun success() {
         val timings = longArrayOf(
             ComponentsConstants.Haptics.INITIAL_DELAY_MS,
-            WgcCoreDsHaptics.durationMicroMs,
+            WgcCoreDsHaptics.DURATION_MICRO_MS,
             ComponentsConstants.Haptics.PAUSE_INTERVAL_MS,
-            WgcCoreDsHaptics.durationStandardMs,
+            WgcCoreDsHaptics.DURATION_STANDARD_MS,
         )
         val amplitudes = intArrayOf(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
@@ -64,15 +64,15 @@ class DefaultWgcHapticFeedback(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
             ComponentsConstants.Haptics.AMPLITUDE_HIGH,
         )
-        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.durationStandardMs)
+        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.DURATION_STANDARD_MS)
     }
 
     override fun warning() {
         val timings = longArrayOf(
             ComponentsConstants.Haptics.INITIAL_DELAY_MS,
-            WgcCoreDsHaptics.durationStandardMs,
+            WgcCoreDsHaptics.DURATION_STANDARD_MS,
             ComponentsConstants.Haptics.PAUSE_INTERVAL_MS,
-            WgcCoreDsHaptics.durationStandardMs,
+            WgcCoreDsHaptics.DURATION_STANDARD_MS,
         )
         val amplitudes = intArrayOf(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
@@ -80,15 +80,15 @@ class DefaultWgcHapticFeedback(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
             ComponentsConstants.Haptics.AMPLITUDE_MEDIUM,
         )
-        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.durationStandardMs)
+        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.DURATION_STANDARD_MS)
     }
 
     override fun error() {
         val timings = longArrayOf(
             ComponentsConstants.Haptics.INITIAL_DELAY_MS,
-            WgcCoreDsHaptics.durationStandardMs,
+            WgcCoreDsHaptics.DURATION_STANDARD_MS,
             ComponentsConstants.Haptics.PAUSE_INTERVAL_MS,
-            WgcCoreDsHaptics.durationLongMs,
+            WgcCoreDsHaptics.DURATION_LONG_MS,
         )
         val amplitudes = intArrayOf(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
@@ -96,7 +96,7 @@ class DefaultWgcHapticFeedback(
             ComponentsConstants.Haptics.AMPLITUDE_OFF,
             ComponentsConstants.Haptics.AMPLITUDE_MAX,
         )
-        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.durationLongMs)
+        vibratePattern(timings, amplitudes, WgcCoreDsHaptics.DURATION_LONG_MS)
     }
 
     private fun vibrate(durationMs: Long) {

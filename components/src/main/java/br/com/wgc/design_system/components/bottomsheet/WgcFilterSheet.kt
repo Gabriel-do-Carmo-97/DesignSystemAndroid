@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 import br.com.wgc.design_system.components.chip.WgcChip
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Modelo de dados para opções de filtro por categoria.
@@ -88,7 +88,7 @@ fun WgcFilterSheet(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             // 1. Categorias
             if (categories.isNotEmpty()) {
@@ -98,8 +98,8 @@ fun WgcFilterSheet(
                     fontWeight = FontWeight.Bold
                 )
                 FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     categories.forEach { cat ->
                         val isSelected = cat.id in selectedCategoryIds
@@ -129,7 +129,7 @@ fun WgcFilterSheet(
                 )
             )
 
-            Spacer(Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(Modifier.height(WgcCoreDsSpacing.XS8.dp))
         }
     }
 }
