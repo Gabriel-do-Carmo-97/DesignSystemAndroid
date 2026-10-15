@@ -5,6 +5,10 @@ import br.com.wgc.design_system.coordinators.auth.WgcAuthStep
 import br.com.wgc.design_system.coordinators.auth.WgcAuthVariant
 import br.com.wgc.design_system.coordinators.cart.WgcCartFlowStep
 import br.com.wgc.design_system.coordinators.checkout.WgcCheckoutFlowStep
+import br.com.wgc.design_system.coordinators.dynamic.WgcFlowStep
+import br.com.wgc.design_system.coordinators.dynamic.WgcDynamicFlowDefaults
+import br.com.wgc.design_system.coordinators.composite.WgcSubFlow
+import br.com.wgc.design_system.coordinators.composite.WgcCompositeFlowDefaults
 import br.com.wgc.design_system.coordinators.home.WgcHomeTab
 import br.com.wgc.design_system.coordinators.payment.WgcPaymentFlowStep
 import br.com.wgc.design_system.factories.address.WgcSavedAddressItem
@@ -116,4 +120,49 @@ class WgcSubjectFactoriesAndCoordinatorsTest {
         assertTrue(WgcCheckoutFlowStep.entries.contains(WgcCheckoutFlowStep.Review))
         assertTrue(WgcHomeTab.entries.contains(WgcHomeTab.Feed))
     }
+
+    @Test
+    fun `WgcDynamicFlowDefaults should provide valid sequential flow steps`() {
+        val steps = WgcDynamicFlowDefaults.defaultSteps()
+        assertTrue(steps.size >= 2)
+        assertEquals("step_welcome", steps[0].id)
+        assertEquals("step_confirm", steps[1].id)
+        assertNotNull(steps[0].content)
+        assertNotNull(steps[1].content)
+    }
+
+    @Test
+    fun `WgcCompositeFlowDefaults should provide valid multi-domain sub-flows`() {
+        val flows = WgcCompositeFlowDefaults.defaultFlows()
+        assertTrue(flows.size >= 3)
+        assertEquals("auth", flows[0].id)
+        assertEquals("onboarding", flows[1].id)
+        assertEquals("home", flows[2].id)
+        assertNotNull(flows[0].content)
+        assertNotNull(flows[1].content)
+        assertNotNull(flows[2].content)
+    }
+
+    @Test
+    fun `WgcFlowStep should hold custom properties correctly`() {
+        val step = WgcFlowStep(
+            id = "custom_step",
+            title = "Etapa Personalizada",
+            canSkip = true
+        ) { _, _ -> }
+        assertEquals("custom_step", step.id)
+        assertEquals("Etapa Personalizada", step.title)
+        assertTrue(step.canSkip)
+    }
+
+    @Test
+    fun `WgcSubFlow should hold custom properties correctly`() {
+        val subFlow = WgcSubFlow(
+            id = "custom_flow",
+            title = "Jornada Personalizada"
+        ) { _, _ -> }
+        assertEquals("custom_flow", subFlow.id)
+        assertEquals("Jornada Personalizada", subFlow.title)
+    }
 }
+
