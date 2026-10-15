@@ -2,36 +2,29 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.pix.BasePixTransferViewModel
-import br.com.wgc.design_system.templates.screens.pix.FakePixTransferViewModel
-import br.com.wgc.design_system.templates.screens.pix.WgcPixTransferTemplate
+import br.com.wgc.design_system.factories.payment.WgcPixScreenFactory
+import br.com.wgc.design_system.factories.payment.WgcPixScreenVariant
 
 /**
- * Fábrica universal para instanciação padronizada do template de Transferência Pix.
- * Respeita a regra de defaults corporativos sensatos e customização via slots.
+ * Fábrica universal legada para instanciação padronizada do template de Transferência Pix.
  */
+@Deprecated(
+    message = "Utilize WgcPixScreenFactory diretamente",
+    replaceWith = ReplaceWith("WgcPixScreenFactory(modifier, WgcPixScreenVariant.TRANSFER)")
+)
 object WgcPixFactory {
 
-    /**
-     * Cria e retorna o Composable do template de Transferência Pix.
-     *
-     * @param modifier Modificador de layout
-     * @param viewModel Instância do ViewModel base (default: FakePixTransferViewModel)
-     * @param headerSlot Slot customizado para TopBar / cabeçalho
-     * @param confirmButtonSlot Slot customizado para o botão de confirmação da transferência
-     */
     @Composable
     fun Create(
         modifier: Modifier = Modifier,
-        viewModel: BasePixTransferViewModel = FakePixTransferViewModel(),
-        headerSlot: (@Composable () -> Unit)? = null,
-        confirmButtonSlot: (@Composable () -> Unit)? = null
+        customQrSlot: (@Composable () -> Unit)? = null,
+        onPaymentConfirmed: () -> Unit = {}
     ) {
-        WgcPixTransferTemplate(
+        WgcPixScreenFactory(
             modifier = modifier,
-            viewModel = viewModel,
-            headerSlot = headerSlot,
-            confirmButtonSlot = confirmButtonSlot
+            variant = WgcPixScreenVariant.TRANSFER,
+            customQrSlot = customQrSlot,
+            onPaymentConfirmed = onPaymentConfirmed
         )
     }
 }

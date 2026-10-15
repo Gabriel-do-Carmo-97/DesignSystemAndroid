@@ -2,35 +2,27 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.wgc.design_system.templates.screens.card.BaseCardManagementViewModel
-import br.com.wgc.design_system.templates.screens.card.FakeCardManagementViewModel
-import br.com.wgc.design_system.templates.screens.card.WgcCardManagementTemplate
+import br.com.wgc.design_system.factories.payment.WgcCardScreenFactory
 
 /**
- * Fábrica universal para instanciação padronizada do template de Gestão de Cartões.
+ * Fábrica universal legada para instanciação padronizada do template de Gestão de Cartões.
  */
+@Deprecated(
+    message = "Utilize WgcCardScreenFactory diretamente",
+    replaceWith = ReplaceWith("WgcCardScreenFactory(modifier)")
+)
 object WgcCardFactory {
 
-    /**
-     * Cria e retorna o Composable do template de Gestão de Cartões.
-     *
-     * @param modifier Modificador de layout
-     * @param viewModel Instância do ViewModel base (default: FakeCardManagementViewModel)
-     * @param headerSlot Slot customizado para TopBar / cabeçalho
-     * @param cardSlot Slot customizado para a visualização do cartão
-     */
     @Composable
     fun Create(
         modifier: Modifier = Modifier,
-        viewModel: BaseCardManagementViewModel = FakeCardManagementViewModel(),
-        headerSlot: (@Composable () -> Unit)? = null,
-        cardSlot: (@Composable () -> Unit)? = null
+        customFormSlot: (@Composable () -> Unit)? = null,
+        onPaymentSuccess: () -> Unit = {}
     ) {
-        WgcCardManagementTemplate(
+        WgcCardScreenFactory(
             modifier = modifier,
-            viewModel = viewModel,
-            headerSlot = headerSlot,
-            cardSlot = cardSlot
+            customFormSlot = customFormSlot,
+            onPaymentSuccess = onPaymentSuccess
         )
     }
 }

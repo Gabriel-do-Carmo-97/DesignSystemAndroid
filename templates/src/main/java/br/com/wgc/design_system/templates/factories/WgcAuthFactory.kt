@@ -1,61 +1,21 @@
 package br.com.wgc.design_system.templates.factories
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-import br.com.wgc.design_system.components.auth.WgcBrandAuthHeader
-import br.com.wgc.design_system.components.auth.WgcOtpCodeInput
-import br.com.wgc.design_system.components.auth.WgcSocialLoginButtons
-import br.com.wgc.design_system.components.buttons.WgcButton
-import br.com.wgc.design_system.components.buttons.WgcButtonVariant
-import br.com.wgc.design_system.components.fields.SimpleTextField
+import br.com.wgc.design_system.factories.auth.WgcLoginFactory
+import br.com.wgc.design_system.factories.auth.WgcLoginVariant
+import br.com.wgc.design_system.factories.auth.WgcOtpFactory
+import br.com.wgc.design_system.factories.auth.WgcOtpVariant
+import br.com.wgc.design_system.factories.auth.WgcRegisterFactory
+import br.com.wgc.design_system.factories.auth.WgcRegisterVariant
+import br.com.wgc.design_system.factories.auth.WgcResetPasswordFactory
+import br.com.wgc.design_system.factories.auth.WgcResetPasswordVariant
 import br.com.wgc.design_system.templates.brand.WgcBrand
-import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.FakeGlobalMarketplaceAuthViewModel
-import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.globalmarketplace.auth.WgcGlobalMarketplaceResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.fooddelivery.auth.FakeFoodDeliveryAuthViewModel
-import br.com.wgc.design_system.templates.screens.fooddelivery.auth.WgcFoodDeliveryLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.fooddelivery.auth.WgcFoodDeliveryRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.fooddelivery.auth.WgcFoodDeliveryResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.FakeMarketplaceAuthViewModel
-import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.WgcMarketplaceLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.WgcMarketplaceRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.marketplacescreen.auth.WgcMarketplaceResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.FakeQuickFoodDeliveryAuthViewModel
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishForgotPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.trendfashion.auth.WgcStylishRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.quickfooddelivery.auth.WgcQuickFoodDeliveryResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.FakeDealMarketplaceAuthViewModel
-import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.WgcDealMarketplaceLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.WgcDealMarketplaceRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.dealmarketplace.auth.WgcDealMarketplaceResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.ridehailing.auth.FakeRideHailingAuthViewModel
-import br.com.wgc.design_system.templates.screens.ridehailing.auth.WgcRideHailingLoginScreenTemplate
-import br.com.wgc.design_system.templates.screens.ridehailing.auth.WgcRideHailingRegisterScreenTemplate
-import br.com.wgc.design_system.templates.screens.ridehailing.auth.WgcRideHailingResetPasswordScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.klok.WgcKlokAuthScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.split.WgcSplitCardAuthScreenTemplate
-import br.com.wgc.design_system.templates.screens.community.wave.WgcWaveAuthScreenTemplate
+import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Fluxos de autenticação disponíveis nas fábricas.
+ * Fluxos de autenticação legados disponíveis em [WgcAuthFactory].
  */
 enum class WgcAuthFlow {
     Login,
@@ -66,9 +26,14 @@ enum class WgcAuthFlow {
 
 /**
  * Fábrica Universal de Telas de Autenticação (WgcAuthFactory).
- * Permite alternar instantaneamente de marca ([brand]) e fluxo ([flow]) com defaults completos de produção.
- * Permite também substituição granular de blocos estruturais via Slots ([headerSlot], [inputSlot], [primaryButtonSlot], [footerSlot]).
+ *
+ * Substituída pelas fábricas especializadas [WgcLoginFactory], [WgcRegisterFactory],
+ * [WgcResetPasswordFactory] e [WgcOtpFactory].
  */
+@Deprecated(
+    message = "Utilize as fábricas especializadas WgcLoginFactory, WgcRegisterFactory ou WgcAuthFlowCoordinator",
+    replaceWith = ReplaceWith("WgcLoginFactory(modifier)")
+)
 @Composable
 fun WgcAuthFactory(
     modifier: Modifier = Modifier,
@@ -83,436 +48,83 @@ fun WgcAuthFactory(
     onNavigateToResetPassword: () -> Unit = {},
     onVerified: () -> Unit = {}
 ) {
-    val hasCustomSlots = headerSlot != null || inputSlot != null || primaryButtonSlot != null || footerSlot != null
+    val loginVariant = WgcLoginVariant.entries.find { it.associatedBrand == brand } ?: WgcLoginVariant.STANDARD
+    val registerVariant = WgcRegisterVariant.entries.find { it.associatedBrand == brand } ?: WgcRegisterVariant.STANDARD
+    val resetVariant = WgcResetPasswordVariant.entries.find { it.associatedBrand == brand }
+        ?: WgcResetPasswordVariant.STANDARD
+    val otpVariant = WgcOtpVariant.entries.find { it.associatedBrand == brand } ?: WgcOtpVariant.STANDARD
 
-    if (!hasCustomSlots) {
-        // Delega diretamente para os templates oficiais padronizados com seus ViewModels default
-        when (brand) {
-            WgcBrand.FoodDelivery -> {
-                val vm = FakeFoodDeliveryAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcFoodDeliveryLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcFoodDeliveryRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcFoodDeliveryResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.RideHailing -> {
-                val vm = FakeRideHailingAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcRideHailingLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcRideHailingRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcRideHailingResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.Marketplace -> {
-                val vm = FakeMarketplaceAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.QuickFoodDelivery -> {
-                val vm = FakeQuickFoodDeliveryAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcQuickFoodDeliveryLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcQuickFoodDeliveryRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcQuickFoodDeliveryResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.DealMarketplace -> {
-                val vm = FakeDealMarketplaceAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcDealMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcDealMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcDealMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.GlobalMarketplace -> {
-                val vm = FakeGlobalMarketplaceAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcGlobalMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcGlobalMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcGlobalMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-            WgcBrand.ClockAuth -> {
-                WgcKlokAuthScreenTemplate(
-                    onNavigateToForgotPassword = onNavigateToResetPassword
-                )
-            }
-            WgcBrand.WaveAuth -> {
-                WgcWaveAuthScreenTemplate(
-                    onNavigateToForgotPassword = onNavigateToResetPassword
-                )
-            }
-            WgcBrand.SplitAuth -> {
-                WgcSplitCardAuthScreenTemplate(
-                    onNavigateToForgotPassword = onNavigateToResetPassword
-                )
-            }
-            WgcBrand.TrendFashion -> {
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcStylishLoginScreenTemplate(
-                        onLoginClick = onNavigateToRegister,
-                        onForgotPasswordClick = onNavigateToResetPassword,
-                        onSignUpClick = onNavigateToRegister
-                    )
-                    WgcAuthFlow.Register -> WgcStylishRegisterScreenTemplate(
-                        onCreateAccountClick = onNavigateToLogin,
-                        onSignInClick = onNavigateToLogin
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcStylishForgotPasswordScreenTemplate(
-                        onSubmitClick = onNavigateToLogin,
-                        onBackToLoginClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.MegaStore -> {
-                when (flow) {
-                    WgcAuthFlow.Login -> br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeLoginScreenTemplate(
-                        onContinueClick = onNavigateToRegister,
-                        onCreateAccountClick = onNavigateToRegister
-                    )
-                    WgcAuthFlow.Register -> br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeStartScreenTemplate(
-                        onGetStartedClick = onNavigateToRegister,
-                        onLoginClick = onNavigateToLogin
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.megastore.auth.WgcShoppeOtpRecoveryScreenTemplate(
-                        onSubmitClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.Retail -> {
-                when (flow) {
-                    WgcAuthFlow.Login -> br.com.wgc.design_system.templates.screens.retail.auth.WgcKutukuLoginScreen(
-                        onSignInClick = onNavigateToRegister,
-                        onSignUpClick = onNavigateToRegister,
-                        onForgotPasswordClick = onNavigateToResetPassword
-                    )
-                    WgcAuthFlow.Register -> br.com.wgc.design_system.templates.screens.retail.auth.WgcKutukuLoginScreen(
-                        onSignInClick = onNavigateToLogin,
-                        onSignUpClick = onNavigateToLogin,
-                        onForgotPasswordClick = onNavigateToResetPassword
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.retail.auth.WgcKutukuOnboardingScreen(
-                        onGetStartedClick = onNavigateToLogin,
-                        onSignInClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.Apparel -> {
-                when (flow) {
-                    WgcAuthFlow.Login -> br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeSignInTemplate(
-                        onContinueClick = onNavigateToRegister,
-                        onCreateAccountClick = onNavigateToRegister,
-                        onForgotPasswordClick = onNavigateToResetPassword
-                    )
-                    WgcAuthFlow.Register -> br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeSignInTemplate(
-                        onContinueClick = onNavigateToLogin,
-                        onCreateAccountClick = onNavigateToLogin,
-                        onForgotPasswordClick = onNavigateToResetPassword
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeForgotPasswordTemplate(
-                        onContinueClick = onNavigateToLogin,
-                        onBackClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.CuratedMarket -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register -> br.com.wgc.design_system.templates.screens.curatedmarket.profile.WgcTasselProfileTemplate(
-                        onBackClick = onNavigateToLogin
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.curatedmarket.profile.WgcTasselProfileTemplate(
-                        onBackClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.FreshGrocery -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.freshgrocery.splash.WgcFreshGrocerySplashTemplate(
-                        onGetStartedClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.GadgetShop -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.gadgetshop.onboarding.WgcNexkartOnboardingTemplate(
-                        onNextClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.QuickShop -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.quickshop.onboarding.WgcShopEaseOnboardingTemplate(
-                        onNextClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.PersonalFinance -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.personalfinance.onboarding.WgcOrganizzeOnboardingTemplate(
-                        onGetStartedClick = onNavigateToRegister,
-                        onLoginClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.PropertyRental -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.propertyrental.profile.WgcPropertyRentalProfileTemplate(
-                        onMyVisitsClick = onNavigateToLogin,
-                        onMyProposalsClick = onNavigateToRegister
-                    )
-                }
-            }
-            WgcBrand.PropertyListing -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.propertylisting.profile.WgcPropertyListingProfileTemplate(
-                        onMessagesClick = onNavigateToLogin,
-                        onAdvertisePropertyClick = onNavigateToRegister
-                    )
-                }
-            }
-            WgcBrand.PropertyClassifieds -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.propertyclassifieds.profile.WgcZapProfileTemplate(
-                        onAnnouncePropertyClick = onNavigateToRegister,
-                        onMyPropertiesClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.GymFitness -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.gymfitness.profile.WgcGymFitnessProfilePassTemplate(
-                        user = br.com.wgc.design_system.templates.screens.gymfitness.model.GymFitnessMockData.mockUser,
-                        onBackClick = onNavigateToLogin,
-                        onManagePlan = onNavigateToRegister
-                    )
-                }
-            }
-            WgcBrand.CorporateWellness -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.corporatewellness.plans.WgcCorporateWellnessPlansTemplate(
-                        plans = br.com.wgc.design_system.templates.screens.corporatewellness.model.CorporateWellnessMockData.mockPlans,
-                        currentTier = br.com.wgc.design_system.components.cards.WgcCorporateWellnessPlanTier.GOLD,
-                        onBackClick = onNavigateToLogin
-                    )
-                }
-            }
-            WgcBrand.GuidedTraining -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.guidedtraining.activity.WgcNtcActivityTemplate(
-                        stats = br.com.wgc.design_system.templates.screens.guidedtraining.model.GuidedTrainingMockData.mockStats
-                    )
-                }
-            }
-            WgcBrand.Hypermarket -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.hypermarket.discounts.WgcExtraDiscountsTemplate(
-                        coupons = br.com.wgc.design_system.templates.screens.hypermarket.model.HypermarketMockData.mockCoupons,
-                        userCpfMasked = br.com.wgc.design_system.templates.screens.hypermarket.model.HypermarketMockData.mockUser.cpfMasked
-                    )
-                }
-            }
-            WgcBrand.PremiumGrocery -> {
-                when (flow) {
-                    WgcAuthFlow.Login,
-                    WgcAuthFlow.Register,
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.premiumgrocery.profile.WgcPdaClienteMaisProfileTemplate(
-                        userProfile = br.com.wgc.design_system.templates.screens.premiumgrocery.model.PremiumGroceryMockData.defaultUser
-                    )
-                }
-            }
-            WgcBrand.Boutique -> {
-                when (flow) {
-                    WgcAuthFlow.Login -> br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaSignInScreenTemplate(
-                        onEmailSignInClick = onNavigateToRegister,
-                        onCreateAccountClick = onNavigateToRegister
-                    )
-                    WgcAuthFlow.Register -> br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaEmailSignInTemplate(
-                        onSignInClick = onNavigateToLogin
-                    )
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> br.com.wgc.design_system.templates.screens.boutique.auth.WgcLazaIntroScreenTemplate(
-                        onGetStartedClick = onNavigateToLogin,
-                        onSkipClick = onNavigateToLogin
-                    )
-                }
-            }
-            else -> {
-                val vm = FakeDealMarketplaceAuthViewModel()
-                when (flow) {
-                    WgcAuthFlow.Login -> WgcDealMarketplaceLoginScreenTemplate(vm, onNavigateToRegister, onNavigateToResetPassword)
-                    WgcAuthFlow.Register -> WgcDealMarketplaceRegisterScreenTemplate(vm, onNavigateToLogin)
-                    WgcAuthFlow.ResetPassword,
-                    WgcAuthFlow.OtpVerification -> WgcDealMarketplaceResetPasswordScreenTemplate(vm, onNavigateToLogin)
-                }
-            }
-        }
-        return
-    }
-
-    // Renderização com suporte a slots granulares e fallback sensato
-    Scaffold(modifier = modifier.fillMaxSize()) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
-        ) {
-            // Header Slot
-            if (headerSlot != null) {
-                headerSlot()
-            } else {
-                WgcBrandAuthHeader(
-                    brandName = brand.brandName,
-                    brandLogoText = brand.brandLogoText,
-                    brandColor = brand.primaryColor,
-                    title = when (flow) {
-                        WgcAuthFlow.Login -> "Acesse sua conta no ${brand.brandName}"
-                        WgcAuthFlow.Register -> "Crie sua conta no ${brand.brandName}"
-                        WgcAuthFlow.ResetPassword -> "Recuperar Conta ${brand.brandName}"
-                        WgcAuthFlow.OtpVerification -> "Validação de Segurança"
-                    },
-                    subtitle = when (flow) {
-                        WgcAuthFlow.Login -> "Como deseja continuar?"
-                        WgcAuthFlow.Register -> "Preencha seus dados para começar"
-                        WgcAuthFlow.ResetPassword -> "Digite o código enviado por SMS/E-mail"
-                        WgcAuthFlow.OtpVerification -> "Insira o código de 6 dígitos recebido"
-                    }
-                )
-            }
-
-            // Input Slot
-            if (inputSlot != null) {
-                inputSlot()
-            } else {
-                when (flow) {
-                    WgcAuthFlow.Login -> {
-                        SimpleTextField(
-                            value = "",
-                            onValueChange = {},
-                            label = "E-mail ou número de celular"
-                        )
-                    }
-                    WgcAuthFlow.Register -> {
-                        SimpleTextField(value = "", onValueChange = {}, label = "Nome completo")
-                        SimpleTextField(value = "", onValueChange = {}, label = "E-mail ou Celular")
-                        SimpleTextField(value = "", onValueChange = {}, label = "Senha", isPasswordField = true)
-                    }
-                    WgcAuthFlow.ResetPassword -> {
-                        SimpleTextField(value = "", onValueChange = {}, label = "E-mail cadastrado")
-                    }
-                    WgcAuthFlow.OtpVerification -> {
-                        WgcOtpCodeInput(otpCode = "", onOtpCodeChange = {})
-                    }
-                }
-            }
-
-            // Primary Button Slot
-            if (primaryButtonSlot != null) {
-                primaryButtonSlot()
-            } else {
-                WgcButton(
-                    text = when (flow) {
-                        WgcAuthFlow.Login -> "Continuar no ${brand.brandName}"
-                        WgcAuthFlow.Register -> "Cadastrar no ${brand.brandName}"
-                        WgcAuthFlow.ResetPassword -> "Redefinir Senha"
-                        WgcAuthFlow.OtpVerification -> "Confirmar Código"
-                    }
-                )
-            }
-
-            // Footer Slot
-            if (footerSlot != null) {
-                footerSlot()
-            } else {
-                when (flow) {
-                    WgcAuthFlow.Login -> {
-                        Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                            TextButton(onClick = onNavigateToResetPassword, modifier = Modifier.fillMaxWidth()) {
-                                Text("Esqueci minha senha / Verificar por SMS")
-                            }
-                            HorizontalDivider()
-                            WgcSocialLoginButtons()
-                            WgcButton(
-                                text = "Criar nova conta no ${brand.brandName}",
-                                variant = WgcButtonVariant.Outlined,
-                                onClick = onNavigateToRegister
-                            )
-                        }
-                    }
-                    WgcAuthFlow.Register -> {
-                        WgcButton(
-                            text = "Já tenho uma conta no ${brand.brandName}",
-                            variant = WgcButtonVariant.Ghost,
-                            onClick = onNavigateToLogin
-                        )
-                    }
-                    else -> {}
-                }
-            }
-        }
+    when (flow) {
+        WgcAuthFlow.Login -> WgcLoginFactory(
+            modifier = modifier,
+            variant = loginVariant,
+            headerSlot = headerSlot,
+            inputSlot = inputSlot,
+            primaryButtonSlot = primaryButtonSlot,
+            footerSlot = footerSlot,
+            onNavigateToRegister = onNavigateToRegister,
+            onNavigateToResetPassword = onNavigateToResetPassword,
+            onLoginSuccess = onVerified
+        )
+        WgcAuthFlow.Register -> WgcRegisterFactory(
+            modifier = modifier,
+            variant = registerVariant,
+            headerSlot = headerSlot,
+            inputSlot = inputSlot,
+            primaryButtonSlot = primaryButtonSlot,
+            footerSlot = footerSlot,
+            onNavigateToLogin = onNavigateToLogin,
+            onRegisterSuccess = onVerified
+        )
+        WgcAuthFlow.ResetPassword -> WgcResetPasswordFactory(
+            modifier = modifier,
+            variant = resetVariant,
+            headerSlot = headerSlot,
+            inputSlot = inputSlot,
+            primaryButtonSlot = primaryButtonSlot,
+            footerSlot = footerSlot,
+            onNavigateToLogin = onNavigateToLogin,
+            onSubmitSuccess = onNavigateToLogin
+        )
+        WgcAuthFlow.OtpVerification -> WgcOtpFactory(
+            modifier = modifier,
+            variant = otpVariant,
+            headerSlot = headerSlot,
+            otpInputSlot = inputSlot,
+            confirmButtonSlot = primaryButtonSlot,
+            onConfirmOtp = { onVerified() }
+        )
     }
 }
 
-@Preview(name = "WgcAuthFactory - Default Food Delivery", showBackground = true)
+@Preview(name = "WgcAuthFactory - Login Flow", showBackground = true)
 @Composable
-private fun WgcAuthFactoryDefaultPreview() {
-    WgcAuthFactory()
+private fun WgcAuthFactoryLoginPreview() {
+    WgcTheme {
+        WgcAuthFactory(flow = WgcAuthFlow.Login)
+    }
 }
 
-@Preview(name = "WgcAuthFactory - Ride Hailing Register", showBackground = true)
+@Preview(name = "WgcAuthFactory - Register Flow", showBackground = true)
 @Composable
-private fun WgcAuthFactoryRideHailingRegisterPreview() {
-    WgcAuthFactory(brand = WgcBrand.RideHailing, flow = WgcAuthFlow.Register)
+private fun WgcAuthFactoryRegisterPreview() {
+    WgcTheme {
+        WgcAuthFactory(brand = WgcBrand.FoodDelivery, flow = WgcAuthFlow.Register)
+    }
+}
+
+@Preview(name = "WgcAuthFactory - Reset Password Flow", showBackground = true)
+@Composable
+private fun WgcAuthFactoryResetPasswordPreview() {
+    WgcTheme {
+        WgcAuthFactory(brand = WgcBrand.FoodDelivery, flow = WgcAuthFlow.ResetPassword)
+    }
+}
+
+@Preview(name = "WgcAuthFactory - OTP Verification Flow", showBackground = true)
+@Composable
+private fun WgcAuthFactoryOtpVerificationPreview() {
+    WgcTheme {
+        WgcAuthFactory(brand = WgcBrand.FoodDelivery, flow = WgcAuthFlow.OtpVerification)
+    }
 }

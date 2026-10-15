@@ -59,6 +59,24 @@ open class FakeBiometricAuthViewModel(
 }
 
 /**
+ * Template corporativo para autenticação biométrica (WgcBiometricAuthTemplate) com ViewModel.
+ */
+@Composable
+fun WgcBiometricAuthTemplate(
+    viewModel: FakeBiometricAuthViewModel,
+    modifier: Modifier = Modifier,
+    customIllustrationSlot: (@Composable () -> Unit)? = null
+) {
+    WgcBiometricAuthTemplate(
+        uiState = viewModel.uiState,
+        onTriggerBiometrics = { viewModel.authenticate() },
+        onUsePinFallback = { viewModel.usePinFallback() },
+        modifier = modifier,
+        customIllustrationSlot = customIllustrationSlot
+    )
+}
+
+/**
  * Template corporativo para autenticação biométrica (WgcBiometricAuthTemplate).
  */
 @Composable

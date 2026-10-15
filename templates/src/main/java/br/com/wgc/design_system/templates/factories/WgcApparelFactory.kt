@@ -2,6 +2,7 @@ package br.com.wgc.design_system.templates.factories
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeForgotPasswordTemplate
 import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeResetPasswordSentTemplate
 import br.com.wgc.design_system.templates.screens.apparel.auth.WgcClotheeSignInTemplate
@@ -130,3 +131,47 @@ fun WgcApparelFactory(
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+private fun WgcApparelFactoryPreview() = WgcApparelFactory()
+
+@Preview(name = "WgcApparelFactory - SignIn", showBackground = true)
+@Composable
+private fun WgcApparelFactorySignInPreview() = WgcApparelFactory(screen = WgcApparelScreen.SignIn)
+
+@Preview(name = "WgcApparelFactory - ForgotPassword", showBackground = true)
+@Composable
+private fun WgcApparelFactoryForgotPasswordPreview() = WgcApparelFactory(screen = WgcApparelScreen.ForgotPassword)
+
+@Preview(name = "WgcApparelFactory - ResetPasswordSent", showBackground = true)
+@Composable
+private fun WgcApparelFactoryResetPasswordSentPreview() = WgcApparelFactory(screen = WgcApparelScreen.ResetPasswordSent)
+
+@Preview(name = "WgcApparelFactory - Home", showBackground = true)
+@Composable
+private fun WgcApparelFactoryHomePreview() = WgcApparelFactory(screen = WgcApparelScreen.Home)
+
+@Preview(name = "WgcApparelFactory - CategoryList", showBackground = true)
+@Composable
+private fun WgcApparelFactoryCategoryListPreview() = WgcApparelFactory(screen = WgcApparelScreen.CategoryList)
+
+@Preview(name = "WgcApparelFactory - ProductDetail", showBackground = true)
+@Composable
+private fun WgcApparelFactoryProductDetailPreview() = WgcApparelFactory(screen = WgcApparelScreen.ProductDetail)
+
+@Preview(name = "WgcApparelFactory - Cart", showBackground = true)
+@Composable
+private fun WgcApparelFactoryCartPreview() = WgcApparelFactory(screen = WgcApparelScreen.Cart)
+
+@Preview(name = "WgcApparelFactory - OrderPlaced", showBackground = true)
+@Composable
+private fun WgcApparelFactoryOrderPlacedPreview() = WgcApparelFactory(screen = WgcApparelScreen.OrderPlaced)
+
+@Preview(name = "WgcApparelFactory - TrackOrder", showBackground = true)
+@Composable
+private fun WgcApparelFactoryTrackOrderPreview() = WgcApparelFactory(screen = WgcApparelScreen.TrackOrder)
+
+@Preview(name = "WgcApparelFactory - Settings", showBackground = true)
+@Composable
+private fun WgcApparelFactorySettingsPreview() = WgcApparelFactory(screen = WgcApparelScreen.Settings)
