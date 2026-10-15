@@ -60,7 +60,7 @@ fun WgcPersonalFinanceBalanceCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.personalFinancePrimary)
+            containerColor = Color(WgcCoreDsColors.cyan3)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.xxs4.dp)
     ) {
@@ -166,7 +166,7 @@ fun WgcPersonalFinanceBalanceCard(
                             modifier = Modifier
                                 .size(WgcCoreDsSpacing.xl32.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.personalFinanceIncomeGreen)),
+                                .background(Color(WgcCoreDsColors.green26)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
@@ -206,7 +206,7 @@ fun WgcPersonalFinanceBalanceCard(
                             modifier = Modifier
                                 .size(WgcCoreDsSpacing.xl32.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.personalFinanceExpenseRed)),
+                                .background(Color(WgcCoreDsColors.red23)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(

@@ -59,7 +59,7 @@ fun WgcMobilityRideCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.mobilityYellow99)),
+                    .background(Color(WgcCoreDsColors.yellow3)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(

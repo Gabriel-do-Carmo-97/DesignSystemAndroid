@@ -23,7 +23,7 @@ fun WgcGloboplayHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.broadcastStreamingOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.orange36)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("globoplay • Ao Vivo e Sob Demanda", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }

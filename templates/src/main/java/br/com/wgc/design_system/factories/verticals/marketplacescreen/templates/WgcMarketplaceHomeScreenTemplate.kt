@@ -40,11 +40,11 @@ data class MarketplaceHomeUiState(
     val address: String = "Enviar para Gabriel - Av. Paulista, 1000",
     val searchQuery: String = "",
     val categories: List<WgcSquareCategoryItem> = listOf(
-        WgcSquareCategoryItem("1", "Ofertas", "⚡", Color(WgcCoreDsColors.hypermarketYellowLight)),
-        WgcSquareCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
-        WgcSquareCategoryItem("3", "Clube+", "⭐", Color(WgcCoreDsColors.groceryBlueLight)),
-        WgcSquareCategoryItem("4", "Moda", "👕", Color(WgcCoreDsColors.quickShopCardPurple)),
-        WgcSquareCategoryItem("5", "Veículos", "🚗", Color(WgcCoreDsColors.dentalTealLight))
+        WgcSquareCategoryItem("1", "Ofertas", "⚡", Color(WgcCoreDsColors.yellowLight5)),
+        WgcSquareCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.blueLight18)),
+        WgcSquareCategoryItem("3", "Clube+", "⭐", Color(WgcCoreDsColors.blueLight20)),
+        WgcSquareCategoryItem("4", "Moda", "👕", Color(WgcCoreDsColors.pinkLight1)),
+        WgcSquareCategoryItem("5", "Veículos", "🚗", Color(WgcCoreDsColors.cyanLight3))
     ),
     val products: List<MarketplaceProduct> = listOf(
         MarketplaceProduct("1", "Smart TV 50\" 4K UHD", "R$ 2.499", "R$ 1.899", "24% OFF", "em 10x R$ 189,90 sem juros"),
@@ -91,7 +91,7 @@ fun WgcMarketplaceHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(WgcCoreDsColors.marketplaceBgGray))
+                .background(Color(WgcCoreDsColors.grayLight6))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -109,7 +109,7 @@ fun WgcMarketplaceHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.marketplaceBlue))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blue9))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
@@ -131,7 +131,7 @@ fun WgcMarketplaceHomeScreenContent(
                         text = "Ofertas do Dia ⚡",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.grey900)
+                        color = Color(WgcCoreDsColors.gray900)
                     )
                     Text(
                         text = "Ver todas",

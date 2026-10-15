@@ -73,11 +73,11 @@ fun WgcExtraProductCard(
             .fillMaxWidth()
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.hypermarketBorder)
+            color = Color(WgcCoreDsColors.blueLight6)
         )
     ) {
         Column(
@@ -95,7 +95,7 @@ fun WgcExtraProductCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.hypermarketRed))
+                        .background(Color(WgcCoreDsColors.red12))
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                 ) {
                     Text(
@@ -112,17 +112,17 @@ fun WgcExtraProductCard(
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                             .background(
                                 if (isDiscountActivated) {
-                                    Color(WgcCoreDsColors.hypermarketSuccessGreenLight)
+                                    Color(WgcCoreDsColors.greenLight10)
                                 } else {
-                                    Color(WgcCoreDsColors.hypermarketYellowLight)
+                                    Color(WgcCoreDsColors.yellowLight5)
                                 }
                             )
                             .border(
                                 width = WgcCoreDsSize.s1.dp,
                                 color = if (isDiscountActivated) {
-                                    Color(WgcCoreDsColors.hypermarketSuccessGreen)
+                                    Color(WgcCoreDsColors.green4)
                                 } else {
-                                    Color(WgcCoreDsColors.hypermarketYellow)
+                                    Color(WgcCoreDsColors.yellow5)
                                 },
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                             )
@@ -135,18 +135,18 @@ fun WgcExtraProductCard(
                             imageVector = if (isDiscountActivated) Icons.Default.Check else Icons.Default.LocalOffer,
                             contentDescription = null,
                             tint = if (isDiscountActivated) {
-                                Color(WgcCoreDsColors.hypermarketSuccessGreen)
+                                Color(WgcCoreDsColors.green4)
                             } else {
-                                Color(WgcCoreDsColors.hypermarketRed)
+                                Color(WgcCoreDsColors.red12)
                             },
                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                         )
                         Text(
                             text = if (isDiscountActivated) "ATIVADO NO CPF" else "ATIVAR DESCONTO",
                             color = if (isDiscountActivated) {
-                                Color(WgcCoreDsColors.hypermarketSuccessGreen)
+                                Color(WgcCoreDsColors.green4)
                             } else {
-                                Color(WgcCoreDsColors.hypermarketDark)
+                                Color(WgcCoreDsColors.grayDark7)
                             },
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold
@@ -164,13 +164,13 @@ fun WgcExtraProductCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s100.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.hypermarketBackground)),
+                        .background(Color(WgcCoreDsColors.blueLight33)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.hypermarketPlaceholder),
+                        tint = Color(WgcCoreDsColors.blueLight8),
                         modifier = Modifier.size(WgcCoreDsSize.s40.dp)
                     )
                 }
@@ -180,7 +180,7 @@ fun WgcExtraProductCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
                 Text(
                     text = name,
-                    color = Color(WgcCoreDsColors.hypermarketDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 2,
@@ -189,7 +189,7 @@ fun WgcExtraProductCard(
                 )
                 Text(
                     text = unitDescription,
-                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    color = Color(WgcCoreDsColors.blue27),
                     fontSize = 11.sp
                 )
             }
@@ -198,7 +198,7 @@ fun WgcExtraProductCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
                 Text(
                     text = "De $regularPrice",
-                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    color = Color(WgcCoreDsColors.blue27),
                     fontSize = 11.sp,
                     textDecoration = TextDecoration.LineThrough
                 )
@@ -209,7 +209,7 @@ fun WgcExtraProductCard(
                 ) {
                     Text(
                         text = clubPrice,
-                        color = Color(WgcCoreDsColors.hypermarketRed),
+                        color = Color(WgcCoreDsColors.red12),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Black
                     )
@@ -217,12 +217,12 @@ fun WgcExtraProductCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.hypermarketYellow))
+                            .background(Color(WgcCoreDsColors.yellow5))
                             .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         Text(
                             text = "CLUBE EXTRA",
-                            color = Color(WgcCoreDsColors.hypermarketDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 8.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 0.5.sp
@@ -240,7 +240,7 @@ fun WgcExtraProductCard(
                         .height(WgcCoreDsSize.s36.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.hypermarketRed),
+                        containerColor = Color(WgcCoreDsColors.red12),
                         contentColor = Color.White
                     )
                 ) {
@@ -266,10 +266,10 @@ fun WgcExtraProductCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s36.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.hypermarketBackground))
+                        .background(Color(WgcCoreDsColors.blueLight33))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.hypermarketBorder),
+                            color = Color(WgcCoreDsColors.blueLight6),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         )
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp),
@@ -283,14 +283,14 @@ fun WgcExtraProductCard(
                         Icon(
                             imageVector = Icons.Default.Remove,
                             contentDescription = "Diminuir",
-                            tint = Color(WgcCoreDsColors.hypermarketRed),
+                            tint = Color(WgcCoreDsColors.red12),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                     }
 
                     Text(
                         text = "$quantityInCart",
-                        color = Color(WgcCoreDsColors.hypermarketDark),
+                        color = Color(WgcCoreDsColors.grayDark7),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -302,7 +302,7 @@ fun WgcExtraProductCard(
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = "Aumentar",
-                            tint = Color(WgcCoreDsColors.hypermarketRed),
+                            tint = Color(WgcCoreDsColors.red12),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                     }

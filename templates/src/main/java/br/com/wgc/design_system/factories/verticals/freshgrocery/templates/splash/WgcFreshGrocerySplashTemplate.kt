@@ -48,9 +48,9 @@ fun WgcFreshGrocerySplashTemplate(
 ) {
     val gradient = Brush.verticalGradient(
         colors = listOf(
-            Color(WgcCoreDsColors.megaStorerSecondary),
-            Color(WgcCoreDsColors.megaStorerPrimary),
-            Color(WgcCoreDsColors.megaStorerPrimaryDark)
+            Color(WgcCoreDsColors.green15),
+            Color(WgcCoreDsColors.green6),
+            Color(WgcCoreDsColors.greenDark10)
         )
     )
 

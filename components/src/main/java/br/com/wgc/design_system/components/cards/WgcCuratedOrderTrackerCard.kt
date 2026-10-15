@@ -59,7 +59,7 @@ fun WgcCuratedOrderTrackerCard(
             .background(Color.White)
             .border(
                 width = WgcCoreDsSpacing.xxxs2.dp,
-                color = Color(WgcCoreDsColors.curatedMarketSurface),
+                color = Color(WgcCoreDsColors.blueLight26),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp)
             )
             .padding(WgcCoreDsSpacing.lg24.dp)
@@ -79,8 +79,8 @@ fun WgcCuratedOrderTrackerCard(
                         .size(WgcCoreDsSize.s12.dp)
                         .clip(CircleShape)
                         .background(
-                            if (isCompleted) Color(WgcCoreDsColors.curatedMarketPrimary)
-                            else Color(WgcCoreDsColors.curatedMarketBorder)
+                            if (isCompleted) Color(WgcCoreDsColors.blue37)
+                            else Color(WgcCoreDsColors.blueLight5)
                         )
                 )
 
@@ -92,8 +92,8 @@ fun WgcCuratedOrderTrackerCard(
                             .weight(1f)
                             .height(WgcCoreDsSpacing.xxxs2.dp)
                             .background(
-                                if (lineActive) Color(WgcCoreDsColors.curatedMarketPrimary)
-                                else Color(WgcCoreDsColors.curatedMarketBorder)
+                                if (lineActive) Color(WgcCoreDsColors.blue37)
+                                else Color(WgcCoreDsColors.blueLight5)
                             )
                     )
                 }
@@ -107,7 +107,7 @@ fun WgcCuratedOrderTrackerCard(
             text = statusText,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.curatedMarketDark)
+            color = Color(WgcCoreDsColors.grayDark9)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -115,7 +115,7 @@ fun WgcCuratedOrderTrackerCard(
         Text(
             text = arrivalEstimate,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+            color = Color(WgcCoreDsColors.gray10)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -125,7 +125,7 @@ fun WgcCuratedOrderTrackerCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                .background(Color(WgcCoreDsColors.blueLight26))
                 .padding(WgcCoreDsSpacing.sm12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -146,7 +146,7 @@ fun WgcCuratedOrderTrackerCard(
                     Text(
                         text = productTitle.take(2).uppercase(),
                         style = MaterialTheme.typography.titleSmall,
-                        color = Color(WgcCoreDsColors.curatedMarketPrimary),
+                        color = Color(WgcCoreDsColors.blue37),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -159,13 +159,13 @@ fun WgcCuratedOrderTrackerCard(
                     text = productTitle,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                 Text(
                     text = productDetails,
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                    color = Color(WgcCoreDsColors.gray10)
                 )
             }
         }
@@ -184,7 +184,7 @@ fun WgcCuratedOrderTrackerCard(
                 text = "More info",
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.curatedMarketDark)
+                color = Color(WgcCoreDsColors.grayDark9)
             )
         }
 
@@ -197,7 +197,7 @@ fun WgcCuratedOrderTrackerCard(
                 .height(WgcCoreDsSize.s48.dp),
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(WgcCoreDsColors.curatedMarketSurface))
+                containerColor = Color(WgcCoreDsColors.blueLight26))
         ) {
             Text(
                 text = "Cancel order",

@@ -4,17 +4,17 @@ package br.com.wgc.design_system.core
  * Tokens de coreografia de movimento e transições escalonadas (stagger) para o Design System.
  */
 object WgcMotionChoreography {
-    const val staggerDelayFast = 40
-    const val staggerDelayNormal = 75
-    const val staggerDelaySlow = 120
+    const val staggerDelayFast = CoreConstants.MotionChoreography.STAGGER_DELAY_FAST
+    const val staggerDelayNormal = CoreConstants.MotionChoreography.STAGGER_DELAY_NORMAL
+    const val staggerDelaySlow = CoreConstants.MotionChoreography.STAGGER_DELAY_SLOW
 
-    const val cascadeDurationShort = 200
-    const val cascadeDurationMedium = 350
-    const val cascadeDurationLong = 500
+    const val cascadeDurationShort = CoreConstants.MotionChoreography.CASCADE_DURATION_SHORT
+    const val cascadeDurationMedium = CoreConstants.MotionChoreography.CASCADE_DURATION_MEDIUM
+    const val cascadeDurationLong = CoreConstants.MotionChoreography.CASCADE_DURATION_LONG
 
     // Standard Cubic Bezier timing curves
-    const val easeInOutCubic = "cubic-bezier(0.65, 0, 0.35, 1)"
-    const val easeOutQuad = "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    const val easeInOutCubic = CoreConstants.MotionChoreography.EASE_IN_OUT_CUBIC
+    const val easeOutQuad = CoreConstants.MotionChoreography.EASE_OUT_QUAD
 
     /**
      * Calcula o delay escalonado para um item de lista com base em seu índice.

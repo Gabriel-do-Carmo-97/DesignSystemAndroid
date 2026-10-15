@@ -44,9 +44,9 @@ fun WgcPharmacyPrescriptionCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainNavyLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueLight13)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pharmacyChainBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight8))
     ) {
         Column(
             modifier = Modifier
@@ -61,13 +61,13 @@ fun WgcPharmacyPrescriptionCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.pharmacyChainNavy)),
+                        .background(Color(WgcCoreDsColors.blueDark16)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.Description,
                         contentDescription = "Receita Médica",
-                        tint = Color(WgcCoreDsColors.pharmacyChainSurface),
+                        tint = Color(WgcCoreDsColors.white),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                 }
@@ -79,12 +79,12 @@ fun WgcPharmacyPrescriptionCard(
                         text = "Enviar Receita Médica Digital",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pharmacyChainNavyDark)
+                        color = Color(WgcCoreDsColors.blueDark1)
                     )
                     Text(
                         text = "PDF, foto de receita ou link SMS com certificado",
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                        color = Color(WgcCoreDsColors.blue20)
                     )
                 }
             }

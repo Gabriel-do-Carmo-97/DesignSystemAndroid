@@ -104,7 +104,7 @@ fun WgcCorporateWellnessCheckInTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.wellnessDark),
+                                    tint = Color(WgcCoreDsColors.grayDark7),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -112,14 +112,14 @@ fun WgcCorporateWellnessCheckInTemplate(
                         Column {
                             Text(
                                 text = "CHECK-IN DIÁRIO",
-                                color = Color(WgcCoreDsColors.wellnessCoral),
+                                color = Color(WgcCoreDsColors.red26),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Validação de Entrada",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -133,8 +133,8 @@ fun WgcCorporateWellnessCheckInTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessCheckInGreenLight)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessCheckInGreen).copy(alpha = 0.3f))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.greenLight11)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.green17).copy(alpha = 0.3f))
                 ) {
                     Row(
                         modifier = Modifier
@@ -146,12 +146,12 @@ fun WgcCorporateWellnessCheckInTemplate(
                         Icon(
                             imageVector = Icons.Default.LocationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                            tint = Color(WgcCoreDsColors.green17),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Text(
                             text = "Geolocalização verificada: Você está na unidade credenciada",
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -178,8 +178,8 @@ fun WgcCorporateWellnessCheckInTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Column(
                         modifier = Modifier
@@ -190,7 +190,7 @@ fun WgcCorporateWellnessCheckInTemplate(
                     ) {
                         Text(
                             text = "QR CODE DE ENTRADA",
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
                             letterSpacing = 1.sp
@@ -200,7 +200,7 @@ fun WgcCorporateWellnessCheckInTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s140.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.wellnessCreamBg))
+                                .background(Color(WgcCoreDsColors.orangeLight14))
                                 .clickable { onConfirmCheckIn() }
                                 .padding(WgcCoreDsSpacing.sm12.dp),
                             contentAlignment = Alignment.Center
@@ -208,14 +208,14 @@ fun WgcCorporateWellnessCheckInTemplate(
                             Icon(
                                 imageVector = Icons.Default.QrCode,
                                 contentDescription = "QR Code Check-in",
-                                tint = Color(WgcCoreDsColors.wellnessForest),
+                                tint = Color(WgcCoreDsColors.cyanDark2),
                                 modifier = Modifier.size(WgcCoreDsSize.s120.dp)
                             )
                         }
 
                         Text(
                             text = "Aproxime o leitor da catraca ou mostre na recepção.",
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 12.sp
                         )
                     }
@@ -229,8 +229,8 @@ fun WgcCorporateWellnessCheckInTemplate(
                         .fillMaxWidth()
                         .padding(bottom = WgcCoreDsSpacing.xl32.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Column(
                         modifier = Modifier
@@ -245,12 +245,12 @@ fun WgcCorporateWellnessCheckInTemplate(
                             Icon(
                                 imageVector = Icons.Default.Info,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.wellnessCoral),
+                                tint = Color(WgcCoreDsColors.red26),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                             Text(
                                 text = "Como funciona a sua entrada",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -260,7 +260,7 @@ fun WgcCorporateWellnessCheckInTemplate(
                             text = "1. Você tem direito a 1 check-in presencial por dia em qualquer academia participante do seu plano.\n" +
                                 "2. Caso a unidade não utilize catraca com leitor digital, informe o código de 5 dígitos para o atendente.\n" +
                                 "3. O check-in é renovado automaticamente todas as noites à meia-noite.",
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 12.sp,
                             lineHeight = 18.sp
                         )

@@ -40,9 +40,9 @@ fun WgcFitnessBottomNav(
     modifier: Modifier = Modifier
 ) {
     NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.trainingDarkGray)),
+        modifier = modifier.background(Color(WgcCoreDsColors.grayDark11)),
         tonalElevation = WgcCoreDsElevation.level3.dp,
-        containerColor = Color(WgcCoreDsColors.trainingDarkGray)
+        containerColor = Color(WgcCoreDsColors.grayDark11)
     ) {
         WgcFitnessNavItem.entries.forEach { item ->
             val isSelected = selectedItem == item
@@ -64,11 +64,11 @@ fun WgcFitnessBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.trainingBlack),
-                    selectedTextColor = Color(WgcCoreDsColors.trainingVolt),
-                    indicatorColor = Color(WgcCoreDsColors.trainingVolt),
-                    unselectedIconColor = Color(WgcCoreDsColors.trainingSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.trainingSecondaryText)
+                    selectedIconColor = Color(WgcCoreDsColors.grayDark3),
+                    selectedTextColor = Color(WgcCoreDsColors.green28),
+                    indicatorColor = Color(WgcCoreDsColors.green28),
+                    unselectedIconColor = Color(WgcCoreDsColors.gray12),
+                    unselectedTextColor = Color(WgcCoreDsColors.gray12)
                 )
             )
         }

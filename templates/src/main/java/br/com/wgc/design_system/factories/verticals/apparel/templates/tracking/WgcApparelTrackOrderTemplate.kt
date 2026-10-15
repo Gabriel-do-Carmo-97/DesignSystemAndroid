@@ -83,12 +83,12 @@ fun WgcClotheeTrackOrderTemplate(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.apparelSurface))
+                            .background(Color(WgcCoreDsColors.grayLight8))
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.apparelDark)
+                            tint = Color(WgcCoreDsColors.grayDark18)
                         )
                     }
 
@@ -98,7 +98,7 @@ fun WgcClotheeTrackOrderTemplate(
                         text = "Order $orderNumber",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
                 }
             }
@@ -121,7 +121,7 @@ fun WgcClotheeTrackOrderTemplate(
                 text = "Order Items",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark),
+                color = Color(WgcCoreDsColors.grayDark18),
                 modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.lg24.dp)
             )
 
@@ -132,7 +132,7 @@ fun WgcClotheeTrackOrderTemplate(
                     .fillMaxWidth()
                     .padding(horizontal = WgcCoreDsSpacing.lg24.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.apparelSurface))
+                    .background(Color(WgcCoreDsColors.grayLight8))
                     .clickable(onClick = onViewItemsClick)
                     .padding(WgcCoreDsSpacing.md16.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -141,13 +141,13 @@ fun WgcClotheeTrackOrderTemplate(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.apparelPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.purpleLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ReceiptLong,
                         contentDescription = "Itens",
-                        tint = Color(WgcCoreDsColors.apparelPrimary),
+                        tint = Color(WgcCoreDsColors.purple7),
                         modifier = Modifier.size(20.dp)
                     )
                 }
@@ -158,7 +158,7 @@ fun WgcClotheeTrackOrderTemplate(
                     text = "$itemCount items in package",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.apparelDark),
+                    color = Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.weight(1f)
                 )
 
@@ -166,7 +166,7 @@ fun WgcClotheeTrackOrderTemplate(
                     text = "View All",
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelPrimary)
+                    color = Color(WgcCoreDsColors.purple7)
                 )
 
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -174,7 +174,7 @@ fun WgcClotheeTrackOrderTemplate(
                 Icon(
                     imageVector = Icons.Default.ChevronRight,
                     contentDescription = "Ver itens",
-                    tint = Color(WgcCoreDsColors.apparelPrimary)
+                    tint = Color(WgcCoreDsColors.purple7)
                 )
             }
 
@@ -185,7 +185,7 @@ fun WgcClotheeTrackOrderTemplate(
                 text = "Shipping Details",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark),
+                color = Color(WgcCoreDsColors.grayDark18),
                 modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.lg24.dp)
             )
 
@@ -196,14 +196,14 @@ fun WgcClotheeTrackOrderTemplate(
                     .fillMaxWidth()
                     .padding(horizontal = WgcCoreDsSpacing.lg24.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.apparelSurface))
+                    .background(Color(WgcCoreDsColors.grayLight8))
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
                         imageVector = Icons.Default.LocalShipping,
                         contentDescription = "Entrega",
-                        tint = Color(WgcCoreDsColors.apparelDark),
+                        tint = Color(WgcCoreDsColors.grayDark18),
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -211,7 +211,7 @@ fun WgcClotheeTrackOrderTemplate(
                         text = "Standard Delivery",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
                 }
 
@@ -220,7 +220,7 @@ fun WgcClotheeTrackOrderTemplate(
                 Text(
                     text = shippingAddress.street,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.apparelSecondaryText)
+                    color = Color(WgcCoreDsColors.gray12)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -228,7 +228,7 @@ fun WgcClotheeTrackOrderTemplate(
                 Text(
                     text = shippingAddress.phoneNumber,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.apparelSecondaryText)
+                    color = Color(WgcCoreDsColors.gray12)
                 )
             }
 

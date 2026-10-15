@@ -30,7 +30,7 @@ fun WgcNeobankInvestTemplate(
             TopAppBar(
                 title = { Text("Caixinhas & Investimentos", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechPurple),
+                    containerColor = Color(WgcCoreDsColors.purple3),
                     titleContentColor = Color.White
                 )
             )
@@ -52,11 +52,11 @@ fun WgcNeobankInvestTemplate(
                         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
                     ) {
                         Text("Total guardado em Caixinhas", fontSize = 14.sp, color = Color.Gray)
-                        Text("R$ 35.651,30", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.fintechPurple))
+                        Text("R$ 35.651,30", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.purple3))
                         Button(
                             onClick = onCreateCaixinhaClick,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechPurple)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.purple3)),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Icon(Icons.Default.Add, contentDescription = null, tint = Color.White)

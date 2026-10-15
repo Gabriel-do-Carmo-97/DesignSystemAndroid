@@ -104,12 +104,12 @@ fun WgcTasselProfileTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                        .background(Color(WgcCoreDsColors.blueLight26))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -120,7 +120,7 @@ fun WgcTasselProfileTemplate(
                     text = "Profile",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -144,7 +144,7 @@ fun WgcTasselProfileTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s80.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface)),
+                            .background(Color(WgcCoreDsColors.blueLight26)),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!profile.avatarUrl.isNullOrEmpty()) {
@@ -158,7 +158,7 @@ fun WgcTasselProfileTemplate(
                                 text = profile.name.take(2).uppercase(),
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.curatedMarketPrimary)
+                                color = Color(WgcCoreDsColors.blue37)
                             )
                         }
                     }
@@ -169,7 +169,7 @@ fun WgcTasselProfileTemplate(
                         text = profile.name,
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.curatedMarketDark)
+                        color = Color(WgcCoreDsColors.grayDark9)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
@@ -177,7 +177,7 @@ fun WgcTasselProfileTemplate(
                     Text(
                         text = profile.handle,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                        color = Color(WgcCoreDsColors.gray10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -194,7 +194,7 @@ fun WgcTasselProfileTemplate(
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .border(
                                     width = WgcCoreDsSpacing.xxxs2.dp,
-                                    color = Color(WgcCoreDsColors.curatedMarketBorder),
+                                    color = Color(WgcCoreDsColors.blueLight5),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable(onClick = onFollowingClick)
@@ -205,7 +205,7 @@ fun WgcTasselProfileTemplate(
                                 text = "${profile.followingCount} Following",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(WgcCoreDsColors.curatedMarketDark)
+                                color = Color(WgcCoreDsColors.grayDark9)
                             )
                         }
 
@@ -214,7 +214,7 @@ fun WgcTasselProfileTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s40.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.curatedMarketPrimary))
+                                .background(Color(WgcCoreDsColors.blue37))
                                 .clickable(onClick = onSettingsClick),
                             contentAlignment = Alignment.Center
                         ) {
@@ -295,7 +295,7 @@ private fun TasselProfileMenuItem(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+            .background(Color(WgcCoreDsColors.blueLight26))
             .clickable(onClick = onClick)
             .padding(
                 horizontal = WgcCoreDsSpacing.md16.dp,
@@ -306,7 +306,7 @@ private fun TasselProfileMenuItem(
         Icon(
             imageVector = icon,
             contentDescription = title,
-            tint = Color(WgcCoreDsColors.curatedMarketDark),
+            tint = Color(WgcCoreDsColors.grayDark9),
             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
         )
 
@@ -316,7 +316,7 @@ private fun TasselProfileMenuItem(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.curatedMarketDark),
+            color = Color(WgcCoreDsColors.grayDark9),
             modifier = Modifier.weight(1f)
         )
 
@@ -324,7 +324,7 @@ private fun TasselProfileMenuItem(
             Text(
                 text = badge,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                color = Color(WgcCoreDsColors.gray10),
                 modifier = Modifier.padding(end = WgcCoreDsSpacing.xs8.dp)
             )
         }
@@ -332,7 +332,7 @@ private fun TasselProfileMenuItem(
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+            tint = Color(WgcCoreDsColors.gray10),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }

@@ -66,7 +66,7 @@ fun WgcStylishSplashScreenTemplate(
                     modifier = Modifier
                         .size(80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp))
-                        .background(Color(WgcCoreDsColors.trendFashionPink)),
+                        .background(Color(WgcCoreDsColors.pink4)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -85,13 +85,13 @@ fun WgcStylishSplashScreenTemplate(
                         fontWeight = FontWeight.Black,
                         letterSpacing = 1.sp
                     ),
-                    color = Color(WgcCoreDsColors.trendFashionPink)
+                    color = Color(WgcCoreDsColors.pink4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxl.dp))
 
                 CircularProgressIndicator(
-                    color = Color(WgcCoreDsColors.trendFashionPink),
+                    color = Color(WgcCoreDsColors.pink4),
                     strokeWidth = 3.dp,
                     modifier = Modifier.size(32.dp)
                 )
@@ -136,13 +136,13 @@ fun WgcStylishOnboardingScreenTemplate(
                 Text(
                     text = "$step/$totalSteps",
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
                 TextButton(onClick = onSkipClick) {
                     Text(
                         text = "Skip",
                         style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
             }
@@ -165,8 +165,8 @@ fun WgcStylishOnboardingScreenTemplate(
                                 .width(if (isCurrent) 28.dp else 8.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isCurrent) Color(WgcCoreDsColors.trendFashionDark)
-                                    else Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.4f)
+                                    if (isCurrent) Color(WgcCoreDsColors.blueDark19)
+                                    else Color(WgcCoreDsColors.gray17).copy(alpha = 0.4f)
                                 )
                         )
                         if (i < totalSteps) Spacer(modifier = Modifier.width(6.dp))
@@ -192,13 +192,13 @@ fun WgcStylishOnboardingScreenTemplate(
                 modifier = Modifier
                     .size(240.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.trendFashionPink).copy(alpha = 0.08f)),
+                    .background(Color(WgcCoreDsColors.pink4).copy(alpha = 0.08f)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ShoppingBag,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.trendFashionPink),
+                    tint = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier.size(100.dp)
                 )
             }
@@ -208,7 +208,7 @@ fun WgcStylishOnboardingScreenTemplate(
             Text(
                 text = title,
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark),
+                color = Color(WgcCoreDsColors.blueDark19),
                 textAlign = TextAlign.Center
             )
 
@@ -217,7 +217,7 @@ fun WgcStylishOnboardingScreenTemplate(
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.textSecondary),
+                color = Color(WgcCoreDsColors.gray6),
                 textAlign = TextAlign.Center
             )
         }
@@ -238,7 +238,7 @@ fun WgcStylishGetStartedScreenTemplate(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.trendFashionDark))
+            .background(Color(WgcCoreDsColors.blueDark19))
     ) {
         // Gradient overlay
         Box(
@@ -248,8 +248,8 @@ fun WgcStylishGetStartedScreenTemplate(
                     Brush.verticalGradient(
                         colors = listOf(
                             Color.Transparent,
-                            Color(WgcCoreDsColors.trendFashionDark).copy(alpha = 0.8f),
-                            Color(WgcCoreDsColors.trendFashionDark)
+                            Color(WgcCoreDsColors.blueDark19).copy(alpha = 0.8f),
+                            Color(WgcCoreDsColors.blueDark19)
                         )
                     )
                 )

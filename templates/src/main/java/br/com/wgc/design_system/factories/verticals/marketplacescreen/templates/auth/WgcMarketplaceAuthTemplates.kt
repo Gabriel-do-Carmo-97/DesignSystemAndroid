@@ -68,7 +68,7 @@ fun WgcMarketplaceRegisterScreenTemplate(viewModel: BaseMarketplaceAuthViewModel
             WgcBrandAuthHeader(
                 brandName = "Marketplace",
                 brandLogoText = "MP",
-                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.marketplaceYellow),
+                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.yellow8),
                 title = "Complete seus dados para se cadastrar",
                 subtitle = "Sua conta valerá para Marketplace e Pagamentos Integrados"
             )
@@ -97,7 +97,7 @@ fun WgcMarketplaceResetPasswordScreenTemplate(viewModel: BaseMarketplaceAuthView
             WgcBrandAuthHeader(
                 brandName = "Marketplace",
                 brandLogoText = "MP",
-                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.marketplaceYellow),
+                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.yellow8),
                 title = "Código de Segurança",
                 subtitle = "Digite o código enviado por e-mail/SMS para redefinir"
             )

@@ -61,9 +61,9 @@ fun WgcGymQrPassCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.gymDarkGray)
+            containerColor = Color(WgcCoreDsColors.grayDark7)
         ),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymYellow)),
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.orange23)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level6.dp)
     ) {
         Column(
@@ -82,20 +82,20 @@ fun WgcGymQrPassCard(
                 Column {
                     Text(
                         text = "GYM PASS ACCESS",
-                        color = Color(WgcCoreDsColors.gymYellow),
+                        color = Color(WgcCoreDsColors.orange23),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Black,
                         letterSpacing = 1.sp
                     )
                     Text(
                         text = studentName,
-                        color = Color(WgcCoreDsColors.gymTextPrimary),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 17.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "Unidade Base: $unitName",
-                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                        color = Color(WgcCoreDsColors.gray16),
                         fontSize = 11.sp
                     )
                 }
@@ -104,7 +104,7 @@ fun WgcGymQrPassCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                        .background(Color(WgcCoreDsColors.gymYellow))
+                        .background(Color(WgcCoreDsColors.orange23))
                         .padding(
                             horizontal = WgcCoreDsSpacing.sm12.dp,
                             vertical = WgcCoreDsSpacing.xxs4.dp
@@ -117,12 +117,12 @@ fun WgcGymQrPassCard(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymTextInverse),
+                            tint = Color(WgcCoreDsColors.black),
                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                         )
                         Text(
                             text = planTitle.uppercase(),
-                            color = Color(WgcCoreDsColors.gymTextInverse),
+                            color = Color(WgcCoreDsColors.black),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black
                         )
@@ -161,14 +161,14 @@ fun WgcGymQrPassCard(
                 Icon(
                     imageVector = Icons.Default.Sync,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.gymTextSecondary),
+                    tint = Color(WgcCoreDsColors.gray16),
                     modifier = Modifier
                         .size(WgcCoreDsSize.s16.dp)
                         .clickable(enabled = onRefreshCode != null) { onRefreshCode?.invoke() }
                 )
                 Text(
                     text = " Atualiza em ${expiresInSeconds}s • Matrícula: $membershipId",
-                    color = Color(WgcCoreDsColors.gymTextSecondary),
+                    color = Color(WgcCoreDsColors.gray16),
                     fontSize = 11.sp
                 )
             }
@@ -182,7 +182,7 @@ fun WgcGymQrPassCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s48.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.gymYellow))
+                        .background(Color(WgcCoreDsColors.orange23))
                         .clickable { onCheckInClick() },
                     contentAlignment = Alignment.Center
                 ) {
@@ -193,12 +193,12 @@ fun WgcGymQrPassCard(
                         Icon(
                             imageVector = Icons.Default.Lock,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymTextInverse),
+                            tint = Color(WgcCoreDsColors.black),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "LIBERAR CATRACA AGORA",
-                            color = Color(WgcCoreDsColors.gymTextInverse),
+                            color = Color(WgcCoreDsColors.black),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )

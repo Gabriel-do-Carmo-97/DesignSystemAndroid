@@ -43,7 +43,7 @@ fun WgcHomeImprovementCard(
             Text(
                 text = department.uppercase(),
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.leroyGreen),
+                color = Color(WgcCoreDsColors.green22),
                 fontWeight = FontWeight.Bold
             )
             Text(

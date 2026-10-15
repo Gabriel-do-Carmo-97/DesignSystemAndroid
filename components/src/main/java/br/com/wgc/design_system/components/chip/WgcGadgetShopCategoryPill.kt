@@ -31,7 +31,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 fun WgcGadgetShopCategoryPill(
     modifier: Modifier = Modifier,
     title: String,
-    backgroundColor: Color = Color(WgcCoreDsColors.gadgetShopCatBeauty),
+    backgroundColor: Color = Color(WgcCoreDsColors.pinkLight2),
     isSelected: Boolean = false,
     onClick: () -> Unit = {}
 ) {
@@ -39,7 +39,7 @@ fun WgcGadgetShopCategoryPill(
         modifier = modifier
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else backgroundColor
+                if (isSelected) Color(WgcCoreDsColors.blue39) else backgroundColor
             )
             .clickable(onClick = onClick)
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
@@ -49,7 +49,7 @@ fun WgcGadgetShopCategoryPill(
             text = title,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = FontWeight.SemiBold,
-            color = if (isSelected) Color.White else Color(WgcCoreDsColors.gadgetShopDark)
+            color = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark6)
         )
     }
 }
@@ -60,13 +60,13 @@ private fun WgcNexkartCategoryPillPreview() {
     Row {
         WgcGadgetShopCategoryPill(
             title = "Beauty",
-            backgroundColor = Color(WgcCoreDsColors.gadgetShopCatBeauty),
+            backgroundColor = Color(WgcCoreDsColors.pinkLight2),
             isSelected = false
         )
         Spacer(modifier = Modifier.width(8.dp))
         WgcGadgetShopCategoryPill(
             title = "Gadgets",
-            backgroundColor = Color(WgcCoreDsColors.gadgetShopCatGadgets),
+            backgroundColor = Color(WgcCoreDsColors.orangeLight2),
             isSelected = true
         )
     }

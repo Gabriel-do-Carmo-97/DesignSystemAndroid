@@ -49,7 +49,7 @@ fun WgcQuickShopProductCard(
     price: String,
     originalPrice: String? = null,
     discountBadge: String? = "20% off",
-    backgroundColor: Color = Color(WgcCoreDsColors.quickShopCardRed),
+    backgroundColor: Color = Color(WgcCoreDsColors.redLight7),
     isFavorite: Boolean = false,
     onFavoriteToggle: () -> Unit = {},
     onClick: () -> Unit = {},
@@ -102,7 +102,7 @@ fun WgcQuickShopProductCard(
                 Icon(
                     imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                     contentDescription = "Favorite",
-                    tint = if (isFavorite) Color.Red else Color(WgcCoreDsColors.quickShopSecondaryText),
+                    tint = if (isFavorite) Color.Red else Color(WgcCoreDsColors.gray6),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
             }
@@ -134,7 +134,7 @@ fun WgcQuickShopProductCard(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.quickShopDark),
+            color = Color(WgcCoreDsColors.grayDark19),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -150,7 +150,7 @@ fun WgcQuickShopProductCard(
                 text = price,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                color = Color(WgcCoreDsColors.orange27)
             )
 
             if (originalPrice != null) {
@@ -158,7 +158,7 @@ fun WgcQuickShopProductCard(
                     text = originalPrice,
                     style = MaterialTheme.typography.labelSmall,
                     textDecoration = TextDecoration.LineThrough,
-                    color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
             }
         }
@@ -173,6 +173,6 @@ private fun WgcShopEaseProductCardPreview() {
         price = "$35.00",
         originalPrice = "$50.00",
         discountBadge = "30% off",
-        backgroundColor = Color(WgcCoreDsColors.quickShopCardRed)
+        backgroundColor = Color(WgcCoreDsColors.redLight7)
     )
 }

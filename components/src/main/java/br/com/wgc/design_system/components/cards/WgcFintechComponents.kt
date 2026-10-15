@@ -81,18 +81,18 @@ fun WgcFintechCreditCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Icon(Icons.Default.CreditCard, contentDescription = null, tint = Color(WgcCoreDsColors.fintechPurple))
+                    Icon(Icons.Default.CreditCard, contentDescription = null, tint = Color(WgcCoreDsColors.purple3))
                     Text("Cartão de Crédito", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
                 Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.Gray)
             }
             Text("Fatura atual", fontSize = 14.sp, color = Color.Gray)
-            Text("R$ ${"%,.2f".format(currentInvoice)}", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.fintechPurple))
+            Text("R$ ${"%,.2f".format(currentInvoice)}", fontSize = 14.sp, fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.purple3))
             Text("Limite disponível: R$ ${"%,.2f".format(availableLimit)}", fontSize = 14.sp, color = Color.Gray)
             Text("Vencimento: $dueDate", fontSize = 14.sp, fontWeight = FontWeight.Medium, color = Color.DarkGray)
             Button(
                 onClick = onPayInvoiceClick,
-                colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechPurple)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.purple3)),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
             ) {
                 Text("Pagar Fatura", fontWeight = FontWeight.Bold, color = Color.White)
@@ -125,15 +125,15 @@ fun WgcFintechSavingsBoxCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(title, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                Text(yieldLabel, fontSize = 14.sp, color = Color(WgcCoreDsColors.fintechPurple), fontWeight = FontWeight.SemiBold)
+                Text(yieldLabel, fontSize = 14.sp, color = Color(WgcCoreDsColors.purple3), fontWeight = FontWeight.SemiBold)
             }
             Text("R$ ${"%,.2f".format(currentAmount)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.Black)
             val progress = (currentAmount / targetAmount).toFloat().coerceIn(0f, 1f)
             LinearProgressIndicator(
                 progress = { progress },
                 modifier = Modifier.fillMaxWidth().height(WgcCoreDsSize.s8.dp).clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)),
-                color = Color(WgcCoreDsColors.fintechPurple),
-                trackColor = Color(WgcCoreDsColors.gray200)
+                color = Color(WgcCoreDsColors.purple3),
+                trackColor = Color(WgcCoreDsColors.grayLight7)
             )
             Text("Meta: R$ ${"%,.2f".format(targetAmount)}", fontSize = 14.sp, color = Color.Gray)
         }

@@ -23,7 +23,7 @@ fun WgcRiachueloHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.trendApparelDark)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.grayDark8)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Trend Apparel • Moda & Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

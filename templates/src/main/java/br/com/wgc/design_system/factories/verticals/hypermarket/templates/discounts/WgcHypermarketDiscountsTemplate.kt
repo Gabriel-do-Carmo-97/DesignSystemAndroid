@@ -113,12 +113,12 @@ fun WgcExtraDiscountsTemplate(
                             Icon(
                                 imageVector = Icons.Default.ConfirmationNumber,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.hypermarketRed),
+                                tint = Color(WgcCoreDsColors.red12),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Text(
                                 text = "MEUS DESCONTOS EXCLUSIVOS",
-                                color = Color(WgcCoreDsColors.hypermarketRed),
+                                color = Color(WgcCoreDsColors.red12),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
@@ -127,14 +127,14 @@ fun WgcExtraDiscountsTemplate(
 
                         Text(
                             text = "Economia Direto no Caixa",
-                            color = Color(WgcCoreDsColors.hypermarketDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Black
                         )
 
                         Text(
                             text = "Ative aqui os descontos e informe seu CPF ($userCpfMasked) ao pagar.",
-                            color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                            color = Color(WgcCoreDsColors.blue27),
                             fontSize = 12.sp
                         )
                     }
@@ -146,10 +146,10 @@ fun WgcExtraDiscountsTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketRedLight)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.redLight4)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketRed).copy(alpha = 0.3f)
+                        color = Color(WgcCoreDsColors.red12).copy(alpha = 0.3f)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
@@ -163,13 +163,13 @@ fun WgcExtraDiscountsTemplate(
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = "Economize mais rápido!",
-                                color = Color(WgcCoreDsColors.hypermarketRedDark),
+                                color = Color(WgcCoreDsColors.red3),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Ative todos os cupons disponíveis de uma vez só.",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp
                             )
                         }
@@ -178,7 +178,7 @@ fun WgcExtraDiscountsTemplate(
                             onClick = onActivateAllClick,
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.hypermarketRed),
+                                containerColor = Color(WgcCoreDsColors.red12),
                                 contentColor = Color.White
                             ),
                             modifier = Modifier.height(WgcCoreDsSize.s36.dp)
@@ -214,11 +214,11 @@ fun WgcExtraDiscountsTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.white)
                                 )
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketBorder),
+                                    color = if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.blueLight6),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { onSelectCategory(null) }
@@ -226,7 +226,7 @@ fun WgcExtraDiscountsTemplate(
                         ) {
                             Text(
                                 text = "Todos",
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.hypermarketDark),
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -239,11 +239,11 @@ fun WgcExtraDiscountsTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.white)
                                 )
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketBorder),
+                                    color = if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.blueLight6),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { onSelectCategory(cat) }
@@ -251,7 +251,7 @@ fun WgcExtraDiscountsTemplate(
                         ) {
                             Text(
                                 text = cat,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.hypermarketDark),
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )

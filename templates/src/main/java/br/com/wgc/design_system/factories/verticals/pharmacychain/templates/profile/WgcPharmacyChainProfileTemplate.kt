@@ -87,18 +87,18 @@ fun WgcDrogaRaiaProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         ProfileOptionItem(icon = Icons.Default.Description, title = "Minhas Receitas Médicas")
-                        HorizontalDivider(color = Color(WgcCoreDsColors.pharmacyChainBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileOptionItem(icon = Icons.Default.EventRepeat, title = "Minhas Assinaturas Ativas")
-                        HorizontalDivider(color = Color(WgcCoreDsColors.pharmacyChainBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileOptionItem(icon = Icons.Default.History, title = "Histórico de Pedidos & Notas Fiscais")
-                        HorizontalDivider(color = Color(WgcCoreDsColors.pharmacyChainBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileOptionItem(icon = Icons.Default.LocationOn, title = "Endereços Cadastrados")
-                        HorizontalDivider(color = Color(WgcCoreDsColors.pharmacyChainBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileOptionItem(icon = Icons.Default.Badge, title = "Convênios e Planos de Saúde")
                     }
                 }
@@ -112,7 +112,7 @@ private fun ProfileHeaderCard(userProfile: PharmacyUserProfile) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainNavy)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueDark16)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -125,13 +125,13 @@ private fun ProfileHeaderCard(userProfile: PharmacyUserProfile) {
                 modifier = Modifier
                     .size(WgcCoreDsSize.s56.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.pharmacyChainSurface)),
+                    .background(Color(WgcCoreDsColors.white)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                    tint = Color(WgcCoreDsColors.blueDark16),
                     modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                 )
             }
@@ -143,12 +143,12 @@ private fun ProfileHeaderCard(userProfile: PharmacyUserProfile) {
                     text = userProfile.name,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainSurface)
+                    color = Color(WgcCoreDsColors.white)
                 )
                 Text(
                     text = "CPF: ${userProfile.cpfMasked}",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainSurface).copy(alpha = 0.8f)
+                    color = Color(WgcCoreDsColors.white).copy(alpha = 0.8f)
                 )
             }
         }
@@ -160,7 +160,7 @@ private fun RaiaPointsCard(points: Int) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainRed)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red8)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -174,7 +174,7 @@ private fun RaiaPointsCard(points: Int) {
                 Icon(
                     imageVector = Icons.Default.Stars,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.pharmacyChainPrescriptionYellow),
+                    tint = Color(WgcCoreDsColors.orange33),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -182,13 +182,13 @@ private fun RaiaPointsCard(points: Int) {
                     Text(
                         text = "Programa de Vantagens",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainSurface).copy(alpha = 0.85f)
+                        color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f)
                     )
                     Text(
                         text = "$points pontos disponíveis",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pharmacyChainSurface)
+                        color = Color(WgcCoreDsColors.white)
                     )
                 }
             }
@@ -196,7 +196,7 @@ private fun RaiaPointsCard(points: Int) {
             Icon(
                 imageVector = Icons.Default.QrCode,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.pharmacyChainSurface),
+                tint = Color(WgcCoreDsColors.white),
                 modifier = Modifier.size(WgcCoreDsSize.s28.dp)
             )
         }
@@ -214,7 +214,7 @@ private fun ProfileOptionItem(icon: ImageVector, title: String) {
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+            tint = Color(WgcCoreDsColors.blueDark16),
             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
         )
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -222,13 +222,13 @@ private fun ProfileOptionItem(icon: ImageVector, title: String) {
             text = title,
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.pharmacyChainTextPrimary),
+            color = Color(WgcCoreDsColors.blueDark28),
             modifier = Modifier.weight(1f)
         )
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForward,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+            tint = Color(WgcCoreDsColors.blue20),
             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
         )
     }

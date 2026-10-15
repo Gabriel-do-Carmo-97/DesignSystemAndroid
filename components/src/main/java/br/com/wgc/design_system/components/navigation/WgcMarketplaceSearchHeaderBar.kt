@@ -28,7 +28,7 @@ fun WgcMarketplaceSearchHeaderBar(
     address: String = "Enviar para Cliente - Av. Central, 1000",
     searchQuery: String = "",
     searchPlaceholder: String = "Buscar produtos, marcas e mais...",
-    headerColor: Color = Color(WgcCoreDsColors.marketplaceYellow),
+    headerColor: Color = Color(WgcCoreDsColors.yellow8),
     onAddressClick: () -> Unit = {},
     onSearchQueryChange: (String) -> Unit = {},
     onCartClick: () -> Unit = {},
@@ -62,7 +62,7 @@ fun WgcMarketplaceSearchHeaderBar(
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notificações",
-                        tint = Color(WgcCoreDsColors.grey900)
+                        tint = Color(WgcCoreDsColors.gray900)
                     )
                 }
 
@@ -70,7 +70,7 @@ fun WgcMarketplaceSearchHeaderBar(
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = "Carrinho",
-                        tint = Color(WgcCoreDsColors.grey900)
+                        tint = Color(WgcCoreDsColors.gray900)
                     )
                 }
             }
@@ -87,12 +87,12 @@ fun WgcMarketplaceSearchHeaderBar(
                     imageVector = Icons.Default.LocationOn,
                     contentDescription = null,
                     modifier = Modifier.size(16.dp),
-                    tint = Color(WgcCoreDsColors.grey900)
+                    tint = Color(WgcCoreDsColors.gray900)
                 )
                 Text(
                     text = address,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.grey900),
+                    color = Color(WgcCoreDsColors.gray900),
                     fontWeight = FontWeight.Medium
                 )
             }

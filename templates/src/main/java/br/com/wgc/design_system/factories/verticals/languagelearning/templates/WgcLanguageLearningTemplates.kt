@@ -27,7 +27,7 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.languageLearningGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.green19)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Idiomas • Inglês", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
                 Text("🔥 42 dias de ofensiva • 💎 1.250 gemas", color = Color.White.copy(alpha = 0.9f))
             }
@@ -44,7 +44,7 @@ fun WgcDuolingoPathTemplate(modifier: Modifier = Modifier) {
                         Icon(
                             if (lesson.isCompleted) Icons.Default.CheckCircle else Icons.Default.Lock,
                             contentDescription = null,
-                            tint = if (lesson.isCompleted) Color(WgcCoreDsColors.languageLearningGreen) else Color.Gray
+                            tint = if (lesson.isCompleted) Color(WgcCoreDsColors.green19) else Color.Gray
                         )
                     }
                 }

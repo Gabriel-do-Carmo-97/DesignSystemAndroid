@@ -56,7 +56,7 @@ fun WgcFitnessProgramCard(
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
+            containerColor = Color(WgcCoreDsColors.grayDark11)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
@@ -76,17 +76,17 @@ fun WgcFitnessProgramCard(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .background(
                             if (isEnrolled) {
-                                Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.18f)
+                                Color(WgcCoreDsColors.green28).copy(alpha = 0.18f)
                             } else {
-                                Color(WgcCoreDsColors.trainingMediumGray)
+                                Color(WgcCoreDsColors.grayDark20)
                             }
                         )
                         .border(
                             width = WgcCoreDsSize.s1.dp,
                             color = if (isEnrolled) {
-                                Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.5f)
+                                Color(WgcCoreDsColors.green28).copy(alpha = 0.5f)
                             } else {
-                                Color(WgcCoreDsColors.trainingLightGray)
+                                Color(WgcCoreDsColors.grayDark23)
                             },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         )
@@ -94,7 +94,7 @@ fun WgcFitnessProgramCard(
                 ) {
                     Text(
                         text = if (isEnrolled) "EM ANDAMENTO • SEMANA $currentWeek DE $totalWeeks" else "PROGRAMA • $totalWeeks SEMANAS",
-                        color = if (isEnrolled) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingWhite),
+                        color = if (isEnrolled) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -107,12 +107,12 @@ fun WgcFitnessProgramCard(
                     Icon(
                         imageVector = Icons.Default.FitnessCenter,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.trainingLightGray),
+                        tint = Color(WgcCoreDsColors.grayDark23),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Text(
                         text = "$totalWorkouts treinos",
-                        color = Color(WgcCoreDsColors.trainingLightGray),
+                        color = Color(WgcCoreDsColors.grayDark23),
                         fontSize = 14.sp
                     )
                 }
@@ -121,19 +121,19 @@ fun WgcFitnessProgramCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                 Text(
                     text = title,
-                    color = Color(WgcCoreDsColors.trainingWhite),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = goal,
-                    color = Color(WgcCoreDsColors.trainingVolt),
+                    color = Color(WgcCoreDsColors.green28),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = "Treinador: $trainerName",
-                    color = Color(WgcCoreDsColors.trainingLightGray),
+                    color = Color(WgcCoreDsColors.grayDark23),
                     fontSize = 14.sp
                 )
             }
@@ -146,12 +146,12 @@ fun WgcFitnessProgramCard(
                     ) {
                         Text(
                             text = "Progresso Geral",
-                            color = Color(WgcCoreDsColors.trainingLightGray),
+                            color = Color(WgcCoreDsColors.grayDark23),
                             fontSize = 14.sp
                         )
                         Text(
                             text = "$completedWorkouts / $totalWorkouts concluídos",
-                            color = Color(WgcCoreDsColors.trainingWhite),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -162,8 +162,8 @@ fun WgcFitnessProgramCard(
                             .fillMaxWidth()
                             .height(WgcCoreDsSize.s8.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                        color = Color(WgcCoreDsColors.trainingVolt),
-                        trackColor = Color(WgcCoreDsColors.trainingMediumGray)
+                        color = Color(WgcCoreDsColors.green28),
+                        trackColor = Color(WgcCoreDsColors.grayDark20)
                     )
                 }
             }
@@ -172,13 +172,13 @@ fun WgcFitnessProgramCard(
                 onClick = onActionClick,
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isEnrolled) Color(WgcCoreDsColors.trainingMediumGray) else Color(WgcCoreDsColors.trainingVolt)
+                    containerColor = if (isEnrolled) Color(WgcCoreDsColors.grayDark20) else Color(WgcCoreDsColors.green28)
                 ),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
             ) {
                 Text(
                     text = if (isEnrolled) "Continuar Programa" else "Iniciar Programa",
-                    color = if (isEnrolled) Color(WgcCoreDsColors.trainingWhite) else Color(WgcCoreDsColors.trainingDarkGray),
+                    color = if (isEnrolled) Color(WgcCoreDsColors.white) else Color(WgcCoreDsColors.grayDark11),
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp
                 )

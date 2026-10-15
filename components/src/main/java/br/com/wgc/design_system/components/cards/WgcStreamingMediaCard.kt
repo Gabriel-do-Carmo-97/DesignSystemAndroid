@@ -43,7 +43,7 @@ fun WgcStreamingMediaCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark12)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -77,7 +77,7 @@ fun WgcStreamingMediaCard(
                 Icon(
                     imageVector = Icons.Default.PlayArrow,
                     contentDescription = "Tocar",
-                    tint = Color(WgcCoreDsColors.audioStreamingGreen),
+                    tint = Color(WgcCoreDsColors.green20),
                     modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                 )
             }

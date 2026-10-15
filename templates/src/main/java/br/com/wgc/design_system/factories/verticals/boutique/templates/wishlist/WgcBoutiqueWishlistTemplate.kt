@@ -102,12 +102,12 @@ fun WgcLazaWishlistTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -118,7 +118,7 @@ fun WgcLazaWishlistTemplate(
                     text = "Wishlist",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -128,13 +128,13 @@ fun WgcLazaWishlistTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     BadgedBox(
                         badge = {
                             if (cartCount > 0) {
                                 Badge(
-                                    containerColor = Color(WgcCoreDsColors.boutiquePrimary),
+                                    containerColor = Color(WgcCoreDsColors.purple8),
                                     contentColor = Color.White
                                 ) {
                                     Text(text = cartCount.toString())
@@ -145,7 +145,7 @@ fun WgcLazaWishlistTemplate(
                         Icon(
                             imageVector = Icons.Default.ShoppingBag,
                             contentDescription = "Carrinho",
-                            tint = Color(WgcCoreDsColors.boutiqueDark),
+                            tint = Color(WgcCoreDsColors.grayDark13),
                             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                         )
                     }
@@ -168,19 +168,19 @@ fun WgcLazaWishlistTemplate(
                             text = "${products.size} Items",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
                         Text(
                             text = "in wishlist",
                             style = MaterialTheme.typography.labelSmall,
-                            color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                            color = Color(WgcCoreDsColors.gray13)
                         )
                     }
 
                     Row(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                             .clickable(onClick = onEditClick)
                             .padding(
                                 horizontal = WgcCoreDsSpacing.md16.dp,
@@ -192,14 +192,14 @@ fun WgcLazaWishlistTemplate(
                         Icon(
                             imageVector = Icons.Default.Edit,
                             contentDescription = "Editar",
-                            tint = Color(WgcCoreDsColors.boutiqueDark),
+                            tint = Color(WgcCoreDsColors.grayDark13),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Text(
                             text = "Edit",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
                     }
                 }

@@ -64,7 +64,7 @@ fun WgcBrandAddressRegistrationScreenTemplate(
     viewModel: BaseBrandAddressAuthViewModel,
     brandName: String = "Food Delivery",
     brandLogoText: String = "FD",
-    brandColor: Color = Color(WgcCoreDsColors.foodDeliveryRed),
+    brandColor: Color = Color(WgcCoreDsColors.red18),
     onBackClick: () -> Unit = {}
 ) {
     val state by viewModel.uiState.collectAsState()

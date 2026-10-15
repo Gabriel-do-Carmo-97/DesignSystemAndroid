@@ -44,11 +44,11 @@ data class NexkartCartItem(
  */
 object GadgetShopMockData {
     val categories = listOf(
-        NexkartCategory("1", "Beauty", Color(WgcCoreDsColors.gadgetShopCatBeauty)),
-        NexkartCategory("2", "Gadgets", Color(WgcCoreDsColors.gadgetShopCatGadgets)),
-        NexkartCategory("3", "Games", Color(WgcCoreDsColors.gadgetShopCatGames)),
-        NexkartCategory("4", "Cine", Color(WgcCoreDsColors.gadgetShopCatCine)),
-        NexkartCategory("5", "Fashion", Color(WgcCoreDsColors.gadgetShopCatFashion))
+        NexkartCategory("1", "Beauty", Color(WgcCoreDsColors.pinkLight2)),
+        NexkartCategory("2", "Gadgets", Color(WgcCoreDsColors.orangeLight2)),
+        NexkartCategory("3", "Games", Color(WgcCoreDsColors.greenLight3)),
+        NexkartCategory("4", "Cine", Color(WgcCoreDsColors.orangeLight3)),
+        NexkartCategory("5", "Fashion", Color(WgcCoreDsColors.blueLight22))
     )
 
     val products = listOf(

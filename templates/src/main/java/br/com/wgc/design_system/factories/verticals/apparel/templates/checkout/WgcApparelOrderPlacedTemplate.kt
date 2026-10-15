@@ -80,7 +80,7 @@ fun WgcClotheeOrderPlacedTemplate(
                             Icon(
                                 imageVector = Icons.Default.Check,
                                 contentDescription = "Sucesso",
-                                tint = Color(WgcCoreDsColors.apparelPrimary),
+                                tint = Color(WgcCoreDsColors.purple7),
                                 modifier = Modifier.size(54.dp)
                             )
                         }
@@ -104,7 +104,7 @@ fun WgcClotheeOrderPlacedTemplate(
                         text = "Order Placed Successfully",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark),
+                        color = Color(WgcCoreDsColors.grayDark18),
                         textAlign = TextAlign.Center
                     )
 
@@ -113,7 +113,7 @@ fun WgcClotheeOrderPlacedTemplate(
                     Text(
                         text = "You will receive an email confirmation with your tracking details.",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText),
+                        color = Color(WgcCoreDsColors.gray12),
                         textAlign = TextAlign.Center
                     )
 
@@ -126,7 +126,7 @@ fun WgcClotheeOrderPlacedTemplate(
                             .height(54.dp),
                         shape = RoundedCornerShape(100.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                            containerColor = Color(WgcCoreDsColors.purple7)
                         )
                     ) {
                         Text(

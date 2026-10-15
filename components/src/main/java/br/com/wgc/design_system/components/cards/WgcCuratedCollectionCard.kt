@@ -31,8 +31,8 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 fun WgcCuratedCollectionCard(
     modifier: Modifier = Modifier,
     title: String,
-    backgroundColor: Color = Color(WgcCoreDsColors.curatedMarketSurface),
-    textColor: Color = Color(WgcCoreDsColors.curatedMarketDark),
+    backgroundColor: Color = Color(WgcCoreDsColors.blueLight26),
+    textColor: Color = Color(WgcCoreDsColors.grayDark9),
     onClick: () -> Unit = {}
 ) {
     Box(
@@ -59,8 +59,8 @@ fun WgcCuratedCollectionCard(
 private fun WgcTasselCollectionCardSalePreview() {
     WgcCuratedCollectionCard(
         title = "On sale",
-        backgroundColor = Color(WgcCoreDsColors.curatedMarketSalePink),
-        textColor = Color(WgcCoreDsColors.curatedMarketSalePinkText)
+        backgroundColor = Color(WgcCoreDsColors.redLight9),
+        textColor = Color(WgcCoreDsColors.red28)
     )
 }
 
@@ -69,8 +69,8 @@ private fun WgcTasselCollectionCardSalePreview() {
 private fun WgcTasselCollectionCardNewInPreview() {
     WgcCuratedCollectionCard(
         title = "New in",
-        backgroundColor = Color(WgcCoreDsColors.curatedMarketNewInPurple),
-        textColor = Color(WgcCoreDsColors.curatedMarketNewInPurpleText)
+        backgroundColor = Color(WgcCoreDsColors.blueLight29),
+        textColor = Color(WgcCoreDsColors.blue37)
     )
 }
 

@@ -48,7 +48,7 @@ fun WgcPersonalFinanceCreditCardRow(
     availableLimit: String = "R$ 3.159,50",
     totalLimit: String = "R$ 5.000,00",
     closingDate: String = "Fecha em 24/05",
-    accentColor: Color = Color(WgcCoreDsColors.personalFinanceCardPurple),
+    accentColor: Color = Color(WgcCoreDsColors.purple3),
     usageProgress: Float = 0.368f,
     onClick: () -> Unit = {}
 ) {
@@ -92,12 +92,12 @@ fun WgcPersonalFinanceCreditCardRow(
                             text = bankName,
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.personalFinanceDark)
+                            color = Color(WgcCoreDsColors.blueDark33)
                         )
                         Text(
                             text = lastDigits,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                            color = Color(WgcCoreDsColors.gray11)
                         )
                     }
                 }
@@ -105,7 +105,7 @@ fun WgcPersonalFinanceCreditCardRow(
                 Text(
                     text = closingDate,
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                    color = Color(WgcCoreDsColors.gray11)
                 )
             }
 
@@ -121,14 +121,14 @@ fun WgcPersonalFinanceCreditCardRow(
                     Text(
                         text = "Fatura atual",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = currentInvoice,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.personalFinanceExpenseRed)
+                        color = Color(WgcCoreDsColors.red23)
                     )
                 }
 
@@ -136,14 +136,14 @@ fun WgcPersonalFinanceCreditCardRow(
                     Text(
                         text = "Limite disponível",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = availableLimit,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.personalFinancePrimary)
+                        color = Color(WgcCoreDsColors.cyan3)
                     )
                 }
             }
@@ -158,7 +158,7 @@ fun WgcPersonalFinanceCreditCardRow(
                     .height(WgcCoreDsSpacing.xs8.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)),
                 color = accentColor,
-                trackColor = Color(WgcCoreDsColors.personalFinanceBorder),
+                trackColor = Color(WgcCoreDsColors.blueLight7),
                 strokeCap = StrokeCap.Round
             )
         }

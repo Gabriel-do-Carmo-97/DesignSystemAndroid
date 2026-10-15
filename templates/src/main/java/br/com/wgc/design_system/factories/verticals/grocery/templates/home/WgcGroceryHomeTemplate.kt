@@ -92,11 +92,11 @@ fun WgcSupermercadoHomeTemplate(
     footerSlot: (@Composable () -> Unit)? = null
 ) {
     val departments = listOf(
-        SupermercadoDepartmentCategory("Mercado", Icons.Default.ShoppingBag, WgcCoreDsColors.groceryBlue),
-        SupermercadoDepartmentCategory("Eletro & TV", Icons.Default.Tv, WgcCoreDsColors.groceryRed),
-        SupermercadoDepartmentCategory("Drogaria", Icons.Default.LocalPharmacy, WgcCoreDsColors.groceryNutriScoreA),
-        SupermercadoDepartmentCategory("Bazar & Limpeza", Icons.Default.CleaningServices, WgcCoreDsColors.groceryOrange),
-        SupermercadoDepartmentCategory("Posto Supermercado", Icons.Default.LocalGasStation, WgcCoreDsColors.groceryYellow)
+        SupermercadoDepartmentCategory("Mercado", Icons.Default.ShoppingBag, WgcCoreDsColors.blueDark32),
+        SupermercadoDepartmentCategory("Eletro & TV", Icons.Default.Tv, WgcCoreDsColors.red19),
+        SupermercadoDepartmentCategory("Drogaria", Icons.Default.LocalPharmacy, WgcCoreDsColors.green2),
+        SupermercadoDepartmentCategory("Bazar & Limpeza", Icons.Default.CleaningServices, WgcCoreDsColors.orange19),
+        SupermercadoDepartmentCategory("Posto Supermercado", Icons.Default.LocalGasStation, WgcCoreDsColors.orange13)
     )
 
     Scaffold(
@@ -118,7 +118,7 @@ fun WgcSupermercadoHomeTemplate(
                 headerSlot?.invoke() ?: Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.grocerySurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp)
                 ) {
                     Row(
@@ -129,7 +129,7 @@ fun WgcSupermercadoHomeTemplate(
                         Column {
                             Text(
                                 text = "VOCÊ ESTÁ COMPRANDO EM",
-                                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                                color = Color(WgcCoreDsColors.gray5),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold
                             )
@@ -139,14 +139,14 @@ fun WgcSupermercadoHomeTemplate(
                             ) {
                                 Text(
                                     text = userProfile.selectedStore,
-                                    color = Color(WgcCoreDsColors.groceryTextPrimary),
+                                    color = Color(WgcCoreDsColors.blueDark13),
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Icon(
                                     imageVector = Icons.Default.KeyboardArrowDown,
                                     contentDescription = "Trocar Loja",
-                                    tint = Color(WgcCoreDsColors.groceryBlue),
+                                    tint = Color(WgcCoreDsColors.blueDark32),
                                     modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                 )
                             }
@@ -159,7 +159,7 @@ fun WgcSupermercadoHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.Notifications,
                                 contentDescription = "Notificações",
-                                tint = Color(WgcCoreDsColors.groceryBlue),
+                                tint = Color(WgcCoreDsColors.blueDark32),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -173,10 +173,10 @@ fun WgcSupermercadoHomeTemplate(
                             .fillMaxWidth()
                             .height(WgcCoreDsSize.s48.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.groceryBackground))
+                            .background(Color(WgcCoreDsColors.blueLight30))
                             .border(
                                 width = WgcCoreDsSize.s1.dp,
-                                color = Color(WgcCoreDsColors.groceryBorder),
+                                color = Color(WgcCoreDsColors.blueLight4),
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                             )
                             .padding(horizontal = WgcCoreDsSpacing.sm12.dp),
@@ -190,12 +190,12 @@ fun WgcSupermercadoHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.Search,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.groceryTextSecondary),
+                                tint = Color(WgcCoreDsColors.gray5),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                             Text(
                                 text = "Buscar no Supermercado...",
-                                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                                color = Color(WgcCoreDsColors.gray5),
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }
@@ -211,7 +211,7 @@ fun WgcSupermercadoHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.CenterFocusWeak,
                                     contentDescription = "Escanear Código de Barras",
-                                    tint = Color(WgcCoreDsColors.groceryBlue),
+                                    tint = Color(WgcCoreDsColors.blueDark32),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -222,7 +222,7 @@ fun WgcSupermercadoHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Mic,
                                     contentDescription = "Busca por Voz",
-                                    tint = Color(WgcCoreDsColors.groceryTextSecondary),
+                                    tint = Color(WgcCoreDsColors.gray5),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -268,7 +268,7 @@ fun WgcSupermercadoHomeTemplate(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s56.dp)
                                         .clip(CircleShape)
-                                        .background(Color(WgcCoreDsColors.grocerySurface))
+                                        .background(Color(WgcCoreDsColors.white))
                                         .border(
                                             width = WgcCoreDsSize.s1.dp,
                                             color = Color(dept.color).copy(alpha = 0.35f),
@@ -288,7 +288,7 @@ fun WgcSupermercadoHomeTemplate(
 
                                 Text(
                                     text = dept.title,
-                                    color = Color(WgcCoreDsColors.groceryTextPrimary),
+                                    color = Color(WgcCoreDsColors.blueDark13),
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Medium,
                                     maxLines = 1,
@@ -308,7 +308,7 @@ fun WgcSupermercadoHomeTemplate(
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.groceryNutriScoreA)
+                        containerColor = Color(WgcCoreDsColors.green2)
                     ),
                     elevation = CardDefaults.cardElevation(
                         defaultElevation = WgcCoreDsElevation.level3.dp
@@ -323,7 +323,7 @@ fun WgcSupermercadoHomeTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.groceryYellow))
+                                    .background(Color(WgcCoreDsColors.orange13))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -331,7 +331,7 @@ fun WgcSupermercadoHomeTemplate(
                             ) {
                                 Text(
                                     text = "DIAS DE FEIRA",
-                                    color = Color(WgcCoreDsColors.groceryTextPrimary),
+                                    color = Color(WgcCoreDsColors.blueDark13),
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Black
                                 )
@@ -386,13 +386,13 @@ fun WgcSupermercadoHomeTemplate(
                         Column {
                             Text(
                                 text = "OFERTAS DO HIPERMERCADO",
-                                color = Color(WgcCoreDsColors.groceryBlue),
+                                color = Color(WgcCoreDsColors.blueDark32),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Preço Baixo Todo Dia",
-                                color = Color(WgcCoreDsColors.groceryTextPrimary),
+                                color = Color(WgcCoreDsColors.blueDark13),
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold
                             )
@@ -404,14 +404,14 @@ fun WgcSupermercadoHomeTemplate(
                         ) {
                             Text(
                                 text = "Ver Todas",
-                                color = Color(WgcCoreDsColors.groceryBlue),
+                                color = Color(WgcCoreDsColors.blueDark32),
                                 style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold
                             )
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.groceryBlue),
+                                tint = Color(WgcCoreDsColors.blueDark32),
                                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                             )
                         }

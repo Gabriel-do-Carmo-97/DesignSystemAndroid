@@ -42,9 +42,9 @@ enum class WgcSocialPillProvider(
     val defaultLabel: String,
     val brandColor: Color
 ) {
-    Facebook("Login with Facebook", Color(WgcCoreDsColors.socialFacebook)),
-    Instagram("Login with Instagram", Color(WgcCoreDsColors.socialInstagram)),
-    LinkedIn("Login with LinkedIn", Color(WgcCoreDsColors.socialLinkedIn))
+    Facebook("Login with Facebook", Color(WgcCoreDsColors.blue34)),
+    Instagram("Login with Instagram", Color(WgcCoreDsColors.pink3)),
+    LinkedIn("Login with LinkedIn", Color(WgcCoreDsColors.blue16))
 }
 
 /**

@@ -44,7 +44,7 @@ fun WgcFintechSuperAppActionItem(
             Icon(
                 imageVector = icon,
                 contentDescription = label,
-                tint = Color(WgcCoreDsColors.fintechOrange),
+                tint = Color(WgcCoreDsColors.orange20),
                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
             )
         }
@@ -80,13 +80,13 @@ fun WgcInterCashbackBanner(
                 Text(storeName, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 Text(description, fontSize = 14.sp, color = Color.Gray)
                 Surface(
-                    color = Color(WgcCoreDsColors.fintechOrange).copy(alpha = 0.1f),
+                    color = Color(WgcCoreDsColors.orange20).copy(alpha = 0.1f),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                 ) {
                     Text(
                         cashback,
                         modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
-                        color = Color(WgcCoreDsColors.fintechOrange),
+                        color = Color(WgcCoreDsColors.orange20),
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
@@ -94,7 +94,7 @@ fun WgcInterCashbackBanner(
             }
             Button(
                 onClick = onShopClick,
-                colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechOrange)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.orange20)),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
             ) {
                 Text("Ir à Loja", color = Color.White, fontWeight = FontWeight.Bold)

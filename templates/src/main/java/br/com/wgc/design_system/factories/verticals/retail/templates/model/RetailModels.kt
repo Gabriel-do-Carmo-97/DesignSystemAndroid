@@ -15,10 +15,10 @@ data class KutukuProduct(
     val isFavorite: Boolean = false,
     val description: String = "Premium handcrafted luxury product crafted with finest materials and tailored for everyday elegance.",
     val availableColors: List<Color> = listOf(
-        Color(WgcCoreDsColors.productTan),
-        Color(WgcCoreDsColors.retailDark),
-        Color(WgcCoreDsColors.productTeal),
-        Color(WgcCoreDsColors.productGreen)
+        Color(WgcCoreDsColors.orange2),
+        Color(WgcCoreDsColors.grayDark2),
+        Color(WgcCoreDsColors.cyan6),
+        Color(WgcCoreDsColors.green16)
     ),
     val inStock: Boolean = true
 )

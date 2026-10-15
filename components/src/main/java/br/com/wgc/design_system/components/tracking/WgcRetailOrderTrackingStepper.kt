@@ -73,12 +73,12 @@ fun WgcRetailOrderTrackingStepper(
                     val (circleBg, iconColor) = when (step.status) {
                         WgcKutukuStepStatus.COMPLETED,
                         WgcKutukuStepStatus.IN_PROGRESS -> Pair(
-                            Color(WgcCoreDsColors.retailPrimary),
+                            Color(WgcCoreDsColors.blue33),
                             Color.White
                         )
                         WgcKutukuStepStatus.PENDING -> Pair(
-                            Color(WgcCoreDsColors.retailBackground),
-                            Color(WgcCoreDsColors.retailSecondaryText)
+                            Color(WgcCoreDsColors.blueLight39),
+                            Color(WgcCoreDsColors.gray4)
                         )
                     }
 
@@ -104,9 +104,9 @@ fun WgcRetailOrderTrackingStepper(
 
                     if (!isLast) {
                         val lineColor = if (step.status == WgcKutukuStepStatus.COMPLETED) {
-                            Color(WgcCoreDsColors.retailPrimary)
+                            Color(WgcCoreDsColors.blue33)
                         } else {
-                            Color(WgcCoreDsColors.retailBorder)
+                            Color(WgcCoreDsColors.blueLight10)
                         }
                         Box(
                             modifier = Modifier
@@ -129,13 +129,13 @@ fun WgcRetailOrderTrackingStepper(
                         text = step.title,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
                     Text(
                         text = "${step.subtitle} • ${step.time}",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.retailSecondaryText)
+                        color = Color(WgcCoreDsColors.gray4)
                     )
                     if (!isLast) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))

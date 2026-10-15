@@ -53,7 +53,7 @@ fun WgcPropertyClassifiedsIndexCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -71,7 +71,7 @@ fun WgcPropertyClassifiedsIndexCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.propertyClassifiedsPrimary))
+                            .background(Color(WgcCoreDsColors.blueDark31))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -89,7 +89,7 @@ fun WgcPropertyClassifiedsIndexCard(
                         text = neighborhood,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
                 }
 
@@ -98,7 +98,7 @@ fun WgcPropertyClassifiedsIndexCard(
                     Icon(
                         imageVector = Icons.Default.TrendingUp,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsFipeGreen),
+                        tint = Color(WgcCoreDsColors.green4),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -106,7 +106,7 @@ fun WgcPropertyClassifiedsIndexCard(
                         text = "$historicalVariation12m em 12m",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsFipeGreen)
+                        color = Color(WgcCoreDsColors.green4)
                     )
                 }
             }
@@ -122,14 +122,14 @@ fun WgcPropertyClassifiedsIndexCard(
                     Text(
                         text = "Valor deste imóvel",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = propertyM2Price,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                        color = Color(WgcCoreDsColors.blueDark31)
                     )
                 }
 
@@ -137,14 +137,14 @@ fun WgcPropertyClassifiedsIndexCard(
                     Text(
                         text = "Média do m² no bairro",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = neighborhoodAverageM2Price,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
                 }
             }
@@ -166,9 +166,9 @@ fun WgcPropertyClassifiedsIndexCard(
                         .height(WgcCoreDsSize.s8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.BELOW_AVERAGE) {
-                                Color(WgcCoreDsColors.propertyClassifiedsFipeGreen)
+                                Color(WgcCoreDsColors.green4)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsFipeGreen).copy(alpha = 0.35f)
+                                Color(WgcCoreDsColors.green4).copy(alpha = 0.35f)
                             }
                         )
                 )
@@ -179,9 +179,9 @@ fun WgcPropertyClassifiedsIndexCard(
                         .height(WgcCoreDsSize.s8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.ON_AVERAGE) {
-                                Color(WgcCoreDsColors.propertyClassifiedsBlue)
+                                Color(WgcCoreDsColors.blue17)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsBlue).copy(alpha = 0.35f)
+                                Color(WgcCoreDsColors.blue17).copy(alpha = 0.35f)
                             }
                         )
                 )
@@ -192,9 +192,9 @@ fun WgcPropertyClassifiedsIndexCard(
                         .height(WgcCoreDsSize.s8.dp)
                         .background(
                             if (status == WgcZapFipeStatus.ABOVE_AVERAGE) {
-                                Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                                Color(WgcCoreDsColors.orange17)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsOrange).copy(alpha = 0.35f)
+                                Color(WgcCoreDsColors.orange17).copy(alpha = 0.35f)
                             }
                         )
                 )
@@ -211,9 +211,9 @@ fun WgcPropertyClassifiedsIndexCard(
                     text = "Abaixo",
                     style = MaterialTheme.typography.labelSmall,
                     color = if (status == WgcZapFipeStatus.BELOW_AVERAGE) {
-                        Color(WgcCoreDsColors.propertyClassifiedsFipeGreen)
+                        Color(WgcCoreDsColors.green4)
                     } else {
-                        Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        Color(WgcCoreDsColors.blue22)
                     },
                     fontWeight = if (status == WgcZapFipeStatus.BELOW_AVERAGE) FontWeight.Bold else FontWeight.Normal
                 )
@@ -221,9 +221,9 @@ fun WgcPropertyClassifiedsIndexCard(
                     text = "Na Média",
                     style = MaterialTheme.typography.labelSmall,
                     color = if (status == WgcZapFipeStatus.ON_AVERAGE) {
-                        Color(WgcCoreDsColors.propertyClassifiedsBlue)
+                        Color(WgcCoreDsColors.blue17)
                     } else {
-                        Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        Color(WgcCoreDsColors.blue22)
                     },
                     fontWeight = if (status == WgcZapFipeStatus.ON_AVERAGE) FontWeight.Bold else FontWeight.Normal
                 )
@@ -231,9 +231,9 @@ fun WgcPropertyClassifiedsIndexCard(
                     text = "Acima",
                     style = MaterialTheme.typography.labelSmall,
                     color = if (status == WgcZapFipeStatus.ABOVE_AVERAGE) {
-                        Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                        Color(WgcCoreDsColors.orange17)
                     } else {
-                        Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        Color(WgcCoreDsColors.blue22)
                     },
                     fontWeight = if (status == WgcZapFipeStatus.ABOVE_AVERAGE) FontWeight.Bold else FontWeight.Normal
                 )
@@ -246,14 +246,14 @@ fun WgcPropertyClassifiedsIndexCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                    .background(Color(WgcCoreDsColors.blueLight37))
                     .padding(WgcCoreDsSpacing.xs8.dp)
             ) {
                 Row(verticalAlignment = Alignment.Top) {
                     Icon(
                         imageVector = Icons.Default.Info,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
+                        tint = Color(WgcCoreDsColors.blue17),
                         modifier = Modifier
                             .size(WgcCoreDsSize.s16.dp)
                             .padding(top = WgcCoreDsSpacing.xxxs2.dp)
@@ -262,7 +262,7 @@ fun WgcPropertyClassifiedsIndexCard(
                     Text(
                         text = insightText,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
                 }
             }

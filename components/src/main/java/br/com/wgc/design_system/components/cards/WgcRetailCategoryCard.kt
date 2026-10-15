@@ -40,7 +40,7 @@ fun WgcRetailCategoryCard(
     productCountText: String,
     imageUrl: String? = null,
     isImageOnLeft: Boolean = false,
-    backgroundColor: Color = Color(WgcCoreDsColors.retailBackground),
+    backgroundColor: Color = Color(WgcCoreDsColors.blueLight39),
     onClick: () -> Unit = {}
 ) {
     Row(
@@ -104,13 +104,13 @@ private fun CategoryCardText(
             text = title,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
         Text(
             text = productCountText,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.retailSecondaryText)
+            color = Color(WgcCoreDsColors.gray4)
         )
     }
 }
@@ -135,14 +135,14 @@ private fun CategoryCardImage(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(WgcCoreDsColors.retailPrimaryLight).copy(alpha = 0.5f)),
+                    .background(Color(WgcCoreDsColors.blueLight21).copy(alpha = 0.5f)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = title.take(1).uppercase(),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailPrimary)
+                    color = Color(WgcCoreDsColors.blue33)
                 )
             }
         }

@@ -1,4 +1,5 @@
 @file:Suppress("LongMethod")
+
 package br.com.wgc.design_system.components.picker
 
 import androidx.compose.foundation.clickable

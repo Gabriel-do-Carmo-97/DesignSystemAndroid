@@ -58,7 +58,7 @@ fun WgcGadgetShopCartItemRow(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.gadgetShopSurface))
+            .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
             .padding(WgcCoreDsSpacing.sm12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -81,7 +81,7 @@ fun WgcGadgetShopCartItemRow(
                 Text(
                     text = title.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                    color = Color(WgcCoreDsColors.blue39),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -97,7 +97,7 @@ fun WgcGadgetShopCartItemRow(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.gadgetShopDark),
+                color = Color(WgcCoreDsColors.blueDark6),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -107,7 +107,7 @@ fun WgcGadgetShopCartItemRow(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                color = Color(WgcCoreDsColors.blue41),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -118,7 +118,7 @@ fun WgcGadgetShopCartItemRow(
                 text = price,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopPrimary)
+                color = Color(WgcCoreDsColors.blue39)
             )
         }
 
@@ -136,7 +136,7 @@ fun WgcGadgetShopCartItemRow(
                 Icon(
                     imageVector = Icons.Default.DeleteOutline,
                     contentDescription = "Remover item",
-                    tint = Color(WgcCoreDsColors.gadgetShopAccentPink),
+                    tint = Color(WgcCoreDsColors.pink5),
                     modifier = Modifier.size(18.dp)
                 )
             }
@@ -157,7 +157,7 @@ fun WgcGadgetShopCartItemRow(
                         text = "–",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
-                        color = if (quantity > 1) Color(WgcCoreDsColors.gadgetShopDark) else Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                        color = if (quantity > 1) Color(WgcCoreDsColors.blueDark6) else Color(WgcCoreDsColors.blue41)
                     )
                 }
 
@@ -165,7 +165,7 @@ fun WgcGadgetShopCartItemRow(
                     text = quantity.toString(),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark),
+                    color = Color(WgcCoreDsColors.blueDark6),
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xxs4.dp)
                 )
 
@@ -173,7 +173,7 @@ fun WgcGadgetShopCartItemRow(
                     modifier = Modifier
                         .size(24.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                        .background(Color(WgcCoreDsColors.blue39))
                         .clickable { onQuantityChange(quantity + 1) },
                     contentAlignment = Alignment.Center
                 ) {

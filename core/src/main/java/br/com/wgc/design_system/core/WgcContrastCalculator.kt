@@ -13,13 +13,13 @@ import kotlin.math.pow
  */
 object WgcContrastCalculator {
 
-    const val WCAG_AA_NORMAL_TEXT_MIN_RATIO = 4.5
-    const val WCAG_AA_LARGE_TEXT_MIN_RATIO = 3.0
-    const val WCAG_AAA_NORMAL_TEXT_MIN_RATIO = 7.0
-    const val WCAG_AAA_LARGE_TEXT_MIN_RATIO = 4.5
+    const val WCAG_AA_NORMAL_TEXT_MIN_RATIO = CoreConstants.ContrastCalculator.WCAG_AA_NORMAL_TEXT_MIN_RATIO
+    const val WCAG_AA_LARGE_TEXT_MIN_RATIO = CoreConstants.ContrastCalculator.WCAG_AA_LARGE_TEXT_MIN_RATIO
+    const val WCAG_AAA_NORMAL_TEXT_MIN_RATIO = CoreConstants.ContrastCalculator.WCAG_AAA_NORMAL_TEXT_MIN_RATIO
+    const val WCAG_AAA_LARGE_TEXT_MIN_RATIO = CoreConstants.ContrastCalculator.WCAG_AAA_LARGE_TEXT_MIN_RATIO
 
-    const val COLOR_WHITE = 0xFFFFFFFF.toInt()
-    const val COLOR_BLACK = 0xFF000000.toInt()
+    const val COLOR_WHITE = CoreConstants.ContrastCalculator.COLOR_WHITE
+    const val COLOR_BLACK = CoreConstants.ContrastCalculator.COLOR_BLACK
 
     /**
      * Calcula o valor de luminância relativa de uma cor ARGB de acordo com o padrão W3C.

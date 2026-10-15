@@ -36,10 +36,10 @@ class ComponentsCoreIntegrationTest {
     @Test
     fun `components should consume core color tokens`() {
         // Verifica se os tokens de cor do core estão acessíveis
-        assertNotNull(WgcCoreDsColorsFacade.primary)
-        assertNotNull(WgcCoreDsColorsFacade.error)
-        assertNotNull(WgcCoreDsColorsFacade.success)
-        assertNotNull(WgcCoreDsColorsFacade.warning)
+        assertNotNull(WgcCoreDsColorsFacade.orange500)
+        assertNotNull(WgcCoreDsColorsFacade.red500)
+        assertNotNull(WgcCoreDsColorsFacade.green27)
+        assertNotNull(WgcCoreDsColorsFacade.yellow10)
     }
 
     @Test
@@ -64,7 +64,7 @@ class ComponentsCoreIntegrationTest {
         assertNotNull(WgcCoreDsColorsFacade.white)
         assertNotNull(WgcCoreDsColorsFacade.black)
         assertNotNull(WgcCoreDsColorsFacade.transparent)
-        assertNotNull(WgcCoreDsColorsFacade.textPrimary)
-        assertNotNull(WgcCoreDsColorsFacade.textSecondary)
+        assertNotNull(WgcCoreDsColorsFacade.gray900)
+        assertNotNull(WgcCoreDsColorsFacade.gray6)
     }
 }

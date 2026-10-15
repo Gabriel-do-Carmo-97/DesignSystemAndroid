@@ -45,7 +45,7 @@ fun WgcHealthLoyaltyCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carePharmacyRed)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red12)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -61,19 +61,19 @@ fun WgcHealthLoyaltyCard(
                 Column {
                     Text(
                         text = "Cartão de Vantagens",
-                        color = Color(WgcCoreDsColors.carePharmacyGold),
+                        color = Color(WgcCoreDsColors.yellow11),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = userName,
-                        color = Color(WgcCoreDsColors.carePharmacySurface),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "CPF: $cpfMasked",
-                        color = Color(WgcCoreDsColors.carePharmacySurface).copy(alpha = 0.85f),
+                        color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f),
                         fontSize = 14.sp
                     )
                 }
@@ -93,13 +93,13 @@ fun WgcHealthLoyaltyCard(
                 Icon(
                     imageVector = Icons.Default.Stars,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.carePharmacyGold),
+                    tint = Color(WgcCoreDsColors.yellow11),
                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                 Text(
                     text = "$pointsBalance Pontos acumulados",
-                    color = Color(WgcCoreDsColors.carePharmacySurface),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold
                 )

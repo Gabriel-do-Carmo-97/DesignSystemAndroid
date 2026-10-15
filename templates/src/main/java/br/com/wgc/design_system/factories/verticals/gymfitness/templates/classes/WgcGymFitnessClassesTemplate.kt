@@ -114,7 +114,7 @@ fun WgcGymFitnessClassesTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.gymTextPrimary),
+                                    tint = Color(WgcCoreDsColors.white),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -122,14 +122,14 @@ fun WgcGymFitnessClassesTemplate(
                         Column {
                             Text(
                                 text = "AULAS COLETIVAS",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Grade & Reservas",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -141,12 +141,12 @@ fun WgcGymFitnessClassesTemplate(
                                 Icon(
                                     imageVector = Icons.Default.LocationOn,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.gymYellow),
+                                    tint = Color(WgcCoreDsColors.orange23),
                                     modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                 )
                                 Text(
                                     text = unitName,
-                                    color = Color(WgcCoreDsColors.gymTextSecondary),
+                                    color = Color(WgcCoreDsColors.gray16),
                                     fontSize = 11.sp
                                 )
                             }
@@ -166,14 +166,14 @@ fun WgcGymFitnessClassesTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                                    else Color(WgcCoreDsColors.gymDarkGray)
+                                    if (isSelected) Color(WgcCoreDsColors.orange23)
+                                    else Color(WgcCoreDsColors.grayDark7)
                                 )
                                 .border(
                                     BorderStroke(
                                         WgcCoreDsSize.s1.dp,
-                                        if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                                        else Color(WgcCoreDsColors.gymMediumGray)
+                                        if (isSelected) Color(WgcCoreDsColors.orange23)
+                                        else Color(WgcCoreDsColors.grayDark21)
                                     ),
                                     RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
@@ -182,8 +182,8 @@ fun WgcGymFitnessClassesTemplate(
                         ) {
                             Text(
                                 text = day,
-                                color = if (isSelected) Color(WgcCoreDsColors.gymTextInverse)
-                                else Color(WgcCoreDsColors.gymTextPrimary),
+                                color = if (isSelected) Color(WgcCoreDsColors.black)
+                                else Color(WgcCoreDsColors.white),
                                 fontSize = 12.sp,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                             )
@@ -203,7 +203,7 @@ fun WgcGymFitnessClassesTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.gymMediumGray)
+                                    if (isSelected) Color(WgcCoreDsColors.grayDark21)
                                     else Color.Transparent
                                 )
                                 .clickable { onSelectCategory(index) }
@@ -211,8 +211,8 @@ fun WgcGymFitnessClassesTemplate(
                         ) {
                             Text(
                                 text = cat,
-                                color = if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                                else Color(WgcCoreDsColors.gymTextSecondary),
+                                color = if (isSelected) Color(WgcCoreDsColors.orange23)
+                                else Color(WgcCoreDsColors.gray16),
                                 fontSize = 12.sp,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                             )
@@ -229,12 +229,12 @@ fun WgcGymFitnessClassesTemplate(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.gymDarkGray)
+                        containerColor = Color(WgcCoreDsColors.grayDark7)
                     ),
                     border = BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        if (itemClass.isBooked) Color(WgcCoreDsColors.gymYellow)
-                        else Color(WgcCoreDsColors.gymMediumGray)
+                        if (itemClass.isBooked) Color(WgcCoreDsColors.orange23)
+                        else Color(WgcCoreDsColors.grayDark21)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
@@ -250,18 +250,18 @@ fun WgcGymFitnessClassesTemplate(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.gymBlack))
+                                .background(Color(WgcCoreDsColors.grayDark1))
                                 .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                         ) {
                             Text(
                                 text = itemClass.time.split(" - ").firstOrNull() ?: "",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "${itemClass.durationMinutes} min",
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 10.sp
                             )
                         }
@@ -273,7 +273,7 @@ fun WgcGymFitnessClassesTemplate(
                         ) {
                             Text(
                                 text = itemClass.title,
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -285,12 +285,12 @@ fun WgcGymFitnessClassesTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Person,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.gymTextSecondary),
+                                    tint = Color(WgcCoreDsColors.gray16),
                                     modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                 )
                                 Text(
                                     text = itemClass.instructor,
-                                    color = Color(WgcCoreDsColors.gymTextSecondary),
+                                    color = Color(WgcCoreDsColors.gray16),
                                     fontSize = 11.sp
                                 )
                             }
@@ -302,18 +302,18 @@ fun WgcGymFitnessClassesTemplate(
                             ) {
                                 Text(
                                     text = itemClass.room,
-                                    color = Color(WgcCoreDsColors.gymTextSecondary),
+                                    color = Color(WgcCoreDsColors.gray16),
                                     fontSize = 11.sp
                                 )
                                 Text(
                                     text = "•",
-                                    color = Color(WgcCoreDsColors.gymMediumGray),
+                                    color = Color(WgcCoreDsColors.grayDark21),
                                     fontSize = 11.sp
                                 )
                                 Text(
                                     text = if (isSoldOut) "Vagas Esgotadas" else "${itemClass.spotsLeft} vagas restantes",
-                                    color = if (isSoldOut) Color(WgcCoreDsColors.gymCrowdHigh)
-                                    else Color(WgcCoreDsColors.gymCrowdLow),
+                                    color = if (isSoldOut) Color(WgcCoreDsColors.red25)
+                                    else Color(WgcCoreDsColors.green17),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -326,9 +326,9 @@ fun WgcGymFitnessClassesTemplate(
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                                 .background(
                                     when {
-                                        itemClass.isBooked -> Color(WgcCoreDsColors.gymYellow)
-                                        isSoldOut -> Color(WgcCoreDsColors.gymMediumGray)
-                                        else -> Color(WgcCoreDsColors.gymLightGray)
+                                        itemClass.isBooked -> Color(WgcCoreDsColors.orange23)
+                                        isSoldOut -> Color(WgcCoreDsColors.grayDark21)
+                                        else -> Color(WgcCoreDsColors.gray1)
                                     }
                                 )
                                 .clickable(enabled = !isSoldOut || itemClass.isBooked) {
@@ -345,7 +345,7 @@ fun WgcGymFitnessClassesTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Check,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymTextInverse),
+                                        tint = Color(WgcCoreDsColors.black),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                 }
@@ -355,8 +355,8 @@ fun WgcGymFitnessClassesTemplate(
                                         isSoldOut -> "ESGOTADO"
                                         else -> "RESERVAR"
                                     },
-                                    color = if (itemClass.isBooked) Color(WgcCoreDsColors.gymTextInverse)
-                                    else Color(WgcCoreDsColors.gymTextPrimary),
+                                    color = if (itemClass.isBooked) Color(WgcCoreDsColors.black)
+                                    else Color(WgcCoreDsColors.white),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )

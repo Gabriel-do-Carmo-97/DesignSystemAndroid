@@ -23,7 +23,7 @@ fun WgcTokStokHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.designerFurnitureRed)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.red10)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Móveis & Decoração Autoral", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

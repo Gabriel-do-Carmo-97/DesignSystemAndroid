@@ -72,7 +72,7 @@ fun WgcMegaStoreProductCard(
                     .fillMaxWidth()
                     .aspectRatio(0.85f)
                     .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.md.dp, topEnd = WgcCoreDsBorderRadius.md.dp))
-                    .background(Color(WgcCoreDsColors.megaStoreBackground))
+                    .background(Color(WgcCoreDsColors.gray100))
             ) {
                 AsyncImage(
                     model = imageUrl,
@@ -87,7 +87,7 @@ fun WgcMegaStoreProductCard(
                             .align(Alignment.TopStart)
                             .padding(WgcCoreDsSpacing.sm.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimary))
+                            .background(Color(WgcCoreDsColors.blue28))
                             .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = WgcCoreDsSpacing.xxs.dp)
                     ) {
                         Text(
@@ -111,7 +111,7 @@ fun WgcMegaStoreProductCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.megaStoreDark),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.grayDark14),
                         modifier = Modifier.size(18.dp)
                     )
                 }
@@ -125,7 +125,7 @@ fun WgcMegaStoreProductCard(
                 Text(
                     text = category.uppercase(),
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                    color = Color(WgcCoreDsColors.gray4),
                     fontSize = 10.sp
                 )
 
@@ -134,7 +134,7 @@ fun WgcMegaStoreProductCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
-                    color = Color(WgcCoreDsColors.megaStoreDark),
+                    color = Color(WgcCoreDsColors.grayDark14),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -148,7 +148,7 @@ fun WgcMegaStoreProductCard(
                     Text(
                         text = price,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.megaStorePrimary)
+                        color = Color(WgcCoreDsColors.blue28)
                     )
 
                     if (!originalPrice.isNullOrBlank()) {
@@ -156,7 +156,7 @@ fun WgcMegaStoreProductCard(
                         Text(
                             text = originalPrice,
                             style = MaterialTheme.typography.bodySmall.copy(textDecoration = TextDecoration.LineThrough),
-                            color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                     }
 
@@ -165,14 +165,14 @@ fun WgcMegaStoreProductCard(
                     Icon(
                         imageVector = Icons.Default.Star,
                         contentDescription = "Rating",
-                        tint = Color(WgcCoreDsColors.megaStoreGold),
+                        tint = Color(WgcCoreDsColors.orange30),
                         modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = rating.toString(),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStoreDark),
+                        color = Color(WgcCoreDsColors.grayDark14),
                         modifier = Modifier.padding(start = 2.dp)
                     )
                 }

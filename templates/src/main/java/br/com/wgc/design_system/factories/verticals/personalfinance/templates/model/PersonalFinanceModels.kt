@@ -64,21 +64,21 @@ object PersonalFinanceMockData {
             name = "NuConta",
             type = "Conta Corrente",
             balance = "R$ 9.420,00",
-            color = WgcCoreDsColors.personalFinanceCardPurple
+            color = WgcCoreDsColors.purple3
         ),
         OrganizzeAccount(
             id = "2",
             name = "Itaú Uniclass",
             type = "Conta Salário",
             balance = "R$ 4.880,00",
-            color = WgcCoreDsColors.personalFinanceCardNavy
+            color = WgcCoreDsColors.orange9
         ),
         OrganizzeAccount(
             id = "3",
             name = "Carteira Física",
             type = "Dinheiro em Espécie",
             balance = "R$ 550,00",
-            color = WgcCoreDsColors.personalFinancePrimary
+            color = WgcCoreDsColors.cyan3
         )
     )
 
@@ -92,7 +92,7 @@ object PersonalFinanceMockData {
             totalLimit = "R$ 10.000,00",
             closingDate = "Fecha em 24/05",
             dueDate = "Vence em 03/06",
-            color = WgcCoreDsColors.personalFinanceCardPurple,
+            color = WgcCoreDsColors.purple3,
             usageProgress = 0.184f
         ),
         OrganizzeCreditCard(
@@ -104,7 +104,7 @@ object PersonalFinanceMockData {
             totalLimit = "R$ 5.000,00",
             closingDate = "Fecha em 18/05",
             dueDate = "Vence em 25/05",
-            color = WgcCoreDsColors.personalFinanceCardNavy,
+            color = WgcCoreDsColors.orange9,
             usageProgress = 0.25f
         ),
         OrganizzeCreditCard(
@@ -116,20 +116,20 @@ object PersonalFinanceMockData {
             totalLimit = "R$ 15.000,00",
             closingDate = "Fecha em 28/05",
             dueDate = "Vence em 05/06",
-            color = WgcCoreDsColors.personalFinanceCardOrange,
+            color = WgcCoreDsColors.orange20,
             usageProgress = 0.024f
         )
     )
 
     val categories = listOf(
-        OrganizzeCategoryItem("cat1", "Alimentação", Icons.Default.Fastfood, WgcCoreDsColors.quickShopPrimary, "R$ 1.500,00", "R$ 1.120,00", 0.74f),
-        OrganizzeCategoryItem("cat2", "Transporte", Icons.Default.DirectionsCar, WgcCoreDsColors.personalFinanceTransferBlue, "R$ 800,00", "R$ 540,00", 0.67f),
-        OrganizzeCategoryItem("cat3", "Moradia", Icons.Default.Home, WgcCoreDsColors.personalFinanceWarningYellow, "R$ 2.200,00", "R$ 2.200,00", 1.0f),
-        OrganizzeCategoryItem("cat4", "Saúde", Icons.Default.LocalHospital, WgcCoreDsColors.personalFinanceExpenseRed, "R$ 600,00", "R$ 280,00", 0.46f),
-        OrganizzeCategoryItem("cat5", "Compras", Icons.Default.ShoppingBag, WgcCoreDsColors.personalFinanceCardPurple, "R$ 900,00", "R$ 680,00", 0.75f),
-        OrganizzeCategoryItem("cat6", "Educação", Icons.Default.School, WgcCoreDsColors.personalFinancePrimaryDark, "R$ 500,00", "R$ 350,00", 0.70f),
-        OrganizzeCategoryItem("cat7", "Salário", Icons.Default.Payments, WgcCoreDsColors.personalFinanceIncomeGreen),
-        OrganizzeCategoryItem("cat8", "Investimentos", Icons.Default.Work, WgcCoreDsColors.personalFinancePrimary)
+        OrganizzeCategoryItem("cat1", "Alimentação", Icons.Default.Fastfood, WgcCoreDsColors.orange37, "R$ 1.500,00", "R$ 1.120,00", 0.74f),
+        OrganizzeCategoryItem("cat2", "Transporte", Icons.Default.DirectionsCar, WgcCoreDsColors.blue36, "R$ 800,00", "R$ 540,00", 0.67f),
+        OrganizzeCategoryItem("cat3", "Moradia", Icons.Default.Home, WgcCoreDsColors.orange26, "R$ 2.200,00", "R$ 2.200,00", 1.0f),
+        OrganizzeCategoryItem("cat4", "Saúde", Icons.Default.LocalHospital, WgcCoreDsColors.red23, "R$ 600,00", "R$ 280,00", 0.46f),
+        OrganizzeCategoryItem("cat5", "Compras", Icons.Default.ShoppingBag, WgcCoreDsColors.purple3, "R$ 900,00", "R$ 680,00", 0.75f),
+        OrganizzeCategoryItem("cat6", "Educação", Icons.Default.School, WgcCoreDsColors.cyanDark5, "R$ 500,00", "R$ 350,00", 0.70f),
+        OrganizzeCategoryItem("cat7", "Salário", Icons.Default.Payments, WgcCoreDsColors.green26),
+        OrganizzeCategoryItem("cat8", "Investimentos", Icons.Default.Work, WgcCoreDsColors.cyan3)
     )
 
     val recentTransactions = listOf(
@@ -143,7 +143,7 @@ object PersonalFinanceMockData {
             date = "Hoje",
             isPaid = true,
             icon = Icons.Default.Fastfood,
-            color = WgcCoreDsColors.quickShopPrimary
+            color = WgcCoreDsColors.orange37
         ),
         OrganizzeTransactionItemModel(
             id = "t2",
@@ -155,7 +155,7 @@ object PersonalFinanceMockData {
             date = "Ontem",
             isPaid = true,
             icon = Icons.Default.Payments,
-            color = WgcCoreDsColors.personalFinanceIncomeGreen
+            color = WgcCoreDsColors.green26
         ),
         OrganizzeTransactionItemModel(
             id = "t3",
@@ -167,7 +167,7 @@ object PersonalFinanceMockData {
             date = "Ontem",
             isPaid = true,
             icon = Icons.Default.DirectionsCar,
-            color = WgcCoreDsColors.personalFinanceTransferBlue
+            color = WgcCoreDsColors.blue36
         ),
         OrganizzeTransactionItemModel(
             id = "t4",
@@ -179,7 +179,7 @@ object PersonalFinanceMockData {
             date = "12 de Maio",
             isPaid = true,
             icon = Icons.Default.LocalHospital,
-            color = WgcCoreDsColors.personalFinanceExpenseRed
+            color = WgcCoreDsColors.red23
         ),
         OrganizzeTransactionItemModel(
             id = "t5",
@@ -191,7 +191,7 @@ object PersonalFinanceMockData {
             date = "10 de Maio",
             isPaid = true,
             icon = Icons.Default.Payments,
-            color = WgcCoreDsColors.personalFinanceTransferBlue
+            color = WgcCoreDsColors.blue36
         )
     )
 }

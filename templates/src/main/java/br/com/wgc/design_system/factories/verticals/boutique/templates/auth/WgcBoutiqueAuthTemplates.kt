@@ -87,7 +87,7 @@ fun WgcLazaIntroScreenTemplate(
                         text = "Look Good, Feel Good",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark),
+                        color = Color(WgcCoreDsColors.grayDark13),
                         textAlign = TextAlign.Center
                     )
 
@@ -96,7 +96,7 @@ fun WgcLazaIntroScreenTemplate(
                     Text(
                         text = "Create your individual unique style and look amazing everyday.",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                        color = Color(WgcCoreDsColors.gray13),
                         textAlign = TextAlign.Center
                     )
 
@@ -115,8 +115,8 @@ fun WgcLazaIntroScreenTemplate(
                                     .height(WgcCoreDsSize.s52.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                                     .background(
-                                        if (isSelected) Color(WgcCoreDsColors.boutiquePrimary)
-                                        else Color(WgcCoreDsColors.boutiqueSurface)
+                                        if (isSelected) Color(WgcCoreDsColors.purple8)
+                                        else Color(WgcCoreDsColors.blueLight32)
                                     )
                                     .clickable { onGenderSelected(gender) },
                                 contentAlignment = Alignment.Center
@@ -125,7 +125,7 @@ fun WgcLazaIntroScreenTemplate(
                                     text = gender,
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.gray13)
                                 )
                             }
                         }
@@ -140,7 +140,7 @@ fun WgcLazaIntroScreenTemplate(
                             .height(WgcCoreDsSize.s52.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.boutiquePrimary)
+                            containerColor = Color(WgcCoreDsColors.purple8)
                         )
                     ) {
                         Text(
@@ -157,7 +157,7 @@ fun WgcLazaIntroScreenTemplate(
                         Text(
                             text = "Skip",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                            color = Color(WgcCoreDsColors.gray13)
                         )
                     }
                 }
@@ -203,12 +203,12 @@ fun WgcLazaSignInScreenTemplate(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s40.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.boutiqueSurface))
+                    .background(Color(WgcCoreDsColors.blueLight32))
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.boutiqueDark)
+                    tint = Color(WgcCoreDsColors.grayDark13)
                 )
             }
 
@@ -218,7 +218,7 @@ fun WgcLazaSignInScreenTemplate(
                 text = "Let's Get Started",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.boutiqueDark),
+                color = Color(WgcCoreDsColors.grayDark13),
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center
             )
@@ -228,7 +228,7 @@ fun WgcLazaSignInScreenTemplate(
             // Botões sociais
             LazaSocialButton(
                 text = "Facebook",
-                bgColor = Color(WgcCoreDsColors.boutiqueFacebook),
+                bgColor = Color(WgcCoreDsColors.blue25),
                 textColor = Color.White,
                 onClick = onFacebookClick
             )
@@ -237,7 +237,7 @@ fun WgcLazaSignInScreenTemplate(
 
             LazaSocialButton(
                 text = "Twitter",
-                bgColor = Color(WgcCoreDsColors.boutiqueTwitter),
+                bgColor = Color(WgcCoreDsColors.blue35),
                 textColor = Color.White,
                 onClick = onTwitterClick
             )
@@ -246,7 +246,7 @@ fun WgcLazaSignInScreenTemplate(
 
             LazaSocialButton(
                 text = "Google",
-                bgColor = Color(WgcCoreDsColors.boutiqueGoogle),
+                bgColor = Color(WgcCoreDsColors.red22),
                 textColor = Color.White,
                 onClick = onGoogleClick
             )
@@ -255,8 +255,8 @@ fun WgcLazaSignInScreenTemplate(
 
             LazaSocialButton(
                 text = "Sign in with Email",
-                bgColor = Color(WgcCoreDsColors.boutiqueSurface),
-                textColor = Color(WgcCoreDsColors.boutiqueDark),
+                bgColor = Color(WgcCoreDsColors.blueLight32),
+                textColor = Color(WgcCoreDsColors.grayDark13),
                 onClick = onEmailSignInClick
             )
         }
@@ -336,12 +336,12 @@ fun WgcLazaEmailSignInTemplate(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s40.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.boutiqueSurface))
+                    .background(Color(WgcCoreDsColors.blueLight32))
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.boutiqueDark)
+                    tint = Color(WgcCoreDsColors.grayDark13)
                 )
             }
 
@@ -351,7 +351,7 @@ fun WgcLazaEmailSignInTemplate(
                 text = "Welcome",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.boutiqueDark)
+                color = Color(WgcCoreDsColors.grayDark13)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -359,7 +359,7 @@ fun WgcLazaEmailSignInTemplate(
             Text(
                 text = "Please enter your data to continue",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                color = Color(WgcCoreDsColors.gray13)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxl48.dp))
@@ -368,19 +368,19 @@ fun WgcLazaEmailSignInTemplate(
             Text(
                 text = "Username",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                color = Color(WgcCoreDsColors.gray13)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             OutlinedTextField(
                 value = usernameOrEmail,
                 onValueChange = onUsernameOrEmailChange,
                 modifier = Modifier.fillMaxWidth(),
-                placeholder = { Text("Esther Howard", color = Color(WgcCoreDsColors.boutiqueSecondaryText)) },
+                placeholder = { Text("Esther Howard", color = Color(WgcCoreDsColors.gray13)) },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
-                    focusedBorderColor = Color(WgcCoreDsColors.boutiquePrimary),
+                    focusedContainerColor = Color(WgcCoreDsColors.blueLight32),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.blueLight32),
+                    focusedBorderColor = Color(WgcCoreDsColors.purple8),
                     unfocusedBorderColor = Color.Transparent
                 ),
                 singleLine = true
@@ -392,19 +392,19 @@ fun WgcLazaEmailSignInTemplate(
             Text(
                 text = "Password",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                color = Color(WgcCoreDsColors.gray13)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             OutlinedTextField(
                 value = password,
                 onValueChange = onPasswordChange,
                 modifier = Modifier.fillMaxWidth(),
-                placeholder = { Text("••••••••••••", color = Color(WgcCoreDsColors.boutiqueSecondaryText)) },
+                placeholder = { Text("••••••••••••", color = Color(WgcCoreDsColors.gray13)) },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
-                    focusedBorderColor = Color(WgcCoreDsColors.boutiquePrimary),
+                    focusedContainerColor = Color(WgcCoreDsColors.blueLight32),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.blueLight32),
+                    focusedBorderColor = Color(WgcCoreDsColors.purple8),
                     unfocusedBorderColor = Color.Transparent
                 ),
                 singleLine = true
@@ -419,7 +419,7 @@ fun WgcLazaEmailSignInTemplate(
                 Text(
                     text = "Forgot password?",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.boutiqueAlertRed)
+                    color = Color(WgcCoreDsColors.red22)
                 )
             }
 
@@ -435,7 +435,7 @@ fun WgcLazaEmailSignInTemplate(
                     text = "Remember me",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Switch(
@@ -443,7 +443,7 @@ fun WgcLazaEmailSignInTemplate(
                     onCheckedChange = onRememberMeChange,
                     colors = SwitchDefaults.colors(
                         checkedThumbColor = Color.White,
-                        checkedTrackColor = Color(WgcCoreDsColors.boutiqueSuccessGreen)
+                        checkedTrackColor = Color(WgcCoreDsColors.green21)
                     )
                 )
             }

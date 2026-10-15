@@ -95,7 +95,7 @@ fun WgcPdaAdegaTemplate(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color(WgcCoreDsColors.premiumGroceryWineRedDark))
+                            .background(Color(WgcCoreDsColors.pinkDark2))
                             .padding(WgcCoreDsSpacing.md16.dp)
                     ) {
                         Column(
@@ -114,12 +114,12 @@ fun WgcPdaAdegaTemplate(
                                     Icon(
                                         imageVector = Icons.Default.WineBar,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        tint = Color(WgcCoreDsColors.orange34),
                                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                     )
                                     Text(
                                         text = "ADEGA & SOMMELIER",
-                                        color = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        color = Color(WgcCoreDsColors.orange34),
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Black,
                                         letterSpacing = 1.sp
@@ -129,7 +129,7 @@ fun WgcPdaAdegaTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Tune,
                                         contentDescription = "Filtros",
-                                        tint = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                        tint = Color(WgcCoreDsColors.white)
                                     )
                                 }
                             }
@@ -148,16 +148,16 @@ fun WgcPdaAdegaTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Search,
                                         contentDescription = "Buscar",
-                                        tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                                        tint = Color(WgcCoreDsColors.cyan7),
                                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                     )
                                 },
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                                 colors = OutlinedTextFieldDefaults.colors(
-                                    focusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    unfocusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    focusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    unfocusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                    focusedContainerColor = Color(WgcCoreDsColors.white),
+                                    unfocusedContainerColor = Color(WgcCoreDsColors.white),
+                                    focusedBorderColor = Color(WgcCoreDsColors.white),
+                                    unfocusedBorderColor = Color(WgcCoreDsColors.white)
                                 ),
                                 singleLine = true,
                                 readOnly = true
@@ -174,7 +174,7 @@ fun WgcPdaAdegaTemplate(
                         text = "ESTILO DO VINHO",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                        color = Color(WgcCoreDsColors.cyanDark3),
                         modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
                     )
                     LazyRow(
@@ -187,11 +187,11 @@ fun WgcPdaAdegaTemplate(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                     .background(
-                                        if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGrocerySurface)
+                                        if (isSelected) Color(WgcCoreDsColors.pink1) else Color(WgcCoreDsColors.white)
                                     )
                                     .border(
                                         width = WgcCoreDsSize.s1.dp,
-                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGroceryBorder),
+                                        color = if (isSelected) Color(WgcCoreDsColors.pink1) else Color(WgcCoreDsColors.greenLight1),
                                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                     )
                                     .clickable { selectedTypeIndex = index }
@@ -199,7 +199,7 @@ fun WgcPdaAdegaTemplate(
                             ) {
                                 Text(
                                     text = wineTypes[index],
-                                    color = if (isSelected) Color(WgcCoreDsColors.premiumGrocerySurface) else Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                                    color = if (isSelected) Color(WgcCoreDsColors.white) else Color(WgcCoreDsColors.cyanDark3),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -216,10 +216,10 @@ fun WgcPdaAdegaTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.premiumGroceryGoldLight)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.orangeLight12)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.premiumGroceryGold).copy(alpha = 0.5f)
+                        Color(WgcCoreDsColors.orange34).copy(alpha = 0.5f)
                     )
                 ) {
                     Column(
@@ -232,7 +232,7 @@ fun WgcPdaAdegaTemplate(
                             text = "🍷 O que você vai comer hoje?",
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.premiumGroceryGoldDark)
+                            color = Color(WgcCoreDsColors.orange4)
                         )
                         LazyRow(
                             horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
@@ -242,10 +242,10 @@ fun WgcPdaAdegaTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                        .background(if (isSelected) Color(WgcCoreDsColors.premiumGroceryGold) else Color(WgcCoreDsColors.premiumGrocerySurface))
+                                        .background(if (isSelected) Color(WgcCoreDsColors.orange34) else Color(WgcCoreDsColors.white))
                                         .border(
                                             width = WgcCoreDsSize.s1.dp,
-                                            color = if (isSelected) Color(WgcCoreDsColors.premiumGroceryGold) else Color(WgcCoreDsColors.premiumGroceryBorder),
+                                            color = if (isSelected) Color(WgcCoreDsColors.orange34) else Color(WgcCoreDsColors.greenLight1),
                                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                         )
                                         .clickable { selectedPairingIndex = index }
@@ -253,7 +253,7 @@ fun WgcPdaAdegaTemplate(
                                 ) {
                                     Text(
                                         text = pairings[index],
-                                        color = if (isSelected) Color(WgcCoreDsColors.premiumGrocerySurface) else Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                                        color = if (isSelected) Color(WgcCoreDsColors.white) else Color(WgcCoreDsColors.cyanDark3),
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Bold
                                     )

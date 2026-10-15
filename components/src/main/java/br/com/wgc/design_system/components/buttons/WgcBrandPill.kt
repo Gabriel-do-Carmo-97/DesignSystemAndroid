@@ -42,8 +42,8 @@ fun WgcBrandPill(
         modifier = modifier
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.boutiquePrimaryLight)
-                else Color(WgcCoreDsColors.boutiqueSurface)
+                if (isSelected) Color(WgcCoreDsColors.purpleLight2)
+                else Color(WgcCoreDsColors.blueLight32)
             )
             .clickable(onClick = onClick)
             .padding(WgcCoreDsSpacing.xs8.dp),
@@ -68,7 +68,7 @@ fun WgcBrandPill(
                     text = brandName.take(2).uppercase(),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color(WgcCoreDsColors.boutiquePrimary) else Color(WgcCoreDsColors.boutiqueDark)
+                    color = if (isSelected) Color(WgcCoreDsColors.purple8) else Color(WgcCoreDsColors.grayDark13)
                 )
             }
         }
@@ -79,7 +79,7 @@ fun WgcBrandPill(
             text = brandName,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = if (isSelected) Color(WgcCoreDsColors.boutiquePrimary) else Color(WgcCoreDsColors.boutiqueDark),
+            color = if (isSelected) Color(WgcCoreDsColors.purple8) else Color(WgcCoreDsColors.grayDark13),
             modifier = Modifier.padding(end = WgcCoreDsSpacing.sm12.dp)
         )
     }

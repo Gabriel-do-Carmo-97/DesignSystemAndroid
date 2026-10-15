@@ -23,7 +23,7 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.businessNewsBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blueDark35)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("EXAME • Negócios, Economia & ESG", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -32,7 +32,7 @@ fun WgcExameHomeTemplate(modifier: Modifier = Modifier) {
             items(BusinessNewsMockData.sampleArticles) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.category, color = Color(WgcCoreDsColors.businessNewsBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(item.category, color = Color(WgcCoreDsColors.blueDark35), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text(item.title, fontWeight = FontWeight.Bold)
                     }
                 }

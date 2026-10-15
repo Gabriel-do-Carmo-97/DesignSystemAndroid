@@ -75,7 +75,7 @@ fun WgcNexkartCheckoutTemplate(
                         text = "Checkout",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                 },
                 navigationIcon = {
@@ -83,7 +83,7 @@ fun WgcNexkartCheckoutTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.gadgetShopDark)
+                            tint = Color(WgcCoreDsColors.blueDark6)
                         )
                     }
                 },
@@ -105,7 +105,7 @@ fun WgcNexkartCheckoutTemplate(
                             .fillMaxWidth()
                             .height(48.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                            .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                            .background(Color(WgcCoreDsColors.blue39))
                             .clickable(onClick = onConfirmOrderClick),
                         contentAlignment = Alignment.Center
                     ) {
@@ -141,13 +141,13 @@ fun WgcNexkartCheckoutTemplate(
                         text = "Shipping Address",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                     Text(
                         text = "Change",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                        color = Color(WgcCoreDsColors.blue39),
                         modifier = Modifier.clickable(onClick = onChangeAddressClick)
                     )
                 }
@@ -156,7 +156,7 @@ fun WgcNexkartCheckoutTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                        .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                        .background(Color(WgcCoreDsColors.blueLight38))
                         .padding(WgcCoreDsSpacing.md16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -164,13 +164,13 @@ fun WgcNexkartCheckoutTemplate(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.gadgetShopPrimaryLight)),
+                            .background(Color(WgcCoreDsColors.blueLight31)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.LocationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gadgetShopPrimary),
+                            tint = Color(WgcCoreDsColors.blue39),
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -180,7 +180,7 @@ fun WgcNexkartCheckoutTemplate(
                     Text(
                         text = address,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                 }
             }
@@ -193,7 +193,7 @@ fun WgcNexkartCheckoutTemplate(
                     text = "Payment Method",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark)
+                    color = Color(WgcCoreDsColors.blueDark6)
                 )
 
                 val paymentMethods = listOf("Credit Card", "Apple Pay", "PayPal")
@@ -205,10 +205,10 @@ fun WgcNexkartCheckoutTemplate(
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
                             .border(
                                 width = if (isSelected) 1.5.dp else 1.dp,
-                                color = if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else Color(WgcCoreDsColors.gadgetShopBorder),
+                                color = if (isSelected) Color(WgcCoreDsColors.blue39) else Color(WgcCoreDsColors.blueLight14),
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp)
                             )
-                            .background(if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimaryLight) else Color.White)
+                            .background(if (isSelected) Color(WgcCoreDsColors.blueLight31) else Color.White)
                             .clickable { onPaymentMethodSelected(method) }
                             .padding(WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically,
@@ -218,7 +218,7 @@ fun WgcNexkartCheckoutTemplate(
                             Icon(
                                 imageVector = if (method == "Credit Card") Icons.Default.CreditCard else Icons.Default.Payment,
                                 contentDescription = null,
-                                tint = if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                                tint = if (isSelected) Color(WgcCoreDsColors.blue39) else Color(WgcCoreDsColors.blue41),
                                 modifier = Modifier.size(22.dp)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -226,7 +226,7 @@ fun WgcNexkartCheckoutTemplate(
                                 text = method,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                color = Color(WgcCoreDsColors.gadgetShopDark)
+                                color = Color(WgcCoreDsColors.blueDark6)
                             )
                         }
 
@@ -237,7 +237,7 @@ fun WgcNexkartCheckoutTemplate(
                                 .clip(CircleShape)
                                 .border(
                                     2.dp,
-                                    if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else Color(WgcCoreDsColors.gadgetShopBorder),
+                                    if (isSelected) Color(WgcCoreDsColors.blue39) else Color(WgcCoreDsColors.blueLight14),
                                     CircleShape
                                 ),
                             contentAlignment = Alignment.Center
@@ -247,7 +247,7 @@ fun WgcNexkartCheckoutTemplate(
                                     modifier = Modifier
                                         .size(10.dp)
                                         .clip(CircleShape)
-                                        .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                                        .background(Color(WgcCoreDsColors.blue39))
                                 )
                             }
                         }
@@ -260,7 +260,7 @@ fun WgcNexkartCheckoutTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                    .background(Color(WgcCoreDsColors.blueLight38))
                     .padding(WgcCoreDsSpacing.md16.dp),
                 verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
             ) {
@@ -268,7 +268,7 @@ fun WgcNexkartCheckoutTemplate(
                     text = "Order Summary",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark)
+                    color = Color(WgcCoreDsColors.blueDark6)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -277,24 +277,24 @@ fun WgcNexkartCheckoutTemplate(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "Subtotal", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.gadgetShopSecondaryText))
-                    Text(text = subtotal, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.gadgetShopDark))
+                    Text(text = "Subtotal", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
+                    Text(text = subtotal, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.blueDark6))
                 }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "Shipping", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.gadgetShopSecondaryText))
-                    Text(text = shipping, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.gadgetShopSuccessGreen))
+                    Text(text = "Shipping", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
+                    Text(text = shipping, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.green21))
                 }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "Tax", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.gadgetShopSecondaryText))
-                    Text(text = tax, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.gadgetShopDark))
+                    Text(text = "Tax", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
+                    Text(text = tax, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.blueDark6))
                 }
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -304,8 +304,8 @@ fun WgcNexkartCheckoutTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = "Total", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.gadgetShopDark))
-                    Text(text = total, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.gadgetShopPrimary))
+                    Text(text = "Total", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.blueDark6))
+                    Text(text = total, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.blue39))
                 }
             }
         }

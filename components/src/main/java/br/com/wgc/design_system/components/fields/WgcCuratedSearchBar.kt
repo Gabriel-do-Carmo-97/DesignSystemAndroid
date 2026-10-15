@@ -56,22 +56,22 @@ fun WgcCuratedSearchBar(
                 Text(
                     text = placeholderText,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                    color = Color(WgcCoreDsColors.gray10)
                 )
             },
             trailingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = "Buscar",
-                    tint = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                    tint = Color(WgcCoreDsColors.gray10),
                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                 )
             },
             singleLine = true,
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
-                unfocusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
+                focusedContainerColor = Color(WgcCoreDsColors.blueLight26),
+                unfocusedContainerColor = Color(WgcCoreDsColors.blueLight26),
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
             )
@@ -81,14 +81,14 @@ fun WgcCuratedSearchBar(
             modifier = Modifier
                 .size(WgcCoreDsSize.s48.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                .background(Color(WgcCoreDsColors.blueLight26))
                 .clickable(onClick = onFilterClick),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Default.Tune,
                 contentDescription = "Filtros",
-                tint = Color(WgcCoreDsColors.curatedMarketDark),
+                tint = Color(WgcCoreDsColors.grayDark9),
                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
             )
         }

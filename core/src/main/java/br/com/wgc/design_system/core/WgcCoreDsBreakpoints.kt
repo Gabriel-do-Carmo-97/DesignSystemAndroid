@@ -20,16 +20,16 @@ enum class WgcWindowSizeClass {
  */
 object WgcCoreDsBreakpoints {
     /** Limite superior para telas compactas (smartphones em retrato) em dp */
-    const val compactMax: Double = 599.0
+    const val compactMax: Double   = CoreConstants.CoreDsBreakpoints.COMPACT_MAX
 
     /** Limite inferior para telas médias (tablets pequenos e dobráveis) em dp */
-    const val mediumMin: Double = 600.0
+    const val mediumMin: Double   = CoreConstants.CoreDsBreakpoints.MEDIUM_MIN
 
     /** Limite superior para telas médias em dp */
-    const val mediumMax: Double = 839.0
+    const val mediumMax: Double   = CoreConstants.CoreDsBreakpoints.MEDIUM_MAX
 
     /** Limite inferior para telas expandidas (tablets grandes e desktops) em dp */
-    const val expandedMin: Double = 840.0
+    const val expandedMin: Double   = CoreConstants.CoreDsBreakpoints.EXPANDED_MIN
 
     /**
      * Calcula a classe de tamanho de janela a partir da largura disponível em dp.

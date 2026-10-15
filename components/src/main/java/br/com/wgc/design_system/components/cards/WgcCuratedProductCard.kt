@@ -62,7 +62,7 @@ fun WgcCuratedProductCard(
                 .fillMaxWidth()
                 .height(WgcCoreDsSize.s180.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                .background(Color(WgcCoreDsColors.blueLight26))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -74,13 +74,13 @@ fun WgcCuratedProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.curatedMarketPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight29)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.curatedMarketPrimary),
+                        color = Color(WgcCoreDsColors.blue37),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -99,7 +99,7 @@ fun WgcCuratedProductCard(
                 Icon(
                     imageVector = if (isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
                     contentDescription = if (isBookmarked) "Remover dos salvos" else "Salvar produto",
-                    tint = if (isBookmarked) Color(WgcCoreDsColors.curatedMarketPrimary) else Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                    tint = if (isBookmarked) Color(WgcCoreDsColors.blue37) else Color(WgcCoreDsColors.gray10),
                     modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                 )
             }
@@ -111,7 +111,7 @@ fun WgcCuratedProductCard(
             Text(
                 text = brand.uppercase(),
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                color = Color(WgcCoreDsColors.gray10),
                 maxLines = 1
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
@@ -121,7 +121,7 @@ fun WgcCuratedProductCard(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.curatedMarketDark),
+            color = Color(WgcCoreDsColors.grayDark9),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
@@ -132,7 +132,7 @@ fun WgcCuratedProductCard(
             text = price,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.curatedMarketDark)
+            color = Color(WgcCoreDsColors.grayDark9)
         )
     }
 }

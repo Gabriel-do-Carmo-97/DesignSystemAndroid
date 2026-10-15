@@ -124,7 +124,7 @@ private fun WgcBiometricButtonPreview() {
             WgcBiometricButton(
                 label = "Login with touch ID",
                 style = WgcBiometricStyle.OutlinedSquare,
-                borderColor = Color(WgcCoreDsColors.warning)
+                borderColor = Color(WgcCoreDsColors.yellow10)
             )
         }
     }

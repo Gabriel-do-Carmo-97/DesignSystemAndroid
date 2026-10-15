@@ -68,8 +68,8 @@ fun WgcApparelOrderTimeline(
                 ) {
                     val circleBg = when (step.state) {
                         WgcClotheeStepState.COMPLETED,
-                        WgcClotheeStepState.IN_PROGRESS -> Color(WgcCoreDsColors.apparelPrimary)
-                        WgcClotheeStepState.PENDING -> Color(WgcCoreDsColors.apparelSurface)
+                        WgcClotheeStepState.IN_PROGRESS -> Color(WgcCoreDsColors.purple7)
+                        WgcClotheeStepState.PENDING -> Color(WgcCoreDsColors.grayLight8)
                     }
 
                     Box(
@@ -98,9 +98,9 @@ fun WgcApparelOrderTimeline(
 
                     if (!isLast) {
                         val lineColor = if (step.state == WgcClotheeStepState.COMPLETED) {
-                            Color(WgcCoreDsColors.apparelPrimary)
+                            Color(WgcCoreDsColors.purple7)
                         } else {
-                            Color(WgcCoreDsColors.apparelBorder)
+                            Color(WgcCoreDsColors.grayLight4)
                         }
                         Box(
                             modifier = Modifier
@@ -124,16 +124,16 @@ fun WgcApparelOrderTimeline(
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
                         color = if (step.state == WgcClotheeStepState.PENDING) {
-                            Color(WgcCoreDsColors.apparelSecondaryText)
+                            Color(WgcCoreDsColors.gray12)
                         } else {
-                            Color(WgcCoreDsColors.apparelDark)
+                            Color(WgcCoreDsColors.grayDark18)
                         }
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = step.subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                     if (!isLast) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))

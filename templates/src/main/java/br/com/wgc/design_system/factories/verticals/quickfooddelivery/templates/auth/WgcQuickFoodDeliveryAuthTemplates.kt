@@ -69,7 +69,7 @@ fun WgcQuickFoodDeliveryRegisterScreenTemplate(viewModel: BaseQuickFoodDeliveryA
             WgcBrandAuthHeader(
                 brandName = "Quick Food Delivery",
                 brandLogoText = "QD",
-                brandColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue),
+                brandColor = Color(WgcCoreDsColors.blueDark18),
                 title = "Cadastro Quick Food",
                 subtitle = "Crie sua conta para aproveitar os cupons exclusivos"
             )
@@ -98,7 +98,7 @@ fun WgcQuickFoodDeliveryResetPasswordScreenTemplate(viewModel: BaseQuickFoodDeli
             WgcBrandAuthHeader(
                 brandName = "Quick Food Delivery",
                 brandLogoText = "QD",
-                brandColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue),
+                brandColor = Color(WgcCoreDsColors.blueDark18),
                 title = "Recuperar Acesso Quick Food",
                 subtitle = "Digite o código enviado por SMS para seu celular"
             )

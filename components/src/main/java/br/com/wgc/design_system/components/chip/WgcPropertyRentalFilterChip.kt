@@ -52,21 +52,21 @@ fun WgcPropertyRentalFilterChip(
     val stateDesc = if (isSelected) "Filtro ativo: $label" else "Filtro inativo: $label"
 
     val backgroundColor = if (isSelected) {
-        Color(WgcCoreDsColors.propertyRentalPrimary)
+        Color(WgcCoreDsColors.blueDark26)
     } else {
-        Color(WgcCoreDsColors.propertyRentalSurface)
+        Color(WgcCoreDsColors.white)
     }
 
     val contentColor = if (isSelected) {
         Color.White
     } else {
-        Color(WgcCoreDsColors.propertyRentalDark)
+        Color(WgcCoreDsColors.blueDark26)
     }
 
     val borderColor = if (isSelected) {
-        Color(WgcCoreDsColors.propertyRentalPrimary)
+        Color(WgcCoreDsColors.blueDark26)
     } else {
-        Color(WgcCoreDsColors.propertyRentalBorder)
+        Color(WgcCoreDsColors.blueLight8)
     }
 
     Box(
@@ -97,7 +97,7 @@ fun WgcPropertyRentalFilterChip(
                 Icon(
                     imageVector = leadingIcon,
                     contentDescription = null,
-                    tint = if (isSelected) Color(WgcCoreDsColors.propertyRentalYellow) else contentColor,
+                    tint = if (isSelected) Color(WgcCoreDsColors.yellow6) else contentColor,
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -116,7 +116,7 @@ fun WgcPropertyRentalFilterChip(
                     text = "($badgeValue)",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color(WgcCoreDsColors.propertyRentalYellow) else Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                    color = if (isSelected) Color(WgcCoreDsColors.yellow6) else Color(WgcCoreDsColors.blue21)
                 )
             }
 

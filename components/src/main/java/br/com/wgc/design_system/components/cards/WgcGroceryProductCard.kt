@@ -49,11 +49,11 @@ import java.util.Locale
  */
 fun getNutriScoreColor(grade: String): Color {
     return when (grade.uppercase(Locale.ROOT)) {
-        "A" -> Color(WgcCoreDsColors.groceryNutriScoreA)
-        "B" -> Color(WgcCoreDsColors.groceryNutriScoreB)
-        "C" -> Color(WgcCoreDsColors.groceryNutriScoreC)
-        "D" -> Color(WgcCoreDsColors.groceryNutriScoreD)
-        else -> Color(WgcCoreDsColors.groceryNutriScoreE)
+        "A" -> Color(WgcCoreDsColors.green2)
+        "B" -> Color(WgcCoreDsColors.green24)
+        "C" -> Color(WgcCoreDsColors.yellow9)
+        "D" -> Color(WgcCoreDsColors.orange11)
+        else -> Color(WgcCoreDsColors.orange12)
     }
 }
 
@@ -86,14 +86,14 @@ fun WgcGroceryProductCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.grocerySurface)
+            containerColor = Color(WgcCoreDsColors.white)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level1.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBorder)
+            color = Color(WgcCoreDsColors.blueLight4)
         )
     ) {
         Column(
@@ -105,14 +105,14 @@ fun WgcGroceryProductCard(
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s120.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.groceryBackground)),
+                    .background(Color(WgcCoreDsColors.blueLight30)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ShoppingBag,
                     contentDescription = null,
                     modifier = Modifier.size(WgcCoreDsSize.s48.dp),
-                    tint = Color(WgcCoreDsColors.groceryBlue)
+                    tint = Color(WgcCoreDsColors.blueDark32)
                 )
 
                 // Selo Nutri-Score no canto superior esquerdo
@@ -141,7 +141,7 @@ fun WgcGroceryProductCard(
                             .align(Alignment.BottomStart)
                             .padding(WgcCoreDsSpacing.xxs4.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.groceryRed))
+                            .background(Color(WgcCoreDsColors.red19))
                             .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         Text(
@@ -163,7 +163,7 @@ fun WgcGroceryProductCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.groceryRed) else Color(WgcCoreDsColors.groceryTextSecondary),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.red19) else Color(WgcCoreDsColors.gray5),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -174,7 +174,7 @@ fun WgcGroceryProductCard(
             // Marca / Linha
             Text(
                 text = brandLine.uppercase(Locale.ROOT),
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
@@ -184,7 +184,7 @@ fun WgcGroceryProductCard(
             // Nome do Produto
             Text(
                 text = title,
-                color = Color(WgcCoreDsColors.groceryTextPrimary),
+                color = Color(WgcCoreDsColors.blueDark13),
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
                 maxLines = 2,
@@ -195,7 +195,7 @@ fun WgcGroceryProductCard(
             // Unidade
             Text(
                 text = unit,
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 style = MaterialTheme.typography.bodySmall
             )
 
@@ -204,7 +204,7 @@ fun WgcGroceryProductCard(
             // Preço Regular
             Text(
                 text = String.format(Locale.GERMANY, "R$ %.2f", regularPrice),
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 style = MaterialTheme.typography.labelSmall,
                 textDecoration = TextDecoration.LineThrough
             )
@@ -216,7 +216,7 @@ fun WgcGroceryProductCard(
             ) {
                 Text(
                     text = String.format(Locale.GERMANY, "R$ %.2f", cardSupermercadoPrice),
-                    color = Color(WgcCoreDsColors.groceryBlue),
+                    color = Color(WgcCoreDsColors.blueDark32),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Black
                 )
@@ -224,20 +224,20 @@ fun WgcGroceryProductCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.groceryBlueLight))
+                        .background(Color(WgcCoreDsColors.blueLight20))
                         .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.groceryBlue),
+                            tint = Color(WgcCoreDsColors.blueDark32),
                             modifier = Modifier.size(WgcCoreDsSize.s10.dp)
                         )
                         Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxxs2.dp))
                         Text(
                             text = "Cartão",
-                            color = Color(WgcCoreDsColors.groceryBlue),
+                            color = Color(WgcCoreDsColors.blueDark32),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -249,7 +249,7 @@ fun WgcGroceryProductCard(
             if (!installmentsText.isNullOrBlank()) {
                 Text(
                     text = installmentsText,
-                    color = Color(WgcCoreDsColors.groceryBlueDark),
+                    color = Color(WgcCoreDsColors.blueDark14),
                     style = MaterialTheme.typography.labelSmall,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
@@ -265,7 +265,7 @@ fun WgcGroceryProductCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s32.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.groceryBlue))
+                        .background(Color(WgcCoreDsColors.blueDark32))
                         .clickable { onQuantityChange(1) },
                     contentAlignment = Alignment.Center
                 ) {
@@ -284,7 +284,7 @@ fun WgcGroceryProductCard(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.groceryBlue),
+                            color = Color(WgcCoreDsColors.blueDark32),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
                         ),
                     verticalAlignment = Alignment.CenterVertically,
@@ -297,14 +297,14 @@ fun WgcGroceryProductCard(
                         Icon(
                             imageVector = Icons.Default.Remove,
                             contentDescription = "Diminuir",
-                            tint = Color(WgcCoreDsColors.groceryBlue),
+                            tint = Color(WgcCoreDsColors.blueDark32),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }
 
                     Text(
                         text = "$quantity",
-                        color = Color(WgcCoreDsColors.groceryBlue),
+                        color = Color(WgcCoreDsColors.blueDark32),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold
                     )
@@ -316,7 +316,7 @@ fun WgcGroceryProductCard(
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = "Aumentar",
-                            tint = Color(WgcCoreDsColors.groceryBlue),
+                            tint = Color(WgcCoreDsColors.blueDark32),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }

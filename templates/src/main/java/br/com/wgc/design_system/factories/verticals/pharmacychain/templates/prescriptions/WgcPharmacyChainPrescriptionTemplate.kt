@@ -70,12 +70,12 @@ fun WgcDrogaRaiaPrescriptionTemplate(
                     text = "Receitas Médicas & Prescrições",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
                 Text(
                     text = "Envie receitas digitais (CFM / Memed) ou fotos de receitas físicas",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
             }
 
@@ -91,7 +91,7 @@ fun WgcDrogaRaiaPrescriptionTemplate(
                     text = "Minhas Receitas Ativas",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
             }
 
@@ -129,7 +129,7 @@ private fun PrescriptionItemCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -146,7 +146,7 @@ private fun PrescriptionItemCard(
                     Icon(
                         imageVector = Icons.Default.Description,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                        tint = Color(WgcCoreDsColors.blueDark16),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -154,7 +154,7 @@ private fun PrescriptionItemCard(
                         text = doctorName,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                        color = Color(WgcCoreDsColors.blueDark28)
                     )
                 }
 
@@ -162,14 +162,14 @@ private fun PrescriptionItemCard(
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainGreen),
+                        tint = Color(WgcCoreDsColors.green3),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = status,
                         fontSize = 9.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainGreen),
+                        color = Color(WgcCoreDsColors.green3),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -180,7 +180,7 @@ private fun PrescriptionItemCard(
             Text(
                 text = "$medicinesCount medicamento(s) prescrito(s) • Emitida em $issueDate • Válida até $validUntil",
                 fontSize = 10.sp,
-                color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                color = Color(WgcCoreDsColors.blue20)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))

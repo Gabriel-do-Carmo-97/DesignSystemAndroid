@@ -99,7 +99,7 @@ class FakeKlokAuthViewModel : BaseKlokAuthViewModel() {
 fun WgcKlokAuthScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseKlokAuthViewModel = FakeKlokAuthViewModel(),
-    brandPrimaryColor: Color = Color(WgcCoreDsColors.warning),
+    brandPrimaryColor: Color = Color(WgcCoreDsColors.yellow10),
     onNavigateToForgotPassword: () -> Unit = {},
     headerSlot: (@Composable () -> Unit)? = null,
     switcherSlot: (@Composable () -> Unit)? = null,

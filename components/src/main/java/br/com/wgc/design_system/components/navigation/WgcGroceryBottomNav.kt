@@ -55,7 +55,7 @@ fun WgcGroceryBottomNav(
     NavigationBar(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBorder)
+            color = Color(WgcCoreDsColors.blueLight4)
         )) {
         WgcSupermercadoNavItem.entries.forEachIndexed { index, item ->
             val isSelected = selectedItem == index
@@ -77,11 +77,11 @@ fun WgcGroceryBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.groceryBlue),
-                    selectedTextColor = Color(WgcCoreDsColors.groceryBlue),
-                    unselectedIconColor = Color(WgcCoreDsColors.groceryTextSecondary),
-                    unselectedTextColor = Color(WgcCoreDsColors.groceryTextSecondary),
-                    indicatorColor = Color(WgcCoreDsColors.groceryBlueLight)
+                    selectedIconColor = Color(WgcCoreDsColors.blueDark32),
+                    selectedTextColor = Color(WgcCoreDsColors.blueDark32),
+                    unselectedIconColor = Color(WgcCoreDsColors.gray5),
+                    unselectedTextColor = Color(WgcCoreDsColors.gray5),
+                    indicatorColor = Color(WgcCoreDsColors.blueLight20)
                 )
             )
         }

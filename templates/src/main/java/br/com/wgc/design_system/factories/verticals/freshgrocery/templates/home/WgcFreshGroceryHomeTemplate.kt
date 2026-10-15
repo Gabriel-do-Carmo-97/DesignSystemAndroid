@@ -112,7 +112,7 @@ fun WgcFreshGroceryHomeTemplate(
                             bottomEnd = WgcCoreDsBorderRadius.xxl24.dp
                         )
                     )
-                    .background(Color(WgcCoreDsColors.megaStorerPrimary))
+                    .background(Color(WgcCoreDsColors.green6))
                     .padding(
                         horizontal = WgcCoreDsSpacing.md16.dp,
                         vertical = WgcCoreDsSpacing.md16.dp
@@ -182,14 +182,14 @@ fun WgcFreshGroceryHomeTemplate(
                             Text(
                                 text = "Search product...",
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                                color = Color(WgcCoreDsColors.gray9)
                             )
                         },
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Default.Search,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.megaStorerSecondaryText),
+                                tint = Color(WgcCoreDsColors.gray9),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                         },
@@ -229,7 +229,7 @@ fun WgcFreshGroceryHomeTemplate(
                     text = "Categories",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -286,14 +286,14 @@ fun WgcFreshGroceryHomeTemplate(
                             text = "Flash Deal",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.megaStorerDark)
+                            color = Color(WgcCoreDsColors.greenDark4)
                         )
 
                         // Timer Badge
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.megaStorerAccent))
+                                .background(Color(WgcCoreDsColors.red29))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxs4.dp
@@ -312,7 +312,7 @@ fun WgcFreshGroceryHomeTemplate(
                         text = "See All",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStorerPrimary),
+                        color = Color(WgcCoreDsColors.green6),
                         modifier = Modifier.clickable { /* see all */ }
                     )
                 }
@@ -351,14 +351,14 @@ fun WgcFreshGroceryHomeTemplate(
                         text = "Popular Products",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStorerDark)
+                        color = Color(WgcCoreDsColors.greenDark4)
                     )
 
                     Text(
                         text = "See All",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStorerPrimary),
+                        color = Color(WgcCoreDsColors.green6),
                         modifier = Modifier.clickable { /* see all */ }
                     )
                 }

@@ -52,7 +52,7 @@ fun WgcMessagingConversationCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.directMessagingGreen)),
+                    .background(Color(WgcCoreDsColors.green25)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -89,7 +89,7 @@ fun WgcMessagingConversationCard(
                     Box(
                         modifier = Modifier
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.directMessagingGreen))
+                            .background(Color(WgcCoreDsColors.green25))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         Text(

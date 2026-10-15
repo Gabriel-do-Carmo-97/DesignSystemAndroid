@@ -29,7 +29,7 @@ fun WgcBoutiqueBottomNavButton(
         enabled = enabled,
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color(WgcCoreDsColors.boutiquePrimary),
+            containerColor = Color(WgcCoreDsColors.purple8),
             contentColor = Color.White
         )
     ) {

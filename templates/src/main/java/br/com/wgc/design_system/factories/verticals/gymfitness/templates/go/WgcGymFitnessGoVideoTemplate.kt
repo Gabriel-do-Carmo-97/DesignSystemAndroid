@@ -102,7 +102,7 @@ fun WgcGymFitnessGoVideoTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.gymTextPrimary),
+                                    tint = Color(WgcCoreDsColors.white),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -114,7 +114,7 @@ fun WgcGymFitnessGoVideoTemplate(
                             ) {
                                 Text(
                                     text = "GYM FITNESS",
-                                    color = Color(WgcCoreDsColors.gymYellow),
+                                    color = Color(WgcCoreDsColors.orange23),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 1.sp
@@ -122,12 +122,12 @@ fun WgcGymFitnessGoVideoTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs2.dp))
-                                        .background(Color(WgcCoreDsColors.gymYellow))
+                                        .background(Color(WgcCoreDsColors.orange23))
                                         .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                                 ) {
                                     Text(
                                         text = "GO",
-                                        color = Color(WgcCoreDsColors.gymTextInverse),
+                                        color = Color(WgcCoreDsColors.black),
                                         fontSize = 9.sp,
                                         fontWeight = FontWeight.Black
                                     )
@@ -135,7 +135,7 @@ fun WgcGymFitnessGoVideoTemplate(
                             }
                             Text(
                                 text = "Treine Onde Quiser",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -149,8 +149,8 @@ fun WgcGymFitnessGoVideoTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                 ) {
                     Column(
                         modifier = Modifier
@@ -160,14 +160,14 @@ fun WgcGymFitnessGoVideoTemplate(
                     ) {
                         Text(
                             text = "PROGRAMAS COMPLETOS EM VÍDEO",
-                            color = Color(WgcCoreDsColors.gymYellow),
+                            color = Color(WgcCoreDsColors.orange23),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 1.sp
                         )
                         Text(
                             text = "Hiit, Alongamento, Dança e Força guiados pelos melhores personais do Brasil.",
-                            color = Color(WgcCoreDsColors.gymTextPrimary),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 14.sp
                         )
                     }
@@ -181,8 +181,8 @@ fun WgcGymFitnessGoVideoTemplate(
                         .fillMaxWidth()
                         .clickable { onSelectVideo?.invoke(video) },
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(
@@ -199,20 +199,20 @@ fun WgcGymFitnessGoVideoTemplate(
                                         topEnd = WgcCoreDsBorderRadius.lg12.dp
                                     )
                                 )
-                                .background(Color(WgcCoreDsColors.gymCardPlaceholder)),
+                                .background(Color(WgcCoreDsColors.grayDark16)),
                             contentAlignment = Alignment.Center
                         ) {
                             Box(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s52.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.gymYellow)),
+                                    .background(Color(WgcCoreDsColors.orange23)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.PlayArrow,
                                     contentDescription = "Assistir Vídeo",
-                                    tint = Color(WgcCoreDsColors.gymTextInverse),
+                                    tint = Color(WgcCoreDsColors.black),
                                     modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                                 )
                             }
@@ -244,14 +244,14 @@ fun WgcGymFitnessGoVideoTemplate(
                         ) {
                             Text(
                                 text = video.category.uppercase(),
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
                                 letterSpacing = 0.5.sp
                             )
                             Text(
                                 text = video.title,
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -268,12 +268,12 @@ fun WgcGymFitnessGoVideoTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Person,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymTextSecondary),
+                                        tint = Color(WgcCoreDsColors.gray16),
                                         modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                     )
                                     Text(
                                         text = video.trainer,
-                                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                                        color = Color(WgcCoreDsColors.gray16),
                                         fontSize = 11.sp
                                     )
                                 }
@@ -285,19 +285,19 @@ fun WgcGymFitnessGoVideoTemplate(
                                     Icon(
                                         imageVector = Icons.Default.LocalFireDepartment,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymCrowdMedium),
+                                        tint = Color(WgcCoreDsColors.orange25),
                                         modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                     )
                                     Text(
                                         text = video.caloriesBurned,
-                                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                                        color = Color(WgcCoreDsColors.gray16),
                                         fontSize = 11.sp
                                     )
                                 }
 
                                 Text(
                                     text = video.intensity,
-                                    color = Color(WgcCoreDsColors.gymAccentCyan),
+                                    color = Color(WgcCoreDsColors.cyan9),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )

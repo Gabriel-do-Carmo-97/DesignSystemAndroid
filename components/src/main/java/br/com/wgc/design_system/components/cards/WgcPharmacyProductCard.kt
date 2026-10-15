@@ -74,9 +74,9 @@ fun WgcPharmacyProductCard(
             .fillMaxWidth()
             .clickable { onCardClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pharmacyChainBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight8))
     ) {
         Column(
             modifier = Modifier
@@ -93,7 +93,7 @@ fun WgcPharmacyProductCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.pharmacyChainRed))
+                                .background(Color(WgcCoreDsColors.red8))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -101,7 +101,7 @@ fun WgcPharmacyProductCard(
                         ) {
                             Text(
                                 text = "VENDA SOB PRESCRIÇÃO MÉDICA",
-                                color = Color(WgcCoreDsColors.pharmacyChainSurface),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -111,7 +111,7 @@ fun WgcPharmacyProductCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.pharmacyChainNavyDark))
+                                .background(Color(WgcCoreDsColors.blueDark1))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -119,7 +119,7 @@ fun WgcPharmacyProductCard(
                         ) {
                             Text(
                                 text = "TARJA PRETA - RETENÇÃO DE RECEITA",
-                                color = Color(WgcCoreDsColors.pharmacyChainSurface),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -129,7 +129,7 @@ fun WgcPharmacyProductCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.pharmacyChainPrescriptionYellow))
+                                .background(Color(WgcCoreDsColors.orange33))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -137,7 +137,7 @@ fun WgcPharmacyProductCard(
                         ) {
                             Text(
                                 text = "MEDICAMENTO GENÉRICO (LEI 9.787/99)",
-                                color = Color(WgcCoreDsColors.pharmacyChainNavyDark),
+                                color = Color(WgcCoreDsColors.blueDark1),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -147,7 +147,7 @@ fun WgcPharmacyProductCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.pharmacyChainGreenLight))
+                                .background(Color(WgcCoreDsColors.greenLight6))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -155,7 +155,7 @@ fun WgcPharmacyProductCard(
                         ) {
                             Text(
                                 text = "PRODUTO DE SAÚDE & BEM-ESTAR",
-                                color = Color(WgcCoreDsColors.pharmacyChainGreen),
+                                color = Color(WgcCoreDsColors.green3),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -170,7 +170,7 @@ fun WgcPharmacyProductCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.pharmacyChainRed) else Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.red8) else Color(WgcCoreDsColors.blue20),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -186,13 +186,13 @@ fun WgcPharmacyProductCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.pharmacyChainPlaceholder)),
+                        .background(Color(WgcCoreDsColors.blueLight1)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.LocalPharmacy,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                        tint = Color(WgcCoreDsColors.blueDark16),
                         modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                     )
                 }
@@ -203,20 +203,20 @@ fun WgcPharmacyProductCard(
                     Text(
                         text = laboratory,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                        color = Color(WgcCoreDsColors.blue20),
                         fontWeight = FontWeight.Medium
                     )
                     Text(
                         text = title,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pharmacyChainTextPrimary),
+                        color = Color(WgcCoreDsColors.blueDark28),
                         maxLines = 2
                     )
                     Text(
                         text = presentation,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                        color = Color(WgcCoreDsColors.blue20)
                     )
                 }
             }
@@ -227,21 +227,21 @@ fun WgcPharmacyProductCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.pharmacyChainPrescriptionYellowLight))
+                        .background(Color(WgcCoreDsColors.orangeLight9))
                         .padding(WgcCoreDsSpacing.xs8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
                         imageVector = Icons.Default.Info,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainRedDark),
+                        tint = Color(WgcCoreDsColors.red1),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Apresente a receita no momento da entrega ou retirada",
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainNavyDark),
+                        color = Color(WgcCoreDsColors.blueDark1),
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -259,7 +259,7 @@ fun WgcPharmacyProductCard(
                         Text(
                             text = "De R$ " + String.format("%.2f", originalPrice),
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                            color = Color(WgcCoreDsColors.blue20),
                             textDecoration = TextDecoration.LineThrough
                         )
                     }
@@ -267,7 +267,7 @@ fun WgcPharmacyProductCard(
                         text = "R$ " + String.format("%.2f", price),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.pharmacyChainNavy)
+                        color = Color(WgcCoreDsColors.blueDark16)
                     )
 
                     if (pharmacyClientPrice != null) {
@@ -276,13 +276,13 @@ fun WgcPharmacyProductCard(
                                 text = "R$ " + String.format("%.2f", pharmacyClientPrice),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.pharmacyChainRed)
+                                color = Color(WgcCoreDsColors.red8)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = "no Programa Pharmacy",
                                 fontSize = 14.sp,
-                                color = Color(WgcCoreDsColors.pharmacyChainRed),
+                                color = Color(WgcCoreDsColors.red8),
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -293,14 +293,14 @@ fun WgcPharmacyProductCard(
                             Icon(
                                 imageVector = Icons.Default.Refresh,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.pharmacyChainGreen),
+                                tint = Color(WgcCoreDsColors.green3),
                                 modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
                             Text(
                                 text = "Disponível na Assinatura (10% OFF)",
                                 fontSize = 14.sp,
-                                color = Color(WgcCoreDsColors.pharmacyChainGreen),
+                                color = Color(WgcCoreDsColors.green3),
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -312,7 +312,7 @@ fun WgcPharmacyProductCard(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.pharmacyChainNavyLight))
+                            .background(Color(WgcCoreDsColors.blueLight13))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp)
                     ) {
                         IconButton(
@@ -322,7 +322,7 @@ fun WgcPharmacyProductCard(
                             Icon(
                                 imageVector = Icons.Default.Remove,
                                 contentDescription = "Diminuir",
-                                tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                                tint = Color(WgcCoreDsColors.blueDark16),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                         }
@@ -330,7 +330,7 @@ fun WgcPharmacyProductCard(
                             text = quantityInCart.toString(),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.pharmacyChainNavy),
+                            color = Color(WgcCoreDsColors.blueDark16),
                             modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
                         )
                         IconButton(
@@ -340,7 +340,7 @@ fun WgcPharmacyProductCard(
                             Icon(
                                 imageVector = Icons.Default.Add,
                                 contentDescription = "Aumentar",
-                                tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                                tint = Color(WgcCoreDsColors.blueDark16),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                         }

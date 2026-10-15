@@ -7,26 +7,26 @@ package br.com.wgc.design_system.core
  */
 object WgcCoreDsHaptics {
     /** Feedback suave e rápido para toques em botões e seletores (ex: Chips, Tabs) */
-    const val patternLightClick = "LIGHT_CLICK"
+    const val patternLightClick = CoreConstants.CoreDsHaptics.PATTERN_LIGHT_CLICK
 
     /** Feedback médio para confirmações normais de ação (ex: Toggle Switch, Checkbox) */
-    const val patternMediumConfirm = "MEDIUM_CONFIRM"
+    const val patternMediumConfirm = CoreConstants.CoreDsHaptics.PATTERN_MEDIUM_CONFIRM
 
     /** Feedback forte para ações de impacto (ex: Pagamento concluído, Transferência Pix) */
-    const val patternHeavySuccess = "HEAVY_SUCCESS"
+    const val patternHeavySuccess = CoreConstants.CoreDsHaptics.PATTERN_HEAVY_SUCCESS
 
     /** Padrão duplo de vibração para alertas de limite ou aviso de confirmação */
-    const val patternWarningAlert = "WARNING_ALERT"
+    const val patternWarningAlert = CoreConstants.CoreDsHaptics.PATTERN_WARNING_ALERT
 
     /** Padrão triplo ou rítmico de erro para falhas de validação ou biometria recusada */
-    const val patternErrorReject = "ERROR_REJECT"
+    const val patternErrorReject = CoreConstants.CoreDsHaptics.PATTERN_ERROR_REJECT
 
     /** Duração em milissegundos para micro-vibração leve */
-    const val durationMicroMs = 15L
+    const val durationMicroMs = CoreConstants.CoreDsHaptics.DURATION_MICRO_MS
 
     /** Duração em milissegundos para vibração de confirmação */
-    const val durationStandardMs = 40L
+    const val durationStandardMs = CoreConstants.CoreDsHaptics.DURATION_STANDARD_MS
 
     /** Duração em milissegundos para vibração de erro */
-    const val durationLongMs = 80L
+    const val durationLongMs = CoreConstants.CoreDsHaptics.DURATION_LONG_MS
 }

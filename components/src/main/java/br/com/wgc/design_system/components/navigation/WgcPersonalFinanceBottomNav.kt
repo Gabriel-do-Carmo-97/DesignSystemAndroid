@@ -115,7 +115,7 @@ fun WgcPersonalFinanceBottomNav(
                 .size(WgcCoreDsSize.s56.dp)
                 .shadow(elevation = WgcCoreDsSpacing.xs8.dp, shape = CircleShape)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.personalFinancePrimary))
+                .background(Color(WgcCoreDsColors.cyan3))
                 .clickable(onClick = onAddClick),
             contentAlignment = Alignment.Center
         ) {
@@ -136,9 +136,9 @@ private fun NavItemButton(
     onClick: () -> Unit
 ) {
     val tint = if (isSelected) {
-        Color(WgcCoreDsColors.personalFinancePrimary)
+        Color(WgcCoreDsColors.cyan3)
     } else {
-        Color(WgcCoreDsColors.personalFinanceSecondaryText)
+        Color(WgcCoreDsColors.gray11)
     }
 
     Column(

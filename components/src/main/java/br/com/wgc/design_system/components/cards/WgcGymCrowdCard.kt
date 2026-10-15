@@ -69,9 +69,9 @@ fun WgcGymCrowdCard(
     slotAction: (@Composable () -> Unit)? = null
 ) {
     val crowdColor = when (crowdLevel) {
-        WgcGymFitnessCrowdLevel.LOW -> Color(WgcCoreDsColors.gymCrowdLow)
-        WgcGymFitnessCrowdLevel.MEDIUM -> Color(WgcCoreDsColors.gymCrowdMedium)
-        WgcGymFitnessCrowdLevel.HIGH -> Color(WgcCoreDsColors.gymCrowdHigh)
+        WgcGymFitnessCrowdLevel.LOW -> Color(WgcCoreDsColors.green17)
+        WgcGymFitnessCrowdLevel.MEDIUM -> Color(WgcCoreDsColors.orange25)
+        WgcGymFitnessCrowdLevel.HIGH -> Color(WgcCoreDsColors.red25)
     }
 
     Card(
@@ -80,9 +80,9 @@ fun WgcGymCrowdCard(
             .clickable(enabled = onClick != null) { onClick?.invoke() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.gymDarkGray)
+            containerColor = Color(WgcCoreDsColors.grayDark7)
         ),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray)),
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
     ) {
         Column(
@@ -103,7 +103,7 @@ fun WgcGymCrowdCard(
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
                             text = unitName,
-                            color = Color(WgcCoreDsColors.gymTextPrimary),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 17.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -115,12 +115,12 @@ fun WgcGymCrowdCard(
                             Icon(
                                 imageVector = Icons.Default.LocationOn,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.gymYellow),
+                                tint = Color(WgcCoreDsColors.orange23),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                             Text(
                                 text = address,
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 12.sp
                             )
                         }
@@ -161,7 +161,7 @@ fun WgcGymCrowdCard(
             // Horário de Funcionamento
             Text(
                 text = "Funcionamento: $operatingHours",
-                color = Color(WgcCoreDsColors.gymTextSecondary),
+                color = Color(WgcCoreDsColors.gray16),
                 fontSize = 12.sp
             )
 
@@ -170,7 +170,7 @@ fun WgcGymCrowdCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.gymBlack))
+                    .background(Color(WgcCoreDsColors.grayDark1))
                     .padding(WgcCoreDsSpacing.sm12.dp),
                 verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
             ) {
@@ -186,12 +186,12 @@ fun WgcGymCrowdCard(
                         Icon(
                             imageVector = Icons.Default.People,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymYellow),
+                            tint = Color(WgcCoreDsColors.orange23),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Text(
                             text = "Frequência estimada agora: $crowdPercentage%",
-                            color = Color(WgcCoreDsColors.gymTextPrimary),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -220,12 +220,12 @@ fun WgcGymCrowdCard(
                                     .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.xs2.dp, topEnd = WgcCoreDsBorderRadius.xs2.dp))
                                     .background(
                                         if (index == 4) crowdColor // Horário de pico (18h)
-                                        else Color(WgcCoreDsColors.gymLightGray)
+                                        else Color(WgcCoreDsColors.gray1)
                                     )
                             )
                             Text(
                                 text = hours[index],
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 10.sp,
                                 modifier = Modifier.padding(top = WgcCoreDsSpacing.xxxs2.dp)
                             )
@@ -249,14 +249,14 @@ fun WgcGymCrowdCard(
                 ) {
                     Text(
                         text = "Ver detalhes e comodidades da unidade",
-                        color = Color(WgcCoreDsColors.gymYellow),
+                        color = Color(WgcCoreDsColors.orange23),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Medium
                     )
                     Icon(
                         imageVector = Icons.Default.ChevronRight,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.gymYellow),
+                        tint = Color(WgcCoreDsColors.orange23),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                 }

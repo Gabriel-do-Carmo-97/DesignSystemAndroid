@@ -23,7 +23,7 @@ fun WgcBurgerFastFoodMenuTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.burgerFastFoodRed)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.red14)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Burger Express • Cardápio & Cupons", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -33,7 +33,7 @@ fun WgcBurgerFastFoodMenuTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                        Text("Resgate com ${item.points} pts Meu Méqui", color = Color(WgcCoreDsColors.burgerFastFoodYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text("Resgate com ${item.points} pts Meu Méqui", color = Color(WgcCoreDsColors.orange29), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }

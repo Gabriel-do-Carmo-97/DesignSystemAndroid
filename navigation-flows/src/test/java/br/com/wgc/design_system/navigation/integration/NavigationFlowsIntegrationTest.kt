@@ -18,15 +18,15 @@ class NavigationFlowsIntegrationTest {
     fun `navigation flows should have access to core tokens`() {
         // Verifica se os flows de navegação podem acessar tokens do core
         assertNotNull(WgcCoreDsSpacing.md16)
-        assertNotNull(WgcCoreDsColorsFacade.primary)
-        assertNotNull(WgcCoreDsColorsFacade.background)
+        assertNotNull(WgcCoreDsColorsFacade.orange500)
+        assertNotNull(WgcCoreDsColorsFacade.gray50)
     }
 
     @Test
     fun `navigation flows should use consistent design tokens`() {
         // Verifica se os flows usam tokens consistentes com o design system
         val spacingValue = WgcCoreDsSpacing.md16
-        val primaryColor = WgcCoreDsColorsFacade.primary
+        val primaryColor = WgcCoreDsColorsFacade.orange500
         
         assertNotNull(spacingValue)
         assertNotNull(primaryColor)
@@ -36,9 +36,9 @@ class NavigationFlowsIntegrationTest {
     @Test
     fun `navigation flows should support theming`() {
         // Verifica se os flows podem usar tokens de tema para consistência visual
-        val primaryColor = WgcCoreDsColorsFacade.primary
-        val secondaryColor = WgcCoreDsColorsFacade.secondary
-        val backgroundColor = WgcCoreDsColorsFacade.background
+        val primaryColor = WgcCoreDsColorsFacade.orange500
+        val secondaryColor = WgcCoreDsColorsFacade.white
+        val backgroundColor = WgcCoreDsColorsFacade.gray50
         
         assertNotNull(primaryColor)
         assertNotNull(secondaryColor)
@@ -64,9 +64,9 @@ class NavigationFlowsIntegrationTest {
     @Test
     fun `navigation flows should support status colors`() {
         // Verifica se os flows podem usar cores de status para feedback visual
-        val errorColor = WgcCoreDsColorsFacade.error
-        val successColor = WgcCoreDsColorsFacade.success
-        val warningColor = WgcCoreDsColorsFacade.warning
+        val errorColor = WgcCoreDsColorsFacade.red500
+        val successColor = WgcCoreDsColorsFacade.green27
+        val warningColor = WgcCoreDsColorsFacade.yellow10
         
         assertNotNull(errorColor)
         assertNotNull(successColor)
@@ -76,8 +76,8 @@ class NavigationFlowsIntegrationTest {
     @Test
     fun `navigation flows should support semantic color mapping`() {
         // Verifica se os flows podem usar cores semânticas para diferentes contextos
-        val textPrimary = WgcCoreDsColorsFacade.textPrimary
-        val textSecondary = WgcCoreDsColorsFacade.textSecondary
+        val textPrimary = WgcCoreDsColorsFacade.gray900
+        val textSecondary = WgcCoreDsColorsFacade.gray6
         
         assertNotNull(textPrimary)
         assertNotNull(textSecondary)

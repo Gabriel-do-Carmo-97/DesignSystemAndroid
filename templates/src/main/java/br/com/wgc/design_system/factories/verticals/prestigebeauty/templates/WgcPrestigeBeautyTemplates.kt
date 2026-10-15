@@ -23,7 +23,7 @@ fun WgcPrestigeBeautyHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.prestigeBeautyBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.black)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("PRESTIGE BEAUTY • Exclusividades & Makes", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcPrestigeBeautyHomeTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.brand, fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        Text("+${item.pointsReward} Beauty Club pts", color = Color(WgcCoreDsColors.gadgetShopAccentPink), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                        Text("+${item.pointsReward} Beauty Club pts", color = Color(WgcCoreDsColors.pink5), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }

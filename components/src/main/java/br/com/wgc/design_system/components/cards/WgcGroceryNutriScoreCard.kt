@@ -51,11 +51,11 @@ fun WgcGroceryNutriScoreCard(
     onClick: () -> Unit = {}
 ) {
     val scores = listOf(
-        Pair("A", Color(WgcCoreDsColors.groceryNutriScoreA)),
-        Pair("B", Color(WgcCoreDsColors.groceryNutriScoreB)),
-        Pair("C", Color(WgcCoreDsColors.groceryNutriScoreC)),
-        Pair("D", Color(WgcCoreDsColors.groceryNutriScoreD)),
-        Pair("E", Color(WgcCoreDsColors.groceryNutriScoreE))
+        Pair("A", Color(WgcCoreDsColors.green2)),
+        Pair("B", Color(WgcCoreDsColors.green24)),
+        Pair("C", Color(WgcCoreDsColors.yellow9)),
+        Pair("D", Color(WgcCoreDsColors.orange11)),
+        Pair("E", Color(WgcCoreDsColors.orange12))
     )
 
     Card(
@@ -64,14 +64,14 @@ fun WgcGroceryNutriScoreCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.grocerySurface)
+            containerColor = Color(WgcCoreDsColors.white)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level1.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBorder)
+            color = Color(WgcCoreDsColors.blueLight4)
         )
     ) {
         Column(
@@ -89,12 +89,12 @@ fun WgcGroceryNutriScoreCard(
                     Icon(
                         imageVector = Icons.Default.Eco,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        tint = Color(WgcCoreDsColors.green2),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                     Text(
                         text = "PROGRAMA ACT FOR FOOD • NUTRI-SCORE",
-                        color = Color(WgcCoreDsColors.groceryBlueDark),
+                        color = Color(WgcCoreDsColors.blueDark14),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black
                     )
@@ -103,7 +103,7 @@ fun WgcGroceryNutriScoreCard(
                 Icon(
                     imageVector = Icons.Default.Info,
                     contentDescription = "Mais informações",
-                    tint = Color(WgcCoreDsColors.groceryTextSecondary),
+                    tint = Color(WgcCoreDsColors.gray5),
                     modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                 )
             }
@@ -115,7 +115,7 @@ fun WgcGroceryNutriScoreCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.groceryBackground))
+                    .background(Color(WgcCoreDsColors.blueLight30))
                     .padding(WgcCoreDsSpacing.xs8.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 verticalAlignment = Alignment.CenterVertically
@@ -148,7 +148,7 @@ fun WgcGroceryNutriScoreCard(
 
             Text(
                 text = explanation,
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 style = MaterialTheme.typography.bodySmall
             )
 
@@ -160,13 +160,13 @@ fun WgcGroceryNutriScoreCard(
                 ) {
                     Text(
                         text = "⭐ Escolha saudável:",
-                        color = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        color = Color(WgcCoreDsColors.green2),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "+$bonusCoins Moedas no Meu Supermercado",
-                        color = Color(WgcCoreDsColors.groceryBlue),
+                        color = Color(WgcCoreDsColors.blueDark32),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold
                     )

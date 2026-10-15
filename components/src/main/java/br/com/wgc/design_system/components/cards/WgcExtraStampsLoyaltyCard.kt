@@ -60,11 +60,11 @@ fun WgcExtraStampsLoyaltyCard(
             .fillMaxWidth()
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.hypermarketOrange).copy(alpha = 0.3f)
+            color = Color(WgcCoreDsColors.orange19).copy(alpha = 0.3f)
         )
     ) {
         Column(
@@ -86,12 +86,12 @@ fun WgcExtraStampsLoyaltyCard(
                     Icon(
                         imageVector = Icons.Default.Stars,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.hypermarketOrange),
+                        tint = Color(WgcCoreDsColors.orange19),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     Text(
                         text = "JUNTOU & GANHOU",
-                        color = Color(WgcCoreDsColors.hypermarketOrange),
+                        color = Color(WgcCoreDsColors.orange19),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Black,
                         letterSpacing = 0.5.sp
@@ -101,12 +101,12 @@ fun WgcExtraStampsLoyaltyCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                        .background(Color(WgcCoreDsColors.hypermarketOrangeLight))
+                        .background(Color(WgcCoreDsColors.orangeLight5))
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                 ) {
                     Text(
                         text = "$currentStamps / $targetStamps SELOS",
-                        color = Color(WgcCoreDsColors.hypermarketOrange),
+                        color = Color(WgcCoreDsColors.orange19),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -117,13 +117,13 @@ fun WgcExtraStampsLoyaltyCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
                 Text(
                     text = "Prêmio Alvo: $rewardName",
-                    color = Color(WgcCoreDsColors.hypermarketDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Faltam apenas ${targetStamps - currentStamps} selos para você resgatar com desconto total.",
-                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    color = Color(WgcCoreDsColors.blue27),
                     fontSize = 12.sp
                 )
             }
@@ -136,8 +136,8 @@ fun WgcExtraStampsLoyaltyCard(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s8.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                    color = Color(WgcCoreDsColors.hypermarketOrange),
-                    trackColor = Color(WgcCoreDsColors.hypermarketOrangeLight)
+                    color = Color(WgcCoreDsColors.orange19),
+                    trackColor = Color(WgcCoreDsColors.orangeLight5)
                 )
 
                 Row(
@@ -146,12 +146,12 @@ fun WgcExtraStampsLoyaltyCard(
                 ) {
                     Text(
                         text = "A cada R$ 20 em compras = 1 selo",
-                        color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                        color = Color(WgcCoreDsColors.blue27),
                         fontSize = 11.sp
                     )
                     Text(
                         text = "Faltam $amountToNextStamp para +1 selo",
-                        color = Color(WgcCoreDsColors.hypermarketOrange),
+                        color = Color(WgcCoreDsColors.orange19),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -169,14 +169,14 @@ fun WgcExtraStampsLoyaltyCard(
             ) {
                 Text(
                     text = "Ver todos os prêmios da campanha",
-                    color = Color(WgcCoreDsColors.hypermarketBlue),
+                    color = Color(WgcCoreDsColors.blueDark34),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.hypermarketBlue),
+                    tint = Color(WgcCoreDsColors.blueDark34),
                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                 )
             }

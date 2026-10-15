@@ -77,9 +77,9 @@ fun WgcOrganizzeNewTransactionTemplate(
     var isPaid by remember { mutableStateOf(true) }
 
     val themeColor = when (selectedType) {
-        WgcOrganizzeTransactionType.Expense -> Color(WgcCoreDsColors.personalFinanceExpenseRed)
-        WgcOrganizzeTransactionType.Income -> Color(WgcCoreDsColors.personalFinanceIncomeGreen)
-        WgcOrganizzeTransactionType.Transfer -> Color(WgcCoreDsColors.personalFinanceTransferBlue)
+        WgcOrganizzeTransactionType.Expense -> Color(WgcCoreDsColors.red23)
+        WgcOrganizzeTransactionType.Income -> Color(WgcCoreDsColors.green26)
+        WgcOrganizzeTransactionType.Transfer -> Color(WgcCoreDsColors.blue36)
     }
 
     val typeTitle = when (selectedType) {
@@ -260,7 +260,7 @@ fun WgcOrganizzeNewTransactionTemplate(
                             text = "Selecione a categoria",
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.personalFinanceDark)
+                            color = Color(WgcCoreDsColors.blueDark33)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
 
@@ -302,7 +302,7 @@ fun WgcOrganizzeNewTransactionTemplate(
                                         text = cat.name,
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                        color = Color(WgcCoreDsColors.personalFinanceDark)
+                                        color = Color(WgcCoreDsColors.blueDark33)
                                     )
                                 }
                             }
@@ -328,20 +328,20 @@ fun WgcOrganizzeNewTransactionTemplate(
                             Icon(
                                 imageVector = Icons.Default.AccountBalance,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.personalFinancePrimary)
+                                tint = Color(WgcCoreDsColors.cyan3)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
                             Text(
                                 text = "Conta ou Cartão",
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = Color(WgcCoreDsColors.personalFinanceDark)
+                                color = Color(WgcCoreDsColors.blueDark33)
                             )
                         }
                         Text(
                             text = "NuConta >",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.personalFinancePrimary)
+                            color = Color(WgcCoreDsColors.cyan3)
                         )
                     }
                 }
@@ -363,20 +363,20 @@ fun WgcOrganizzeNewTransactionTemplate(
                                 Icon(
                                     imageVector = Icons.Default.CalendarToday,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                                    tint = Color(WgcCoreDsColors.gray11)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
                                 Text(
                                     text = "Data",
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = Color(WgcCoreDsColors.personalFinanceDark)
+                                    color = Color(WgcCoreDsColors.blueDark33)
                                 )
                             }
                             Text(
                                 text = "Hoje, 14 de Maio",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.personalFinanceDark)
+                                color = Color(WgcCoreDsColors.blueDark33)
                             )
                         }
 
@@ -390,7 +390,7 @@ fun WgcOrganizzeNewTransactionTemplate(
                             Text(
                                 text = if (selectedType == WgcOrganizzeTransactionType.Expense) "Despesa já paga?" else "Receita já recebida?",
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = Color(WgcCoreDsColors.personalFinanceDark)
+                                color = Color(WgcCoreDsColors.blueDark33)
                             )
                             Switch(
                                 checked = isPaid,
@@ -428,7 +428,7 @@ private fun TypeTabPill(
             text = label,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color(WgcCoreDsColors.personalFinanceDark) else Color.White
+            color = if (isSelected) Color(WgcCoreDsColors.blueDark33) else Color.White
         )
     }
 }

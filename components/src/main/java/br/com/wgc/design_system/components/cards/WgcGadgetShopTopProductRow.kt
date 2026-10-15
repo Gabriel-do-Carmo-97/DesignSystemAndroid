@@ -48,7 +48,7 @@ fun WgcGadgetShopTopProductRow(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.gadgetShopSurface))
+            .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
             .padding(WgcCoreDsSpacing.sm12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -58,7 +58,7 @@ fun WgcGadgetShopTopProductRow(
             modifier = Modifier
                 .size(24.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                .background(Color(WgcCoreDsColors.gadgetShopPrimary)),
+                .background(Color(WgcCoreDsColors.blue39)),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -88,13 +88,13 @@ fun WgcGadgetShopTopProductRow(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight31)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleMedium,
-                        color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                        color = Color(WgcCoreDsColors.blue39),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -111,7 +111,7 @@ fun WgcGadgetShopTopProductRow(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.gadgetShopDark),
+                color = Color(WgcCoreDsColors.blueDark6),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -119,7 +119,7 @@ fun WgcGadgetShopTopProductRow(
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                color = Color(WgcCoreDsColors.blue41),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -132,7 +132,7 @@ fun WgcGadgetShopTopProductRow(
             text = price,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.gadgetShopPrimary)
+            color = Color(WgcCoreDsColors.blue39)
         )
     }
 }

@@ -100,7 +100,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.wellnessDark),
+                                    tint = Color(WgcCoreDsColors.grayDark7),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -108,14 +108,14 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                         Column {
                             Text(
                                 text = "SAÚDE INTEGRAL",
-                                color = Color(WgcCoreDsColors.wellnessCoral),
+                                color = Color(WgcCoreDsColors.red26),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Apps de Bem-Estar",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -129,8 +129,8 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessForestLight)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.greenLight4)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Column(
                         modifier = Modifier
@@ -140,7 +140,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                     ) {
                         Text(
                             text = "ACESSO PREMIUM INCLUSO",
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 0.5.sp
@@ -148,7 +148,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                         Text(
                             text = "Além das academias, você tem acesso livre às versões premium dos " +
                                 "principais aplicativos globais de saúde mental e nutrição.",
-                            color = Color(WgcCoreDsColors.wellnessDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 13.sp
                         )
                     }
@@ -160,8 +160,8 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(
@@ -183,13 +183,13 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s48.dp)
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                        .background(Color(WgcCoreDsColors.wellnessCoralLight)),
+                                        .background(Color(WgcCoreDsColors.redLight8)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Icon(
                                         imageVector = Icons.Default.Spa,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.wellnessCoral),
+                                        tint = Color(WgcCoreDsColors.red26),
                                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                     )
                                 }
@@ -197,13 +197,13 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                 Column {
                                     Text(
                                         text = app.name,
-                                        color = Color(WgcCoreDsColors.wellnessDark),
+                                        color = Color(WgcCoreDsColors.grayDark7),
                                         fontSize = 16.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                     Text(
                                         text = app.category,
-                                        color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                                        color = Color(WgcCoreDsColors.gray7),
                                         fontSize = 12.sp
                                     )
                                 }
@@ -213,7 +213,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                        .background(Color(WgcCoreDsColors.wellnessCheckInGreenLight))
+                                        .background(Color(WgcCoreDsColors.greenLight11))
                                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
                                 ) {
                                     Row(
@@ -223,12 +223,12 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                         Icon(
                                             imageVector = Icons.Default.Check,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                                            tint = Color(WgcCoreDsColors.green17),
                                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                         )
                                         Text(
                                             text = "ATIVADO",
-                                            color = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                                            color = Color(WgcCoreDsColors.green17),
                                             fontSize = 10.sp,
                                             fontWeight = FontWeight.Bold
                                         )
@@ -239,7 +239,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
 
                         Text(
                             text = app.description,
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 13.sp
                         )
 
@@ -249,8 +249,8 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                                 .background(
-                                    if (app.isActivated) Color(WgcCoreDsColors.wellnessCreamBg)
-                                    else Color(WgcCoreDsColors.wellnessCoral)
+                                    if (app.isActivated) Color(WgcCoreDsColors.orangeLight14)
+                                    else Color(WgcCoreDsColors.red26)
                                 )
                                 .clickable {
                                     onToggleActivateApp?.invoke(app.id, !app.isActivated)
@@ -260,7 +260,7 @@ fun WgcCorporateWellnessWellnessAppsTemplate(
                         ) {
                             Text(
                                 text = if (app.isActivated) "ABRIR APLICATIVO" else "ATIVAR ACESSO GRATUITO",
-                                color = if (app.isActivated) Color(WgcCoreDsColors.wellnessDark) else Color.White,
+                                color = if (app.isActivated) Color(WgcCoreDsColors.grayDark7) else Color.White,
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )

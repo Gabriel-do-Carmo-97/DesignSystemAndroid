@@ -58,7 +58,7 @@ fun WgcBeautyCosmeticCard(
             Text(
                 text = "$perfumeOrBrand • $volume",
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.fragranceBeautyGreen),
+                color = Color(WgcCoreDsColors.greenDark6),
                 fontWeight = FontWeight.Bold
             )
             Text(

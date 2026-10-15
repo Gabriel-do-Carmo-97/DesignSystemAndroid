@@ -116,9 +116,9 @@ fun WgcSupermercadoCouponsTemplate(
                                 )
                             },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = Color(WgcCoreDsColors.groceryBlue),
-                                selectedLabelColor = Color(WgcCoreDsColors.grocerySurface),
-                                labelColor = Color(WgcCoreDsColors.groceryTextPrimary)
+                                selectedContainerColor = Color(WgcCoreDsColors.blueDark32),
+                                selectedLabelColor = Color(WgcCoreDsColors.white),
+                                labelColor = Color(WgcCoreDsColors.blueDark13)
                             ),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         )
@@ -152,7 +152,7 @@ private fun MeuSupermercadoHeaderCard(
             .fillMaxWidth()
             .padding(WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.groceryBlue)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueDark32)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -169,19 +169,19 @@ private fun MeuSupermercadoHeaderCard(
                     Icon(
                         imageVector = Icons.Default.MonetizationOn,
                         contentDescription = "Moedas",
-                        tint = Color(WgcCoreDsColors.groceryYellow),
+                        tint = Color(WgcCoreDsColors.orange13),
                         modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Column {
                         Text(
                             text = "Minhas Moedas",
-                            color = Color(WgcCoreDsColors.grocerySurface).copy(alpha = 0.85f),
+                            color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f),
                             fontSize = 10.sp
                         )
                         Text(
                             text = "$coinsBalance moedas",
-                            color = Color(WgcCoreDsColors.grocerySurface),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -204,7 +204,7 @@ private fun MissionsProgressCard() {
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -221,7 +221,7 @@ private fun MissionsProgressCard() {
                     Icon(
                         imageVector = Icons.Default.Stars,
                         contentDescription = "Missão",
-                        tint = Color(WgcCoreDsColors.groceryRed),
+                        tint = Color(WgcCoreDsColors.red19),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -229,14 +229,14 @@ private fun MissionsProgressCard() {
                         text = "Missão do Mês: Gaste R$ 300",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryTextPrimary)
+                        color = Color(WgcCoreDsColors.blueDark13)
                     )
                 }
                 Text(
                     text = "R$ 210 / 300",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.groceryBlue)
+                    color = Color(WgcCoreDsColors.blueDark32)
                 )
             }
 
@@ -248,8 +248,8 @@ private fun MissionsProgressCard() {
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s8.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                color = Color(WgcCoreDsColors.groceryRed),
-                trackColor = Color(WgcCoreDsColors.groceryBorder)
+                color = Color(WgcCoreDsColors.red19),
+                trackColor = Color(WgcCoreDsColors.blueLight4)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -257,7 +257,7 @@ private fun MissionsProgressCard() {
             Text(
                 text = "Complete para desbloquear 50 moedas extras e desconto de 15% na padaria!",
                 fontSize = 10.sp,
-                color = Color(WgcCoreDsColors.groceryTextSecondary)
+                color = Color(WgcCoreDsColors.gray5)
             )
         }
     }
@@ -273,7 +273,7 @@ private fun CouponRowCard(
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -286,13 +286,13 @@ private fun CouponRowCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.groceryBlueLight)),
+                    .background(Color(WgcCoreDsColors.blueLight20)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ConfirmationNumber,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.groceryBlue),
+                    tint = Color(WgcCoreDsColors.blueDark32),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -304,18 +304,18 @@ private fun CouponRowCard(
                     text = coupon.title,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.groceryTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark13)
                 )
                 Text(
                     text = coupon.description,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.groceryTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "Válido até " + coupon.validUntil,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.groceryRed),
+                    color = Color(WgcCoreDsColors.red19),
                     fontWeight = FontWeight.Medium
                 )
             }
@@ -327,7 +327,7 @@ private fun CouponRowCard(
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
                         contentDescription = "Ativado",
-                        tint = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        tint = Color(WgcCoreDsColors.green2),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -335,7 +335,7 @@ private fun CouponRowCard(
                         text = "Ativo",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryNutriScoreA)
+                        color = Color(WgcCoreDsColors.green2)
                     )
                 }
             } else {

@@ -105,7 +105,7 @@ fun WgcStylishTrendingScreenTemplate(
                     Text(
                         text = "52,082+ Items",
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
 
                     Row {
@@ -207,14 +207,14 @@ fun WgcStylishProductDetailsScreenTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
                 IconButton(onClick = onGoToCartClick) {
                     Icon(
                         imageVector = Icons.Default.ShoppingBag,
                         contentDescription = "Carrinho",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
             }
@@ -258,13 +258,13 @@ fun WgcStylishProductDetailsScreenTemplate(
                     .fillMaxWidth()
                     .height(240.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
-                    .background(Color(WgcCoreDsColors.trendFashionLightGray)),
+                    .background(Color(WgcCoreDsColors.grayLight10)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ShoppingBag,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.trendFashionPink),
+                    tint = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier.size(90.dp)
                 )
             }
@@ -275,7 +275,7 @@ fun WgcStylishProductDetailsScreenTemplate(
             Text(
                 text = "Size: $selectedSize",
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -299,7 +299,7 @@ fun WgcStylishProductDetailsScreenTemplate(
             Text(
                 text = title,
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
@@ -307,7 +307,7 @@ fun WgcStylishProductDetailsScreenTemplate(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -325,19 +325,19 @@ fun WgcStylishProductDetailsScreenTemplate(
                 Text(
                     text = price,
                     style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
                 Text(
                     text = originalPrice,
                     style = MaterialTheme.typography.titleMedium.copy(textDecoration = TextDecoration.LineThrough),
-                    color = Color(WgcCoreDsColors.textSecondary)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs.dp))
                 Text(
                     text = "$discountPercent% OFF",
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionPink)
+                    color = Color(WgcCoreDsColors.pink4)
                 )
             }
 
@@ -346,7 +346,7 @@ fun WgcStylishProductDetailsScreenTemplate(
             Text(
                 text = "Product Details",
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -354,7 +354,7 @@ fun WgcStylishProductDetailsScreenTemplate(
             Text(
                 text = "Perhaps the most iconic sneaker of all-time, this original 'Chicago' colorway is the cornerstone to any sneaker collection. Crafted with premium materials, cushioned sole and timeless design.",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))

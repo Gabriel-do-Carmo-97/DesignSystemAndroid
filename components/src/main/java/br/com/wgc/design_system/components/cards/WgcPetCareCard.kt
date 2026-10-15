@@ -52,7 +52,7 @@ fun WgcPetCareCard(
                 Icon(
                     imageVector = Icons.Default.Pets,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.petCareBlue),
+                    tint = Color(WgcCoreDsColors.blue6),
                     modifier = Modifier.padding(end = WgcCoreDsSpacing.xs8.dp)
                 )
                 Text(
@@ -79,7 +79,7 @@ fun WgcPetCareCard(
                         text = "R$ " + String.format("%.2f", subscriberPrice),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.petCareBlue)
+                        color = Color(WgcCoreDsColors.blue6)
                     )
                     Text(
                         text = "Preço Assinante Pet Care",

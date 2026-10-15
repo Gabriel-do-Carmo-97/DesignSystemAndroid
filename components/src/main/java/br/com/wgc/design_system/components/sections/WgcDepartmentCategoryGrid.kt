@@ -23,7 +23,7 @@ data class WgcSquareCategoryItem(
     val id: String,
     val name: String,
     val emoji: String,
-    val backgroundColor: Color = Color(WgcCoreDsColors.grey100)
+    val backgroundColor: Color = Color(WgcCoreDsColors.gray100)
 )
 
 /**

@@ -53,7 +53,7 @@ fun WgcRatingBar(
     rating: Float = 4.5f,
     maxStars: Int = 5,
     reviewCount: Int? = null,
-    starColor: Color = Color(WgcCoreDsColors.trendFashionGold),
+    starColor: Color = Color(WgcCoreDsColors.orange14),
     showRatingText: Boolean = true,
     isInteractive: Boolean = false,
     onRatingChange: ((Float) -> Unit)? = null,
@@ -119,7 +119,7 @@ fun WgcRatingBar(
             Text(
                 text = "($reviewCount)",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
         }
     }

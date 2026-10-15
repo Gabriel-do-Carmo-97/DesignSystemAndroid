@@ -43,7 +43,7 @@ fun WgcMegaStoreFlashSaleBanner(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.megaStorePrimary)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blue28)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Row(
@@ -63,7 +63,7 @@ fun WgcMegaStoreFlashSaleBanner(
                 Text(
                     text = discountTag,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.megaStorePrimaryLight)
+                    color = Color(WgcCoreDsColors.blueLight16)
                 )
             }
 

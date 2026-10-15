@@ -123,13 +123,13 @@ fun WgcExtraHomeTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s36.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.hypermarketRedLight)),
+                                    .background(Color(WgcCoreDsColors.redLight4)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.LocationOn,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.hypermarketRed),
+                                    tint = Color(WgcCoreDsColors.red12),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -137,20 +137,20 @@ fun WgcExtraHomeTemplate(
                             Column {
                                 Text(
                                     text = "Entregar em",
-                                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                    color = Color(WgcCoreDsColors.blue27),
                                     fontSize = 11.sp
                                 )
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text(
                                         text = user.selectedStoreName,
-                                        color = Color(WgcCoreDsColors.hypermarketDark),
+                                        color = Color(WgcCoreDsColors.grayDark7),
                                         fontSize = 13.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                     Icon(
                                         imageVector = Icons.Default.KeyboardArrowDown,
                                         contentDescription = "Trocar loja",
-                                        tint = Color(WgcCoreDsColors.hypermarketDark),
+                                        tint = Color(WgcCoreDsColors.grayDark7),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                 }
@@ -165,7 +165,7 @@ fun WgcExtraHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Notifications,
                                     contentDescription = "Notificações",
-                                    tint = Color(WgcCoreDsColors.hypermarketDark),
+                                    tint = Color(WgcCoreDsColors.grayDark7),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -174,7 +174,7 @@ fun WgcExtraHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.ShoppingCart,
                                     contentDescription = "Carrinho",
-                                    tint = Color(WgcCoreDsColors.hypermarketRed),
+                                    tint = Color(WgcCoreDsColors.red12),
                                     modifier = Modifier.size(WgcCoreDsSize.s26.dp)
                                 )
                                 if (cartItemCount > 0) {
@@ -183,12 +183,12 @@ fun WgcExtraHomeTemplate(
                                             .align(Alignment.TopEnd)
                                             .size(WgcCoreDsSize.s16.dp)
                                             .clip(CircleShape)
-                                            .background(Color(WgcCoreDsColors.hypermarketYellow)),
+                                            .background(Color(WgcCoreDsColors.yellow5)),
                                         contentAlignment = Alignment.Center
                                     ) {
                                         Text(
                                             text = "$cartItemCount",
-                                            color = Color(WgcCoreDsColors.hypermarketDark),
+                                            color = Color(WgcCoreDsColors.grayDark7),
                                             fontSize = 9.sp,
                                             fontWeight = FontWeight.Black
                                         )
@@ -207,10 +207,10 @@ fun WgcExtraHomeTemplate(
                         .fillMaxWidth()
                         .clickable { onSearchClick() },
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     )
                 ) {
                     Row(
@@ -223,12 +223,12 @@ fun WgcExtraHomeTemplate(
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue27),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "Buscar produtos, marcas e ofertas no Extra...",
-                            color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                            color = Color(WgcCoreDsColors.blue27),
                             fontSize = 13.sp
                         )
                     }
@@ -245,7 +245,7 @@ fun WgcExtraHomeTemplate(
                             .fillMaxWidth()
                             .clickable { onOpenFlyer() },
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketRed)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red12)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                     ) {
                         Column(
@@ -257,12 +257,12 @@ fun WgcExtraHomeTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.hypermarketYellow))
+                                    .background(Color(WgcCoreDsColors.yellow5))
                                     .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                             ) {
                                 Text(
                                     text = "SUPERFEIRA EXTRA",
-                                    color = Color(WgcCoreDsColors.hypermarketDark),
+                                    color = Color(WgcCoreDsColors.grayDark7),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 0.5.sp
@@ -283,14 +283,14 @@ fun WgcExtraHomeTemplate(
                             ) {
                                 Text(
                                     text = "Ver folheto de ofertas da semana",
-                                    color = Color(WgcCoreDsColors.hypermarketYellow),
+                                    color = Color(WgcCoreDsColors.yellow5),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.hypermarketYellow),
+                                    tint = Color(WgcCoreDsColors.yellow5),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                             }
@@ -320,10 +320,10 @@ fun WgcExtraHomeTemplate(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.hypermarketSurface))
+                                .background(Color(WgcCoreDsColors.white))
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = Color(WgcCoreDsColors.hypermarketBorder),
+                                    color = Color(WgcCoreDsColors.blueLight6),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { }
@@ -331,7 +331,7 @@ fun WgcExtraHomeTemplate(
                         ) {
                             Text(
                                 text = categoryName,
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -353,7 +353,7 @@ fun WgcExtraHomeTemplate(
                     ) {
                         Text(
                             text = "MEUS DESCONTOS EXCLUSIVOS",
-                            color = Color(WgcCoreDsColors.hypermarketDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 0.5.sp
@@ -362,7 +362,7 @@ fun WgcExtraHomeTemplate(
 
                     Text(
                         text = "Ver todos",
-                        color = Color(WgcCoreDsColors.hypermarketRed),
+                        color = Color(WgcCoreDsColors.red12),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.clickable { onOpenDiscounts() }

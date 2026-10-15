@@ -102,7 +102,7 @@ fun WgcNexkartProductListTemplate(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.gadgetShopPrimary)
+                    containerColor = Color(WgcCoreDsColors.blue39)
                 )
             )
         }
@@ -128,13 +128,13 @@ fun WgcNexkartProductListTemplate(
                     Text(
                         text = "Sort By: ",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                        color = Color(WgcCoreDsColors.blue41)
                     )
                     Text(
                         text = sortBy,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                 }
 
@@ -149,7 +149,7 @@ fun WgcNexkartProductListTemplate(
                     Icon(
                         imageVector = Icons.Default.FilterList,
                         contentDescription = "Filtrar",
-                        tint = Color(WgcCoreDsColors.gadgetShopDark),
+                        tint = Color(WgcCoreDsColors.blueDark6),
                         modifier = Modifier.size(18.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -157,7 +157,7 @@ fun WgcNexkartProductListTemplate(
                         text = "Filter",
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                 }
             }

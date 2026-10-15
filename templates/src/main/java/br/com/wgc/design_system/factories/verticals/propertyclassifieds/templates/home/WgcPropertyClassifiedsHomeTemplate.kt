@@ -95,7 +95,7 @@ fun WgcZapHomeTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(
                             horizontal = WgcCoreDsSpacing.md16.dp,
                             vertical = WgcCoreDsSpacing.sm12.dp
@@ -112,13 +112,13 @@ fun WgcZapHomeTemplate(
                                 text = "ZAP",
                                 style = MaterialTheme.typography.headlineSmall,
                                 fontWeight = FontWeight.Black,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                color = Color(WgcCoreDsColors.blueDark31)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsOrange))
+                                    .background(Color(WgcCoreDsColors.orange17))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xxs4.dp,
                                         vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -138,7 +138,7 @@ fun WgcZapHomeTemplate(
                             Row(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                                    .background(Color(WgcCoreDsColors.blueLight37))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -149,13 +149,13 @@ fun WgcZapHomeTemplate(
                                     text = "São Paulo, SP",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                    color = Color(WgcCoreDsColors.blueDark10)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                 Icon(
                                     imageVector = Icons.Default.KeyboardArrowDown,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                                    tint = Color(WgcCoreDsColors.blue22),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                             }
@@ -169,7 +169,7 @@ fun WgcZapHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.NotificationsNone,
                                     contentDescription = "Notificações",
-                                    tint = Color(WgcCoreDsColors.propertyClassifiedsDark),
+                                    tint = Color(WgcCoreDsColors.blueDark10),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -183,7 +183,7 @@ fun WgcZapHomeTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                            .background(Color(WgcCoreDsColors.blueLight37))
                             .padding(WgcCoreDsSpacing.xxs4.dp),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
@@ -195,7 +195,7 @@ fun WgcZapHomeTemplate(
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                     .background(
                                         if (isSelected) {
-                                            Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                            Color(WgcCoreDsColors.blueDark31)
                                         } else {
                                             Color.Transparent
                                         }
@@ -208,7 +208,7 @@ fun WgcZapHomeTemplate(
                                     text = transaction.label,
                                     style = MaterialTheme.typography.labelMedium,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.blue22)
                                 )
                             }
                         }
@@ -237,7 +237,7 @@ fun WgcZapHomeTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsPrimary))
+                        .background(Color(WgcCoreDsColors.blueDark31))
                         .clickable(onClick = onFipeBannerClick)
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
@@ -251,7 +251,7 @@ fun WgcZapHomeTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsBlue))
+                                    .background(Color(WgcCoreDsColors.blue17))
                                     .padding(WgcCoreDsSpacing.xs8.dp),
                                 contentAlignment = Alignment.Center
                             ) {
@@ -275,7 +275,7 @@ fun WgcZapHomeTemplate(
                                     Box(
                                         modifier = Modifier
                                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                            .background(Color(WgcCoreDsColors.propertyClassifiedsFipeGreen))
+                                            .background(Color(WgcCoreDsColors.green4))
                                             .padding(
                                                 horizontal = WgcCoreDsSpacing.xxs4.dp,
                                                 vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -324,13 +324,13 @@ fun WgcZapHomeTemplate(
                             text = "⭐ Super Destaques Zap",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                         Text(
                             text = "Ver todos",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsBlue)
+                            color = Color(WgcCoreDsColors.blue17)
                         )
                     }
 
@@ -383,12 +383,12 @@ fun WgcZapHomeTemplate(
                         text = "Imóveis recomendados",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
                     Text(
                         text = "${properties.size} imóveis",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
             }

@@ -42,7 +42,7 @@ fun WgcPagueMenosCartTemplate(
                     text = "Cesta de Compras Farmácia Popular",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark21)
                 )
             }
 
@@ -50,7 +50,7 @@ fun WgcPagueMenosCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacySurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
@@ -58,12 +58,12 @@ fun WgcPagueMenosCartTemplate(
                             text = "Shampoo Anticaspa Clear Men",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                            color = Color(WgcCoreDsColors.blueDark21)
                         )
                         Text(
                             text = "1 unidade • R$ 22,90",
                             fontSize = 10.sp,
-                            color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                            color = Color(WgcCoreDsColors.blue19)
                         )
                     }
                 }

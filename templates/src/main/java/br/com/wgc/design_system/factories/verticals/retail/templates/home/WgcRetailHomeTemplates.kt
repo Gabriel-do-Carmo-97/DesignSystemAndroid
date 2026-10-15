@@ -94,7 +94,7 @@ fun WgcKutukuHeader(
                 modifier = Modifier
                     .size(48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight21)),
                 contentAlignment = Alignment.Center
             ) {
                 if (!avatarUrl.isNullOrEmpty()) {
@@ -107,7 +107,7 @@ fun WgcKutukuHeader(
                     Text(
                         text = userName.take(1).uppercase(),
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailPrimary)
+                        color = Color(WgcCoreDsColors.blue33)
                     )
                 }
             }
@@ -117,12 +117,12 @@ fun WgcKutukuHeader(
                     text = "Hi, $userName",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.retailSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
             }
         }
@@ -132,7 +132,7 @@ fun WgcKutukuHeader(
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = "Buscar",
-                    tint = Color(WgcCoreDsColors.retailDark)
+                    tint = Color(WgcCoreDsColors.grayDark2)
                 )
             }
 
@@ -141,7 +141,7 @@ fun WgcKutukuHeader(
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notificações",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
                 if (hasUnreadNotification) {
@@ -150,7 +150,7 @@ fun WgcKutukuHeader(
                             .padding(top = WgcCoreDsSpacing.xs.dp, end = WgcCoreDsSpacing.xs.dp)
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.retailAlertRed))
+                            .background(Color(WgcCoreDsColors.red23))
                     )
                 }
             }
@@ -180,7 +180,7 @@ fun WgcKutukuPromoBanner(
                 .fillMaxWidth()
                 .height(140.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
-                .background(Color(WgcCoreDsColors.retailBackground))
+                .background(Color(WgcCoreDsColors.blueLight39))
                 .clickable(onClick = onClick)
         ) {
             // Detalhe gráfico lateral esquerdo
@@ -188,7 +188,7 @@ fun WgcKutukuPromoBanner(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailSecondary).copy(alpha = 0.6f))
+                    .background(Color(WgcCoreDsColors.blueLight2).copy(alpha = 0.6f))
             )
 
             Row(
@@ -203,13 +203,13 @@ fun WgcKutukuPromoBanner(
                         text = title,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
                     Text(
                         text = subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.retailSecondaryText)
+                        color = Color(WgcCoreDsColors.gray4)
                     )
                 }
 
@@ -236,19 +236,19 @@ fun WgcKutukuPromoBanner(
                 modifier = Modifier
                     .size(6.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailPrimary))
+                    .background(Color(WgcCoreDsColors.blue33))
             )
             Box(
                 modifier = Modifier
                     .size(6.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailBorder))
+                    .background(Color(WgcCoreDsColors.blueLight10))
             )
             Box(
                 modifier = Modifier
                     .size(6.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailBorder))
+                    .background(Color(WgcCoreDsColors.blueLight10))
             )
         }
     }
@@ -270,7 +270,7 @@ fun WgcKutukuBottomBar(
     )
 
     NavigationBar(
-        containerColor = Color(WgcCoreDsColors.retailSurface),
+        containerColor = Color(WgcCoreDsColors.white),
         tonalElevation = 8.dp
     ) {
         items.forEachIndexed { index, item ->
@@ -282,18 +282,18 @@ fun WgcKutukuBottomBar(
                     Icon(
                         imageVector = item.second,
                         contentDescription = item.first,
-                        tint = if (isSelected) Color(WgcCoreDsColors.retailPrimary) else Color(WgcCoreDsColors.retailSecondaryText)
+                        tint = if (isSelected) Color(WgcCoreDsColors.blue33) else Color(WgcCoreDsColors.gray4)
                     )
                 },
                 label = {
                     Text(
                         text = item.first,
                         style = MaterialTheme.typography.labelSmall,
-                        color = if (isSelected) Color(WgcCoreDsColors.retailPrimary) else Color(WgcCoreDsColors.retailSecondaryText)
+                        color = if (isSelected) Color(WgcCoreDsColors.blue33) else Color(WgcCoreDsColors.gray4)
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    indicatorColor = Color(WgcCoreDsColors.retailPrimaryLight)
+                    indicatorColor = Color(WgcCoreDsColors.blueLight21)
                 )
             )
         }
@@ -329,7 +329,7 @@ fun WgcKutukuHomeScreen(
             columns = GridCells.Fixed(2),
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(WgcCoreDsColors.retailSurface))
+                .background(Color(WgcCoreDsColors.white))
                 .padding(paddingValues),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md.dp),
             horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp),
@@ -346,7 +346,7 @@ fun WgcKutukuHomeScreen(
                         indicator = { tabPositions ->
                             TabRowDefaults.SecondaryIndicator(
                                 Modifier.tabIndicatorOffset(tabPositions[selectedTabIndex]),
-                                color = Color(WgcCoreDsColors.retailPrimary)
+                                color = Color(WgcCoreDsColors.blue33)
                             )
                         },
                         divider = {}
@@ -358,7 +358,7 @@ fun WgcKutukuHomeScreen(
                                 Text(
                                     "Home",
                                     fontWeight = if (selectedTabIndex == 0) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (selectedTabIndex == 0) Color(WgcCoreDsColors.retailDark) else Color(WgcCoreDsColors.retailSecondaryText)
+                                    color = if (selectedTabIndex == 0) Color(WgcCoreDsColors.grayDark2) else Color(WgcCoreDsColors.gray4)
                                 )
                             }
                         )
@@ -372,7 +372,7 @@ fun WgcKutukuHomeScreen(
                                 Text(
                                     "Category",
                                     fontWeight = if (selectedTabIndex == 1) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (selectedTabIndex == 1) Color(WgcCoreDsColors.retailDark) else Color(WgcCoreDsColors.retailSecondaryText)
+                                    color = if (selectedTabIndex == 1) Color(WgcCoreDsColors.grayDark2) else Color(WgcCoreDsColors.gray4)
                                 )
                             }
                         )
@@ -393,14 +393,14 @@ fun WgcKutukuHomeScreen(
                             text = "New Arrivals 🔥",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                         TextButton(onClick = onSeeAllClick) {
                             Text(
                                 text = "See All",
                                 style = MaterialTheme.typography.bodySmall,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(WgcCoreDsColors.retailPrimary)
+                                color = Color(WgcCoreDsColors.blue33)
                             )
                         }
                     }
@@ -448,7 +448,7 @@ fun WgcKutukuCategoryScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(WgcCoreDsColors.retailSurface))
+                .background(Color(WgcCoreDsColors.white))
                 .padding(paddingValues),
             contentPadding = PaddingValues(WgcCoreDsSpacing.md.dp),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
@@ -462,7 +462,7 @@ fun WgcKutukuCategoryScreen(
                     indicator = { tabPositions ->
                         TabRowDefaults.SecondaryIndicator(
                             Modifier.tabIndicatorOffset(tabPositions[1]),
-                            color = Color(WgcCoreDsColors.retailPrimary)
+                            color = Color(WgcCoreDsColors.blue33)
                         )
                     },
                     divider = {}
@@ -473,7 +473,7 @@ fun WgcKutukuCategoryScreen(
                         text = {
                             Text(
                                 "Home",
-                                color = Color(WgcCoreDsColors.retailSecondaryText)
+                                color = Color(WgcCoreDsColors.gray4)
                             )
                         }
                     )
@@ -484,7 +484,7 @@ fun WgcKutukuCategoryScreen(
                             Text(
                                 "Category",
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.retailDark)
+                                color = Color(WgcCoreDsColors.grayDark2)
                             )
                         }
                     )

@@ -95,7 +95,7 @@ fun WgcShopEaseProductDetailTemplate(
                             .weight(1f)
                             .height(WgcCoreDsSize.s48.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.quickShopPrimaryLight)),
+                            containerColor = Color(WgcCoreDsColors.orangeLight13)),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                     ) {
                         Text(
@@ -112,7 +112,7 @@ fun WgcShopEaseProductDetailTemplate(
                             .weight(1f)
                             .height(WgcCoreDsSize.s48.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.quickShopPrimary),
+                            containerColor = Color(WgcCoreDsColors.orange37),
                             contentColor = Color.White
                         ),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
@@ -163,7 +163,7 @@ fun WgcShopEaseProductDetailTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back",
-                            tint = Color(WgcCoreDsColors.quickShopDark)
+                            tint = Color(WgcCoreDsColors.grayDark19)
                         )
                     }
 
@@ -177,7 +177,7 @@ fun WgcShopEaseProductDetailTemplate(
                         Icon(
                             imageVector = if (product.isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                             contentDescription = "Favorite",
-                            tint = if (product.isFavorite) Color.Red else Color(WgcCoreDsColors.quickShopDark)
+                            tint = if (product.isFavorite) Color.Red else Color(WgcCoreDsColors.grayDark19)
                         )
                     }
                 }
@@ -211,7 +211,7 @@ fun WgcShopEaseProductDetailTemplate(
                         text = product.title,
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.quickShopDark),
+                        color = Color(WgcCoreDsColors.grayDark19),
                         modifier = Modifier.weight(1f)
                     )
 
@@ -222,14 +222,14 @@ fun WgcShopEaseProductDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.quickShopPrimary),
+                            tint = Color(WgcCoreDsColors.orange37),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
                         Text(
                             text = product.rating,
                             style = MaterialTheme.typography.labelLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.quickShopDark)
+                            color = Color(WgcCoreDsColors.grayDark19)
                         )
                     }
                 }
@@ -240,7 +240,7 @@ fun WgcShopEaseProductDetailTemplate(
                     text = product.price,
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                    color = Color(WgcCoreDsColors.orange27)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -250,7 +250,7 @@ fun WgcShopEaseProductDetailTemplate(
                     text = "Select Size",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.quickShopDark)
+                    color = Color(WgcCoreDsColors.grayDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -263,8 +263,8 @@ fun WgcShopEaseProductDetailTemplate(
                                 .size(WgcCoreDsSize.s40.dp)
                                 .clip(CircleShape)
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.quickShopPrimary)
-                                    else Color(WgcCoreDsColors.quickShopSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.orange37)
+                                    else Color(WgcCoreDsColors.blueLight36)
                                 )
                                 .clickable { onSizeSelect(size) },
                             contentAlignment = Alignment.Center
@@ -273,7 +273,7 @@ fun WgcShopEaseProductDetailTemplate(
                                 text = size,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.quickShopDark)
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark19)
                             )
                         }
                     }
@@ -286,7 +286,7 @@ fun WgcShopEaseProductDetailTemplate(
                     text = "Description",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.quickShopDark)
+                    color = Color(WgcCoreDsColors.grayDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -294,7 +294,7 @@ fun WgcShopEaseProductDetailTemplate(
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl32.dp))

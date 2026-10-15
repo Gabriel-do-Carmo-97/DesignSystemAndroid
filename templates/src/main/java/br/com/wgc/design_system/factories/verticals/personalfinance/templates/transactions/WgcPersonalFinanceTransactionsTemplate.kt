@@ -106,7 +106,7 @@ fun WgcOrganizzeTransactionsTemplate(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.personalFinancePrimary))
+                    .background(Color(WgcCoreDsColors.cyan3))
                     .padding(
                         horizontal = WgcCoreDsSpacing.md16.dp,
                         vertical = WgcCoreDsSpacing.sm12.dp
@@ -160,15 +160,15 @@ fun WgcOrganizzeTransactionsTemplate(
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                            tint = Color(WgcCoreDsColors.gray11)
                         )
                     },
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(WgcCoreDsColors.personalFinancePrimary),
-                        unfocusedBorderColor = Color(WgcCoreDsColors.personalFinanceBorder),
-                        focusedContainerColor = Color(WgcCoreDsColors.personalFinanceBackground),
-                        unfocusedContainerColor = Color(WgcCoreDsColors.personalFinanceBackground)
+                        focusedBorderColor = Color(WgcCoreDsColors.cyan3),
+                        unfocusedBorderColor = Color(WgcCoreDsColors.blueLight7),
+                        focusedContainerColor = Color(WgcCoreDsColors.blueLight27),
+                        unfocusedContainerColor = Color(WgcCoreDsColors.blueLight27)
                     ),
                     singleLine = true
                 )
@@ -221,13 +221,13 @@ fun WgcOrganizzeTransactionsTemplate(
                         text = "Resultado no mês",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Medium,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                     Text(
                         text = totalMonthBalance,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(WgcCoreDsColors.personalFinanceIncomeGreen)
+                        color = Color(WgcCoreDsColors.green26)
                     )
                 }
             }
@@ -267,8 +267,8 @@ private fun FilterChipPill(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val bgColor = if (isSelected) Color(WgcCoreDsColors.personalFinancePrimary) else Color(WgcCoreDsColors.personalFinanceBackground)
-    val textColor = if (isSelected) Color.White else Color(WgcCoreDsColors.personalFinanceDark)
+    val bgColor = if (isSelected) Color(WgcCoreDsColors.cyan3) else Color(WgcCoreDsColors.blueLight27)
+    val textColor = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark33)
 
     Box(
         modifier = Modifier

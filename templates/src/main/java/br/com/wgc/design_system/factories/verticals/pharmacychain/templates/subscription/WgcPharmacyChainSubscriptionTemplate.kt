@@ -70,12 +70,12 @@ fun WgcDrogaRaiaSubscriptionTemplate(
                     text = "Sua Assinatura & Tratamento Contínuo",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
                 Text(
                     text = "Receba seus medicamentos na data certa com 10% de desconto e frete grátis",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
             }
 
@@ -108,7 +108,7 @@ private fun SubscriptionBenefitBanner() {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainGreenLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.greenLight6)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp)
     ) {
         Row(
@@ -120,7 +120,7 @@ private fun SubscriptionBenefitBanner() {
             Icon(
                 imageVector = Icons.Default.Percent,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.pharmacyChainGreen),
+                tint = Color(WgcCoreDsColors.green3),
                 modifier = Modifier.size(WgcCoreDsSize.s28.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -129,12 +129,12 @@ private fun SubscriptionBenefitBanner() {
                     text = "Vantagens da Assinatura",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainGreen)
+                    color = Color(WgcCoreDsColors.green3)
                 )
                 Text(
                     text = "Cancele ou pause quando quiser sem nenhuma taxa adicional.",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
             }
         }

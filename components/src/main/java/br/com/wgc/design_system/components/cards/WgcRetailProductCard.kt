@@ -61,7 +61,7 @@ fun WgcRetailProductCard(
                 .fillMaxWidth()
                 .height(180.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
-                .background(Color(WgcCoreDsColors.retailBackground))
+                .background(Color(WgcCoreDsColors.blueLight39))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -73,13 +73,13 @@ fun WgcRetailProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight21)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.retailPrimary),
+                        color = Color(WgcCoreDsColors.blue33),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -98,7 +98,7 @@ fun WgcRetailProductCard(
                 Icon(
                     imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.retailAlertRed) else Color.White,
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red23) else Color.White,
                     modifier = Modifier.size(16.dp)
                 )
             }
@@ -111,7 +111,7 @@ fun WgcRetailProductCard(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark),
+            color = Color(WgcCoreDsColors.grayDark2),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -122,7 +122,7 @@ fun WgcRetailProductCard(
         Text(
             text = subtitle,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.retailSecondaryText),
+            color = Color(WgcCoreDsColors.gray4),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -134,7 +134,7 @@ fun WgcRetailProductCard(
             text = price,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
     }
 }

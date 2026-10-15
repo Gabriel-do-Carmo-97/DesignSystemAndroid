@@ -108,12 +108,12 @@ fun WgcNtcHomeTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.trainingVolt)),
+                                    .background(Color(WgcCoreDsColors.green28)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
                                     text = user.name.take(2).uppercase(),
-                                    color = Color(WgcCoreDsColors.trainingBlack),
+                                    color = Color(WgcCoreDsColors.grayDark3),
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 14.sp
                                 )
@@ -121,13 +121,13 @@ fun WgcNtcHomeTemplate(
                             Column {
                                 Text(
                                     text = "BEM-VINDO DE VOLTA",
-                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray12),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
                                     text = user.name,
-                                    color = Color(WgcCoreDsColors.trainingWhite),
+                                    color = Color(WgcCoreDsColors.white),
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -138,7 +138,7 @@ fun WgcNtcHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.Notifications,
                                 contentDescription = "Notificações",
-                                tint = Color(WgcCoreDsColors.trainingWhite)
+                                tint = Color(WgcCoreDsColors.white)
                             )
                         }
                     }
@@ -150,7 +150,7 @@ fun WgcNtcHomeTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Row(
@@ -168,26 +168,26 @@ fun WgcNtcHomeTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                    .background(Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.2f)),
+                                    .background(Color(WgcCoreDsColors.orange500).copy(alpha = 0.2f)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.LocalFireDepartment,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.trainingOrange),
+                                    tint = Color(WgcCoreDsColors.orange500),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
                             Column {
                                 Text(
                                     text = "${user.currentStreakDays} DIAS DE SEQUÊNCIA",
-                                    color = Color(WgcCoreDsColors.trainingOrange),
+                                    color = Color(WgcCoreDsColors.orange500),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
                                     text = "Mantenha o foco esta semana!",
-                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray12),
                                     fontSize = 10.sp
                                 )
                             }
@@ -196,13 +196,13 @@ fun WgcNtcHomeTemplate(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.trainingMediumGray))
+                                .background(Color(WgcCoreDsColors.grayDark20))
                                 .clickable { onOpenActivity() }
                                 .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                         ) {
                             Text(
                                 text = "Placar",
-                                color = Color(WgcCoreDsColors.trainingVolt),
+                                color = Color(WgcCoreDsColors.green28),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -222,11 +222,11 @@ fun WgcNtcHomeTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingDarkGray)
+                                    if (isSelected) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.grayDark11)
                                 )
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = if (isSelected) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingMediumGray),
+                                    color = if (isSelected) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.grayDark20),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { onSelectCategory(null) }
@@ -234,7 +234,7 @@ fun WgcNtcHomeTemplate(
                         ) {
                             Text(
                                 text = "Todos",
-                                color = if (isSelected) Color(WgcCoreDsColors.trainingBlack) else Color(WgcCoreDsColors.trainingWhite),
+                                color = if (isSelected) Color(WgcCoreDsColors.grayDark3) else Color(WgcCoreDsColors.white),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -247,11 +247,11 @@ fun WgcNtcHomeTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(category.colorHex) else Color(WgcCoreDsColors.trainingDarkGray)
+                                    if (isSelected) Color(category.colorHex) else Color(WgcCoreDsColors.grayDark11)
                                 )
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = if (isSelected) Color(category.colorHex) else Color(WgcCoreDsColors.trainingMediumGray),
+                                    color = if (isSelected) Color(category.colorHex) else Color(WgcCoreDsColors.grayDark20),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { onSelectCategory(category) }
@@ -259,7 +259,7 @@ fun WgcNtcHomeTemplate(
                         ) {
                             Text(
                                 text = category.label,
-                                color = if (isSelected) Color(WgcCoreDsColors.trainingBlack) else Color(WgcCoreDsColors.trainingWhite),
+                                color = if (isSelected) Color(WgcCoreDsColors.grayDark3) else Color(WgcCoreDsColors.white),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -278,10 +278,10 @@ fun WgcNtcHomeTemplate(
                             .fillMaxWidth()
                             .clickable { onStartWorkout(featuredWorkout) },
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                         border = androidx.compose.foundation.BorderStroke(
                             WgcCoreDsSize.s1.dp,
-                            Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.4f)
+                            Color(WgcCoreDsColors.green28).copy(alpha = 0.4f)
                         )
                     ) {
                         Column(
@@ -298,19 +298,19 @@ fun WgcNtcHomeTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                        .background(Color(WgcCoreDsColors.trainingVolt).copy(alpha = 0.2f))
+                                        .background(Color(WgcCoreDsColors.green28).copy(alpha = 0.2f))
                                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                                 ) {
                                     Text(
                                         text = "DESTAQUE DE HOJE",
-                                        color = Color(WgcCoreDsColors.trainingVolt),
+                                        color = Color(WgcCoreDsColors.green28),
                                         fontSize = 10.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                 }
                                 Text(
                                     text = "${featuredWorkout.durationMinutes} min • ${featuredWorkout.intensity.label}",
-                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray12),
                                     fontSize = 12.sp
                                 )
                             }
@@ -318,13 +318,13 @@ fun WgcNtcHomeTemplate(
                             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                                 Text(
                                     text = featuredWorkout.title,
-                                    color = Color(WgcCoreDsColors.trainingWhite),
+                                    color = Color(WgcCoreDsColors.white),
                                     fontSize = 18.sp,
                                     fontWeight = FontWeight.ExtraBold
                                 )
                                 Text(
                                     text = "Com ${featuredWorkout.trainerName}",
-                                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray12),
                                     fontSize = 14.sp
                                 )
                             }
@@ -337,7 +337,7 @@ fun WgcNtcHomeTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                        .background(Color(WgcCoreDsColors.trainingVolt))
+                                        .background(Color(WgcCoreDsColors.green28))
                                         .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
@@ -348,12 +348,12 @@ fun WgcNtcHomeTemplate(
                                         Icon(
                                             imageVector = Icons.Default.PlayArrow,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.trainingBlack),
+                                            tint = Color(WgcCoreDsColors.grayDark3),
                                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                         )
                                         Text(
                                             text = "Iniciar Treino",
-                                            color = Color(WgcCoreDsColors.trainingBlack),
+                                            color = Color(WgcCoreDsColors.grayDark3),
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 12.sp
                                         )
@@ -370,7 +370,7 @@ fun WgcNtcHomeTemplate(
                 item {
                     Text(
                         text = "PROGRAMA EM ANDAMENTO",
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
@@ -402,14 +402,14 @@ fun WgcNtcHomeTemplate(
                 ) {
                     Text(
                         text = "RECOMENDADOS PARA VOCÊ",
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
                     )
                     Text(
                         text = "Ver todos",
-                        color = Color(WgcCoreDsColors.trainingVolt),
+                        color = Color(WgcCoreDsColors.green28),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.clickable { }

@@ -59,7 +59,7 @@ fun WgcFitnessTimerDisplay(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
+            containerColor = Color(WgcCoreDsColors.grayDark11)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
     ) {
@@ -77,12 +77,12 @@ fun WgcFitnessTimerDisplay(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.trainingMediumGray))
+                        .background(Color(WgcCoreDsColors.grayDark20))
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                 ) {
                     Text(
                         text = "EXERCÍCIO $exerciseIndex DE $totalExercises",
-                        color = Color(WgcCoreDsColors.trainingVolt),
+                        color = Color(WgcCoreDsColors.green28),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -95,7 +95,7 @@ fun WgcFitnessTimerDisplay(
                     Icon(
                         imageVector = Icons.Default.VolumeUp,
                         contentDescription = "Áudio Guia",
-                        tint = Color(WgcCoreDsColors.trainingVolt)
+                        tint = Color(WgcCoreDsColors.green28)
                     )
                 }
             }
@@ -107,13 +107,13 @@ fun WgcFitnessTimerDisplay(
             ) {
                 Text(
                     text = exerciseName,
-                    color = Color(WgcCoreDsColors.trainingSecondaryText),
+                    color = Color(WgcCoreDsColors.gray12),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium
                 )
                 Text(
                     text = timeRemainingFormatted,
-                    color = Color(WgcCoreDsColors.trainingWhite),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 40.sp,
                     fontWeight = FontWeight.ExtraBold
                 )
@@ -129,8 +129,8 @@ fun WgcFitnessTimerDisplay(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s8.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                    color = Color(WgcCoreDsColors.trainingVolt),
-                    trackColor = Color(WgcCoreDsColors.trainingMediumGray)
+                    color = Color(WgcCoreDsColors.green28),
+                    trackColor = Color(WgcCoreDsColors.grayDark20)
                 )
             }
 
@@ -138,7 +138,7 @@ fun WgcFitnessTimerDisplay(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.trainingBlack))
+                    .background(Color(WgcCoreDsColors.grayDark3))
                     .padding(WgcCoreDsSpacing.sm12.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
@@ -146,13 +146,13 @@ fun WgcFitnessTimerDisplay(
                 Column {
                     Text(
                         text = "PRÓXIMO",
-                        color = Color(WgcCoreDsColors.trainingMediumGray),
+                        color = Color(WgcCoreDsColors.grayDark20),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = nextExerciseName,
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -160,7 +160,7 @@ fun WgcFitnessTimerDisplay(
                 Icon(
                     imageVector = Icons.Default.FastForward,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.trainingVolt)
+                    tint = Color(WgcCoreDsColors.green28)
                 )
             }
 
@@ -176,7 +176,7 @@ fun WgcFitnessTimerDisplay(
                     Icon(
                         imageVector = Icons.Default.FastRewind,
                         contentDescription = "Voltar 10s",
-                        tint = Color(WgcCoreDsColors.trainingWhite)
+                        tint = Color(WgcCoreDsColors.white)
                     )
                 }
 
@@ -184,14 +184,14 @@ fun WgcFitnessTimerDisplay(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s56.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.trainingVolt))
+                        .background(Color(WgcCoreDsColors.green28))
                         .clickable(onClick = onPlayPauseToggle),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                         contentDescription = if (isPlaying) "Pausar" else "Reproduzir",
-                        tint = Color(WgcCoreDsColors.trainingBlack),
+                        tint = Color(WgcCoreDsColors.grayDark3),
                         modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                     )
                 }
@@ -203,7 +203,7 @@ fun WgcFitnessTimerDisplay(
                     Icon(
                         imageVector = Icons.Default.FastForward,
                         contentDescription = "Avançar",
-                        tint = Color(WgcCoreDsColors.trainingWhite)
+                        tint = Color(WgcCoreDsColors.white)
                     )
                 }
             }

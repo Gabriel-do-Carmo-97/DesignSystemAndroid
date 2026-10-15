@@ -43,9 +43,9 @@ fun WgcSupermarketBottomNav(
     cartBadgeCount: Int = 0
 ) {
     NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.premiumGrocerySurface)),
+        modifier = modifier.background(Color(WgcCoreDsColors.white)),
         tonalElevation = WgcCoreDsElevation.level3.dp,
-        containerColor = Color(WgcCoreDsColors.premiumGrocerySurface)
+        containerColor = Color(WgcCoreDsColors.white)
     ) {
         WgcSupermarketNavItem.entries.forEach { item ->
             val isSelected = selectedItem == item
@@ -56,7 +56,7 @@ fun WgcSupermarketBottomNav(
                     if (item == WgcSupermarketNavItem.CART && cartBadgeCount > 0) {
                         BadgedBox(
                             badge = {
-                                Badge(containerColor = Color(WgcCoreDsColors.premiumGroceryGreen)) {
+                                Badge(containerColor = Color(WgcCoreDsColors.greenDark7)) {
                                     Text(text = cartBadgeCount.toString())
                                 }
                             }
@@ -83,11 +83,11 @@ fun WgcSupermarketBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.premiumGroceryGreen),
-                    selectedTextColor = Color(WgcCoreDsColors.premiumGroceryGreen),
-                    indicatorColor = Color(WgcCoreDsColors.premiumGroceryGreenLight),
-                    unselectedIconColor = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
-                    unselectedTextColor = Color(WgcCoreDsColors.premiumGroceryTextSecondary)
+                    selectedIconColor = Color(WgcCoreDsColors.greenDark7),
+                    selectedTextColor = Color(WgcCoreDsColors.greenDark7),
+                    indicatorColor = Color(WgcCoreDsColors.greenLight9),
+                    unselectedIconColor = Color(WgcCoreDsColors.cyan7),
+                    unselectedTextColor = Color(WgcCoreDsColors.cyan7)
                 )
             )
         }

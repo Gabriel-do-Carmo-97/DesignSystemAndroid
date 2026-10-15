@@ -91,7 +91,7 @@ fun WgcFreshGroceryProfileTemplate(
                             bottomEnd = WgcCoreDsBorderRadius.xxl24.dp
                         )
                     )
-                    .background(Color(WgcCoreDsColors.megaStorerPrimary))
+                    .background(Color(WgcCoreDsColors.green6))
                     .padding(
                         horizontal = WgcCoreDsSpacing.lg24.dp,
                         vertical = WgcCoreDsSpacing.lg24.dp
@@ -111,7 +111,7 @@ fun WgcFreshGroceryProfileTemplate(
                         Icon(
                             imageVector = Icons.Default.Person,
                             contentDescription = "Avatar",
-                            tint = Color(WgcCoreDsColors.megaStorerPrimary),
+                            tint = Color(WgcCoreDsColors.green6),
                             modifier = Modifier.size(WgcCoreDsSize.s36.dp)
                         )
                     }
@@ -155,7 +155,7 @@ fun WgcFreshGroceryProfileTemplate(
                     text = "Account Settings",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -176,7 +176,7 @@ private fun ProfileStatItem(label: String, value: String) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.megaStorerSurface))
+            .background(Color(WgcCoreDsColors.greenLight16))
             .padding(
                 horizontal = WgcCoreDsSpacing.lg24.dp,
                 vertical = WgcCoreDsSpacing.md16.dp
@@ -186,13 +186,13 @@ private fun ProfileStatItem(label: String, value: String) {
             text = value,
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.megaStorerPrimary)
+            color = Color(WgcCoreDsColors.green6)
         )
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
         Text(
             text = label,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+            color = Color(WgcCoreDsColors.gray9)
         )
     }
 }
@@ -210,13 +210,13 @@ private fun ProfileMenuItem(icon: ImageVector, title: String, onClick: () -> Uni
             modifier = Modifier
                 .size(WgcCoreDsSize.s40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.megaStorerSurface)),
+                .background(Color(WgcCoreDsColors.greenLight16)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.megaStorerPrimary),
+                tint = Color(WgcCoreDsColors.green6),
                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
             )
         }
@@ -227,18 +227,18 @@ private fun ProfileMenuItem(icon: ImageVector, title: String, onClick: () -> Uni
             text = title,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.megaStorerDark),
+            color = Color(WgcCoreDsColors.greenDark4),
             modifier = Modifier.weight(1f)
         )
 
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.megaStorerSecondaryText),
+            tint = Color(WgcCoreDsColors.gray9),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }
-    HorizontalDivider(color = Color(WgcCoreDsColors.megaStorerBorder))
+    HorizontalDivider(color = Color(WgcCoreDsColors.greenLight2))
 }
 
 @Preview(showBackground = true)

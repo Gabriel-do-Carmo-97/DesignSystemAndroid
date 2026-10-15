@@ -71,7 +71,7 @@ fun WgcPdaDiscountsTemplate(
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(discount.title, fontWeight = FontWeight.Bold)
-                        Text(discount.discountBadge, color = Color(WgcCoreDsColors.premiumGroceryWineRed), fontWeight = FontWeight.SemiBold)
+                        Text(discount.discountBadge, color = Color(WgcCoreDsColors.pink1), fontWeight = FontWeight.SemiBold)
                     }
                 }
             }

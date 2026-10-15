@@ -2,44 +2,44 @@ package br.com.wgc.design_system.core
 
 object WgcCoreDsMotion {
     /** 100ms - Duração muito rápida */
-    const val durationFast100 = 100
+    const val durationFast100 = CoreConstants.CoreDsMotion.DURATION_FAST100
 
     /** 150ms - Duração rápida para microinterações e fade outs */
-    const val durationShort150 = 150
+    const val durationShort150 = CoreConstants.CoreDsMotion.DURATION_SHORT150
 
     /** 200ms - Duração rápida */
-    const val durationNormal200 = 200
+    const val durationNormal200 = CoreConstants.CoreDsMotion.DURATION_NORMAL200
 
     /** 200ms - Alias ergonômico para duração rápida */
-    const val durationShort200 = durationNormal200
+    const val durationShort200 = CoreConstants.CoreDsMotion.DURATION_SHORT200
 
     /** 300ms - Duração padrão */
-    const val durationStandard300 = 300
+    const val durationStandard300 = CoreConstants.CoreDsMotion.DURATION_STANDARD300
 
     /** 500ms - Duração lenta / ênfase */
-    const val durationSlow500 = 500
+    const val durationSlow500 = CoreConstants.CoreDsMotion.DURATION_SLOW500
 
     /** 700ms - Duração muito lenta para fluxos complexos de onboarding e celebração */
-    const val durationExtraSlow700 = 700
+    const val durationExtraSlow700 = CoreConstants.CoreDsMotion.DURATION_EXTRA_SLOW700
 
     // --- ESPECIFICAÇÕES DE FÍSICA DE MOLA (SPRING PHYSICS) ---
     /** Amortecimento sem quique (sem overshoot) */
-    const val springDampingNoBouncy = 1.0f
+    const val springDampingNoBouncy = CoreConstants.CoreDsMotion.SPRING_DAMPING_NO_BOUNCY
 
     /** Amortecimento padrão suave e responsivo */
-    const val springDampingMediumBouncy = 0.75f
+    const val springDampingMediumBouncy = CoreConstants.CoreDsMotion.SPRING_DAMPING_MEDIUM_BOUNCY
 
     /** Amortecimento com alto quique para microinterações lúdicas */
-    const val springDampingHighBouncy = 0.5f
+    const val springDampingHighBouncy = CoreConstants.CoreDsMotion.SPRING_DAMPING_HIGH_BOUNCY
 
     /** Rigidez baixa (movimento lento e fluido) */
-    const val springStiffnessLow = 50.0f
+    const val springStiffnessLow = CoreConstants.CoreDsMotion.SPRING_STIFFNESS_LOW
 
     /** Rigidez média (movimento natural para elementos normais) */
-    const val springStiffnessMedium = 300.0f
+    const val springStiffnessMedium = CoreConstants.CoreDsMotion.SPRING_STIFFNESS_MEDIUM
 
     /** Rigidez alta (movimento instantâneo e ágil para botões e toques rápidos) */
-    const val springStiffnessHigh = 800.0f
+    const val springStiffnessHigh = CoreConstants.CoreDsMotion.SPRING_STIFFNESS_HIGH
 
     /** Curva de aceleração e desaceleração com ênfase (Emphasized) */
     val easingEmphasized = WgcCubicBezier(0.2f, 0.0f, 0.0f, 1.0f)

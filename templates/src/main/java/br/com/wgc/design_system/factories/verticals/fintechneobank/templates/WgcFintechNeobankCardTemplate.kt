@@ -30,7 +30,7 @@ fun WgcNeobankCardTemplate(
             TopAppBar(
                 title = { Text("Cartão de Crédito", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechPurple),
+                    containerColor = Color(WgcCoreDsColors.purple3),
                     titleContentColor = Color.White
                 )
             )

@@ -4,10 +4,10 @@ package br.com.wgc.design_system.core
  * Identificadores semânticos de efeitos sonoros (Sound FX) padronizados no Design System.
  */
 object WgcSoundFxTokens {
-    const val soundTapLight = "wgc_sfx_tap_light"
-    const val soundTapMedium = "wgc_sfx_tap_medium"
-    const val soundSuccessConfirm = "wgc_sfx_success_confirm"
-    const val soundErrorAlert = "wgc_sfx_error_alert"
-    const val soundPullRefreshRelease = "wgc_sfx_refresh_release"
-    const val soundBadgeNotification = "wgc_sfx_badge_notify"
+    const val soundTapLight = CoreConstants.SoundFxTokens.SOUND_TAP_LIGHT
+    const val soundTapMedium = CoreConstants.SoundFxTokens.SOUND_TAP_MEDIUM
+    const val soundSuccessConfirm = CoreConstants.SoundFxTokens.SOUND_SUCCESS_CONFIRM
+    const val soundErrorAlert = CoreConstants.SoundFxTokens.SOUND_ERROR_ALERT
+    const val soundPullRefreshRelease = CoreConstants.SoundFxTokens.SOUND_PULL_REFRESH_RELEASE
+    const val soundBadgeNotification = CoreConstants.SoundFxTokens.SOUND_BADGE_NOTIFICATION
 }

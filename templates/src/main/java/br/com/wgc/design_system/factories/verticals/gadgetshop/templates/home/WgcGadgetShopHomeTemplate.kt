@@ -126,13 +126,13 @@ fun WgcNexkartHomeTemplate(
                             text = "Bulk Discounts!",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopDark)
+                            color = Color(WgcCoreDsColors.blueDark6)
                         )
                         Text(
                             text = "View All",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                            color = Color(WgcCoreDsColors.blue39),
                             modifier = Modifier.clickable(onClick = onViewAllDiscountsClick)
                         )
                     }
@@ -150,7 +150,7 @@ fun WgcNexkartHomeTemplate(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
                                     .background(
-                                        if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else Color(WgcCoreDsColors.gadgetShopSurface)
+                                        if (isSelected) Color(WgcCoreDsColors.blue39) else Color(WgcCoreDsColors.blueLight38)
                                     )
                                     .clickable { onTabSelected(tab) }
                                     .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
@@ -159,7 +159,7 @@ fun WgcNexkartHomeTemplate(
                                 Text(
                                     text = tab,
                                     style = MaterialTheme.typography.labelMedium,
-                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.gadgetShopDark),
+                                    color = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark6),
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                                 )
                             }
@@ -202,7 +202,7 @@ fun WgcNexkartHomeTemplate(
                         text = "Top Products in March",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
 
                     topProducts.forEachIndexed { index, topProduct ->

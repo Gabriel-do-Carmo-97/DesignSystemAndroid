@@ -52,7 +52,7 @@ fun WgcTelemedicineHomeTemplate(
     onStartTelemedicine: () -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -60,7 +60,7 @@ fun WgcTelemedicineHomeTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.telemedicineGreen))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.cyan4))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Text(text = "🩺 Telemedicina Imediata 24h", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
@@ -89,10 +89,10 @@ fun WgcTelemedicineHomeTemplate(
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
-                            modifier = Modifier.size(WgcCoreDsSize.s48.dp).clip(CircleShape).background(Color(WgcCoreDsColors.telemedicineGreenLight)),
+                            modifier = Modifier.size(WgcCoreDsSize.s48.dp).clip(CircleShape).background(Color(WgcCoreDsColors.cyanLight4)),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(WgcCoreDsColors.telemedicineGreen))
+                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(WgcCoreDsColors.cyan4))
                         }
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                         Column {
@@ -102,14 +102,14 @@ fun WgcTelemedicineHomeTemplate(
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.designerFurnitureYellow), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
+                        Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.yellow4), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
                         Text(text = "${doc.rating} (${doc.reviewsCount} opiniões)", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
                         Spacer(modifier = Modifier.weight(1f))
-                        Text(text = "R$ " + String.format("%.2f", doc.consultationFee), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.telemedicineNavy))
+                        Text(text = "R$ " + String.format("%.2f", doc.consultationFee), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.blueDark12))
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-                    Text(text = "🕒 ${doc.nextAvailableSlot}", fontSize = 12.sp, color = Color(WgcCoreDsColors.telemedicineGreen), fontWeight = FontWeight.Medium)
+                    Text(text = "🕒 ${doc.nextAvailableSlot}", fontSize = 12.sp, color = Color(WgcCoreDsColors.cyan4), fontWeight = FontWeight.Medium)
                 }
             }
         }
@@ -122,7 +122,7 @@ fun WgcTelemedicineSpecialistsTemplate(
     onSelectDoctor: (DoctorSpecialist) -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -138,7 +138,7 @@ fun WgcTelemedicineSpecialistsTemplate(
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Text(text = doc.name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                    Text(text = doc.specialty, color = Color(WgcCoreDsColors.telemedicineGreen), fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
+                    Text(text = doc.specialty, color = Color(WgcCoreDsColors.cyan4), fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
                     Text(text = "Convênios: ${doc.insuranceAccepted.joinToString(", ")}", fontSize = 12.sp, color = Color.DarkGray)
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     WgcClassicButton(
@@ -158,7 +158,7 @@ fun WgcTelemedicineVideoCallTemplate(
     specialty: String = "Dermatologia",
     onEndCall: () -> Unit = {}
 ) {
-    Box(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.telemedicineNavy))) {
+    Box(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.blueDark12))) {
         Column(
             modifier = Modifier.fillMaxSize().padding(WgcCoreDsSpacing.lg24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -168,7 +168,7 @@ fun WgcTelemedicineVideoCallTemplate(
                 Text(text = "Sala de Telemedicina Segura", color = Color.White.copy(alpha = 0.7f), fontSize = 13.sp)
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                 Text(text = doctorName, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
-                Text(text = specialty, color = Color(WgcCoreDsColors.telemedicineGreen), fontSize = 14.sp)
+                Text(text = specialty, color = Color(WgcCoreDsColors.cyan4), fontSize = 14.sp)
             }
 
             Box(
@@ -201,7 +201,7 @@ fun WgcTelemedicinePrescriptionsTemplate(
     prescriptions: List<MedicalPrescription> = TelemedicineMockData.samplePrescriptions
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -222,7 +222,7 @@ fun WgcTelemedicinePrescriptionsTemplate(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(text = rx.medicineName, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                        Icon(Icons.Default.QrCode, contentDescription = null, tint = Color(WgcCoreDsColors.telemedicineNavy))
+                        Icon(Icons.Default.QrCode, contentDescription = null, tint = Color(WgcCoreDsColors.blueDark12))
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Text(text = "Instruções: ${rx.dosageInstructions}", fontSize = 13.sp)
@@ -239,7 +239,7 @@ fun WgcTelemedicinePrescriptionsTemplate(
 fun WgcTelemedicineProfileTemplate(
     patient: PatientHealthProfile = TelemedicineMockData.defaultPatient
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
         Text(text = "Prontuário do Paciente", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -252,7 +252,7 @@ fun WgcTelemedicineProfileTemplate(
                 Text(text = "Tipo Sanguíneo: ${patient.bloodType}", fontSize = 14.sp)
                 Text(text = "Alergias: ${patient.allergies.joinToString(", ")}", fontSize = 14.sp, color = Color(WgcCoreDsColors.red500))
                 Text(text = "Condições Crônicas: ${patient.chronicConditions.joinToString(", ")}", fontSize = 14.sp)
-                Text(text = "Convênio Ativo: ${patient.activeHealthInsurance}", fontSize = 14.sp, color = Color(WgcCoreDsColors.telemedicineGreen), fontWeight = FontWeight.SemiBold)
+                Text(text = "Convênio Ativo: ${patient.activeHealthInsurance}", fontSize = 14.sp, color = Color(WgcCoreDsColors.cyan4), fontWeight = FontWeight.SemiBold)
             }
         }
     }

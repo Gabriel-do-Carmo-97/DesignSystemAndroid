@@ -66,11 +66,11 @@ fun WgcWineStoreCard(
             .fillMaxWidth()
             .clickable(onClick = onCardClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.premiumGrocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.premiumGroceryBorder)
+            color = Color(WgcCoreDsColors.greenLight1)
         )
     ) {
         Column(
@@ -90,12 +90,12 @@ fun WgcWineStoreCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryWineRedLight))
+                            .background(Color(WgcCoreDsColors.pinkLight3))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         Text(
                             text = "$countryAndRegion • $year",
-                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                            color = Color(WgcCoreDsColors.pink1),
                             fontWeight = FontWeight.Bold,
                             style = MaterialTheme.typography.bodySmall
                         )
@@ -104,7 +104,7 @@ fun WgcWineStoreCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryGoldLight))
+                            .background(Color(WgcCoreDsColors.orangeLight12))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp),
                         contentAlignment = Alignment.Center
                     ) {
@@ -115,12 +115,12 @@ fun WgcWineStoreCard(
                             Icon(
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.premiumGroceryGold),
+                                tint = Color(WgcCoreDsColors.orange34),
                                 modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                             )
                             Text(
                                 text = String.format(Locale.getDefault(), "%.1f", rating) + " Sommelier",
-                                color = Color(WgcCoreDsColors.premiumGroceryGoldDark),
+                                color = Color(WgcCoreDsColors.orange4),
                                 fontWeight = FontWeight.Bold,
                                 style = MaterialTheme.typography.bodySmall
                             )
@@ -135,7 +135,7 @@ fun WgcWineStoreCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.premiumGroceryWineRed) else Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.pink1) else Color(WgcCoreDsColors.cyan7),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -151,13 +151,13 @@ fun WgcWineStoreCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.premiumGroceryWineRedLight)),
+                        .background(Color(WgcCoreDsColors.pinkLight3)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.WineBar,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                        tint = Color(WgcCoreDsColors.pink1),
                         modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                     )
                 }
@@ -170,13 +170,13 @@ fun WgcWineStoreCard(
                 ) {
                     Text(
                         text = winery.uppercase(),
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         text = wineName,
-                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                        color = Color(WgcCoreDsColors.cyanDark3),
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Bold,
                         maxLines = 2,
@@ -184,7 +184,7 @@ fun WgcWineStoreCard(
                     )
                     Text(
                         text = "Uva: $grape",
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = MaterialTheme.typography.bodySmall
                     )
                 }
@@ -196,12 +196,12 @@ fun WgcWineStoreCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.premiumGroceryBorder).copy(alpha = 0.5f))
+                    .background(Color(WgcCoreDsColors.greenLight1).copy(alpha = 0.5f))
                     .padding(WgcCoreDsSpacing.xs8.dp)
             ) {
                 Text(
                     text = "Nota do Sommelier: \"$sommelierNote\"",
-                    color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                    color = Color(WgcCoreDsColors.cyan7),
                     style = MaterialTheme.typography.bodySmall,
                     fontStyle = androidx.compose.ui.text.font.FontStyle.Italic
                 )
@@ -217,7 +217,7 @@ fun WgcWineStoreCard(
                 Column {
                     Text(
                         text = "R$ " + String.format(Locale.getDefault(), "%.2f", originalPrice) + " (Preço Regular)",
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = MaterialTheme.typography.bodySmall,
                         textDecoration = TextDecoration.LineThrough
                     )
@@ -227,19 +227,19 @@ fun WgcWineStoreCard(
                     ) {
                         Text(
                             text = "R$ " + String.format(Locale.getDefault(), "%.2f", clienteMaisPrice),
-                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                            color = Color(WgcCoreDsColors.pink1),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.ExtraBold
                         )
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.premiumGroceryGoldLight))
+                                .background(Color(WgcCoreDsColors.orangeLight12))
                                 .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                         ) {
                             Text(
                                 text = "Cliente Mais",
-                                color = Color(WgcCoreDsColors.premiumGroceryGoldDark),
+                                color = Color(WgcCoreDsColors.orange4),
                                 fontWeight = FontWeight.Bold,
                                 style = MaterialTheme.typography.bodySmall
                             )
@@ -252,7 +252,7 @@ fun WgcWineStoreCard(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryWineRedLight))
+                            .background(Color(WgcCoreDsColors.pinkLight3))
                             .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                     ) {
                         IconButton(
@@ -262,12 +262,12 @@ fun WgcWineStoreCard(
                             Icon(
                                 imageVector = Icons.Default.Remove,
                                 contentDescription = "Diminuir",
-                                tint = Color(WgcCoreDsColors.premiumGroceryWineRed)
+                                tint = Color(WgcCoreDsColors.pink1)
                             )
                         }
                         Text(
                             text = quantityInCart.toString(),
-                            color = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                            color = Color(WgcCoreDsColors.pink1),
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs8.dp)
                         )
@@ -278,7 +278,7 @@ fun WgcWineStoreCard(
                             Icon(
                                 imageVector = Icons.Default.Add,
                                 contentDescription = "Aumentar",
-                                tint = Color(WgcCoreDsColors.premiumGroceryWineRed)
+                                tint = Color(WgcCoreDsColors.pink1)
                             )
                         }
                     }

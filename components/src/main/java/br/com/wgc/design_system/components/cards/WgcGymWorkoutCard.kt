@@ -58,15 +58,15 @@ fun WgcGymWorkoutCard(
     slotAction: (@Composable () -> Unit)? = null
 ) {
     val cardBackground = if (isCompleted) {
-        Color(WgcCoreDsColors.gymDarkGray).copy(alpha = 0.6f)
+        Color(WgcCoreDsColors.grayDark7).copy(alpha = 0.6f)
     } else {
-        Color(WgcCoreDsColors.gymDarkGray)
+        Color(WgcCoreDsColors.grayDark7)
     }
 
     val borderColor = if (isCompleted) {
-        Color(WgcCoreDsColors.gymCrowdLow).copy(alpha = 0.5f)
+        Color(WgcCoreDsColors.green17).copy(alpha = 0.5f)
     } else {
-        Color(WgcCoreDsColors.gymMediumGray)
+        Color(WgcCoreDsColors.grayDark21)
     }
 
     Card(
@@ -91,16 +91,16 @@ fun WgcGymWorkoutCard(
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                     .background(
-                        if (isCompleted) Color(WgcCoreDsColors.gymCrowdLow).copy(alpha = 0.2f)
-                        else Color(WgcCoreDsColors.gymMediumGray)
+                        if (isCompleted) Color(WgcCoreDsColors.green17).copy(alpha = 0.2f)
+                        else Color(WgcCoreDsColors.grayDark21)
                     ),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.FitnessCenter,
                     contentDescription = null,
-                    tint = if (isCompleted) Color(WgcCoreDsColors.gymCrowdLow)
-                    else Color(WgcCoreDsColors.gymYellow),
+                    tint = if (isCompleted) Color(WgcCoreDsColors.green17)
+                    else Color(WgcCoreDsColors.orange23),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -116,8 +116,8 @@ fun WgcGymWorkoutCard(
                 ) {
                     Text(
                         text = exerciseName,
-                        color = if (isCompleted) Color(WgcCoreDsColors.gymTextSecondary)
-                        else Color(WgcCoreDsColors.gymTextPrimary),
+                        color = if (isCompleted) Color(WgcCoreDsColors.gray16)
+                        else Color(WgcCoreDsColors.white),
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
                         textDecoration = if (isCompleted) TextDecoration.LineThrough else TextDecoration.None
@@ -126,7 +126,7 @@ fun WgcGymWorkoutCard(
 
                 Text(
                     text = targetMuscle,
-                    color = Color(WgcCoreDsColors.gymYellow),
+                    color = Color(WgcCoreDsColors.orange23),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -139,7 +139,7 @@ fun WgcGymWorkoutCard(
                 ) {
                     Text(
                         text = setsAndReps,
-                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                        color = Color(WgcCoreDsColors.gray16),
                         fontSize = 12.sp
                     )
 
@@ -152,7 +152,7 @@ fun WgcGymWorkoutCard(
                     ) {
                         Text(
                             text = weightKg,
-                            color = Color(WgcCoreDsColors.gymTextPrimary),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -165,12 +165,12 @@ fun WgcGymWorkoutCard(
                         Icon(
                             imageVector = Icons.Default.Timer,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymTextSecondary),
+                            tint = Color(WgcCoreDsColors.gray16),
                             modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                         )
                         Text(
                             text = "${restSeconds}s",
-                            color = Color(WgcCoreDsColors.gymTextSecondary),
+                            color = Color(WgcCoreDsColors.gray16),
                             fontSize = 11.sp
                         )
                     }
@@ -186,8 +186,8 @@ fun WgcGymWorkoutCard(
                         .size(WgcCoreDsSize.s36.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                         .background(
-                            if (isCompleted) Color(WgcCoreDsColors.gymCrowdLow)
-                            else Color(WgcCoreDsColors.gymLightGray).copy(alpha = 0.3f)
+                            if (isCompleted) Color(WgcCoreDsColors.green17)
+                            else Color(WgcCoreDsColors.gray1).copy(alpha = 0.3f)
                         )
                         .clickable(enabled = onToggleCompleted != null) {
                             onToggleCompleted?.invoke(!isCompleted)
@@ -198,7 +198,7 @@ fun WgcGymWorkoutCard(
                         Icon(
                             imageVector = Icons.Default.Check,
                             contentDescription = "Exercício Concluído",
-                            tint = Color(WgcCoreDsColors.gymTextInverse),
+                            tint = Color(WgcCoreDsColors.black),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }

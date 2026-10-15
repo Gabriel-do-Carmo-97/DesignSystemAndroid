@@ -75,9 +75,9 @@ fun WgcQuickShopBottomNav(
             WgcShopEaseNavItem.entries.forEach { item ->
                 val isSelected = item == selectedItem
                 val iconColor = if (isSelected) {
-                    Color(WgcCoreDsColors.quickShopPrimary)
+                    Color(WgcCoreDsColors.orange37)
                 } else {
-                    Color(WgcCoreDsColors.quickShopSecondaryText)
+                    Color(WgcCoreDsColors.gray6)
                 }
 
                 Column(
@@ -100,7 +100,7 @@ fun WgcQuickShopBottomNav(
                                 .padding(top = WgcCoreDsSpacing.xxs4.dp)
                                 .size(WgcCoreDsSize.s4.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.quickShopPrimary))
+                                .background(Color(WgcCoreDsColors.orange37))
                         )
                     }
                 }

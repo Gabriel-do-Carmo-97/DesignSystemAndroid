@@ -7,7 +7,7 @@ interface WgcThemeTokens {
 }
 
 class DefaultWgcThemeTokens : WgcThemeTokens {
-    override val primaryColor: Int = WgcCoreDsColorsFacade.primary
-    override val secondaryColor: Int = WgcCoreDsColorsFacade.secondary
-    override val backgroundColor: Int = WgcCoreDsColorsFacade.background
+    override val primaryColor: Int = WgcCoreDsColorsFacade.orange500
+    override val secondaryColor: Int = WgcCoreDsColorsFacade.white
+    override val backgroundColor: Int = WgcCoreDsColorsFacade.gray50
 }

@@ -95,13 +95,13 @@ fun WgcStylishCheckoutScreenTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
                 Text(
                     text = "Checkout",
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
             }
         },
@@ -122,12 +122,12 @@ fun WgcStylishCheckoutScreenTemplate(
                         Text(
                             text = "Total Price",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.textSecondary)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                         Text(
                             text = "₹5,499",
                             style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                            color = Color(WgcCoreDsColors.trendFashionDark)
+                            color = Color(WgcCoreDsColors.blueDark19)
                         )
                     }
                     WgcButton(
@@ -157,7 +157,7 @@ fun WgcStylishCheckoutScreenTemplate(
             Text(
                 text = "Shopping List",
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -168,7 +168,7 @@ fun WgcStylishCheckoutScreenTemplate(
                         .fillMaxWidth()
                         .padding(vertical = WgcCoreDsSpacing.xs.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trendFashionLightGray))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayLight10))
                 ) {
                     Row(
                         modifier = Modifier
@@ -186,7 +186,7 @@ fun WgcStylishCheckoutScreenTemplate(
                             Icon(
                                 imageVector = Icons.Default.ShoppingBag,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trendFashionPink),
+                                tint = Color(WgcCoreDsColors.pink4),
                                 modifier = Modifier.size(32.dp)
                             )
                         }
@@ -197,17 +197,17 @@ fun WgcStylishCheckoutScreenTemplate(
                             Text(
                                 text = item.product.title,
                                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                                color = Color(WgcCoreDsColors.trendFashionDark)
+                                color = Color(WgcCoreDsColors.blueDark19)
                             )
                             Text(
                                 text = "Size: ${item.selectedSize}",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.textSecondary)
+                                color = Color(WgcCoreDsColors.gray6)
                             )
                             Text(
                                 text = item.product.price,
                                 style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                color = Color(WgcCoreDsColors.trendFashionDark)
+                                color = Color(WgcCoreDsColors.blueDark19)
                             )
                         }
 
@@ -250,13 +250,13 @@ fun WgcStylishPlaceOrderScreenTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
                 Text(
                     text = "Checkout",
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
             }
         },
@@ -288,7 +288,7 @@ fun WgcStylishPlaceOrderScreenTemplate(
             Text(
                 text = "Select Payment Method",
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
@@ -362,13 +362,13 @@ fun WgcStylishShippingScreenTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
                 Text(
                     text = "Checkout",
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
             }
         },
@@ -399,7 +399,7 @@ fun WgcStylishShippingScreenTemplate(
             Text(
                 text = "Order Summary",
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
@@ -407,15 +407,15 @@ fun WgcStylishShippingScreenTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trendFashionLightGray))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayLight10))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Order", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.textSecondary))
-                        Text(text = orderAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.trendFashionDark))
+                        Text(text = "Order", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
+                        Text(text = orderAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -424,8 +424,8 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Shipping", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.textSecondary))
-                        Text(text = shippingCost, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.trendFashionDark))
+                        Text(text = "Shipping", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
+                        Text(text = shippingCost, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -434,8 +434,8 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Discount", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.textSecondary))
-                        Text(text = discountAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.trendFashionPink))
+                        Text(text = "Discount", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
+                        Text(text = discountAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.pink4))
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
@@ -446,8 +446,8 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Total", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.trendFashionDark))
-                        Text(text = totalAmount, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.trendFashionDark))
+                        Text(text = "Total", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
+                        Text(text = totalAmount, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
                     }
                 }
             }
@@ -482,7 +482,7 @@ fun WgcStylishSuccessScreenTemplate(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.trendFashionPink)),
+                    .background(Color(WgcCoreDsColors.pink4)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -498,7 +498,7 @@ fun WgcStylishSuccessScreenTemplate(
             Text(
                 text = title,
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark),
+                color = Color(WgcCoreDsColors.blueDark19),
                 textAlign = TextAlign.Center
             )
 
@@ -507,7 +507,7 @@ fun WgcStylishSuccessScreenTemplate(
             Text(
                 text = message,
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.textSecondary),
+                color = Color(WgcCoreDsColors.gray6),
                 textAlign = TextAlign.Center
             )
 

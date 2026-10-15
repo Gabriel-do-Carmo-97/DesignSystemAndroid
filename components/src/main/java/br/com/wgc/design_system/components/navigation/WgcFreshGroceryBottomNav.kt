@@ -88,13 +88,13 @@ fun WgcFreshGroceryBottomNav(
                     Icon(
                         imageVector = if (isSelected) item.selectedIcon else item.unselectedIcon,
                         contentDescription = item.title,
-                        tint = if (isSelected) Color(WgcCoreDsColors.freshGroceryEmerald) else Color.Gray,
+                        tint = if (isSelected) Color(WgcCoreDsColors.green13) else Color.Gray,
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     if (isSelected) {
                         Text(
                             text = item.title,
-                            color = Color(WgcCoreDsColors.freshGroceryEmerald),
+                            color = Color(WgcCoreDsColors.green13),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold
                         )

@@ -88,7 +88,7 @@ fun WgcTasselCartTemplate(
                                 .height(WgcCoreDsSize.s52.dp),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.curatedMarketPrimary),
+                                containerColor = Color(WgcCoreDsColors.blue37),
                                 contentColor = Color.White
                             )
                         ) {
@@ -127,12 +127,12 @@ fun WgcTasselCartTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                        .background(Color(WgcCoreDsColors.blueLight26))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -143,7 +143,7 @@ fun WgcTasselCartTemplate(
                     text = "Bag",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -167,7 +167,7 @@ fun WgcTasselCartTemplate(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                                .background(Color(WgcCoreDsColors.blueLight26))
                                 .padding(WgcCoreDsSpacing.sm12.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
@@ -189,7 +189,7 @@ fun WgcTasselCartTemplate(
                                         text = product.title.take(2).uppercase(),
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.curatedMarketPrimary)
+                                        color = Color(WgcCoreDsColors.blue37)
                                     )
                                 }
                             }
@@ -201,20 +201,20 @@ fun WgcTasselCartTemplate(
                                     text = product.title,
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                                    color = Color(WgcCoreDsColors.grayDark9)
                                 )
                                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                                 Text(
                                     text = "${product.brand} | Size: M",
                                     style = MaterialTheme.typography.labelSmall,
-                                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                                    color = Color(WgcCoreDsColors.gray10)
                                 )
                                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                                 Text(
                                     text = product.price,
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                                    color = Color(WgcCoreDsColors.grayDark9)
                                 )
                             }
 
@@ -223,7 +223,7 @@ fun WgcTasselCartTemplate(
                                 Icon(
                                     imageVector = Icons.Default.DeleteOutline,
                                     contentDescription = "Remover item",
-                                    tint = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                                    tint = Color(WgcCoreDsColors.gray10),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -246,15 +246,15 @@ fun WgcTasselCartTemplate(
                     placeholder = {
                         Text(
                             text = "Promo code",
-                            color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                            color = Color(WgcCoreDsColors.gray10)
                         )
                     },
                     modifier = Modifier.weight(1f).height(WgcCoreDsSize.s48.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     singleLine = true,
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
-                        unfocusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
+                        focusedContainerColor = Color(WgcCoreDsColors.blueLight26),
+                        unfocusedContainerColor = Color(WgcCoreDsColors.blueLight26),
                         focusedBorderColor = Color.Transparent,
                         unfocusedBorderColor = Color.Transparent
                     )
@@ -265,7 +265,7 @@ fun WgcTasselCartTemplate(
                     modifier = Modifier.height(WgcCoreDsSize.s48.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.curatedMarketDark),
+                        containerColor = Color(WgcCoreDsColors.grayDark9),
                         contentColor = Color.White
                     )
                 ) {
@@ -290,13 +290,13 @@ fun WgcTasselCartTemplate(
                         Text(
                             text = "Subtotal",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                            color = Color(WgcCoreDsColors.gray10)
                         )
                         Text(
                             text = subtotal,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                     }
 
@@ -307,13 +307,13 @@ fun WgcTasselCartTemplate(
                         Text(
                             text = "Delivery",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                            color = Color(WgcCoreDsColors.gray10)
                         )
                         Text(
                             text = deliveryFee,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                     }
 
@@ -327,13 +327,13 @@ fun WgcTasselCartTemplate(
                             text = "Total",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                         Text(
                             text = total,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.curatedMarketPrimary)
+                            color = Color(WgcCoreDsColors.blue37)
                         )
                     }
                 }

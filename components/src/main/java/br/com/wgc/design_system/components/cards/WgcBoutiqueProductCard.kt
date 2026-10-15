@@ -63,7 +63,7 @@ fun WgcBoutiqueProductCard(
                 .fillMaxWidth()
                 .height(WgcCoreDsSize.s180.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.boutiqueSurface))
+                .background(Color(WgcCoreDsColors.blueLight32))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -75,13 +75,13 @@ fun WgcBoutiqueProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.boutiquePrimaryLight)),
+                        .background(Color(WgcCoreDsColors.purpleLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.boutiquePrimary),
+                        color = Color(WgcCoreDsColors.purple8),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -100,7 +100,7 @@ fun WgcBoutiqueProductCard(
                 Icon(
                     imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     contentDescription = if (isFavorite) "Remover favorito" else "Adicionar favorito",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.boutiqueAlertRed) else Color(WgcCoreDsColors.boutiqueSecondaryText),
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red22) else Color(WgcCoreDsColors.gray13),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
             }
@@ -113,7 +113,7 @@ fun WgcBoutiqueProductCard(
             text = title,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.boutiqueDark),
+            color = Color(WgcCoreDsColors.grayDark13),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
@@ -123,7 +123,7 @@ fun WgcBoutiqueProductCard(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                color = Color(WgcCoreDsColors.gray13),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -136,7 +136,7 @@ fun WgcBoutiqueProductCard(
             text = price,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.boutiqueDark)
+            color = Color(WgcCoreDsColors.grayDark13)
         )
     }
 }

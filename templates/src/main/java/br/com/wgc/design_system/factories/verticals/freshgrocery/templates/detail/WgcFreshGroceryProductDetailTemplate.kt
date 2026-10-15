@@ -100,20 +100,20 @@ fun WgcFreshGroceryProductDetailTemplate(
                             Text(
                                 text = "Total Price",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                                color = Color(WgcCoreDsColors.gray9)
                             )
                             Text(
                                 text = product.price,
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.megaStorerDark)
+                                color = Color(WgcCoreDsColors.greenDark4)
                             )
                         }
 
                         Button(
                             onClick = onAddToCartClick,
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.megaStorerPrimary),
+                                containerColor = Color(WgcCoreDsColors.green6),
                                 contentColor = Color.White
                             ),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
@@ -153,7 +153,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Back",
-                        tint = Color(WgcCoreDsColors.megaStorerDark)
+                        tint = Color(WgcCoreDsColors.greenDark4)
                     )
                 }
 
@@ -161,14 +161,14 @@ fun WgcFreshGroceryProductDetailTemplate(
                     text = "Detail Product",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 IconButton(onClick = onFavoriteToggle) {
                     Icon(
                         imageVector = if (product.isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favorite",
-                        tint = if (product.isFavorite) Color(WgcCoreDsColors.megaStorerAccent) else Color(WgcCoreDsColors.megaStorerDark)
+                        tint = if (product.isFavorite) Color(WgcCoreDsColors.red29) else Color(WgcCoreDsColors.greenDark4)
                     )
                 }
             }
@@ -183,7 +183,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                         .height(WgcCoreDsSize.s280.dp)
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                        .background(Color(WgcCoreDsColors.megaStorerSurface)),
+                        .background(Color(WgcCoreDsColors.greenLight16)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -197,7 +197,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                                 .align(Alignment.TopStart)
                                 .padding(WgcCoreDsSpacing.md16.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.megaStorerAccent))
+                                .background(Color(WgcCoreDsColors.red29))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.sm12.dp,
                                     vertical = WgcCoreDsSpacing.xxs4.dp
@@ -227,7 +227,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                         text = product.title,
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStorerDark),
+                        color = Color(WgcCoreDsColors.greenDark4),
                         modifier = Modifier.weight(1f)
                     )
 
@@ -238,19 +238,19 @@ fun WgcFreshGroceryProductDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.megaStorerGold),
+                            tint = Color(WgcCoreDsColors.yellow10),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
                         Text(
                             text = product.rating,
                             style = MaterialTheme.typography.labelLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.megaStorerDark)
+                            color = Color(WgcCoreDsColors.greenDark4)
                         )
                         Text(
                             text = "(${product.reviewCount})",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                            color = Color(WgcCoreDsColors.gray9)
                         )
                     }
                 }
@@ -262,7 +262,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                     text = "Select Color",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -274,8 +274,8 @@ fun WgcFreshGroceryProductDetailTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.megaStorerPrimary)
-                                    else Color(WgcCoreDsColors.megaStorerSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.green6)
+                                    else Color(WgcCoreDsColors.greenLight16)
                                 )
                                 .clickable { onColorSelect(c) }
                                 .padding(
@@ -287,7 +287,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                                 text = c,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.megaStorerDark)
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.greenDark4)
                             )
                         }
                     }
@@ -300,7 +300,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                     text = "Select Size",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -313,8 +313,8 @@ fun WgcFreshGroceryProductDetailTemplate(
                                 .size(WgcCoreDsSize.s40.dp)
                                 .clip(CircleShape)
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.megaStorerPrimary)
-                                    else Color(WgcCoreDsColors.megaStorerSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.green6)
+                                    else Color(WgcCoreDsColors.greenLight16)
                                 )
                                 .clickable { onSizeSelect(s) },
                             contentAlignment = Alignment.Center
@@ -323,7 +323,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                                 text = s,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.megaStorerDark)
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.greenDark4)
                             )
                         }
                     }
@@ -336,7 +336,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                     text = "Description",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -344,7 +344,7 @@ fun WgcFreshGroceryProductDetailTemplate(
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                    color = Color(WgcCoreDsColors.gray9)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl32.dp))

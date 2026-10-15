@@ -68,10 +68,10 @@ fun WgcCuratedBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.curatedMarketPrimary),
-                    selectedTextColor = Color(WgcCoreDsColors.curatedMarketPrimary),
-                    unselectedIconColor = Color(WgcCoreDsColors.curatedMarketSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.curatedMarketSecondaryText),
+                    selectedIconColor = Color(WgcCoreDsColors.blue37),
+                    selectedTextColor = Color(WgcCoreDsColors.blue37),
+                    unselectedIconColor = Color(WgcCoreDsColors.gray10),
+                    unselectedTextColor = Color(WgcCoreDsColors.gray10),
                     indicatorColor = Color.Transparent
                 )
             )

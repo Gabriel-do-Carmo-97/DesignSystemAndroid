@@ -23,7 +23,7 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.dailyNewsRed)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.red5)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("g1 • O Portal de Notícias da Globo", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -32,7 +32,7 @@ fun WgcG1HomeTemplate(modifier: Modifier = Modifier) {
             items(DailyNewsMockData.sampleNews) { item ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(item.section, color = Color(WgcCoreDsColors.dailyNewsRed), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(item.section, color = Color(WgcCoreDsColors.red5), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text(item.headline, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text(item.publishedAgo, color = Color.Gray, fontSize = 14.sp)
                     }

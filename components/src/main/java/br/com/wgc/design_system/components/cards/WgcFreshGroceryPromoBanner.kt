@@ -46,7 +46,7 @@ fun WgcFreshGroceryPromoBanner(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.megaStorerSaleOrange))
+            .background(Color(WgcCoreDsColors.orangeLight4))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Row(
@@ -61,7 +61,7 @@ fun WgcFreshGroceryPromoBanner(
                     text = title,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -69,7 +69,7 @@ fun WgcFreshGroceryPromoBanner(
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                    color = Color(WgcCoreDsColors.gray9)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -77,7 +77,7 @@ fun WgcFreshGroceryPromoBanner(
                 Button(
                     onClick = onButtonClick,
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.megaStorerPrimary),
+                        containerColor = Color(WgcCoreDsColors.green6),
                         contentColor = Color.White
                     ),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
@@ -103,14 +103,14 @@ fun WgcFreshGroceryPromoBanner(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s80.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.megaStorerPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.greenLight8)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = "50% OFF",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(WgcCoreDsColors.megaStorerPrimary)
+                        color = Color(WgcCoreDsColors.green6)
                     )
                 }
             }

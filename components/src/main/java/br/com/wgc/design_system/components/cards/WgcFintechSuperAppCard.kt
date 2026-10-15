@@ -46,9 +46,9 @@ fun WgcFintechSuperAppCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSuperAppSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.fintechSuperAppBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight3))
     ) {
         Row(
             modifier = Modifier
@@ -60,13 +60,13 @@ fun WgcFintechSuperAppCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s48.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.fintechOrangeLight)),
+                    .background(Color(WgcCoreDsColors.orangeLight8)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ShoppingBag,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.fintechOrange),
+                    tint = Color(WgcCoreDsColors.orange20),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -77,19 +77,19 @@ fun WgcFintechSuperAppCard(
                 Text(
                     text = "SuperApp Shop • $partnerStore",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.fintechOrange),
+                    color = Color(WgcCoreDsColors.orange20),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offerTitle,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.fintechSuperAppTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark25)
                 )
                 Text(
                     text = "$cashbackPercentage% de Cashback na conta",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.fintechSuperAppTextSecondary)
+                    color = Color(WgcCoreDsColors.blue38)
                 )
             }
 

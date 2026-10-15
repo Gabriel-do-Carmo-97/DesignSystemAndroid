@@ -9,8 +9,8 @@ package br.com.wgc.design_system.core
  */
 object WgcFluidTypography {
 
-    const val DEFAULT_MIN_VIEWPORT_WIDTH_DP = 360.0f
-    const val DEFAULT_MAX_VIEWPORT_WIDTH_DP = 840.0f
+    const val DEFAULT_MIN_VIEWPORT_WIDTH_DP = CoreConstants.FluidTypography.DEFAULT_MIN_VIEWPORT_WIDTH_DP
+    const val DEFAULT_MAX_VIEWPORT_WIDTH_DP = CoreConstants.FluidTypography.DEFAULT_MAX_VIEWPORT_WIDTH_DP
 
     /**
      * Função pura para cálculo de clamp de tamanho de texto em sp com base na largura da viewport em dp.

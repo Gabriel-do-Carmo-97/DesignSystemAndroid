@@ -69,7 +69,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                     .width(WgcCoreDsSpacing.xxl40.dp)
                     .height(WgcCoreDsSpacing.xxs4.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.personalFinanceBorder))
+                    .background(Color(WgcCoreDsColors.blueLight7))
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -78,7 +78,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 text = "O que deseja lançar?",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark)
+                color = Color(WgcCoreDsColors.blueDark33)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -91,7 +91,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Despesa",
                     icon = Icons.Default.ArrowDownward,
-                    color = Color(WgcCoreDsColors.personalFinanceExpenseRed),
+                    color = Color(WgcCoreDsColors.red23),
                     onClick = onNewExpenseClick
                 )
 
@@ -99,7 +99,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Receita",
                     icon = Icons.Default.ArrowUpward,
-                    color = Color(WgcCoreDsColors.personalFinanceIncomeGreen),
+                    color = Color(WgcCoreDsColors.green26),
                     onClick = onNewIncomeClick
                 )
 
@@ -107,7 +107,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Transferência",
                     icon = Icons.Default.SwapHoriz,
-                    color = Color(WgcCoreDsColors.personalFinanceTransferBlue),
+                    color = Color(WgcCoreDsColors.blue36),
                     onClick = onNewTransferClick
                 )
             }
@@ -147,7 +147,7 @@ private fun SpeedDialActionButton(
             text = title,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.personalFinanceDark)
+            color = Color(WgcCoreDsColors.blueDark33)
         )
     }
 }

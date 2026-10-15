@@ -60,8 +60,8 @@ fun WgcWellnessCheckInCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessForest)),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessForestDark)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.cyanDark2)),
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.cyanDark1)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level6.dp)
     ) {
         Column(
@@ -83,7 +83,7 @@ fun WgcWellnessCheckInCard(
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                        tint = Color(WgcCoreDsColors.green17),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                     Text(
@@ -141,14 +141,14 @@ fun WgcWellnessCheckInCard(
                     Column {
                         Text(
                             text = "CÓDIGO DE ACESSO",
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,
                             letterSpacing = 1.sp
                         )
                         Text(
                             text = tokenCode,
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 26.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 3.sp
@@ -161,14 +161,14 @@ fun WgcWellnessCheckInCard(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                    .background(Color(WgcCoreDsColors.wellnessCreamBg))
+                                    .background(Color(WgcCoreDsColors.orangeLight14))
                                     .clickable { onCopyToken() },
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.ContentCopy,
                                     contentDescription = "Copiar Código",
-                                    tint = Color(WgcCoreDsColors.wellnessForest),
+                                    tint = Color(WgcCoreDsColors.cyanDark2),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -179,7 +179,7 @@ fun WgcWellnessCheckInCard(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                    .background(Color(WgcCoreDsColors.wellnessCoral))
+                                    .background(Color(WgcCoreDsColors.red26))
                                     .clickable { onShowQr() },
                                 contentAlignment = Alignment.Center
                             ) {

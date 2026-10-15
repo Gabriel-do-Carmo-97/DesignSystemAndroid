@@ -75,8 +75,8 @@ fun WgcWellnessGymCard(
             .fillMaxWidth()
             .clickable(enabled = onClick != null) { onClick?.invoke() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -100,13 +100,13 @@ fun WgcWellnessGymCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s44.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.wellnessForestLight)),
+                            .background(Color(WgcCoreDsColors.greenLight4)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.FitnessCenter,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.wellnessForest),
+                            tint = Color(WgcCoreDsColors.cyanDark2),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                     }
@@ -114,13 +114,13 @@ fun WgcWellnessGymCard(
                     Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)) {
                         Text(
                             text = name,
-                            color = Color(WgcCoreDsColors.wellnessDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = category,
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 12.sp
                         )
                     }
@@ -155,12 +155,12 @@ fun WgcWellnessGymCard(
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.wellnessCoral),
+                        tint = Color(WgcCoreDsColors.red26),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Text(
                         text = "$distance • $address",
-                        color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                        color = Color(WgcCoreDsColors.gray7),
                         fontSize = 12.sp
                     )
                 }
@@ -172,12 +172,12 @@ fun WgcWellnessGymCard(
                     Icon(
                         imageVector = Icons.Default.Star,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.wellnessTierGold),
+                        tint = Color(WgcCoreDsColors.orange5),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Text(
                         text = "$rating ($reviewsCount)",
-                        color = Color(WgcCoreDsColors.wellnessDark),
+                        color = Color(WgcCoreDsColors.grayDark7),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -200,14 +200,14 @@ fun WgcWellnessGymCard(
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = null,
-                            tint = if (isIncludedInUserPlan) Color(WgcCoreDsColors.wellnessCheckInGreen)
-                            else Color(WgcCoreDsColors.wellnessSecondaryText),
+                            tint = if (isIncludedInUserPlan) Color(WgcCoreDsColors.green17)
+                            else Color(WgcCoreDsColors.gray7),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Text(
                             text = if (isIncludedInUserPlan) "Incluso no seu plano" else "Requer upgrade de plano",
-                            color = if (isIncludedInUserPlan) Color(WgcCoreDsColors.wellnessCheckInGreen)
-                            else Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = if (isIncludedInUserPlan) Color(WgcCoreDsColors.green17)
+                            else Color(WgcCoreDsColors.gray7),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -217,7 +217,7 @@ fun WgcWellnessGymCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.wellnessCoral))
+                                .background(Color(WgcCoreDsColors.red26))
                                 .clickable { onCheckInClick() }
                                 .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
                             contentAlignment = Alignment.Center

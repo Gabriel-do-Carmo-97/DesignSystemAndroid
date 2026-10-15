@@ -67,7 +67,7 @@ fun WgcPropertyRentalBottomNav(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xs8.dp
     ) {
         Row(
@@ -106,8 +106,8 @@ private fun PropertyRentalNavItemButton(
     badgeCount: Int,
     onClick: () -> Unit
 ) {
-    val activeColor = Color(WgcCoreDsColors.propertyRentalPrimary)
-    val inactiveColor = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+    val activeColor = Color(WgcCoreDsColors.blueDark26)
+    val inactiveColor = Color(WgcCoreDsColors.blue21)
     val contentColor = if (isSelected) activeColor else inactiveColor
 
     Column(
@@ -133,7 +133,7 @@ private fun PropertyRentalNavItemButton(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s14.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.propertyRentalCoral)),
+                        .background(Color(WgcCoreDsColors.red28)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -162,7 +162,7 @@ private fun PropertyRentalNavItemButton(
                 .size(width = WgcCoreDsSize.s16.dp, height = WgcCoreDsSize.s2.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                 .background(
-                    if (isSelected) Color(WgcCoreDsColors.propertyRentalYellow) else Color.Transparent
+                    if (isSelected) Color(WgcCoreDsColors.yellow6) else Color.Transparent
                 )
         )
     }

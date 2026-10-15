@@ -23,7 +23,7 @@ fun WgcUolHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.mediaNetworkYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.yellow4)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("UOL • O Melhor Conteúdo", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
             }
         }

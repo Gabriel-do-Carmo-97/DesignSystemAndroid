@@ -131,7 +131,7 @@ fun WgcPropertyRentalHomeTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyRentalSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     WgcPropertyRentalSearchBar(
@@ -199,7 +199,7 @@ fun WgcPropertyRentalHomeTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                        .background(Color(WgcCoreDsColors.propertyRentalPrimaryLight))
+                        .background(Color(WgcCoreDsColors.blueLight15))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Row(
@@ -210,13 +210,13 @@ fun WgcPropertyRentalHomeTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s40.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyRentalYellow)),
+                                .background(Color(WgcCoreDsColors.yellow6)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.CheckCircle,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -228,13 +228,13 @@ fun WgcPropertyRentalHomeTemplate(
                                 text = "Alugue sem fiador e sem caução",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalDark)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = "Aprovação de crédito rápida e 100% digital em minutos.",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                                color = Color(WgcCoreDsColors.blue21)
                             )
                         }
                     }
@@ -254,7 +254,7 @@ fun WgcPropertyRentalHomeTemplate(
                         text = "Imóveis recomendados (${filteredProperties.size})",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyRentalDark)
+                        color = Color(WgcCoreDsColors.blueDark26)
                     )
                 }
             }
@@ -295,7 +295,7 @@ private fun PropertyRentalHomeTopBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.propertyRentalSurface))
+            .background(Color(WgcCoreDsColors.white))
             .padding(
                 horizontal = WgcCoreDsSpacing.md16.dp,
                 vertical = WgcCoreDsSpacing.sm12.dp
@@ -309,14 +309,14 @@ private fun PropertyRentalHomeTopBar(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s32.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.propertyRentalPrimary)),
+                    .background(Color(WgcCoreDsColors.blueDark26)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "5",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Black,
-                    color = Color(WgcCoreDsColors.propertyRentalYellow)
+                    color = Color(WgcCoreDsColors.yellow6)
                 )
             }
 
@@ -327,12 +327,12 @@ private fun PropertyRentalHomeTopBar(
                     text = "Property Rental",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
                 Text(
                     text = "Aluguel e Venda",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                    color = Color(WgcCoreDsColors.blue21)
                 )
             }
         }
@@ -343,12 +343,12 @@ private fun PropertyRentalHomeTopBar(
             modifier = Modifier
                 .size(WgcCoreDsSize.s40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.propertyRentalBackground))
+                .background(Color(WgcCoreDsColors.blueLight34))
         ) {
             Icon(
                 imageVector = Icons.Default.NotificationsNone,
                 contentDescription = "Notificações",
-                tint = Color(WgcCoreDsColors.propertyRentalDark),
+                tint = Color(WgcCoreDsColors.blueDark26),
                 modifier = Modifier.size(WgcCoreDsSize.s22.dp)
             )
         }

@@ -28,7 +28,7 @@ fun WgcPromotionalProductCard(
     discountPercent: String = "25% OFF",
     installments: String = "em 10x R$ 149,90 sem juros",
     isFreeShipping: Boolean = true,
-    accentColor: Color = Color(WgcCoreDsColors.marketplaceGreen),
+    accentColor: Color = Color(WgcCoreDsColors.green9),
     onClick: () -> Unit = {}
 ) {
     Card(

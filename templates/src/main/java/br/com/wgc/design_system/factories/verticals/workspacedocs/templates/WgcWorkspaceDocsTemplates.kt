@@ -23,7 +23,7 @@ fun WgcNotionWorkspaceTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.workspaceDocsBlack)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.grayDark22)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Workspace Docs • Produtividade", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

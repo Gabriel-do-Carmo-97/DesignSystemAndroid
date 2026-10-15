@@ -62,7 +62,7 @@ fun WgcEcommerceProductCard(
     onClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.25f)
+    val borderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.25f)
 
     Card(
         modifier = modifier
@@ -80,7 +80,7 @@ fun WgcEcommerceProductCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(160.dp)
-                    .background(Color(WgcCoreDsColors.trendFashionLightGray))
+                    .background(Color(WgcCoreDsColors.grayLight10))
             ) {
                 AsyncImageDefault(
                     image = imageUrl,
@@ -96,7 +96,7 @@ fun WgcEcommerceProductCard(
                             .align(Alignment.TopStart)
                             .padding(WgcCoreDsSpacing.xs.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.trendFashionPink))
+                            .background(Color(WgcCoreDsColors.pink4))
                             .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
                     ) {
                         Text(
@@ -120,7 +120,7 @@ fun WgcEcommerceProductCard(
                         Icon(
                             imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                             contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                            tint = if (isFavorite) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
+                            tint = if (isFavorite) Color(WgcCoreDsColors.pink4) else Color(WgcCoreDsColors.blueDark19),
                             modifier = Modifier.size(18.dp)
                         )
                     }
@@ -136,7 +136,7 @@ fun WgcEcommerceProductCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark),
+                    color = Color(WgcCoreDsColors.blueDark19),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -146,7 +146,7 @@ fun WgcEcommerceProductCard(
                     Text(
                         text = subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.textSecondary),
+                        color = Color(WgcCoreDsColors.gray6),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -161,7 +161,7 @@ fun WgcEcommerceProductCard(
                     Text(
                         text = price,
                         style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
 
                     if (originalPrice != null) {
@@ -171,7 +171,7 @@ fun WgcEcommerceProductCard(
                             style = MaterialTheme.typography.bodySmall.copy(
                                 textDecoration = TextDecoration.LineThrough
                             ),
-                            color = Color(WgcCoreDsColors.textSecondary)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                     }
                 }

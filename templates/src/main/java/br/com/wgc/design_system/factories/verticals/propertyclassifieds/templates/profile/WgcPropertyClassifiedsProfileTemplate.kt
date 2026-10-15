@@ -77,7 +77,7 @@ fun WgcZapProfileTemplate(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                    .background(Color(WgcCoreDsColors.white))
                     .padding(
                         horizontal = WgcCoreDsSpacing.md16.dp,
                         vertical = WgcCoreDsSpacing.sm12.dp
@@ -87,7 +87,7 @@ fun WgcZapProfileTemplate(
                     text = "Meu Perfil",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                    color = Color(WgcCoreDsColors.blueDark10)
                 )
             }
         }
@@ -107,7 +107,7 @@ fun WgcZapProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(
@@ -120,7 +120,7 @@ fun WgcZapProfileTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s56.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsPrimary)),
+                                    .background(Color(WgcCoreDsColors.blueDark31)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
@@ -139,13 +139,13 @@ fun WgcZapProfileTemplate(
                                         text = userName,
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                        color = Color(WgcCoreDsColors.blueDark10)
                                     )
                                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                     Icon(
                                         imageVector = Icons.Default.Verified,
                                         contentDescription = "Verificado",
-                                        tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
+                                        tint = Color(WgcCoreDsColors.blue17),
                                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                     )
                                 }
@@ -153,7 +153,7 @@ fun WgcZapProfileTemplate(
                                 Text(
                                     text = userEmail,
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                    color = Color(WgcCoreDsColors.blue22)
                                 )
                             }
                         }
@@ -168,7 +168,7 @@ fun WgcZapProfileTemplate(
                                 .height(WgcCoreDsSize.s48.dp),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.propertyClassifiedsOrange),
+                                containerColor = Color(WgcCoreDsColors.orange17),
                                 contentColor = Color.White
                             )
                         ) {
@@ -201,7 +201,7 @@ fun WgcZapProfileTemplate(
                             .weight(1f)
                             .clickable(onClick = onMyPropertiesClick),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                     ) {
                         Column(
@@ -212,7 +212,7 @@ fun WgcZapProfileTemplate(
                             Icon(
                                 imageVector = Icons.Default.Home,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark31),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -220,12 +220,12 @@ fun WgcZapProfileTemplate(
                                 text = "$activePropertiesCount ativos",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                color = Color(WgcCoreDsColors.blueDark10)
                             )
                             Text(
                                 text = "Meus Anúncios",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -235,7 +235,7 @@ fun WgcZapProfileTemplate(
                             .weight(1f)
                             .clickable(onClick = onLeadsClick),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                     ) {
                         Column(
@@ -246,7 +246,7 @@ fun WgcZapProfileTemplate(
                             Icon(
                                 imageVector = Icons.Default.Email,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyClassifiedsOrange),
+                                tint = Color(WgcCoreDsColors.orange17),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -254,12 +254,12 @@ fun WgcZapProfileTemplate(
                                 text = "$leadsReceivedCount contatos",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                color = Color(WgcCoreDsColors.blueDark10)
                             )
                             Text(
                                 text = "Leads Recebidos",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -271,7 +271,7 @@ fun WgcZapProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
@@ -279,13 +279,13 @@ fun WgcZapProfileTemplate(
                             text = "Serviços Exclusivos Zap",
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark),
+                            color = Color(WgcCoreDsColors.blueDark10),
                             modifier = Modifier.padding(
                                 horizontal = WgcCoreDsSpacing.md16.dp,
                                 vertical = WgcCoreDsSpacing.sm12.dp
                             )
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
 
                         ZapProfileMenuItem(
                             icon = Icons.Default.Calculate,
@@ -293,7 +293,7 @@ fun WgcZapProfileTemplate(
                             subtitle = "Compare taxas de juros dos principais bancos",
                             onClick = onFinancingSimulatorClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
 
                         ZapProfileMenuItem(
                             icon = Icons.Default.Analytics,
@@ -310,7 +310,7 @@ fun WgcZapProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
@@ -320,7 +320,7 @@ fun WgcZapProfileTemplate(
                             subtitle = "Como negociar imóveis com total segurança",
                             onClick = onSecurityTipsClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
 
                         ZapProfileMenuItem(
                             icon = Icons.AutoMirrored.Filled.HelpOutline,
@@ -328,7 +328,7 @@ fun WgcZapProfileTemplate(
                             subtitle = "Perguntas frequentes e canais de atendimento",
                             onClick = onHelpClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
 
                         ZapProfileMenuItem(
                             icon = Icons.Default.Info,
@@ -368,7 +368,7 @@ private fun ZapProfileMenuItem(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                tint = Color(WgcCoreDsColors.blueDark31),
                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -377,13 +377,13 @@ private fun ZapProfileMenuItem(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                    color = Color(WgcCoreDsColors.blueDark10)
                 )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                    color = Color(WgcCoreDsColors.blue22)
                 )
             }
         }
@@ -391,7 +391,7 @@ private fun ZapProfileMenuItem(
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+            tint = Color(WgcCoreDsColors.blue22),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }

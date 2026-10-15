@@ -99,13 +99,13 @@ fun WgcTasselMarketTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface)),
+                            .background(Color(WgcCoreDsColors.blueLight26)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.Mail,
                             contentDescription = "Tassel Envelope",
-                            tint = Color(WgcCoreDsColors.curatedMarketDark),
+                            tint = Color(WgcCoreDsColors.grayDark9),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -116,7 +116,7 @@ fun WgcTasselMarketTemplate(
                         text = "Market",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.curatedMarketDark)
+                        color = Color(WgcCoreDsColors.grayDark9)
                     )
 
                     Spacer(modifier = Modifier.weight(1f))
@@ -157,7 +157,7 @@ fun WgcTasselMarketTemplate(
                             text = tabTitle,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = if (isSelected) Color(WgcCoreDsColors.curatedMarketDark) else Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                            color = if (isSelected) Color(WgcCoreDsColors.grayDark9) else Color(WgcCoreDsColors.gray10)
                         )
 
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -169,7 +169,7 @@ fun WgcTasselMarketTemplate(
                                     height = WgcCoreDsSpacing.xxxs2.dp
                                 )
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.curatedMarketPrimary)
+                                    if (isSelected) Color(WgcCoreDsColors.blue37)
                                     else Color.Transparent
                                 )
                         )
@@ -195,9 +195,9 @@ fun WgcTasselMarketTemplate(
                 ) {
                     items(collections, key = { it.id }) { item ->
                         val (bgColor, txtColor) = when (item.type) {
-                            "sale" -> Color(WgcCoreDsColors.curatedMarketSalePink) to Color(WgcCoreDsColors.curatedMarketSalePinkText)
-                            "new_in" -> Color(WgcCoreDsColors.curatedMarketNewInPurple) to Color(WgcCoreDsColors.curatedMarketNewInPurpleText)
-                            else -> Color(WgcCoreDsColors.curatedMarketSurface) to Color(WgcCoreDsColors.curatedMarketDark)
+                            "sale" -> Color(WgcCoreDsColors.redLight9) to Color(WgcCoreDsColors.red28)
+                            "new_in" -> Color(WgcCoreDsColors.blueLight29) to Color(WgcCoreDsColors.blue37)
+                            else -> Color(WgcCoreDsColors.blueLight26) to Color(WgcCoreDsColors.grayDark9)
                         }
 
                         WgcCuratedCollectionCard(

@@ -83,7 +83,7 @@ fun WgcOrganizzeCardsTemplate(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.personalFinancePrimary))
+                    .background(Color(WgcCoreDsColors.cyan3))
                     .padding(
                         horizontal = WgcCoreDsSpacing.md16.dp,
                         vertical = WgcCoreDsSpacing.sm12.dp
@@ -136,14 +136,14 @@ fun WgcOrganizzeCardsTemplate(
                             Text(
                                 text = "Total de Faturas Abertas",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                                color = Color(WgcCoreDsColors.gray11)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = totalInvoices,
                                 style = MaterialTheme.typography.headlineMedium,
                                 fontWeight = FontWeight.ExtraBold,
-                                color = Color(WgcCoreDsColors.personalFinanceExpenseRed)
+                                color = Color(WgcCoreDsColors.red23)
                             )
                         }
 
@@ -151,13 +151,13 @@ fun WgcOrganizzeCardsTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSpacing.xxl40.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.personalFinancePrimaryLight)),
+                                .background(Color(WgcCoreDsColors.cyanLight2)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.CreditCard,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.personalFinancePrimary),
+                                tint = Color(WgcCoreDsColors.cyan3),
                                 modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
                             )
                         }
@@ -168,7 +168,7 @@ fun WgcOrganizzeCardsTemplate(
                     Text(
                         text = "Limite total disponível: $totalLimitAvailable",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinancePrimary),
+                        color = Color(WgcCoreDsColors.cyan3),
                         fontWeight = FontWeight.SemiBold
                     )
 
@@ -181,7 +181,7 @@ fun WgcOrganizzeCardsTemplate(
                             .height(WgcCoreDsSize.s44.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.personalFinancePrimary)
+                            containerColor = Color(WgcCoreDsColors.cyan3)
                         )
                     ) {
                         Icon(
@@ -204,7 +204,7 @@ fun WgcOrganizzeCardsTemplate(
                 text = "Seus Cartões Cadastrados",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark),
+                color = Color(WgcCoreDsColors.blueDark33),
                 modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
             )
 

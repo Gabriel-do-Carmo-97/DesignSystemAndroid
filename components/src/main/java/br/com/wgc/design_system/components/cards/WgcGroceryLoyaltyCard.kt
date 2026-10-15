@@ -61,14 +61,14 @@ fun WgcGroceryLoyaltyCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.groceryBlue)
+            containerColor = Color(WgcCoreDsColors.blueDark32)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = WgcCoreDsElevation.level3.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBlueDark)
+            color = Color(WgcCoreDsColors.blueDark14)
         )
     ) {
         Column(
@@ -94,7 +94,7 @@ fun WgcGroceryLoyaltyCard(
                         Icon(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.groceryRed),
+                            tint = Color(WgcCoreDsColors.red19),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -129,12 +129,12 @@ fun WgcGroceryLoyaltyCard(
                         Icon(
                             imageVector = Icons.Default.QrCode,
                             contentDescription = "Identificação no Caixa",
-                            tint = Color(WgcCoreDsColors.groceryBlue),
+                            tint = Color(WgcCoreDsColors.blueDark32),
                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                         )
                         Text(
                             text = "NO CAIXA",
-                            color = Color(WgcCoreDsColors.groceryBlue),
+                            color = Color(WgcCoreDsColors.blueDark32),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -190,12 +190,12 @@ fun WgcGroceryLoyaltyCard(
                         Icon(
                             imageVector = Icons.Default.MonetizationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.groceryYellow),
+                            tint = Color(WgcCoreDsColors.orange13),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Text(
                             text = "$coinsBalance",
-                            color = Color(WgcCoreDsColors.groceryYellow),
+                            color = Color(WgcCoreDsColors.orange13),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Black
                         )

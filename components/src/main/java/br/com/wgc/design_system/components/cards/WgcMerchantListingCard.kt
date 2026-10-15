@@ -30,7 +30,7 @@ fun WgcMerchantListingCard(
     deliveryTime: String = "20-30 min",
     deliveryFee: String = "Grátis",
     isFeatured: Boolean = true,
-    accentColor: Color = Color(WgcCoreDsColors.foodDeliveryRed),
+    accentColor: Color = Color(WgcCoreDsColors.red18),
     onClick: () -> Unit = {}
 ) {
     Card(
@@ -86,14 +86,14 @@ fun WgcMerchantListingCard(
                     Icon(
                         imageVector = Icons.Default.Star,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.warning),
+                        tint = Color(WgcCoreDsColors.yellow10),
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
                         text = rating,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.warning)
+                        color = Color(WgcCoreDsColors.yellow10)
                     )
                     Text(text = "•", style = MaterialTheme.typography.bodySmall)
                     Text(text = category, style = MaterialTheme.typography.bodySmall)
@@ -110,7 +110,7 @@ fun WgcMerchantListingCard(
                     Text(
                         text = deliveryFee,
                         style = MaterialTheme.typography.bodySmall,
-                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.marketplaceGreen) else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (deliveryFee.equals("Grátis", ignoreCase = true)) Color(WgcCoreDsColors.green9) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }

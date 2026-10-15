@@ -43,7 +43,7 @@ fun WgcPharmacyBottomNav(
     cartBadgeCount: Int = 0
 ) {
     NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.pharmacyChainSurface)),
+        modifier = modifier.background(Color(WgcCoreDsColors.white)),
         tonalElevation = WgcCoreDsElevation.level3.dp
     ) {
         PharmacyNavTab.entries.forEach { tab ->
@@ -56,7 +56,7 @@ fun WgcPharmacyBottomNav(
                         BadgedBox(
                             badge = {
                                 Badge(
-                                    containerColor = Color(WgcCoreDsColors.pharmacyChainRed)) {
+                                    containerColor = Color(WgcCoreDsColors.red8)) {
                                     Text(text = cartBadgeCount.toString())
                                 }
                             }
@@ -83,11 +83,11 @@ fun WgcPharmacyBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.pharmacyChainRed),
-                    selectedTextColor = Color(WgcCoreDsColors.pharmacyChainRed),
-                    unselectedIconColor = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
-                    unselectedTextColor = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
-                    indicatorColor = Color(WgcCoreDsColors.pharmacyChainRedLight)
+                    selectedIconColor = Color(WgcCoreDsColors.red8),
+                    selectedTextColor = Color(WgcCoreDsColors.red8),
+                    unselectedIconColor = Color(WgcCoreDsColors.blue20),
+                    unselectedTextColor = Color(WgcCoreDsColors.blue20),
+                    indicatorColor = Color(WgcCoreDsColors.pinkLight4)
                 )
             )
         }

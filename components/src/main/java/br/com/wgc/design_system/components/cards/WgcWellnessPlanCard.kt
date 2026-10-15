@@ -54,12 +54,12 @@ fun WgcWellnessPlanCard(
     slotAction: (@Composable () -> Unit)? = null
 ) {
     val tierColor = Color(tier.colorHex)
-    val borderColor = if (isCurrentPlan) Color(WgcCoreDsColors.wellnessCoral) else Color(WgcCoreDsColors.wellnessBorder)
+    val borderColor = if (isCurrentPlan) Color(WgcCoreDsColors.red26) else Color(WgcCoreDsColors.blueLight6)
 
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         border = BorderStroke(if (isCurrentPlan) WgcCoreDsSize.s2.dp else WgcCoreDsSize.s1.dp, borderColor),
         elevation = CardDefaults.cardElevation(defaultElevation = if (isCurrentPlan) WgcCoreDsElevation.level6.dp else WgcCoreDsElevation.level1.dp)
     ) {
@@ -87,7 +87,7 @@ fun WgcWellnessPlanCard(
                     )
                     Text(
                         text = "Plano ${tier.label}",
-                        color = Color(WgcCoreDsColors.wellnessDark),
+                        color = Color(WgcCoreDsColors.grayDark7),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -97,12 +97,12 @@ fun WgcWellnessPlanCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.wellnessCoralLight))
+                            .background(Color(WgcCoreDsColors.redLight8))
                             .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
                     ) {
                         Text(
                             text = "SEU PLANO ATUAL",
-                            color = Color(WgcCoreDsColors.wellnessCoral),
+                            color = Color(WgcCoreDsColors.red26),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Black
                         )
@@ -111,12 +111,12 @@ fun WgcWellnessPlanCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.wellnessForestLight))
+                            .background(Color(WgcCoreDsColors.greenLight4))
                             .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
                     ) {
                         Text(
                             text = discountBadge,
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -131,13 +131,13 @@ fun WgcWellnessPlanCard(
             ) {
                 Text(
                     text = monthlyPrice,
-                    color = Color(WgcCoreDsColors.wellnessDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Black
                 )
                 Text(
                     text = "/ mês",
-                    color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                    color = Color(WgcCoreDsColors.gray7),
                     fontSize = 13.sp,
                     modifier = Modifier.padding(bottom = WgcCoreDsSpacing.xxs4.dp)
                 )
@@ -145,7 +145,7 @@ fun WgcWellnessPlanCard(
 
             Text(
                 text = gymCountLabel,
-                color = Color(WgcCoreDsColors.wellnessForest),
+                color = Color(WgcCoreDsColors.cyanDark2),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold
             )
@@ -164,19 +164,19 @@ fun WgcWellnessPlanCard(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s16.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.wellnessCheckInGreen).copy(alpha = 0.15f)),
+                                .background(Color(WgcCoreDsColors.green17).copy(alpha = 0.15f)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Check,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                                tint = Color(WgcCoreDsColors.green17),
                                 modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                             )
                         }
                         Text(
                             text = benefit,
-                            color = Color(WgcCoreDsColors.wellnessDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 12.sp
                         )
                     }
@@ -191,7 +191,7 @@ fun WgcWellnessPlanCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.wellnessForest))
+                        .background(Color(WgcCoreDsColors.cyanDark2))
                         .clickable { onSelectPlan() }
                         .padding(vertical = WgcCoreDsSpacing.sm12.dp),
                     contentAlignment = Alignment.Center

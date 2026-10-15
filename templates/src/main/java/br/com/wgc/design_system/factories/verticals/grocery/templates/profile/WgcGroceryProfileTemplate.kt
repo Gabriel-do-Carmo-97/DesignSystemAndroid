@@ -104,7 +104,7 @@ private fun ProfileHeaderSection(userProfile: SupermercadoUserProfile) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.groceryBlue))
+            .background(Color(WgcCoreDsColors.blueDark32))
             .padding(
                 horizontal = WgcCoreDsSpacing.md16.dp,
                 vertical = WgcCoreDsSpacing.lg24.dp
@@ -118,13 +118,13 @@ private fun ProfileHeaderSection(userProfile: SupermercadoUserProfile) {
                 modifier = Modifier
                     .size(WgcCoreDsSize.s64.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.grocerySurface)),
+                    .background(Color(WgcCoreDsColors.white)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.groceryBlue),
+                    tint = Color(WgcCoreDsColors.blueDark32),
                     modifier = Modifier.size(WgcCoreDsSize.s36.dp)
                 )
             }
@@ -136,18 +136,18 @@ private fun ProfileHeaderSection(userProfile: SupermercadoUserProfile) {
                     text = userProfile.name,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.grocerySurface)
+                    color = Color(WgcCoreDsColors.white)
                 )
                 Text(
                     text = "Cliente " + userProfile.membershipLevel,
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.groceryYellow),
+                    color = Color(WgcCoreDsColors.orange13),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = userProfile.email,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.grocerySurface).copy(alpha = 0.8f)
+                    color = Color(WgcCoreDsColors.white).copy(alpha = 0.8f)
                 )
             }
         }
@@ -161,7 +161,7 @@ private fun CashierIdentificationCard(cpf: String) {
             .fillMaxWidth()
             .padding(WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -174,14 +174,14 @@ private fun CashierIdentificationCard(cpf: String) {
                 text = "Identifique-se no Caixa para Descontos",
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.groceryTextPrimary)
+                color = Color(WgcCoreDsColors.blueDark13)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
 
             Icon(
                 imageVector = Icons.Default.QrCode,
                 contentDescription = "QR Code",
-                tint = Color(WgcCoreDsColors.groceryBlue),
+                tint = Color(WgcCoreDsColors.blueDark32),
                 modifier = Modifier.size(WgcCoreDsSize.s100.dp)
             )
 
@@ -191,7 +191,7 @@ private fun CashierIdentificationCard(cpf: String) {
                 text = "CPF: $cpf",
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.groceryTextSecondary)
+                color = Color(WgcCoreDsColors.gray5)
             )
         }
     }
@@ -204,7 +204,7 @@ private fun CardSummarySection(userProfile: SupermercadoUserProfile) {
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -221,7 +221,7 @@ private fun CardSummarySection(userProfile: SupermercadoUserProfile) {
                     Icon(
                         imageVector = Icons.Default.CreditCard,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.groceryBlue),
+                        tint = Color(WgcCoreDsColors.blueDark32),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -229,14 +229,14 @@ private fun CardSummarySection(userProfile: SupermercadoUserProfile) {
                         text = "Cartão Supermercado",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryTextPrimary)
+                        color = Color(WgcCoreDsColors.blueDark13)
                     )
                 }
 
                 Text(
                     text = "•••• " + userProfile.cardLastDigits,
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.groceryTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
             }
 
@@ -250,13 +250,13 @@ private fun CardSummarySection(userProfile: SupermercadoUserProfile) {
                     Text(
                         text = "Limite Disponível",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryTextSecondary)
+                        color = Color(WgcCoreDsColors.gray5)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", userProfile.availableLimit),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryBlue)
+                        color = Color(WgcCoreDsColors.blueDark32)
                     )
                 }
 
@@ -264,13 +264,13 @@ private fun CardSummarySection(userProfile: SupermercadoUserProfile) {
                     Text(
                         text = "Fatura Aberta",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryTextSecondary)
+                        color = Color(WgcCoreDsColors.gray5)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", userProfile.invoiceAmount),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryRed)
+                        color = Color(WgcCoreDsColors.red19)
                     )
                 }
             }
@@ -288,7 +288,7 @@ private fun ProfileMenuOptions(onMenuItemClick: (String) -> Unit) {
                 vertical = WgcCoreDsSpacing.md16.dp
             ),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -297,28 +297,28 @@ private fun ProfileMenuOptions(onMenuItemClick: (String) -> Unit) {
                 title = "Meus Pedidos e Notas Fiscais",
                 onClick = { onMenuItemClick("pedidos") }
             )
-            HorizontalDivider(color = Color(WgcCoreDsColors.groceryBorder))
+            HorizontalDivider(color = Color(WgcCoreDsColors.blueLight4))
 
             ProfileMenuItem(
                 icon = Icons.Default.MonetizationOn,
                 title = "Extrato de Moedas Meu Supermercado",
                 onClick = { onMenuItemClick("moedas") }
             )
-            HorizontalDivider(color = Color(WgcCoreDsColors.groceryBorder))
+            HorizontalDivider(color = Color(WgcCoreDsColors.blueLight4))
 
             ProfileMenuItem(
                 icon = Icons.Default.LocationOn,
                 title = "Endereços de Entrega",
                 onClick = { onMenuItemClick("enderecos") }
             )
-            HorizontalDivider(color = Color(WgcCoreDsColors.groceryBorder))
+            HorizontalDivider(color = Color(WgcCoreDsColors.blueLight4))
 
             ProfileMenuItem(
                 icon = Icons.Default.NotificationsNone,
                 title = "Notificações & Promoções",
                 onClick = { onMenuItemClick("notificacoes") }
             )
-            HorizontalDivider(color = Color(WgcCoreDsColors.groceryBorder))
+            HorizontalDivider(color = Color(WgcCoreDsColors.blueLight4))
 
             ProfileMenuItem(
                 icon = Icons.Default.HelpOutline,
@@ -344,7 +344,7 @@ private fun ProfileMenuItem(
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.groceryBlue),
+            tint = Color(WgcCoreDsColors.blueDark32),
             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
         )
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -352,13 +352,13 @@ private fun ProfileMenuItem(
             text = title,
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.groceryTextPrimary),
+            color = Color(WgcCoreDsColors.blueDark13),
             modifier = Modifier.weight(1f)
         )
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForward,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.groceryTextSecondary),
+            tint = Color(WgcCoreDsColors.gray5),
             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
         )
     }

@@ -91,7 +91,7 @@ fun WgcPropertyClassifiedsCard(
             .fillMaxWidth()
             .clickable(onClick = onCardClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column {
@@ -100,13 +100,13 @@ fun WgcPropertyClassifiedsCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s200.dp)
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsCardPlaceholder))
+                    .background(Color(WgcCoreDsColors.blueLight1))
             ) {
                 // Ícone ilustrativo de imóvel no centro do placeholder
                 Icon(
                     imageVector = Icons.Default.Home,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.propertyClassifiedsBorder),
+                    tint = Color(WgcCoreDsColors.blueLight8),
                     modifier = Modifier
                         .size(WgcCoreDsSize.s56.dp)
                         .align(Alignment.Center)
@@ -123,7 +123,7 @@ fun WgcPropertyClassifiedsCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsOrange))
+                                .background(Color(WgcCoreDsColors.orange17))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxs4.dp
@@ -142,7 +142,7 @@ fun WgcPropertyClassifiedsCard(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsBlue))
+                                .background(Color(WgcCoreDsColors.blue17))
                                 .padding(
                                     horizontal = WgcCoreDsSpacing.xs8.dp,
                                     vertical = WgcCoreDsSpacing.xxs4.dp
@@ -171,7 +171,7 @@ fun WgcPropertyClassifiedsCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar imóvel",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.propertyClassifiedsOrange) else Color(WgcCoreDsColors.propertyClassifiedsDark),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.orange17) else Color(WgcCoreDsColors.blueDark10),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -179,9 +179,9 @@ fun WgcPropertyClassifiedsCard(
                 // Selo FipeZAP no rodapé da imagem
                 if (fipeStatus != null) {
                     val fipeBg = when (fipeStatus) {
-                        WgcZapFipeStatus.BELOW_AVERAGE -> Color(WgcCoreDsColors.propertyClassifiedsFipeGreen)
-                        WgcZapFipeStatus.ON_AVERAGE -> Color(WgcCoreDsColors.propertyClassifiedsBlue)
-                        WgcZapFipeStatus.ABOVE_AVERAGE -> Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                        WgcZapFipeStatus.BELOW_AVERAGE -> Color(WgcCoreDsColors.green4)
+                        WgcZapFipeStatus.ON_AVERAGE -> Color(WgcCoreDsColors.blue17)
+                        WgcZapFipeStatus.ABOVE_AVERAGE -> Color(WgcCoreDsColors.orange17)
                     }
                     Box(
                         modifier = Modifier
@@ -229,14 +229,14 @@ fun WgcPropertyClassifiedsCard(
                         text = price,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                        color = Color(WgcCoreDsColors.blueDark31)
                     )
                     if (pricePerSquareMeter != null) {
                         Text(
                             text = pricePerSquareMeter,
                             style = MaterialTheme.typography.bodySmall,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                 }
@@ -246,7 +246,7 @@ fun WgcPropertyClassifiedsCard(
                     Text(
                         text = condoAndIptu,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
 
@@ -257,7 +257,7 @@ fun WgcPropertyClassifiedsCard(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark),
+                    color = Color(WgcCoreDsColors.blueDark10),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -270,14 +270,14 @@ fun WgcPropertyClassifiedsCard(
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                        tint = Color(WgcCoreDsColors.blue22),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "$neighborhood • $address",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                        color = Color(WgcCoreDsColors.blue22),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -290,10 +290,10 @@ fun WgcPropertyClassifiedsCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                        .background(Color(WgcCoreDsColors.blueLight37))
                         .border(
                             width = WgcCoreDsSpacing.xxxs2.dp,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsBorder),
+                            color = Color(WgcCoreDsColors.blueLight8),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                         )
                         .padding(
@@ -309,7 +309,7 @@ fun WgcPropertyClassifiedsCard(
                             text = "${areaM2}m²",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                     }
 
@@ -318,7 +318,7 @@ fun WgcPropertyClassifiedsCard(
                         Icon(
                             imageVector = Icons.Default.Bed,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -326,7 +326,7 @@ fun WgcPropertyClassifiedsCard(
                             text = if (suites > 0) "$bedrooms ($suites suíte)" else "$bedrooms qts",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                     }
 
@@ -335,7 +335,7 @@ fun WgcPropertyClassifiedsCard(
                         Icon(
                             imageVector = Icons.Default.Bathtub,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -343,7 +343,7 @@ fun WgcPropertyClassifiedsCard(
                             text = "$bathrooms",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                     }
 
@@ -352,7 +352,7 @@ fun WgcPropertyClassifiedsCard(
                         Icon(
                             imageVector = Icons.Default.DirectionsCar,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -360,13 +360,13 @@ fun WgcPropertyClassifiedsCard(
                             text = "$parkingSpaces vagas",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                     }
                 }
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
-                HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+                HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
 
                 // Rodapé: Anunciante e Ação Rápida de Contato
@@ -379,7 +379,7 @@ fun WgcPropertyClassifiedsCard(
                         Icon(
                             imageVector = Icons.Default.Verified,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
+                            tint = Color(WgcCoreDsColors.blue17),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
@@ -387,7 +387,7 @@ fun WgcPropertyClassifiedsCard(
                             text = advertiserName,
                             style = MaterialTheme.typography.bodySmall,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
 
@@ -395,7 +395,7 @@ fun WgcPropertyClassifiedsCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.propertyClassifiedsOrange))
+                            .background(Color(WgcCoreDsColors.orange17))
                             .clickable(onClick = onContactClick)
                             .padding(
                                 horizontal = WgcCoreDsSpacing.sm12.dp,

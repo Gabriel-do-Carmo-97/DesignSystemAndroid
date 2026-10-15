@@ -77,7 +77,7 @@ fun WgcPropertyRentalCard(
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.propertyRentalSurface)
+            containerColor = Color(WgcCoreDsColors.white)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.xxxs2.dp)
     ) {
@@ -87,7 +87,7 @@ fun WgcPropertyRentalCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s180.dp)
-                    .background(Color(WgcCoreDsColors.propertyRentalCardPlaceholder))
+                    .background(Color(WgcCoreDsColors.blueLight1))
             ) {
                 if (imageSlot != null) {
                     imageSlot()
@@ -95,13 +95,13 @@ fun WgcPropertyRentalCard(
                     Box(
                         modifier = Modifier
                             .matchParentSize()
-                            .background(Color(WgcCoreDsColors.propertyRentalPrimaryLight)),
+                            .background(Color(WgcCoreDsColors.blueLight15)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.Home,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                            tint = Color(WgcCoreDsColors.blueDark26),
                             modifier = Modifier.size(WgcCoreDsSize.s48.dp)
                         )
                     }
@@ -114,7 +114,7 @@ fun WgcPropertyRentalCard(
                             .align(Alignment.TopStart)
                             .padding(WgcCoreDsSpacing.sm12.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.propertyRentalCoral))
+                            .background(Color(WgcCoreDsColors.red28))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -137,12 +137,12 @@ fun WgcPropertyRentalCard(
                         .padding(WgcCoreDsSpacing.sm12.dp)
                         .size(WgcCoreDsSize.s36.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.propertyRentalSurface).copy(alpha = 0.9f))
+                        .background(Color(WgcCoreDsColors.white).copy(alpha = 0.9f))
                 ) {
                     Icon(
                         imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                         contentDescription = "Favoritar imóvel",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.propertyRentalCoral) else Color(WgcCoreDsColors.propertyRentalDark),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.red28) else Color(WgcCoreDsColors.blueDark26),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -154,7 +154,7 @@ fun WgcPropertyRentalCard(
                             .align(Alignment.BottomStart)
                             .padding(WgcCoreDsSpacing.sm12.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.propertyRentalPrimary).copy(alpha = 0.85f))
+                            .background(Color(WgcCoreDsColors.blueDark26).copy(alpha = 0.85f))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -164,7 +164,7 @@ fun WgcPropertyRentalCard(
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.DirectionsWalk,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalYellow),
+                                tint = Color(WgcCoreDsColors.yellow6),
                                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -195,14 +195,14 @@ fun WgcPropertyRentalCard(
                         text = price,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                        color = Color(WgcCoreDsColors.blueDark26)
                     )
                     if (totalPrice != null) {
                         Text(
                             text = totalPrice,
                             style = MaterialTheme.typography.bodySmall,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                            color = Color(WgcCoreDsColors.blue21)
                         )
                     }
                 }
@@ -214,7 +214,7 @@ fun WgcPropertyRentalCard(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark),
+                    color = Color(WgcCoreDsColors.blueDark26),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -226,14 +226,14 @@ fun WgcPropertyRentalCard(
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                        tint = Color(WgcCoreDsColors.blue21),
                         modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "$neighborhood • $address",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                        color = Color(WgcCoreDsColors.blue21),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -246,10 +246,10 @@ fun WgcPropertyRentalCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.propertyRentalBackground))
+                        .background(Color(WgcCoreDsColors.blueLight34))
                         .border(
                             width = WgcCoreDsSpacing.xxxs2.dp,
-                            color = Color(WgcCoreDsColors.propertyRentalBorder),
+                            color = Color(WgcCoreDsColors.blueLight8),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                         )
                         .padding(
@@ -265,7 +265,7 @@ fun WgcPropertyRentalCard(
                             text = "${areaM2}m²",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
                     }
 
@@ -274,7 +274,7 @@ fun WgcPropertyRentalCard(
                         Icon(
                             imageVector = Icons.Default.Bed,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyRentalDark),
+                            tint = Color(WgcCoreDsColors.blueDark26),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -282,7 +282,7 @@ fun WgcPropertyRentalCard(
                             text = "$bedrooms qts",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
                     }
 
@@ -291,7 +291,7 @@ fun WgcPropertyRentalCard(
                         Icon(
                             imageVector = Icons.Default.Bathtub,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyRentalDark),
+                            tint = Color(WgcCoreDsColors.blueDark26),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -299,7 +299,7 @@ fun WgcPropertyRentalCard(
                             text = "$bathrooms ban",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
                     }
 
@@ -308,7 +308,7 @@ fun WgcPropertyRentalCard(
                         Icon(
                             imageVector = Icons.Default.DirectionsCar,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyRentalDark),
+                            tint = Color(WgcCoreDsColors.blueDark26),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -316,7 +316,7 @@ fun WgcPropertyRentalCard(
                             text = "$parkingSpots vag",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
-                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
                     }
                 }

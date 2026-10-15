@@ -104,14 +104,14 @@ fun WgcExtraCartTemplate(
                         Column {
                             Text(
                                 text = "MEU CARRINHO",
-                                color = Color(WgcCoreDsColors.hypermarketRed),
+                                color = Color(WgcCoreDsColors.red12),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Itens Selecionados",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -119,7 +119,7 @@ fun WgcExtraCartTemplate(
 
                         Text(
                             text = "${cartItems.sumOf { it.quantity }} itens",
-                            color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                            color = Color(WgcCoreDsColors.blue27),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -132,10 +132,10 @@ fun WgcExtraCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketYellowLight)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.yellowLight5)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketYellow)
+                        color = Color(WgcCoreDsColors.yellow5)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
@@ -149,20 +149,20 @@ fun WgcExtraCartTemplate(
                         Column {
                             Text(
                                 text = "ECONOMIA CLUBE EXTRA",
-                                color = Color(WgcCoreDsColors.hypermarketRed),
+                                color = Color(WgcCoreDsColors.red12),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 0.5.sp
                             )
                             Text(
                                 text = "Você está economizando $totalSavings",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Descontos aplicados automaticamente pelo seu CPF",
-                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                color = Color(WgcCoreDsColors.blue27),
                                 fontSize = 11.sp
                             )
                         }
@@ -175,10 +175,10 @@ fun WgcExtraCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     )
                 ) {
                     Row(
@@ -191,19 +191,19 @@ fun WgcExtraCartTemplate(
                         Icon(
                             imageVector = Icons.Default.SwapHoriz,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.hypermarketBlue),
+                            tint = Color(WgcCoreDsColors.blueDark34),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                         Column {
                             Text(
                                 text = "Substituição Inteligente de Faltas",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Caso algum item falte na gôndola, substituiremos por similar da mesma qualidade ou superior.",
-                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                color = Color(WgcCoreDsColors.blue27),
                                 fontSize = 11.sp,
                                 lineHeight = 15.sp
                             )
@@ -217,10 +217,10 @@ fun WgcExtraCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     )
                 ) {
                     Row(
@@ -233,13 +233,13 @@ fun WgcExtraCartTemplate(
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = cartItem.product.name,
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "${cartItem.product.unitDescription} • ${cartItem.product.clubPrice}",
-                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                color = Color(WgcCoreDsColors.blue27),
                                 fontSize = 11.sp
                             )
                         }
@@ -256,14 +256,14 @@ fun WgcExtraCartTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Remove,
                                     contentDescription = "Diminuir",
-                                    tint = Color(WgcCoreDsColors.hypermarketRed),
+                                    tint = Color(WgcCoreDsColors.red12),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                             }
 
                             Text(
                                 text = "${cartItem.quantity}",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -275,7 +275,7 @@ fun WgcExtraCartTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Add,
                                     contentDescription = "Aumentar",
-                                    tint = Color(WgcCoreDsColors.hypermarketRed),
+                                    tint = Color(WgcCoreDsColors.red12),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                             }
@@ -289,10 +289,10 @@ fun WgcExtraCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     )
                 ) {
                     Column(
@@ -307,12 +307,12 @@ fun WgcExtraCartTemplate(
                         ) {
                             Text(
                                 text = "Entrega Expressa",
-                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                color = Color(WgcCoreDsColors.blue27),
                                 fontSize = 12.sp
                             )
                             Text(
                                 text = deliveryFee,
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -324,13 +324,13 @@ fun WgcExtraCartTemplate(
                         ) {
                             Text(
                                 text = "Descontos Clube Extra",
-                                color = Color(WgcCoreDsColors.hypermarketSuccessGreen),
+                                color = Color(WgcCoreDsColors.green4),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "- $totalSavings",
-                                color = Color(WgcCoreDsColors.hypermarketSuccessGreen),
+                                color = Color(WgcCoreDsColors.green4),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -340,7 +340,7 @@ fun WgcExtraCartTemplate(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(WgcCoreDsSize.s1.dp)
-                                .background(Color(WgcCoreDsColors.hypermarketBorder))
+                                .background(Color(WgcCoreDsColors.blueLight6))
                         )
 
                         Row(
@@ -350,13 +350,13 @@ fun WgcExtraCartTemplate(
                         ) {
                             Text(
                                 text = "TOTAL A PAGAR",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = totalAmount,
-                                color = Color(WgcCoreDsColors.hypermarketRed),
+                                color = Color(WgcCoreDsColors.red12),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -370,7 +370,7 @@ fun WgcExtraCartTemplate(
                                 .height(WgcCoreDsSize.s48.dp),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.hypermarketRed),
+                                containerColor = Color(WgcCoreDsColors.red12),
                                 contentColor = Color.White
                             )
                         ) {

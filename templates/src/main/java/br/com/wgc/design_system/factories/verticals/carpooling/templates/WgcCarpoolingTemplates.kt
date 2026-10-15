@@ -23,7 +23,7 @@ fun WgcCarpoolingSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.carpoolingBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue26)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Caronas Compartilhadas", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcCarpoolingSearchTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text("${ride.origin} ➔ ${ride.destination}", fontWeight = FontWeight.Bold)
                         Text("Condutor: ${ride.driver} • Partida: ${ride.departureTime}", color = Color.Gray, fontSize = 14.sp)
-                        Text("R$ ${"%,.2f".format(ride.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.carpoolingBlue))
+                        Text("R$ ${"%,.2f".format(ride.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.blue26))
                     }
                 }
             }

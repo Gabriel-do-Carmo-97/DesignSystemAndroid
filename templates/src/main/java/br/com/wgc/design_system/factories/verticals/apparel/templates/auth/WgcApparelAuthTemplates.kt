@@ -90,7 +90,7 @@ fun WgcClotheeSignInTemplate(
                     text = "Sign in",
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
             }
 
@@ -104,14 +104,14 @@ fun WgcClotheeSignInTemplate(
                 placeholder = {
                     Text(
                         text = "Email Address",
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                 },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                    focusedBorderColor = Color(WgcCoreDsColors.apparelPrimary),
+                    focusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                    focusedBorderColor = Color(WgcCoreDsColors.purple7),
                     unfocusedBorderColor = Color.Transparent
                 ),
                 singleLine = true
@@ -127,7 +127,7 @@ fun WgcClotheeSignInTemplate(
                     .height(52.dp),
                 shape = RoundedCornerShape(100.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                    containerColor = Color(WgcCoreDsColors.purple7)
                 )
             ) {
                 Text(
@@ -148,13 +148,13 @@ fun WgcClotheeSignInTemplate(
                 Text(
                     text = "Dont have an Account? ",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
                 Text(
                     text = "Create One",
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark),
+                    color = Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.clickable(onClick = onCreateAccountClick)
                 )
             }
@@ -193,7 +193,7 @@ fun WgcClotheeSignInTemplate(
                     Text(
                         text = "Forgot Password?",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                 }
             }
@@ -216,7 +216,7 @@ private fun ClotheeSocialButton(
             .height(52.dp),
         shape = RoundedCornerShape(100.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color(WgcCoreDsColors.apparelSurface))
+            containerColor = Color(WgcCoreDsColors.grayLight8))
     ) {
         Text(
             text = text,
@@ -254,12 +254,12 @@ fun WgcClotheeForgotPasswordTemplate(
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.apparelSurface))
+                    .background(Color(WgcCoreDsColors.grayLight8))
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.apparelDark)
+                    tint = Color(WgcCoreDsColors.grayDark18)
                 )
             }
 
@@ -269,7 +269,7 @@ fun WgcClotheeForgotPasswordTemplate(
                 text = "Forgot Password",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl32.dp))
@@ -281,14 +281,14 @@ fun WgcClotheeForgotPasswordTemplate(
                 placeholder = {
                     Text(
                         text = "Enter Email Address",
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                 },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                    focusedBorderColor = Color(WgcCoreDsColors.apparelPrimary),
+                    focusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                    focusedBorderColor = Color(WgcCoreDsColors.purple7),
                     unfocusedBorderColor = Color.Transparent
                 ),
                 singleLine = true
@@ -303,7 +303,7 @@ fun WgcClotheeForgotPasswordTemplate(
                     .height(52.dp),
                 shape = RoundedCornerShape(100.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                    containerColor = Color(WgcCoreDsColors.purple7)
                 )
             ) {
                 Text(
@@ -341,13 +341,13 @@ fun WgcClotheeResetPasswordSentTemplate(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.apparelPrimaryLight)),
+                    .background(Color(WgcCoreDsColors.purpleLight2)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.MarkEmailRead,
                     contentDescription = "Email enviado",
-                    tint = Color(WgcCoreDsColors.apparelPrimary),
+                    tint = Color(WgcCoreDsColors.purple7),
                     modifier = Modifier.size(48.dp)
                 )
             }
@@ -358,7 +358,7 @@ fun WgcClotheeResetPasswordSentTemplate(
                 text = "We Sent you an Email to reset your password.",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark),
+                color = Color(WgcCoreDsColors.grayDark18),
                 textAlign = TextAlign.Center
             )
 
@@ -371,7 +371,7 @@ fun WgcClotheeResetPasswordSentTemplate(
                     .height(52.dp),
                 shape = RoundedCornerShape(100.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                    containerColor = Color(WgcCoreDsColors.purple7)
                 )
             ) {
                 Text(

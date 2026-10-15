@@ -78,7 +78,7 @@ fun WgcFashionItemCard(
                         text = "R$ " + String.format("%.2f", price),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.departmentFashionRed)
+                        color = Color(WgcCoreDsColors.red8)
                     )
                     Text(
                         text = installments,

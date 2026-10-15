@@ -51,7 +51,7 @@ fun WgcExtraBottomNav(
     NavigationBar(
         modifier = modifier.border(
             width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.hypermarketBorder)
+            color = Color(WgcCoreDsColors.blueLight6)
         )) {
         WgcExtraNavItem.entries.forEach { item ->
             val isSelected = item == selectedItem
@@ -73,11 +73,11 @@ fun WgcExtraBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.hypermarketRed),
-                    selectedTextColor = Color(WgcCoreDsColors.hypermarketRed),
-                    indicatorColor = Color(WgcCoreDsColors.hypermarketRedLight),
-                    unselectedIconColor = Color(WgcCoreDsColors.hypermarketSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.hypermarketSecondaryText)
+                    selectedIconColor = Color(WgcCoreDsColors.red12),
+                    selectedTextColor = Color(WgcCoreDsColors.red12),
+                    indicatorColor = Color(WgcCoreDsColors.redLight4),
+                    unselectedIconColor = Color(WgcCoreDsColors.blue27),
+                    unselectedTextColor = Color(WgcCoreDsColors.blue27)
                 )
             )
         }

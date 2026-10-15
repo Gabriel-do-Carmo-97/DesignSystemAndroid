@@ -63,7 +63,7 @@ fun WgcDentalHomeTemplate(
     onViewXRayClick: () -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -71,7 +71,7 @@ fun WgcDentalHomeTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.dentalTeal))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.cyan5))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Row(
@@ -131,10 +131,10 @@ fun WgcDentalHomeTemplate(
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Box(
-                                modifier = Modifier.size(WgcCoreDsSize.s40.dp).clip(CircleShape).background(Color(WgcCoreDsColors.dentalTealLight)),
+                                modifier = Modifier.size(WgcCoreDsSize.s40.dp).clip(CircleShape).background(Color(WgcCoreDsColors.cyanLight3)),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Icon(Icons.Default.HealthAndSafety, contentDescription = null, tint = Color(WgcCoreDsColors.dentalTeal))
+                                Icon(Icons.Default.HealthAndSafety, contentDescription = null, tint = Color(WgcCoreDsColors.cyan5))
                             }
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                             Column {
@@ -144,7 +144,7 @@ fun WgcDentalHomeTemplate(
                         }
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                         Text(text = "📍 ${upcomingAppointment.clinicAddress}", fontSize = 13.sp)
-                        Text(text = "🗓️ ${upcomingAppointment.date} às ${upcomingAppointment.time}", fontWeight = FontWeight.SemiBold, fontSize = 13.sp, color = Color(WgcCoreDsColors.dentalDark))
+                        Text(text = "🗓️ ${upcomingAppointment.date} às ${upcomingAppointment.time}", fontWeight = FontWeight.SemiBold, fontSize = 13.sp, color = Color(WgcCoreDsColors.cyanDark4))
                     }
                 }
             }
@@ -168,7 +168,7 @@ private fun QuickActionCard(
             modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(icon, contentDescription = null, tint = Color(WgcCoreDsColors.dentalTeal), modifier = Modifier.size(WgcCoreDsSize.s28.dp))
+            Icon(icon, contentDescription = null, tint = Color(WgcCoreDsColors.cyan5), modifier = Modifier.size(WgcCoreDsSize.s28.dp))
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
             Text(text = title, fontSize = 12.sp, fontWeight = FontWeight.Medium)
         }
@@ -182,8 +182,8 @@ fun WgcDentalOdontogramTemplate(
 ) {
     var selectedTooth by remember { mutableStateOf<ToothCondition?>(teeth.firstOrNull()) }
 
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
-        Text(text = "🦷 Odontograma Clínico Interativo", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.dentalDark))
+    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+        Text(text = "🦷 Odontograma Clínico Interativo", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.cyanDark4))
         Text(text = "Selecione um dente para inspecionar procedimentos e histórico", fontSize = 13.sp, color = Color.Gray)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
 
@@ -204,16 +204,16 @@ fun WgcDentalOdontogramTemplate(
                 ) {
                     items(teeth) { tooth ->
                         val statusColor = when (tooth.status) {
-                            ToothStatus.HEALTHY -> Color(WgcCoreDsColors.transitDigitalGreen)
+                            ToothStatus.HEALTHY -> Color(WgcCoreDsColors.green1)
                             ToothStatus.CAVITY -> Color(WgcCoreDsColors.red500)
                             ToothStatus.RESTORATION -> Color(WgcCoreDsColors.blue500)
-                            ToothStatus.TREATED -> Color(WgcCoreDsColors.designerFurnitureYellow)
+                            ToothStatus.TREATED -> Color(WgcCoreDsColors.yellow4)
                             ToothStatus.EXTRACTION_RECOMMENDED -> Color.DarkGray
                         }
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(if (selectedTooth == tooth) Color(WgcCoreDsColors.dentalTealLight) else Color(WgcCoreDsColors.grey100))
+                                .background(if (selectedTooth == tooth) Color(WgcCoreDsColors.cyanLight3) else Color(WgcCoreDsColors.gray100))
                                 .clickable {
                                     selectedTooth = tooth
                                     onToothClick(tooth)
@@ -244,7 +244,7 @@ fun WgcDentalOdontogramTemplate(
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Text(text = "Dente ${tooth.toothNumber} - ${tooth.name}", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-                    Text(text = "Status Atual: ${tooth.status.name}", fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.dentalTeal))
+                    Text(text = "Status Atual: ${tooth.status.name}", fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.cyan5))
                     Text(text = "Observações: ${tooth.notes}", fontSize = 13.sp, color = Color.DarkGray)
                 }
             }
@@ -258,7 +258,7 @@ fun WgcDentalXRayTemplate(
     onViewDetail: (DentalXRayRecord) -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -303,7 +303,7 @@ fun WgcDentalAppointmentTemplate(
     onNewSchedule: () -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -324,7 +324,7 @@ fun WgcDentalAppointmentTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text(text = app.specialty, color = Color(WgcCoreDsColors.dentalTeal), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    Text(text = app.specialty, color = Color(WgcCoreDsColors.cyan5), fontWeight = FontWeight.Bold, fontSize = 13.sp)
                     Text(text = app.dentistName, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(text = app.clinicAddress, fontSize = 13.sp, color = Color.Gray)
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -347,7 +347,7 @@ fun WgcDentalAppointmentTemplate(
 fun WgcDentalProfileTemplate(
     user: DentalPlanUser = DentalMockData.defaultUser
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
         Text(text = "Meu Plano Odontológico", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
 
@@ -360,8 +360,8 @@ fun WgcDentalProfileTemplate(
                 Text(text = "Beneficiário: ${user.name}", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 Text(text = "Plano: ${user.planName}", fontSize = 14.sp)
                 Text(text = "Matrícula: ${user.cardId}", fontSize = 14.sp)
-                Text(text = "Coberturas: ${user.coverageLevel}", fontSize = 14.sp, color = Color(WgcCoreDsColors.dentalDark))
-                Text(text = "Status: ${user.gracePeriodStatus}", fontSize = 13.sp, color = Color(WgcCoreDsColors.transitDigitalGreen))
+                Text(text = "Coberturas: ${user.coverageLevel}", fontSize = 14.sp, color = Color(WgcCoreDsColors.cyanDark4))
+                Text(text = "Status: ${user.gracePeriodStatus}", fontSize = 13.sp, color = Color(WgcCoreDsColors.green1))
             }
         }
     }

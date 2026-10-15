@@ -71,10 +71,10 @@ fun WgcPropertyClassifiedsSearchBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                .background(Color(WgcCoreDsColors.white))
                 .border(
                     width = WgcCoreDsSpacing.xxxs2.dp,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsBorder),
+                    color = Color(WgcCoreDsColors.blueLight8),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp)
                 )
                 .padding(
@@ -86,7 +86,7 @@ fun WgcPropertyClassifiedsSearchBar(
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Buscar imóveis",
-                tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                tint = Color(WgcCoreDsColors.blueDark31),
                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
             )
 
@@ -97,18 +97,18 @@ fun WgcPropertyClassifiedsSearchBar(
                 onValueChange = onQueryChange,
                 modifier = Modifier.weight(1f),
                 textStyle = TextStyle(
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark),
+                    color = Color(WgcCoreDsColors.blueDark10),
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     fontWeight = FontWeight.Medium
                 ),
-                cursorBrush = SolidColor(Color(WgcCoreDsColors.propertyClassifiedsPrimary)),
+                cursorBrush = SolidColor(Color(WgcCoreDsColors.blueDark31)),
                 singleLine = true,
                 decorationBox = { innerTextField ->
                     if (query.isEmpty()) {
                         Text(
                             text = placeholderText,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                     innerTextField()
@@ -123,7 +123,7 @@ fun WgcPropertyClassifiedsSearchBar(
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Limpar busca",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                        tint = Color(WgcCoreDsColors.blue22),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                 }
@@ -134,7 +134,7 @@ fun WgcPropertyClassifiedsSearchBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsPrimaryLight))
+                    .background(Color(WgcCoreDsColors.blueLight12))
                     .clickable(onClick = onFilterClick)
                     .padding(WgcCoreDsSpacing.xs8.dp)
             ) {
@@ -142,7 +142,7 @@ fun WgcPropertyClassifiedsSearchBar(
                     Icon(
                         imageVector = Icons.Default.Tune,
                         contentDescription = "Abrir filtros",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                        tint = Color(WgcCoreDsColors.blueDark31),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
 
@@ -152,7 +152,7 @@ fun WgcPropertyClassifiedsSearchBar(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s18.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsOrange)),
+                                .background(Color(WgcCoreDsColors.orange17)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -178,14 +178,14 @@ fun WgcPropertyClassifiedsSearchBar(
             Icon(
                 imageVector = Icons.Default.NearMe,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
+                tint = Color(WgcCoreDsColors.blue17),
                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
             )
             Text(
                 text = "Raio:",
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                color = Color(WgcCoreDsColors.blue22)
             )
 
             WgcZapSearchRadius.entries.forEach { radius ->
@@ -195,17 +195,17 @@ fun WgcPropertyClassifiedsSearchBar(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                         .background(
                             if (isSelected) {
-                                Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                Color(WgcCoreDsColors.blueDark31)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsBackground)
+                                Color(WgcCoreDsColors.blueLight37)
                             }
                         )
                         .border(
                             width = WgcCoreDsSpacing.xxxs2.dp,
                             color = if (isSelected) {
-                                Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                Color(WgcCoreDsColors.blueDark31)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsBorder)
+                                Color(WgcCoreDsColors.blueLight8)
                             },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         )
@@ -219,7 +219,7 @@ fun WgcPropertyClassifiedsSearchBar(
                         text = radius.label,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                        color = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = if (isSelected) Color.White else Color(WgcCoreDsColors.blue22)
                     )
                 }
             }

@@ -47,9 +47,9 @@ fun WgcMegaStoreStoryAvatar(
         colors = if (isLive) {
             listOf(Color(WgcCoreDsColors.red500), Color(WgcCoreDsColors.orange500))
         } else if (hasUnseenStory) {
-            listOf(Color(WgcCoreDsColors.megaStorePrimary), Color(WgcCoreDsColors.megaStorePrimaryLight))
+            listOf(Color(WgcCoreDsColors.blue28), Color(WgcCoreDsColors.blueLight16))
         } else {
-            listOf(Color(WgcCoreDsColors.megaStoreBorder), Color(WgcCoreDsColors.megaStoreBorder))
+            listOf(Color(WgcCoreDsColors.grayLight1), Color(WgcCoreDsColors.grayLight1))
         }
     )
 
@@ -65,7 +65,7 @@ fun WgcMegaStoreStoryAvatar(
                     .border(2.5.dp, gradientBrush, CircleShape)
                     .padding(3.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.megaStoreBackground)),
+                    .background(Color(WgcCoreDsColors.gray100)),
                 contentAlignment = Alignment.Center
             ) {
                 AsyncImage(
@@ -99,7 +99,7 @@ fun WgcMegaStoreStoryAvatar(
         Text(
             text = name,
             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium),
-            color = Color(WgcCoreDsColors.megaStoreDark),
+            color = Color(WgcCoreDsColors.grayDark14),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontSize = 11.sp

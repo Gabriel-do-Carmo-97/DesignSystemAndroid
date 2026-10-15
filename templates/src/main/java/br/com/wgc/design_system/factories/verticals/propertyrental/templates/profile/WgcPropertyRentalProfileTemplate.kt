@@ -111,7 +111,7 @@ fun WgcPropertyRentalProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -123,14 +123,14 @@ fun WgcPropertyRentalProfileTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s60.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.propertyRentalPrimary)),
+                                    .background(Color(WgcCoreDsColors.blueDark26)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
                                     text = userName.take(1),
                                     style = MaterialTheme.typography.titleLarge,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyRentalYellow)
+                                    color = Color(WgcCoreDsColors.yellow6)
                                 )
                             }
 
@@ -141,12 +141,12 @@ fun WgcPropertyRentalProfileTemplate(
                                     text = userName,
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                                    color = Color(WgcCoreDsColors.blueDark26)
                                 )
                                 Text(
                                     text = userEmail,
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                                    color = Color(WgcCoreDsColors.blue21)
                                 )
                             }
                         }
@@ -156,7 +156,7 @@ fun WgcPropertyRentalProfileTemplate(
                             Row(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.propertyRentalGreenLight))
+                                    .background(Color(WgcCoreDsColors.greenLight10))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.sm12.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -166,7 +166,7 @@ fun WgcPropertyRentalProfileTemplate(
                                 Icon(
                                     imageVector = Icons.Default.VerifiedUser,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyRentalGreen),
+                                    tint = Color(WgcCoreDsColors.green4),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -174,7 +174,7 @@ fun WgcPropertyRentalProfileTemplate(
                                     text = "Crédito Pré-aprovado • Aluguel sem fiador",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyRentalGreen)
+                                    color = Color(WgcCoreDsColors.green4)
                                 )
                             }
                         }
@@ -217,7 +217,7 @@ fun WgcPropertyRentalProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         ProfileMenuItem(
@@ -226,21 +226,21 @@ fun WgcPropertyRentalProfileTemplate(
                             subtitle = "Comprovantes enviados para análise rápida",
                             onClick = onDocumentsClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyRentalBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileMenuItem(
                             icon = Icons.Default.NotificationsNone,
                             title = "Alertas de Imóveis",
                             subtitle = "Receba novidades nos seus bairros favoritos",
                             onClick = onAlertsClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyRentalBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileMenuItem(
                             icon = Icons.Default.Info,
                             title = "Central de Ajuda",
                             subtitle = "Perguntas frequentes e suporte via chat",
                             onClick = onHelpClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyRentalBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         ProfileMenuItem(
                             icon = Icons.Default.Info,
                             title = "Sobre o Property Rental",
@@ -258,7 +258,7 @@ fun WgcPropertyRentalProfileTemplate(
 private fun ProfileTopBar() {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Column(
@@ -273,7 +273,7 @@ private fun ProfileTopBar() {
                 text = "Meu Perfil",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
         }
     }
@@ -290,7 +290,7 @@ private fun ProfileShortcutCard(
     Card(
         modifier = modifier.clickable(onClick = onClick),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
     ) {
         Column(
             modifier = Modifier
@@ -300,7 +300,7 @@ private fun ProfileShortcutCard(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                tint = Color(WgcCoreDsColors.blueDark26),
                 modifier = Modifier.size(WgcCoreDsSize.s22.dp)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -308,12 +308,12 @@ private fun ProfileShortcutCard(
                 text = title,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                color = Color(WgcCoreDsColors.blue21)
             )
         }
     }
@@ -336,7 +336,7 @@ private fun ProfileMenuItem(
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+            tint = Color(WgcCoreDsColors.blueDark26),
             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
         )
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -345,18 +345,18 @@ private fun ProfileMenuItem(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                color = Color(WgcCoreDsColors.blue21)
             )
         }
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+            tint = Color(WgcCoreDsColors.blue21),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }

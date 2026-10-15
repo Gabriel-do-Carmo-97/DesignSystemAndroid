@@ -55,15 +55,15 @@ fun WgcPersonalFinanceTransactionItem(
     amount: String = "R$ 248,90",
     type: WgcOrganizzeTransactionType = WgcOrganizzeTransactionType.Expense,
     categoryIcon: ImageVector = Icons.Default.Restaurant,
-    categoryColor: Color = Color(WgcCoreDsColors.quickShopPrimary),
+    categoryColor: Color = Color(WgcCoreDsColors.orange37),
     isPaid: Boolean = true,
     onTogglePaid: () -> Unit = {},
     onClick: () -> Unit = {}
 ) {
     val amountColor = when (type) {
-        WgcOrganizzeTransactionType.Expense -> Color(WgcCoreDsColors.personalFinanceExpenseRed)
-        WgcOrganizzeTransactionType.Income -> Color(WgcCoreDsColors.personalFinanceIncomeGreen)
-        WgcOrganizzeTransactionType.Transfer -> Color(WgcCoreDsColors.personalFinanceTransferBlue)
+        WgcOrganizzeTransactionType.Expense -> Color(WgcCoreDsColors.red23)
+        WgcOrganizzeTransactionType.Income -> Color(WgcCoreDsColors.green26)
+        WgcOrganizzeTransactionType.Transfer -> Color(WgcCoreDsColors.blue36)
     }
 
     val amountPrefix = when (type) {
@@ -117,12 +117,12 @@ fun WgcPersonalFinanceTransactionItem(
                         text = title,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.personalFinanceDark)
+                        color = Color(WgcCoreDsColors.blueDark33)
                     )
                     Text(
                         text = "$category • $account",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                 }
             }
@@ -145,7 +145,7 @@ fun WgcPersonalFinanceTransactionItem(
                     Icon(
                         imageVector = if (isPaid) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
                         contentDescription = if (isPaid) "Pago" else "Pendente",
-                        tint = if (isPaid) Color(WgcCoreDsColors.personalFinanceIncomeGreen) else Color(WgcCoreDsColors.personalFinanceBorder),
+                        tint = if (isPaid) Color(WgcCoreDsColors.green26) else Color(WgcCoreDsColors.blueLight7),
                         modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
                     )
                 }

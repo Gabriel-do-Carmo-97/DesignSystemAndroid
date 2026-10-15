@@ -115,7 +115,7 @@ fun WgcGymFitnessHomeTemplate(
                             ) {
                                 Text(
                                     text = "GYM FITNESS",
-                                    color = Color(WgcCoreDsColors.gymYellow),
+                                    color = Color(WgcCoreDsColors.orange23),
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 1.sp
@@ -123,12 +123,12 @@ fun WgcGymFitnessHomeTemplate(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs2.dp))
-                                        .background(Color(WgcCoreDsColors.gymYellow))
+                                        .background(Color(WgcCoreDsColors.orange23))
                                         .padding(horizontal = WgcCoreDsSpacing.xxs4.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                                 ) {
                                     Text(
                                         text = "BLACK",
-                                        color = Color(WgcCoreDsColors.gymTextInverse),
+                                        color = Color(WgcCoreDsColors.black),
                                         fontSize = 9.sp,
                                         fontWeight = FontWeight.Black
                                     )
@@ -136,7 +136,7 @@ fun WgcGymFitnessHomeTemplate(
                             }
                             Text(
                                 text = "Olá, ${user.name.split(" ").firstOrNull() ?: "Aluno"}!",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -146,7 +146,7 @@ fun WgcGymFitnessHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.Notifications,
                                 contentDescription = "Notificações",
-                                tint = Color(WgcCoreDsColors.gymTextPrimary),
+                                tint = Color(WgcCoreDsColors.white),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -162,7 +162,7 @@ fun WgcGymFitnessHomeTemplate(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                         .clickable { onOpenQrPass() },
                     colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.gymYellow)
+                        containerColor = Color(WgcCoreDsColors.orange23)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
                 ) {
@@ -188,20 +188,20 @@ fun WgcGymFitnessHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.QrCode,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.gymYellow),
+                                    tint = Color(WgcCoreDsColors.orange23),
                                     modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                                 )
                             }
                             Column {
                                 Text(
                                     text = "LIBERAR CATRACA",
-                                    color = Color(WgcCoreDsColors.gymTextInverse),
+                                    color = Color(WgcCoreDsColors.black),
                                     fontSize = 15.sp,
                                     fontWeight = FontWeight.Black
                                 )
                                 Text(
                                     text = "Toque para abrir seu QR Code de acesso",
-                                    color = Color(WgcCoreDsColors.gymTextInverse).copy(alpha = 0.8f),
+                                    color = Color(WgcCoreDsColors.black).copy(alpha = 0.8f),
                                     fontSize = 12.sp
                                 )
                             }
@@ -210,7 +210,7 @@ fun WgcGymFitnessHomeTemplate(
                         Icon(
                             imageVector = Icons.Default.ChevronRight,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymTextInverse),
+                            tint = Color(WgcCoreDsColors.black),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                     }
@@ -225,7 +225,7 @@ fun WgcGymFitnessHomeTemplate(
                     Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                         Text(
                             text = "MINHA UNIDADE",
-                            color = Color(WgcCoreDsColors.gymTextSecondary),
+                            color = Color(WgcCoreDsColors.gray16),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             letterSpacing = 1.sp
@@ -256,14 +256,14 @@ fun WgcGymFitnessHomeTemplate(
                         ) {
                             Text(
                                 text = "SEU TREINO DE HOJE",
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Ver ficha completa",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier.clickable { onOpenWorkouts() }
@@ -276,9 +276,9 @@ fun WgcGymFitnessHomeTemplate(
                                 .clickable { onOpenWorkouts() },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
                             colors = CardDefaults.cardColors(
-                                containerColor = Color(WgcCoreDsColors.gymDarkGray)
+                                containerColor = Color(WgcCoreDsColors.grayDark7)
                             ),
-                            border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray)),
+                            border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21)),
                             elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                         ) {
                             Column(
@@ -300,12 +300,12 @@ fun WgcGymFitnessHomeTemplate(
                                             modifier = Modifier
                                                 .size(WgcCoreDsSize.s32.dp)
                                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                                .background(Color(WgcCoreDsColors.gymYellow)),
+                                                .background(Color(WgcCoreDsColors.orange23)),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Text(
                                                 text = todayRoutine.letter,
-                                                color = Color(WgcCoreDsColors.gymTextInverse),
+                                                color = Color(WgcCoreDsColors.black),
                                                 fontWeight = FontWeight.Black,
                                                 fontSize = 16.sp
                                             )
@@ -313,13 +313,13 @@ fun WgcGymFitnessHomeTemplate(
                                         Column {
                                             Text(
                                                 text = todayRoutine.title,
-                                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                                color = Color(WgcCoreDsColors.white),
                                                 fontSize = 15.sp,
                                                 fontWeight = FontWeight.Bold
                                             )
                                             Text(
                                                 text = todayRoutine.focus,
-                                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                                color = Color(WgcCoreDsColors.gray16),
                                                 fontSize = 12.sp
                                             )
                                         }
@@ -334,12 +334,12 @@ fun WgcGymFitnessHomeTemplate(
                                     ) {
                                         Text(
                                             text = "Progresso de execução",
-                                            color = Color(WgcCoreDsColors.gymTextSecondary),
+                                            color = Color(WgcCoreDsColors.gray16),
                                             fontSize = 11.sp
                                         )
                                         Text(
                                             text = "${todayRoutine.completedCount} de ${todayRoutine.totalCount} exercícios",
-                                            color = Color(WgcCoreDsColors.gymYellow),
+                                            color = Color(WgcCoreDsColors.orange23),
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Bold
                                         )
@@ -351,8 +351,8 @@ fun WgcGymFitnessHomeTemplate(
                                             .fillMaxWidth()
                                             .height(WgcCoreDsSize.s8.dp)
                                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                                        color = Color(WgcCoreDsColors.gymYellow),
-                                        trackColor = Color(WgcCoreDsColors.gymMediumGray)
+                                        color = Color(WgcCoreDsColors.orange23),
+                                        trackColor = Color(WgcCoreDsColors.grayDark21)
                                     )
                                 }
                             }
@@ -374,8 +374,8 @@ fun WgcGymFitnessHomeTemplate(
                             .weight(1f)
                             .clickable { onOpenClasses() },
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                     ) {
                         Column(
                             modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp),
@@ -384,18 +384,18 @@ fun WgcGymFitnessHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.FitnessCenter,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.gymYellow),
+                                tint = Color(WgcCoreDsColors.orange23),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Text(
                                 text = "Grade de Aulas",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Reserve sua vaga",
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 11.sp
                             )
                         }
@@ -406,8 +406,8 @@ fun WgcGymFitnessHomeTemplate(
                             .weight(1f)
                             .clickable { onOpenGoVideos() },
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                     ) {
                         Column(
                             modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp),
@@ -416,18 +416,18 @@ fun WgcGymFitnessHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.PlayCircle,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.gymYellow),
+                                tint = Color(WgcCoreDsColors.orange23),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Text(
                                 text = "Gym & Fitness GO",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Treine em casa",
-                                color = Color(WgcCoreDsColors.gymTextSecondary),
+                                color = Color(WgcCoreDsColors.gray16),
                                 fontSize = 11.sp
                             )
                         }

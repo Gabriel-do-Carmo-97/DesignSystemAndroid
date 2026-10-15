@@ -21,7 +21,7 @@ data class WgcCircularCategoryItem(
     val id: String,
     val name: String,
     val initials: String,
-    val backgroundColor: Color = Color(WgcCoreDsColors.grey100)
+    val backgroundColor: Color = Color(WgcCoreDsColors.gray100)
 )
 
 /**
@@ -31,11 +31,11 @@ data class WgcCircularCategoryItem(
 fun WgcCircularCategoryRow(
     modifier: Modifier = Modifier,
     categories: List<WgcCircularCategoryItem> = listOf(
-        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(WgcCoreDsColors.carePharmacyRedLight)),
-        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
-        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
-        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.quickShopCardOrange)),
-        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.quickShopCardPurple))
+        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(WgcCoreDsColors.redLight3)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.blueLight18)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.greenLight9)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.orangeLight4)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.pinkLight1))
     ),
     onCategoryClick: (WgcCircularCategoryItem) -> Unit = {}
 ) {

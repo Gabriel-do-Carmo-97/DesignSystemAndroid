@@ -1,11 +1,5 @@
 package br.com.wgc.design_system.core
 
-import br.com.wgc.design_system.core.colors.brands.WgcBrandEcommerce
-import br.com.wgc.design_system.core.colors.brands.WgcBrandFashion
-import br.com.wgc.design_system.core.colors.brands.WgcBrandFinance
-import br.com.wgc.design_system.core.colors.brands.WgcBrandFoodDelivery
-import br.com.wgc.design_system.core.colors.brands.WgcBrandFitness
-
 /**
  * Identificador de marcas corporativas suportadas pelo ecossistema WGC.
  */
@@ -39,13 +33,13 @@ data class WgcBrandTheme(
          */
         fun default(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.DEFAULT,
-            primaryColor = WgcCoreDsColorsFacade.primary,
-            secondaryColor = WgcCoreDsColorsFacade.secondary,
-            backgroundColor = WgcCoreDsColorsFacade.background,
-            surfaceColor = 0xFFFFFFFF.toInt(),
-            onPrimaryColor = 0xFFFFFFFF.toInt(),
-            onSurfaceColor = 0xFF1C1B1F.toInt(),
-            errorColor = 0xFFBA1A1A.toInt()
+            primaryColor = WgcCoreDsColorsFacade.orange500,
+            secondaryColor = WgcCoreDsColorsFacade.white,
+            backgroundColor = WgcCoreDsColorsFacade.gray50,
+            surfaceColor = WgcCoreDsColors.white,
+            onPrimaryColor = WgcCoreDsColors.white,
+            onSurfaceColor = WgcCoreDsColors.grayDark10,
+            errorColor = WgcCoreDsColors.red6
         )
 
         /**
@@ -53,13 +47,13 @@ data class WgcBrandTheme(
          */
         fun finance(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.FINANCE,
-            primaryColor = WgcBrandFinance.personalFinancePrimary,
-            secondaryColor = WgcBrandFinance.personalFinanceSecondary,
-            backgroundColor = WgcBrandFinance.personalFinanceBackground,
-            surfaceColor = WgcBrandFinance.personalFinanceSurface,
-            onPrimaryColor = 0xFFFFFFFF.toInt(),
-            onSurfaceColor = WgcBrandFinance.personalFinanceDark,
-            errorColor = WgcBrandFinance.personalFinanceExpenseRed
+            primaryColor = WgcCoreDsColors.cyan3,
+            secondaryColor = WgcCoreDsColors.cyan8,
+            backgroundColor = WgcCoreDsColors.blueLight27,
+            surfaceColor = WgcCoreDsColors.white,
+            onPrimaryColor = WgcCoreDsColors.white,
+            onSurfaceColor = WgcCoreDsColors.blueDark33,
+            errorColor = WgcCoreDsColors.red23
         )
 
         /**
@@ -67,13 +61,13 @@ data class WgcBrandTheme(
          */
         fun foodDelivery(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.FOOD_DELIVERY,
-            primaryColor = WgcBrandFoodDelivery.foodDeliveryRed,
-            secondaryColor = WgcBrandFoodDelivery.foodDeliveryGreen,
-            backgroundColor = WgcBrandFoodDelivery.foodDeliveryBgGray,
-            surfaceColor = 0xFFFFFFFF.toInt(),
-            onPrimaryColor = 0xFFFFFFFF.toInt(),
-            onSurfaceColor = WgcBrandFoodDelivery.foodDeliveryDarkBlue,
-            errorColor = WgcBrandFoodDelivery.foodDeliveryRedDark
+            primaryColor = WgcCoreDsColors.red18,
+            secondaryColor = WgcCoreDsColors.green8,
+            backgroundColor = WgcCoreDsColors.grayLight9,
+            surfaceColor = WgcCoreDsColors.white,
+            onPrimaryColor = WgcCoreDsColors.white,
+            onSurfaceColor = WgcCoreDsColors.blueDark18,
+            errorColor = WgcCoreDsColors.red9
         )
 
         /**
@@ -81,13 +75,13 @@ data class WgcBrandTheme(
          */
         fun ecommerce(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.ECOMMERCE,
-            primaryColor = WgcBrandEcommerce.dealMarketplaceOrange,
-            secondaryColor = WgcBrandEcommerce.trendFashionBlue,
-            backgroundColor = WgcBrandEcommerce.trendFashionLightGray,
-            surfaceColor = 0xFFFFFFFF.toInt(),
-            onPrimaryColor = 0xFFFFFFFF.toInt(),
-            onSurfaceColor = WgcBrandEcommerce.trendFashionDark,
-            errorColor = WgcBrandEcommerce.globalMarketplaceRed
+            primaryColor = WgcCoreDsColors.red21,
+            secondaryColor = WgcCoreDsColors.blue42,
+            backgroundColor = WgcCoreDsColors.grayLight10,
+            surfaceColor = WgcCoreDsColors.white,
+            onPrimaryColor = WgcCoreDsColors.white,
+            onSurfaceColor = WgcCoreDsColors.blueDark19,
+            errorColor = WgcCoreDsColors.red27
         )
 
         /**
@@ -95,13 +89,13 @@ data class WgcBrandTheme(
          */
         fun fashion(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.FASHION,
-            primaryColor = WgcBrandFashion.megaStorePrimary,
-            secondaryColor = WgcBrandFashion.megaStoreGold,
-            backgroundColor = WgcBrandFashion.megaStoreBackground,
+            primaryColor = WgcCoreDsColors.blue28,
+            secondaryColor = WgcCoreDsColors.orange30,
+            backgroundColor = WgcCoreDsColors.gray100,
             surfaceColor = 0xFFFFFFFF.toInt(),
             onPrimaryColor = 0xFFFFFFFF.toInt(),
-            onSurfaceColor = WgcBrandFashion.megaStoreDark,
-            errorColor = WgcBrandFashion.retailAlertRed
+            onSurfaceColor = WgcCoreDsColors.grayDark14,
+            errorColor = WgcCoreDsColors.red23
         )
 
         /**
@@ -109,13 +103,13 @@ data class WgcBrandTheme(
          */
         fun fitness(): WgcBrandTheme = WgcBrandTheme(
             brandType = WgcBrandType.FITNESS,
-            primaryColor = WgcBrandFitness.gymYellow,
-            secondaryColor = WgcBrandFitness.gymAccentCyan,
-            backgroundColor = WgcBrandFitness.gymDarkGray,
-            surfaceColor = WgcBrandFitness.gymBlack,
-            onPrimaryColor = WgcBrandFitness.gymTextInverse,
-            onSurfaceColor = WgcBrandFitness.gymTextPrimary,
-            errorColor = WgcBrandFitness.gymCrowdHigh
+            primaryColor = WgcCoreDsColors.orange23,
+            secondaryColor = WgcCoreDsColors.cyan9,
+            backgroundColor = WgcCoreDsColors.grayDark7,
+            surfaceColor = WgcCoreDsColors.grayDark1,
+            onPrimaryColor = WgcCoreDsColors.black,
+            onSurfaceColor = WgcCoreDsColors.white,
+            errorColor = WgcCoreDsColors.red25
         )
     }
 }

@@ -49,9 +49,9 @@ fun WgcMedicalClinicCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.popularPharmacyBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight3))
     ) {
         Column(
             modifier = Modifier
@@ -68,13 +68,13 @@ fun WgcMedicalClinicCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.popularPharmacyClinicTealLight)),
+                            .background(Color(WgcCoreDsColors.cyanLight1)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.MonitorHeart,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.popularPharmacyClinicTeal),
+                            tint = Color(WgcCoreDsColors.cyan2),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -83,14 +83,14 @@ fun WgcMedicalClinicCard(
                         Text(
                             text = "Clinic Farma • Saúde & Cuidados",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.popularPharmacyClinicTeal),
+                            color = Color(WgcCoreDsColors.cyan2),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = serviceTitle,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                            color = Color(WgcCoreDsColors.blueDark21)
                         )
                     }
                 }
@@ -99,7 +99,7 @@ fun WgcMedicalClinicCard(
                     text = if (price > 0) "R$ " + String.format(Locale.getDefault(), "%.2f", price) else "Gratuito",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyGreen)
+                    color = Color(WgcCoreDsColors.green10)
                 )
             }
 
@@ -108,7 +108,7 @@ fun WgcMedicalClinicCard(
             Text(
                 text = description,
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                color = Color(WgcCoreDsColors.blue19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -122,14 +122,14 @@ fun WgcMedicalClinicCard(
                     Icon(
                         imageVector = Icons.Default.AccessTime,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.popularPharmacyTextSecondary),
+                        tint = Color(WgcCoreDsColors.blue19),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = estimatedDuration,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                        color = Color(WgcCoreDsColors.blue19)
                     )
                 }
 

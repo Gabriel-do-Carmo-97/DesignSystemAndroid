@@ -51,7 +51,7 @@ fun WgcApparelCartItemCard(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.apparelSurface))
+            .background(Color(WgcCoreDsColors.grayLight8))
             .clickable(onClick = onClick)
             .padding(WgcCoreDsSpacing.sm12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -74,7 +74,7 @@ fun WgcApparelCartItemCard(
                 Text(
                     text = title.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(WgcCoreDsColors.apparelPrimary),
+                    color = Color(WgcCoreDsColors.purple7),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -91,7 +91,7 @@ fun WgcApparelCartItemCard(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark),
+                color = Color(WgcCoreDsColors.grayDark18),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -99,7 +99,7 @@ fun WgcApparelCartItemCard(
             Text(
                 text = "Size - $size   Color - $colorName",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.apparelSecondaryText)
+                color = Color(WgcCoreDsColors.gray12)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
@@ -108,7 +108,7 @@ fun WgcApparelCartItemCard(
                 text = price,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
         }
 

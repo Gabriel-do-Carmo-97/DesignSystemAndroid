@@ -23,7 +23,7 @@ fun WgcPizzaBuildTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.pizzaBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue5)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Pizzaria Pizza • Monte sua Pizza", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcPizzaBuildTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(pizza.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text(pizza.ingredients, color = Color.Gray, fontSize = 14.sp)
-                        Text("R$ ${"%,.2f".format(pizza.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.pizzaRed))
+                        Text("R$ ${"%,.2f".format(pizza.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.red15))
                     }
                 }
             }

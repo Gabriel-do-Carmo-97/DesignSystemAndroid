@@ -49,8 +49,8 @@ fun WgcApparelCategoryAvatar(
                 .size(60.dp)
                 .clip(CircleShape)
                 .background(
-                    if (isSelected) Color(WgcCoreDsColors.apparelPrimaryLight)
-                    else Color(WgcCoreDsColors.apparelSurface)
+                    if (isSelected) Color(WgcCoreDsColors.purpleLight2)
+                    else Color(WgcCoreDsColors.grayLight8)
                 ),
             contentAlignment = Alignment.Center
         ) {
@@ -64,7 +64,7 @@ fun WgcApparelCategoryAvatar(
                 Text(
                     text = name.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = if (isSelected) Color(WgcCoreDsColors.apparelPrimary) else Color(WgcCoreDsColors.apparelDark),
+                    color = if (isSelected) Color(WgcCoreDsColors.purple7) else Color(WgcCoreDsColors.grayDark18),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -76,7 +76,7 @@ fun WgcApparelCategoryAvatar(
             text = name,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color(WgcCoreDsColors.apparelPrimary) else Color(WgcCoreDsColors.apparelDark),
+            color = if (isSelected) Color(WgcCoreDsColors.purple7) else Color(WgcCoreDsColors.grayDark18),
             textAlign = TextAlign.Center,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis

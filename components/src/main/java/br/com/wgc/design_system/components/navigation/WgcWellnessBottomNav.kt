@@ -60,7 +60,7 @@ fun WgcWellnessBottomNav(
         modifier = modifier
             .fillMaxWidth()
             .height(WgcCoreDsSize.s64.dp),
-        color = Color(WgcCoreDsColors.wellnessSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsElevation.level8.dp
     ) {
         Row(
@@ -72,8 +72,8 @@ fun WgcWellnessBottomNav(
         ) {
             WgcCorporateWellnessNavItem.values().forEach { item ->
                 val isSelected = item == selectedItem
-                val itemColor = if (isSelected) Color(WgcCoreDsColors.wellnessCoral)
-                else Color(WgcCoreDsColors.wellnessSecondaryText)
+                val itemColor = if (isSelected) Color(WgcCoreDsColors.red26)
+                else Color(WgcCoreDsColors.gray7)
 
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,

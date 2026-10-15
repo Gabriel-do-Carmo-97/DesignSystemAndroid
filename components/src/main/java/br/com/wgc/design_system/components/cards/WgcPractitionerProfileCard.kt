@@ -60,13 +60,13 @@ fun WgcPractitionerProfileCard(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s48.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.telemedicineGreenLight)),
+                        .background(Color(WgcCoreDsColors.cyanLight4)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.Person,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.telemedicineGreen),
+                        tint = Color(WgcCoreDsColors.cyan4),
                         modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                     )
                 }
@@ -83,7 +83,7 @@ fun WgcPractitionerProfileCard(
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.gymYellow),
+                    tint = Color(WgcCoreDsColors.orange23),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Text(
@@ -107,13 +107,13 @@ fun WgcPractitionerProfileCard(
                         text = "R$ " + String.format("%.2f", consultationFee),
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color(WgcCoreDsColors.telemedicineGreen)
+                        color = Color(WgcCoreDsColors.cyan4)
                     )
                 }
                 Text(
                     text = "Disponível: $nextSlot",
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.propertyRentalGreen),
+                    color = Color(WgcCoreDsColors.green4),
                     fontWeight = FontWeight.Bold
                 )
             }

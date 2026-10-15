@@ -23,7 +23,7 @@ fun WgcDecolarPackagesTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.flightTravelBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue1)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Decolar • Pacotes & Voos", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcDecolarPackagesTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                         Text(pkg.destination, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("${pkg.nights} noites • Voo + Hospedagem", color = Color.Gray)
-                        Text("R$ ${"%,.2f".format(pkg.price)} por pessoa", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.flightTravelPurple))
+                        Text("R$ ${"%,.2f".format(pkg.price)} por pessoa", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.purple2))
                     }
                 }
             }

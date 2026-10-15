@@ -50,8 +50,8 @@ fun WgcPaymentMethodRadioCard(
     onSelect: () -> Unit
 ) {
     val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val activeBorderColor = Color(WgcCoreDsColors.trendFashionPink)
-    val inactiveBorderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.3f)
+    val activeBorderColor = Color(WgcCoreDsColors.pink4)
+    val inactiveBorderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.3f)
 
     val border = if (isSelected) {
         BorderStroke(1.5.dp, activeBorderColor)
@@ -60,7 +60,7 @@ fun WgcPaymentMethodRadioCard(
     }
 
     val containerColor = if (isSelected) {
-        Color(WgcCoreDsColors.trendFashionPink).copy(alpha = 0.05f)
+        Color(WgcCoreDsColors.pink4).copy(alpha = 0.05f)
     } else {
         Color(WgcCoreDsColors.white)
     }
@@ -86,7 +86,7 @@ fun WgcPaymentMethodRadioCard(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = if (isSelected) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
+                    tint = if (isSelected) Color(WgcCoreDsColors.pink4) else Color(WgcCoreDsColors.blueDark19),
                     modifier = Modifier.size(28.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
@@ -94,14 +94,14 @@ fun WgcPaymentMethodRadioCard(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
                     if (subtitle != null) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
                         Text(
                             text = subtitle,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.textSecondary)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                     }
                 }
@@ -111,8 +111,8 @@ fun WgcPaymentMethodRadioCard(
                 selected = isSelected,
                 onClick = onSelect,
                 colors = RadioButtonDefaults.colors(
-                    selectedColor = Color(WgcCoreDsColors.trendFashionPink),
-                    unselectedColor = Color(WgcCoreDsColors.trendFashionBorderGray)
+                    selectedColor = Color(WgcCoreDsColors.pink4),
+                    unselectedColor = Color(WgcCoreDsColors.gray17)
                 )
             )
         }

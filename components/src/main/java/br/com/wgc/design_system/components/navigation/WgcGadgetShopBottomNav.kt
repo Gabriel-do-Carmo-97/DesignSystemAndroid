@@ -69,7 +69,7 @@ fun WgcGadgetShopBottomNav(
                                     modifier = Modifier
                                         .size(16.dp)
                                         .clip(CircleShape)
-                                        .background(Color(WgcCoreDsColors.gadgetShopAccentPink)),
+                                        .background(Color(WgcCoreDsColors.pink5)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -103,11 +103,11 @@ fun WgcGadgetShopBottomNav(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.gadgetShopPrimary),
-                    selectedTextColor = Color(WgcCoreDsColors.gadgetShopPrimary),
-                    unselectedIconColor = Color(WgcCoreDsColors.gadgetShopSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.gadgetShopSecondaryText),
-                    indicatorColor = Color(WgcCoreDsColors.gadgetShopPrimaryLight)
+                    selectedIconColor = Color(WgcCoreDsColors.blue39),
+                    selectedTextColor = Color(WgcCoreDsColors.blue39),
+                    unselectedIconColor = Color(WgcCoreDsColors.blue41),
+                    unselectedTextColor = Color(WgcCoreDsColors.blue41),
+                    indicatorColor = Color(WgcCoreDsColors.blueLight31)
                 )
             )
         }

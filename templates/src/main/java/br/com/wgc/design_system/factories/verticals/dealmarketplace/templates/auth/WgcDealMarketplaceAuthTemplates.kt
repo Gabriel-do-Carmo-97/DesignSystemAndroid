@@ -69,7 +69,7 @@ fun WgcDealMarketplaceRegisterScreenTemplate(viewModel: BaseDealMarketplaceAuthV
             WgcBrandAuthHeader(
                 brandName = "Deal Marketplace",
                 brandLogoText = "DM",
-                brandColor = Color(WgcCoreDsColors.dealMarketplaceOrange),
+                brandColor = Color(WgcCoreDsColors.red21),
                 title = "Cadastrar no Marketplace",
                 subtitle = "Informe seu número de celular para receber o código"
             )
@@ -96,7 +96,7 @@ fun WgcDealMarketplaceResetPasswordScreenTemplate(viewModel: BaseDealMarketplace
             WgcBrandAuthHeader(
                 brandName = "Deal Marketplace",
                 brandLogoText = "DM",
-                brandColor = Color(WgcCoreDsColors.dealMarketplaceOrange),
+                brandColor = Color(WgcCoreDsColors.red21),
                 title = "Verificação do Celular",
                 subtitle = "Insira o código enviado por SMS para redefinir"
             )

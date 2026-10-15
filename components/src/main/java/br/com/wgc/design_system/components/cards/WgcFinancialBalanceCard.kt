@@ -43,9 +43,9 @@ fun WgcFinancialBalanceCard(
             .fillMaxWidth()
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechPurpleSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.fintechPurpleBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayLight3))
     ) {
         Column(
             modifier = Modifier
@@ -61,12 +61,12 @@ fun WgcFinancialBalanceCard(
                     text = "Conta",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.fintechPurpleTextPrimary)
+                    color = Color(WgcCoreDsColors.grayDark3)
                 )
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                     contentDescription = "Ver extrato",
-                    tint = Color(WgcCoreDsColors.fintechPurpleTextSecondary),
+                    tint = Color(WgcCoreDsColors.gray8),
                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                 )
             }
@@ -77,7 +77,7 @@ fun WgcFinancialBalanceCard(
                 text = if (isBalanceVisible) "R$ " + String.format("%.2f", balance) else "••••",
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.fintechPurpleTextPrimary)
+                color = Color(WgcCoreDsColors.grayDark3)
             )
         }
     }

@@ -114,7 +114,7 @@ fun WgcCorporateWellnessHomeTemplate(
                             ) {
                                 Text(
                                     text = "WELLNESS",
-                                    color = Color(WgcCoreDsColors.wellnessCoral),
+                                    color = Color(WgcCoreDsColors.red26),
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 1.sp
@@ -136,13 +136,13 @@ fun WgcCorporateWellnessHomeTemplate(
                             }
                             Text(
                                 text = "Olá, ${user.name.split(" ").firstOrNull() ?: "Colaborador"}!",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = user.company,
-                                color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                                color = Color(WgcCoreDsColors.gray7),
                                 fontSize = 12.sp
                             )
                         }
@@ -151,7 +151,7 @@ fun WgcCorporateWellnessHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.Notifications,
                                 contentDescription = "Notificações",
-                                tint = Color(WgcCoreDsColors.wellnessDark),
+                                tint = Color(WgcCoreDsColors.grayDark7),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -180,7 +180,7 @@ fun WgcCorporateWellnessHomeTemplate(
                             .fillMaxWidth()
                             .clickable { onOpenCheckIn() },
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessForest)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.cyanDark2)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level3.dp)
                     ) {
                         Row(
@@ -244,8 +244,8 @@ fun WgcCorporateWellnessHomeTemplate(
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                     ) {
                         Column(
                             modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp),
@@ -258,18 +258,18 @@ fun WgcCorporateWellnessHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.FitnessCenter,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.wellnessCoral),
+                                    tint = Color(WgcCoreDsColors.red26),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                                 Text(
                                     text = "Este Mês",
-                                    color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray7),
                                     fontSize = 11.sp
                                 )
                             }
                             Text(
                                 text = "${user.checkInsThisMonth} treinos",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -279,8 +279,8 @@ fun WgcCorporateWellnessHomeTemplate(
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                     ) {
                         Column(
                             modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp),
@@ -293,18 +293,18 @@ fun WgcCorporateWellnessHomeTemplate(
                                 Icon(
                                     imageVector = Icons.Default.LocalFireDepartment,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.wellnessTierGold),
+                                    tint = Color(WgcCoreDsColors.orange5),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                                 Text(
                                     text = "Sequência Ativa",
-                                    color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                                    color = Color(WgcCoreDsColors.gray7),
                                     fontSize = 11.sp
                                 )
                             }
                             Text(
                                 text = "${user.activeStreakDays} dias seguidos",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -322,14 +322,14 @@ fun WgcCorporateWellnessHomeTemplate(
                 ) {
                     Text(
                         text = "ACADEMIAS PERTO DE VOCÊ",
-                        color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                        color = Color(WgcCoreDsColors.gray7),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.sp
                     )
                     Text(
                         text = "Ver mapa",
-                        color = Color(WgcCoreDsColors.wellnessCoral),
+                        color = Color(WgcCoreDsColors.red26),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.clickable { onOpenExplore() }
@@ -360,8 +360,8 @@ fun WgcCorporateWellnessHomeTemplate(
                         .clickable { onOpenWellness() }
                         .padding(bottom = WgcCoreDsSpacing.xl32.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessForestLight)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.greenLight4)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Row(
                         modifier = Modifier
@@ -379,7 +379,7 @@ fun WgcCorporateWellnessHomeTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.wellnessForest)),
+                                    .background(Color(WgcCoreDsColors.cyanDark2)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
@@ -392,14 +392,14 @@ fun WgcCorporateWellnessHomeTemplate(
                             Column {
                                 Text(
                                     text = "BEM-ESTAR CORPORATIVO",
-                                    color = Color(WgcCoreDsColors.wellnessForest),
+                                    color = Color(WgcCoreDsColors.cyanDark2),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 0.5.sp
                                 )
                                 Text(
                                     text = "Ative Calm e Headspace sem custo adicional no seu plano Gold.",
-                                    color = Color(WgcCoreDsColors.wellnessDark),
+                                    color = Color(WgcCoreDsColors.grayDark7),
                                     fontSize = 13.sp
                                 )
                             }
@@ -408,7 +408,7 @@ fun WgcCorporateWellnessHomeTemplate(
                         Icon(
                             imageVector = Icons.Default.ChevronRight,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.wellnessForest),
+                            tint = Color(WgcCoreDsColors.cyanDark2),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }

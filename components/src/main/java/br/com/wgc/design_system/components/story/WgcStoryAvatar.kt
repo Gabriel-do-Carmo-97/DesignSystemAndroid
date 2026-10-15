@@ -47,17 +47,17 @@ fun WgcStoryAvatar(
     val ringBorder = when (storyState) {
         StoryState.UNSEEN -> Brush.sweepGradient(
             listOf(
-                Color(WgcCoreDsColors.courseMarketplacePurple),
-                Color(WgcCoreDsColors.visualDiscoveryRed),
+                Color(WgcCoreDsColors.purple4),
+                Color(WgcCoreDsColors.red11),
                 Color(WgcCoreDsColors.orange500),
-                Color(WgcCoreDsColors.courseMarketplacePurple)
+                Color(WgcCoreDsColors.purple4)
             )
         )
         StoryState.CLOSE_FRIENDS -> Brush.horizontalGradient(
-            listOf(Color(WgcCoreDsColors.success), Color(WgcCoreDsColors.megaStorerSecondary))
+            listOf(Color(WgcCoreDsColors.green27), Color(WgcCoreDsColors.green15))
         )
         StoryState.SEEN -> Brush.horizontalGradient(
-            listOf(Color(WgcCoreDsColors.gray400), Color(WgcCoreDsColors.gray300))
+            listOf(Color(WgcCoreDsColors.gray18), Color(WgcCoreDsColors.grayLight2))
         )
     }
 

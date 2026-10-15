@@ -61,7 +61,7 @@ fun WgcGymBottomNav(
         modifier = modifier
             .fillMaxWidth()
             .height(WgcCoreDsSize.s64.dp),
-        color = Color(WgcCoreDsColors.gymDarkGray),
+        color = Color(WgcCoreDsColors.grayDark7),
         shadowElevation = WgcCoreDsElevation.level8.dp
     ) {
         Row(
@@ -73,8 +73,8 @@ fun WgcGymBottomNav(
         ) {
             WgcGymFitnessNavItem.values().forEach { item ->
                 val isSelected = item == selectedItem
-                val itemColor = if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                else Color(WgcCoreDsColors.gymTextSecondary)
+                val itemColor = if (isSelected) Color(WgcCoreDsColors.orange23)
+                else Color(WgcCoreDsColors.gray16)
 
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,

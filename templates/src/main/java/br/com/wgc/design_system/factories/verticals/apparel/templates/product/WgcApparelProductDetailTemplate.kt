@@ -95,7 +95,7 @@ fun WgcClotheeProductDetailTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(320.dp)
-                    .background(Color(WgcCoreDsColors.apparelSurface))
+                    .background(Color(WgcCoreDsColors.grayLight8))
             ) {
                 if (!product.imageUrl.isNullOrEmpty()) {
                     AsyncImageDefault(
@@ -118,7 +118,7 @@ fun WgcClotheeProductDetailTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.apparelDark)
+                        tint = Color(WgcCoreDsColors.grayDark18)
                     )
                 }
 
@@ -135,7 +135,7 @@ fun WgcClotheeProductDetailTemplate(
                     Icon(
                         imageVector = if (product.isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (product.isFavorite) Color(WgcCoreDsColors.apparelAlertRed) else Color(WgcCoreDsColors.apparelDark)
+                        tint = if (product.isFavorite) Color(WgcCoreDsColors.red24) else Color(WgcCoreDsColors.grayDark18)
                     )
                 }
             }
@@ -150,7 +150,7 @@ fun WgcClotheeProductDetailTemplate(
                     text = product.title,
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -159,7 +159,7 @@ fun WgcClotheeProductDetailTemplate(
                     text = product.price,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelPrimary)
+                    color = Color(WgcCoreDsColors.purple7)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -169,7 +169,7 @@ fun WgcClotheeProductDetailTemplate(
                     text = "Size",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -182,8 +182,8 @@ fun WgcClotheeProductDetailTemplate(
                                 .size(44.dp)
                                 .clip(CircleShape)
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.apparelPrimary)
-                                    else Color(WgcCoreDsColors.apparelSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.purple7)
+                                    else Color(WgcCoreDsColors.grayLight8)
                                 )
                                 .clickable { onSizeSelected(size) },
                             contentAlignment = Alignment.Center
@@ -192,7 +192,7 @@ fun WgcClotheeProductDetailTemplate(
                                 text = size,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.apparelDark)
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark18)
                             )
                         }
                     }
@@ -205,7 +205,7 @@ fun WgcClotheeProductDetailTemplate(
                     text = "Color",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -220,7 +220,7 @@ fun WgcClotheeProductDetailTemplate(
                                 .background(colorOption.color)
                                 .border(
                                     width = if (isSelected) 3.dp else 1.dp,
-                                    color = if (isSelected) Color(WgcCoreDsColors.apparelPrimary) else Color(WgcCoreDsColors.apparelBorder),
+                                    color = if (isSelected) Color(WgcCoreDsColors.purple7) else Color(WgcCoreDsColors.grayLight4),
                                     shape = CircleShape
                                 )
                                 .clickable { onColorSelected(colorOption) }
@@ -240,7 +240,7 @@ fun WgcClotheeProductDetailTemplate(
                         text = "Quantity",
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
 
                     WgcApparelQuantityStepper(
@@ -256,7 +256,7 @@ fun WgcClotheeProductDetailTemplate(
                     text = "Description",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -264,7 +264,7 @@ fun WgcClotheeProductDetailTemplate(
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.apparelSecondaryText),
+                    color = Color(WgcCoreDsColors.gray12),
                     lineHeight = MaterialTheme.typography.bodyLarge.lineHeight
                 )
 
@@ -280,14 +280,14 @@ fun WgcClotheeProductDetailTemplate(
                         text = "Reviews",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
 
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = "Avaliação",
-                            tint = Color(WgcCoreDsColors.warning),
+                            tint = Color(WgcCoreDsColors.yellow10),
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
@@ -295,7 +295,7 @@ fun WgcClotheeProductDetailTemplate(
                             text = "${product.rating} (${product.reviewCount} Reviews)",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.apparelDark)
+                            color = Color(WgcCoreDsColors.grayDark18)
                         )
                     }
                 }
@@ -317,7 +317,7 @@ private fun ReviewCard(review: ClotheeReview) {
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.apparelSurface))
+            .background(Color(WgcCoreDsColors.grayLight8))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Row(
@@ -344,7 +344,7 @@ private fun ReviewCard(review: ClotheeReview) {
                             text = review.authorName.take(1),
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.apparelPrimary)
+                            color = Color(WgcCoreDsColors.purple7)
                         )
                     }
                 }
@@ -355,14 +355,14 @@ private fun ReviewCard(review: ClotheeReview) {
                     text = review.authorName,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
             }
 
             Text(
                 text = review.date,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.apparelSecondaryText)
+                color = Color(WgcCoreDsColors.gray12)
             )
         }
 
@@ -371,7 +371,7 @@ private fun ReviewCard(review: ClotheeReview) {
         Text(
             text = review.comment,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.apparelDark)
+            color = Color(WgcCoreDsColors.grayDark18)
         )
     }
 }
@@ -395,7 +395,7 @@ private fun SurfaceBottomBar(
                 .height(54.dp),
             shape = RoundedCornerShape(100.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                containerColor = Color(WgcCoreDsColors.purple7)
             )
         ) {
             Row(

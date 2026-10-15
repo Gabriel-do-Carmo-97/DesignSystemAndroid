@@ -135,7 +135,7 @@ fun WgcStylishHomeScreenTemplate(
                     Icon(
                         imageVector = Icons.Default.Menu,
                         contentDescription = "Menu Lateral",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
 
@@ -144,7 +144,7 @@ fun WgcStylishHomeScreenTemplate(
                         modifier = Modifier
                             .size(32.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp))
-                            .background(Color(WgcCoreDsColors.trendFashionPink)),
+                            .background(Color(WgcCoreDsColors.pink4)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
@@ -158,7 +158,7 @@ fun WgcStylishHomeScreenTemplate(
                     Text(
                         text = "Stylish",
                         style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.trendFashionPink)
+                        color = Color(WgcCoreDsColors.pink4)
                     )
                 }
 
@@ -205,7 +205,7 @@ fun WgcStylishHomeScreenTemplate(
                     .fillMaxWidth()
                     .padding(horizontal = WgcCoreDsSpacing.md.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trendFashionPink))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pink4))
             ) {
                 Row(
                     modifier = Modifier
@@ -235,7 +235,7 @@ fun WgcStylishHomeScreenTemplate(
                         Text(
                             text = "Shop Now ->",
                             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                            color = Color(WgcCoreDsColors.trendFashionPink)
+                            color = Color(WgcCoreDsColors.pink4)
                         )
                     }
                 }
@@ -250,7 +250,7 @@ fun WgcStylishHomeScreenTemplate(
                 Text(
                     text = "All Featured",
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -270,15 +270,15 @@ fun WgcStylishHomeScreenTemplate(
                                     .size(56.dp)
                                     .clip(CircleShape)
                                     .background(
-                                        if (isSel) Color(WgcCoreDsColors.trendFashionPink)
-                                        else Color(WgcCoreDsColors.trendFashionLightGray)
+                                        if (isSel) Color(WgcCoreDsColors.pink4)
+                                        else Color(WgcCoreDsColors.grayLight10)
                                     ),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
                                     text = cat.name.take(1),
                                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                                    color = if (isSel) Color.White else Color(WgcCoreDsColors.trendFashionDark)
+                                    color = if (isSel) Color.White else Color(WgcCoreDsColors.blueDark19)
                                 )
                             }
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
@@ -287,7 +287,7 @@ fun WgcStylishHomeScreenTemplate(
                                 style = MaterialTheme.typography.labelSmall.copy(
                                     fontWeight = if (isSel) FontWeight.Bold else FontWeight.Normal
                                 ),
-                                color = Color(WgcCoreDsColors.trendFashionDark)
+                                color = Color(WgcCoreDsColors.blueDark19)
                             )
                         }
                     }

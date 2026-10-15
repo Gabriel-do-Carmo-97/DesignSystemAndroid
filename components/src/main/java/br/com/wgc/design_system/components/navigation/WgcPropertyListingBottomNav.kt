@@ -65,7 +65,7 @@ fun WgcPropertyListingBottomNav(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xs8.dp
     ) {
         Row(
@@ -104,8 +104,8 @@ private fun PropertyListingNavItemButton(
     badgeCount: Int,
     onClick: () -> Unit
 ) {
-    val activeColor = Color(WgcCoreDsColors.propertyListingPrimary)
-    val inactiveColor = Color(WgcCoreDsColors.propertyListingSecondaryText)
+    val activeColor = Color(WgcCoreDsColors.green14)
+    val inactiveColor = Color(WgcCoreDsColors.blue22)
     val contentColor = if (isSelected) activeColor else inactiveColor
 
     Column(
@@ -131,7 +131,7 @@ private fun PropertyListingNavItemButton(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s14.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.propertyListingOrange)),
+                        .background(Color(WgcCoreDsColors.orange18)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(

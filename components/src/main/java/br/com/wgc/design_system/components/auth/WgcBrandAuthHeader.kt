@@ -68,7 +68,7 @@ private fun WgcBrandAuthHeaderPreview() {
         WgcBrandAuthHeader(
             brandName = "Food Delivery",
             brandLogoText = "FD",
-            brandColor = Color(WgcCoreDsColors.foodDeliveryRed),
+            brandColor = Color(WgcCoreDsColors.red18),
             title = "Falta pouco para matar sua fome!",
             subtitle = "Como deseja continuar?"
         )

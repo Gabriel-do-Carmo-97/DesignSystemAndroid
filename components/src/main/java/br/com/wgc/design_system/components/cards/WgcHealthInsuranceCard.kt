@@ -48,9 +48,9 @@ fun WgcHealthInsuranceCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacyBlueLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueLight19)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.popularPharmacyBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight3))
     ) {
         Row(
             modifier = Modifier
@@ -62,13 +62,13 @@ fun WgcHealthInsuranceCard(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s40.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.popularPharmacyBlue)),
+                    .background(Color(WgcCoreDsColors.blue7)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Badge,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.popularPharmacySurface),
+                    tint = Color(WgcCoreDsColors.white),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
             }
@@ -81,14 +81,14 @@ fun WgcHealthInsuranceCard(
                         text = insuranceName,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.popularPharmacyBlueDark)
+                        color = Color(WgcCoreDsColors.blueDark29)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     if (isLinked) {
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = "Vinculado",
-                            tint = Color(WgcCoreDsColors.popularPharmacyGreen),
+                            tint = Color(WgcCoreDsColors.green10),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                     }
@@ -96,12 +96,12 @@ fun WgcHealthInsuranceCard(
                 Text(
                     text = "Carteirinha: $cardNumberMasked",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                    color = Color(WgcCoreDsColors.blue19)
                 )
                 Text(
                     text = "Até $discountPercentage% de desconto em medicamentos",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.popularPharmacyGreen),
+                    color = Color(WgcCoreDsColors.green10),
                     fontWeight = FontWeight.Bold
                 )
             }

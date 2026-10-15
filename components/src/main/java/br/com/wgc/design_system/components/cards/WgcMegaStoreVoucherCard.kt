@@ -60,12 +60,12 @@ fun WgcMegaStoreVoucherCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimaryLight))
+                            .background(Color(WgcCoreDsColors.blueLight16))
                             .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = WgcCoreDsSpacing.xxs.dp)
                     ) {
                         Text(
                             text = "VOUCHER",
-                            color = Color(WgcCoreDsColors.megaStorePrimary),
+                            color = Color(WgcCoreDsColors.blue28),
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -74,7 +74,7 @@ fun WgcMegaStoreVoucherCard(
                     Text(
                         text = discountTitle,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                 }
 
@@ -83,13 +83,13 @@ fun WgcMegaStoreVoucherCard(
                 Text(
                     text = minSpend,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
 
                 Text(
                     text = expiryDate,
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.megaStoreGold),
+                    color = Color(WgcCoreDsColors.orange30),
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -97,8 +97,8 @@ fun WgcMegaStoreVoucherCard(
             TextButton(
                 onClick = onCollectClick,
                 colors = ButtonDefaults.textButtonColors(
-                    containerColor = if (isCollected) Color(WgcCoreDsColors.megaStoreBackground) else Color(WgcCoreDsColors.megaStorePrimary),
-                    contentColor = if (isCollected) Color(WgcCoreDsColors.megaStoreSecondaryText) else Color.White
+                    containerColor = if (isCollected) Color(WgcCoreDsColors.gray100) else Color(WgcCoreDsColors.blue28),
+                    contentColor = if (isCollected) Color(WgcCoreDsColors.gray4) else Color.White
                 ),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 enabled = !isCollected

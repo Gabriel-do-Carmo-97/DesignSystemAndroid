@@ -79,13 +79,13 @@ fun WgcShoppeStartScreenTemplate(
                     modifier = Modifier
                         .size(90.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.megaStorePrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight16)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.ShoppingBag,
                         contentDescription = "Shoppe Logo",
-                        tint = Color(WgcCoreDsColors.megaStorePrimary),
+                        tint = Color(WgcCoreDsColors.blue28),
                         modifier = Modifier.size(48.dp)
                     )
                 }
@@ -95,7 +95,7 @@ fun WgcShoppeStartScreenTemplate(
                 Text(
                     text = "Shoppe",
                     style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Black),
-                    color = Color(WgcCoreDsColors.megaStoreDark)
+                    color = Color(WgcCoreDsColors.grayDark14)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -103,7 +103,7 @@ fun WgcShoppeStartScreenTemplate(
                 Text(
                     text = "Beautiful eCommerce Clothing & Fashion Store App",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                    color = Color(WgcCoreDsColors.gray4),
                     textAlign = TextAlign.Center
                 )
             }
@@ -154,7 +154,7 @@ fun WgcShoppeLoginScreenTemplate(
             Text(
                 text = "Login",
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Black),
-                color = Color(WgcCoreDsColors.megaStoreDark)
+                color = Color(WgcCoreDsColors.grayDark14)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -162,7 +162,7 @@ fun WgcShoppeLoginScreenTemplate(
             Text(
                 text = "Good to see you back! Please enter your details.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                color = Color(WgcCoreDsColors.gray4)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -199,12 +199,12 @@ fun WgcShoppeLoginScreenTemplate(
                 Text(
                     text = "Don't have an account? ",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
                 Text(
                     text = "Sign Up",
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.megaStorePrimary),
+                    color = Color(WgcCoreDsColors.blue28),
                     modifier = Modifier.clickable(onClick = onCreateAccountClick)
                 )
             }
@@ -237,7 +237,7 @@ fun WgcShoppePasswordScreenTemplate(
             Text(
                 text = "Enter Password",
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Black),
-                color = Color(WgcCoreDsColors.megaStoreDark)
+                color = Color(WgcCoreDsColors.grayDark14)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -245,7 +245,7 @@ fun WgcShoppePasswordScreenTemplate(
             Text(
                 text = "Enter your secret account password to proceed.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                color = Color(WgcCoreDsColors.gray4)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -267,7 +267,7 @@ fun WgcShoppePasswordScreenTemplate(
             Text(
                 text = "Forgot Password?",
                 style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.megaStorePrimary),
+                color = Color(WgcCoreDsColors.blue28),
                 modifier = Modifier
                     .align(Alignment.End)
                     .clickable(onClick = onForgotPasswordClick)
@@ -307,13 +307,13 @@ fun WgcShoppeOtpRecoveryScreenTemplate(
                 modifier = Modifier
                     .size(72.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.megaStorePrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight16)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Lock,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.megaStorePrimary),
+                    tint = Color(WgcCoreDsColors.blue28),
                     modifier = Modifier.size(36.dp)
                 )
             }
@@ -323,7 +323,7 @@ fun WgcShoppeOtpRecoveryScreenTemplate(
             Text(
                 text = "Password Recovery",
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black),
-                color = Color(WgcCoreDsColors.megaStoreDark)
+                color = Color(WgcCoreDsColors.grayDark14)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -331,7 +331,7 @@ fun WgcShoppeOtpRecoveryScreenTemplate(
             Text(
                 text = "Enter the 4-digit code sent to your registered email.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                color = Color(WgcCoreDsColors.gray4),
                 textAlign = TextAlign.Center
             )
 
@@ -356,7 +356,7 @@ fun WgcShoppeOtpRecoveryScreenTemplate(
             TextButton(onClick = onResendClick) {
                 Text(
                     text = "Resend Code",
-                    color = Color(WgcCoreDsColors.megaStorePrimary),
+                    color = Color(WgcCoreDsColors.blue28),
                     fontWeight = FontWeight.Bold
                 )
             }

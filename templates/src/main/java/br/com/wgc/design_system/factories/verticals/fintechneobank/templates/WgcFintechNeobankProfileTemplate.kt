@@ -32,7 +32,7 @@ fun WgcNeobankProfileTemplate(
             TopAppBar(
                 title = { Text("Meu Perfil & Segurança", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechPurple),
+                    containerColor = Color(WgcCoreDsColors.purple3),
                     titleContentColor = Color.White
                 )
             )
@@ -60,7 +60,7 @@ fun WgcNeobankProfileTemplate(
                                 .clip(CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(WgcCoreDsSize.s60.dp), tint = Color(WgcCoreDsColors.fintechPurple))
+                            Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(WgcCoreDsSize.s60.dp), tint = Color(WgcCoreDsColors.purple3))
                         }
                         Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = 14.sp)
@@ -77,17 +77,17 @@ fun WgcNeobankProfileTemplate(
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-                            Icon(Icons.Default.Security, contentDescription = null, tint = Color(WgcCoreDsColors.fintechPurple))
+                            Icon(Icons.Default.Security, contentDescription = null, tint = Color(WgcCoreDsColors.purple3))
                             Text("Modo Rua (Proteção Extra)", fontWeight = FontWeight.SemiBold)
                         }
                         HorizontalDivider()
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-                            Icon(Icons.Default.Fingerprint, contentDescription = null, tint = Color(WgcCoreDsColors.fintechPurple))
+                            Icon(Icons.Default.Fingerprint, contentDescription = null, tint = Color(WgcCoreDsColors.purple3))
                             Text("Acesso com Biometria", fontWeight = FontWeight.SemiBold)
                         }
                         HorizontalDivider()
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
-                            Icon(Icons.Default.Notifications, contentDescription = null, tint = Color(WgcCoreDsColors.fintechPurple))
+                            Icon(Icons.Default.Notifications, contentDescription = null, tint = Color(WgcCoreDsColors.purple3))
                             Text("Configurar Notificações", fontWeight = FontWeight.SemiBold)
                         }
                     }

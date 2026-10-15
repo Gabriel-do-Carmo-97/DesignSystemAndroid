@@ -71,7 +71,7 @@ fun WgcKutukuProductDetailScreen(
         modifier = modifier,
         bottomBar = {
             Surface(
-                color = Color(WgcCoreDsColors.retailSurface),
+                color = Color(WgcCoreDsColors.white),
                 tonalElevation = 8.dp,
                 shadowElevation = 8.dp
             ) {
@@ -86,7 +86,7 @@ fun WgcKutukuProductDetailScreen(
                         text = product.price,
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
 
                     Button(
@@ -99,7 +99,7 @@ fun WgcKutukuProductDetailScreen(
                             .width(180.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.retailPrimary)
+                            containerColor = Color(WgcCoreDsColors.blue33)
                         )
                     ) {
                         Row(
@@ -127,7 +127,7 @@ fun WgcKutukuProductDetailScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(WgcCoreDsColors.retailBackground))
+                .background(Color(WgcCoreDsColors.blueLight39))
                 .verticalScroll(rememberScrollState())
                 .padding(paddingValues)
         ) {
@@ -143,7 +143,7 @@ fun WgcKutukuProductDetailScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
 
@@ -151,14 +151,14 @@ fun WgcKutukuProductDetailScreen(
                     text = "Detail Product",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
 
                 IconButton(onClick = onCartClick) {
                     Icon(
                         imageVector = Icons.Default.ShoppingBag,
                         contentDescription = "Carrinho",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             }
@@ -168,7 +168,7 @@ fun WgcKutukuProductDetailScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(280.dp)
-                    .background(Color(WgcCoreDsColors.retailBackground)),
+                    .background(Color(WgcCoreDsColors.blueLight39)),
                 contentAlignment = Alignment.Center
             ) {
                 if (!product.imageUrl.isNullOrEmpty()) {
@@ -181,7 +181,7 @@ fun WgcKutukuProductDetailScreen(
                     Icon(
                         imageVector = Icons.Default.ShoppingBag,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.retailPrimaryLight),
+                        tint = Color(WgcCoreDsColors.blueLight21),
                         modifier = Modifier.size(120.dp)
                     )
                 }
@@ -194,7 +194,7 @@ fun WgcKutukuProductDetailScreen(
                     topStart = WgcCoreDsBorderRadius.xxl.dp,
                     topEnd = WgcCoreDsBorderRadius.xxl.dp
                 ),
-                color = Color(WgcCoreDsColors.retailSurface)
+                color = Color(WgcCoreDsColors.white)
             ) {
                 Column(
                     modifier = Modifier
@@ -212,14 +212,14 @@ fun WgcKutukuProductDetailScreen(
                                 text = product.title,
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.retailDark)
+                                color = Color(WgcCoreDsColors.grayDark2)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
                                     imageVector = Icons.Default.Star,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.retailGold),
+                                    tint = Color(WgcCoreDsColors.orange30),
                                     modifier = Modifier.size(18.dp)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs.dp))
@@ -227,12 +227,12 @@ fun WgcKutukuProductDetailScreen(
                                     text = "${product.rating} ",
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.retailDark)
+                                    color = Color(WgcCoreDsColors.grayDark2)
                                 )
                                 Text(
                                     text = "(${product.reviewCount} Review)",
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.retailSecondaryText)
+                                    color = Color(WgcCoreDsColors.gray4)
                                 )
                             }
                         }
@@ -246,7 +246,7 @@ fun WgcKutukuProductDetailScreen(
                             Text(
                                 text = "Avaliable in stok",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.retailDark),
+                                color = Color(WgcCoreDsColors.grayDark2),
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -259,7 +259,7 @@ fun WgcKutukuProductDetailScreen(
                         text = "Color",
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                     Row(
@@ -295,7 +295,7 @@ fun WgcKutukuProductDetailScreen(
                         text = "Description",
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                     Text(
@@ -305,14 +305,14 @@ fun WgcKutukuProductDetailScreen(
                             "${product.description.take(120)}..."
                         },
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.retailSecondaryText),
+                        color = Color(WgcCoreDsColors.gray4),
                         lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
                     )
                     Text(
                         text = if (isDescriptionExpanded) "Read Less" else "Read More",
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailPrimary),
+                        color = Color(WgcCoreDsColors.blue33),
                         modifier = Modifier
                             .clickable { isDescriptionExpanded = !isDescriptionExpanded }
                             .padding(top = WgcCoreDsSpacing.xxs.dp)

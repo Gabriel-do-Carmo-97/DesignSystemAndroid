@@ -62,11 +62,11 @@ fun WgcExtraDiscountCouponCard(
             .fillMaxWidth()
             .clickable { onClick() },
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
         border = androidx.compose.foundation.BorderStroke(
             width = WgcCoreDsSize.s1.dp,
-            color = if (isActivated) Color(WgcCoreDsColors.hypermarketSuccessGreen) else Color(WgcCoreDsColors.hypermarketBorder)
+            color = if (isActivated) Color(WgcCoreDsColors.green4) else Color(WgcCoreDsColors.blueLight6)
         )
     ) {
         Column(
@@ -88,12 +88,12 @@ fun WgcExtraDiscountCouponCard(
                     Icon(
                         imageVector = Icons.Default.ConfirmationNumber,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.hypermarketRed),
+                        tint = Color(WgcCoreDsColors.red12),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Text(
                         text = category.uppercase(),
-                        color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                        color = Color(WgcCoreDsColors.blue27),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
@@ -103,7 +103,7 @@ fun WgcExtraDiscountCouponCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.hypermarketRed))
+                        .background(Color(WgcCoreDsColors.red12))
                         .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                 ) {
                     Text(
@@ -119,14 +119,14 @@ fun WgcExtraDiscountCouponCard(
             Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
                 Text(
                     text = title,
-                    color = Color(WgcCoreDsColors.hypermarketDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     lineHeight = 20.sp
                 )
                 Text(
                     text = limitCondition,
-                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    color = Color(WgcCoreDsColors.blue27),
                     fontSize = 12.sp
                 )
             }
@@ -139,12 +139,12 @@ fun WgcExtraDiscountCouponCard(
                 Icon(
                     imageVector = Icons.Default.Schedule,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    tint = Color(WgcCoreDsColors.blue27),
                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                 )
                 Text(
                     text = validUntil,
-                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                    color = Color(WgcCoreDsColors.blue27),
                     fontSize = 11.sp
                 )
             }
@@ -158,22 +158,22 @@ fun WgcExtraDiscountCouponCard(
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isActivated) {
-                        Color(WgcCoreDsColors.hypermarketSuccessGreenLight)
+                        Color(WgcCoreDsColors.greenLight10)
                     } else {
-                        Color(WgcCoreDsColors.hypermarketYellow)
+                        Color(WgcCoreDsColors.yellow5)
                     },
                     contentColor = if (isActivated) {
-                        Color(WgcCoreDsColors.hypermarketSuccessGreen)
+                        Color(WgcCoreDsColors.green4)
                     } else {
-                        Color(WgcCoreDsColors.hypermarketDark)
+                        Color(WgcCoreDsColors.grayDark7)
                     }
                 ),
                 border = androidx.compose.foundation.BorderStroke(
                     width = WgcCoreDsSize.s1.dp,
                     color = if (isActivated) {
-                        Color(WgcCoreDsColors.hypermarketSuccessGreen)
+                        Color(WgcCoreDsColors.green4)
                     } else {
-                        Color(WgcCoreDsColors.hypermarketYellow)
+                        Color(WgcCoreDsColors.yellow5)
                     }
                 )
             ) {

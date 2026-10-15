@@ -59,9 +59,9 @@ fun WgcPropertyClassifiedsBottomNav(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+            .background(Color(WgcCoreDsColors.white))
     ) {
-        HorizontalDivider(color = Color(WgcCoreDsColors.propertyClassifiedsBorder))
+        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
 
         Row(
             modifier = Modifier
@@ -73,9 +73,9 @@ fun WgcPropertyClassifiedsBottomNav(
             WgcZapNavDestination.entries.forEach { destination ->
                 val isSelected = destination == selectedDestination
                 val itemColor = if (isSelected) {
-                    Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                    Color(WgcCoreDsColors.blueDark31)
                 } else {
-                    Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                    Color(WgcCoreDsColors.blue22)
                 }
 
                 Column(
@@ -108,7 +108,7 @@ fun WgcPropertyClassifiedsBottomNav(
                             modifier = Modifier
                                 .size(width = WgcCoreDsSize.s24.dp, height = WgcCoreDsSize.s4.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsPrimary))
+                                .background(Color(WgcCoreDsColors.blueDark31))
                         )
                     } else {
                         Box(modifier = Modifier.height(WgcCoreDsSize.s4.dp))

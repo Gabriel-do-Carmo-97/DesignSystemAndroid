@@ -77,7 +77,7 @@ fun WgcKutukuCartScreen(
         modifier = modifier,
         bottomBar = {
             Surface(
-                color = Color(WgcCoreDsColors.retailSurface),
+                color = Color(WgcCoreDsColors.white),
                 tonalElevation = 8.dp,
                 shadowElevation = 8.dp
             ) {
@@ -92,13 +92,13 @@ fun WgcKutukuCartScreen(
                         Text(
                             text = "Total amount",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.retailSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                         Text(
                             text = "$${String.format("%.2f", totalAmount)}",
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                     }
 
@@ -109,7 +109,7 @@ fun WgcKutukuCartScreen(
                             .width(160.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.retailPrimary)
+                            containerColor = Color(WgcCoreDsColors.blue33)
                         )
                     ) {
                         Text(
@@ -126,7 +126,7 @@ fun WgcKutukuCartScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(WgcCoreDsColors.retailSurface))
+                .background(Color(WgcCoreDsColors.white))
                 .padding(paddingValues)
         ) {
             // Top Bar
@@ -141,7 +141,7 @@ fun WgcKutukuCartScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
 
@@ -149,14 +149,14 @@ fun WgcKutukuCartScreen(
                     text = "My Cart",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
 
                 IconButton(onClick = {}) {
                     Icon(
                         imageVector = Icons.Default.ShoppingBag,
                         contentDescription = "Carrinho",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             }
@@ -211,7 +211,7 @@ fun WgcKutukuPaymentScreen(
         modifier = modifier,
         bottomBar = {
             Surface(
-                color = Color(WgcCoreDsColors.retailSurface),
+                color = Color(WgcCoreDsColors.white),
                 tonalElevation = 8.dp,
                 shadowElevation = 8.dp
             ) {
@@ -228,13 +228,13 @@ fun WgcKutukuPaymentScreen(
                         Text(
                             text = "Total amount",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.retailSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                         Text(
                             text = totalPrice,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                     }
 
@@ -247,7 +247,7 @@ fun WgcKutukuPaymentScreen(
                             .height(56.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.retailPrimary)
+                            containerColor = Color(WgcCoreDsColors.blue33)
                         )
                     ) {
                         Text(
@@ -264,7 +264,7 @@ fun WgcKutukuPaymentScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(WgcCoreDsColors.retailSurface))
+                .background(Color(WgcCoreDsColors.white))
                 .verticalScroll(rememberScrollState())
                 .padding(paddingValues)
                 .padding(horizontal = WgcCoreDsSpacing.lg.dp)
@@ -280,7 +280,7 @@ fun WgcKutukuPaymentScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f))
@@ -288,7 +288,7 @@ fun WgcKutukuPaymentScreen(
                     text = "Payment",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Spacer(modifier = Modifier.size(48.dp))
@@ -306,13 +306,13 @@ fun WgcKutukuPaymentScreen(
                     text = "Address",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
                 Text(
                     text = "Edit",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.retailPrimary),
+                    color = Color(WgcCoreDsColors.blue33),
                     modifier = Modifier.clickable(onClick = onEditAddressClick)
                 )
             }
@@ -324,7 +324,7 @@ fun WgcKutukuPaymentScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
-                    .background(Color(WgcCoreDsColors.retailBackground))
+                    .background(Color(WgcCoreDsColors.blueLight39))
                     .padding(WgcCoreDsSpacing.md.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -332,13 +332,13 @@ fun WgcKutukuPaymentScreen(
                     modifier = Modifier
                         .size(68.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
-                        .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight21)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.retailAlertRed),
+                        tint = Color(WgcCoreDsColors.red23),
                         modifier = Modifier.size(32.dp)
                     )
                 }
@@ -350,13 +350,13 @@ fun WgcKutukuPaymentScreen(
                         text = addressTitle,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
                     Text(
                         text = addressSubtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.retailSecondaryText),
+                        color = Color(WgcCoreDsColors.gray4),
                         lineHeight = MaterialTheme.typography.bodySmall.lineHeight
                     )
                 }
@@ -369,7 +369,7 @@ fun WgcKutukuPaymentScreen(
                 text = "Products (${items.size})",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailDark)
+                color = Color(WgcCoreDsColors.grayDark2)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -385,7 +385,7 @@ fun WgcKutukuPaymentScreen(
                         modifier = Modifier
                             .size(60.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
-                            .background(Color(WgcCoreDsColors.retailBackground)),
+                            .background(Color(WgcCoreDsColors.blueLight39)),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!item.imageUrl.isNullOrEmpty()) {
@@ -406,12 +406,12 @@ fun WgcKutukuPaymentScreen(
                             text = item.title,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                         Text(
                             text = "Color: ${item.colorVariant}",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.retailSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                     }
 
@@ -419,7 +419,7 @@ fun WgcKutukuPaymentScreen(
                         text = item.price,
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             }
@@ -431,7 +431,7 @@ fun WgcKutukuPaymentScreen(
                 text = "Payment Method",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailDark)
+                color = Color(WgcCoreDsColors.grayDark2)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -442,7 +442,7 @@ fun WgcKutukuPaymentScreen(
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
                     .border(
                         width = 1.dp,
-                        color = Color(WgcCoreDsColors.retailBorder),
+                        color = Color(WgcCoreDsColors.blueLight10),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp)
                     )
                     .clickable(onClick = onChangePaymentMethodClick)
@@ -455,13 +455,13 @@ fun WgcKutukuPaymentScreen(
                         modifier = Modifier
                             .size(44.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.retailBackground)),
+                            .background(Color(WgcCoreDsColors.blueLight39)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.retailPrimary)
+                            tint = Color(WgcCoreDsColors.blue33)
                         )
                     }
 
@@ -472,12 +472,12 @@ fun WgcKutukuPaymentScreen(
                             text = "Master Card",
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                         Text(
                             text = "**** **** 1234",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.retailSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                     }
                 }
@@ -485,7 +485,7 @@ fun WgcKutukuPaymentScreen(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailSecondaryText),
+                    tint = Color(WgcCoreDsColors.gray4),
                     modifier = Modifier.size(16.dp)
                 )
             }

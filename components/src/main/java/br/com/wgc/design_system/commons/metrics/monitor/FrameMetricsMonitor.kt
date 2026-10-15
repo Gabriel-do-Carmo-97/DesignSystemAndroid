@@ -4,8 +4,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.FrameMetrics
 import android.view.Window
-import br.com.wgc.design_system.commons.constants.ComponentsConstants
 import br.com.wgc.design_system.commons.metrics.model.JankReport
+import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
 /**
  * Monitor agnóstico de Jank e taxas de renderização utilizando [Window.OnFrameMetricsAvailableListener].
@@ -58,8 +58,8 @@ class FrameMetricsMonitor(
     fun isMonitoring(): Boolean = isMonitoring
 
     companion object {
-        const val DEFAULT_JANK_THRESHOLD_MS: Long = ComponentsConstants.Metrics.DEFAULT_JANK_THRESHOLD_MS
-        const val FROZEN_THRESHOLD_MS: Long = ComponentsConstants.Metrics.FROZEN_THRESHOLD_MS
-        private const val NANOS_PER_MILLI: Long = ComponentsConstants.Metrics.NANOS_PER_MILLI
+        const val DEFAULT_JANK_THRESHOLD_MS: Long  = ComponentsConstants.Metrics.DEFAULT_JANK_THRESHOLD_MS
+        const val FROZEN_THRESHOLD_MS: Long  = ComponentsConstants.Metrics.FROZEN_THRESHOLD_MS
+        private const val NANOS_PER_MILLI: Long  = ComponentsConstants.Metrics.NANOS_PER_MILLI
     }
 }

@@ -1,16 +1,17 @@
 package br.com.wgc.design_system.core
 
+
 /**
  * Tokens e especificações para renderização tipográfica de markdown e rich text corporativo.
  */
 object WgcMarkdownTypographyTokens {
-    const val codeFontFamilyMonospace = "monospace"
-    const val codeBlockBackgroundDarkArgb = 0xFF1E1E1E.toInt()
-    const val codeBlockBackgroundLightArgb = 0xFFF5F5F5.toInt()
+    const val codeFontFamilyMonospace = CoreConstants.MarkdownTypographyTokens.CODE_FONT_FAMILY_MONOSPACE
+    const val codeBlockBackgroundDarkArgb = CoreConstants.MarkdownTypographyTokens.CODE_BLOCK_BACKGROUND_DARK_ARGB
+    const val codeBlockBackgroundLightArgb = CoreConstants.MarkdownTypographyTokens.CODE_BLOCK_BACKGROUND_LIGHT_ARGB
 
-    const val inlineCodePaddingHorizontalDp = 4f
-    const val inlineCodeRadiusDp = 4f
+    const val inlineCodePaddingHorizontalDp = CoreConstants.MarkdownTypographyTokens.INLINE_CODE_PADDING_HORIZONTAL_DP
+    const val inlineCodeRadiusDp = CoreConstants.MarkdownTypographyTokens.INLINE_CODE_RADIUS_DP
 
-    const val blockquoteBorderWidthDp = 3f
-    const val blockquotePaddingStartDp = 12f
+    const val blockquoteBorderWidthDp = CoreConstants.MarkdownTypographyTokens.BLOCKQUOTE_BORDER_WIDTH_DP
+    const val blockquotePaddingStartDp = CoreConstants.MarkdownTypographyTokens.BLOCKQUOTE_PADDING_START_DP
 }

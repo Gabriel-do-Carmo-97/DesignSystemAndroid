@@ -75,7 +75,7 @@ fun WgcDrogaRaiaCartTemplate(
                     text = "Sua Sacola (2 itens)",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
             }
 
@@ -109,7 +109,7 @@ private fun DeliverySelectorCard() {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -121,7 +121,7 @@ private fun DeliverySelectorCard() {
             Icon(
                 imageVector = Icons.Default.Storefront,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.pharmacyChainRed),
+                tint = Color(WgcCoreDsColors.red8),
                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -130,12 +130,12 @@ private fun DeliverySelectorCard() {
                     text = "Retire em 15 min na Farmácia Pinheiros",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
                 Text(
                     text = "Grátis • Rua Teodoro Sampaio, 1800",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
             }
         }
@@ -153,7 +153,7 @@ private fun CartItemCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -167,18 +167,18 @@ private fun CartItemCard(
                     text = title,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark28)
                 )
                 Text(
                     text = laboratory,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
                 if (requiresPrescription) {
                     Text(
                         text = "Receita retida no momento da entrega",
                         fontSize = 9.sp,
-                        color = Color(WgcCoreDsColors.pharmacyChainRed),
+                        color = Color(WgcCoreDsColors.red8),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -186,7 +186,7 @@ private fun CartItemCard(
                     text = "R$ " + String.format(Locale.getDefault(), "%.2f", price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainNavy)
+                    color = Color(WgcCoreDsColors.blueDark16)
                 )
             }
 
@@ -195,7 +195,7 @@ private fun CartItemCard(
                     Icon(
                         imageVector = if (quantity > 1) Icons.Default.Remove else Icons.Default.DeleteOutline,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainRed),
+                        tint = Color(WgcCoreDsColors.red8),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -209,7 +209,7 @@ private fun CartItemCard(
                     Icon(
                         imageVector = Icons.Default.Add,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainNavy),
+                        tint = Color(WgcCoreDsColors.blueDark16),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -228,7 +228,7 @@ private fun CartBottomBar(total: Double, onCheckout: () -> Unit) {
             bottomStart = WgcCoreDsBorderRadius.none0.dp,
             bottomEnd = WgcCoreDsBorderRadius.none0.dp
         ),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level6.dp)
     ) {
         Row(
@@ -242,13 +242,13 @@ private fun CartBottomBar(total: Double, onCheckout: () -> Unit) {
                 Text(
                     text = "Total:",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
                 Text(
                     text = "R$ " + String.format(Locale.getDefault(), "%.2f", total),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainNavy)
+                    color = Color(WgcCoreDsColors.blueDark16)
                 )
             }
 

@@ -164,7 +164,7 @@ fun WgcPropertyRentalFavoritesTemplate(
 private fun FavoritesTopBar(count: Int) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Column(
@@ -179,12 +179,12 @@ private fun FavoritesTopBar(count: Int) {
                 text = "Meus Favoritos",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
             Text(
                 text = "$count imóveis salvos para acompanhar",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                color = Color(WgcCoreDsColors.blue21)
             )
         }
     }
@@ -207,13 +207,13 @@ private fun FavoritesEmptyState(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s80.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.propertyRentalPrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight15)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.FavoriteBorder,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.propertyRentalCoral),
+                    tint = Color(WgcCoreDsColors.red28),
                     modifier = Modifier.size(WgcCoreDsSize.s40.dp)
                 )
             }
@@ -224,7 +224,7 @@ private fun FavoritesEmptyState(
                 text = "Você ainda não favoritou nenhum imóvel",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -232,7 +232,7 @@ private fun FavoritesEmptyState(
             Text(
                 text = "Toque no ícone de coração nos imóveis que gostar para salvá-los e receber alertas de desconto.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                color = Color(WgcCoreDsColors.blue21)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -241,7 +241,7 @@ private fun FavoritesEmptyState(
                 onClick = onExploreClick,
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyRentalYellow))
+                    containerColor = Color(WgcCoreDsColors.yellow6))
             ) {
                 Text(
                     text = "Explorar Imóveis",

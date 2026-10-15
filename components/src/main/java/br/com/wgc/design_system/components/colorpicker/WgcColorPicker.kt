@@ -173,7 +173,7 @@ private fun WgcColorPickerIconPreview() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             WgcColorPicker(
-                selectedColor = Color(WgcCoreDsColors.foodDeliveryRed),
+                selectedColor = Color(WgcCoreDsColors.red18),
                 onColorSelected = {},
                 triggerType = WgcColorPickerTriggerType.ICON
             )

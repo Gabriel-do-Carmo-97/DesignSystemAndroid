@@ -49,7 +49,7 @@ fun WgcQuickShopOfferBanner(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.quickShopPrimary))
+            .background(Color(WgcCoreDsColors.orange37))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Row(

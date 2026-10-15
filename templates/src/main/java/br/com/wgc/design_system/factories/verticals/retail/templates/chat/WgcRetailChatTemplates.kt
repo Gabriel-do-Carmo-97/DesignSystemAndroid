@@ -70,7 +70,7 @@ fun WgcKutukuMessageScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.retailSurface))
+            .background(Color(WgcCoreDsColors.white))
             .padding(horizontal = WgcCoreDsSpacing.lg.dp, vertical = WgcCoreDsSpacing.sm.dp)
     ) {
         // Top Bar
@@ -85,7 +85,7 @@ fun WgcKutukuMessageScreen(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.retailDark)
+                    tint = Color(WgcCoreDsColors.grayDark2)
                 )
             }
 
@@ -93,7 +93,7 @@ fun WgcKutukuMessageScreen(
                 text = "Message",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailDark)
+                color = Color(WgcCoreDsColors.grayDark2)
             )
 
             Box(contentAlignment = Alignment.TopEnd) {
@@ -101,7 +101,7 @@ fun WgcKutukuMessageScreen(
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notificações",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
                 Box(
@@ -109,7 +109,7 @@ fun WgcKutukuMessageScreen(
                         .padding(top = WgcCoreDsSpacing.xs.dp, end = WgcCoreDsSpacing.xs.dp)
                         .size(8.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.retailAlertRed))
+                        .background(Color(WgcCoreDsColors.red23))
                 )
             }
         }
@@ -120,12 +120,12 @@ fun WgcKutukuMessageScreen(
         OutlinedTextField(
             value = searchQuery,
             onValueChange = { searchQuery = it },
-            placeholder = { Text("Search something...", color = Color(WgcCoreDsColors.retailSecondaryText)) },
+            placeholder = { Text("Search something...", color = Color(WgcCoreDsColors.gray4)) },
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailDark)
+                    tint = Color(WgcCoreDsColors.grayDark2)
                 )
             },
             trailingIcon = {
@@ -133,15 +133,15 @@ fun WgcKutukuMessageScreen(
                     Icon(
                         imageVector = Icons.Default.Tune,
                         contentDescription = "Filtros",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             },
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp),
             modifier = Modifier.fillMaxWidth(),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = Color(WgcCoreDsColors.retailPrimary),
-                unfocusedBorderColor = Color(WgcCoreDsColors.retailBorder)
+                focusedBorderColor = Color(WgcCoreDsColors.blue33),
+                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight10)
             ),
             singleLine = true
         )
@@ -153,7 +153,7 @@ fun WgcKutukuMessageScreen(
             text = "Activities",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -171,10 +171,10 @@ fun WgcKutukuMessageScreen(
                         modifier = Modifier
                             .size(64.dp)
                             .clip(CircleShape)
-                            .border(2.dp, Color(WgcCoreDsColors.retailPrimary), CircleShape)
+                            .border(2.dp, Color(WgcCoreDsColors.blue33), CircleShape)
                             .padding(3.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                            .background(Color(WgcCoreDsColors.blueLight21)),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!user.avatarUrl.isNullOrEmpty()) {
@@ -194,7 +194,7 @@ fun WgcKutukuMessageScreen(
                         text = user.name,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             }
@@ -207,7 +207,7 @@ fun WgcKutukuMessageScreen(
             text = "Messages",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -227,10 +227,10 @@ fun WgcKutukuMessageScreen(
                         modifier = Modifier
                             .size(56.dp)
                             .clip(CircleShape)
-                            .border(1.5.dp, Color(WgcCoreDsColors.retailPrimary), CircleShape)
+                            .border(1.5.dp, Color(WgcCoreDsColors.blue33), CircleShape)
                             .padding(2.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                            .background(Color(WgcCoreDsColors.blueLight21)),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!msg.avatarUrl.isNullOrEmpty()) {
@@ -251,13 +251,13 @@ fun WgcKutukuMessageScreen(
                             text = msg.senderName,
                             style = MaterialTheme.typography.bodyLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailDark)
+                            color = Color(WgcCoreDsColors.grayDark2)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
                         Text(
                             text = msg.lastMessage,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.retailSecondaryText),
+                            color = Color(WgcCoreDsColors.gray4),
                             maxLines = 2,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -272,7 +272,7 @@ fun WgcKutukuMessageScreen(
                         Text(
                             text = msg.timeAgo,
                             style = MaterialTheme.typography.labelSmall,
-                            color = Color(WgcCoreDsColors.retailSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
 
                         if (msg.unreadCount > 0) {
@@ -280,7 +280,7 @@ fun WgcKutukuMessageScreen(
                                 modifier = Modifier
                                     .size(22.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.retailPrimary)),
+                                    .background(Color(WgcCoreDsColors.blue33)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(

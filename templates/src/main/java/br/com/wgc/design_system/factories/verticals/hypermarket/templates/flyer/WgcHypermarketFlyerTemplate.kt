@@ -111,12 +111,12 @@ fun WgcExtraFlyerTemplate(
                                 Icon(
                                     imageVector = androidx.compose.material.icons.Icons.AutoMirrored.Filled.MenuBook,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.hypermarketRed),
+                                    tint = Color(WgcCoreDsColors.red12),
                                     modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                                 )
                                 Text(
                                     text = "FOLHETO DIGITAL",
-                                    color = Color(WgcCoreDsColors.hypermarketRed),
+                                    color = Color(WgcCoreDsColors.red12),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 1.sp
@@ -124,7 +124,7 @@ fun WgcExtraFlyerTemplate(
                             }
                             Text(
                                 text = "Ofertas da Semana Extra",
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -134,7 +134,7 @@ fun WgcExtraFlyerTemplate(
                             Icon(
                                 imageVector = Icons.Default.Share,
                                 contentDescription = "Compartilhar folheto",
-                                tint = Color(WgcCoreDsColors.hypermarketDark),
+                                tint = Color(WgcCoreDsColors.grayDark7),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -147,7 +147,7 @@ fun WgcExtraFlyerTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketRed)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red12)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(
@@ -158,7 +158,7 @@ fun WgcExtraFlyerTemplate(
                     ) {
                         Text(
                             text = "EDIÇÃO VÁLIDA ATÉ DOMINGO, 21 DE SETEMBRO",
-                            color = Color(WgcCoreDsColors.hypermarketYellow),
+                            color = Color(WgcCoreDsColors.yellow5),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 0.5.sp
@@ -183,11 +183,11 @@ fun WgcExtraFlyerTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.white)
                                 )
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = if (isSelected) Color(WgcCoreDsColors.hypermarketRed) else Color(WgcCoreDsColors.hypermarketBorder),
+                                    color = if (isSelected) Color(WgcCoreDsColors.red12) else Color(WgcCoreDsColors.blueLight6),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .clickable { onSelectPage(index) }
@@ -195,7 +195,7 @@ fun WgcExtraFlyerTemplate(
                         ) {
                             Text(
                                 text = pages[index],
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.hypermarketDark),
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )

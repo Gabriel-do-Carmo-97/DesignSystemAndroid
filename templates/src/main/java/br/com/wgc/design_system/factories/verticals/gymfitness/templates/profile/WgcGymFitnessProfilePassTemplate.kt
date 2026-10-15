@@ -114,7 +114,7 @@ fun WgcGymFitnessProfilePassTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.gymTextPrimary),
+                                    tint = Color(WgcCoreDsColors.white),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -122,14 +122,14 @@ fun WgcGymFitnessProfilePassTemplate(
                         Column {
                             Text(
                                 text = "ACESSO & PERFIL",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Carteirinha Digital",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -159,8 +159,8 @@ fun WgcGymFitnessProfilePassTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                 ) {
                     Column(
                         modifier = Modifier
@@ -175,13 +175,13 @@ fun WgcGymFitnessProfilePassTemplate(
                         ) {
                             Text(
                                 text = "Frequência Mensal",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "${user.daysTrainedThisMonth} de ${user.monthlyGoal} treinos",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -193,8 +193,8 @@ fun WgcGymFitnessProfilePassTemplate(
                                 .fillMaxWidth()
                                 .height(WgcCoreDsSize.s8.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                            color = Color(WgcCoreDsColors.gymYellow),
-                            trackColor = Color(WgcCoreDsColors.gymMediumGray)
+                            color = Color(WgcCoreDsColors.orange23),
+                            trackColor = Color(WgcCoreDsColors.grayDark21)
                         )
 
                         // Dias da semana treinados
@@ -213,8 +213,8 @@ fun WgcGymFitnessProfilePassTemplate(
                                             .size(WgcCoreDsSize.s28.dp)
                                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                             .background(
-                                                if (trained) Color(WgcCoreDsColors.gymYellow)
-                                                else Color(WgcCoreDsColors.gymMediumGray)
+                                                if (trained) Color(WgcCoreDsColors.orange23)
+                                                else Color(WgcCoreDsColors.grayDark21)
                                             ),
                                         contentAlignment = Alignment.Center
                                     ) {
@@ -222,14 +222,14 @@ fun WgcGymFitnessProfilePassTemplate(
                                             Icon(
                                                 imageVector = Icons.Default.Check,
                                                 contentDescription = null,
-                                                tint = Color(WgcCoreDsColors.gymTextInverse),
+                                                tint = Color(WgcCoreDsColors.black),
                                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                             )
                                         }
                                     }
                                     Text(
                                         text = label,
-                                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                                        color = Color(WgcCoreDsColors.gray16),
                                         fontSize = 10.sp
                                     )
                                 }
@@ -244,8 +244,8 @@ fun WgcGymFitnessProfilePassTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                 ) {
                     Column(
                         modifier = Modifier
@@ -260,12 +260,12 @@ fun WgcGymFitnessProfilePassTemplate(
                             Icon(
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.gymYellow),
+                                tint = Color(WgcCoreDsColors.orange23),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                             Text(
                                 text = "Benefícios do seu Plano Black",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -285,19 +285,19 @@ fun WgcGymFitnessProfilePassTemplate(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s32.dp)
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                        .background(Color(WgcCoreDsColors.gymMediumGray)),
+                                        .background(Color(WgcCoreDsColors.grayDark21)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Icon(
                                         imageVector = icon,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymYellow),
+                                        tint = Color(WgcCoreDsColors.orange23),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                 }
                                 Text(
                                     text = desc,
-                                    color = Color(WgcCoreDsColors.gymTextPrimary),
+                                    color = Color(WgcCoreDsColors.white),
                                     fontSize = 12.sp,
                                     modifier = Modifier.weight(1f)
                                 )
@@ -325,8 +325,8 @@ fun WgcGymFitnessProfilePassTemplate(
                                 .fillMaxWidth()
                                 .clickable { onManagePlan() },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gymDarkGray)),
-                            border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                            colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark7)),
+                            border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                         ) {
                             Row(
                                 modifier = Modifier
@@ -342,12 +342,12 @@ fun WgcGymFitnessProfilePassTemplate(
                                     Icon(
                                         imageVector = icon,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymYellow),
+                                        tint = Color(WgcCoreDsColors.orange23),
                                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                     )
                                     Text(
                                         text = title,
-                                        color = Color(WgcCoreDsColors.gymTextPrimary),
+                                        color = Color(WgcCoreDsColors.white),
                                         fontSize = 13.sp,
                                         fontWeight = FontWeight.Medium
                                     )
@@ -355,7 +355,7 @@ fun WgcGymFitnessProfilePassTemplate(
                                 Icon(
                                     imageVector = Icons.Default.ChevronRight,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.gymTextSecondary),
+                                    tint = Color(WgcCoreDsColors.gray16),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                             }

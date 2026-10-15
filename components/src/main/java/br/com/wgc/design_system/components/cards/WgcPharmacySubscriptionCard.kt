@@ -50,9 +50,9 @@ fun WgcPharmacySubscriptionCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainSurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.pharmacyChainBorder))
+        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight8))
     ) {
         Column(
             modifier = Modifier
@@ -69,13 +69,13 @@ fun WgcPharmacySubscriptionCard(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s36.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.pharmacyChainGreenLight)),
+                            .background(Color(WgcCoreDsColors.greenLight6)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.EventRepeat,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.pharmacyChainGreen),
+                            tint = Color(WgcCoreDsColors.green3),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -84,14 +84,14 @@ fun WgcPharmacySubscriptionCard(
                         Text(
                             text = "Assinatura Ativa",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.pharmacyChainGreen),
+                            color = Color(WgcCoreDsColors.green3),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = medicineName,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.pharmacyChainTextPrimary)
+                            color = Color(WgcCoreDsColors.blueDark28)
                         )
                     }
                 }
@@ -100,7 +100,7 @@ fun WgcPharmacySubscriptionCard(
                     text = "R$ " + String.format(Locale.getDefault(), "%.2f", monthlyPrice) + "/mês",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainNavy)
+                    color = Color(WgcCoreDsColors.blueDark16)
                 )
             }
 
@@ -113,20 +113,20 @@ fun WgcPharmacySubscriptionCard(
                 Icon(
                     imageVector = Icons.Default.CalendarToday,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                    tint = Color(WgcCoreDsColors.blue20),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = "Frequência: $dosageFrequency",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextSecondary)
+                    color = Color(WgcCoreDsColors.blue20)
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = "Próxima Entrega: $nextDeliveryDate",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.pharmacyChainRed),
+                    color = Color(WgcCoreDsColors.red8),
                     fontWeight = FontWeight.SemiBold
                 )
             }

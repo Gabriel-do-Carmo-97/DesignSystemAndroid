@@ -68,7 +68,7 @@ fun WgcFreshGroceryProductCard(
                 .fillMaxWidth()
                 .height(WgcCoreDsSize.s140.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.megaStorerSurface))
+                .background(Color(WgcCoreDsColors.greenLight16))
         ) {
             if (imageSlot != null) {
                 imageSlot()
@@ -78,7 +78,7 @@ fun WgcFreshGroceryProductCard(
                         .size(WgcCoreDsSize.s80.dp)
                         .align(Alignment.Center)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.megaStorerPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.greenLight8)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -95,7 +95,7 @@ fun WgcFreshGroceryProductCard(
                         .padding(WgcCoreDsSpacing.xs8.dp)
                         .align(Alignment.TopStart)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                        .background(Color(WgcCoreDsColors.megaStorerAccent))
+                        .background(Color(WgcCoreDsColors.red29))
                         .padding(
                             horizontal = WgcCoreDsSpacing.xs8.dp,
                             vertical = WgcCoreDsSpacing.xxs4.dp
@@ -123,7 +123,7 @@ fun WgcFreshGroceryProductCard(
                 Icon(
                     imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                     contentDescription = "Favoritar",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.megaStorerAccent) else Color(WgcCoreDsColors.megaStorerSecondaryText),
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red29) else Color(WgcCoreDsColors.gray9),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
             }
@@ -136,7 +136,7 @@ fun WgcFreshGroceryProductCard(
             Icon(
                 imageVector = Icons.Default.Star,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.megaStorerGold),
+                tint = Color(WgcCoreDsColors.yellow10),
                 modifier = Modifier.size(WgcCoreDsSize.s14.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -144,7 +144,7 @@ fun WgcFreshGroceryProductCard(
                 text = rating,
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.megaStorerDark)
+                color = Color(WgcCoreDsColors.greenDark4)
             )
         }
 
@@ -155,7 +155,7 @@ fun WgcFreshGroceryProductCard(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.megaStorerDark),
+            color = Color(WgcCoreDsColors.greenDark4),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -171,7 +171,7 @@ fun WgcFreshGroceryProductCard(
                 text = price,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.megaStorerPrimary)
+                color = Color(WgcCoreDsColors.green6)
             )
 
             if (originalPrice != null) {
@@ -179,7 +179,7 @@ fun WgcFreshGroceryProductCard(
                     text = originalPrice,
                     style = MaterialTheme.typography.labelSmall,
                     textDecoration = TextDecoration.LineThrough,
-                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                    color = Color(WgcCoreDsColors.gray9)
                 )
             }
         }

@@ -59,7 +59,7 @@ fun WgcBoutiqueCartItemRow(
         modifier = modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.boutiqueSurface))
+            .background(Color(WgcCoreDsColors.blueLight32))
             .clickable(onClick = onClick)
             .padding(WgcCoreDsSpacing.sm12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -82,7 +82,7 @@ fun WgcBoutiqueCartItemRow(
                 Text(
                     text = title.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(WgcCoreDsColors.boutiquePrimary),
+                    color = Color(WgcCoreDsColors.purple8),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -99,7 +99,7 @@ fun WgcBoutiqueCartItemRow(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.boutiqueDark),
+                color = Color(WgcCoreDsColors.grayDark13),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -109,7 +109,7 @@ fun WgcBoutiqueCartItemRow(
                     text = price,
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 if (!taxInfo.isNullOrEmpty()) {
@@ -117,7 +117,7 @@ fun WgcBoutiqueCartItemRow(
                     Text(
                         text = taxInfo,
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                 }
             }
@@ -141,7 +141,7 @@ fun WgcBoutiqueCartItemRow(
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowDown,
                         contentDescription = "Diminuir",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                 }
@@ -150,7 +150,7 @@ fun WgcBoutiqueCartItemRow(
                     text = quantity.toString(),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 // Aumentar
@@ -165,7 +165,7 @@ fun WgcBoutiqueCartItemRow(
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowUp,
                         contentDescription = "Aumentar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                 }
@@ -183,7 +183,7 @@ fun WgcBoutiqueCartItemRow(
             Icon(
                 imageVector = Icons.Default.DeleteOutline,
                 contentDescription = "Remover item",
-                tint = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                tint = Color(WgcCoreDsColors.gray13),
                 modifier = Modifier.size(WgcCoreDsSize.s18.dp)
             )
         }

@@ -25,7 +25,7 @@ fun WgcInDriveNegotiateTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.biddingRidesGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.green23)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Bidding Rides • Preço Sob Demanda", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.White)
                 Text("Sua oferta: R$ 20,00", color = Color.White.copy(alpha = 0.9f))
             }
@@ -41,7 +41,7 @@ fun WgcInDriveNegotiateTemplate(modifier: Modifier = Modifier) {
                             Text("${offer.carModel} • ⭐ ${offer.rating}", color = Color.Gray, fontSize = 14.sp)
                             Text(offer.distance, color = Color.DarkGray, fontSize = 14.sp)
                         }
-                        Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.biddingRidesGreen)), shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)) {
+                        Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.green23)), shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)) {
                             Text("Aceitar R$ ${"%,.2f".format(offer.proposedPrice)}", color = Color.White, fontWeight = FontWeight.Bold)
                         }
                     }

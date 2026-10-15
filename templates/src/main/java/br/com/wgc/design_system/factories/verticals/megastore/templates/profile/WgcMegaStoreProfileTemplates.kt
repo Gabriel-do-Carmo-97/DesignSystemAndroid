@@ -87,12 +87,12 @@ fun WgcShoppeProfileScreenTemplate(
                     Text(
                         text = userName,
                         style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                     Text(
                         text = userEmail,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                        color = Color(WgcCoreDsColors.gray4)
                     )
                 }
             }
@@ -145,19 +145,19 @@ private fun ProfileOptionItem(
                 modifier = Modifier
                     .size(36.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.megaStorePrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight16)),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(icon, contentDescription = title, tint = Color(WgcCoreDsColors.megaStorePrimary), modifier = Modifier.size(20.dp))
+                Icon(icon, contentDescription = title, tint = Color(WgcCoreDsColors.blue28), modifier = Modifier.size(20.dp))
             }
             Spacer(modifier = Modifier.size(WgcCoreDsSpacing.sm.dp))
-            Text(text = title, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = Color(WgcCoreDsColors.megaStoreDark))
+            Text(text = title, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = Color(WgcCoreDsColors.grayDark14))
         }
 
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.megaStoreSecondaryText),
+            tint = Color(WgcCoreDsColors.gray4),
             modifier = Modifier.size(14.dp)
         )
     }

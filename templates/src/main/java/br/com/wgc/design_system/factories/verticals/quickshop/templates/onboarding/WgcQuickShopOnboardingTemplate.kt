@@ -69,7 +69,7 @@ fun WgcShopEaseOnboardingTemplate(
                         bottomEnd = WgcCoreDsBorderRadius.display45.dp
                     )
                 )
-                .background(Color(WgcCoreDsColors.quickShopPrimary))
+                .background(Color(WgcCoreDsColors.orange37))
                 .padding(WgcCoreDsSpacing.lg24.dp),
             contentAlignment = Alignment.Center
         ) {
@@ -115,7 +115,7 @@ fun WgcShopEaseOnboardingTemplate(
                 text = title,
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.quickShopDark),
+                color = Color(WgcCoreDsColors.grayDark19),
                 textAlign = TextAlign.Center
             )
 
@@ -124,7 +124,7 @@ fun WgcShopEaseOnboardingTemplate(
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.quickShopSecondaryText),
+                color = Color(WgcCoreDsColors.gray6),
                 textAlign = TextAlign.Center
             )
 
@@ -145,8 +145,8 @@ fun WgcShopEaseOnboardingTemplate(
                             )
                             .clip(CircleShape)
                             .background(
-                                if (isActive) Color(WgcCoreDsColors.quickShopPrimary)
-                                else Color(WgcCoreDsColors.quickShopBorder)
+                                if (isActive) Color(WgcCoreDsColors.orange37)
+                                else Color(WgcCoreDsColors.grayLight5)
                             )
                     )
                 }
@@ -160,7 +160,7 @@ fun WgcShopEaseOnboardingTemplate(
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.quickShopPrimary),
+                    containerColor = Color(WgcCoreDsColors.orange37),
                     contentColor = Color.White
                 ),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)

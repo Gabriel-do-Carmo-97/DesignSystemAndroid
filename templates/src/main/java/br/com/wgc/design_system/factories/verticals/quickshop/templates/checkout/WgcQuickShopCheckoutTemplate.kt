@@ -89,13 +89,13 @@ fun WgcShopEaseCheckoutTemplate(
                         Text(
                             text = "Total Amount",
                             style = MaterialTheme.typography.titleMedium,
-                            color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                         Text(
                             text = "$119.00",
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.ExtraBold,
-                            color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                            color = Color(WgcCoreDsColors.orange27)
                         )
                     }
 
@@ -104,7 +104,7 @@ fun WgcShopEaseCheckoutTemplate(
                     Button(
                         onClick = onConfirmOrderClick,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.quickShopPrimary),
+                            containerColor = Color(WgcCoreDsColors.orange37),
                             contentColor = Color.White
                         ),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
@@ -137,7 +137,7 @@ fun WgcShopEaseCheckoutTemplate(
                             bottomEnd = WgcCoreDsBorderRadius.xxl24.dp
                         )
                     )
-                    .background(Color(WgcCoreDsColors.quickShopPrimary))
+                    .background(Color(WgcCoreDsColors.orange37))
                     .padding(
                         horizontal = WgcCoreDsSpacing.lg24.dp,
                         vertical = WgcCoreDsSpacing.md16.dp
@@ -201,20 +201,20 @@ fun WgcShopEaseCheckoutTemplate(
                                 text = item.product.title,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.quickShopDark)
+                                color = Color(WgcCoreDsColors.grayDark19)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = "Size: ${item.selectedSize} | Color: ${item.selectedColor}",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                                color = Color(WgcCoreDsColors.gray6)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                             Text(
                                 text = item.product.price,
                                 style = MaterialTheme.typography.labelLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                                color = Color(WgcCoreDsColors.orange27)
                             )
                         }
 
@@ -234,7 +234,7 @@ fun WgcShopEaseCheckoutTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Remove,
                                     contentDescription = "Remove",
-                                    tint = Color(WgcCoreDsColors.quickShopDark),
+                                    tint = Color(WgcCoreDsColors.grayDark19),
                                     modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                 )
                             }
@@ -256,7 +256,7 @@ fun WgcShopEaseCheckoutTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Add,
                                     contentDescription = "Add",
-                                    tint = Color(WgcCoreDsColors.quickShopDark),
+                                    tint = Color(WgcCoreDsColors.grayDark19),
                                     modifier = Modifier.size(WgcCoreDsSize.s12.dp)
                                 )
                             }
@@ -272,7 +272,7 @@ fun WgcShopEaseCheckoutTemplate(
                         text = "Payment Method",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.quickShopDark)
+                        color = Color(WgcCoreDsColors.grayDark19)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -281,14 +281,14 @@ fun WgcShopEaseCheckoutTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.quickShopSurface))
+                            .background(Color(WgcCoreDsColors.blueLight36))
                             .padding(WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.quickShopPrimary),
+                            tint = Color(WgcCoreDsColors.orange37),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
 
@@ -299,12 +299,12 @@ fun WgcShopEaseCheckoutTemplate(
                                 text = "MasterCard",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.quickShopDark)
+                                color = Color(WgcCoreDsColors.grayDark19)
                             )
                             Text(
                                 text = "**** **** **** 4321",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                                color = Color(WgcCoreDsColors.gray6)
                             )
                         }
 
@@ -312,7 +312,7 @@ fun WgcShopEaseCheckoutTemplate(
                             text = "Change",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.quickShopPrimary),
+                            color = Color(WgcCoreDsColors.orange37),
                             modifier = Modifier.clickable { /* change payment */ }
                         )
                     }
@@ -326,7 +326,7 @@ fun WgcShopEaseCheckoutTemplate(
                         text = "Order Breakdown",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.quickShopDark)
+                        color = Color(WgcCoreDsColors.grayDark19)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -338,13 +338,13 @@ fun WgcShopEaseCheckoutTemplate(
                         Text(
                             text = "Subtotal",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                         Text(
                             text = "$119.00",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.quickShopDark)
+                            color = Color(WgcCoreDsColors.grayDark19)
                         )
                     }
 
@@ -357,13 +357,13 @@ fun WgcShopEaseCheckoutTemplate(
                         Text(
                             text = "Delivery Fee",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                         Text(
                             text = "Free",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.quickShopSuccessGreen)
+                            color = Color(WgcCoreDsColors.green26)
                         )
                     }
 

@@ -101,12 +101,12 @@ fun WgcNtcActivityTemplate(
                                 Icon(
                                     imageVector = Icons.Default.EmojiEvents,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.trainingVolt),
+                                    tint = Color(WgcCoreDsColors.green28),
                                     modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                                 )
                                 Text(
                                     text = "SUA ATIVIDADE",
-                                    color = Color(WgcCoreDsColors.trainingVolt),
+                                    color = Color(WgcCoreDsColors.green28),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Black,
                                     letterSpacing = 1.sp
@@ -114,7 +114,7 @@ fun WgcNtcActivityTemplate(
                             }
                             Text(
                                 text = "Histórico & Conquistas",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -123,17 +123,17 @@ fun WgcNtcActivityTemplate(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.trainingDarkGray))
+                                .background(Color(WgcCoreDsColors.grayDark11))
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = Color(WgcCoreDsColors.trainingMediumGray),
+                                    color = Color(WgcCoreDsColors.grayDark20),
                                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
                                 .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                         ) {
                             Text(
                                 text = "${stats.totalWorkoutsAllTime} Treinos",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -147,10 +147,10 @@ fun WgcNtcActivityTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.5f)
+                        Color(WgcCoreDsColors.orange500).copy(alpha = 0.5f)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
@@ -165,13 +165,13 @@ fun WgcNtcActivityTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s52.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.trainingOrange).copy(alpha = 0.2f)),
+                                .background(Color(WgcCoreDsColors.orange500).copy(alpha = 0.2f)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.LocalFireDepartment,
                                 contentDescription = "Fogo do Streak",
-                                tint = Color(WgcCoreDsColors.trainingOrange),
+                                tint = Color(WgcCoreDsColors.orange500),
                                 modifier = Modifier.size(WgcCoreDsSize.s32.dp)
                             )
                         }
@@ -179,13 +179,13 @@ fun WgcNtcActivityTemplate(
                         Column {
                             Text(
                                 text = "SEQUÊNCIA DE ${stats.currentStreakDays} DIAS 🔥",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Você está em ritmo de atleta profissional. Continue treinando amanhã para manter o fogo aceso!",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 12.sp,
                                 lineHeight = 16.sp
                             )
@@ -204,10 +204,10 @@ fun WgcNtcActivityTemplate(
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                         border = androidx.compose.foundation.BorderStroke(
                             WgcCoreDsSize.s1.dp,
-                            Color(WgcCoreDsColors.trainingMediumGray)
+                            Color(WgcCoreDsColors.grayDark20)
                         )
                     ) {
                         Column(
@@ -219,18 +219,18 @@ fun WgcNtcActivityTemplate(
                             Icon(
                                 imageVector = Icons.Default.Schedule,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingVolt),
+                                tint = Color(WgcCoreDsColors.green28),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                             Text(
                                 text = "${stats.weeklyMinutes}",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Minutos",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 11.sp
                             )
                         }
@@ -240,10 +240,10 @@ fun WgcNtcActivityTemplate(
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                         border = androidx.compose.foundation.BorderStroke(
                             WgcCoreDsSize.s1.dp,
-                            Color(WgcCoreDsColors.trainingMediumGray)
+                            Color(WgcCoreDsColors.grayDark20)
                         )
                     ) {
                         Column(
@@ -255,18 +255,18 @@ fun WgcNtcActivityTemplate(
                             Icon(
                                 imageVector = Icons.Default.LocalFireDepartment,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingOrange),
+                                tint = Color(WgcCoreDsColors.orange500),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                             Text(
                                 text = "${stats.weeklyCalories}",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Calorias",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 11.sp
                             )
                         }
@@ -276,10 +276,10 @@ fun WgcNtcActivityTemplate(
                     Card(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                         border = androidx.compose.foundation.BorderStroke(
                             WgcCoreDsSize.s1.dp,
-                            Color(WgcCoreDsColors.trainingMediumGray)
+                            Color(WgcCoreDsColors.grayDark20)
                         )
                     ) {
                         Column(
@@ -291,18 +291,18 @@ fun WgcNtcActivityTemplate(
                             Icon(
                                 imageVector = Icons.Default.FitnessCenter,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingBlue),
+                                tint = Color(WgcCoreDsColors.blue30),
                                 modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                             )
                             Text(
                                 text = "${stats.workoutsThisWeek}",
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Black
                             )
                             Text(
                                 text = "Treinos",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 11.sp
                             )
                         }
@@ -319,14 +319,14 @@ fun WgcNtcActivityTemplate(
                 ) {
                     Text(
                         text = "MURAL DE CONQUISTAS",
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
                     )
                     Text(
                         text = "${stats.badges.size} Desbloqueadas",
-                        color = Color(WgcCoreDsColors.trainingVolt),
+                        color = Color(WgcCoreDsColors.green28),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -338,10 +338,10 @@ fun WgcNtcActivityTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingMediumGray)
+                        Color(WgcCoreDsColors.grayDark20)
                     )
                 ) {
                     Row(
@@ -355,10 +355,10 @@ fun WgcNtcActivityTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s44.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.trainingStreakGold).copy(alpha = 0.18f))
+                                .background(Color(WgcCoreDsColors.yellow7).copy(alpha = 0.18f))
                                 .border(
                                     width = WgcCoreDsSize.s1.dp,
-                                    color = Color(WgcCoreDsColors.trainingStreakGold),
+                                    color = Color(WgcCoreDsColors.yellow7),
                                     shape = CircleShape
                                 ),
                             contentAlignment = Alignment.Center
@@ -366,7 +366,7 @@ fun WgcNtcActivityTemplate(
                             Icon(
                                 imageVector = Icons.Default.WorkspacePremium,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingStreakGold),
+                                tint = Color(WgcCoreDsColors.yellow7),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -374,20 +374,20 @@ fun WgcNtcActivityTemplate(
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = badge.title,
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = badge.description,
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 12.sp
                             )
                         }
 
                         Text(
                             text = badge.achievedDate,
-                            color = Color(WgcCoreDsColors.trainingVolt),
+                            color = Color(WgcCoreDsColors.green28),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold
                         )

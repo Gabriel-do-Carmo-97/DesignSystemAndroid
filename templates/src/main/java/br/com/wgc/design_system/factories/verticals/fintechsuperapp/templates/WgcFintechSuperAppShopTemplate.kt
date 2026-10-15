@@ -24,7 +24,7 @@ fun WgcInterShopTemplate(
             TopAppBar(
                 title = { Text("Shopping & Cashback", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechOrange),
+                    containerColor = Color(WgcCoreDsColors.orange20),
                     titleContentColor = Color.White
                 )
             )

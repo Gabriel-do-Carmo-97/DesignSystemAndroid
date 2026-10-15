@@ -18,8 +18,8 @@ class TemplatesComponentsIntegrationTest {
     fun `templates should have access to core tokens`() {
         // Verifica se os templates podem acessar tokens do core
         assertNotNull(WgcCoreDsSpacing.md16)
-        assertNotNull(WgcCoreDsColorsFacade.primary)
-        assertNotNull(WgcCoreDsColorsFacade.background)
+        assertNotNull(WgcCoreDsColorsFacade.orange500)
+        assertNotNull(WgcCoreDsColorsFacade.gray50)
     }
 
     @Test
@@ -40,11 +40,11 @@ class TemplatesComponentsIntegrationTest {
     @Test
     fun `templates should use semantic colors correctly`() {
         // Verifica se os templates usam cores semânticas do core
-        assertNotNull(WgcCoreDsColorsFacade.primary)
-        assertNotNull(WgcCoreDsColorsFacade.secondary)
-        assertNotNull(WgcCoreDsColorsFacade.error)
-        assertNotNull(WgcCoreDsColorsFacade.success)
-        assertNotNull(WgcCoreDsColorsFacade.warning)
+        assertNotNull(WgcCoreDsColorsFacade.orange500)
+        assertNotNull(WgcCoreDsColorsFacade.white)
+        assertNotNull(WgcCoreDsColorsFacade.red500)
+        assertNotNull(WgcCoreDsColorsFacade.green27)
+        assertNotNull(WgcCoreDsColorsFacade.yellow10)
     }
 
     @Test
@@ -64,8 +64,8 @@ class TemplatesComponentsIntegrationTest {
     @Test
     fun `templates should support theming through core tokens`() {
         // Verifica se os tokens de tema do core estão disponíveis para templates
-        val primaryColor = WgcCoreDsColorsFacade.primary
-        val backgroundColor = WgcCoreDsColorsFacade.background
+        val primaryColor = WgcCoreDsColorsFacade.orange500
+        val backgroundColor = WgcCoreDsColorsFacade.gray50
         
         assertNotNull(primaryColor)
         assertNotNull(backgroundColor)

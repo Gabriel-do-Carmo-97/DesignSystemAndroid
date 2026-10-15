@@ -28,7 +28,7 @@ fun WgcUrbanMobilityRideRequestTemplate(
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.urbanMobilityYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.yellow4)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Para onde vamos?", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.Black)
                 Text("Av. Brigadeiro Faria Lima, 3477", fontSize = 14.sp, color = Color.Black.copy(alpha = 0.8f))
             }
@@ -38,7 +38,7 @@ fun WgcUrbanMobilityRideRequestTemplate(
                 Button(
                     onClick = onConfirmRide,
                     modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.urbanMobilityYellow)),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.yellow4)),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                 ) {
                     Text("Confirmar Corrida", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 14.sp)
@@ -68,7 +68,7 @@ fun WgcUrbanMobilityRideRequestTemplate(
 @Composable
 fun WgcUrbanMobilityPayTemplate(modifier: Modifier = Modifier) {
     Scaffold(modifier = modifier.fillMaxSize(), topBar = {
-        Surface(color = Color(WgcCoreDsColors.urbanMobilityYellow)) {
+        Surface(color = Color(WgcCoreDsColors.yellow4)) {
             Row(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("Carteira de Mobilidade • Digital", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
             }
@@ -79,7 +79,7 @@ fun WgcUrbanMobilityPayTemplate(modifier: Modifier = Modifier) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                     Text("Saldo com rendimento diário", color = Color.Gray, fontSize = 14.sp)
                     Text("R$ 1.450,20", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp, color = Color.Black)
-                    Text("+ R$ 0,72 rendeu hoje", color = Color(WgcCoreDsColors.premiumGrocerySuccessGreen), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                    Text("+ R$ 0,72 rendeu hoje", color = Color(WgcCoreDsColors.green12), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                 }
             }
         }
@@ -113,7 +113,7 @@ fun WgcUrbanMobilityCouponsTemplate(modifier: Modifier = Modifier) {
             Text("Meus Cupons & Descontos", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text("15% OFF em até 3 corridas de Mobilidade", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.urbanMobilityYellow))
+                    Text("15% OFF em até 3 corridas de Mobilidade", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.yellow4))
                     Text("Válido até domingo para pagamentos na carteira", fontSize = 14.sp, color = Color.Gray)
                 }
             }

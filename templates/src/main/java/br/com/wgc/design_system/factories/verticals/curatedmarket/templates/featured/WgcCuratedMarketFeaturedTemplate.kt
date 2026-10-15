@@ -104,13 +104,13 @@ fun WgcTasselFeaturedTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface)),
+                        .background(Color(WgcCoreDsColors.blueLight26)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Outlined.Mail,
                         contentDescription = "Tassel Envelope",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -121,7 +121,7 @@ fun WgcTasselFeaturedTemplate(
                     text = "Featured",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -146,7 +146,7 @@ fun WgcTasselFeaturedTemplate(
                             text = tabTitle,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = if (isSelected) Color(WgcCoreDsColors.curatedMarketDark) else Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                            color = if (isSelected) Color(WgcCoreDsColors.grayDark9) else Color(WgcCoreDsColors.gray10)
                         )
 
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -158,7 +158,7 @@ fun WgcTasselFeaturedTemplate(
                                     height = WgcCoreDsSpacing.xxxs2.dp
                                 )
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.curatedMarketPrimary)
+                                    if (isSelected) Color(WgcCoreDsColors.blue37)
                                     else Color.Transparent
                                 )
                         )
@@ -189,7 +189,7 @@ fun WgcTasselFeaturedTemplate(
                                 .fillMaxWidth()
                                 .height(WgcCoreDsSize.s200.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                                .background(Color(WgcCoreDsColors.curatedMarketDark))
+                                .background(Color(WgcCoreDsColors.grayDark9))
                         ) {
                             AsyncImageDefault(
                                 image = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
@@ -214,7 +214,7 @@ fun WgcTasselFeaturedTemplate(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s36.dp)
                                         .clip(CircleShape)
-                                        .background(Color(WgcCoreDsColors.curatedMarketPrimary)),
+                                        .background(Color(WgcCoreDsColors.blue37)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Icon(
@@ -259,13 +259,13 @@ fun WgcTasselFeaturedTemplate(
                                     text = "New stores",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                                    color = Color(WgcCoreDsColors.grayDark9)
                                 )
 
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                     contentDescription = "Ver todas as lojas",
-                                    tint = Color(WgcCoreDsColors.curatedMarketDark),
+                                    tint = Color(WgcCoreDsColors.grayDark9),
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s20.dp)
                                         .clickable(onClick = onSeeAllStoresClick)
@@ -288,7 +288,7 @@ fun WgcTasselFeaturedTemplate(
                                                 .fillMaxWidth()
                                                 .height(WgcCoreDsSize.s88.dp)
                                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                                .background(Color(WgcCoreDsColors.curatedMarketSurface)),
+                                                .background(Color(WgcCoreDsColors.blueLight26)),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             if (!store.coverImageUrl.isNullOrEmpty()) {
@@ -302,7 +302,7 @@ fun WgcTasselFeaturedTemplate(
                                                     text = store.name.take(2).uppercase(),
                                                     style = MaterialTheme.typography.titleMedium,
                                                     fontWeight = FontWeight.Bold,
-                                                    color = Color(WgcCoreDsColors.curatedMarketPrimary)
+                                                    color = Color(WgcCoreDsColors.blue37)
                                                 )
                                             }
                                         }
@@ -313,12 +313,12 @@ fun WgcTasselFeaturedTemplate(
                                             text = store.name,
                                             style = MaterialTheme.typography.bodyMedium,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                                            color = Color(WgcCoreDsColors.grayDark9)
                                         )
                                         Text(
                                             text = store.category,
                                             style = MaterialTheme.typography.labelSmall,
-                                            color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                                            color = Color(WgcCoreDsColors.gray10)
                                         )
                                     }
                                 }
@@ -333,7 +333,7 @@ fun WgcTasselFeaturedTemplate(
                         text = "Trending items",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.curatedMarketDark)
+                        color = Color(WgcCoreDsColors.grayDark9)
                     )
                 }
 

@@ -72,10 +72,10 @@ fun WgcPropertyListingSearchBar(
         Row(
             modifier = Modifier
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                .background(Color(WgcCoreDsColors.propertyListingBackground))
+                .background(Color(WgcCoreDsColors.blueLight37))
                 .border(
                     width = WgcCoreDsSpacing.xxxs2.dp,
-                    color = Color(WgcCoreDsColors.propertyListingBorder),
+                    color = Color(WgcCoreDsColors.blueLight8),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                 )
                 .padding(WgcCoreDsSpacing.xxs4.dp),
@@ -114,14 +114,14 @@ fun WgcPropertyListingSearchBar(
                     Text(
                         text = placeholderText,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = "Buscar",
-                        tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                        tint = Color(WgcCoreDsColors.green14),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 },
@@ -131,7 +131,7 @@ fun WgcPropertyListingSearchBar(
                             Icon(
                                 imageVector = Icons.Default.Close,
                                 contentDescription = "Limpar busca",
-                                tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+                                tint = Color(WgcCoreDsColors.blue22),
                                 modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                             )
                         }
@@ -140,11 +140,11 @@ fun WgcPropertyListingSearchBar(
                 singleLine = true,
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = Color(WgcCoreDsColors.propertyListingPrimary),
-                    unfocusedBorderColor = Color(WgcCoreDsColors.propertyListingBorder),
-                    focusedContainerColor = Color(WgcCoreDsColors.propertyListingSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.propertyListingSurface),
-                    cursorColor = Color(WgcCoreDsColors.propertyListingPrimary)
+                    focusedBorderColor = Color(WgcCoreDsColors.green14),
+                    unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8),
+                    focusedContainerColor = Color(WgcCoreDsColors.white),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.white),
+                    cursorColor = Color(WgcCoreDsColors.green14)
                 )
             )
 
@@ -153,7 +153,7 @@ fun WgcPropertyListingSearchBar(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s52.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.propertyListingPrimary))
+                    .background(Color(WgcCoreDsColors.green14))
                     .clickable(onClick = onFilterClick),
                 contentAlignment = Alignment.Center
             ) {
@@ -171,7 +171,7 @@ fun WgcPropertyListingSearchBar(
                             .padding(WgcCoreDsSpacing.xxs4.dp)
                             .size(WgcCoreDsSize.s18.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.propertyListingOrange)),
+                            .background(Color(WgcCoreDsColors.orange18)),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -197,7 +197,7 @@ private fun PurposePill(
         modifier = Modifier
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.propertyListingPrimary) else Color.Transparent
+                if (isSelected) Color(WgcCoreDsColors.green14) else Color.Transparent
             )
             .clickable(onClick = onClick)
             .padding(
@@ -210,7 +210,7 @@ private fun PurposePill(
             text = label,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-            color = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyListingSecondaryText)
+            color = if (isSelected) Color.White else Color(WgcCoreDsColors.blue22)
         )
     }
 }

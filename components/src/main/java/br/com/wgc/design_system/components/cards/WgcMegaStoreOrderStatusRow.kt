@@ -88,7 +88,7 @@ fun WgcMegaStoreOrderStatusRow(
                         Icon(
                             imageVector = item.icon,
                             contentDescription = item.title,
-                            tint = Color(WgcCoreDsColors.megaStoreDark),
+                            tint = Color(WgcCoreDsColors.grayDark14),
                             modifier = Modifier.size(26.dp)
                         )
                         if (item.badgeCount > 0) {
@@ -97,7 +97,7 @@ fun WgcMegaStoreOrderStatusRow(
                                     .align(Alignment.TopEnd)
                                     .size(16.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.megaStorePrimary)),
+                                    .background(Color(WgcCoreDsColors.blue28)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
@@ -116,7 +116,7 @@ fun WgcMegaStoreOrderStatusRow(
                         text = item.title,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                 }
             }

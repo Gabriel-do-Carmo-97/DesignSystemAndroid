@@ -83,15 +83,15 @@ fun WgcShoppeChatScreenTemplate(
                             modifier = Modifier
                                 .size(36.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.megaStorePrimaryLight)),
+                                .background(Color(WgcCoreDsColors.blueLight16)),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(Icons.Default.SupportAgent, contentDescription = null, tint = Color(WgcCoreDsColors.megaStorePrimary))
+                            Icon(Icons.Default.SupportAgent, contentDescription = null, tint = Color(WgcCoreDsColors.blue28))
                         }
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
                         Column {
                             Text("Shoppe Support", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Text("Online Agent", fontSize = 11.sp, color = Color(WgcCoreDsColors.megaStoreSecondaryText))
+                            Text("Online Agent", fontSize = 11.sp, color = Color(WgcCoreDsColors.gray4))
                         }
                     }
                 },
@@ -132,7 +132,7 @@ fun WgcShoppeChatScreenTemplate(
                         modifier = Modifier
                             .size(48.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.megaStorePrimary))
+                            .background(Color(WgcCoreDsColors.blue28))
                     ) {
                         Icon(Icons.AutoMirrored.Filled.Send, contentDescription = "Enviar", tint = Color.White)
                     }
@@ -163,13 +163,13 @@ fun WgcShoppeChatScreenTemplate(
                                 )
                             )
                             .background(
-                                if (msg.isFromUser) Color(WgcCoreDsColors.megaStorePrimary) else Color.White
+                                if (msg.isFromUser) Color(WgcCoreDsColors.blue28) else Color.White
                             )
                             .padding(WgcCoreDsSpacing.md.dp)
                     ) {
                         Text(
                             text = msg.text,
-                            color = if (msg.isFromUser) Color.White else Color(WgcCoreDsColors.megaStoreDark),
+                            color = if (msg.isFromUser) Color.White else Color(WgcCoreDsColors.grayDark14),
                             fontSize = 14.sp
                         )
                     }
@@ -186,7 +186,7 @@ fun WgcShoppeChatScreenTemplate(
                     Text(
                         text = msg.timestamp,
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                        color = Color(WgcCoreDsColors.gray4),
                         modifier = Modifier.padding(top = 2.dp)
                     )
                 }

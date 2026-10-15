@@ -64,7 +64,7 @@ fun WgcPagueMenosHomeTemplate(
                     text = "Destaques Sempre Bem",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark21)
                 )
             }
 
@@ -80,19 +80,19 @@ private fun PagueMenosBanner() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.popularPharmacyGreen), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .background(Color(WgcCoreDsColors.green10), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Column {
             Text(
                 text = "Farmácia Popular • Sempre Bem",
-                color = Color(WgcCoreDsColors.popularPharmacySurface),
+                color = Color(WgcCoreDsColors.white),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = "Economia de verdade em medicamentos e cosméticos",
-                color = Color(WgcCoreDsColors.popularPharmacySurface).copy(alpha = 0.85f),
+                color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f),
                 fontSize = 10.sp
             )
         }
@@ -104,7 +104,7 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.popularPharmacySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -115,25 +115,25 @@ private fun PagueMenosOfferRow(offer: PagueMenosOffer, onBuy: () -> Unit) {
                 Text(
                     text = "${offer.discountPercent}% OFF",
                     fontSize = 9.sp,
-                    color = Color(WgcCoreDsColors.popularPharmacyGreen),
+                    color = Color(WgcCoreDsColors.green10),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark21)
                 )
                 Text(
                     text = offer.brand,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                    color = Color(WgcCoreDsColors.blue19)
                 )
                 Text(
                     text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyBlue)
+                    color = Color(WgcCoreDsColors.blue7)
                 )
             }
 

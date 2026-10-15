@@ -23,9 +23,9 @@ fun WgcGovBrServicesTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.citizenServicesBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue7)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("gov.br • Serviços ao Cidadão", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
-                Text("Nível da Conta: 🥇 Ouro", color = Color(WgcCoreDsColors.citizenServicesGold), fontWeight = FontWeight.Bold)
+                Text("Nível da Conta: 🥇 Ouro", color = Color(WgcCoreDsColors.yellow4), fontWeight = FontWeight.Bold)
             }
         }
     ) { padding ->

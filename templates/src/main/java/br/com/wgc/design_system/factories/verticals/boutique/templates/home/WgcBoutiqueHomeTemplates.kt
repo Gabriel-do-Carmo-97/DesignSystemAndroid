@@ -127,12 +127,12 @@ fun WgcLazaHomeTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s44.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                     ) {
                         Icon(
                             imageVector = Icons.Default.Menu,
                             contentDescription = "Menu lateral",
-                            tint = Color(WgcCoreDsColors.boutiqueDark),
+                            tint = Color(WgcCoreDsColors.grayDark13),
                             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                         )
                     }
@@ -142,13 +142,13 @@ fun WgcLazaHomeTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s44.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                     ) {
                         BadgedBox(
                             badge = {
                                 if (cartCount > 0) {
                                     Badge(
-                                        containerColor = Color(WgcCoreDsColors.boutiquePrimary),
+                                        containerColor = Color(WgcCoreDsColors.purple8),
                                         contentColor = Color.White
                                     ) {
                                         Text(text = cartCount.toString())
@@ -159,7 +159,7 @@ fun WgcLazaHomeTemplate(
                             Icon(
                                 imageVector = Icons.Default.ShoppingBag,
                                 contentDescription = "Carrinho",
-                                tint = Color(WgcCoreDsColors.boutiqueDark),
+                                tint = Color(WgcCoreDsColors.grayDark13),
                                 modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                             )
                         }
@@ -176,12 +176,12 @@ fun WgcLazaHomeTemplate(
                         text = "Hello",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                     Text(
                         text = "Welcome to Laza.",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                 }
 
@@ -204,21 +204,21 @@ fun WgcLazaHomeTemplate(
                         placeholder = {
                             Text(
                                 text = "Search...",
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         },
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Default.Search,
                                 contentDescription = "Buscar",
-                                tint = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                tint = Color(WgcCoreDsColors.gray13)
                             )
                         },
                         singleLine = true,
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
-                            unfocusedContainerColor = Color(WgcCoreDsColors.boutiqueSurface),
+                            focusedContainerColor = Color(WgcCoreDsColors.blueLight32),
+                            unfocusedContainerColor = Color(WgcCoreDsColors.blueLight32),
                             focusedBorderColor = Color.Transparent,
                             unfocusedBorderColor = Color.Transparent
                         )
@@ -228,7 +228,7 @@ fun WgcLazaHomeTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s52.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.boutiquePrimary))
+                            .background(Color(WgcCoreDsColors.purple8))
                             .clickable(onClick = onVoiceSearchClick),
                         contentAlignment = Alignment.Center
                     ) {
@@ -270,14 +270,14 @@ fun WgcLazaHomeTemplate(
                                     text = "Choose Brand",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.boutiqueDark)
+                                    color = Color(WgcCoreDsColors.grayDark13)
                                 )
 
                                 TextButton(onClick = onSeeAllBrands) {
                                     Text(
                                         text = "View All",
                                         style = MaterialTheme.typography.labelMedium,
-                                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                        color = Color(WgcCoreDsColors.gray13)
                                     )
                                 }
                             }
@@ -311,14 +311,14 @@ fun WgcLazaHomeTemplate(
                             text = "New Arrival",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
 
                         TextButton(onClick = onSeeAllProducts) {
                             Text(
                                 text = "View All",
                                 style = MaterialTheme.typography.labelMedium,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
                     }
@@ -387,10 +387,10 @@ fun LazaBottomNavigation(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.boutiquePrimary),
-                    selectedTextColor = Color(WgcCoreDsColors.boutiquePrimary),
-                    unselectedIconColor = Color(WgcCoreDsColors.boutiqueSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                    selectedIconColor = Color(WgcCoreDsColors.purple8),
+                    selectedTextColor = Color(WgcCoreDsColors.purple8),
+                    unselectedIconColor = Color(WgcCoreDsColors.gray13),
+                    unselectedTextColor = Color(WgcCoreDsColors.gray13),
                     indicatorColor = Color.Transparent
                 )
             )

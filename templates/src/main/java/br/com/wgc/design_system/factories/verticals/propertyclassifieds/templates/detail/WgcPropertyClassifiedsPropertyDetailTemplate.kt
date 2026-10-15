@@ -80,7 +80,7 @@ fun WgcZapPropertyDetailTemplate(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                    .background(Color(WgcCoreDsColors.white))
                     .padding(
                         horizontal = WgcCoreDsSpacing.sm12.dp,
                         vertical = WgcCoreDsSpacing.xs8.dp
@@ -92,7 +92,7 @@ fun WgcZapPropertyDetailTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        tint = Color(WgcCoreDsColors.blueDark10)
                     )
                 }
 
@@ -101,7 +101,7 @@ fun WgcZapPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.Share,
                             contentDescription = "Compartilhar imóvel",
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            tint = Color(WgcCoreDsColors.blueDark10)
                         )
                     }
                     IconButton(onClick = onFavoriteToggle) {
@@ -113,9 +113,9 @@ fun WgcZapPropertyDetailTemplate(
                             },
                             contentDescription = "Favoritar imóvel",
                             tint = if (property.isFavorite) {
-                                Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                                Color(WgcCoreDsColors.orange17)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                Color(WgcCoreDsColors.blueDark10)
                             }
                         )
                     }
@@ -130,7 +130,7 @@ fun WgcZapPropertyDetailTemplate(
                     topStart = WgcCoreDsBorderRadius.lg12.dp,
                     topEnd = WgcCoreDsBorderRadius.lg12.dp
                 ),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                 elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level8.dp)
             ) {
                 Row(
@@ -148,11 +148,11 @@ fun WgcZapPropertyDetailTemplate(
                             .height(WgcCoreDsSize.s48.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                            contentColor = Color(WgcCoreDsColors.blueDark31)
                         ),
                         border = androidx.compose.foundation.BorderStroke(
                             width = WgcCoreDsSpacing.xxxs2.dp,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                            color = Color(WgcCoreDsColors.blueDark31)
                         )
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -178,7 +178,7 @@ fun WgcZapPropertyDetailTemplate(
                             .height(WgcCoreDsSize.s48.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.propertyClassifiedsOrange),
+                            containerColor = Color(WgcCoreDsColors.orange17),
                             contentColor = Color.White
                         )
                     ) {
@@ -212,12 +212,12 @@ fun WgcZapPropertyDetailTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s240.dp)
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsCardPlaceholder))
+                        .background(Color(WgcCoreDsColors.blueLight1))
                 ) {
                     Icon(
                         imageVector = Icons.Default.Home,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsBorder),
+                        tint = Color(WgcCoreDsColors.blueLight8),
                         modifier = Modifier
                             .size(WgcCoreDsSize.s72.dp)
                             .align(Alignment.Center)
@@ -234,7 +234,7 @@ fun WgcZapPropertyDetailTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsOrange))
+                                    .background(Color(WgcCoreDsColors.orange17))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -253,7 +253,7 @@ fun WgcZapPropertyDetailTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsBlue))
+                                    .background(Color(WgcCoreDsColors.blue17))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -296,7 +296,7 @@ fun WgcZapPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Row(
@@ -308,13 +308,13 @@ fun WgcZapPropertyDetailTemplate(
                             text = property.price,
                             style = MaterialTheme.typography.headlineMedium,
                             fontWeight = FontWeight.ExtraBold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                            color = Color(WgcCoreDsColors.blueDark31)
                         )
                         Text(
                             text = property.pricePerSquareMeter,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
 
@@ -323,7 +323,7 @@ fun WgcZapPropertyDetailTemplate(
                         Text(
                             text = property.condoAndIptu,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
 
@@ -333,7 +333,7 @@ fun WgcZapPropertyDetailTemplate(
                         text = property.title,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -342,14 +342,14 @@ fun WgcZapPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.LocationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                         Text(
                             text = "${property.neighborhood} • ${property.address}",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                 }
@@ -379,14 +379,14 @@ fun WgcZapPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Text(
                         text = "Características do Imóvel",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -426,14 +426,14 @@ fun WgcZapPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Text(
                         text = "Comodidades e Condomínio",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -453,14 +453,14 @@ fun WgcZapPropertyDetailTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Check,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.propertyClassifiedsFipeGreen),
+                                        tint = Color(WgcCoreDsColors.green4),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                     Text(
                                         text = amenity,
                                         style = MaterialTheme.typography.bodyMedium,
-                                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                        color = Color(WgcCoreDsColors.blueDark10)
                                     )
                                 }
                             }
@@ -479,14 +479,14 @@ fun WgcZapPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Text(
                         text = "Sobre este imóvel",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -494,7 +494,7 @@ fun WgcZapPropertyDetailTemplate(
                     Text(
                         text = property.description,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
             }
@@ -506,14 +506,14 @@ fun WgcZapPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Text(
                         text = "Anunciante",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -526,13 +526,13 @@ fun WgcZapPropertyDetailTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s48.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.blueLight12)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Verified,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark31),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -545,13 +545,13 @@ fun WgcZapPropertyDetailTemplate(
                                     text = property.advertiserName,
                                     style = MaterialTheme.typography.titleSmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                    color = Color(WgcCoreDsColors.blueDark10)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                        .background(Color(WgcCoreDsColors.propertyClassifiedsBlueLight))
+                                        .background(Color(WgcCoreDsColors.blueLight25))
                                         .padding(
                                             horizontal = WgcCoreDsSpacing.xxs4.dp,
                                             vertical = WgcCoreDsSpacing.xxxs2.dp
@@ -561,7 +561,7 @@ fun WgcZapPropertyDetailTemplate(
                                         text = "Verificado",
                                         style = MaterialTheme.typography.labelSmall,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.propertyClassifiedsBlue)
+                                        color = Color(WgcCoreDsColors.blue17)
                                     )
                                 }
                             }
@@ -569,7 +569,7 @@ fun WgcZapPropertyDetailTemplate(
                             Text(
                                 text = "${property.advertiserCreci} • ${property.advertiserPhone}",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -589,7 +589,7 @@ private fun DetailSpecItem(
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+            tint = Color(WgcCoreDsColors.blueDark31),
             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
         )
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -597,12 +597,12 @@ private fun DetailSpecItem(
             text = value,
             style = MaterialTheme.typography.titleSmall,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+            color = Color(WgcCoreDsColors.blueDark10)
         )
         Text(
             text = label,
             style = MaterialTheme.typography.labelSmall,
-            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+            color = Color(WgcCoreDsColors.blue22)
         )
     }
 }

@@ -104,7 +104,7 @@ fun WgcShoppeHomeScreenTemplate(
                     Text(
                         text = "Shoppe",
                         style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.megaStorePrimary)
+                        color = Color(WgcCoreDsColors.blue28)
                     )
                 },
                 actions = {
@@ -112,14 +112,14 @@ fun WgcShoppeHomeScreenTemplate(
                         Icon(
                             imageVector = Icons.Default.CameraAlt,
                             contentDescription = "Visual Search",
-                            tint = Color(WgcCoreDsColors.megaStoreDark)
+                            tint = Color(WgcCoreDsColors.grayDark14)
                         )
                     }
                     IconButton(onClick = {}) {
                         Icon(
                             imageVector = Icons.Default.Notifications,
                             contentDescription = "Notificações",
-                            tint = Color(WgcCoreDsColors.megaStoreDark)
+                            tint = Color(WgcCoreDsColors.grayDark14)
                         )
                     }
                 },
@@ -163,7 +163,7 @@ fun WgcShoppeHomeScreenTemplate(
                     Text(
                         text = "Live & Stories",
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                     LazyRow(

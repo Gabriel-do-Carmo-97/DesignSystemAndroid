@@ -44,15 +44,15 @@ fun WgcFreshGroceryCategoryItem(
     modifier: Modifier = Modifier
 ) {
     val bgColor = if (isHighlighted) {
-        Color(WgcCoreDsColors.megaStorerPrimary)
+        Color(WgcCoreDsColors.green6)
     } else {
-        Color(WgcCoreDsColors.megaStorerSurface)
+        Color(WgcCoreDsColors.greenLight16)
     }
 
     val iconColor = if (isHighlighted) {
         Color.White
     } else {
-        Color(WgcCoreDsColors.megaStorerPrimary)
+        Color(WgcCoreDsColors.green6)
     }
 
     Column(
@@ -83,7 +83,7 @@ fun WgcFreshGroceryCategoryItem(
             text = title,
             style = MaterialTheme.typography.labelSmall,
             fontWeight = if (isHighlighted) FontWeight.Bold else FontWeight.Medium,
-            color = if (isHighlighted) Color(WgcCoreDsColors.megaStorerPrimary) else Color(WgcCoreDsColors.megaStorerDark),
+            color = if (isHighlighted) Color(WgcCoreDsColors.green6) else Color(WgcCoreDsColors.greenDark4),
             textAlign = TextAlign.Center,
             maxLines = 1
         )

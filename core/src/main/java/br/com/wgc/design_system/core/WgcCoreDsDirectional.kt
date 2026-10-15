@@ -6,10 +6,10 @@ package br.com.wgc.design_system.core
  */
 object WgcCoreDsDirectional {
     /** Layout padrão ocidental (Left-to-Right) */
-    const val directionLtr = "LTR"
+    const val directionLtr = CoreConstants.CoreDsDirectional.DIRECTION_LTR
 
     /** Layout para idiomas do Oriente Médio (Right-to-Left) */
-    const val directionRtl = "RTL"
+    const val directionRtl = CoreConstants.CoreDsDirectional.DIRECTION_RTL
 
     /**
      * Define se um ícone deve ser espelhado dinamicamente quando em ambiente RTL.

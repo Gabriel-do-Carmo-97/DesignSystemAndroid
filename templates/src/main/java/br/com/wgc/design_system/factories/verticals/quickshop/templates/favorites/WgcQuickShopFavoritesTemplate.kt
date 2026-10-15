@@ -86,7 +86,7 @@ fun WgcShopEaseFavoritesTemplate(
                             bottomEnd = WgcCoreDsBorderRadius.xxl24.dp
                         )
                     )
-                    .background(Color(WgcCoreDsColors.quickShopPrimary))
+                    .background(Color(WgcCoreDsColors.orange37))
                     .padding(
                         horizontal = WgcCoreDsSpacing.lg24.dp,
                         vertical = WgcCoreDsSpacing.md16.dp
@@ -149,14 +149,14 @@ fun WgcShopEaseFavoritesTemplate(
                                 text = prod.title,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.quickShopDark)
+                                color = Color(WgcCoreDsColors.grayDark19)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = prod.price,
                                 style = MaterialTheme.typography.labelLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                                color = Color(WgcCoreDsColors.orange27)
                             )
                         }
 

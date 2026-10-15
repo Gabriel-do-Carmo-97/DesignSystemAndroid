@@ -51,21 +51,21 @@ fun WgcPropertyListingFilterChip(
     val stateDesc = if (isSelected) "Filtro ativo: $label" else "Filtro inativo: $label"
 
     val backgroundColor = if (isSelected) {
-        Color(WgcCoreDsColors.propertyListingPrimary)
+        Color(WgcCoreDsColors.green14)
     } else {
-        Color(WgcCoreDsColors.propertyListingSurface)
+        Color(WgcCoreDsColors.white)
     }
 
     val contentColor = if (isSelected) {
         Color.White
     } else {
-        Color(WgcCoreDsColors.propertyListingDark)
+        Color(WgcCoreDsColors.blueDark23)
     }
 
     val borderColor = if (isSelected) {
-        Color(WgcCoreDsColors.propertyListingPrimary)
+        Color(WgcCoreDsColors.green14)
     } else {
-        Color(WgcCoreDsColors.propertyListingBorder)
+        Color(WgcCoreDsColors.blueLight8)
     }
 
     Box(
@@ -115,7 +115,7 @@ fun WgcPropertyListingFilterChip(
                     text = "($badgeValue)",
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color(WgcCoreDsColors.propertyListingOrangeLight) else Color(WgcCoreDsColors.propertyListingSecondaryText)
+                    color = if (isSelected) Color(WgcCoreDsColors.orangeLight7) else Color(WgcCoreDsColors.blue22)
                 )
             }
 

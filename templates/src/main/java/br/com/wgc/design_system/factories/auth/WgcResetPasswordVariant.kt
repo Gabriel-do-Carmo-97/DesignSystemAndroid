@@ -9,16 +9,16 @@ import br.com.wgc.design_system.core.WgcCoreDsColors
 enum class WgcResetPasswordVariant(
     val displayName: String,
     val logoText: String = "DS",
-    val primaryColor: Color = Color(WgcCoreDsColors.primary)
+    val primaryColor: Color = Color(WgcCoreDsColors.orange500)
 ) {
-    STANDARD("PadrÃ£o", "DS", Color(WgcCoreDsColors.primary)),
-    FOOD_DELIVERY("Food Delivery", "FD", Color(WgcCoreDsColors.foodDeliveryRed)),
-    RIDE_HAILING("Ride Hailing", "RH", Color(WgcCoreDsColors.rideHailingBlack)),
-    MARKETPLACE("Marketplace", "MP", Color(WgcCoreDsColors.marketplaceYellow)),
+    STANDARD("PadrÃ£o", "DS", Color(WgcCoreDsColors.orange500)),
+    FOOD_DELIVERY("Food Delivery", "FD", Color(WgcCoreDsColors.red18)),
+    RIDE_HAILING("Ride Hailing", "RH", Color(WgcCoreDsColors.grayDark3)),
+    MARKETPLACE("Marketplace", "MP", Color(WgcCoreDsColors.yellow8)),
     QUICK_FOOD_DELIVERY("Quick Food", "QD", Color(WgcCoreDsColors.orange500)),
-    DEAL_MARKETPLACE("Deal Marketplace", "DM", Color(WgcCoreDsColors.dealMarketplaceOrange)),
-    GLOBAL_MARKETPLACE("Global Marketplace", "GM", Color(WgcCoreDsColors.globalMarketplaceRed)),
-    GYM_FITNESS("Gym & Fitness", "GF", Color(WgcCoreDsColors.gymYellow)),
-    TELEMEDICINE("Telemedicine", "TM", Color(WgcCoreDsColors.telemedicineGreen)),
-    FINTECH_NEOBANK("Fintech Neobank", "FN", Color(WgcCoreDsColors.fintechPurple));
+    DEAL_MARKETPLACE("Deal Marketplace", "DM", Color(WgcCoreDsColors.red21)),
+    GLOBAL_MARKETPLACE("Global Marketplace", "GM", Color(WgcCoreDsColors.red27)),
+    GYM_FITNESS("Gym & Fitness", "GF", Color(WgcCoreDsColors.orange23)),
+    TELEMEDICINE("Telemedicine", "TM", Color(WgcCoreDsColors.cyan4)),
+    FINTECH_NEOBANK("Fintech Neobank", "FN", Color(WgcCoreDsColors.purple3));
 }
