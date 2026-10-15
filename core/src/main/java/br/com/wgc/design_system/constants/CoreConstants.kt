@@ -2,24 +2,48 @@ package br.com.wgc.design_system.constants
 
 /** Central source for compile-time constants owned by the core module. */
 object CoreConstants {
+    /**
+     * Nomes padronizados para eventos de analytics e suas propriedades.
+     * Use-os ao registrar eventos em plataformas como Mixpanel, Amplitude ou GA4
+     * para manter a telemetria consistente entre telas, componentes e fluxos.
+     */
     object AnalyticsSchema {
+        /** Evento emitido quando uma tela é visualizada. */
         const val EVENT_SCREEN_VIEW = "wgc_screen_view"
+        /** Evento emitido quando um componente é acionado. */
         const val EVENT_COMPONENT_CLICK = "wgc_component_click"
+        /** Evento emitido ao iniciar um fluxo. */
         const val EVENT_FLOW_STARTED = "wgc_flow_started"
+        /** Evento emitido ao concluir um fluxo. */
         const val EVENT_FLOW_COMPLETED = "wgc_flow_completed"
+        /** Evento emitido quando um erro é apresentado. */
         const val EVENT_ERROR_DISPLAYED = "wgc_error_displayed"
+        /** Propriedade que identifica a tela associada ao evento. */
         const val PARAM_SCREEN_NAME = "screen_name"
+        /** Propriedade que identifica o componente associado ao evento. */
         const val PARAM_COMPONENT_ID = "component_id"
+        /** Propriedade que identifica o fluxo associado ao evento. */
         const val PARAM_FLOW_NAME = "flow_name"
+        /** Propriedade que identifica o código do erro apresentado. */
         const val PARAM_ERROR_CODE = "error_code"
+        /** Propriedade que identifica o tenant associado ao evento. */
         const val PARAM_TENANT = "tenant"
     }
 
+    /**
+     * Raios numéricos para efeitos de Glassmorphism e Backdrop Blur.
+     * Use o nível apropriado ao aplicar desfoque em fundos e superfícies.
+     */
     object BlurTokens {
+        /** Sem desfoque. */
         const val NONE = 0.0
+        /** Desfoque extra pequeno. */
         const val BLUR_SM = 4.0
+        /** Desfoque médio. */
         const val BLUR_MD = 12.0
+        /** Desfoque grande. */
         const val BLUR_LG = 24.0
+        /** Desfoque extra grande. */
         const val BLUR_XL = 40.0
     }
 
@@ -116,16 +140,31 @@ object CoreConstants {
         const val SPRING_STIFFNESS_HIGH = 800.0f
     }
 
+    /**
+     * Opacidade e transparência semântica do Design System WGC.
+     * Os valores representam alfa de 0 (transparente) a 1 (opaco); use-os
+     * em superfícies e estados de interação para manter a hierarquia visual.
+     */
     object CoreDsOpacity {
+        /** Visibilidade total. */
         const val OPAQUE: Float = 1.0f
+        /** Superfície ou texto secundário com visibilidade ligeiramente reduzida. */
         const val SURFACE_DIM: Float = 0.87f
+        /** Máscara de fundo para scrims, diálogos e bottom sheets. */
         const val SCRIM: Float = 0.60f
+        /** Estado de componentes e textos desabilitados. */
         const val DISABLED: Float = 0.38f
+        /** Estado de um elemento sendo arrastado. */
         const val DRAGGED: Float = 0.16f
+        /** Estado de um elemento pressionado. */
         const val PRESSED: Float = 0.12f
+        /** Estado de foco. */
         const val FOCUS: Float = 0.12f
+        /** Estado de hover, normalmente em interfaces com cursor. */
         const val HOVER: Float = 0.08f
+        /** Tint sutil aplicado a uma superfície. */
         const val SUBTLE: Float = 0.04f
+        /** Transparência total. */
         const val TRANSPARENT: Float = 0.0f
     }
 
@@ -293,13 +332,24 @@ object CoreConstants {
         const val SUCCESS_HIGH_CONTRAST_ARGB: Int = 0xFF00E676.toInt()
     }
 
+    /**
+     * Especificações visuais para renderização tipográfica de Markdown e rich text.
+     * Use estes valores ao estilizar código inline, blocos de código e citações.
+     */
     object MarkdownTypographyTokens {
+        /** Família tipográfica monoespaçada usada em trechos e blocos de código. */
         const val CODE_FONT_FAMILY_MONOSPACE = "monospace"
+        /** Cor de fundo ARGB dos blocos de código em tema escuro. */
         const val CODE_BLOCK_BACKGROUND_DARK_ARGB = 0xFF1E1E1E.toInt()
+        /** Cor de fundo ARGB dos blocos de código em tema claro. */
         const val CODE_BLOCK_BACKGROUND_LIGHT_ARGB = 0xFFF5F5F5.toInt()
+        /** Espaçamento horizontal interno do código inline, em dp. */
         const val INLINE_CODE_PADDING_HORIZONTAL_DP = 4f
+        /** Raio dos cantos do código inline, em dp. */
         const val INLINE_CODE_RADIUS_DP = 4f
+        /** Espessura da borda indicadora de uma citação, em dp. */
         const val BLOCKQUOTE_BORDER_WIDTH_DP = 3f
+        /** Recuo inicial do conteúdo de uma citação, em dp. */
         const val BLOCKQUOTE_PADDING_START_DP = 12f
     }
 
@@ -314,32 +364,66 @@ object CoreConstants {
         const val EASE_OUT_QUAD = "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
     }
 
+    /**
+     * Dimensões do grid responsivo por classe de largura de tela.
+     * Use o conjunto correspondente ao breakpoint para definir colunas,
+     * espaçamento entre elas (gutter) e margens externas.
+     */
     object ResponsiveGridTokens {
+        /** Quantidade de colunas para smartphones e telas compactas (abaixo de 600 dp). */
         const val COLUMNS_COMPACT = 4
+        /** Espaçamento entre colunas em telas compactas, em dp. */
         const val GUTTER_COMPACT_DP = 16f
+        /** Margem externa em telas compactas, em dp. */
         const val MARGIN_COMPACT_DP = 16f
+        /** Quantidade de colunas para tablets e telas médias (600 a 839 dp). */
         const val COLUMNS_MEDIUM = 8
+        /** Espaçamento entre colunas em telas médias, em dp. */
         const val GUTTER_MEDIUM_DP = 24f
+        /** Margem externa em telas médias, em dp. */
         const val MARGIN_MEDIUM_DP = 32f
+        /** Quantidade de colunas para telas expandidas (a partir de 840 dp). */
         const val COLUMNS_EXPANDED = 12
+        /** Espaçamento entre colunas em telas expandidas, em dp. */
         const val GUTTER_EXPANDED_DP = 24f
+        /** Margem externa em telas expandidas, em dp. */
         const val MARGIN_EXPANDED_DP = 48f
     }
 
+    /**
+     * Dimensões e fatores para geometrias de formas avançadas.
+     * Use-os para construir cantos chanfrados, curvas suaves (squircles)
+     * e formas de pílula de maneira consistente.
+     */
     object ShapeMorphologyTokens {
+        /** Tamanho do chanfro pequeno em cantos cortados, em dp. */
         const val CUT_CORNER_SMALL_DP = 4f
+        /** Tamanho do chanfro médio em cantos cortados, em dp. */
         const val CUT_CORNER_MEDIUM_DP = 8f
+        /** Tamanho do chanfro grande em cantos cortados, em dp. */
         const val CUT_CORNER_LARGE_DP = 16f
+        /** Fator de suavização da curvatura de cantos do tipo squircle. */
         const val SQUIRCLE_CORNER_SMOOTHING = 0.6f
+        /** Raio amplo para formas circulares e de pílula, em dp. */
         const val PILL_RADIUS_DP = 999f
     }
 
+    /**
+     * Identificadores semânticos de efeitos sonoros (Sound FX) do Design System.
+     * Use-os para selecionar o efeito correspondente ao feedback de interação.
+     */
     object SoundFxTokens {
+        /** Feedback sonoro leve para toque. */
         const val SOUND_TAP_LIGHT = "wgc_sfx_tap_light"
+        /** Feedback sonoro mais marcado para toque. */
         const val SOUND_TAP_MEDIUM = "wgc_sfx_tap_medium"
+        /** Confirmação sonora de uma ação bem-sucedida. */
         const val SOUND_SUCCESS_CONFIRM = "wgc_sfx_success_confirm"
+        /** Alerta sonoro associado a uma falha ou erro. */
         const val SOUND_ERROR_ALERT = "wgc_sfx_error_alert"
+        /** Efeito emitido ao soltar a ação de atualizar por gesto. */
         const val SOUND_PULL_REFRESH_RELEASE = "wgc_sfx_refresh_release"
+        /** Notificação sonora de uma nova badge ou indicador. */
         const val SOUND_BADGE_NOTIFICATION = "wgc_sfx_badge_notify"
     }
 
