@@ -41,8 +41,28 @@ Gere cores, espaçamentos, tamanhos, raios de borda, elevações e animações n
 1. **NUNCA** invente token a partir de imagem ou estimativa — confirme o valor com o dev.
 2. **NUNCA** adicione token sem confirmação do nome e valor.
 3. **Hex permitido APENAS em cores primitivas** (`Color.parseColor("#...")` ou `"#...".toColorInt()`). Cores semânticas referenciam primitivas.
-4. Todo token: nomenclatura consistente (`nomeSemântico + valorNumérico`), documentado com KDoc.
+4. Todo token: nomenclatura consistente e constante em `UPPER_SNAKE_CASE` (por exemplo,
+   `LG24` ou `DISPLAY_LARGE_SIZE`), documentado com KDoc.
 5. **NUNCA** insira lógica, Composables ou imports do Compose neste módulo.
+6. **Escopo restrito:** este agente altera somente `core/**`; não atualize consumidores em `app`, `components`, `templates` ou `navigation-flows`.
+7. **Tipos públicos em arquivos próprios:** cada `enum`, `interface`, `data class`, `class` ou annotation pública ocupa seu próprio arquivo Kotlin, sem misturar declarações de tipo de nível superior.
+8. **KDoc obrigatório:** documente em português a finalidade e inclua uma seção explícita
+   `Quando usar:` em cada tipo público novo ou movido; acrescente um exemplo breve de uso
+   quando a API exigir. Entradas de enum também usam `UPPER_SNAKE_CASE`.
+9. **Pacotes temáticos do core:** mantenha as classes nos pacotes `core.tokens`, `core.brand`, `core.theme`, `core.accessibility`, `core.motion`, `core.feedback`, `core.telemetry`, `core.remote` ou `core.metadata`, conforme sua responsabilidade. `CoreConstants` permanece em `br.com.wgc.design_system.constants`.
+10. **Mudanças de pacote:** prefira preservar nomes e comportamento, mas não mantenha aliases nos pacotes antigos. Ajuste todas as referências e testes dentro de `:core`; alterações breaking para consumidores externos devem ser reportadas.
+
+### Mapa de pacotes
+
+- `br.com.wgc.design_system.core.tokens`: escalas e tokens dimensionais/de layout.
+- `br.com.wgc.design_system.core.brand`: marcas, temas de marca, ilustrações e assets.
+- `br.com.wgc.design_system.core.theme`: tokens e contrato de tema, contexto e modo.
+- `br.com.wgc.design_system.core.accessibility`: contraste e harmonização.
+- `br.com.wgc.design_system.core.motion`: animações, coreografia e curvas.
+- `br.com.wgc.design_system.core.feedback`: feedback tátil/sonoro.
+- `br.com.wgc.design_system.core.telemetry`: telemetria.
+- `br.com.wgc.design_system.core.remote`: tokens remotos.
+- `br.com.wgc.design_system.core.metadata`: maturidade e estabilidade.
 
 ---
 

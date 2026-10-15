@@ -1,5 +1,6 @@
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.core.brand.WgcBrandTheme
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import kotlin.math.max
@@ -11,6 +12,7 @@ import kotlin.math.pow
  * Valida que as cores dos tokens de texto e fundo possuem contraste adequado:
  * - WCAG 2.1 Nível AA: Mínimo 4.5:1 para texto normal e 3.0:1 para componentes gráficos.
  * - WCAG 2.1 Nível AAA: Mínimo 7.0:1 para texto normal.
+ * Quando executar: ao alterar cores, limiares ou cálculos de acessibilidade.
  */
 class WgcAccessibilityAuditorTest {
 

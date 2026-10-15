@@ -5,6 +5,10 @@ package br.com.wgc.design_system.core
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
+/**
+ * Teste de estresse da escala de fontes para garantir limites seguros de dimensionamento.
+ * Quando executar: ao alterar o dimensionamento tipográfico responsivo ou acessível.
+ */
 class WgcFontScaleStressTest {
 
     @Test

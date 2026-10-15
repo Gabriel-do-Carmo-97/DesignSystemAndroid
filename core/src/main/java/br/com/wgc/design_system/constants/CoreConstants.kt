@@ -1,11 +1,17 @@
 package br.com.wgc.design_system.constants
 
-/** Central source for compile-time constants owned by the core module. */
+/**
+ * Fonte central de constantes em tempo de compilação pertencentes ao módulo `:core`.
+ *
+ * Exemplo: `val breakpoint = CoreConstants.CoreDsBreakpoints.MEDIUM_MIN`.
+ * Quando usar: escolha esta API quando código do módulo precisar de valores centrais imutáveis e compartilhados.
+ */
 object CoreConstants {
     /**
      * Nomes padronizados para eventos de analytics e suas propriedades.
      * Use-os ao registrar eventos em plataformas como Mixpanel, Amplitude ou GA4
      * para manter a telemetria consistente entre telas, componentes e fluxos.
+     * Quando usar: escolha esta API quando registrar eventos ou propriedades de analytics com nomes padronizados.
      */
     object AnalyticsSchema {
         /** Evento emitido quando uma tela é visualizada. */
@@ -33,6 +39,7 @@ object CoreConstants {
     /**
      * Raios numéricos para efeitos de Glassmorphism e Backdrop Blur.
      * Use o nível apropriado ao aplicar desfoque em fundos e superfícies.
+     * Quando usar: escolha esta API quando aplicar níveis de desfoque padronizados a fundos e superfícies.
      */
     object BlurTokens {
         /** Sem desfoque. */
@@ -47,6 +54,10 @@ object CoreConstants {
         const val BLUR_XL = 40.0
     }
 
+    /**
+     * Limiares de contraste e cores de referencia usados nos calculos WCAG.
+     * Quando usar: escolha esta API quando calcular contraste ou consultar limites de conformidade WCAG.
+     */
     object ContrastCalculator {
         const val WCAG_AA_NORMAL_TEXT_MIN_RATIO = 4.5
         const val WCAG_AA_LARGE_TEXT_MIN_RATIO = 3.0
@@ -56,6 +67,10 @@ object CoreConstants {
         const val COLOR_BLACK = 0xFF000000.toInt()
     }
 
+    /**
+     * Escala oficial de raios de borda e seus aliases semanticos.
+     * Quando usar: escolha esta API quando escolher um raio padronizado para cantos, superfícies ou controles.
+     */
     object CoreDsBorderRadius {
         const val NONE0 = 0.0
         const val XS2 = 2.0
@@ -79,6 +94,10 @@ object CoreConstants {
         const val PILL = CIRCULAR999
     }
 
+    /**
+     * Limites de largura que definem as classes compacta, media e expandida.
+     * Quando usar: escolha esta API quando adaptar o layout a largura disponivel da janela.
+     */
     object CoreDsBreakpoints {
         const val COMPACT_MAX: Double = 599.0
         const val MEDIUM_MIN: Double = 600.0
@@ -86,11 +105,19 @@ object CoreConstants {
         const val EXPANDED_MIN: Double = 840.0
     }
 
+    /**
+     * Valores que identificam a direcao LTR ou RTL dos layouts.
+     * Quando usar: escolha esta API quando configurar a direção de layout LTR/RTL ou espelhar elementos direcionais.
+     */
     object CoreDsDirectional {
         const val DIRECTION_LTR = "LTR"
         const val DIRECTION_RTL = "RTL"
     }
 
+    /**
+     * Niveis de elevacao e parametros de sombra para superficies.
+     * Quando usar: escolha esta API quando definir hierarquia de superfícies e parâmetros de sombra.
+     */
     object CoreDsElevation {
         const val LEVEL0 = 0.0
         const val LEVEL1 = 1.0
@@ -113,6 +140,10 @@ object CoreConstants {
         const val SPOT_SHADOW_ALPHA_DARK = 0.30f
     }
 
+    /**
+     * Padroes e duracoes de vibracao para feedback tatil.
+     * Quando usar: escolha esta API quando selecionar padroes e duracoes de feedback tatil.
+     */
     object CoreDsHaptics {
         const val PATTERN_LIGHT_CLICK = "LIGHT_CLICK"
         const val PATTERN_MEDIUM_CONFIRM = "MEDIUM_CONFIRM"
@@ -124,6 +155,10 @@ object CoreConstants {
         const val DURATION_LONG_MS = 80L
     }
 
+    /**
+     * Duracoes, parametros de mola e curvas de movimento padronizados.
+     * Quando usar: escolha esta API quando definir duração, física de mola ou curva de animação.
+     */
     object CoreDsMotion {
         const val DURATION_FAST100 = 100
         const val DURATION_SHORT150 = 150
@@ -144,6 +179,7 @@ object CoreConstants {
      * Opacidade e transparência semântica do Design System WGC.
      * Os valores representam alfa de 0 (transparente) a 1 (opaco); use-os
      * em superfícies e estados de interação para manter a hierarquia visual.
+     * Quando usar: escolha esta API quando aplicar transparência semântica a superfícies e estados.
      */
     object CoreDsOpacity {
         /** Visibilidade total. */
@@ -168,6 +204,10 @@ object CoreConstants {
         const val TRANSPARENT: Float = 0.0f
     }
 
+    /**
+     * Escala de dimensoes usada por icones, avatares e areas de toque.
+     * Quando usar: escolha esta API quando definir dimensões consistentes para ícones, avatares e alvos de toque.
+     */
     object CoreDsSize {
         const val S0 = 0.0
         const val S1 = 1.0
@@ -233,6 +273,10 @@ object CoreConstants {
         const val S400 = 400.0
     }
 
+    /**
+     * Escala oficial de espacamento e aliases ergonomicos.
+     * Quando usar: escolha esta API quando definir espaçamentos de layout usando a escala oficial.
+     */
     object CoreDsSpacing {
         const val NONE0 = 0.0
         const val XXXS2 = 2.0
@@ -260,6 +304,10 @@ object CoreConstants {
         const val XXXL = XXXL48
     }
 
+    /**
+     * Pesos e medidas da hierarquia tipografica corporativa.
+     * Quando usar: escolha esta API quando definir hierarquia tipográfica, pesos ou escalas de texto.
+     */
     object CoreDsTypography {
         const val WEIGHT_BOLD = 700
         const val WEIGHT_SEMI_BOLD = 600
@@ -316,11 +364,19 @@ object CoreConstants {
         const val MIN_TOUCH_TARGET_DP: Double = 48.0
     }
 
+    /**
+     * Limites padrao de viewport para dimensionamento tipografico fluido.
+     * Quando usar: escolha esta API quando dimensionar texto continuamente conforme a largura da tela.
+     */
     object FluidTypography {
         const val DEFAULT_MIN_VIEWPORT_WIDTH_DP = 360.0f
         const val DEFAULT_MAX_VIEWPORT_WIDTH_DP = 840.0f
     }
 
+    /**
+     * Cores ARGB da paleta acessivel de alto contraste.
+     * Quando usar: escolha esta API quando oferecer cores de alto contraste a uma interface acessível.
+     */
     object HighContrastPaletteTokens {
         const val BACKGROUND_DARK_ARGB: Int = 0xFF000000.toInt()
         const val BACKGROUND_LIGHT_ARGB: Int = 0xFFFFFFFF.toInt()
@@ -335,6 +391,7 @@ object CoreConstants {
     /**
      * Especificações visuais para renderização tipográfica de Markdown e rich text.
      * Use estes valores ao estilizar código inline, blocos de código e citações.
+     * Quando usar: escolha esta API quando estilizar conteúdo Markdown, código inline, blocos ou citações.
      */
     object MarkdownTypographyTokens {
         /** Família tipográfica monoespaçada usada em trechos e blocos de código. */
@@ -353,6 +410,10 @@ object CoreConstants {
         const val BLOCKQUOTE_PADDING_START_DP = 12f
     }
 
+    /**
+     * Atrasos escalonados, duracoes de cascata e curvas de easing.
+     * Quando usar: escolha esta API quando escalonar animações de itens ou selecionar curvas de movimento.
+     */
     object MotionChoreography {
         const val STAGGER_DELAY_FAST = 40
         const val STAGGER_DELAY_NORMAL = 75
@@ -368,6 +429,7 @@ object CoreConstants {
      * Dimensões do grid responsivo por classe de largura de tela.
      * Use o conjunto correspondente ao breakpoint para definir colunas,
      * espaçamento entre elas (gutter) e margens externas.
+     * Quando usar: escolha esta API quando configurar colunas, gutters e margens por classe de janela.
      */
     object ResponsiveGridTokens {
         /** Quantidade de colunas para smartphones e telas compactas (abaixo de 600 dp). */
@@ -394,6 +456,7 @@ object CoreConstants {
      * Dimensões e fatores para geometrias de formas avançadas.
      * Use-os para construir cantos chanfrados, curvas suaves (squircles)
      * e formas de pílula de maneira consistente.
+     * Quando usar: escolha esta API quando criar formas chanfradas, squircles ou formas de pílula.
      */
     object ShapeMorphologyTokens {
         /** Tamanho do chanfro pequeno em cantos cortados, em dp. */
@@ -411,6 +474,7 @@ object CoreConstants {
     /**
      * Identificadores semânticos de efeitos sonoros (Sound FX) do Design System.
      * Use-os para selecionar o efeito correspondente ao feedback de interação.
+     * Quando usar: escolha esta API quando selecionar identificadores sonoros de feedback de interação.
      */
     object SoundFxTokens {
         /** Feedback sonoro leve para toque. */
