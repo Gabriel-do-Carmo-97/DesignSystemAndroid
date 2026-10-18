@@ -1,6 +1,5 @@
 package br.com.wgc.design_system.components.navigation
 
-import androidx.compose.material3.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
 data class NavItem(

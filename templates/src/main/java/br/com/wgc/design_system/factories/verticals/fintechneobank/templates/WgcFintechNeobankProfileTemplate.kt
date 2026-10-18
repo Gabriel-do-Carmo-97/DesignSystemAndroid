@@ -60,7 +60,12 @@ fun WgcNeobankProfileTemplate(
                                 .clip(CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(WgcCoreDsSize.s60.dp), tint = Color(WgcCoreDsColors.purple3))
+                            Icon(
+                                imageVector = Icons.Default.AccountCircle,
+                                contentDescription = null,
+                                modifier = Modifier.size(WgcCoreDsSize.s60.dp),
+                                tint = Color(WgcCoreDsColors.purple3)
+                            )
                         }
                         Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("Agência 0001 • Conta 1234567-8", color = Color.Gray, fontSize = 14.sp)

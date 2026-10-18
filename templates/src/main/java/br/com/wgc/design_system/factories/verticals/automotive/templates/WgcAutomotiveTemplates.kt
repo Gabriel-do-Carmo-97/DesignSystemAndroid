@@ -40,6 +40,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
+@Suppress("LongMethod")
 @Composable
 fun WgcAutomotiveHomeTemplate(
     vehicles: List<VehicleItem> = AutomotiveMockData.sampleVehicles,
@@ -78,14 +79,33 @@ fun WgcAutomotiveHomeTemplate(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(text = "R$ " + String.format("%.2f", car.price), fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.red16))
-                        Text(text = "FIPE: R$ " + String.format("%.2f", car.fipePrice), fontSize = 12.sp, color = Color(WgcCoreDsColors.green1), fontWeight = FontWeight.SemiBold)
+                        Text(
+                            text = "R$ " + String.format("%.2f", car.price),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp,
+                            color = Color(WgcCoreDsColors.red16)
+                        )
+                        Text(
+                            text = "FIPE: R$ " + String.format("%.2f", car.fipePrice),
+                            fontSize = 12.sp,
+                            color = Color(WgcCoreDsColors.green1),
+                            fontWeight = FontWeight.SemiBold
+                        )
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-                    Text(text = "${car.yearModel} • ${car.mileageKm} km • ${car.cityState}", fontSize = 12.sp, color = Color.DarkGray)
+                    Text(
+                        text = "${car.yearModel} • ${car.mileageKm} km • ${car.cityState}",
+                        fontSize = 12.sp,
+                        color = Color.DarkGray
+                    )
                     if (car.certifiedReportApproved) {
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-                        Text(text = "🛡️ Laudo Cautelar 100% Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.green1), fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "🛡️ Laudo Cautelar 100% Aprovado",
+                            fontSize = 11.sp,
+                            color = Color(WgcCoreDsColors.green1),
+                            fontWeight = FontWeight.Bold
+                        )
                     }
                 }
             }
@@ -98,7 +118,12 @@ fun WgcAutomotiveDetailTemplate(
     car: VehicleItem = AutomotiveMockData.sampleVehicles.first(),
     onSimulateFinancing: () -> Unit = {}
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Ficha Técnica & Tour 360°", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -106,11 +131,19 @@ fun WgcAutomotiveDetailTemplate(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
                 Text(text = car.makeModel, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                 Text(text = car.version, fontSize = 13.sp, color = Color.Gray)
                 Text(text = "Ano: ${car.yearModel} | Km: ${car.mileageKm}", fontSize = 14.sp)
-                Text(text = "Preço Anunciado: R$ " + String.format("%.2f", car.price), fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.red16))
+                Text(
+                    text = "Preço Anunciado: R$ " + String.format("%.2f", car.price),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    color = Color(WgcCoreDsColors.red16)
+                )
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
                 WgcClassicButton(
                     textButton = "Simular Financiamento",
@@ -126,7 +159,12 @@ fun WgcAutomotiveDetailTemplate(
 fun WgcAutomotiveFipeTemplate(
     car: VehicleItem = AutomotiveMockData.sampleVehicles.first()
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Tabela FIPE Oficial", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -134,9 +172,17 @@ fun WgcAutomotiveFipeTemplate(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
                 Text(text = "Veículo: ${car.makeModel}", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                Text(text = "Valor Oficial FIPE: R$ " + String.format("%.2f", car.fipePrice), fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(WgcCoreDsColors.green1))
+                Text(
+                    text = "Valor Oficial FIPE: R$ " + String.format("%.2f", car.fipePrice),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    color = Color(WgcCoreDsColors.green1)
+                )
                 Text(text = "Variação últimos 12 meses: -3.8% (Desvalorização normal)", fontSize = 13.sp, color = Color.Gray)
             }
         }
@@ -151,7 +197,12 @@ fun WgcAutomotiveFinancingTemplate(
     val financedAmount = carPrice - downPayment
     val monthlyPayment = (financedAmount * 1.45) / 48
 
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Simulador de Financiamento", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -159,10 +210,18 @@ fun WgcAutomotiveFinancingTemplate(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
                 Text(text = "Valor Total: R$ " + String.format("%.2f", carPrice), fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 Text(text = "Entrada: R$ " + String.format("%.2f", downPayment), fontSize = 14.sp)
-                Text(text = "Saldo em: 48x de R$ " + String.format("%.2f", monthlyPayment), fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(WgcCoreDsColors.red16))
+                Text(
+                    text = "Saldo em: 48x de R$ " + String.format("%.2f", monthlyPayment),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    color = Color(WgcCoreDsColors.red16)
+                )
                 Text(text = "Taxa média: 1.39% a.m. (Sujeito a aprovação de crédito)", fontSize = 11.sp, color = Color.Gray)
             }
         }
@@ -171,7 +230,12 @@ fun WgcAutomotiveFinancingTemplate(
 
 @Composable
 fun WgcAutomotiveProfileTemplate() {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Garagem & Meus Anúncios", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -179,10 +243,18 @@ fun WgcAutomotiveProfileTemplate() {
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
                 Text(text = "Usuário: Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 Text(text = "Anúncios Ativos: 1 veículo", fontSize = 14.sp)
-                Text(text = "Propostas Recebidas: 4 novas mensagens", fontSize = 14.sp, color = Color(WgcCoreDsColors.red16), fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = "Propostas Recebidas: 4 novas mensagens",
+                    fontSize = 14.sp,
+                    color = Color(WgcCoreDsColors.red16),
+                    fontWeight = FontWeight.SemiBold
+                )
             }
         }
     }

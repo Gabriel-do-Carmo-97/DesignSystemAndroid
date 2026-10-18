@@ -414,8 +414,16 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Order", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
-                        Text(text = orderAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
+                        Text(
+                            text = "Order",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color(WgcCoreDsColors.gray6)
+                        )
+                        Text(
+                            text = orderAmount,
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color(WgcCoreDsColors.blueDark19)
+                        )
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -424,8 +432,16 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Shipping", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
-                        Text(text = shippingCost, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
+                        Text(
+                            text = "Shipping",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color(WgcCoreDsColors.gray6)
+                        )
+                        Text(
+                            text = shippingCost,
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color(WgcCoreDsColors.blueDark19)
+                        )
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -434,8 +450,16 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Discount", style = MaterialTheme.typography.bodyMedium, color = Color(WgcCoreDsColors.gray6))
-                        Text(text = discountAmount, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.pink4))
+                        Text(
+                            text = "Discount",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color(WgcCoreDsColors.gray6)
+                        )
+                        Text(
+                            text = discountAmount,
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color(WgcCoreDsColors.pink4)
+                        )
                     }
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
@@ -446,8 +470,16 @@ fun WgcStylishShippingScreenTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(text = "Total", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
-                        Text(text = totalAmount, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = Color(WgcCoreDsColors.blueDark19))
+                        Text(
+                            text = "Total",
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color(WgcCoreDsColors.blueDark19)
+                        )
+                        Text(
+                            text = totalAmount,
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color(WgcCoreDsColors.blueDark19)
+                        )
                     }
                 }
             }

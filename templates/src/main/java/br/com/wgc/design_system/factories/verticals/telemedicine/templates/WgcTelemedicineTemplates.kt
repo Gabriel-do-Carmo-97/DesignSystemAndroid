@@ -102,11 +102,25 @@ fun WgcTelemedicineHomeTemplate(
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.yellow4), modifier = Modifier.size(WgcCoreDsSize.s16.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = null,
+                            tint = Color(WgcCoreDsColors.yellow4),
+                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxxs2.dp))
-                        Text(text = "${doc.rating} (${doc.reviewsCount} opiniões)", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                        Text(
+                            text = "${doc.rating} (${doc.reviewsCount} opiniões)",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
                         Spacer(modifier = Modifier.weight(1f))
-                        Text(text = "R$ " + String.format("%.2f", doc.consultationFee), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.blueDark12))
+                        Text(
+                            text = "R$ " + String.format("%.2f", doc.consultationFee),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp,
+                            color = Color(WgcCoreDsColors.blueDark12)
+                        )
                     }
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Text(text = "🕒 ${doc.nextAvailableSlot}", fontSize = 12.sp, color = Color(WgcCoreDsColors.cyan4), fontWeight = FontWeight.Medium)
@@ -239,7 +253,12 @@ fun WgcTelemedicinePrescriptionsTemplate(
 fun WgcTelemedicineProfileTemplate(
     patient: PatientHealthProfile = TelemedicineMockData.defaultPatient
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Prontuário do Paciente", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -247,12 +266,24 @@ fun WgcTelemedicineProfileTemplate(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
                 Text(text = "Paciente: ${patient.patientName}", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 Text(text = "Tipo Sanguíneo: ${patient.bloodType}", fontSize = 14.sp)
-                Text(text = "Alergias: ${patient.allergies.joinToString(", ")}", fontSize = 14.sp, color = Color(WgcCoreDsColors.red500))
+                Text(
+                    text = "Alergias: ${patient.allergies.joinToString(", ")}",
+                    fontSize = 14.sp,
+                    color = Color(WgcCoreDsColors.red500)
+                )
                 Text(text = "Condições Crônicas: ${patient.chronicConditions.joinToString(", ")}", fontSize = 14.sp)
-                Text(text = "Convênio Ativo: ${patient.activeHealthInsurance}", fontSize = 14.sp, color = Color(WgcCoreDsColors.cyan4), fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = "Convênio Ativo: ${patient.activeHealthInsurance}",
+                    fontSize = 14.sp,
+                    color = Color(WgcCoreDsColors.cyan4),
+                    fontWeight = FontWeight.SemiBold
+                )
             }
         }
     }

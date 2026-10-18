@@ -278,7 +278,12 @@ fun WgcNexkartCheckoutTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(text = "Subtotal", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
-                    Text(text = subtotal, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.blueDark6))
+                    Text(
+                        text = subtotal,
+                        style = MaterialTheme.typography.bodySmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color(WgcCoreDsColors.blueDark6)
+                    )
                 }
 
                 Row(
@@ -286,7 +291,12 @@ fun WgcNexkartCheckoutTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(text = "Shipping", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
-                    Text(text = shipping, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.green21))
+                    Text(
+                        text = shipping,
+                        style = MaterialTheme.typography.bodySmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color(WgcCoreDsColors.green21)
+                    )
                 }
 
                 Row(
@@ -294,7 +304,12 @@ fun WgcNexkartCheckoutTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(text = "Tax", style = MaterialTheme.typography.bodySmall, color = Color(WgcCoreDsColors.blue41))
-                    Text(text = tax, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, color = Color(WgcCoreDsColors.blueDark6))
+                    Text(
+                        text = tax,
+                        style = MaterialTheme.typography.bodySmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color(WgcCoreDsColors.blueDark6)
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -304,8 +319,18 @@ fun WgcNexkartCheckoutTemplate(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = "Total", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.blueDark6))
-                    Text(text = total, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.blue39))
+                    Text(
+                        text = "Total",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.blueDark6)
+                    )
+                    Text(
+                        text = total,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(WgcCoreDsColors.blue39)
+                    )
                 }
             }
         }

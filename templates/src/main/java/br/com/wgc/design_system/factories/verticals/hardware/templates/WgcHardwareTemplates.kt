@@ -60,13 +60,27 @@ fun WgcHardwareHomeTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text(text = item.category, color = Color(WgcCoreDsColors.orange17), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(
+                        text = item.category,
+                        color = Color(WgcCoreDsColors.orange17),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
                     Text(text = item.name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                     Text(text = "De R$ " + String.format("%.2f", item.price), fontSize = 12.sp, color = Color.Gray)
-                    Text(text = "Por R$ " + String.format("%.2f", item.ninjaDiscountPrice) + " no PIX", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color(WgcCoreDsColors.orange17))
+                    Text(
+                        text = "Por R$ " + String.format("%.2f", item.ninjaDiscountPrice) + " no PIX",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp,
+                        color = Color(WgcCoreDsColors.orange17)
+                    )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-                    Text(text = "Socket: ${item.socket} • TDP: ${item.tdpWatts}W • Benchmark: ${item.benchmarkScore} pts", fontSize = 12.sp, color = Color.DarkGray)
+                    Text(
+                        text = "Socket: ${item.socket} • TDP: ${item.tdpWatts}W • Benchmark: ${item.benchmarkScore} pts",
+                        fontSize = 12.sp,
+                        color = Color.DarkGray
+                    )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
                     WgcClassicButton(
                         textButton = "Comprar Ninja",
@@ -97,11 +111,19 @@ fun WgcHardwareSpecsTemplate(
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
-                Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)) {
+                Column(
+                    modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                ) {
                     Text(text = item.name, fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     Text(text = "• Consumo Elétrico (TDP): ${item.tdpWatts} Watts", fontSize = 13.sp)
                     Text(text = "• Encaixe / Socket: ${item.socket}", fontSize = 13.sp)
-                    Text(text = "• Pontuação em Benchmark 3DMark: ${item.benchmarkScore} pontos", fontSize = 13.sp, color = Color(WgcCoreDsColors.orange17), fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "• Pontuação em Benchmark 3DMark: ${item.benchmarkScore} pontos",
+                        fontSize = 13.sp,
+                        color = Color(WgcCoreDsColors.orange17),
+                        fontWeight = FontWeight.SemiBold
+                    )
                 }
             }
         }
@@ -113,7 +135,12 @@ fun WgcHardwarePcBuilderTemplate(
     selectedParts: List<HardwareItem> = HardwareMockData.sampleHardware
 ) {
     val totalWatts = selectedParts.sumOf { it.tdpWatts } + 150 // +150W margem coolers e RAM
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Monte seu PC Ninja (Compatibilidade)", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -121,8 +148,16 @@ fun WgcHardwarePcBuilderTemplate(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                Text(text = "Fonte Recomendada: Mínimo ${totalWatts}W 80 Plus Gold", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(WgcCoreDsColors.green1))
+            Column(
+                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            ) {
+                Text(
+                    text = "Fonte Recomendada: Mínimo ${totalWatts}W 80 Plus Gold",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = Color(WgcCoreDsColors.green1)
+                )
                 Text(text = "Compatibilidade de Socket: 100% Compatível (AM5)", fontSize = 14.sp)
                 Text(text = "Peças Selecionadas: ${selectedParts.size} componentes", fontSize = 14.sp)
             }

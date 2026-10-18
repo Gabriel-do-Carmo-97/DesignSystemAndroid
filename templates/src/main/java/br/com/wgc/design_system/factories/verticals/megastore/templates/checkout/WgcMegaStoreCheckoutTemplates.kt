@@ -99,7 +99,11 @@ fun WgcShoppeCartScreenTemplate(
                 ) {
                     Column {
                         Text(text = "Total Price", fontSize = 12.sp, color = Color(WgcCoreDsColors.gray4))
-                        Text(text = "$132.00", style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black), color = Color(WgcCoreDsColors.blue28))
+                        Text(
+                            text = "$132.00",
+                            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
+                            color = Color(WgcCoreDsColors.blue28)
+                        )
                     }
                     WgcButton(
                         text = "Checkout",

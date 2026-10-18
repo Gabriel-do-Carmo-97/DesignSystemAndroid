@@ -144,7 +144,12 @@ fun WgcDentalHomeTemplate(
                         }
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                         Text(text = "📍 ${upcomingAppointment.clinicAddress}", fontSize = 13.sp)
-                        Text(text = "🗓️ ${upcomingAppointment.date} às ${upcomingAppointment.time}", fontWeight = FontWeight.SemiBold, fontSize = 13.sp, color = Color(WgcCoreDsColors.cyanDark4))
+                        Text(
+                            text = "🗓️ ${upcomingAppointment.date} às ${upcomingAppointment.time}",
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 13.sp,
+                            color = Color(WgcCoreDsColors.cyanDark4)
+                        )
                     }
                 }
             }

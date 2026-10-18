@@ -1,8 +1,5 @@
 package br.com.wgc.design_system.components.alert
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-
 /**
  * Tipos de alerta disponíveis no WgcAlert.
  * 
