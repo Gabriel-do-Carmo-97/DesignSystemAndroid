@@ -17,13 +17,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
-data class WgcCircularCategoryItem(
-    val id: String,
-    val name: String,
-    val initials: String,
-    val backgroundColor: Color = Color(WgcCoreDsColors.gray100)
-)
-
 /**
  * Carrossel de Categorias Circulares Descritivo (WgcCircularCategoryRow).
  */

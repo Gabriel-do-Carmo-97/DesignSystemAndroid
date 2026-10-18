@@ -25,25 +25,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
 /**
- * Itens da barra de navegação inferior do Supermercado Brasil.
- */
-enum class GroceryNavTab {
-    HOME,
-    COUPONS,
-    FLYER,
-    CART,
-    LOYALTY
-}
-
-enum class WgcSupermercadoNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    COUPONS("Cupons", Icons.Default.LocalOffer),
-    FLYER("Folheto", Icons.AutoMirrored.Filled.MenuBook),
-    CART("Carrinho", Icons.Default.ShoppingCart),
-    LOYALTY("Fidelidade", Icons.Default.CreditCard)
-}
-
-/**
  * Barra de navegação inferior do Supermercado Brasil.
  */
 @Composable
@@ -126,4 +107,3 @@ fun WgcGroceryBottomNav(
         modifier = modifier
     )
 }
-

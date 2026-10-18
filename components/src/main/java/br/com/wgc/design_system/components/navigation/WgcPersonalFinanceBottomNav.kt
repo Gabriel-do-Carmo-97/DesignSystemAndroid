@@ -36,16 +36,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-enum class WgcOrganizzeNavItem(
-    val title: String,
-    val icon: ImageVector
-) {
-    Dashboard("Visão Geral", Icons.Default.Home),
-    Transactions("Lançamentos", Icons.AutoMirrored.Filled.List),
-    Reports("Relatórios", Icons.Default.PieChart),
-    Cards("Cartões", Icons.Default.CreditCard)
-}
-
 /**
  * Barra de navegação inferior padrão Organizze com FAB central elevado para novos lançamentos.
  */

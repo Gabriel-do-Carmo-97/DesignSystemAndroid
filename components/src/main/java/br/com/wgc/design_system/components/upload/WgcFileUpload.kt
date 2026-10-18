@@ -30,16 +30,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estado do upload de um arquivo.
- */
-enum class WgcUploadStatus {
-    IDLE,
-    UPLOADING,
-    SUCCESS,
-    ERROR
-}
-
-/**
  * Componente de anexo e upload de arquivos corporativo (WgcFileUpload).
  */
 @Composable

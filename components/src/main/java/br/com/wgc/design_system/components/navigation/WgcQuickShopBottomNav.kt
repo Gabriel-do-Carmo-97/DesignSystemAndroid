@@ -37,17 +37,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-enum class WgcShopEaseNavItem(
-    val title: String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon: ImageVector
-) {
-    Home("Home", Icons.Filled.Home, Icons.Outlined.Home),
-    Favourites("Favourites", Icons.Filled.Favorite, Icons.Default.FavoriteBorder),
-    Cart("Cart", Icons.Filled.ShoppingCart, Icons.Outlined.ShoppingCart),
-    Profile("Profile", Icons.Filled.Person, Icons.Outlined.Person)
-}
-
 /**
  * Bottom Navigation Bar ShopEase:
  * Minimalista com ícones e indicador ativo sunset orange.

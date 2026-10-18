@@ -25,14 +25,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
-enum class WgcFitnessNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    WORKOUTS("Treinos", Icons.Default.FitnessCenter),
-    EXPLORE("Explorar", Icons.Default.Search),
-    ACTIVITY("Atividade", Icons.Default.PlayCircle),
-    PROFILE("Perfil", Icons.Default.Person)
-}
-
 @Composable
 fun WgcFitnessBottomNav(
     selectedItem: WgcFitnessNavItem,

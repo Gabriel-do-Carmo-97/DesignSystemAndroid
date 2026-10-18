@@ -32,16 +32,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Ação individual de um Speed Dial FAB.
- */
-data class WgcSpeedDialAction(
-    val id: String,
-    val label: String,
-    val icon: ImageVector,
-    val onClick: () -> Unit
-)
-
-/**
  * WgcSpeedDialFab
  *
  * Floating Action Button corporativo com menu vertical expansível de ações rápidas.

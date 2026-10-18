@@ -26,17 +26,6 @@ import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
 
 /**
- * Bandeiras de cartão de crédito detectáveis.
- */
-enum class WgcCardBrand(val brandName: String) {
-    VISA("Visa"),
-    MASTERCARD("Mastercard"),
-    ELO("Elo"),
-    AMEX("American Express"),
-    UNKNOWN("Desconhecida")
-}
-
-/**
  * Utilitário de detecção de bandeira e validação de Luhn.
  */
 object WgcCreditCardValidator {

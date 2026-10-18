@@ -75,15 +75,6 @@ fun WgcSparklineChart(
 }
 
 /**
- * Item individual para grupo de progresso em barras agrupadas.
- */
-data class WgcProgressSegment(
-    val label: String,
-    val value: Float,
-    val color: Color
-)
-
-/**
  * Grupo de Barras de Progresso Corporativo (WgcProgressBarGroup).
  */
 @Composable

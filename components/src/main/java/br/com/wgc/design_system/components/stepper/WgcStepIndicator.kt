@@ -29,23 +29,6 @@ import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estado individual de cada etapa no Stepper.
- */
-enum class WgcStepState {
-    COMPLETED,
-    CURRENT,
-    UPCOMING
-}
-
-/**
- * Item representativo de uma etapa do formulário/fluxo (WgcStepItem).
- */
-data class WgcStepItem(
-    val title: String,
-    val state: WgcStepState
-)
-
-/**
  * Indicador de Etapas Corporativo Horizontal (WgcStepIndicator).
  *
  * @param steps Lista ordenada de etapas do fluxo.

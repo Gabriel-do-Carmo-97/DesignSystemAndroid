@@ -8,17 +8,6 @@ fun interface WgcFieldValidator<T> {
 }
 
 /**
- * Estado reativo de um campo em um formulário WGC.
- */
-data class WgcFormField<T>(
-    val value: T,
-    val error: String? = null,
-    val isTouched: Boolean = false
-) {
-    val isValid: Boolean get() = error == null
-}
-
-/**
  * Controlador de formulários reativos corporativo (WgcFormController).
  */
 class WgcFormController {

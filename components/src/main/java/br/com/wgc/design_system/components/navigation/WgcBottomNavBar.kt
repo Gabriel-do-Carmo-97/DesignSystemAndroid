@@ -12,14 +12,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
-data class NavItem(
-    val label: String,
-    val icon: ImageVector,
-    val badgeCount: Int = 0,
-    val isProminent: Boolean = false,
-    val onClick: () -> Unit
-)
-
 /**
  * Barra de navegação inferior do Design System (WgcBottomNavBar).
  * Delega para a fábrica corporativa [WgcMenuFactory] unificando estilos e tokens.
@@ -82,5 +74,3 @@ private fun WgcBottomNavBarPreview() {
         }
     }
 }
-
-

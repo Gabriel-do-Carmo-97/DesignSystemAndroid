@@ -11,17 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 
 /**
- * Item de navegação para a barra inferior.
- */
-data class WgcNavItem(
-    val route: String,
-    val label: String,
-    val icon: ImageVector,
-    val selectedIcon: ImageVector = icon,
-    val badgeCount: Int? = null
-)
-
-/**
  * Fábrica universal de navegação inferior (WgcNavigationBarFactory).
  */
 object WgcNavigationBarFactory {

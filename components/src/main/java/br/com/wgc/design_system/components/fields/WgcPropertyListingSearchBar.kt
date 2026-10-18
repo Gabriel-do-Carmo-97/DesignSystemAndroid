@@ -39,15 +39,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Modalidade imobiliária Property Listing: Comprar, Alugar ou Lançamentos.
- */
-enum class WgcPropertyListingPurpose {
-    Buy,
-    Rent,
-    NewDevelopments
-}
-
-/**
  * Campo de busca e seletor de finalidade no estilo Property Listing (WgcPropertyListingSearchBar):
  * - Segmented switcher: Comprar | Alugar | Lançamentos
  * - Input com ícone de busca, placeholder e botão de limpar

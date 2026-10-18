@@ -28,14 +28,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Ponto de dado para barra vertical.
- */
-data class WgcBarData(
-    val label: String,
-    val value: Float
-)
-
-/**
  * WgcBarChart
  *
  * Gráfico de barras verticais corporativo desenhado em Canvas.

@@ -40,17 +40,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-enum class WgcFreshGroceryNavItem(
-    val title: String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon: ImageVector
-) {
-    Home("Home", Icons.Filled.Home, Icons.Outlined.Home),
-    Wishlist("Wishlist", Icons.Filled.Favorite, Icons.Outlined.FavoriteBorder),
-    Notification("Alerts", Icons.Filled.Notifications, Icons.Outlined.Notifications),
-    Profile("Profile", Icons.Filled.Person, Icons.Outlined.Person)
-}
-
 /**
  * Bottom Navigation Bar Fresh Grocery:
  * Limpa, com ícones minimalistas e destaque verde esmeralda no item ativo.

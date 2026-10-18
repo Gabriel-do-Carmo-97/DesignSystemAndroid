@@ -28,24 +28,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estado de cada etapa do rastreamento Clothee.
- */
-enum class WgcClotheeStepState {
-    COMPLETED,
-    IN_PROGRESS,
-    PENDING
-}
-
-/**
- * Modelo de etapa para a timeline Clothee.
- */
-data class WgcClotheeTimelineStep(
-    val title: String,
-    val subtitle: String,
-    val state: WgcClotheeStepState
-)
-
-/**
  * Linha do tempo vertical do ecossistema Clothee (WgcApparelOrderTimeline).
  * Exibe ícones circulares em roxo (#8E6CEF) com checkmarks para etapas completadas
  * e linhas verticais conectando os estágios da entrega.

@@ -25,16 +25,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Modelo de passo para tours interativos guiados (Walkthrough).
- */
-data class WgcTourStep(
-    val stepIndex: Int,
-    val title: String,
-    val description: String,
-    val totalSteps: Int
-)
-
-/**
  * Balão de Walkthrough e Onboarding interativo para guiar novos usuários pelas funcionalidades.
  */
 @Composable

@@ -32,15 +32,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estilo visual do botão de biometria.
- */
-enum class WgcBiometricStyle {
-    Circular,
-    RoundedSquare,
-    OutlinedSquare
-}
-
-/**
  * Botão Oficial de Autenticação Biométrica / Impressão Digital (WgcBiometricButton).
  * Suporta State Hoisting, semântica de acessibilidade e variações de estilo do Figma.
  */

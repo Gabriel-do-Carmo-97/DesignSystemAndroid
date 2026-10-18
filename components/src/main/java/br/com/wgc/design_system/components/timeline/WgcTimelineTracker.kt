@@ -41,35 +41,6 @@ private const val NODE_SIZE_DP = 28
 private const val MINI_ICON_SIZE_DP = 16
 
 /**
- * Estados possíveis para uma etapa na linha do tempo.
- */
-enum class WgcTimelineState {
-    Completed,
-    InProgress,
-    Pending,
-    Failed
-}
-
-/**
- * Orientação da linha do tempo corporativa.
- */
-enum class WgcTimelineOrientation {
-    Vertical,
-    Horizontal
-}
-
-/**
- * Modelo de dados de um item da linha do tempo.
- */
-data class WgcTimelineStep(
-    val id: String,
-    val title: String,
-    val description: String? = null,
-    val timestamp: String? = null,
-    val state: WgcTimelineState = WgcTimelineState.Pending
-)
-
-/**
  * Componente corporativo de rastreamento de etapas e esteiras (pedidos, empréstimos, entregas).
  *
  * @param items Lista de etapas ordenadas cronologicamente

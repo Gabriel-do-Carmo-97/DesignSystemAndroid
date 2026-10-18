@@ -41,16 +41,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Raio geográfico de busca do Zap Imóveis.
- */
-enum class WgcZapSearchRadius(val label: String) {
-    EXACT("Exato"),
-    RADIUS_2KM("+2 km"),
-    RADIUS_5KM("+5 km"),
-    RADIUS_10KM("+10 km")
-}
-
-/**
  * Barra de busca com geolocalização e raio geográfico do Zap Imóveis.
  */
 @Composable

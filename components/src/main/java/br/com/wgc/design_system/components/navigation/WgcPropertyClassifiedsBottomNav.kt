@@ -37,17 +37,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Destinos da barra de navegação do Zap Imóveis.
- */
-enum class WgcZapNavDestination(val label: String, val icon: ImageVector) {
-    SEARCH("Buscar", Icons.Default.Search),
-    FAVORITES("Favoritos", Icons.Default.Favorite),
-    ALERTS("Alertas", Icons.Default.Notifications),
-    FIPEZAP("FipeZAP", Icons.Default.Analytics),
-    PROFILE("Perfil", Icons.Default.Person)
-}
-
-/**
  * Barra de navegação inferior exclusiva do Zap Imóveis.
  */
 @Composable

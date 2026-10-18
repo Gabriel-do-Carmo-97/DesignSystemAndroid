@@ -38,15 +38,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Nível de lotação da unidade Gym & Fitness.
- */
-enum class WgcGymFitnessCrowdLevel(val label: String) {
-    LOW("Tranquila"),
-    MEDIUM("Moderada"),
-    HIGH("Movimentada")
-}
-
-/**
  * Card de Lotação e Status da Unidade Gym & Fitness.
  *
  * Apresenta o nome da unidade, endereço/distância, horário de funcionamento,

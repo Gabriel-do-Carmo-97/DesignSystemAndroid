@@ -36,12 +36,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-enum class WgcOrganizzeTransactionType {
-    Expense,
-    Income,
-    Transfer
-}
-
 /**
  * Item de Transação / Lançamento do Organizze.
  * Mostra o ícone de categoria, descrição, conta/cartão, valor e botão de conciliação (pago/pendente).

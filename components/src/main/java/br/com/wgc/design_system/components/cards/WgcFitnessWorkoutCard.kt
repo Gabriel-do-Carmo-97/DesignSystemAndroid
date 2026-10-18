@@ -39,21 +39,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-enum class WgcFitnessWorkoutIntensity(val label: String, val level: Int) {
-    LOW("Leve", 1),
-    MODERATE("Intermediário", 2),
-    HIGH("Avançado", 3),
-    EXTREME("Atleta", 4)
-}
-
-enum class WgcFitnessWorkoutCategory(val label: String, val colorHex: Int) {
-    HIIT("HIIT", WgcCoreDsColors.orange500),
-    STRENGTH("FORÇA", WgcCoreDsColors.green28),
-    YOGA("YOGA", WgcCoreDsColors.blue30),
-    MOBILITY("MOBILIDADE", WgcCoreDsColors.purple5),
-    ENDURANCE("RESISTÊNCIA", WgcCoreDsColors.green28)
-}
-
 @Composable
 fun WgcFitnessWorkoutCard(
     title: String,

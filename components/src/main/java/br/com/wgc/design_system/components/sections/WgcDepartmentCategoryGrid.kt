@@ -19,13 +19,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
-data class WgcSquareCategoryItem(
-    val id: String,
-    val name: String,
-    val emoji: String,
-    val backgroundColor: Color = Color(WgcCoreDsColors.gray100)
-)
-
 /**
  * Grade de Departamentos e Categorias em Grade 4 Colunas (WgcDepartmentCategoryGrid).
  */

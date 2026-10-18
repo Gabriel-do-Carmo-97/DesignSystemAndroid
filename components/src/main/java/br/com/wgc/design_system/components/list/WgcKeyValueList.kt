@@ -20,15 +20,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Item chave-valor para comprovantes e extratos.
- */
-data class WgcKeyValueEntry(
-    val key: String,
-    val value: String,
-    val isHighlighted: Boolean = false
-)
-
-/**
  * WgcKeyValueList
  *
  * Exibidor corporativo de dados estruturados chave-valor para comprovantes, recibos e telas de resumo.

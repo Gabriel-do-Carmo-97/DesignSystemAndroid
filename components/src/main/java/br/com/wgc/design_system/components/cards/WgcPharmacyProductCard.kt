@@ -44,13 +44,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
-enum class PharmacyMedicineStripe {
-    NONE,
-    RED,
-    BLACK,
-    GENERIC
-}
-
 @Composable
 fun WgcPharmacyProductCard(
     title: String,

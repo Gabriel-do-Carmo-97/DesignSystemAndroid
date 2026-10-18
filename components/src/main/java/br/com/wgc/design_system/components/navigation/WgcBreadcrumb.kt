@@ -19,14 +19,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
- * Item de trilha de navegação (Breadcrumb).
- */
-data class WgcBreadcrumbItem(
-    val id: String,
-    val title: String
-)
-
-/**
  * WgcBreadcrumb
  *
  * Trilha hierárquica de navegação corporativa para páginas e telas com múltiplos níveis de profundidade.

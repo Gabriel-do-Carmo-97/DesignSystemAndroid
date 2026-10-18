@@ -43,16 +43,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
- * Modelo de dados para aba no WgcTabRow.
- */
-data class WgcTabItem(
-    val id: String,
-    val title: String,
-    val icon: ImageVector? = null,
-    val badgeCount: Int? = null
-)
-
-/**
  * WgcTabRow
  *
  * Barra de abas corporativa com suporte a layout fixo ou rolável.

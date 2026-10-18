@@ -39,14 +39,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Modalidade imobiliária Property Rental: Alugar ou Comprar.
- */
-enum class WgcPropertyRentalContractType {
-    Rent,
-    Buy
-}
-
-/**
  * Campo de busca e seletor de modalidade no estilo Property Rental (WgcPropertyRentalSearchBar):
  * - Seletor segmented pill para "Alugar" e "Comprar"
  * - Barra de pesquisa com ícone de localização/lupa e ação de limpar

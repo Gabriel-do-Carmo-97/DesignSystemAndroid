@@ -23,19 +23,6 @@ import br.com.wgc.design_system.components.badge.WgcBadge
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Modelo de item para menus suspensos corporativos (WgcDropdownItem).
- */
-data class WgcDropdownItem(
-    val id: String,
-    val title: String,
-    val leadingIcon: ImageVector? = null,
-    val badgeCount: Int? = null,
-    val isDestructive: Boolean = false,
-    val enabled: Boolean = true,
-    val onClick: () -> Unit = {}
-)
-
-/**
  * Menu Suspenso Corporativo (WgcDropdownMenu).
  * Implementa tokens semânticos de cores, tipografia e slots de ícones/badges.
  *

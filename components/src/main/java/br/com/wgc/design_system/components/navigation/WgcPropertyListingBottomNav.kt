@@ -37,19 +37,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Destinos oficiais de navegação do PropertyListing.
- */
-enum class WgcPropertyListingNavItem(
-    val title: String,
-    val icon: ImageVector
-) {
-    Search("Buscar", Icons.Default.Search),
-    Favorites("Favoritos", Icons.Default.FavoriteBorder),
-    Messages("Mensagens", Icons.Default.ChatBubbleOutline),
-    Profile("Menu", Icons.Default.Person)
-}
-
-/**
  * Barra de navegação inferior oficial do Property Listing (WgcPropertyListingBottomNav):
  * - 4 abas principais: Buscar, Favoritos, Mensagens, Menu
  * - Indicador de aba selecionada no verde característico do Property Listing (#1C9963)

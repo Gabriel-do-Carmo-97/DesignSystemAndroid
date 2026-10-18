@@ -27,14 +27,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
-enum class WgcSupermarketNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    ADEGA("Adega", Icons.Default.WineBar),
-    DISCOUNTS("Descontos", Icons.Default.LocalOffer),
-    CART("Carrinho", Icons.Default.ShoppingBag),
-    PROFILE("Cliente Mais", Icons.Default.Person)
-}
-
 @Composable
 fun WgcSupermarketBottomNav(
     selectedItem: WgcSupermarketNavItem,

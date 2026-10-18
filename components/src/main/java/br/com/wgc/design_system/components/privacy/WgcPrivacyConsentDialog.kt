@@ -31,14 +31,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Preferências de consentimento LGPD / GDPR.
- */
-data class WgcPrivacyPreferences(
-    val analyticsAccepted: Boolean = false,
-    val marketingAccepted: Boolean = false,
-)
-
-/**
  * WgcPrivacyConsentDialog
  *
  * Diálogo corporativo de consentimento de privacidade e cookies (LGPD / GDPR) com opt-in granular.

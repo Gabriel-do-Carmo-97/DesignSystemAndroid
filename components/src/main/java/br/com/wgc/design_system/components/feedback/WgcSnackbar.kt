@@ -27,17 +27,6 @@ import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Variantes semânticas para o [WgcSnackbar].
- */
-enum class WgcSnackbarVariant {
-    Default,
-    Success,
-    Error,
-    Warning,
-    Info
-}
-
-/**
  * Componente de Snackbar corporativo do Design System (WgcSnackbar).
  *
  * Suporta variantes semânticas (Default, Success, Error, Warning, Info), ícones contextuais,

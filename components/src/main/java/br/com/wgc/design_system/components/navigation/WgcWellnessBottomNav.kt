@@ -35,17 +35,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Abas de navegação do Corporate Wellness (Wellness Network).
- */
-enum class WgcCorporateWellnessNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    EXPLORE("Academias", Icons.Default.Search),
-    CHECKIN("Check-in", Icons.Default.CheckCircle),
-    WELLNESS("Bem-estar", Icons.Default.Spa),
-    PROFILE("Perfil", Icons.Default.Person)
-}
-
-/**
  * Barra de Navegação Inferior Corporate Wellness (Wellness Network).
  *
  * 100% tokenizada com WgcCoreDs e State Hoisting.

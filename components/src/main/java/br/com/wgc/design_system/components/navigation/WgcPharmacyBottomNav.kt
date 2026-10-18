@@ -27,14 +27,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
-enum class PharmacyNavTab(val title: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    PRESCRIPTIONS("Receitas", Icons.Default.Description),
-    SUBSCRIPTION("Assinatura", Icons.Default.EventRepeat),
-    CART("Sacola", Icons.Default.ShoppingBag),
-    PROFILE("Meu Perfil", Icons.Default.Person)
-}
-
 @Composable
 fun WgcPharmacyBottomNav(
     selectedTab: PharmacyNavTab,

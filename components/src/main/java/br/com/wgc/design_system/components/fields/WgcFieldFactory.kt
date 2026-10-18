@@ -17,16 +17,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcOtpCodeInput
 
 /**
- * Tipos de campos suportados pela WgcFieldFactory.
- */
-enum class WgcFieldType {
-    Standard,
-    Search,
-    Password,
-    OtpCode
-}
-
-/**
  * Fábrica Universal de Campos de Entrada do Design System (WgcFieldFactory).
  * Provê alternância imediata entre [WgcFieldType] com defaults prontos para produção
  * e suporte a custom slot replacement ([customFieldSlot]).

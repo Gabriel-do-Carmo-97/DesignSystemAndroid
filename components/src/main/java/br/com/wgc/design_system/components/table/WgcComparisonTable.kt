@@ -31,26 +31,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Feature comparada de um plano.
- */
-data class WgcPlanFeature(
-    val name: String,
-    val included: Boolean
-)
-
-/**
- * Plano comparativo.
- */
-data class WgcPricingPlan(
-    val id: String,
-    val name: String,
-    val price: String,
-    val isHighlighted: Boolean = false,
-    val features: List<WgcPlanFeature>,
-    val buttonLabel: String = "Escolher Plano"
-)
-
-/**
  * WgcComparisonCard
  *
  * Card de comparação de preços e funcionalidades para planos de assinatura.

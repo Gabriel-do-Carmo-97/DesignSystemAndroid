@@ -30,55 +30,6 @@ import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-/**
- * Variantes de cor e semântica para [WgcTag].
- */
-enum class WgcTagVariant {
-    Primary,
-    Secondary,
-    Success,
-    Error,
-    Warning,
-    Info,
-    Neutral
-}
-
-/**
- * Estilo de preenchimento para [WgcTag].
- */
-enum class WgcTagStyle {
-    Filled,
-    Outlined
-}
-
-/**
- * Tamanhos suportados para [WgcTag].
- */
-enum class WgcTagSize {
-    Small,
-    Medium
-}
-
-/**
- * WgcTag
- *
- * Componente atômico para exibição de rótulos de status, categorias, badges promocionais
- * e metadados contextuais (ex: "Novo", "Destaque", "Promoção", "Esgotado").
- *
- * @param text Rótulo textual da tag.
- * @param modifier Modificador de layout.
- * @param variant Variante cromática/semântica.
- * @param style Estilo de exibição (Filled ou Outlined).
- * @param size Dimensão da tag (Small ou Medium).
- * @param leadingIcon Ícone opcional à esquerda do texto.
- * @param trailingIcon Ícone opcional à direita do texto.
- */
-private data class WgcTagColors(
-    val primary: Color,
-    val container: Color,
-    val onContainer: Color
-)
-
 @Composable
 private fun resolveTagColors(variant: WgcTagVariant): WgcTagColors = when (variant) {
     WgcTagVariant.Primary -> WgcTagColors(

@@ -24,17 +24,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
- * Variantes de cor para o WgcBadge.
- */
-enum class WgcBadgeVariant {
-    Primary,
-    Error,
-    Success,
-    Warning,
-    Neutral
-}
-
-/**
  * WgcBadge
  *
  * Emblema de notificação corporativo com suporte a dot (ponto indicador) ou rótulo textual/numérico.

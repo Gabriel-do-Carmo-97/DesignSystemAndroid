@@ -6,16 +6,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 
 /**
- * Tipos de deficiência visual de cor (Daltonismo) para teste e simulação.
- */
-enum class WgcColorBlindnessMode {
-    NONE,
-    PROTANOPIA, // Ausência de receptores vermelhos
-    DEUTERANOPIA, // Ausência de receptores verdes
-    TRITANOPIA // Ausência de receptores azuis
-}
-
-/**
  * Matrizes de transformação de cor para simulação de daltonismo baseadas nas fórmulas de Brettel et al.
  */
 object WgcColorBlindnessSimulation {

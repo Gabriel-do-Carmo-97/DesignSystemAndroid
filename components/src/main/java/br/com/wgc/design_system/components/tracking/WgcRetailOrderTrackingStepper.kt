@@ -32,26 +32,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estado de uma etapa de rastreamento.
- */
-enum class WgcKutukuStepStatus {
-    COMPLETED,
-    IN_PROGRESS,
-    PENDING
-}
-
-/**
- * Modelo de dado para um item da timeline do Kutuku.
- */
-data class WgcKutukuTrackingStepItem(
-    val title: String,
-    val subtitle: String,
-    val time: String,
-    val status: WgcKutukuStepStatus,
-    val icon: ImageVector? = null
-)
-
-/**
  * Linha do tempo vertical oficial de rastreamento do Kutuku (WgcRetailOrderTrackingStepper).
  */
 @Composable

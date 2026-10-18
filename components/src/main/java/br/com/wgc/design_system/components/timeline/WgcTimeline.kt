@@ -32,26 +32,6 @@ import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Estado de cada etapa da linha do tempo.
- */
-enum class WgcTimelineStatus {
-    COMPLETED,
-    CURRENT,
-    PENDING
-}
-
-/**
- * Modelo de dados para um item da linha do tempo.
- */
-data class WgcTimelineItem(
-    val title: String,
-    val description: String? = null,
-    val timestamp: String? = null,
-    val status: WgcTimelineStatus = WgcTimelineStatus.PENDING,
-    val icon: (@Composable () -> Unit)? = null
-)
-
-/**
  * Componente corporativo de Linha do Tempo (WgcTimeline).
  *
  * Utilizado para rastreamento de entregas, histórico de transações, esteiras de aprovação

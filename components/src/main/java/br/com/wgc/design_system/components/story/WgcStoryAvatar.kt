@@ -26,10 +26,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
 
-enum class StoryState {
-    UNSEEN, SEEN, CLOSE_FRIENDS
-}
-
 /**
  * Componente de Avatar para Stories com anel gradiente de status (WgcStoryAvatar).
  */
@@ -125,14 +121,6 @@ fun WgcStoryAvatar(
         )
     }
 }
-
-data class StoryTrayItem(
-    val id: String,
-    val userName: String,
-    val imageUrl: String? = null,
-    val storyState: StoryState = StoryState.UNSEEN,
-    val isUserStory: Boolean = false
-)
 
 @Composable
 fun WgcStoryTray(

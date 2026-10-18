@@ -31,12 +31,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
-enum class WgcBannerSeverity {
-    INFO,
-    WARNING,
-    ERROR
-}
-
 /**
  * Banner persistente para avisos de sistema, manutenção e informações operacionais.
  */

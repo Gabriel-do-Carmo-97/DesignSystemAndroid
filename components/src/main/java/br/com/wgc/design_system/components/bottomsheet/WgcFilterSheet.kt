@@ -27,14 +27,6 @@ import br.com.wgc.design_system.components.chip.WgcChip
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Modelo de dados para opções de filtro por categoria.
- */
-data class WgcFilterCategoryOption(
-    val id: String,
-    val label: String
-)
-
-/**
  * Folha inferior (Bottom Sheet) especializada para filtragem multidimensional.
  *
  * @param isVisible Se a folha está visível

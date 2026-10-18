@@ -36,17 +36,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Itens de navegação inferior do Gym & Fitness.
- */
-enum class WgcGymFitnessNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    WORKOUTS("Treinos", Icons.Default.FitnessCenter),
-    CLASSES("Aulas", Icons.AutoMirrored.Filled.EventNote),
-    GO("Gym & Fitness GO", Icons.Default.PlayCircle),
-    PROFILE("Acesso", Icons.Default.Person)
-}
-
-/**
  * Barra de navegação inferior Gym & Fitness.
  *
  * 100% tokenizada com WgcCoreDs e State Hoisting.

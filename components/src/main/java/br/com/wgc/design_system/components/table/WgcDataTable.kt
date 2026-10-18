@@ -41,34 +41,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Direção de ordenação da coluna.
- */
-enum class WgcSortDirection {
-    ASCENDING,
-    DESCENDING,
-    NONE
-}
-
-/**
- * Estado atual de ordenação da tabela.
- */
-data class WgcSortState(
-    val columnId: String = "",
-    val direction: WgcSortDirection = WgcSortDirection.NONE
-)
-
-/**
- * Definição de coluna da tabela corporativa.
- */
-data class WgcTableColumn<T>(
-    val id: String,
-    val header: String,
-    val width: Int = 140,
-    val sortable: Boolean = false,
-    val cell: @Composable (T) -> Unit
-)
-
-/**
  * Componente corporativo de Tabela de Dados com ordenação, seleção de linhas e paginação.
  */
 @Composable

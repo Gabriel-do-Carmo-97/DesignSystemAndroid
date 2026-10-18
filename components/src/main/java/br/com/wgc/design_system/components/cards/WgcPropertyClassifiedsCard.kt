@@ -49,15 +49,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Status de precificação em relação ao Índice FipeZAP.
- */
-enum class WgcZapFipeStatus(val label: String) {
-    BELOW_AVERAGE("Preço abaixo da média"),
-    ON_AVERAGE("Preço na média"),
-    ABOVE_AVERAGE("Preço acima da média")
-}
-
-/**
  * Card oficial de Imóvel do Zap Imóveis.
  *
  * Exibe foto simulada, selos de destaque, tag FipeZAP, valores de venda/locação,

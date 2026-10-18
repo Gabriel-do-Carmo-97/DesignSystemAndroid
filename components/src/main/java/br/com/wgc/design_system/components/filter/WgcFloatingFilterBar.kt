@@ -27,12 +27,6 @@ import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
-data class WgcFilterOption(
-    val id: String,
-    val label: String,
-    val isSelected: Boolean = false
-)
-
 /**
  * Barra flutuante animada de filtros rápidos com chips horizontais.
  */

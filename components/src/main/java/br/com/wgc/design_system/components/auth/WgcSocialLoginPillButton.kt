@@ -36,18 +36,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Provedores sociais suportados nos botões pill.
- */
-enum class WgcSocialPillProvider(
-    val defaultLabel: String,
-    val brandColor: Color
-) {
-    Facebook("Login with Facebook", Color(WgcCoreDsColors.blue34)),
-    Instagram("Login with Instagram", Color(WgcCoreDsColors.pink3)),
-    LinkedIn("Login with LinkedIn", Color(WgcCoreDsColors.blue16))
-}
-
-/**
  * Botão Social em Formato Pill de Largura Total (WgcSocialLoginPillButton).
  * Utilizado no Template Modern Klok do Figma.
  */

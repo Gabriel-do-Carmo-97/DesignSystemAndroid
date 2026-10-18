@@ -7,22 +7,6 @@ import kotlin.math.abs
 import kotlin.math.roundToInt
 
 /**
- * Modo de apresentação visual do seletor de cores WgcColorPicker.
- */
-enum class WgcColorPickerPresentation {
-    DIALOG,
-    BOTTOM_SHEET
-}
-
-/**
- * Tipo de gatilho padrão do WgcColorPicker quando nenhum slot customizado é fornecido.
- */
-enum class WgcColorPickerTriggerType {
-    ICON,
-    BADGE
-}
-
-/**
  * Utilitários matemáticos para conversão e manipulação no espaço de cor HSV.
  */
 object WgcColorPickerUtils {

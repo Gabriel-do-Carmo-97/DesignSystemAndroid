@@ -39,16 +39,6 @@ import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Item de status de pedido do Shoppe.
- */
-data class ShoppeOrderStatusItem(
-    val title: String,
-    val icon: ImageVector,
-    val badgeCount: Int = 0,
-    val onClick: () -> Unit = {}
-)
-
-/**
  * Linha de Status de Pedido Oficial do Shoppe (WgcMegaStoreOrderStatusRow).
  * Apresenta as 5 seções principais: To Pay, To Receive, To Review, My Activity e Vouchers.
  */

@@ -24,15 +24,6 @@ import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Avatar individual com iniciais ou placeholder.
- */
-data class WgcAvatarData(
-    val id: String,
-    val name: String,
-    val initials: String = name.take(2).uppercase()
-)
-
-/**
  * WgcAvatarGroup
  *
  * Pilha de avatares com sobreposição horizontal e indicador de membros excedentes (+N).

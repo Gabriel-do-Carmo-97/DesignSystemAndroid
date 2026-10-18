@@ -38,20 +38,6 @@ import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
- * Destinos de navegação oficiais do ecossistema PropertyRental.
- */
-enum class WgcPropertyRentalNavItem(
-    val title: String,
-    val icon: ImageVector
-) {
-    Explore("Explorar", Icons.Default.Search),
-    Favorites("Favoritos", Icons.Default.FavoriteBorder),
-    Visits("Visitas", Icons.Default.CalendarToday),
-    Messages("Mensagens", Icons.Default.ChatBubbleOutline),
-    Profile("Perfil", Icons.Default.Person)
-}
-
-/**
  * Barra de navegação inferior oficial do Property Rental (WgcPropertyRentalBottomNav):
  * - 5 abas principais: Explorar, Favoritos, Visitas, Mensagens, Perfil
  * - Indicador de aba selecionada com ponto/barra de destaque amarela Property Rental
