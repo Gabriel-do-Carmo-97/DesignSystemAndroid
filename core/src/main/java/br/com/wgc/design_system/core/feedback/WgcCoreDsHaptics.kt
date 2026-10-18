@@ -33,4 +33,10 @@ object WgcCoreDsHaptics {
 
     /** Duração em milissegundos para vibração de erro */
     const val DURATION_LONG_MS = CoreConstants.CoreDsHaptics.DURATION_LONG_MS
+
+    const val patternLightClick = PATTERN_LIGHT_CLICK
+    const val patternMediumConfirm = PATTERN_MEDIUM_CONFIRM
+    const val patternHeavySuccess = PATTERN_HEAVY_SUCCESS
+    const val patternWarningAlert = PATTERN_WARNING_ALERT
+    const val patternErrorReject = PATTERN_ERROR_REJECT
 }

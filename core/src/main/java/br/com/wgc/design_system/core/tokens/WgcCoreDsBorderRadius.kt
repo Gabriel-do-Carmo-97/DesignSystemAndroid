@@ -49,4 +49,22 @@ object WgcCoreDsBorderRadius {
     const val XXL = CoreConstants.CoreDsBorderRadius.XXL
     const val CIRCULAR = CoreConstants.CoreDsBorderRadius.CIRCULAR
     const val PILL = CoreConstants.CoreDsBorderRadius.PILL
+
+    const val none0 = NONE0
+    const val xs2 = XS2
+    const val sm4 = SM4
+    const val md8 = MD8
+    const val lg12 = LG12
+    const val xl16 = XL16
+    const val sl18 = SL18
+    const val xxl24 = XXL24
+    const val display45 = DISPLAY45
+    const val circular999 = CIRCULAR999
+    const val xs = XS
+    const val sm = SM
+    const val md = MD
+    const val lg = LG
+    const val xl = XL
+    const val xxl = XXL
+    const val circular = CIRCULAR
 }

@@ -194,4 +194,41 @@ object WgcCoreDsSize {
 
     /** 400px */
     const val S400 = CoreConstants.CoreDsSize.S400
+
+    const val s0 = S0
+    const val s1 = S1
+    const val s8 = S8
+    const val s10 = S10
+    const val s12 = S12
+    const val s14 = S14
+    const val s16 = S16
+    const val s18 = S18
+    const val s20 = S20
+    const val s22 = S22
+    const val s24 = S24
+    const val s26 = S26
+    const val s28 = S28
+    const val s32 = S32
+    const val s36 = S36
+    const val s40 = S40
+    const val s44 = S44
+    const val s48 = S48
+    const val s52 = S52
+    const val s56 = S56
+    const val s60 = S60
+    const val s64 = S64
+    const val s72 = S72
+    const val s80 = S80
+    const val s88 = S88
+    const val s90 = S90
+    const val s96 = S96
+    const val s100 = S100
+    const val s120 = S120
+    const val s140 = S140
+    const val s160 = S160
+    const val s180 = S180
+    const val s200 = S200
+    const val s240 = S240
+    const val s280 = S280
+    const val s300 = S300
 }

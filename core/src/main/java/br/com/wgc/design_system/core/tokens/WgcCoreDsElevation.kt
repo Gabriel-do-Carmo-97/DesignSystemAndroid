@@ -52,4 +52,11 @@ object WgcCoreDsElevation {
 
     /** Transparência de sombra direcionada em tema escuro */
     const val SPOT_SHADOW_ALPHA_DARK = CoreConstants.CoreDsElevation.SPOT_SHADOW_ALPHA_DARK
+
+    const val level0 = LEVEL0
+    const val level1 = LEVEL1
+    const val level2 = LEVEL2
+    const val level3 = LEVEL3
+    const val level6 = LEVEL6
+    const val level8 = LEVEL8
 }

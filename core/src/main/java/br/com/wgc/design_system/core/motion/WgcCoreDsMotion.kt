@@ -29,6 +29,14 @@ object WgcCoreDsMotion {
     /** 700ms - Duração muito lenta para fluxos complexos de onboarding e celebração */
     const val DURATION_EXTRA_SLOW700 = CoreConstants.CoreDsMotion.DURATION_EXTRA_SLOW700
 
+    const val durationShort150 = DURATION_SHORT150
+    const val durationShort200 = DURATION_SHORT200
+    const val durationStandard300 = DURATION_STANDARD300
+    const val durationFast100 = DURATION_FAST100
+    const val durationNormal200 = DURATION_NORMAL200
+    const val durationSlow500 = DURATION_SLOW500
+    const val durationExtraSlow700 = DURATION_EXTRA_SLOW700
+
     // --- ESPECIFICAÇÕES DE FÍSICA DE MOLA (SPRING PHYSICS) ---
     /** Amortecimento sem quique (sem overshoot) */
     const val SPRING_DAMPING_NO_BOUNCY = CoreConstants.CoreDsMotion.SPRING_DAMPING_NO_BOUNCY
