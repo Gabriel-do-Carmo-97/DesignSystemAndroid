@@ -2,8 +2,19 @@ package br.com.wgc.design_system.commons.previews.components
 
 import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Wallpapers
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
+/**
+ * Gera previews do componente nos temas claro/escuro e com escala de fonte ampliada.
+ *
+ * Use em funções `@Composable` pequenas para verificar rapidamente a aparência base e a adaptação
+ * tipográfica no Android Studio:
+ * ```kotlin
+ * @WgcComponentPreviews
+ * @Composable fun ComponentPreview() { Text("Exemplo") }
+ * ```
+ */
 @Preview(
     name = "Light Mode",
     group = "Themes",

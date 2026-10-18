@@ -18,6 +18,20 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.IntSize
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
+/**
+ * Desenha um gradiente animado enquanto o item está carregando.
+ *
+ * Use no modificador de um placeholder para indicar visualmente uma operação em andamento.
+ * Quando [isLoading] é `false`, o modificador não acrescenta desenho. No estado de loading este
+ * modificador desenha o gradiente como conteúdo do draw pass, portanto aplique-o ao placeholder
+ * cuja superfície deve receber o shimmer.
+ *
+ * ```kotlin
+ * Box(Modifier.size(width, height).shimmerEffect(isLoading = true))
+ * ```
+ *
+ * @param isLoading Se `true`, ativa a animação contínua do gradiente.
+ */
 fun Modifier.shimmerEffect(
     isLoading: Boolean,
 ): Modifier = composed {

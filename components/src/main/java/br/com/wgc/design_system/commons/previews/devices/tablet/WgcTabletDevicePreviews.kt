@@ -4,7 +4,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
 /**
- * Anotação MultiPreview que renderiza o Composable em telas grandes de Tablets (7 e 10 polegadas).
+ * Gera previews em tamanhos de tablet de 7 e 10 polegadas.
+ *
+ * Use para verificar componentes ou telas em larguras maiores:
+ * `@WgcTabletDevicePreviews @Composable fun TabletPreview() { Text("Exemplo") }`.
  */
 @Preview(
     name = "Tablet 7 Inch",

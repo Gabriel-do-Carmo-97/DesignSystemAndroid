@@ -4,7 +4,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
 /**
- * Anotação Multi-Preview para validação em múltiplos formatos de tela: Celular, Tablet e Dobrável (Foldable).
+ * Gera previews em telefone, tablet em paisagem e dispositivo dobrável, exibindo também a system UI.
+ *
+ * Use ao validar responsividade em classes de dispositivo diferentes:
+ * `@DevicePreviews @Composable fun ContentPreview() { Text("Exemplo") }`.
  */
 @Preview(
     name = "Phone",

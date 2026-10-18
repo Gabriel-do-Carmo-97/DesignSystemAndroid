@@ -4,7 +4,23 @@ import androidx.compose.runtime.Composable
 import br.com.wgc.design_system.commons.state.model.WgcAsyncUiState
 
 /**
- * Renderizador declarativo de estados assíncronos no Jetpack Compose.
+ * Despacha a renderização Compose para o callback correspondente ao estado assíncrono.
+ *
+ * Use dentro da UI para manter os ramos de carregamento, erro, inatividade e sucesso explícitos.
+ * Se `onIdle` não for fornecido, `Idle` é renderizado com `onLoading`.
+ *
+ * ```kotlin
+ * uiState.Render(
+ *     onLoading = { CircularProgressIndicator() },
+ *     onError = { message, _ -> Text(message ?: "Falha") },
+ *     onSuccess = { user -> Text(user.name) },
+ * )
+ * ```
+ *
+ * @param onLoading Conteúdo exibido enquanto o estado for [WgcAsyncUiState.Loading].
+ * @param onError Conteúdo de falha; recebe mensagem e exceção opcionais.
+ * @param onIdle Conteúdo para [WgcAsyncUiState.Idle]; se omitido, usa `onLoading`.
+ * @param onSuccess Conteúdo que recebe o dado carregado.
  */
 @Composable
 fun <T> WgcAsyncUiState<T>.Render(

@@ -4,9 +4,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
 /**
- * Anotação MultiPreview que renderiza o Composable em:
- * 1. Device Pequeno (Phone Compact - 360x640 dp)
- * 2. Device Grande (Phone Large / Phablet - 411x891 dp)
+ * Gera previews em dois formatos de telefone: compacto (360 × 640 dp) e grande (411 × 891 dp).
+ *
+ * Use para conferir se um componente ou layout se adapta a larguras comuns de celular:
+ * `@WgcDevicePreviews @Composable fun PhonePreview() { Text("Exemplo") }`.
  */
 @Preview(
     name = "Small Device (360x640)",

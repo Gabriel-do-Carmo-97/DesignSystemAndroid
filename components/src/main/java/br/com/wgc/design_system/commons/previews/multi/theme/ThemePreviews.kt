@@ -4,7 +4,10 @@ import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Preview
 
 /**
- * Anotação Multi-Preview para validação simultânea de temas Claro (Light) e Escuro (Dark).
+ * Gera previews do composable nos modos claro e escuro do sistema.
+ *
+ * Use ao conferir cores e contraste em ambos os temas:
+ * `@ThemePreviews @Composable fun ThemePreview() { Text("Exemplo") }`.
  */
 @Preview(
     name = "Light Mode",
