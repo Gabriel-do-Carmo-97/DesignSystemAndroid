@@ -186,3 +186,21 @@ private fun ReceiptRow(label: String, value: String) {
         Text(text = value, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcTransactionReceiptScreen Preview", showBackground = true)
+@Composable
+private fun WgcTransactionReceiptScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcTransactionReceiptScreen(
+            route = WgcStatementDetailRoute(
+                transactionId = "TX-998877",
+                title = "Transferência Pix",
+                amount = "R$ 150,00",
+                date = "Hoje, 14:30",
+                isCredit = false
+            ),
+            onBackClick = {},
+            onShareClick = {}
+        )
+    }
+}

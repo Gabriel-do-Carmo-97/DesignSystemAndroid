@@ -1,6 +1,6 @@
 @file:Suppress("MagicNumber")
 
-package br.com.wgc.design_system.components.accessibility
+package br.com.wgc.design_system.components.accessibility.colorBlindness
 
 /**
  * Tipos de deficiência visual de cor (Daltonismo) para teste e simulação.

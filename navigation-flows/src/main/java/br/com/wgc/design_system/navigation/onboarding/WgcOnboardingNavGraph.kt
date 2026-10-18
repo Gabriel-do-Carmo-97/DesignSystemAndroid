@@ -372,3 +372,25 @@ private fun WgcOnboardingProfileSetupNavScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcOnboardingWelcomeNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcOnboardingWelcomeNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcOnboardingWelcomeNavScreen(
+            onNext = {},
+            onSkip = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcOnboardingPermissionsNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcOnboardingPermissionsNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcOnboardingPermissionsNavScreen(
+            onNext = {},
+            onBack = {}
+        )
+    }
+}

@@ -1,6 +1,6 @@
 @file:Suppress("MagicNumber")
 
-package br.com.wgc.design_system.components.accessibility
+package br.com.wgc.design_system.components.accessibility.colorBlindness
 
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
