@@ -1,32 +1,23 @@
 package br.com.wgc.design_system.components.navigation
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.EventRepeat
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.ShoppingBag
-import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
-import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
+/**
+ * Barra de navegação inferior Farmácia.
+ */
+@Deprecated(
+    message = "Utilize WgcBottomNavBar com WgcNavPresets.pharmacy ou lista dinâmica de WgcNavItem",
+    replaceWith = ReplaceWith(
+        "WgcBottomNavBar(items = WgcNavPresets.pharmacy, selectedRoute = selectedTab.name, onItemSelected = { ... })"
+    )
+)
 @Composable
 fun WgcPharmacyBottomNav(
     selectedTab: PharmacyNavTab,
@@ -34,56 +25,30 @@ fun WgcPharmacyBottomNav(
     modifier: Modifier = Modifier,
     cartBadgeCount: Int = 0
 ) {
-    NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.white)),
-        tonalElevation = WgcCoreDsElevation.LEVEL3.dp
-    ) {
-        PharmacyNavTab.entries.forEach { tab ->
-            val isSelected = selectedTab == tab
-            NavigationBarItem(
-                selected = isSelected,
-                onClick = { onTabSelected(tab) },
-                icon = {
-                    if (tab == PharmacyNavTab.CART && cartBadgeCount > 0) {
-                        BadgedBox(
-                            badge = {
-                                Badge(
-                                    containerColor = Color(WgcCoreDsColors.red8)) {
-                                    Text(text = cartBadgeCount.toString())
-                                }
-                            }
-                        ) {
-                            Icon(
-                                imageVector = tab.icon,
-                                contentDescription = tab.title,
-                                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
-                            )
-                        }
-                    } else {
-                        Icon(
-                            imageVector = tab.icon,
-                            contentDescription = tab.title,
-                            modifier = Modifier.size(WgcCoreDsSize.S24.dp)
-                        )
-                    }
-                },
-                label = {
-                    Text(
-                        text = tab.title,
-                        fontSize = 9.sp,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                    )
-                },
-                colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.red8),
-                    selectedTextColor = Color(WgcCoreDsColors.red8),
-                    unselectedIconColor = Color(WgcCoreDsColors.blue20),
-                    unselectedTextColor = Color(WgcCoreDsColors.blue20),
-                    indicatorColor = Color(WgcCoreDsColors.pinkLight4)
-                )
+    val items = remember(cartBadgeCount) {
+        PharmacyNavTab.entries.map { tab ->
+            WgcNavItem(
+                route = tab.name,
+                label = tab.title,
+                icon = tab.icon,
+                badgeCount = if (tab == PharmacyNavTab.CART && cartBadgeCount > 0) cartBadgeCount else null
             )
         }
     }
+    WgcBottomNavBar(
+        items = items,
+        selectedRoute = selectedTab.name,
+        onItemSelected = { navItem ->
+            val match = PharmacyNavTab.entries.firstOrNull { it.name == navItem.route }
+            if (match != null) onTabSelected(match)
+        },
+        modifier = modifier,
+        containerColor = Color(WgcCoreDsColors.white),
+        selectedColor = Color(WgcCoreDsColors.red8),
+        unselectedColor = Color(WgcCoreDsColors.blue20),
+        indicatorColor = Color(WgcCoreDsColors.pinkLight4),
+        tonalElevation = WgcCoreDsElevation.LEVEL3.dp
+    )
 }
 
 @Preview(showBackground = true)

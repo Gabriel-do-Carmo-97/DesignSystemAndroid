@@ -1,76 +1,50 @@
 package br.com.wgc.design_system.components.navigation
 
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.MenuBook
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.LocalOffer
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
 
 /**
  * Barra de navegação inferior do Clube Extra.
- *
- * Consome os tokens oficiais Clube Extra (`extraRed`, `extraSurface`, etc.).
- *
- * 100% tokenizado com WgcCoreDs e State Hoisting.
  */
+@Deprecated(
+    message = "Utilize WgcBottomNavBar com lista dinâmica de WgcNavItem",
+    replaceWith = ReplaceWith(
+        "WgcBottomNavBar(items = items, selectedRoute = selectedItem.name, onItemSelected = { ... })"
+    )
+)
 @Composable
 fun WgcExtraBottomNav(
     selectedItem: WgcExtraNavItem,
     onItemSelected: (WgcExtraNavItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    NavigationBar(
+    val items = remember {
+        WgcExtraNavItem.entries.map { item ->
+            WgcNavItem(route = item.name, label = item.label, icon = item.icon)
+        }
+    }
+    WgcBottomNavBar(
+        items = items,
+        selectedRoute = selectedItem.name,
+        onItemSelected = { navItem ->
+            val match = WgcExtraNavItem.entries.firstOrNull { it.name == navItem.route }
+            if (match != null) onItemSelected(match)
+        },
         modifier = modifier.border(
             width = WgcCoreDsSize.S1.dp,
             color = Color(WgcCoreDsColors.blueLight6)
-        )) {
-        WgcExtraNavItem.entries.forEach { item ->
-            val isSelected = item == selectedItem
-            NavigationBarItem(
-                selected = isSelected,
-                onClick = { onItemSelected(item) },
-                icon = {
-                    Icon(
-                        imageVector = item.icon,
-                        contentDescription = item.label,
-                        modifier = Modifier.size(WgcCoreDsSize.S22.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = item.label,
-                        fontSize = 10.sp,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                    )
-                },
-                colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.red12),
-                    selectedTextColor = Color(WgcCoreDsColors.red12),
-                    indicatorColor = Color(WgcCoreDsColors.redLight4),
-                    unselectedIconColor = Color(WgcCoreDsColors.blue27),
-                    unselectedTextColor = Color(WgcCoreDsColors.blue27)
-                )
-            )
-        }
-    }
+        ),
+        selectedColor = Color(WgcCoreDsColors.red12),
+        unselectedColor = Color(WgcCoreDsColors.blue27),
+        indicatorColor = Color(WgcCoreDsColors.redLight4)
+    )
 }
 
 @Preview(name = "Clube Extra Bottom Nav - Preview")

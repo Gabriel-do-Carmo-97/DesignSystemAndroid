@@ -10,5 +10,6 @@ data class WgcNavItem(
     val label: String,
     val icon: ImageVector,
     val selectedIcon: ImageVector = icon,
-    val badgeCount: Int? = null
+    val badgeCount: Int? = null,
+    val onClick: (() -> Unit)? = null
 )
