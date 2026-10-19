@@ -28,9 +28,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Bottom Sheet padronizado do Design System (WgcStandardBottomSheet).
@@ -65,20 +65,20 @@ fun WgcStandardBottomSheet(
         modifier = modifier,
         sheetState = sheetState,
         shape = RoundedCornerShape(
-            topStart = WgcCoreDsBorderRadius.xl.dp,
-            topEnd = WgcCoreDsBorderRadius.xl.dp
+            topStart = WgcCoreDsBorderRadius.XL.dp,
+            topEnd = WgcCoreDsBorderRadius.XL.dp
         ),
         containerColor = MaterialTheme.colorScheme.surface,
-        tonalElevation = WgcCoreDsElevation.level8.dp,
+        tonalElevation = WgcCoreDsElevation.LEVEL8.dp,
         dragHandle = dragHandle
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    start = WgcCoreDsSpacing.lg.dp,
-                    end = WgcCoreDsSpacing.lg.dp,
-                    bottom = WgcCoreDsSpacing.lg.dp
+                    start = WgcCoreDsSpacing.LG.dp,
+                    end = WgcCoreDsSpacing.LG.dp,
+                    bottom = WgcCoreDsSpacing.LG.dp
                 )
         ) {
             if (title != null || showCloseButton) {
@@ -97,7 +97,7 @@ fun WgcStandardBottomSheet(
                             )
                         }
                         if (subtitle != null) {
-                            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                             Text(
                                 text = subtitle,
                                 style = MaterialTheme.typography.bodyMedium,
@@ -117,16 +117,16 @@ fun WgcStandardBottomSheet(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
             }
 
             content()
 
             if (actionsSlot != null) {
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp),
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp),
                     content = actionsSlot
                 )
             }
@@ -142,14 +142,14 @@ private fun WgcStandardBottomSheetPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.lg.dp)
+                .padding(WgcCoreDsSpacing.LG.dp)
         ) {
             Text(
                 text = "Título de Exemplo",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
             Text(
                 text = "Conteúdo demonstrativo renderizado dentro do container padronizado.",
                 style = MaterialTheme.typography.bodyMedium

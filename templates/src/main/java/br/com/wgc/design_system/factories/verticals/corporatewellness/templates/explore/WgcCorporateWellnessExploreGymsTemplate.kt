@@ -109,7 +109,7 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.wellnessDark),
+                                    tint = Color(WgcCoreDsColors.grayDark7),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -117,14 +117,14 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = "EXPLORAR REDE",
-                                color = Color(WgcCoreDsColors.wellnessCoral),
+                                color = Color(WgcCoreDsColors.red26),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Academias & Estúdios",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -134,7 +134,7 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.wellnessForestLight))
+                                .background(Color(WgcCoreDsColors.greenLight4))
                                 .clickable { }
                                 .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp),
                             contentAlignment = Alignment.Center
@@ -146,12 +146,12 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Map,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.wellnessForest),
+                                    tint = Color(WgcCoreDsColors.cyanDark2),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                                 Text(
                                     text = "Mapa",
-                                    color = Color(WgcCoreDsColors.wellnessForest),
+                                    color = Color(WgcCoreDsColors.cyanDark2),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -166,8 +166,8 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Row(
                         modifier = Modifier
@@ -179,19 +179,19 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            tint = Color(WgcCoreDsColors.gray7),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "Buscar por nome, bairro ou modalidade...",
-                            color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                            color = Color(WgcCoreDsColors.gray7),
                             fontSize = 13.sp,
                             modifier = Modifier.weight(1f)
                         )
                         Icon(
                             imageVector = Icons.Default.FilterList,
                             contentDescription = "Filtros",
-                            tint = Color(WgcCoreDsColors.wellnessCoral),
+                            tint = Color(WgcCoreDsColors.red26),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -209,14 +209,14 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                                 .background(
-                                    if (isSelected) Color(WgcCoreDsColors.wellnessForest)
-                                    else Color(WgcCoreDsColors.wellnessSurface)
+                                    if (isSelected) Color(WgcCoreDsColors.cyanDark2)
+                                    else Color(WgcCoreDsColors.white)
                                 )
                                 .border(
                                     BorderStroke(
                                         WgcCoreDsSize.s1.dp,
-                                        if (isSelected) Color(WgcCoreDsColors.wellnessForest)
-                                        else Color(WgcCoreDsColors.wellnessBorder)
+                                        if (isSelected) Color(WgcCoreDsColors.cyanDark2)
+                                        else Color(WgcCoreDsColors.blueLight6)
                                     ),
                                     RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                                 )
@@ -225,7 +225,7 @@ fun WgcCorporateWellnessExploreGymsTemplate(
                         ) {
                             Text(
                                 text = option,
-                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.wellnessDark),
+                                color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 12.sp,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
                             )
@@ -238,7 +238,7 @@ fun WgcCorporateWellnessExploreGymsTemplate(
             item {
                 Text(
                     text = "${gyms.size} academias encontradas na região",
-                    color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                    color = Color(WgcCoreDsColors.gray7),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium
                 )

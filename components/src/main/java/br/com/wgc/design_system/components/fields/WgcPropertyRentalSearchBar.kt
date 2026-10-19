@@ -33,18 +33,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Modalidade imobiliária Property Rental: Alugar ou Comprar.
- */
-enum class WgcPropertyRentalContractType {
-    Rent,
-    Buy
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Campo de busca e seletor de modalidade no estilo Property Rental (WgcPropertyRentalSearchBar):
@@ -65,32 +57,32 @@ fun WgcPropertyRentalSearchBar(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         // Seletor de Modalidade: Alugar / Comprar
         Row(
             modifier = Modifier
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                .background(Color(WgcCoreDsColors.propertyRentalBackground))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
+                .background(Color(WgcCoreDsColors.blueLight34))
                 .border(
-                    width = WgcCoreDsSpacing.xxxs2.dp,
-                    color = Color(WgcCoreDsColors.propertyRentalBorder),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                    width = WgcCoreDsSpacing.XXXS2.dp,
+                    color = Color(WgcCoreDsColors.blueLight8),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
                 )
-                .padding(WgcCoreDsSpacing.xxs4.dp),
+                .padding(WgcCoreDsSpacing.XXS4.dp),
             horizontalArrangement = Arrangement.Start
         ) {
             val isRent = contractType == WgcPropertyRentalContractType.Rent
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                     .background(
-                        if (isRent) Color(WgcCoreDsColors.propertyRentalPrimary) else Color.Transparent
+                        if (isRent) Color(WgcCoreDsColors.blueDark26) else Color.Transparent
                     )
                     .clickable { onContractTypeChange(WgcPropertyRentalContractType.Rent) }
                     .padding(
-                        horizontal = WgcCoreDsSpacing.md16.dp,
-                        vertical = WgcCoreDsSpacing.xs8.dp
+                        horizontal = WgcCoreDsSpacing.MD16.dp,
+                        vertical = WgcCoreDsSpacing.XS8.dp
                     ),
                 contentAlignment = Alignment.Center
             ) {
@@ -98,21 +90,21 @@ fun WgcPropertyRentalSearchBar(
                     text = "Alugar",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
-                    color = if (isRent) Color.White else Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                    color = if (isRent) Color.White else Color(WgcCoreDsColors.blue21)
                 )
             }
 
             val isBuy = contractType == WgcPropertyRentalContractType.Buy
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                     .background(
-                        if (isBuy) Color(WgcCoreDsColors.propertyRentalPrimary) else Color.Transparent
+                        if (isBuy) Color(WgcCoreDsColors.blueDark26) else Color.Transparent
                     )
                     .clickable { onContractTypeChange(WgcPropertyRentalContractType.Buy) }
                     .padding(
-                        horizontal = WgcCoreDsSpacing.md16.dp,
-                        vertical = WgcCoreDsSpacing.xs8.dp
+                        horizontal = WgcCoreDsSpacing.MD16.dp,
+                        vertical = WgcCoreDsSpacing.XS8.dp
                     ),
                 contentAlignment = Alignment.Center
             ) {
@@ -120,7 +112,7 @@ fun WgcPropertyRentalSearchBar(
                     text = "Comprar",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
-                    color = if (isBuy) Color.White else Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                    color = if (isBuy) Color.White else Color(WgcCoreDsColors.blue21)
                 )
             }
         }
@@ -129,27 +121,27 @@ fun WgcPropertyRentalSearchBar(
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             OutlinedTextField(
                 value = query,
                 onValueChange = onQueryChange,
                 modifier = Modifier
                     .weight(1f)
-                    .height(WgcCoreDsSize.s52.dp),
+                    .height(WgcCoreDsSize.S52.dp),
                 placeholder = {
                     Text(
                         text = placeholderText,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                        color = Color(WgcCoreDsColors.blue21)
                     )
                 },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = "Buscar imóveis",
-                        tint = Color(WgcCoreDsColors.propertyRentalPrimary),
-                        modifier = Modifier.size(WgcCoreDsSize.s22.dp)
+                        tint = Color(WgcCoreDsColors.blueDark26),
+                        modifier = Modifier.size(WgcCoreDsSize.S22.dp)
                     )
                 },
                 trailingIcon = {
@@ -158,54 +150,54 @@ fun WgcPropertyRentalSearchBar(
                             Icon(
                                 imageVector = Icons.Default.Close,
                                 contentDescription = "Limpar busca",
-                                tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
-                                modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                                tint = Color(WgcCoreDsColors.blue21),
+                                modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                             )
                         }
                     }
                 },
                 singleLine = true,
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = Color(WgcCoreDsColors.propertyRentalYellow),
-                    unfocusedBorderColor = Color(WgcCoreDsColors.propertyRentalBorder),
-                    focusedContainerColor = Color(WgcCoreDsColors.propertyRentalSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.propertyRentalSurface),
-                    cursorColor = Color(WgcCoreDsColors.propertyRentalPrimary)
+                    focusedBorderColor = Color(WgcCoreDsColors.yellow6),
+                    unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8),
+                    focusedContainerColor = Color(WgcCoreDsColors.white),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.white),
+                    cursorColor = Color(WgcCoreDsColors.blueDark26)
                 )
             )
 
             // Botão de Filtro
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s52.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.propertyRentalPrimary))
+                    .size(WgcCoreDsSize.S52.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
+                    .background(Color(WgcCoreDsColors.blueDark26))
                     .clickable(onClick = onFilterClick),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Tune,
                     contentDescription = "Filtros avançados",
-                    tint = Color(WgcCoreDsColors.propertyRentalYellow),
-                    modifier = Modifier.size(WgcCoreDsSize.s22.dp)
+                    tint = Color(WgcCoreDsColors.yellow6),
+                    modifier = Modifier.size(WgcCoreDsSize.S22.dp)
                 )
 
                 if (activeFilterCount > 0) {
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
-                            .padding(WgcCoreDsSpacing.xxs4.dp)
-                            .size(WgcCoreDsSize.s18.dp)
+                            .padding(WgcCoreDsSpacing.XXS4.dp)
+                            .size(WgcCoreDsSize.S18.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.propertyRentalYellow)),
+                            .background(Color(WgcCoreDsColors.yellow6)),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = activeFilterCount.toString(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
                     }
                 }

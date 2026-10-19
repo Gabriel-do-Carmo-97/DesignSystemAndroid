@@ -112,7 +112,7 @@ fun WgcPropertyListingContactLeadTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -124,13 +124,13 @@ fun WgcPropertyListingContactLeadTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s60.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.greenLight13)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Home,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                tint = Color(WgcCoreDsColors.green14),
                                 modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                             )
                         }
@@ -142,7 +142,7 @@ fun WgcPropertyListingContactLeadTemplate(
                                 text = property.title,
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyListingDark),
+                                color = Color(WgcCoreDsColors.blueDark23),
                                 maxLines = 1
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -150,21 +150,21 @@ fun WgcPropertyListingContactLeadTemplate(
                                 text = property.price,
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyListingPrimary)
+                                color = Color(WgcCoreDsColors.green14)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
                                     imageVector = Icons.Default.Business,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+                                    tint = Color(WgcCoreDsColors.blue22),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                 Text(
                                     text = property.agencyName,
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                                    color = Color(WgcCoreDsColors.blue22)
                                 )
                             }
                         }
@@ -177,7 +177,7 @@ fun WgcPropertyListingContactLeadTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -189,7 +189,7 @@ fun WgcPropertyListingContactLeadTemplate(
                             text = "Seus dados de contato",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyListingDark)
+                            color = Color(WgcCoreDsColors.blueDark23)
                         )
 
                         // Nome
@@ -200,8 +200,8 @@ fun WgcPropertyListingContactLeadTemplate(
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = Color(WgcCoreDsColors.propertyListingPrimary),
-                                unfocusedBorderColor = Color(WgcCoreDsColors.propertyListingBorder)
+                                focusedBorderColor = Color(WgcCoreDsColors.green14),
+                                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8)
                             )
                         )
 
@@ -214,15 +214,15 @@ fun WgcPropertyListingContactLeadTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Email,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+                                    tint = Color(WgcCoreDsColors.blue22),
                                     modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                 )
                             },
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = Color(WgcCoreDsColors.propertyListingPrimary),
-                                unfocusedBorderColor = Color(WgcCoreDsColors.propertyListingBorder)
+                                focusedBorderColor = Color(WgcCoreDsColors.green14),
+                                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8)
                             )
                         )
 
@@ -235,15 +235,15 @@ fun WgcPropertyListingContactLeadTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Phone,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+                                    tint = Color(WgcCoreDsColors.blue22),
                                     modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                 )
                             },
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = Color(WgcCoreDsColors.propertyListingPrimary),
-                                unfocusedBorderColor = Color(WgcCoreDsColors.propertyListingBorder)
+                                focusedBorderColor = Color(WgcCoreDsColors.green14),
+                                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8)
                             )
                         )
 
@@ -257,8 +257,8 @@ fun WgcPropertyListingContactLeadTemplate(
                                 .height(WgcCoreDsSize.s100.dp),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = Color(WgcCoreDsColors.propertyListingPrimary),
-                                unfocusedBorderColor = Color(WgcCoreDsColors.propertyListingBorder)
+                                focusedBorderColor = Color(WgcCoreDsColors.green14),
+                                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8)
                             )
                         )
 
@@ -270,13 +270,13 @@ fun WgcPropertyListingContactLeadTemplate(
                             Checkbox(
                                 checked = scheduleVisitChecked,
                                 onCheckedChange = { scheduleVisitChecked = it },
-                                colors = CheckboxDefaults.colors(checkedColor = Color(WgcCoreDsColors.propertyListingPrimary))
+                                colors = CheckboxDefaults.colors(checkedColor = Color(WgcCoreDsColors.green14))
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                             Text(
                                 text = "Gostaria de agendar uma visita ao imóvel",
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = Color(WgcCoreDsColors.propertyListingDark)
+                                color = Color(WgcCoreDsColors.blueDark23)
                             )
                         }
 
@@ -287,13 +287,13 @@ fun WgcPropertyListingContactLeadTemplate(
                             Checkbox(
                                 checked = similarOptionsChecked,
                                 onCheckedChange = { similarOptionsChecked = it },
-                                colors = CheckboxDefaults.colors(checkedColor = Color(WgcCoreDsColors.propertyListingPrimary))
+                                colors = CheckboxDefaults.colors(checkedColor = Color(WgcCoreDsColors.green14))
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                             Text(
                                 text = "Desejo receber opções similares de corretores parceiros",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -309,14 +309,14 @@ fun WgcPropertyListingContactLeadTemplate(
                     Icon(
                         imageVector = Icons.Default.Lock,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                        tint = Color(WgcCoreDsColors.green14),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Seus dados estão protegidos e serão compartilhados apenas com este anunciante.",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
             }
@@ -328,7 +328,7 @@ fun WgcPropertyListingContactLeadTemplate(
 private fun PropertyListingContactTopBar(onBackClick: () -> Unit) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Row(
@@ -347,7 +347,7 @@ private fun PropertyListingContactTopBar(onBackClick: () -> Unit) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.propertyListingDark)
+                    tint = Color(WgcCoreDsColors.blueDark23)
                 )
             }
 
@@ -357,7 +357,7 @@ private fun PropertyListingContactTopBar(onBackClick: () -> Unit) {
                 text = "Falar com Anunciante",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyListingDark)
+                color = Color(WgcCoreDsColors.blueDark23)
             )
         }
     }
@@ -367,7 +367,7 @@ private fun PropertyListingContactTopBar(onBackClick: () -> Unit) {
 private fun PropertyListingContactBottomBar(onSubmitClick: () -> Unit) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.md16.dp
     ) {
         Box(
@@ -385,7 +385,7 @@ private fun PropertyListingContactBottomBar(onSubmitClick: () -> Unit) {
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyListingOrange),
+                    containerColor = Color(WgcCoreDsColors.orange18),
                     contentColor = Color.White
                 )
             ) {

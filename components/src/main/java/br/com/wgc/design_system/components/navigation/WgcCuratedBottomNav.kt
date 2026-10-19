@@ -1,6 +1,5 @@
 package br.com.wgc.design_system.components.navigation
 
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
@@ -10,73 +9,47 @@ import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.ShoppingBag
 import androidx.compose.material.icons.outlined.Storefront
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Barra de navegação inferior oficial do ecossistema Tassel (WgcCuratedBottomNav).
- * Suporta 4 abas minimalistas: Home, Market, Bag, Profile.
  */
+@Deprecated(
+    message = "Utilize WgcBottomNavBar com lista dinâmica de WgcNavItem",
+    replaceWith = ReplaceWith("WgcBottomNavBar(items = items, selectedIndex = selectedIndex, onItemSelected = onItemSelected)")
+)
 @Composable
 fun WgcCuratedBottomNav(
     modifier: Modifier = Modifier,
     selectedIndex: Int = 1,
     onItemSelected: (Int) -> Unit = {}
 ) {
-    NavigationBar(
+    val items = remember {
+        listOf(
+            WgcNavItem("home", "Home", Icons.Outlined.Home, Icons.Filled.Home),
+            WgcNavItem("market", "Market", Icons.Outlined.Storefront, Icons.Filled.Storefront),
+            WgcNavItem("bag", "Bag", Icons.Outlined.ShoppingBag, Icons.Filled.ShoppingBag),
+            WgcNavItem("profile", "Profile", Icons.Outlined.Person, Icons.Filled.Person)
+        )
+    }
+    WgcBottomNavBar(
+        items = items,
+        selectedIndex = selectedIndex,
+        onItemSelected = onItemSelected,
         modifier = modifier,
         containerColor = Color.White,
-        tonalElevation = WgcCoreDsSpacing.none0.dp
-    ) {
-        val navItems = listOf(
-            Triple("Home", Icons.Outlined.Home to Icons.Filled.Home, 0),
-            Triple("Market", Icons.Outlined.Storefront to Icons.Filled.Storefront, 1),
-            Triple("Bag", Icons.Outlined.ShoppingBag to Icons.Filled.ShoppingBag, 2),
-            Triple("Profile", Icons.Outlined.Person to Icons.Filled.Person, 3)
-        )
-
-        navItems.forEach { (title, icons, index) ->
-            val isSelected = selectedIndex == index
-            NavigationBarItem(
-                selected = isSelected,
-                onClick = { onItemSelected(index) },
-                icon = {
-                    Icon(
-                        imageVector = if (isSelected) icons.second else icons.first,
-                        contentDescription = title,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = title,
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                    )
-                },
-                colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.curatedMarketPrimary),
-                    selectedTextColor = Color(WgcCoreDsColors.curatedMarketPrimary),
-                    unselectedIconColor = Color(WgcCoreDsColors.curatedMarketSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.curatedMarketSecondaryText),
-                    indicatorColor = Color.Transparent
-                )
-            )
-        }
-    }
+        selectedColor = Color(WgcCoreDsColors.blue37),
+        unselectedColor = Color(WgcCoreDsColors.gray10),
+        indicatorColor = Color.Transparent,
+        tonalElevation = WgcCoreDsSpacing.NONE0.dp
+    )
 }
 
 @Preview(showBackground = true)

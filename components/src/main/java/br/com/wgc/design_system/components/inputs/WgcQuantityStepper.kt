@@ -25,9 +25,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente Stepper de quantidade (WgcQuantityStepper).
@@ -44,8 +44,8 @@ fun WgcQuantityStepper(
 ) {
     val canDecrement = isEnabled && quantity > minQuantity
     val canIncrement = isEnabled && quantity < maxQuantity
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp)
-    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.5f)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM.dp)
+    val borderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.5f)
 
     Surface(
         modifier = modifier.semantics {
@@ -68,7 +68,7 @@ fun WgcQuantityStepper(
                 Icon(
                     imageVector = Icons.Default.Remove,
                     contentDescription = "Diminuir quantidade",
-                    tint = if (canDecrement) Color(WgcCoreDsColors.trendFashionDark) else Color(WgcCoreDsColors.trendFashionBorderGray),
+                    tint = if (canDecrement) Color(WgcCoreDsColors.blueDark19) else Color(WgcCoreDsColors.gray17),
                     modifier = Modifier.size(16.dp)
                 )
             }
@@ -76,13 +76,13 @@ fun WgcQuantityStepper(
             Box(
                 modifier = Modifier
                     .widthIn(min = 36.dp)
-                    .padding(horizontal = WgcCoreDsSpacing.xs.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.XS.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = quantity.toString(),
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
             }
 
@@ -96,7 +96,7 @@ fun WgcQuantityStepper(
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "Aumentar quantidade",
-                    tint = if (canIncrement) Color(WgcCoreDsColors.trendFashionDark) else Color(WgcCoreDsColors.trendFashionBorderGray),
+                    tint = if (canIncrement) Color(WgcCoreDsColors.blueDark19) else Color(WgcCoreDsColors.gray17),
                     modifier = Modifier.size(16.dp)
                 )
             }
@@ -107,7 +107,7 @@ fun WgcQuantityStepper(
 @Preview(name = "Quantity Stepper Preview", showBackground = true)
 @Composable
 private fun WgcQuantityStepperPreview() {
-    Box(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcQuantityStepper(
             quantity = 2,
             onQuantityChange = {}

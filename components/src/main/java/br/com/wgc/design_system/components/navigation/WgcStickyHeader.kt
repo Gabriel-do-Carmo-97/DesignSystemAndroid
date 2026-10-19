@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -32,15 +32,15 @@ fun WgcStickyHeader(
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)
             .padding(
-                horizontal = WgcCoreDsSpacing.md.dp,
-                vertical = WgcCoreDsSpacing.sm.dp
+                horizontal = WgcCoreDsSpacing.MD.dp,
+                vertical = WgcCoreDsSpacing.SM.dp
             ),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
         ) {
             Text(
                 text = title,

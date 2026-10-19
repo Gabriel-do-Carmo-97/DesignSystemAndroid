@@ -23,19 +23,44 @@ fun WgcPetzHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.petCareYellow)).padding(WgcCoreDsSpacing.md16.dp)) {
-                Text("Pet Care • Especialidades para Pets", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.Black)
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(WgcCoreDsColors.yellow2))
+                    .padding(WgcCoreDsSpacing.md16.dp)
+            ) {
+                Text(
+                    text = "Pet Care • Especialidades para Pets",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    color = Color.Black
+                )
             }
         }
     ) { padding ->
-        LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
+            contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        ) {
             items(PetCareMockData.sampleProducts) { item ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
                         Text(item.category, color = Color.Gray, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.SemiBold)
-                        Text("Com Assinatura Pet Care: R$ ${"%,.2f".format(item.subscriptionPrice)}", color = Color(WgcCoreDsColors.petCareBlue), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(
+                            text = "Com Assinatura Pet Care: R$ ${"%,.2f".format(item.subscriptionPrice)}",
+                            color = Color(WgcCoreDsColors.blue6),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp
+                        )
                     }
                 }
             }

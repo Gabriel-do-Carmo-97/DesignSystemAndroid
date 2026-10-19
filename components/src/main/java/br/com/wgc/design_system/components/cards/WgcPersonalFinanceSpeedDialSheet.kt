@@ -32,10 +32,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Menu de Lançamento Rápido (Speed Dial) do Organizze.
@@ -51,37 +51,37 @@ fun WgcPersonalFinanceSpeedDialSheet(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(
-            topStart = WgcCoreDsBorderRadius.xxl24.dp,
-            topEnd = WgcCoreDsBorderRadius.xxl24.dp
+            topStart = WgcCoreDsBorderRadius.XXL24.dp,
+            topEnd = WgcCoreDsBorderRadius.XXL24.dp
         ),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.md16.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.MD16.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.lg24.dp),
+                .padding(WgcCoreDsSpacing.LG24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Drag handle pill
             Box(
                 modifier = Modifier
-                    .width(WgcCoreDsSpacing.xxl40.dp)
-                    .height(WgcCoreDsSpacing.xxs4.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.personalFinanceBorder))
+                    .width(WgcCoreDsSpacing.XXL40.dp)
+                    .height(WgcCoreDsSpacing.XXS4.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
+                    .background(Color(WgcCoreDsColors.blueLight7))
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Text(
                 text = "O que deseja lançar?",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark)
+                color = Color(WgcCoreDsColors.blueDark33)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -91,7 +91,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Despesa",
                     icon = Icons.Default.ArrowDownward,
-                    color = Color(WgcCoreDsColors.personalFinanceExpenseRed),
+                    color = Color(WgcCoreDsColors.red23),
                     onClick = onNewExpenseClick
                 )
 
@@ -99,7 +99,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Receita",
                     icon = Icons.Default.ArrowUpward,
-                    color = Color(WgcCoreDsColors.personalFinanceIncomeGreen),
+                    color = Color(WgcCoreDsColors.green26),
                     onClick = onNewIncomeClick
                 )
 
@@ -107,7 +107,7 @@ fun WgcPersonalFinanceSpeedDialSheet(
                 SpeedDialActionButton(
                     title = "Transferência",
                     icon = Icons.Default.SwapHoriz,
-                    color = Color(WgcCoreDsColors.personalFinanceTransferBlue),
+                    color = Color(WgcCoreDsColors.blue36),
                     onClick = onNewTransferClick
                 )
             }
@@ -126,11 +126,11 @@ private fun SpeedDialActionButton(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xs8.dp)
+            .padding(WgcCoreDsSpacing.XS8.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s56.dp)
+                .size(WgcCoreDsSize.S56.dp)
                 .clip(CircleShape)
                 .background(color),
             contentAlignment = Alignment.Center
@@ -139,15 +139,15 @@ private fun SpeedDialActionButton(
                 imageVector = icon,
                 contentDescription = title,
                 tint = Color.White,
-                modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
+                modifier = Modifier.size(WgcCoreDsSpacing.XL32.dp)
             )
         }
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
         Text(
             text = title,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.personalFinanceDark)
+            color = Color(WgcCoreDsColors.blueDark33)
         )
     }
 }

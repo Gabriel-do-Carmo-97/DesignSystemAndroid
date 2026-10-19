@@ -21,92 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcBrandPill
 import br.com.wgc.design_system.components.chip.WgcChip
-
-/**
- * Variantes de cards suportadas pela WgcCardFactory.
- */
-enum class WgcCardType {
-    ProductDetail,
-    RestaurantCard,
-    StatusCard,
-    EcommerceProduct,
-    DealOfTheDay,
-    Address,
-    PaymentMethod,
-    MegaStoreProduct,
-    MegaStoreOrderStatus,
-    MegaStoreVoucher,
-    MegaStoreFlashSale,
-    KutukuProduct,
-    KutukuCategory,
-    KutukuCartItem,
-    ClotheeProduct,
-    ClotheeCategory,
-    ClotheeCartItem,
-    BoutiqueProduct,
-    BoutiqueBrand,
-    BoutiqueCartItem,
-    TasselCollection,
-    TasselProduct,
-    TasselOrderTracker,
-    FreshGroceryProduct,
-    FreshGroceryPromoBanner,
-    NexkartProduct,
-    NexkartTopProduct,
-    NexkartCartItem,
-    ShopEaseProduct,
-    ShopEaseOfferBanner,
-    OrganizzeBalance,
-    OrganizzeCreditCard,
-    OrganizzeTransaction,
-    PropertyRentalProperty,
-    PropertyListingProperty,
-    ZapProperty,
-    GymFitnessWorkout,
-    GymFitnessCrowd,
-    CorporateWellnessGym,
-    CorporateWellnessCheckIn,
-    FitnessWorkout,
-    FitnessProgram,
-    ExtraProduct,
-    ExtraCoupon,
-    SupermarketProduct,
-    WineStore,
-    SupermarketLoyalty,
-    SupermercadoProduct,
-    SupermercadoNutriScore,
-    SupermercadoMeuCard,
-    PharmacyProduct,
-    PharmacyPrescription,
-    PharmacySubscription,
-    HealthVaccine,
-    HealthLoyalty,
-    MedicalClinic,
-    HealthInsurance,
-    NeobankAccount,
-    InterSuperApp,
-    C6Carbon,
-    MobilityRide,
-    TravelStay,
-    StreamingMedia,
-    EducationCourse,
-    MessagingConversation,
-    GameStore,
-    ProductivityTask,
-    FastFoodMeal,
-    LogisticsPackage,
-    FashionItem,
-    BeautyCosmetic,
-    PetCare,
-    HomeImprovement,
-    NewsHeadline,
-    GovDigitalDocument
-}
 
 /**
  * Fábrica Universal de Cards do Design System (WgcCardFactory).
@@ -137,15 +56,15 @@ fun WgcCardFactory(
                 modifier = modifier
                     .fillMaxWidth()
                     .clickable(onClick = onClick),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
             ) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(WgcCoreDsSpacing.md16.dp),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                        .padding(WgcCoreDsSpacing.MD16.dp),
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     if (badgeText != null) {
                         WgcChip(label = badgeText, selected = true, onClick = {})
@@ -191,16 +110,16 @@ fun WgcCardFactory(
                 modifier = modifier
                     .fillMaxWidth()
                     .clickable(onClick = onClick),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(WgcCoreDsSpacing.md16.dp),
+                        .padding(WgcCoreDsSpacing.MD16.dp),
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
@@ -209,7 +128,7 @@ fun WgcCardFactory(
                     )
                     Column(
                         modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Text(
                             text = title,
@@ -952,8 +871,8 @@ private fun WgcCardFactoryPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             WgcCardFactory(
                 type = WgcCardType.ProductDetail,

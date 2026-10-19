@@ -70,21 +70,21 @@ fun WgcNexkartOnboardingTemplate(
                         .weight(1f)
                         .height(4.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs2.dp))
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                        .background(Color(WgcCoreDsColors.blue39))
                 )
                 Box(
                     modifier = Modifier
                         .weight(1f)
                         .height(4.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs2.dp))
-                        .background(Color(WgcCoreDsColors.gadgetShopBorder))
+                        .background(Color(WgcCoreDsColors.blueLight14))
                 )
                 Box(
                     modifier = Modifier
                         .weight(1f)
                         .height(4.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs2.dp))
-                        .background(Color(WgcCoreDsColors.gadgetShopBorder))
+                        .background(Color(WgcCoreDsColors.blueLight14))
                 )
             }
 
@@ -98,7 +98,7 @@ fun WgcNexkartOnboardingTemplate(
                     modifier = Modifier
                         .size(240.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight31)),
                     contentAlignment = Alignment.Center
                 ) {
                     Column(
@@ -108,14 +108,14 @@ fun WgcNexkartOnboardingTemplate(
                         Icon(
                             imageVector = Icons.Default.MarkEmailRead,
                             contentDescription = "Notificação de Wishlist",
-                            tint = Color(WgcCoreDsColors.gadgetShopPrimary),
+                            tint = Color(WgcCoreDsColors.blue39),
                             modifier = Modifier.size(80.dp)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                         Text(
                             text = "Nexkart Wishlist",
                             style = MaterialTheme.typography.labelLarge,
-                            color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                            color = Color(WgcCoreDsColors.blue39),
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -133,14 +133,14 @@ fun WgcNexkartOnboardingTemplate(
                     text = "Wishing for an item but it is\ntoo expensive?",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark),
+                    color = Color(WgcCoreDsColors.blueDark6),
                     textAlign = TextAlign.Center
                 )
 
                 Text(
                     text = "You will be notified of promotions for\nproducts in your wishlist.",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                    color = Color(WgcCoreDsColors.blue41),
                     textAlign = TextAlign.Center
                 )
             }
@@ -158,7 +158,7 @@ fun WgcNexkartOnboardingTemplate(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                         .border(
                             width = 1.dp,
-                            color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                            color = Color(WgcCoreDsColors.blue39),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp)
                         )
                         .clickable(onClick = onNextClick),
@@ -167,7 +167,7 @@ fun WgcNexkartOnboardingTemplate(
                     Text(
                         text = "Next",
                         style = MaterialTheme.typography.titleSmall,
-                        color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                        color = Color(WgcCoreDsColors.blue39),
                         fontWeight = FontWeight.SemiBold
                     )
                 }

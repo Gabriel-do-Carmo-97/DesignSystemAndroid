@@ -87,7 +87,7 @@ fun WgcNexkartProductDetailTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.gadgetShopDark)
+                            tint = Color(WgcCoreDsColors.blueDark6)
                         )
                     }
                 },
@@ -97,14 +97,14 @@ fun WgcNexkartProductDetailTemplate(
                         modifier = Modifier
                             .padding(end = WgcCoreDsSpacing.sm12.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                            .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                            .background(Color(WgcCoreDsColors.blueLight38))
                             .clickable(onClick = onFavoriteClick)
                             .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                     ) {
                         Icon(
                             imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                             contentDescription = "Favoritar",
-                            tint = if (isFavorite) Color(WgcCoreDsColors.gadgetShopAccentPink) else Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                            tint = if (isFavorite) Color(WgcCoreDsColors.pink5) else Color(WgcCoreDsColors.blue41),
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -112,7 +112,7 @@ fun WgcNexkartProductDetailTemplate(
                             text = product.reviewCount.toString(),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopDark)
+                            color = Color(WgcCoreDsColors.blueDark6)
                         )
                     }
                 },
@@ -139,14 +139,14 @@ fun WgcNexkartProductDetailTemplate(
                             modifier = Modifier
                                 .size(48.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                                .border(1.dp, Color(WgcCoreDsColors.gadgetShopBorder), RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                                .border(1.dp, Color(WgcCoreDsColors.blueLight14), RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
                                 .clickable(onClick = onChatClick),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.ChatBubbleOutline,
                                 contentDescription = "Falar com vendedor",
-                                tint = Color(WgcCoreDsColors.gadgetShopDark),
+                                tint = Color(WgcCoreDsColors.blueDark6),
                                 modifier = Modifier.size(22.dp)
                             )
                         }
@@ -157,7 +157,7 @@ fun WgcNexkartProductDetailTemplate(
                                 .weight(1f)
                                 .height(48.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                                .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                                .background(Color(WgcCoreDsColors.blue39))
                                 .clickable(onClick = onAddToCart),
                             contentAlignment = Alignment.Center
                         ) {
@@ -198,7 +198,7 @@ fun WgcNexkartProductDetailTemplate(
                     .fillMaxWidth()
                     .height(240.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface)),
+                    .background(Color(WgcCoreDsColors.blueLight38)),
                 contentAlignment = Alignment.Center
             ) {
                 if (!product.imageUrl.isNullOrEmpty()) {
@@ -211,7 +211,7 @@ fun WgcNexkartProductDetailTemplate(
                     Text(
                         text = product.title.take(2).uppercase(),
                         style = MaterialTheme.typography.displayMedium,
-                        color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                        color = Color(WgcCoreDsColors.blue39),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -227,19 +227,19 @@ fun WgcNexkartProductDetailTemplate(
                         modifier = Modifier
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                            .background(Color(WgcCoreDsColors.blue39))
                     )
                     Box(
                         modifier = Modifier
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.gadgetShopBorder))
+                            .background(Color(WgcCoreDsColors.blueLight14))
                     )
                     Box(
                         modifier = Modifier
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.gadgetShopBorder))
+                            .background(Color(WgcCoreDsColors.blueLight14))
                     )
                 }
             }
@@ -251,7 +251,7 @@ fun WgcNexkartProductDetailTemplate(
                 text = product.title,
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopDark)
+                color = Color(WgcCoreDsColors.blueDark6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -260,7 +260,7 @@ fun WgcNexkartProductDetailTemplate(
                 text = product.price,
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopPrimary)
+                color = Color(WgcCoreDsColors.blue39)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -270,7 +270,7 @@ fun WgcNexkartProductDetailTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                    .background(Color(WgcCoreDsColors.blueLight38))
                     .padding(vertical = WgcCoreDsSpacing.sm12.dp, horizontal = WgcCoreDsSpacing.md16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
@@ -280,7 +280,7 @@ fun WgcNexkartProductDetailTemplate(
                     Icon(
                         imageVector = Icons.Filled.Star,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.gadgetShopGold),
+                        tint = Color(WgcCoreDsColors.orange23),
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -288,7 +288,7 @@ fun WgcNexkartProductDetailTemplate(
                         text = "${product.rating} Ratings",
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                 }
 
@@ -296,7 +296,7 @@ fun WgcNexkartProductDetailTemplate(
                 Text(
                     text = "${product.soldCount} Sold",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                    color = Color(WgcCoreDsColors.blue41)
                 )
 
                 // Free shipping badge
@@ -304,7 +304,7 @@ fun WgcNexkartProductDetailTemplate(
                     Icon(
                         imageVector = Icons.Default.LocalShipping,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.gadgetShopSuccessGreen),
+                        tint = Color(WgcCoreDsColors.green21),
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -312,7 +312,7 @@ fun WgcNexkartProductDetailTemplate(
                         text = "Free Shipping",
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.Medium,
-                        color = Color(WgcCoreDsColors.gadgetShopSuccessGreen)
+                        color = Color(WgcCoreDsColors.green21)
                     )
                 }
             }
@@ -324,7 +324,7 @@ fun WgcNexkartProductDetailTemplate(
                 text = "Product Details",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopDark)
+                color = Color(WgcCoreDsColors.blueDark6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -336,13 +336,13 @@ fun WgcNexkartProductDetailTemplate(
                 Text(
                     text = "Category",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                    color = Color(WgcCoreDsColors.blue41)
                 )
                 Text(
                     text = product.category,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark)
+                    color = Color(WgcCoreDsColors.blueDark6)
                 )
             }
 
@@ -351,7 +351,7 @@ fun WgcNexkartProductDetailTemplate(
             Text(
                 text = product.description,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                color = Color(WgcCoreDsColors.blue41),
                 lineHeight = MaterialTheme.typography.bodySmall.lineHeight
             )
 
@@ -362,7 +362,7 @@ fun WgcNexkartProductDetailTemplate(
                 text = "Select Size",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopDark)
+                color = Color(WgcCoreDsColors.blueDark6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -378,7 +378,7 @@ fun WgcNexkartProductDetailTemplate(
                             .size(44.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
                             .background(
-                                if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else Color(WgcCoreDsColors.gadgetShopSurface)
+                                if (isSelected) Color(WgcCoreDsColors.blue39) else Color(WgcCoreDsColors.blueLight38)
                             )
                             .clickable { onSizeSelected(size) },
                         contentAlignment = Alignment.Center
@@ -387,7 +387,7 @@ fun WgcNexkartProductDetailTemplate(
                             text = size,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) Color.White else Color(WgcCoreDsColors.gadgetShopDark)
+                            color = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark6)
                         )
                     }
                 }

@@ -19,7 +19,7 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
@@ -49,7 +49,7 @@ fun WgcErrorState(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.lg24.dp)
+            .padding(WgcCoreDsSpacing.LG24.dp)
             .semantics(mergeDescendants = true) {},
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -59,7 +59,7 @@ fun WgcErrorState(
                 imageVector = icon,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(bottom = WgcCoreDsSpacing.md16.dp)
+                modifier = Modifier.padding(bottom = WgcCoreDsSpacing.MD16.dp)
             )
         }
 
@@ -71,7 +71,7 @@ fun WgcErrorState(
             modifier = Modifier.semantics { heading() },
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         Text(
             text = message,
@@ -81,10 +81,10 @@ fun WgcErrorState(
         )
 
         if (actionSlot != null) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
             actionSlot()
         } else if (onRetry != null && !retryButtonText.isNullOrBlank()) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
             WgcClassicButton(
                 textButton = retryButtonText,
                 onClick = onRetry,

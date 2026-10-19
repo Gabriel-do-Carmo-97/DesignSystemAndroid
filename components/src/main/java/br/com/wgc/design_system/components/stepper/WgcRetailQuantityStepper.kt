@@ -22,9 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Seletor de quantidade no formato pílula arredondada (`- count +`),
@@ -41,10 +41,10 @@ fun WgcRetailQuantityStepper(
     Row(
         modifier = modifier
             .clip(CircleShape)
-            .background(Color(WgcCoreDsColors.retailBackground))
-            .padding(horizontal = WgcCoreDsSpacing.sm.dp, vertical = WgcCoreDsSpacing.xxs.dp),
+            .background(Color(WgcCoreDsColors.blueLight39))
+            .padding(horizontal = WgcCoreDsSpacing.SM.dp, vertical = WgcCoreDsSpacing.XXS.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
     ) {
         Box(
             modifier = Modifier
@@ -56,7 +56,7 @@ fun WgcRetailQuantityStepper(
             Icon(
                 imageVector = Icons.Filled.Remove,
                 contentDescription = "Diminuir quantidade",
-                tint = if (count > minCount) Color(WgcCoreDsColors.retailDark) else Color(WgcCoreDsColors.retailSecondaryText),
+                tint = if (count > minCount) Color(WgcCoreDsColors.grayDark2) else Color(WgcCoreDsColors.gray4),
                 modifier = Modifier.size(16.dp)
             )
         }
@@ -65,7 +65,7 @@ fun WgcRetailQuantityStepper(
             text = count.toString(),
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Box(
@@ -78,7 +78,7 @@ fun WgcRetailQuantityStepper(
             Icon(
                 imageVector = Icons.Filled.Add,
                 contentDescription = "Aumentar quantidade",
-                tint = if (count < maxCount) Color(WgcCoreDsColors.retailDark) else Color(WgcCoreDsColors.retailSecondaryText),
+                tint = if (count < maxCount) Color(WgcCoreDsColors.grayDark2) else Color(WgcCoreDsColors.gray4),
                 modifier = Modifier.size(16.dp)
             )
         }

@@ -29,8 +29,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
@@ -59,7 +59,7 @@ fun WgcAccordion(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -67,13 +67,13 @@ fun WgcAccordion(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable(onClick = onToggle)
-                    .padding(WgcCoreDsSpacing.md.dp),
+                    .padding(WgcCoreDsSpacing.MD.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(
                     modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Text(
                         text = title,
@@ -106,9 +106,9 @@ fun WgcAccordion(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(
-                            start = WgcCoreDsSpacing.md.dp,
-                            end = WgcCoreDsSpacing.md.dp,
-                            bottom = WgcCoreDsSpacing.md.dp
+                            start = WgcCoreDsSpacing.MD.dp,
+                            end = WgcCoreDsSpacing.MD.dp,
+                            bottom = WgcCoreDsSpacing.MD.dp
                         )
                 ) {
                     content()

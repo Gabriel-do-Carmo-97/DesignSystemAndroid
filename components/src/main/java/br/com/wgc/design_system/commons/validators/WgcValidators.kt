@@ -5,11 +5,17 @@ import br.com.wgc.design_system.commons.constants.ComponentsConstants
 private val EMAIL_REGEX = Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")
 
 /**
- * Utilitários e extensões de validação de formulários corporativos do Design System WGC.
+ * Utilitários para verificações sintáticas e aritméticas comuns em formulários brasileiros.
+ *
+ * Use estas funções para validação imediata de entrada na UI; elas não consultam serviços externos
+ * nem provam identidade, existência do endereço ou titularidade do dado.
  */
 
 /**
- * Valida se a string representa um Cadastro de Pessoas Físicas (CPF) matematicamente válido.
+ * Verifica se o texto contém um CPF não repetido com dígitos verificadores matematicamente válidos.
+ *
+ * Aceita texto mascarado porque considera somente os dígitos. Entrada nula, em branco, com quantidade
+ * incorreta ou dígitos repetidos retorna `false`. Exemplo: `cpfInput.isValidCpf()`.
  */
 fun String?.isValidCpf(): Boolean {
     if (this.isNullOrBlank()) return false
@@ -36,7 +42,10 @@ fun String?.isValidCpf(): Boolean {
 }
 
 /**
- * Valida se a string representa um Cadastro Nacional da Pessoa Jurídica (CNPJ) matematicamente válido.
+ * Verifica se o texto contém um CNPJ não repetido com dígitos verificadores matematicamente válidos.
+ *
+ * Máscaras são aceitas (somente dígitos são considerados); entrada nula, em branco, com tamanho
+ * incorreto ou dígitos repetidos retorna `false`. Exemplo: `cnpjInput.isValidCnpj()`.
  */
 fun String?.isValidCnpj(): Boolean {
     if (this.isNullOrBlank()) return false
@@ -63,7 +72,10 @@ fun String?.isValidCnpj(): Boolean {
 }
 
 /**
- * Valida se o formato do e-mail é sintaticamente válido.
+ * Verifica se o texto não vazio corresponde ao padrão sintático de e-mail usado por esta biblioteca.
+ *
+ * O teste não verifica se o endereço existe ou pode receber mensagens; espaços externos são removidos.
+ * Exemplo: `emailInput.isValidEmail()`.
  */
 fun String?.isValidEmail(): Boolean {
     if (this.isNullOrBlank()) return false
@@ -71,7 +83,11 @@ fun String?.isValidEmail(): Boolean {
 }
 
 /**
- * Valida se a string representa um número de telefone brasileiro válido (fixo com 10 dígitos ou móvel com 11).
+ * Verifica comprimento e primeiro dígito do número de telefone brasileiro (fixo com 10 ou móvel com 11 dígitos).
+ *
+ * Considera apenas dígitos, rejeita sequências de um mesmo dígito e verifica o primeiro dígito após
+ * o DDD conforme as regras codificadas; não valida a faixa oficial de DDD. Exemplo:
+ * `phoneInput.isValidPhone()`.
  */
 fun String?.isValidPhone(): Boolean {
     if (this.isNullOrBlank()) return false
@@ -90,7 +106,9 @@ fun String?.isValidPhone(): Boolean {
 }
 
 /**
- * Valida se a string representa um Código de Endereçamento Postal (CEP) brasileiro de 8 dígitos.
+ * Verifica se há exatamente oito dígitos de CEP e se não são todos iguais.
+ *
+ * Aceita entrada mascarada, mas não confirma que o CEP exista. Exemplo: `cepInput.isValidCep()`.
  */
 fun String?.isValidCep(): Boolean {
     if (this.isNullOrBlank()) return false

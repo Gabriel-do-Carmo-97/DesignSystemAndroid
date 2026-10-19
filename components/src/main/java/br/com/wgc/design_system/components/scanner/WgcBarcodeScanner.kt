@@ -42,8 +42,8 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 private const val CORNER_LENGTH_DP = 24
 private const val CORNER_STROKE_WIDTH_DP = 4
@@ -133,14 +133,14 @@ private fun ScannerOverlayViewfinder(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(WgcCoreDsSpacing.xl32.dp),
+            .padding(WgcCoreDsSpacing.XL32.dp),
         contentAlignment = Alignment.Center
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
         ) {
             Canvas(modifier = Modifier.fillMaxSize()) {
                 val width = size.width
@@ -202,9 +202,9 @@ private fun ScannerControlsBar(
         modifier = modifier
             .fillMaxWidth()
             .background(Color.Black.copy(alpha = OVERLAY_ALPHA))
-            .padding(WgcCoreDsSpacing.md16.dp),
+            .padding(WgcCoreDsSpacing.MD16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         Text(
             text = instructionText,

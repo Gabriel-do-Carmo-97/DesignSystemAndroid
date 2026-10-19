@@ -74,14 +74,14 @@ fun WgcNexkartCartTemplate(
                             text = "My Cart",
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopDark)
+                            color = Color(WgcCoreDsColors.blueDark6)
                         )
                         Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.xs8.dp))
                         Box(
                             modifier = Modifier
                                 .size(22.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.gadgetShopAccentPink)),
+                                .background(Color(WgcCoreDsColors.pink5)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -98,7 +98,7 @@ fun WgcNexkartCartTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.gadgetShopDark)
+                            tint = Color(WgcCoreDsColors.blueDark6)
                         )
                     }
                 },
@@ -123,13 +123,13 @@ fun WgcNexkartCartTemplate(
                         Text(
                             text = "Subtotal",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                            color = Color(WgcCoreDsColors.blue41)
                         )
                         Text(
                             text = subtotal,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.gadgetShopDark)
+                            color = Color(WgcCoreDsColors.blueDark6)
                         )
                     }
 
@@ -142,13 +142,13 @@ fun WgcNexkartCartTemplate(
                         Text(
                             text = "Discount",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                            color = Color(WgcCoreDsColors.blue41)
                         )
                         Text(
                             text = discount,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.gadgetShopAccentPink)
+                            color = Color(WgcCoreDsColors.pink5)
                         )
                     }
 
@@ -163,13 +163,13 @@ fun WgcNexkartCartTemplate(
                             text = "Total",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopDark)
+                            color = Color(WgcCoreDsColors.blueDark6)
                         )
                         Text(
                             text = total,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopPrimary)
+                            color = Color(WgcCoreDsColors.blue39)
                         )
                     }
 
@@ -181,7 +181,7 @@ fun WgcNexkartCartTemplate(
                             .fillMaxWidth()
                             .height(48.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                            .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                            .background(Color(WgcCoreDsColors.blue39))
                             .clickable(onClick = onCheckoutClick),
                         contentAlignment = Alignment.Center
                     ) {
@@ -212,8 +212,8 @@ fun WgcNexkartCartTemplate(
                         .background(
                             Brush.horizontalGradient(
                                 colors = listOf(
-                                    Color(WgcCoreDsColors.gadgetShopPrimary),
-                                    Color(WgcCoreDsColors.gadgetShopPrimaryDark)
+                                    Color(WgcCoreDsColors.blue39),
+                                    Color(WgcCoreDsColors.blue23)
                                 )
                             )
                         )
@@ -224,7 +224,7 @@ fun WgcNexkartCartTemplate(
                             text = "NEW YEAR, NEW ME",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.gadgetShopGold)
+                            color = Color(WgcCoreDsColors.orange23)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                         Text(
@@ -250,7 +250,7 @@ fun WgcNexkartCartTemplate(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                .background(Color(WgcCoreDsColors.gadgetShopAccentPink))
+                                .background(Color(WgcCoreDsColors.pink5))
                                 .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -274,7 +274,7 @@ fun WgcNexkartCartTemplate(
                         text = "Ends in 02:45:18",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                        color = Color(WgcCoreDsColors.blue41)
                     )
                 }
             }

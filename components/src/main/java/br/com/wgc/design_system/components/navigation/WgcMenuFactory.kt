@@ -40,38 +40,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.badge.WgcBadge
 import br.com.wgc.design_system.components.badge.WgcBadgedBox
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Variantes de menu suportadas pela WgcMenuFactory.
- */
-enum class WgcMenuType {
-    ClassicBottomBar,
-    FloatingPill,
-    CollapsibleHeader,
-    ProminentCenter
-}
-
-/**
- * Item de menu universal para fábricas de navegação.
- *
- * @param id Identificador único do item
- * @param label Rótulo textual
- * @param icon Ícone visual
- * @param badgeCount Contagem opcional para notificação/carrinho
- * @param isProminent Se verdadeiro, eleva o ícone em formato FAB na barra estilo e-commerce
- * @param onClick Ação executada ao clicar no item
- */
-data class WgcMenuItem(
-    val id: String = "",
-    val label: String,
-    val icon: ImageVector,
-    val badgeCount: Int = 0,
-    val isProminent: Boolean = false,
-    val onClick: () -> Unit = {}
-)
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Retorna os itens de navegação padrão de produção.
@@ -118,7 +89,7 @@ fun WgcMenuFactory(
             NavigationBar(
                 modifier = modifier.fillMaxWidth(),
                 containerColor = MaterialTheme.colorScheme.surface,
-                tonalElevation = WgcCoreDsElevation.level3.dp
+                tonalElevation = WgcCoreDsElevation.LEVEL3.dp
             ) {
                 items.forEachIndexed { index, item ->
                     NavigationBarItem(
@@ -159,20 +130,20 @@ fun WgcMenuFactory(
             Box(
                 modifier = modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Surface(
                     shape = CircleShape,
-                    shadowElevation = WgcCoreDsElevation.level6.dp,
+                    shadowElevation = WgcCoreDsElevation.LEVEL6.dp,
                     color = MaterialTheme.colorScheme.surface
                 ) {
                     Row(
                         modifier = Modifier.padding(
-                            horizontal = WgcCoreDsSpacing.sm12.dp,
-                            vertical = WgcCoreDsSpacing.xs8.dp
+                            horizontal = WgcCoreDsSpacing.SM12.dp,
+                            vertical = WgcCoreDsSpacing.XS8.dp
                         ),
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         items.forEachIndexed { index, item ->
@@ -193,11 +164,11 @@ fun WgcMenuFactory(
                                         item.onClick()
                                     }
                                     .padding(
-                                        horizontal = WgcCoreDsSpacing.sm12.dp,
-                                        vertical = WgcCoreDsSpacing.xs8.dp
+                                        horizontal = WgcCoreDsSpacing.SM12.dp,
+                                        vertical = WgcCoreDsSpacing.XS8.dp
                                     ),
                                 verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                             ) {
                                 Icon(
                                     imageVector = item.icon,
@@ -223,7 +194,7 @@ fun WgcMenuFactory(
             ScrollableTabRow(
                 selectedTabIndex = selectedIndex.coerceIn(0, (items.size - 1).coerceAtLeast(0)),
                 modifier = modifier.fillMaxWidth(),
-                edgePadding = WgcCoreDsSpacing.md16.dp,
+                edgePadding = WgcCoreDsSpacing.MD16.dp,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
                 items.forEachIndexed { index, item ->
@@ -313,10 +284,10 @@ fun WgcProminentBottomBar(
                 .height(64.dp)
                 .align(Alignment.BottomCenter),
             color = MaterialTheme.colorScheme.surface,
-            shadowElevation = WgcCoreDsElevation.level3.dp,
+            shadowElevation = WgcCoreDsElevation.LEVEL3.dp,
             shape = RoundedCornerShape(
-                topStart = WgcCoreDsBorderRadius.lg12.dp,
-                topEnd = WgcCoreDsBorderRadius.lg12.dp
+                topStart = WgcCoreDsBorderRadius.LG12.dp,
+                topEnd = WgcCoreDsBorderRadius.LG12.dp
             )
         ) {}
 
@@ -369,11 +340,11 @@ private fun WgcProminentDockItem(
         Surface(
             shape = CircleShape,
             color = MaterialTheme.colorScheme.surface,
-            shadowElevation = WgcCoreDsElevation.level8.dp,
+            shadowElevation = WgcCoreDsElevation.LEVEL8.dp,
             modifier = Modifier.size(62.dp)
         ) {
             Box(
-                modifier = Modifier.padding(WgcCoreDsSpacing.xxs4.dp),
+                modifier = Modifier.padding(WgcCoreDsSpacing.XXS4.dp),
                 contentAlignment = Alignment.Center
             ) {
                 val buttonColor = if (isSelected) MaterialTheme.colorScheme.primary
@@ -416,7 +387,7 @@ private fun WgcProminentDockItem(
             else MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = WgcCoreDsSpacing.xxs4.dp)
+                .padding(bottom = WgcCoreDsSpacing.XXS4.dp)
         )
     }
 }
@@ -435,7 +406,7 @@ private fun WgcProminentStandardItem(
         modifier = modifier
             .height(64.dp)
             .clickable(onClick = onClick)
-            .padding(vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(vertical = WgcCoreDsSpacing.XS8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -489,4 +460,3 @@ private fun WgcMenuProminent3Preview() {
         )
     }
 }
-

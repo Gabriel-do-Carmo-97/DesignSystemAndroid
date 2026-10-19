@@ -31,7 +31,7 @@ fun WgcNeobankPixTemplate(
             TopAppBar(
                 title = { Text("Área Pix & Transferências", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechPurple),
+                    containerColor = Color(WgcCoreDsColors.purple3),
                     titleContentColor = Color.White
                 )
             )
@@ -53,7 +53,7 @@ fun WgcNeobankPixTemplate(
                         Button(
                             onClick = onSendPixClick,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.fintechPurple)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(WgcCoreDsColors.purple3)),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
                         ) {
                             Text("Transferir com Chave Pix", fontWeight = FontWeight.Bold, color = Color.White)
@@ -84,7 +84,7 @@ fun WgcNeobankPixTemplate(
                         Text(
                             text = "${if (tx.isPositive) "+" else "-"} R$ ${"%,.2f".format(tx.amount)}",
                             fontWeight = FontWeight.Bold,
-                            color = if (tx.isPositive) Color(WgcCoreDsColors.success) else Color(WgcCoreDsColors.black)
+                            color = if (tx.isPositive) Color(WgcCoreDsColors.green27) else Color(WgcCoreDsColors.black)
                         )
                     }
                 }

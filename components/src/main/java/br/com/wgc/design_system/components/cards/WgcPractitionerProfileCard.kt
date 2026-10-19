@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -50,41 +50,41 @@ fun WgcPractitionerProfileCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s48.dp)
+                        .size(WgcCoreDsSize.S48.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.telemedicineGreenLight)),
+                        .background(Color(WgcCoreDsColors.cyanLight4)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.Person,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.telemedicineGreen),
-                        modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                        tint = Color(WgcCoreDsColors.cyan4),
+                        modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                     )
                 }
-                Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.SM12.dp))
                 Column {
                     Text(text = doctorName, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(text = "$specialty • $crm", fontSize = 12.sp, color = Color.Gray)
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.gymYellow),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    tint = Color(WgcCoreDsColors.orange23),
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
                 Text(
                     text = " $rating ($reviewsCount opiniões)",
@@ -94,7 +94,7 @@ fun WgcPractitionerProfileCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -107,18 +107,18 @@ fun WgcPractitionerProfileCard(
                         text = "R$ " + String.format("%.2f", consultationFee),
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color(WgcCoreDsColors.telemedicineGreen)
+                        color = Color(WgcCoreDsColors.cyan4)
                     )
                 }
                 Text(
                     text = "Disponível: $nextSlot",
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.propertyRentalGreen),
+                    color = Color(WgcCoreDsColors.green4),
                     fontWeight = FontWeight.Bold
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             WgcClassicButton(
                 textButton = "Agendar Consulta",

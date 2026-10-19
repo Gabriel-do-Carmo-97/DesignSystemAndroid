@@ -12,12 +12,32 @@ import java.io.File
 import java.io.FileOutputStream
 
 /**
- * Implementação padrão de [ImageCompressor] baseada em Kotlin Coroutines.
+ * Implementação de [ImageCompressor] que executa escala/compactação nos dispatchers configurados.
+ *
+ * Use como implementação padrão para otimizar imagens sem bloquear a thread chamadora; os valores
+ * padrão executam processamento em `Dispatchers.Default` e leitura/escrita em `Dispatchers.IO`.
+ * Os dispatchers podem ser substituídos, por exemplo, em testes.
+ *
+ * ```kotlin
+ * val bytes = DefaultImageCompressor().compressBitmap(bitmap)
+ * ```
+ *
+ * @param defaultDispatcher Dispatcher usado para escala e compactação.
+ * @param ioDispatcher Dispatcher usado para leitura e gravação de arquivos.
  */
 class DefaultImageCompressor(
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : ImageCompressor {
+    /**
+     * Devolve a imagem codificada após limitar suas dimensões máximas.
+     *
+     * @param bitmap Imagem de origem; não é reciclada por este método.
+     * @param maxWidth Largura máxima resultante em pixels.
+     * @param maxHeight Altura máxima resultante em pixels.
+     * @param quality Qualidade de codificação entre 0 e 100.
+     * @param format Formato de saída.
+     */
     override suspend fun compressBitmap(
         bitmap: Bitmap,
         maxWidth: Int,
@@ -36,6 +56,18 @@ class DefaultImageCompressor(
             }
         }
 
+    /**
+     * Comprime uma imagem de arquivo e grava seus bytes no arquivo de destino.
+     *
+     * @param sourceFile Arquivo de imagem de origem decodificável pelo Android.
+     * @param destinationFile Caminho onde gravar a imagem comprimida.
+     * @param maxWidth Largura máxima resultante em pixels.
+     * @param maxHeight Altura máxima resultante em pixels.
+     * @param quality Qualidade de codificação entre 0 e 100.
+     * @param format Formato de saída.
+     * @return O mesmo arquivo de destino depois da gravação.
+     * @throws IllegalStateException se a origem não puder ser decodificada.
+     */
     override suspend fun compressFile(
         sourceFile: File,
         destinationFile: File,

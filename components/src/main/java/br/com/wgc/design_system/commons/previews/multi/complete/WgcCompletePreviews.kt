@@ -4,8 +4,11 @@ import br.com.wgc.design_system.commons.previews.multi.device.DevicePreviews
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 
 /**
- * Anotação Multi-Preview completa corporativa para componentes WGC.
- * Combina simultaneamente temas (Light/Dark) e dispositivos (Phone/Tablet).
+ * Combina [ThemePreviews] e [DevicePreviews] para inspecionar uma UI em tema claro/escuro e em
+ * telefone, tablet e dobrável.
+ *
+ * Use para componentes/telas responsivos cuja aparência deve ser validada em todas essas
+ * combinações: `@WgcCompletePreviews @Composable fun ScreenPreview() { Text("Exemplo") }`.
  */
 @ThemePreviews
 @DevicePreviews

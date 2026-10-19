@@ -23,7 +23,7 @@ fun WgcNaturaHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.naturalBeautyOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.orange31)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Beleza Natural • Bem Estar Bem", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

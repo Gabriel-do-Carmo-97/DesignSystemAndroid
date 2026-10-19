@@ -28,28 +28,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Estado de uma etapa de rastreamento.
- */
-enum class WgcKutukuStepStatus {
-    COMPLETED,
-    IN_PROGRESS,
-    PENDING
-}
-
-/**
- * Modelo de dado para um item da timeline do Kutuku.
- */
-data class WgcKutukuTrackingStepItem(
-    val title: String,
-    val subtitle: String,
-    val time: String,
-    val status: WgcKutukuStepStatus,
-    val icon: ImageVector? = null
-)
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Linha do tempo vertical oficial de rastreamento do Kutuku (WgcRetailOrderTrackingStepper).
@@ -73,12 +53,12 @@ fun WgcRetailOrderTrackingStepper(
                     val (circleBg, iconColor) = when (step.status) {
                         WgcKutukuStepStatus.COMPLETED,
                         WgcKutukuStepStatus.IN_PROGRESS -> Pair(
-                            Color(WgcCoreDsColors.retailPrimary),
+                            Color(WgcCoreDsColors.blue33),
                             Color.White
                         )
                         WgcKutukuStepStatus.PENDING -> Pair(
-                            Color(WgcCoreDsColors.retailBackground),
-                            Color(WgcCoreDsColors.retailSecondaryText)
+                            Color(WgcCoreDsColors.blueLight39),
+                            Color(WgcCoreDsColors.gray4)
                         )
                     }
 
@@ -104,9 +84,9 @@ fun WgcRetailOrderTrackingStepper(
 
                     if (!isLast) {
                         val lineColor = if (step.status == WgcKutukuStepStatus.COMPLETED) {
-                            Color(WgcCoreDsColors.retailPrimary)
+                            Color(WgcCoreDsColors.blue33)
                         } else {
-                            Color(WgcCoreDsColors.retailBorder)
+                            Color(WgcCoreDsColors.blueLight10)
                         }
                         Box(
                             modifier = Modifier
@@ -117,28 +97,28 @@ fun WgcRetailOrderTrackingStepper(
                     }
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.MD.dp))
 
                 // Texto da etapa
                 Column(
                     modifier = Modifier
-                        .padding(top = WgcCoreDsSpacing.xs.dp)
+                        .padding(top = WgcCoreDsSpacing.XS.dp)
                         .weight(1f)
                 ) {
                     Text(
                         text = step.title,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS.dp))
                     Text(
                         text = "${step.subtitle} • ${step.time}",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.retailSecondaryText)
+                        color = Color(WgcCoreDsColors.gray4)
                     )
                     if (!isLast) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
                     }
                 }
             }

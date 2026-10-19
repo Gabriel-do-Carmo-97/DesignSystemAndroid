@@ -33,9 +33,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card selecionável para método de pagamento (WgcPaymentMethodRadioCard).
@@ -49,9 +49,9 @@ fun WgcPaymentMethodRadioCard(
     isSelected: Boolean = false,
     onSelect: () -> Unit
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val activeBorderColor = Color(WgcCoreDsColors.trendFashionPink)
-    val inactiveBorderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.3f)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
+    val activeBorderColor = Color(WgcCoreDsColors.pink4)
+    val inactiveBorderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.3f)
 
     val border = if (isSelected) {
         BorderStroke(1.5.dp, activeBorderColor)
@@ -60,7 +60,7 @@ fun WgcPaymentMethodRadioCard(
     }
 
     val containerColor = if (isSelected) {
-        Color(WgcCoreDsColors.trendFashionPink).copy(alpha = 0.05f)
+        Color(WgcCoreDsColors.pink4).copy(alpha = 0.05f)
     } else {
         Color(WgcCoreDsColors.white)
     }
@@ -78,7 +78,7 @@ fun WgcPaymentMethodRadioCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
+                .padding(WgcCoreDsSpacing.MD.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -86,22 +86,22 @@ fun WgcPaymentMethodRadioCard(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = if (isSelected) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
+                    tint = if (isSelected) Color(WgcCoreDsColors.pink4) else Color(WgcCoreDsColors.blueDark19),
                     modifier = Modifier.size(28.dp)
                 )
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM.dp))
                 Column {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
                     if (subtitle != null) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                         Text(
                             text = subtitle,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.textSecondary)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                     }
                 }
@@ -111,8 +111,8 @@ fun WgcPaymentMethodRadioCard(
                 selected = isSelected,
                 onClick = onSelect,
                 colors = RadioButtonDefaults.colors(
-                    selectedColor = Color(WgcCoreDsColors.trendFashionPink),
-                    unselectedColor = Color(WgcCoreDsColors.trendFashionBorderGray)
+                    selectedColor = Color(WgcCoreDsColors.pink4),
+                    unselectedColor = Color(WgcCoreDsColors.gray17)
                 )
             )
         }
@@ -122,14 +122,14 @@ fun WgcPaymentMethodRadioCard(
 @Preview(name = "Payment Method Radio Preview", showBackground = true)
 @Composable
 private fun WgcPaymentMethodRadioCardPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcPaymentMethodRadioCard(
             title = "Visa",
             subtitle = "********* 2109",
             isSelected = true,
             onSelect = {}
         )
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM.dp))
         WgcPaymentMethodRadioCard(
             title = "PayPal",
             subtitle = "gabriel@example.com",

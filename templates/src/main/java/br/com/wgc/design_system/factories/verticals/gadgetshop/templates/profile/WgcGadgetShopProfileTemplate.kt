@@ -92,7 +92,7 @@ fun WgcNexkartProfileTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                    .background(Color(WgcCoreDsColors.blueLight38))
                     .padding(WgcCoreDsSpacing.md16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -100,7 +100,7 @@ fun WgcNexkartProfileTemplate(
                     modifier = Modifier
                         .size(60.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary)),
+                        .background(Color(WgcCoreDsColors.blue39)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -118,13 +118,13 @@ fun WgcNexkartProfileTemplate(
                         text = userName,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.gadgetShopDark)
+                        color = Color(WgcCoreDsColors.blueDark6)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = userEmail,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                        color = Color(WgcCoreDsColors.blue41)
                     )
                 }
             }
@@ -134,7 +134,7 @@ fun WgcNexkartProfileTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                    .background(Color(WgcCoreDsColors.blueLight38))
                     .padding(vertical = WgcCoreDsSpacing.xs8.dp)
             ) {
                 ProfileMenuItem(
@@ -192,7 +192,7 @@ private fun ProfileMenuItem(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = if (isDestructive) Color(WgcCoreDsColors.gadgetShopAccentPink) else Color(WgcCoreDsColors.gadgetShopPrimary),
+                tint = if (isDestructive) Color(WgcCoreDsColors.pink5) else Color(WgcCoreDsColors.blue39),
                 modifier = Modifier.size(22.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -200,14 +200,14 @@ private fun ProfileMenuItem(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
-                color = if (isDestructive) Color(WgcCoreDsColors.gadgetShopAccentPink) else Color(WgcCoreDsColors.gadgetShopDark)
+                color = if (isDestructive) Color(WgcCoreDsColors.pink5) else Color(WgcCoreDsColors.blueDark6)
             )
         }
 
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+            tint = Color(WgcCoreDsColors.blue41),
             modifier = Modifier.size(14.dp)
         )
     }

@@ -21,18 +21,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import kotlinx.coroutines.delay
-
-/**
- * Modelo de dados para mensagens de Toast flutuantes corporativas.
- */
-data class WgcToastMessage(
-    val id: Long = System.currentTimeMillis(),
-    val message: String,
-    val variant: WgcSnackbarVariant = WgcSnackbarVariant.Default,
-    val durationMs: Long = 3500L
-)
 
 /**
  * Componente Toast flutuante com auto-dismiss animado.
@@ -60,7 +50,7 @@ fun WgcToastHost(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.md.dp),
+            .padding(WgcCoreDsSpacing.MD.dp),
         contentAlignment = Alignment.TopCenter
     ) {
         AnimatedVisibility(

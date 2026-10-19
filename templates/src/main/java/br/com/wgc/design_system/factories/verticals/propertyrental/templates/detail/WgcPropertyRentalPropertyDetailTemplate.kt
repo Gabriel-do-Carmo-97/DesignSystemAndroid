@@ -106,7 +106,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s240.dp)
-                        .background(Color(WgcCoreDsColors.propertyRentalCardPlaceholder))
+                        .background(Color(WgcCoreDsColors.blueLight1))
                 ) {
                     if (photoSlot != null) {
                         photoSlot()
@@ -114,13 +114,13 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         Box(
                             modifier = Modifier
                                 .matchParentSize()
-                                .background(Color(WgcCoreDsColors.propertyRentalPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.blueLight15)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Home,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s64.dp)
                             )
                         }
@@ -139,7 +139,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.propertyRentalDark),
+                            tint = Color(WgcCoreDsColors.blueDark26),
                             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                         )
                     }
@@ -161,7 +161,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                             Icon(
                                 imageVector = Icons.Default.Share,
                                 contentDescription = "Compartilhar",
-                                tint = Color(WgcCoreDsColors.propertyRentalDark),
+                                tint = Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                         }
@@ -176,7 +176,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                             Icon(
                                 imageVector = if (property.isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                                 contentDescription = "Favoritar",
-                                tint = if (property.isFavorite) Color(WgcCoreDsColors.propertyRentalCoral) else Color(WgcCoreDsColors.propertyRentalDark),
+                                tint = if (property.isFavorite) Color(WgcCoreDsColors.red28) else Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                         }
@@ -209,14 +209,14 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyRentalSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     // Tag Sem Fiador
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.propertyRentalCoral))
+                            .background(Color(WgcCoreDsColors.red28))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -236,7 +236,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         text = property.title,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyRentalDark)
+                        color = Color(WgcCoreDsColors.blueDark26)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -245,14 +245,14 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.LocationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue21),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                         Text(
                             text = "${property.address}, ${property.neighborhood} - ${property.city}",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                            color = Color(WgcCoreDsColors.blue21)
                         )
                     }
                 }
@@ -265,7 +265,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -290,7 +290,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -306,12 +306,12 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                                 text = "Composição de Valores",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalDark)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                             Icon(
                                 imageVector = Icons.Default.Info,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                                tint = Color(WgcCoreDsColors.blue21),
                                 modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                             )
                         }
@@ -326,7 +326,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
 
                         HorizontalDivider(
                             modifier = Modifier.padding(vertical = WgcCoreDsSpacing.xs8.dp),
-                            color = Color(WgcCoreDsColors.propertyRentalBorder)
+                            color = Color(WgcCoreDsColors.blueLight8)
                         )
 
                         Row(
@@ -338,13 +338,13 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                                 text = "Total mensal previsto",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                             Text(
                                 text = property.totalPrice.replace("Total ", ""),
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.ExtraBold,
-                                color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                         }
                     }
@@ -358,7 +358,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -370,13 +370,13 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s44.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.propertyRentalYellowLight)),
+                                .background(Color(WgcCoreDsColors.yellowLight4)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.DirectionsWalk,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -388,13 +388,13 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                                 text = "Localização privilegiada",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalDark)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
                                 text = property.metroDistanceText,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                                color = Color(WgcCoreDsColors.blue21)
                             )
                         }
                     }
@@ -408,7 +408,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -419,7 +419,7 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                             text = "Comodidades e Lazer",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                            color = Color(WgcCoreDsColors.blueDark26)
                         )
 
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -439,14 +439,14 @@ fun WgcPropertyRentalPropertyDetailTemplate(
                                         Icon(
                                             imageVector = Icons.Default.Check,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.propertyRentalGreen),
+                                            tint = Color(WgcCoreDsColors.green4),
                                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                         )
                                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                         Text(
                                             text = amenity,
                                             style = MaterialTheme.typography.bodyMedium,
-                                            color = Color(WgcCoreDsColors.propertyRentalDark)
+                                            color = Color(WgcCoreDsColors.blueDark26)
                                         )
                                     }
                                 }
@@ -469,12 +469,12 @@ private fun DetailSpecItem(label: String, value: String) {
             text = value,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.propertyRentalDark)
+            color = Color(WgcCoreDsColors.blueDark26)
         )
         Text(
             text = label,
             style = MaterialTheme.typography.labelSmall,
-            color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+            color = Color(WgcCoreDsColors.blue21)
         )
     }
 }
@@ -491,13 +491,13 @@ private fun CostRow(label: String, value: String) {
         Text(
             text = label,
             style = MaterialTheme.typography.bodyMedium,
-            color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+            color = Color(WgcCoreDsColors.blue21)
         )
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.propertyRentalDark)
+            color = Color(WgcCoreDsColors.blueDark26)
         )
     }
 }
@@ -510,7 +510,7 @@ private fun PropertyRentalDetailBottomBar(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.md16.dp
     ) {
         Row(
@@ -532,14 +532,14 @@ private fun PropertyRentalDetailBottomBar(
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 border = androidx.compose.foundation.BorderStroke(
                     width = WgcCoreDsSpacing.xxxs2.dp,
-                    color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
             ) {
                 Text(
                     text = "Fazer Proposta",
                     style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
             }
 
@@ -551,7 +551,7 @@ private fun PropertyRentalDetailBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyRentalYellow))
+                    containerColor = Color(WgcCoreDsColors.yellow6))
             ) {
                 Text(
                     text = "Agendar Visita",

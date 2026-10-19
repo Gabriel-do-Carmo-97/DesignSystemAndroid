@@ -38,12 +38,12 @@ fun WgcPagueMenosClinicTemplate(
                     text = "Consultório Clinic Farma",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark21)
                 )
                 Text(
                     text = "Acompanhamento de saúde com farmacêuticos especialistas",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextSecondary)
+                    color = Color(WgcCoreDsColors.blue19)
                 )
             }
 

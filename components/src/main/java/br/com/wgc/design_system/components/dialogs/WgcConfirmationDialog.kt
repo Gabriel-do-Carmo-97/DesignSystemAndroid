@@ -5,7 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.radio.WgcRadioButton
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
@@ -28,7 +28,7 @@ fun WgcConfirmationDialog(
         text = {
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
             ) {
                 options.forEach { option ->
                     WgcRadioButton(

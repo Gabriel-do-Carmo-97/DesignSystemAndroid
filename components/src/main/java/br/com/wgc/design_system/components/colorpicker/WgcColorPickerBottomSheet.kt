@@ -35,8 +35,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -78,9 +78,9 @@ fun WgcColorPickerBottomSheet(
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
-                .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp),
+                .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.SM12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             Text(
                 text = title,
@@ -104,7 +104,7 @@ fun WgcColorPickerBottomSheet(
             if (quickPalette.isNotEmpty()) {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Text(
                         text = "Paleta Rápida",
@@ -112,7 +112,7 @@ fun WgcColorPickerBottomSheet(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     LazyRow(
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         items(quickPalette) { paletteColor ->
@@ -141,22 +141,22 @@ fun WgcColorPickerBottomSheet(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant)
-                    .padding(WgcCoreDsSpacing.sm12.dp),
+                    .padding(WgcCoreDsSpacing.SM12.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
                 ) {
                     Box(
                         modifier = Modifier
                             .size(36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(currentColor)
-                            .border(1.dp, Color.LightGray, RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .border(1.dp, Color.LightGray, RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                     )
                     Column {
                         Text(
@@ -177,7 +177,7 @@ fun WgcColorPickerBottomSheet(
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
             ) {
                 Box(modifier = Modifier.weight(1f)) {
                     WgcSecondaryClassicButton(

@@ -367,3 +367,49 @@ private fun WgcOtpNavScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcLoginNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcLoginNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcLoginNavScreen(
+            onNavigateToRegister = {},
+            onNavigateToForgotPassword = {},
+            onLoginSuccess = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcRegisterNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcRegisterNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcRegisterNavScreen(
+            onNavigateToLogin = {},
+            onRegisterSuccess = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcForgotPasswordNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcForgotPasswordNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcForgotPasswordNavScreen(
+            onNavigateToLogin = {},
+            onResetCodeSent = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcOtpNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcOtpNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcOtpNavScreen(
+            onOtpVerified = {},
+            onNavigateBack = {}
+        )
+    }
+}
+

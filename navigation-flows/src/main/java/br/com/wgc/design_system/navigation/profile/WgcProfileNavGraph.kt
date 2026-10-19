@@ -182,3 +182,21 @@ private fun WgcProfileSecurityScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcProfileNavHost Preview", showBackground = true)
+@Composable
+private fun WgcProfileNavHostPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcProfileNavHost()
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcProfileSecurityScreen Preview", showBackground = true)
+@Composable
+private fun WgcProfileSecurityScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcProfileSecurityScreen(
+            onBackClick = {}
+        )
+    }
+}

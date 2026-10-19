@@ -131,7 +131,7 @@ private fun CartHeaderInfo(itemCount: Int) {
             text = "Meu Carrinho ($itemCount itens)",
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.groceryTextPrimary)
+            color = Color(WgcCoreDsColors.blueDark13)
         )
     }
 }
@@ -145,7 +145,7 @@ private fun CartItemRow(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -158,7 +158,7 @@ private fun CartItemRow(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s64.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.groceryPlaceholder))
+                    .background(Color(WgcCoreDsColors.blueLight1))
             )
 
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -168,20 +168,20 @@ private fun CartItemRow(
                     text = cartItem.product.title,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.groceryTextPrimary),
+                    color = Color(WgcCoreDsColors.blueDark13),
                     maxLines = 2
                 )
                 Text(
                     text = "R$ " + String.format("%.2f", cartItem.product.price),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.groceryTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
                 if (cartItem.product.groceryCardPrice != null) {
                     Text(
                         text = "R$ " + String.format("%.2f", cartItem.product.groceryCardPrice) + " no Cartão Supermercado",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryBlue),
+                        color = Color(WgcCoreDsColors.blueDark32),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -203,7 +203,7 @@ private fun CartItemRow(
                     Icon(
                         imageVector = if (cartItem.quantity > 1) Icons.Default.Remove else Icons.Default.DeleteOutline,
                         contentDescription = "Diminuir",
-                        tint = Color(WgcCoreDsColors.groceryRed),
+                        tint = Color(WgcCoreDsColors.red19),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -222,7 +222,7 @@ private fun CartItemRow(
                     Icon(
                         imageVector = Icons.Default.Add,
                         contentDescription = "Aumentar",
-                        tint = Color(WgcCoreDsColors.groceryBlue),
+                        tint = Color(WgcCoreDsColors.blueDark32),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                 }
@@ -240,7 +240,7 @@ private fun CartaoSupermercadoInstallmentSimulator(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.groceryBlueLight)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueLight20)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level0.dp)
     ) {
         Row(
@@ -252,7 +252,7 @@ private fun CartaoSupermercadoInstallmentSimulator(
             Icon(
                 imageVector = Icons.Default.CreditCard,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.groceryBlue),
+                tint = Color(WgcCoreDsColors.blueDark32),
                 modifier = Modifier.size(WgcCoreDsSize.s32.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -260,14 +260,14 @@ private fun CartaoSupermercadoInstallmentSimulator(
                 Text(
                     text = "Com Cartão Supermercado parcele em até:",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.groceryBlueDark),
+                    color = Color(WgcCoreDsColors.blueDark14),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = "${maxInstallments}x de R$ " + String.format("%.2f", installmentVal) + " sem juros",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.groceryBlue)
+                    color = Color(WgcCoreDsColors.blueDark32)
                 )
             }
         }
@@ -279,7 +279,7 @@ private fun DeliveryTypeCard() {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -291,7 +291,7 @@ private fun DeliveryTypeCard() {
             Icon(
                 imageVector = Icons.Default.LocalShipping,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.groceryBlue),
+                tint = Color(WgcCoreDsColors.blueDark32),
                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -300,12 +300,12 @@ private fun DeliveryTypeCard() {
                     text = "Entrega Expressa Supermercado",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.groceryTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark13)
                 )
                 Text(
                     text = "Receba em até 2 horas na sua casa",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.groceryTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
             }
         }
@@ -327,7 +327,7 @@ private fun CartSummaryBottomBar(
             bottomStart = WgcCoreDsBorderRadius.none0.dp,
             bottomEnd = WgcCoreDsBorderRadius.none0.dp
         ),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level6.dp)
     ) {
         Column(
@@ -343,13 +343,13 @@ private fun CartSummaryBottomBar(
                     Text(
                         text = "Economia Cartão Supermercado:",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        color = Color(WgcCoreDsColors.green2),
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "- R$ " + String.format("%.2f", economy),
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        color = Color(WgcCoreDsColors.green2),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -365,13 +365,13 @@ private fun CartSummaryBottomBar(
                     Text(
                         text = "Total:",
                         fontSize = 10.sp,
-                        color = Color(WgcCoreDsColors.groceryTextSecondary)
+                        color = Color(WgcCoreDsColors.gray5)
                     )
                     Text(
                         text = "R$ " + String.format("%.2f", total),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.groceryTextPrimary)
+                        color = Color(WgcCoreDsColors.blueDark13)
                     )
                 }
 

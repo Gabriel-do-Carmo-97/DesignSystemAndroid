@@ -23,7 +23,7 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.homeImprovementGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.green22)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Casa, Construção & Reforma", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcLeroyMerlinHomeTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.title, fontWeight = FontWeight.Bold)
                         Text(item.department, color = Color.Gray, fontSize = 14.sp)
-                        Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.homeImprovementGreen))
+                        Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.green22))
                     }
                 }
             }

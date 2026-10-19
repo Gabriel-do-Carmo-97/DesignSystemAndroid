@@ -2,10 +2,17 @@
 
 package br.com.wgc.design_system.core
 
+import br.com.wgc.design_system.core.accessibility.WgcContrastCalculator
+import br.com.wgc.design_system.core.tokens.WgcFluidTypography
+import br.com.wgc.design_system.core.tokens.WgcSpacingDensity
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
+/**
+ * Testes de contraste, luminância, recomendações de cor e escalas de tipografia/densidade relacionadas.
+ * Quando executar: ao alterar os cálculos WCAG ou seus tokens.
+ */
 class WgcContrastCalculatorTest {
 
     @Test

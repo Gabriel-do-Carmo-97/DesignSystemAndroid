@@ -21,14 +21,10 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.avatar.WgcAvatar
-
-enum class StoryState {
-    UNSEEN, SEEN, CLOSE_FRIENDS
-}
 
 /**
  * Componente de Avatar para Stories com anel gradiente de status (WgcStoryAvatar).
@@ -47,17 +43,17 @@ fun WgcStoryAvatar(
     val ringBorder = when (storyState) {
         StoryState.UNSEEN -> Brush.sweepGradient(
             listOf(
-                Color(WgcCoreDsColors.courseMarketplacePurple),
-                Color(WgcCoreDsColors.visualDiscoveryRed),
+                Color(WgcCoreDsColors.purple4),
+                Color(WgcCoreDsColors.red11),
                 Color(WgcCoreDsColors.orange500),
-                Color(WgcCoreDsColors.courseMarketplacePurple)
+                Color(WgcCoreDsColors.purple4)
             )
         )
         StoryState.CLOSE_FRIENDS -> Brush.horizontalGradient(
-            listOf(Color(WgcCoreDsColors.success), Color(WgcCoreDsColors.megaStorerSecondary))
+            listOf(Color(WgcCoreDsColors.green27), Color(WgcCoreDsColors.green15))
         )
         StoryState.SEEN -> Brush.horizontalGradient(
-            listOf(Color(WgcCoreDsColors.gray400), Color(WgcCoreDsColors.gray300))
+            listOf(Color(WgcCoreDsColors.gray18), Color(WgcCoreDsColors.grayLight2))
         )
     }
 
@@ -116,7 +112,7 @@ fun WgcStoryAvatar(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = userName,
@@ -126,14 +122,6 @@ fun WgcStoryAvatar(
     }
 }
 
-data class StoryTrayItem(
-    val id: String,
-    val userName: String,
-    val imageUrl: String? = null,
-    val storyState: StoryState = StoryState.UNSEEN,
-    val isUserStory: Boolean = false
-)
-
 @Composable
 fun WgcStoryTray(
     modifier: Modifier = Modifier,
@@ -142,8 +130,8 @@ fun WgcStoryTray(
 ) {
     LazyRow(
         modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         items(stories, key = { it.id }) { story ->
             WgcStoryAvatar(

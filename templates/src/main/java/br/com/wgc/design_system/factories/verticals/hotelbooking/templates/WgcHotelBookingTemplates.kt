@@ -23,7 +23,7 @@ fun WgcHotelBookingSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.hotelBookingBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue1)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Reserva de Hotel • Genius Nível 2", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcHotelBookingSearchTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                         Text(hotel.name, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("${hotel.city} • Nota ${hotel.score} (${hotel.reviewsCount} avaliações)", color = Color.Gray, fontSize = 14.sp)
-                        Text(hotel.geniusDiscount, color = Color(WgcCoreDsColors.hotelBookingYellow), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(hotel.geniusDiscount, color = Color(WgcCoreDsColors.orange24), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(hotel.price)}", fontWeight = FontWeight.ExtraBold, color = Color.Black)
                     }
                 }

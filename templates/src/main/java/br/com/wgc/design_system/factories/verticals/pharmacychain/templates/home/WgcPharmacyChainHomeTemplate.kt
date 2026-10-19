@@ -98,7 +98,7 @@ fun WgcDrogaRaiaHomeTemplate(
                     text = "Mais Vendidos e Cuidados Pessoais",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.pharmacyChainTextPrimary),
+                    color = Color(WgcCoreDsColors.blueDark28),
                     modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
                 )
             }
@@ -128,7 +128,7 @@ private fun RaiaHeaderSection(userProfile: PharmacyUserProfile) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.pharmacyChainRed))
+            .background(Color(WgcCoreDsColors.red8))
             .padding(WgcCoreDsSpacing.md16.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -141,13 +141,13 @@ private fun RaiaHeaderSection(userProfile: PharmacyUserProfile) {
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.pharmacyChainSurface),
+                        tint = Color(WgcCoreDsColors.white),
                         modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = "Entregar em: ${userProfile.address}",
-                        color = Color(WgcCoreDsColors.pharmacyChainSurface),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Medium,
                         maxLines = 1
@@ -171,16 +171,16 @@ private fun RaiaHeaderSection(userProfile: PharmacyUserProfile) {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = "Buscar",
-                        tint = Color(WgcCoreDsColors.pharmacyChainTextSecondary),
+                        tint = Color(WgcCoreDsColors.blue20),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.pharmacyChainSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.pharmacyChainSurface),
-                    focusedBorderColor = Color(WgcCoreDsColors.pharmacyChainSurface),
-                    unfocusedBorderColor = Color(WgcCoreDsColors.pharmacyChainSurface)
+                    focusedContainerColor = Color(WgcCoreDsColors.white),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.white),
+                    focusedBorderColor = Color(WgcCoreDsColors.white),
+                    unfocusedBorderColor = Color(WgcCoreDsColors.white)
                 ),
                 singleLine = true,
                 readOnly = true
@@ -196,7 +196,7 @@ private fun RaiaFastDeliveryBanner() {
             .fillMaxWidth()
             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.pharmacyChainNavy)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueDark16)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -208,20 +208,20 @@ private fun RaiaFastDeliveryBanner() {
             Icon(
                 imageVector = Icons.Default.LocalShipping,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.pharmacyChainPrescriptionYellow),
+                tint = Color(WgcCoreDsColors.orange33),
                 modifier = Modifier.size(WgcCoreDsSize.s28.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
             Column {
                 Text(
                     text = "Entrega Rápida em até 1 hora",
-                    color = Color(WgcCoreDsColors.pharmacyChainSurface),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Ou retire grátis em qualquer farmácia em 15 minutos",
-                    color = Color(WgcCoreDsColors.pharmacyChainSurface).copy(alpha = 0.85f),
+                    color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f),
                     fontSize = 10.sp
                 )
             }

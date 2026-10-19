@@ -82,7 +82,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                 title = {},
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar", tint = Color(WgcCoreDsColors.megaStoreDark))
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar", tint = Color(WgcCoreDsColors.grayDark14))
                     }
                 },
                 actions = {
@@ -90,11 +90,11 @@ fun WgcShoppeProductDetailsScreenTemplate(
                         Icon(
                             imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                             contentDescription = "Favorito",
-                            tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.megaStoreDark)
+                            tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.grayDark14)
                         )
                     }
                     IconButton(onClick = {}) {
-                        Icon(Icons.Default.Share, contentDescription = "Compartilhar", tint = Color(WgcCoreDsColors.megaStoreDark))
+                        Icon(Icons.Default.Share, contentDescription = "Compartilhar", tint = Color(WgcCoreDsColors.grayDark14))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.White)
@@ -138,7 +138,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1f)
-                    .background(Color(WgcCoreDsColors.megaStoreBackground))
+                    .background(Color(WgcCoreDsColors.gray100))
             ) {
                 AsyncImage(
                     model = product.imageUrl,
@@ -153,7 +153,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                             .align(Alignment.TopStart)
                             .padding(WgcCoreDsSpacing.md.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimary))
+                            .background(Color(WgcCoreDsColors.blue28))
                             .padding(horizontal = WgcCoreDsSpacing.sm.dp, vertical = WgcCoreDsSpacing.xxs.dp)
                     ) {
                         Text(
@@ -171,7 +171,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                 Text(
                     text = product.category.uppercase(),
                     style = MaterialTheme.typography.labelMedium,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
@@ -179,7 +179,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                 Text(
                     text = product.title,
                     style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black),
-                    color = Color(WgcCoreDsColors.megaStoreDark)
+                    color = Color(WgcCoreDsColors.grayDark14)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -188,27 +188,27 @@ fun WgcShoppeProductDetailsScreenTemplate(
                     Text(
                         text = product.price,
                         style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.megaStorePrimary)
+                        color = Color(WgcCoreDsColors.blue28)
                     )
                     if (!product.originalPrice.isNullOrBlank()) {
                         Spacer(modifier = Modifier.size(WgcCoreDsSpacing.sm.dp))
                         Text(
                             text = product.originalPrice,
                             style = MaterialTheme.typography.bodyLarge.copy(textDecoration = TextDecoration.LineThrough),
-                            color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                     }
 
                     Spacer(modifier = Modifier.weight(1f))
 
-                    Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.megaStoreGold), modifier = Modifier.size(16.dp))
-                    Text(text = " ${product.rating} (${product.reviewCount} reviews)", fontSize = 12.sp, color = Color(WgcCoreDsColors.megaStoreDark))
+                    Icon(Icons.Default.Star, contentDescription = null, tint = Color(WgcCoreDsColors.orange30), modifier = Modifier.size(16.dp))
+                    Text(text = " ${product.rating} (${product.reviewCount} reviews)", fontSize = 12.sp, color = Color(WgcCoreDsColors.grayDark14))
                 }
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg.dp))
 
                 // Color Variations
-                Text(text = "Color", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.megaStoreDark))
+                Text(text = "Color", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.grayDark14))
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)) {
                     product.colorsHex.forEachIndexed { index, hex ->
@@ -219,7 +219,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                                 .clip(CircleShape)
                                 .border(
                                     width = if (selectedColorIndex == index) 2.5.dp else 1.dp,
-                                    color = if (selectedColorIndex == index) Color(WgcCoreDsColors.megaStorePrimary) else Color.Transparent,
+                                    color = if (selectedColorIndex == index) Color(WgcCoreDsColors.blue28) else Color.Transparent,
                                     shape = CircleShape
                                 )
                                 .padding(3.dp)
@@ -233,7 +233,7 @@ fun WgcShoppeProductDetailsScreenTemplate(
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
 
                 // Size Variations
-                Text(text = "Size", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.megaStoreDark))
+                Text(text = "Size", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.grayDark14))
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)) {
                     product.sizes.forEachIndexed { index, size ->
@@ -247,12 +247,12 @@ fun WgcShoppeProductDetailsScreenTemplate(
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg.dp))
 
-                Text(text = "Description", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.megaStoreDark))
+                Text(text = "Description", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.grayDark14))
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))

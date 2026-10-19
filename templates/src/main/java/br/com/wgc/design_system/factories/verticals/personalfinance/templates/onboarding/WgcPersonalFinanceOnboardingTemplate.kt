@@ -69,13 +69,13 @@ fun WgcOrganizzeOnboardingTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s100.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.personalFinancePrimaryLight)),
+                        .background(Color(WgcCoreDsColors.cyanLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.AccountBalanceWallet,
                         contentDescription = "Organizze Logo",
-                        tint = Color(WgcCoreDsColors.personalFinancePrimary),
+                        tint = Color(WgcCoreDsColors.cyan3),
                         modifier = Modifier.size(WgcCoreDsSize.s56.dp)
                     )
                 }
@@ -86,7 +86,7 @@ fun WgcOrganizzeOnboardingTemplate(
                     text = "Organizze",
                     style = MaterialTheme.typography.headlineLarge,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(WgcCoreDsColors.personalFinancePrimary)
+                    color = Color(WgcCoreDsColors.cyan3)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -95,7 +95,7 @@ fun WgcOrganizzeOnboardingTemplate(
                     text = "Controle financeiro simples e descomplicado para sua vida.",
                     style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
-                    color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                    color = Color(WgcCoreDsColors.gray11)
                 )
             }
 
@@ -128,7 +128,7 @@ fun WgcOrganizzeOnboardingTemplate(
                         .height(WgcCoreDsSize.s48.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.personalFinancePrimary)
+                        containerColor = Color(WgcCoreDsColors.cyan3)
                     )
                 ) {
                     Text(
@@ -150,7 +150,7 @@ fun WgcOrganizzeOnboardingTemplate(
                         text = "Já tenho uma conta",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.personalFinanceDark)
+                        color = Color(WgcCoreDsColors.blueDark33)
                     )
                 }
             }
@@ -172,13 +172,13 @@ private fun BenefitItem(
             modifier = Modifier
                 .size(WgcCoreDsSpacing.xxl40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.personalFinancePrimaryLight)),
+                .background(Color(WgcCoreDsColors.cyanLight2)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.personalFinancePrimary),
+                tint = Color(WgcCoreDsColors.cyan3),
                 modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
             )
         }
@@ -188,12 +188,12 @@ private fun BenefitItem(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark)
+                color = Color(WgcCoreDsColors.blueDark33)
             )
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                color = Color(WgcCoreDsColors.gray11)
             )
         }
     }

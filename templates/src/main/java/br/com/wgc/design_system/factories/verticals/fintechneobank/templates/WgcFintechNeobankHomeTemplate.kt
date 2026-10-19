@@ -39,7 +39,7 @@ fun WgcNeobankHomeTemplate(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.fintechPurple))
+                    .background(Color(WgcCoreDsColors.purple3))
                     .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp)
             ) {
                 Row(

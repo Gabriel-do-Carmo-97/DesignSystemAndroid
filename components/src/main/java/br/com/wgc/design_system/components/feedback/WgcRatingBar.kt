@@ -28,8 +28,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente corporativo de classificação por estrelas (WgcRatingBar).
@@ -53,12 +53,12 @@ fun WgcRatingBar(
     rating: Float = 4.5f,
     maxStars: Int = 5,
     reviewCount: Int? = null,
-    starColor: Color = Color(WgcCoreDsColors.trendFashionGold),
+    starColor: Color = Color(WgcCoreDsColors.orange14),
     showRatingText: Boolean = true,
     isInteractive: Boolean = false,
     onRatingChange: ((Float) -> Unit)? = null,
-    starSize: Dp = WgcCoreDsSpacing.md.dp,
-    starSpacing: Dp = WgcCoreDsSpacing.xxs.dp
+    starSize: Dp = WgcCoreDsSpacing.MD.dp,
+    starSpacing: Dp = WgcCoreDsSpacing.XXS.dp
 ) {
     val clampedRating = rating.coerceIn(0f, maxStars.toFloat())
     val description = "Avaliação $clampedRating de $maxStars estrelas" +
@@ -106,7 +106,7 @@ fun WgcRatingBar(
         }
 
         if (showRatingText) {
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS.dp))
             Text(
                 text = String.format("%.1f", clampedRating),
                 style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
@@ -115,11 +115,11 @@ fun WgcRatingBar(
         }
 
         if (reviewCount != null) {
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS.dp))
             Text(
                 text = "($reviewCount)",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
         }
     }
@@ -128,7 +128,7 @@ fun WgcRatingBar(
 @Preview(name = "Rating Bar ReadOnly", showBackground = true)
 @Composable
 private fun WgcRatingBarPreview() {
-    Row(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Row(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcRatingBar(
             rating = 4.5f,
             reviewCount = 56890
@@ -139,7 +139,7 @@ private fun WgcRatingBarPreview() {
 @Preview(name = "Rating Bar Interactive", showBackground = true)
 @Composable
 private fun WgcRatingBarInteractivePreview() {
-    Row(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Row(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcRatingBar(
             rating = 3f,
             isInteractive = true,

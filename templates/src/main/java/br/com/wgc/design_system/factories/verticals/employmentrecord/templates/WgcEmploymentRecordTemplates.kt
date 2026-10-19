@@ -23,7 +23,7 @@ fun WgcCtpsContractsTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.employmentRecordBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue11)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Carteira de Trabalho Digital • CTPS", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

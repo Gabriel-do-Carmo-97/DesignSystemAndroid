@@ -27,8 +27,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
@@ -50,14 +50,14 @@ fun WgcFinancialCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.lg.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
+                .padding(WgcCoreDsSpacing.LG.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -78,7 +78,7 @@ fun WgcFinancialCard(
                 }
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS.dp)) {
                 Text(
                     text = if (isBalanceVisible) balance else "••••••",
                     style = MaterialTheme.typography.headlineMedium,

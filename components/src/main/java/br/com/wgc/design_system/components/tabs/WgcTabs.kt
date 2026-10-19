@@ -38,19 +38,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-
-/**
- * Modelo de dados para aba no WgcTabRow.
- */
-data class WgcTabItem(
-    val id: String,
-    val title: String,
-    val icon: ImageVector? = null,
-    val badgeCount: Int? = null
-)
 
 /**
  * WgcTabRow
@@ -77,7 +67,7 @@ fun WgcTabRow(
             modifier = modifier.fillMaxWidth(),
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.primary,
-            edgePadding = WgcCoreDsSpacing.md16.dp
+            edgePadding = WgcCoreDsSpacing.MD16.dp
         ) {
             tabs.forEachIndexed { index, tab ->
                 WgcTab(
@@ -124,7 +114,7 @@ fun WgcTab(
         text = {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = tab.title,
@@ -176,10 +166,10 @@ fun WgcHorizontalPagerIndicator(
     modifier: Modifier = Modifier,
     activeColor: Color = MaterialTheme.colorScheme.primary,
     inactiveColor: Color = MaterialTheme.colorScheme.outlineVariant,
-    indicatorHeight: Dp = WgcCoreDsSpacing.xs8.dp,
-    activeIndicatorWidth: Dp = WgcCoreDsSpacing.lg24.dp,
-    inactiveIndicatorWidth: Dp = WgcCoreDsSpacing.xs8.dp,
-    spacing: Dp = WgcCoreDsSpacing.xs8.dp
+    indicatorHeight: Dp = WgcCoreDsSpacing.XS8.dp,
+    activeIndicatorWidth: Dp = WgcCoreDsSpacing.LG24.dp,
+    inactiveIndicatorWidth: Dp = WgcCoreDsSpacing.XS8.dp,
+    spacing: Dp = WgcCoreDsSpacing.XS8.dp
 ) {
     Row(
         modifier = modifier,
@@ -201,7 +191,7 @@ fun WgcHorizontalPagerIndicator(
                 modifier = Modifier
                     .height(indicatorHeight)
                     .width(width)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                     .background(color)
             )
         }
@@ -222,8 +212,8 @@ private fun WgcTabsPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.lg24.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.LG24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 WgcTabRow(

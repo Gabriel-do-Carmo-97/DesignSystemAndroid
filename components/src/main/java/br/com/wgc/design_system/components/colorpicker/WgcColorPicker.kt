@@ -33,9 +33,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.devices.phone.WgcDevicePreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Ponto de entrada corporativo unificado (Factory) para seleção de cores.
@@ -146,7 +146,7 @@ fun WgcColorPicker(
 private fun WgcColorPickerBadgePreview() {
     MaterialTheme {
         Row(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             WgcColorPicker(
@@ -154,7 +154,7 @@ private fun WgcColorPickerBadgePreview() {
                 onColorSelected = {},
                 triggerType = WgcColorPickerTriggerType.BADGE
             )
-            Spacer(Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(Modifier.width(WgcCoreDsSpacing.SM12.dp))
             Column {
                 Text("Cor Ativa", style = MaterialTheme.typography.labelSmall)
                 Text("#2196F3", fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
@@ -169,15 +169,15 @@ private fun WgcColorPickerBadgePreview() {
 private fun WgcColorPickerIconPreview() {
     MaterialTheme {
         Row(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             WgcColorPicker(
-                selectedColor = Color(WgcCoreDsColors.foodDeliveryRed),
+                selectedColor = Color(WgcCoreDsColors.red18),
                 onColorSelected = {},
                 triggerType = WgcColorPickerTriggerType.ICON
             )
-            Spacer(Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(Modifier.width(WgcCoreDsSpacing.SM12.dp))
             Text("Toque no ícone para escolher", style = MaterialTheme.typography.bodyMedium)
         }
     }

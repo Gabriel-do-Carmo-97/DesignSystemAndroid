@@ -82,11 +82,11 @@ fun WgcPdaHomeTemplate(
     footerSlot: (@Composable () -> Unit)? = null
 ) {
     val departments = listOf(
-        PdaDepartmentCategory("Adega", Icons.Default.LocalBar, WgcCoreDsColors.premiumGroceryWineRed),
-        PdaDepartmentCategory("Queijos Nobres", Icons.Default.Restaurant, WgcCoreDsColors.premiumGroceryGoldDark),
-        PdaDepartmentCategory("Orgânicos", Icons.Default.Eco, WgcCoreDsColors.premiumGroceryGreen),
-        PdaDepartmentCategory("Padaria Artesanal", Icons.Default.BakeryDining, WgcCoreDsColors.premiumGroceryOrangeOrganic),
-        PdaDepartmentCategory("Peixaria Fresca", Icons.Default.SetMeal, WgcCoreDsColors.premiumGroceryGreenDark)
+        PdaDepartmentCategory("Adega", Icons.Default.LocalBar, WgcCoreDsColors.pink1),
+        PdaDepartmentCategory("Queijos Nobres", Icons.Default.Restaurant, WgcCoreDsColors.orange4),
+        PdaDepartmentCategory("Orgânicos", Icons.Default.Eco, WgcCoreDsColors.greenDark7),
+        PdaDepartmentCategory("Padaria Artesanal", Icons.Default.BakeryDining, WgcCoreDsColors.orange28),
+        PdaDepartmentCategory("Peixaria Fresca", Icons.Default.SetMeal, WgcCoreDsColors.greenDark5)
     )
 
     Scaffold(
@@ -112,7 +112,7 @@ fun WgcPdaHomeTemplate(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color(WgcCoreDsColors.premiumGroceryGreenDark))
+                            .background(Color(WgcCoreDsColors.greenDark5))
                             .padding(WgcCoreDsSpacing.md16.dp)
                     ) {
                         Column(
@@ -131,19 +131,19 @@ fun WgcPdaHomeTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Storefront,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.premiumGroceryGold),
+                                        tint = Color(WgcCoreDsColors.orange34),
                                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                     )
                                     Column {
                                         Text(
                                             text = "SUPERMERCADO • LOJA SELECIONADA",
-                                            color = Color(WgcCoreDsColors.premiumGroceryGold),
+                                            color = Color(WgcCoreDsColors.orange34),
                                             fontSize = 10.sp,
                                             fontWeight = FontWeight.Bold
                                         )
                                         Text(
                                             text = userProfile.selectedStore,
-                                            color = Color(WgcCoreDsColors.premiumGrocerySurface),
+                                            color = Color(WgcCoreDsColors.white),
                                             fontSize = 14.sp,
                                             fontWeight = FontWeight.Bold
                                         )
@@ -154,7 +154,7 @@ fun WgcPdaHomeTemplate(
                                     Icon(
                                         imageVector = Icons.Default.QrCodeScanner,
                                         contentDescription = "Scanner",
-                                        tint = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                        tint = Color(WgcCoreDsColors.white)
                                     )
                                 }
                             }
@@ -173,16 +173,16 @@ fun WgcPdaHomeTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Search,
                                         contentDescription = "Buscar",
-                                        tint = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                                        tint = Color(WgcCoreDsColors.cyan7),
                                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                     )
                                 },
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                                 colors = OutlinedTextFieldDefaults.colors(
-                                    focusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    unfocusedContainerColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    focusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface),
-                                    unfocusedBorderColor = Color(WgcCoreDsColors.premiumGrocerySurface)
+                                    focusedContainerColor = Color(WgcCoreDsColors.white),
+                                    unfocusedContainerColor = Color(WgcCoreDsColors.white),
+                                    focusedBorderColor = Color(WgcCoreDsColors.white),
+                                    unfocusedBorderColor = Color(WgcCoreDsColors.white)
                                 ),
                                 singleLine = true,
                                 readOnly = true
@@ -217,7 +217,7 @@ fun WgcPdaHomeTemplate(
                         text = "DEPARTAMENTOS GOURMET",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary),
+                        color = Color(WgcCoreDsColors.cyanDark3),
                         modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
                     )
                     LazyRow(
@@ -253,7 +253,7 @@ fun WgcPdaHomeTemplate(
                                     text = dept.title,
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Medium,
-                                    color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
+                                    color = Color(WgcCoreDsColors.cyanDark3)
                                 )
                             }
                         }
@@ -274,13 +274,13 @@ fun WgcPdaHomeTemplate(
                         text = "ESPECIAIS DA SEMANA",
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
+                        color = Color(WgcCoreDsColors.cyanDark3)
                     )
                     Text(
                         text = "Ver todos",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.premiumGroceryGreen),
+                        color = Color(WgcCoreDsColors.greenDark7),
                         modifier = Modifier.clickable { }
                     )
                 }
@@ -320,21 +320,21 @@ fun WgcPdaHomeTemplate(
                         Icon(
                             imageVector = Icons.Default.WineBar,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                            tint = Color(WgcCoreDsColors.pink1),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "CURADORIA SOMMELIER",
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.premiumGroceryTextPrimary)
+                            color = Color(WgcCoreDsColors.cyanDark3)
                         )
                     }
                     Text(
                         text = "Explorar Adega",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.premiumGroceryWineRed),
+                        color = Color(WgcCoreDsColors.pink1),
                         modifier = Modifier.clickable { }
                     )
                 }

@@ -1,29 +1,10 @@
 package br.com.wgc.design_system.components.colorpicker
 
 import androidx.compose.ui.graphics.Color
-import br.com.wgc.design_system.core.colors.WgcCoreDsColorsPrimitive
-import br.com.wgc.design_system.core.colors.brands.WgcBrandEcommerce
-import br.com.wgc.design_system.core.colors.brands.WgcBrandFoodDelivery
-import br.com.wgc.design_system.core.colors.brands.WgcBrandMarketplace
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.roundToInt
-
-/**
- * Modo de apresentação visual do seletor de cores WgcColorPicker.
- */
-enum class WgcColorPickerPresentation {
-    DIALOG,
-    BOTTOM_SHEET
-}
-
-/**
- * Tipo de gatilho padrão do WgcColorPicker quando nenhum slot customizado é fornecido.
- */
-enum class WgcColorPickerTriggerType {
-    ICON,
-    BADGE
-}
 
 /**
  * Utilitários matemáticos para conversão e manipulação no espaço de cor HSV.
@@ -109,15 +90,15 @@ object WgcColorPickerDefaults {
      * Paleta rápida de cores oficiais SSOT extraídas de [WgcCoreDsColors].
      */
     val quickPalette: List<Color> = listOf(
-        Color(WgcBrandFoodDelivery.foodDeliveryRed),
-        Color(WgcBrandEcommerce.dealMarketplaceOrange),
-        Color(WgcBrandMarketplace.marketplaceYellow),
-        Color(WgcBrandMarketplace.marketplaceGreen),
-        Color(WgcBrandMarketplace.marketplaceBlue),
-        Color(WgcBrandEcommerce.trendFashionPink),
-        Color(WgcCoreDsColorsPrimitive.blue500),
-        Color(WgcCoreDsColorsPrimitive.red500),
-        Color(WgcCoreDsColorsPrimitive.black),
-        Color(WgcCoreDsColorsPrimitive.white)
+        Color(WgcCoreDsColors.red18),
+        Color(WgcCoreDsColors.red21),
+        Color(WgcCoreDsColors.yellow8),
+        Color(WgcCoreDsColors.green9),
+        Color(WgcCoreDsColors.blue9),
+        Color(WgcCoreDsColors.pink4),
+        Color(WgcCoreDsColors.blue500),
+        Color(WgcCoreDsColors.red500),
+        Color(WgcCoreDsColors.black),
+        Color(WgcCoreDsColors.white)
     )
 }

@@ -23,7 +23,7 @@ fun WgcMadeiraMadeiraHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.homeMarketplaceOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.orange16)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("MadeiraMadeira • Tudo para sua Casa", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -33,7 +33,7 @@ fun WgcMadeiraMadeiraHomeTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(prod.title, fontWeight = FontWeight.Bold)
-                        Text(prod.discount, color = Color(WgcCoreDsColors.homeMarketplaceOrange), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(prod.discount, color = Color(WgcCoreDsColors.orange16), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }

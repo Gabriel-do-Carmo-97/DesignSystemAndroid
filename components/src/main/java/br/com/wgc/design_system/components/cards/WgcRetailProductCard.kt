@@ -29,9 +29,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -60,8 +60,8 @@ fun WgcRetailProductCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(180.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
-                .background(Color(WgcCoreDsColors.retailBackground))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL.dp))
+                .background(Color(WgcCoreDsColors.blueLight39))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -73,13 +73,13 @@ fun WgcRetailProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.blueLight21)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.retailPrimary),
+                        color = Color(WgcCoreDsColors.blue33),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -90,51 +90,51 @@ fun WgcRetailProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs.dp)
-                    .size(WgcCoreDsSpacing.xl.dp)
+                    .padding(WgcCoreDsSpacing.XS.dp)
+                    .size(WgcCoreDsSpacing.XL.dp)
                     .clip(CircleShape)
                     .background(Color.Black.copy(alpha = 0.35f))
             ) {
                 Icon(
                     imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.retailAlertRed) else Color.White,
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red23) else Color.White,
                     modifier = Modifier.size(16.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
         // Título do produto
         Text(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark),
+            color = Color(WgcCoreDsColors.grayDark2),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS.dp))
 
         // Subtítulo / Loja
         Text(
             text = subtitle,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.retailSecondaryText),
+            color = Color(WgcCoreDsColors.gray4),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
         // Preço
         Text(
             text = price,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
     }
 }

@@ -23,7 +23,7 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.expressLogisticsBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue29)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Logística Express • Rastreamento Inteligente", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -32,7 +32,7 @@ fun WgcLoggiTrackTemplate(modifier: Modifier = Modifier) {
             items(ExpressLogisticsMockData.samplePackages) { pkg ->
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                        Text(pkg.trackingCode, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.expressLogisticsBlue))
+                        Text(pkg.trackingCode, fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.blue29))
                         Text(pkg.status, fontWeight = FontWeight.SemiBold)
                         Text("${pkg.destination} • Previsão: ${pkg.eta}", color = Color.Gray, fontSize = 14.sp)
                     }

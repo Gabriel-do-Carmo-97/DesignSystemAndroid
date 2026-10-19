@@ -186,3 +186,19 @@ private fun ReceiptDetailLine(label: String, value: String) {
         Text(text = value, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcPixReceiptScreen Preview", showBackground = true)
+@Composable
+private fun WgcPixReceiptScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcPixReceiptScreen(
+            route = WgcPixReceiptRoute(
+                transactionId = "TX-123456",
+                amount = "R$ 250,00",
+                recipient = "Gabriel do Carmo"
+            ),
+            onBackClick = {},
+            onShareClick = {}
+        )
+    }
+}

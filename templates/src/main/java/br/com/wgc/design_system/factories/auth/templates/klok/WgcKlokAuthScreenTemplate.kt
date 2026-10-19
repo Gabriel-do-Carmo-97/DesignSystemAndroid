@@ -95,11 +95,12 @@ class FakeKlokAuthViewModel : BaseKlokAuthViewModel() {
 /**
  * Template 3 do Figma: Modern Klok Brand Auth (Tela com Estilo Pill, Marca Klok e Botões Sociais em Barra).
  */
+@Suppress("LongMethod")
 @Composable
 fun WgcKlokAuthScreenTemplate(
     modifier: Modifier = Modifier,
     viewModel: BaseKlokAuthViewModel = FakeKlokAuthViewModel(),
-    brandPrimaryColor: Color = Color(WgcCoreDsColors.warning),
+    brandPrimaryColor: Color = Color(WgcCoreDsColors.yellow10),
     onNavigateToForgotPassword: () -> Unit = {},
     headerSlot: (@Composable () -> Unit)? = null,
     switcherSlot: (@Composable () -> Unit)? = null,

@@ -26,9 +26,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card Oficial de Cupom / Voucher do Shoppe (WgcMegaStoreVoucherCard).
@@ -44,14 +44,14 @@ fun WgcMegaStoreVoucherCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
+                .padding(WgcCoreDsSpacing.MD.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -59,37 +59,37 @@ fun WgcMegaStoreVoucherCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimaryLight))
-                            .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = WgcCoreDsSpacing.xxs.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
+                            .background(Color(WgcCoreDsColors.blueLight16))
+                            .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = WgcCoreDsSpacing.XXS.dp)
                     ) {
                         Text(
                             text = "VOUCHER",
-                            color = Color(WgcCoreDsColors.megaStorePrimary),
+                            color = Color(WgcCoreDsColors.blue28),
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }
-                    Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.xs.dp))
+                    Spacer(modifier = Modifier.padding(start = WgcCoreDsSpacing.XS.dp))
                     Text(
                         text = discountTitle,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
                 Text(
                     text = minSpend,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
 
                 Text(
                     text = expiryDate,
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.megaStoreGold),
+                    color = Color(WgcCoreDsColors.orange30),
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -97,10 +97,10 @@ fun WgcMegaStoreVoucherCard(
             TextButton(
                 onClick = onCollectClick,
                 colors = ButtonDefaults.textButtonColors(
-                    containerColor = if (isCollected) Color(WgcCoreDsColors.megaStoreBackground) else Color(WgcCoreDsColors.megaStorePrimary),
-                    contentColor = if (isCollected) Color(WgcCoreDsColors.megaStoreSecondaryText) else Color.White
+                    containerColor = if (isCollected) Color(WgcCoreDsColors.gray100) else Color(WgcCoreDsColors.blue28),
+                    contentColor = if (isCollected) Color(WgcCoreDsColors.gray4) else Color.White
                 ),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp),
                 enabled = !isCollected
             ) {
                 Text(

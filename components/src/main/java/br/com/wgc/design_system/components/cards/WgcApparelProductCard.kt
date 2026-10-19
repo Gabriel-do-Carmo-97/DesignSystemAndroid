@@ -31,9 +31,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -62,8 +62,8 @@ fun WgcApparelProductCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.apparelSurface))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                .background(Color(WgcCoreDsColors.grayLight8))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -75,13 +75,13 @@ fun WgcApparelProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.apparelPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.purpleLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.apparelPrimary),
+                        color = Color(WgcCoreDsColors.purple7),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -92,7 +92,7 @@ fun WgcApparelProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
                     .size(28.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.85f))
@@ -100,25 +100,25 @@ fun WgcApparelProductCard(
                 Icon(
                     imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.apparelAlertRed) else Color(WgcCoreDsColors.apparelDark),
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red24) else Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.size(16.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Nome do produto
         Text(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.apparelDark),
+            color = Color(WgcCoreDsColors.grayDark18),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Preço e Preço Antigo
         Row(
@@ -128,15 +128,15 @@ fun WgcApparelProductCard(
                 text = price,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
 
             if (!originalPrice.isNullOrEmpty()) {
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                 Text(
                     text = originalPrice,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.apparelSecondaryText),
+                    color = Color(WgcCoreDsColors.gray12),
                     textDecoration = TextDecoration.LineThrough
                 )
             }

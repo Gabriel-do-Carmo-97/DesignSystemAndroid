@@ -31,10 +31,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Produto ShopEase com fundo pastel colorido:
@@ -44,12 +44,13 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
  * - Título, subtítulo/categoria, preço atual e preço riscado
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcQuickShopProductCard(
     title: String,
     price: String,
     originalPrice: String? = null,
     discountBadge: String? = "20% off",
-    backgroundColor: Color = Color(WgcCoreDsColors.quickShopCardRed),
+    backgroundColor: Color = Color(WgcCoreDsColors.redLight7),
     isFavorite: Boolean = false,
     onFavoriteToggle: () -> Unit = {},
     onClick: () -> Unit = {},
@@ -58,11 +59,11 @@ fun WgcQuickShopProductCard(
 ) {
     Column(
         modifier = modifier
-            .width(WgcCoreDsSize.s160.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+            .width(WgcCoreDsSize.S160.dp)
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
             .background(backgroundColor)
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp)
+            .padding(WgcCoreDsSpacing.SM12.dp)
     ) {
         // Topo: Badge de desconto à esquerda, Coração à direita
         Row(
@@ -76,8 +77,8 @@ fun WgcQuickShopProductCard(
                         .clip(CircleShape)
                         .background(Color.Black)
                         .padding(
-                            horizontal = WgcCoreDsSpacing.xs8.dp,
-                            vertical = WgcCoreDsSpacing.xxs4.dp
+                            horizontal = WgcCoreDsSpacing.XS8.dp,
+                            vertical = WgcCoreDsSpacing.XXS4.dp
                         ),
                     contentAlignment = Alignment.Center
                 ) {
@@ -89,32 +90,32 @@ fun WgcQuickShopProductCard(
                     )
                 }
             } else {
-                Spacer(modifier = Modifier.size(WgcCoreDsSize.s16.dp))
+                Spacer(modifier = Modifier.size(WgcCoreDsSize.S16.dp))
             }
 
             IconButton(
                 onClick = onFavoriteToggle,
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s32.dp)
+                    .size(WgcCoreDsSize.S32.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.8f))
             ) {
                 Icon(
                     imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                     contentDescription = "Favorite",
-                    tint = if (isFavorite) Color.Red else Color(WgcCoreDsColors.quickShopSecondaryText),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    tint = if (isFavorite) Color.Red else Color(WgcCoreDsColors.gray6),
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Área Central: Imagem / Ícone ilustrativo
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s100.dp),
+                .height(WgcCoreDsSize.S100.dp),
             contentAlignment = Alignment.Center
         ) {
             if (illustrationSlot != null) {
@@ -127,30 +128,30 @@ fun WgcQuickShopProductCard(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Título
         Text(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.quickShopDark),
+            color = Color(WgcCoreDsColors.grayDark19),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Preço Atual e Preço Riscado
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Text(
                 text = price,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                color = Color(WgcCoreDsColors.orange27)
             )
 
             if (originalPrice != null) {
@@ -158,7 +159,7 @@ fun WgcQuickShopProductCard(
                     text = originalPrice,
                     style = MaterialTheme.typography.labelSmall,
                     textDecoration = TextDecoration.LineThrough,
-                    color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
             }
         }
@@ -173,6 +174,6 @@ private fun WgcShopEaseProductCardPreview() {
         price = "$35.00",
         originalPrice = "$50.00",
         discountBadge = "30% off",
-        backgroundColor = Color(WgcCoreDsColors.quickShopCardRed)
+        backgroundColor = Color(WgcCoreDsColors.redLight7)
     )
 }

@@ -70,7 +70,7 @@ fun WgcKutukuOnboardingScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.retailBackground))
+            .background(Color(WgcCoreDsColors.blueLight39))
             .padding(WgcCoreDsSpacing.lg.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
@@ -82,7 +82,7 @@ fun WgcKutukuOnboardingScreen(
             modifier = Modifier
                 .size(300.dp)
                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xxl.dp))
-                .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                .background(Color(WgcCoreDsColors.blueLight21)),
             contentAlignment = Alignment.Center
         ) {
             if (!imageUrl.isNullOrEmpty()) {
@@ -95,7 +95,7 @@ fun WgcKutukuOnboardingScreen(
                 Icon(
                     imageVector = Icons.Filled.ShoppingBag,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailPrimary),
+                    tint = Color(WgcCoreDsColors.blue33),
                     modifier = Modifier.size(80.dp)
                 )
             }
@@ -110,14 +110,14 @@ fun WgcKutukuOnboardingScreen(
                 text = title,
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailDark),
+                color = Color(WgcCoreDsColors.grayDark2),
                 textAlign = TextAlign.Center
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.retailSecondaryText),
+                color = Color(WgcCoreDsColors.gray4),
                 textAlign = TextAlign.Center
             )
         }
@@ -134,7 +134,7 @@ fun WgcKutukuOnboardingScreen(
                     .height(56.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.retailPrimary)
+                    containerColor = Color(WgcCoreDsColors.blue33)
                 )
             ) {
                 Text(
@@ -151,7 +151,7 @@ fun WgcKutukuOnboardingScreen(
                 Text(
                     text = "Already have an account? Sign In",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.retailPrimary),
+                    color = Color(WgcCoreDsColors.blue33),
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -180,7 +180,7 @@ fun WgcKutukuLoginScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.retailSurface))
+            .background(Color(WgcCoreDsColors.white))
             .verticalScroll(rememberScrollState())
             .padding(horizontal = WgcCoreDsSpacing.lg.dp, vertical = WgcCoreDsSpacing.xl.dp),
         horizontalAlignment = Alignment.Start
@@ -191,7 +191,7 @@ fun WgcKutukuLoginScreen(
             text = "Login Account",
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
@@ -199,7 +199,7 @@ fun WgcKutukuLoginScreen(
         Text(
             text = "Please login with registered account",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color(WgcCoreDsColors.retailSecondaryText)
+            color = Color(WgcCoreDsColors.gray4)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -209,7 +209,7 @@ fun WgcKutukuLoginScreen(
             text = "Email or Phone Number",
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
         OutlinedTextField(
@@ -220,14 +220,14 @@ fun WgcKutukuLoginScreen(
                 Icon(
                     imageVector = Icons.Default.Email,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailSecondaryText)
+                    tint = Color(WgcCoreDsColors.gray4)
                 )
             },
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp),
             modifier = Modifier.fillMaxWidth(),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = Color(WgcCoreDsColors.retailPrimary),
-                unfocusedBorderColor = Color(WgcCoreDsColors.retailBorder)
+                focusedBorderColor = Color(WgcCoreDsColors.blue33),
+                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight10)
             ),
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
@@ -240,7 +240,7 @@ fun WgcKutukuLoginScreen(
             text = "Password",
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
         OutlinedTextField(
@@ -251,7 +251,7 @@ fun WgcKutukuLoginScreen(
                 Icon(
                     imageVector = Icons.Default.Lock,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailSecondaryText)
+                    tint = Color(WgcCoreDsColors.gray4)
                 )
             },
             trailingIcon = {
@@ -259,7 +259,7 @@ fun WgcKutukuLoginScreen(
                     Icon(
                         imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
                         contentDescription = "Alternar visibilidade da senha",
-                        tint = Color(WgcCoreDsColors.retailSecondaryText)
+                        tint = Color(WgcCoreDsColors.gray4)
                     )
                 }
             },
@@ -267,8 +267,8 @@ fun WgcKutukuLoginScreen(
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp),
             modifier = Modifier.fillMaxWidth(),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = Color(WgcCoreDsColors.retailPrimary),
-                unfocusedBorderColor = Color(WgcCoreDsColors.retailBorder)
+                focusedBorderColor = Color(WgcCoreDsColors.blue33),
+                unfocusedBorderColor = Color(WgcCoreDsColors.blueLight10)
             ),
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
@@ -281,7 +281,7 @@ fun WgcKutukuLoginScreen(
                 text = "Forgot Password?",
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.retailPrimary),
+                color = Color(WgcCoreDsColors.blue33),
                 modifier = Modifier.clickable(onClick = onForgotPasswordClick)
             )
         }
@@ -296,7 +296,7 @@ fun WgcKutukuLoginScreen(
                 .height(56.dp),
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(WgcCoreDsColors.retailPrimary)
+                containerColor = Color(WgcCoreDsColors.blue33)
             )
         ) {
             Text(
@@ -312,7 +312,7 @@ fun WgcKutukuLoginScreen(
         Text(
             text = "Or using other method",
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.retailSecondaryText),
+            color = Color(WgcCoreDsColors.gray4),
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center
         )
@@ -327,7 +327,7 @@ fun WgcKutukuLoginScreen(
                 .height(52.dp),
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = Color(WgcCoreDsColors.retailDark)
+                contentColor = Color(WgcCoreDsColors.grayDark2)
             )
         ) {
             Text("Sign In with Google", fontWeight = FontWeight.SemiBold)
@@ -342,7 +342,7 @@ fun WgcKutukuLoginScreen(
                 .height(52.dp),
             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
             colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = Color(WgcCoreDsColors.retailDark)
+                contentColor = Color(WgcCoreDsColors.grayDark2)
             )
         ) {
             Text("Sign In with Facebook", fontWeight = FontWeight.SemiBold)
@@ -358,13 +358,13 @@ fun WgcKutukuLoginScreen(
             Text(
                 text = "Don't have an account? ",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.retailSecondaryText)
+                color = Color(WgcCoreDsColors.gray4)
             )
             Text(
                 text = "Sign Up",
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailPrimary),
+                color = Color(WgcCoreDsColors.blue33),
                 modifier = Modifier.clickable(onClick = onSignUpClick)
             )
         }

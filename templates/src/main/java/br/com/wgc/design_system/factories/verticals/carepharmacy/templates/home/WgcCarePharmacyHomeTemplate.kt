@@ -67,7 +67,7 @@ fun WgcDrogasilHomeTemplate(
                     text = "Ofertas Vizinhas da Semana",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark15)
                 )
             }
 
@@ -84,19 +84,19 @@ private fun DrogasilHeader() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(WgcCoreDsColors.carePharmacyRed), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+                .background(Color(WgcCoreDsColors.red12), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                 .padding(WgcCoreDsSpacing.md16.dp)
         ) {
             Column {
                 Text(
                     text = "Farmácia Cuidados • Saúde da Família",
-                    color = Color(WgcCoreDsColors.carePharmacySurface),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = "Entrega grátis e expressa pelo farmacêutico vizinho",
-                    color = Color(WgcCoreDsColors.carePharmacySurface).copy(alpha = 0.85f),
+                    color = Color(WgcCoreDsColors.white).copy(alpha = 0.85f),
                     fontSize = 10.sp
                 )
             }
@@ -109,7 +109,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carePharmacySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Row(
@@ -120,26 +120,26 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                 Text(
                     text = offer.discountTag,
                     fontSize = 9.sp,
-                    color = Color(WgcCoreDsColors.carePharmacyRed),
+                    color = Color(WgcCoreDsColors.red12),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offer.title,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark15)
                 )
                 Text(
                     text = offer.laboratory,
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.carePharmacyTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (offer.originalPrice != null) {
                         Text(
                             text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.originalPrice),
                             fontSize = 10.sp,
-                            color = Color(WgcCoreDsColors.carePharmacyTextSecondary),
+                            color = Color(WgcCoreDsColors.gray5),
                             textDecoration = TextDecoration.LineThrough
                         )
                         Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
@@ -148,7 +148,7 @@ private fun DrogasilOfferCard(offer: DrogasilOffer, onBuy: () -> Unit) {
                         text = "R$ " + String.format(Locale.getDefault(), "%.2f", offer.price),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.carePharmacyRed)
+                        color = Color(WgcCoreDsColors.red12)
                     )
                 }
             }

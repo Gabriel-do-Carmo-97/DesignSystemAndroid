@@ -34,19 +34,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Item de status de pedido do Shoppe.
- */
-data class ShoppeOrderStatusItem(
-    val title: String,
-    val icon: ImageVector,
-    val badgeCount: Int = 0,
-    val onClick: () -> Unit = {}
-)
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Linha de Status de Pedido Oficial do Shoppe (WgcMegaStoreOrderStatusRow).
@@ -65,14 +55,14 @@ fun WgcMegaStoreOrderStatusRow(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = WgcCoreDsSpacing.md.dp, horizontal = WgcCoreDsSpacing.xs.dp),
+                .padding(vertical = WgcCoreDsSpacing.MD.dp, horizontal = WgcCoreDsSpacing.XS.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -82,13 +72,13 @@ fun WgcMegaStoreOrderStatusRow(
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier
                         .clickable(onClick = item.onClick)
-                        .padding(WgcCoreDsSpacing.xxs.dp)
+                        .padding(WgcCoreDsSpacing.XXS.dp)
                 ) {
                     Box {
                         Icon(
                             imageVector = item.icon,
                             contentDescription = item.title,
-                            tint = Color(WgcCoreDsColors.megaStoreDark),
+                            tint = Color(WgcCoreDsColors.grayDark14),
                             modifier = Modifier.size(26.dp)
                         )
                         if (item.badgeCount > 0) {
@@ -97,7 +87,7 @@ fun WgcMegaStoreOrderStatusRow(
                                     .align(Alignment.TopEnd)
                                     .size(16.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.megaStorePrimary)),
+                                    .background(Color(WgcCoreDsColors.blue28)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
@@ -110,13 +100,13 @@ fun WgcMegaStoreOrderStatusRow(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                     Text(
                         text = item.title,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color(WgcCoreDsColors.megaStoreDark)
+                        color = Color(WgcCoreDsColors.grayDark14)
                     )
                 }
             }

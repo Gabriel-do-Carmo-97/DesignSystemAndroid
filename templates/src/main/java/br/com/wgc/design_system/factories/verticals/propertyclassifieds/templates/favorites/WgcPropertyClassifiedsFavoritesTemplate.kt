@@ -76,14 +76,14 @@ fun WgcZapFavoritesTemplate(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                    .background(Color(WgcCoreDsColors.white))
                     .padding(WgcCoreDsSpacing.md16.dp)
             ) {
                 Text(
                     text = "Favoritos & Alertas",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                    color = Color(WgcCoreDsColors.blueDark10)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -93,7 +93,7 @@ fun WgcZapFavoritesTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                        .background(Color(WgcCoreDsColors.blueLight37))
                         .padding(WgcCoreDsSpacing.xxs4.dp)
                 ) {
                     Box(
@@ -101,7 +101,7 @@ fun WgcZapFavoritesTemplate(
                             .weight(1f)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                             .background(
-                                if (selectedTab == 0) Color(WgcCoreDsColors.propertyClassifiedsPrimary) else Color.Transparent
+                                if (selectedTab == 0) Color(WgcCoreDsColors.blueDark31) else Color.Transparent
                             )
                             .clickable { selectedTab = 0 }
                             .padding(vertical = WgcCoreDsSpacing.xs8.dp),
@@ -111,7 +111,7 @@ fun WgcZapFavoritesTemplate(
                             text = "Imóveis Salvos (${favoriteProperties.size})",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Medium,
-                            color = if (selectedTab == 0) Color.White else Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = if (selectedTab == 0) Color.White else Color(WgcCoreDsColors.blue22)
                         )
                     }
 
@@ -120,7 +120,7 @@ fun WgcZapFavoritesTemplate(
                             .weight(1f)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                             .background(
-                                if (selectedTab == 1) Color(WgcCoreDsColors.propertyClassifiedsPrimary) else Color.Transparent
+                                if (selectedTab == 1) Color(WgcCoreDsColors.blueDark31) else Color.Transparent
                             )
                             .clickable { selectedTab = 1 }
                             .padding(vertical = WgcCoreDsSpacing.xs8.dp),
@@ -130,7 +130,7 @@ fun WgcZapFavoritesTemplate(
                             text = "Alertas de Busca (${searchAlerts.size})",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Medium,
-                            color = if (selectedTab == 1) Color.White else Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = if (selectedTab == 1) Color.White else Color(WgcCoreDsColors.blue22)
                         )
                     }
                 }
@@ -150,7 +150,7 @@ fun WgcZapFavoritesTemplate(
                         Icon(
                             imageVector = Icons.Default.FavoriteBorder,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s48.dp)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -158,13 +158,13 @@ fun WgcZapFavoritesTemplate(
                             text = "Nenhum imóvel favoritado ainda",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                            color = Color(WgcCoreDsColors.blueDark10)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                         Text(
                             text = "Toque no coração dos anúncios para salvar seus imóveis prediletos",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                 }
@@ -219,7 +219,7 @@ fun WgcZapFavoritesTemplate(
                     Card(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsSurface)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                     ) {
                         Column(
@@ -240,13 +240,13 @@ fun WgcZapFavoritesTemplate(
                                         modifier = Modifier
                                             .size(WgcCoreDsSize.s40.dp)
                                             .clip(CircleShape)
-                                            .background(Color(WgcCoreDsColors.propertyClassifiedsPrimaryLight)),
+                                            .background(Color(WgcCoreDsColors.blueLight12)),
                                         contentAlignment = Alignment.Center
                                     ) {
                                         Icon(
                                             imageVector = Icons.Default.NotificationsActive,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
+                                            tint = Color(WgcCoreDsColors.blueDark31),
                                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                         )
                                     }
@@ -258,13 +258,13 @@ fun WgcZapFavoritesTemplate(
                                             text = alert.title,
                                             style = MaterialTheme.typography.titleSmall,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                            color = Color(WgcCoreDsColors.blueDark10)
                                         )
                                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                                         Text(
                                             text = alert.criteria,
                                             style = MaterialTheme.typography.bodySmall,
-                                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                            color = Color(WgcCoreDsColors.blue22)
                                         )
                                     }
                                 }
@@ -273,7 +273,7 @@ fun WgcZapFavoritesTemplate(
                                     Icon(
                                         imageVector = Icons.Default.DeleteOutline,
                                         contentDescription = "Excluir alerta",
-                                        tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
+                                        tint = Color(WgcCoreDsColors.blue22),
                                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                     )
                                 }
@@ -285,7 +285,7 @@ fun WgcZapFavoritesTemplate(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsBackground))
+                                    .background(Color(WgcCoreDsColors.blueLight37))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.sm12.dp,
                                         vertical = WgcCoreDsSpacing.xs8.dp
@@ -297,14 +297,14 @@ fun WgcZapFavoritesTemplate(
                                     text = "${alert.newPropertiesCount} novos imóveis nesta semana",
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                    color = Color(WgcCoreDsColors.blueDark31)
                                 )
 
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text(
                                         text = "Notificações",
                                         style = MaterialTheme.typography.labelSmall,
-                                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                        color = Color(WgcCoreDsColors.blue22)
                                     )
                                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                     Switch(
@@ -312,7 +312,7 @@ fun WgcZapFavoritesTemplate(
                                         onCheckedChange = { onAlertToggle(alert, it) },
                                         colors = SwitchDefaults.colors(
                                             checkedThumbColor = Color.White,
-                                            checkedTrackColor = Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                                            checkedTrackColor = Color(WgcCoreDsColors.orange17)
                                         )
                                     )
                                 }

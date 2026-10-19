@@ -67,9 +67,9 @@ fun WgcPdaClienteMaisProfileTemplate(
                 ) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(userProfile.name, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
-                        Text(userProfile.tier, color = Color(WgcCoreDsColors.premiumGroceryGoldDark), fontWeight = FontWeight.SemiBold)
+                        Text(userProfile.tier, color = Color(WgcCoreDsColors.orange4), fontWeight = FontWeight.SemiBold)
                         Text("CPF: ${userProfile.cpfMasked}", color = Color.Gray)
-                        Text("Stillo Coins: ${userProfile.stilloCoins}", color = Color(WgcCoreDsColors.premiumGroceryGreen), fontWeight = FontWeight.Bold)
+                        Text("Stillo Coins: ${userProfile.stilloCoins}", color = Color(WgcCoreDsColors.greenDark7), fontWeight = FontWeight.Bold)
                     }
                 }
             }

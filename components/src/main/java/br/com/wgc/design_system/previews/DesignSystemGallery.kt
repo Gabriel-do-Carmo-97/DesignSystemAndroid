@@ -12,7 +12,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.alert.AlertType
 import br.com.wgc.design_system.components.alert.WgcAlert
@@ -27,7 +26,6 @@ import br.com.wgc.design_system.components.buttons.WgcSegmentedButton
 import br.com.wgc.design_system.components.cards.WgcMerchantListingCard
 import br.com.wgc.design_system.components.cards.WgcPromotionalProductCard
 import br.com.wgc.design_system.components.chip.WgcChip
-import br.com.wgc.design_system.components.dialogs.WgcAlertDialog
 import br.com.wgc.design_system.components.feedback.WgcRatingBar
 import br.com.wgc.design_system.components.fields.SimpleTextField
 import br.com.wgc.design_system.components.inputs.WgcQuantityStepper
@@ -46,6 +44,7 @@ import br.com.wgc.design_system.components.story.StoryState
 import br.com.wgc.design_system.components.story.StoryTrayItem
 import br.com.wgc.design_system.components.story.WgcStoryTray
 import br.com.wgc.design_system.components.tooltip.WgcTooltip
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Galeria Centralizada e Completa (Master Gallery Sheet) de Todos os Componentes do Design System.
@@ -86,8 +85,8 @@ fun DesignSystemGalleryScreen(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.lg24.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.LG24.dp)
         ) {
             Text(
                 text = "🎨 WGC Design System Master Gallery Sheet",
@@ -266,8 +265,8 @@ fun GallerySection(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Text(
                 text = title,

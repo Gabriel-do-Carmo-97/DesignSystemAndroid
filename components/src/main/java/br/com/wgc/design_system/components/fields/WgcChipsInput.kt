@@ -28,7 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -65,7 +65,7 @@ fun WgcChipsInput(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
     ) {
         OutlinedTextField(
             value = textInput,
@@ -86,8 +86,8 @@ fun WgcChipsInput(
         if (chips.isNotEmpty()) {
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS.dp)
             ) {
                 chips.forEach { chip ->
                     InputChip(
@@ -113,7 +113,7 @@ fun WgcChipsInput(
 @Composable
 private fun WgcChipsInputPreview() {
     WgcTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcChipsInput(
                 chips = listOf("Jetpack Compose", "Kotlin", "Android"),
                 onChipAdded = {},
@@ -127,7 +127,7 @@ private fun WgcChipsInputPreview() {
 @Composable
 private fun WgcChipsInputEmptyPreview() {
     WgcTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcChipsInput(
                 chips = emptyList(),
                 onChipAdded = {},

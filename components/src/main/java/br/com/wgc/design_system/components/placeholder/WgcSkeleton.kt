@@ -24,8 +24,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.shimmer.shimmerEffect
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Elemento atômico de esqueleto para estados de carregamento (WgcSkeleton).
@@ -38,7 +38,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 fun WgcSkeleton(
     modifier: Modifier = Modifier,
     shape: WgcSkeletonShape = WgcSkeletonShape.ROUNDED,
-    cornerRadius: Dp = WgcCoreDsBorderRadius.sm.dp
+    cornerRadius: Dp = WgcCoreDsBorderRadius.SM.dp
 ) {
     val clipShape: Shape = when (shape) {
         WgcSkeletonShape.BOX -> RoundedCornerShape(0.dp)
@@ -64,24 +64,24 @@ fun WgcSkeletonCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcSkeleton(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(140.dp),
                 shape = WgcSkeletonShape.ROUNDED,
-                cornerRadius = WgcCoreDsBorderRadius.sm.dp
+                cornerRadius = WgcCoreDsBorderRadius.SM.dp
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM.dp))
             WgcSkeleton(
                 modifier = Modifier
                     .fillMaxWidth(0.7f)
                     .height(20.dp)
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
             WgcSkeleton(
                 modifier = Modifier
                     .fillMaxWidth(0.4f)
@@ -102,21 +102,21 @@ fun WgcSkeletonListItem(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = WgcCoreDsSpacing.xs.dp),
+            .padding(vertical = WgcCoreDsSpacing.XS.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         WgcSkeleton(
             modifier = Modifier.size(48.dp),
             shape = WgcSkeletonShape.CIRCLE
         )
-        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.md.dp))
+        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.MD.dp))
         Column(modifier = Modifier.weight(1f)) {
             WgcSkeleton(
                 modifier = Modifier
                     .fillMaxWidth(0.6f)
                     .height(16.dp)
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
             WgcSkeleton(
                 modifier = Modifier
                     .fillMaxWidth(0.9f)
@@ -137,7 +137,7 @@ fun WgcSkeletonProfile(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.lg.dp),
+            .padding(WgcCoreDsSpacing.LG.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -145,13 +145,13 @@ fun WgcSkeletonProfile(
             modifier = Modifier.size(96.dp),
             shape = WgcSkeletonShape.CIRCLE
         )
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
         WgcSkeleton(
             modifier = Modifier
                 .fillMaxWidth(0.5f)
                 .height(24.dp)
         )
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
         WgcSkeleton(
             modifier = Modifier
                 .fillMaxWidth(0.35f)
@@ -163,11 +163,11 @@ fun WgcSkeletonProfile(
 @Preview(name = "Skeleton Variants Preview", showBackground = true)
 @Composable
 private fun WgcSkeletonPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcSkeletonProfile()
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
         WgcSkeletonListItem()
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
         WgcSkeletonCard()
     }
 }

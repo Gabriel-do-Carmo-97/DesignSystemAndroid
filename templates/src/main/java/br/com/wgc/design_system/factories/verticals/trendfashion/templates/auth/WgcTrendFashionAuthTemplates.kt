@@ -73,7 +73,7 @@ fun WgcStylishLoginScreenTemplate(
             Text(
                 text = "Welcome\nBack!",
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -104,7 +104,7 @@ fun WgcStylishLoginScreenTemplate(
             Text(
                 text = "Forgot Password?",
                 style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionPink),
+                color = Color(WgcCoreDsColors.pink4),
                 modifier = Modifier
                     .align(Alignment.End)
                     .clickable(onClick = onForgotPasswordClick)
@@ -124,7 +124,7 @@ fun WgcStylishLoginScreenTemplate(
             Text(
                 text = "- OR Continue with -",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary),
+                color = Color(WgcCoreDsColors.gray6),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -147,12 +147,12 @@ fun WgcStylishLoginScreenTemplate(
                 Text(
                     text = "Create An Account ",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.textSecondary)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
                 Text(
                     text = "Sign Up",
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionPink),
+                    color = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier.clickable(onClick = onSignUpClick)
                 )
             }
@@ -199,7 +199,7 @@ fun WgcStylishRegisterScreenTemplate(
             Text(
                 text = "Create an\naccount",
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -242,7 +242,7 @@ fun WgcStylishRegisterScreenTemplate(
             Text(
                 text = "By clicking the Register button, you agree to the public offer",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -258,7 +258,7 @@ fun WgcStylishRegisterScreenTemplate(
             Text(
                 text = "- OR Continue with -",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary),
+                color = Color(WgcCoreDsColors.gray6),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -281,12 +281,12 @@ fun WgcStylishRegisterScreenTemplate(
                 Text(
                     text = "I Already Have an Account ",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.textSecondary)
+                    color = Color(WgcCoreDsColors.gray6)
                 )
                 Text(
                     text = "Login",
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionPink),
+                    color = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier.clickable(onClick = onSignInClick)
                 )
             }
@@ -324,7 +324,7 @@ fun WgcStylishForgotPasswordScreenTemplate(
             Text(
                 text = "Forgot\npassword?",
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionDark)
+                color = Color(WgcCoreDsColors.blueDark19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -343,7 +343,7 @@ fun WgcStylishForgotPasswordScreenTemplate(
             Text(
                 text = "* We will send you a message to set or reset your new password",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.textSecondary)
+                color = Color(WgcCoreDsColors.gray6)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xl.dp))
@@ -359,7 +359,7 @@ fun WgcStylishForgotPasswordScreenTemplate(
             Text(
                 text = "Back to Login",
                 style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                color = Color(WgcCoreDsColors.trendFashionPink),
+                color = Color(WgcCoreDsColors.pink4),
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()

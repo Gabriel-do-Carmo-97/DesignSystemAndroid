@@ -25,10 +25,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Átomo / Molécula WgcFreshGroceryCategoryItem:
@@ -44,27 +44,27 @@ fun WgcFreshGroceryCategoryItem(
     modifier: Modifier = Modifier
 ) {
     val bgColor = if (isHighlighted) {
-        Color(WgcCoreDsColors.megaStorerPrimary)
+        Color(WgcCoreDsColors.green6)
     } else {
-        Color(WgcCoreDsColors.megaStorerSurface)
+        Color(WgcCoreDsColors.greenLight16)
     }
 
     val iconColor = if (isHighlighted) {
         Color.White
     } else {
-        Color(WgcCoreDsColors.megaStorerPrimary)
+        Color(WgcCoreDsColors.green6)
     }
 
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xxs4.dp),
+            .padding(WgcCoreDsSpacing.XXS4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s48.dp)
+                .size(WgcCoreDsSize.S48.dp)
                 .clip(CircleShape)
                 .background(bgColor),
             contentAlignment = Alignment.Center
@@ -73,17 +73,17 @@ fun WgcFreshGroceryCategoryItem(
                 imageVector = icon,
                 contentDescription = title,
                 tint = iconColor,
-                modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                modifier = Modifier.size(WgcCoreDsSize.S24.dp)
             )
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         Text(
             text = title,
             style = MaterialTheme.typography.labelSmall,
             fontWeight = if (isHighlighted) FontWeight.Bold else FontWeight.Medium,
-            color = if (isHighlighted) Color(WgcCoreDsColors.megaStorerPrimary) else Color(WgcCoreDsColors.megaStorerDark),
+            color = if (isHighlighted) Color(WgcCoreDsColors.green6) else Color(WgcCoreDsColors.greenDark4),
             textAlign = TextAlign.Center,
             maxLines = 1
         )

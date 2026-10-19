@@ -35,20 +35,10 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Raio geográfico de busca do Zap Imóveis.
- */
-enum class WgcZapSearchRadius(val label: String) {
-    EXACT("Exato"),
-    RADIUS_2KM("+2 km"),
-    RADIUS_5KM("+5 km"),
-    RADIUS_10KM("+10 km")
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Barra de busca com geolocalização e raio geográfico do Zap Imóveis.
@@ -70,45 +60,45 @@ fun WgcPropertyClassifiedsSearchBar(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
+                .background(Color(WgcCoreDsColors.white))
                 .border(
-                    width = WgcCoreDsSpacing.xxxs2.dp,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsBorder),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp)
+                    width = WgcCoreDsSpacing.XXXS2.dp,
+                    color = Color(WgcCoreDsColors.blueLight8),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp)
                 )
                 .padding(
-                    horizontal = WgcCoreDsSpacing.sm12.dp,
-                    vertical = WgcCoreDsSpacing.xs8.dp
+                    horizontal = WgcCoreDsSpacing.SM12.dp,
+                    vertical = WgcCoreDsSpacing.XS8.dp
                 ),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Buscar imóveis",
-                tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
-                modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                tint = Color(WgcCoreDsColors.blueDark31),
+                modifier = Modifier.size(WgcCoreDsSize.S20.dp)
             )
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
 
             BasicTextField(
                 value = query,
                 onValueChange = onQueryChange,
                 modifier = Modifier.weight(1f),
                 textStyle = TextStyle(
-                    color = Color(WgcCoreDsColors.propertyClassifiedsDark),
+                    color = Color(WgcCoreDsColors.blueDark10),
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     fontWeight = FontWeight.Medium
                 ),
-                cursorBrush = SolidColor(Color(WgcCoreDsColors.propertyClassifiedsPrimary)),
+                cursorBrush = SolidColor(Color(WgcCoreDsColors.blueDark31)),
                 singleLine = true,
                 decorationBox = { innerTextField ->
                     if (query.isEmpty()) {
                         Text(
                             text = placeholderText,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                     innerTextField()
@@ -118,41 +108,41 @@ fun WgcPropertyClassifiedsSearchBar(
             if (query.isNotEmpty()) {
                 IconButton(
                     onClick = onClearQuery,
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Limpar busca",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        tint = Color(WgcCoreDsColors.blue22),
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
                 }
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
             }
 
             // Botão de Filtros com Badge
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsPrimaryLight))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                    .background(Color(WgcCoreDsColors.blueLight12))
                     .clickable(onClick = onFilterClick)
-                    .padding(WgcCoreDsSpacing.xs8.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
                         imageVector = Icons.Default.Tune,
                         contentDescription = "Abrir filtros",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsPrimary),
-                        modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                        tint = Color(WgcCoreDsColors.blueDark31),
+                        modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                     )
 
                     if (activeFiltersCount > 0) {
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                         Box(
                             modifier = Modifier
-                                .size(WgcCoreDsSize.s18.dp)
+                                .size(WgcCoreDsSize.S18.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyClassifiedsOrange)),
+                                .background(Color(WgcCoreDsColors.orange17)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -167,59 +157,59 @@ fun WgcPropertyClassifiedsSearchBar(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Seletor de Raio Geográfico em Pílulas
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.NearMe,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
-                modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                tint = Color(WgcCoreDsColors.blue17),
+                modifier = Modifier.size(WgcCoreDsSize.S14.dp)
             )
             Text(
                 text = "Raio:",
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                color = Color(WgcCoreDsColors.blue22)
             )
 
             WgcZapSearchRadius.entries.forEach { radius ->
                 val isSelected = selectedRadius == radius
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(
                             if (isSelected) {
-                                Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                Color(WgcCoreDsColors.blueDark31)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsBackground)
+                                Color(WgcCoreDsColors.blueLight37)
                             }
                         )
                         .border(
-                            width = WgcCoreDsSpacing.xxxs2.dp,
+                            width = WgcCoreDsSpacing.XXXS2.dp,
                             color = if (isSelected) {
-                                Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                                Color(WgcCoreDsColors.blueDark31)
                             } else {
-                                Color(WgcCoreDsColors.propertyClassifiedsBorder)
+                                Color(WgcCoreDsColors.blueLight8)
                             },
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)
                         )
                         .clickable { onRadiusSelect(radius) }
                         .padding(
-                            horizontal = WgcCoreDsSpacing.xs8.dp,
-                            vertical = WgcCoreDsSpacing.xxs4.dp
+                            horizontal = WgcCoreDsSpacing.XS8.dp,
+                            vertical = WgcCoreDsSpacing.XXS4.dp
                         )
                 ) {
                     Text(
                         text = radius.label,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                        color = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = if (isSelected) Color.White else Color(WgcCoreDsColors.blue22)
                     )
                 }
             }
@@ -231,7 +221,7 @@ fun WgcPropertyClassifiedsSearchBar(
 @Composable
 private fun WgcZapSearchBarPreview() {
     MaterialTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcPropertyClassifiedsSearchBar(
                 query = "Pinheiros, São Paulo",
                 onQueryChange = {},

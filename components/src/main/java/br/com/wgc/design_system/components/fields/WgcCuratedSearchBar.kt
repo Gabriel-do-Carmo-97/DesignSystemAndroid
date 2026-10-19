@@ -24,10 +24,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Campo de busca oficial do ecossistema Tassel (WgcCuratedSearchBar).
@@ -44,34 +44,34 @@ fun WgcCuratedSearchBar(
     Row(
         modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         OutlinedTextField(
             value = query,
             onValueChange = onQueryChange,
             modifier = Modifier
                 .weight(1f)
-                .height(WgcCoreDsSize.s48.dp),
+                .height(WgcCoreDsSize.S48.dp),
             placeholder = {
                 Text(
                     text = placeholderText,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                    color = Color(WgcCoreDsColors.gray10)
                 )
             },
             trailingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = "Buscar",
-                    tint = Color(WgcCoreDsColors.curatedMarketSecondaryText),
-                    modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                    tint = Color(WgcCoreDsColors.gray10),
+                    modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                 )
             },
             singleLine = true,
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
-                unfocusedContainerColor = Color(WgcCoreDsColors.curatedMarketSurface),
+                focusedContainerColor = Color(WgcCoreDsColors.blueLight26),
+                unfocusedContainerColor = Color(WgcCoreDsColors.blueLight26),
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
             )
@@ -79,17 +79,17 @@ fun WgcCuratedSearchBar(
 
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s48.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                .size(WgcCoreDsSize.S48.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                .background(Color(WgcCoreDsColors.blueLight26))
                 .clickable(onClick = onFilterClick),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Default.Tune,
                 contentDescription = "Filtros",
-                tint = Color(WgcCoreDsColors.curatedMarketDark),
-                modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                tint = Color(WgcCoreDsColors.grayDark9),
+                modifier = Modifier.size(WgcCoreDsSize.S20.dp)
             )
         }
     }

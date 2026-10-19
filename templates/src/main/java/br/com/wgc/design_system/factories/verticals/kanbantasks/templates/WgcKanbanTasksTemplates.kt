@@ -23,7 +23,7 @@ fun WgcTrelloBoardTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.kanbanTasksBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue14)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Kanban • Quadro de Engenharia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

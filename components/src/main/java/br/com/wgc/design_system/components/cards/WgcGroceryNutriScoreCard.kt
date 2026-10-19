@@ -29,11 +29,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
@@ -51,31 +51,31 @@ fun WgcGroceryNutriScoreCard(
     onClick: () -> Unit = {}
 ) {
     val scores = listOf(
-        Pair("A", Color(WgcCoreDsColors.groceryNutriScoreA)),
-        Pair("B", Color(WgcCoreDsColors.groceryNutriScoreB)),
-        Pair("C", Color(WgcCoreDsColors.groceryNutriScoreC)),
-        Pair("D", Color(WgcCoreDsColors.groceryNutriScoreD)),
-        Pair("E", Color(WgcCoreDsColors.groceryNutriScoreE))
+        Pair("A", Color(WgcCoreDsColors.green2)),
+        Pair("B", Color(WgcCoreDsColors.green24)),
+        Pair("C", Color(WgcCoreDsColors.yellow9)),
+        Pair("D", Color(WgcCoreDsColors.orange11)),
+        Pair("E", Color(WgcCoreDsColors.orange12))
     )
 
     Card(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.grocerySurface)
+            containerColor = Color(WgcCoreDsColors.white)
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = WgcCoreDsElevation.level1.dp
+            defaultElevation = WgcCoreDsElevation.LEVEL1.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBorder)
+            width = WgcCoreDsSize.S1.dp,
+            color = Color(WgcCoreDsColors.blueLight4)
         )
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.sm12.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -84,17 +84,17 @@ fun WgcGroceryNutriScoreCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.Eco,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.groceryNutriScoreA),
-                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                        tint = Color(WgcCoreDsColors.green2),
+                        modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                     )
                     Text(
                         text = "PROGRAMA ACT FOR FOOD • NUTRI-SCORE",
-                        color = Color(WgcCoreDsColors.groceryBlueDark),
+                        color = Color(WgcCoreDsColors.blueDark14),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Black
                     )
@@ -103,20 +103,20 @@ fun WgcGroceryNutriScoreCard(
                 Icon(
                     imageVector = Icons.Default.Info,
                     contentDescription = "Mais informações",
-                    tint = Color(WgcCoreDsColors.groceryTextSecondary),
-                    modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                    tint = Color(WgcCoreDsColors.gray5),
+                    modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             // Régua Nutri-Score (A a E)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                    .background(Color(WgcCoreDsColors.groceryBackground))
-                    .padding(WgcCoreDsSpacing.xs8.dp),
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
+                    .background(Color(WgcCoreDsColors.blueLight30))
+                    .padding(WgcCoreDsSpacing.XS8.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -124,13 +124,13 @@ fun WgcGroceryNutriScoreCard(
                     val isSelected = letter.equals(currentScore, ignoreCase = true)
                     Box(
                         modifier = Modifier
-                            .size(if (isSelected) WgcCoreDsSize.s36.dp else WgcCoreDsSize.s28.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .size(if (isSelected) WgcCoreDsSize.S36.dp else WgcCoreDsSize.S28.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(if (isSelected) color else color.copy(alpha = 0.35f))
                             .border(
-                                width = if (isSelected) WgcCoreDsSize.s2.dp else WgcCoreDsSize.s0.dp,
+                                width = if (isSelected) WgcCoreDsSize.S2.dp else WgcCoreDsSize.S0.dp,
                                 color = if (isSelected) Color.White else Color.Transparent,
-                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)
                             ),
                         contentAlignment = Alignment.Center
                     ) {
@@ -144,29 +144,29 @@ fun WgcGroceryNutriScoreCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Text(
                 text = explanation,
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 style = MaterialTheme.typography.bodySmall
             )
 
             if (bonusCoins > 0 && currentScore.uppercase(Locale.ROOT) in listOf("A", "B")) {
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Text(
                         text = "⭐ Escolha saudável:",
-                        color = Color(WgcCoreDsColors.groceryNutriScoreA),
+                        color = Color(WgcCoreDsColors.green2),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "+$bonusCoins Moedas no Meu Supermercado",
-                        color = Color(WgcCoreDsColors.groceryBlue),
+                        color = Color(WgcCoreDsColors.blueDark32),
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold
                     )

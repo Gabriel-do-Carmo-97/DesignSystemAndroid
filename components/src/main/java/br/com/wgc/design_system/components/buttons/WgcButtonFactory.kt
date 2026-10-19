@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Fábrica Corporativa Unificada para criação de botões no ecossistema WGC (WgcButtonFactory).
@@ -162,8 +162,8 @@ object WgcButtonFactory {
 private fun WgcButtonFactoryPreview() {
     MaterialTheme {
         androidx.compose.foundation.layout.Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             WgcButtonFactory.Primary(
                 text = "Confirmar Pagamento",

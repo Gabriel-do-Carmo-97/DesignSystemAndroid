@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Fábrica universal de BottomSheets com sensible defaults e slots opcionais.
@@ -44,15 +44,15 @@ object WgcBottomSheetFactory {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(
-                        start = WgcCoreDsSpacing.md.dp,
-                        end = WgcCoreDsSpacing.md.dp,
-                        bottom = WgcCoreDsSpacing.xl.dp
+                        start = WgcCoreDsSpacing.MD.dp,
+                        end = WgcCoreDsSpacing.MD.dp,
+                        bottom = WgcCoreDsSpacing.XL.dp
                     )
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(bottom = WgcCoreDsSpacing.md.dp),
+                        .padding(bottom = WgcCoreDsSpacing.MD.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -89,7 +89,7 @@ object WgcBottomSheetFactory {
         ) {
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp)
             ) {
                 Text(
                     text = message,
@@ -98,7 +98,7 @@ object WgcBottomSheetFactory {
                 )
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
                 ) {
                     WgcClassicButton(
                         text = dismissLabel,

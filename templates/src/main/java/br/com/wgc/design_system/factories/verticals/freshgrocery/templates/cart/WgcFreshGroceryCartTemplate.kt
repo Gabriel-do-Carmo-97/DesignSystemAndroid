@@ -99,13 +99,13 @@ fun WgcFreshGroceryCartTemplate(
                             Text(
                                 text = "Total",
                                 style = MaterialTheme.typography.titleMedium,
-                                color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                                color = Color(WgcCoreDsColors.gray9)
                             )
                             Text(
                                 text = "$114.00",
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.megaStorerDark)
+                                color = Color(WgcCoreDsColors.greenDark4)
                             )
                         }
 
@@ -114,7 +114,7 @@ fun WgcFreshGroceryCartTemplate(
                         Button(
                             onClick = onCheckoutClick,
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.megaStorerPrimary),
+                                containerColor = Color(WgcCoreDsColors.green6),
                                 contentColor = Color.White
                             ),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
@@ -153,7 +153,7 @@ fun WgcFreshGroceryCartTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Back",
-                        tint = Color(WgcCoreDsColors.megaStorerDark)
+                        tint = Color(WgcCoreDsColors.greenDark4)
                     )
                 }
 
@@ -161,7 +161,7 @@ fun WgcFreshGroceryCartTemplate(
                     text = "My Cart",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
                 Spacer(modifier = Modifier.size(WgcCoreDsSize.s40.dp))
@@ -184,7 +184,7 @@ fun WgcFreshGroceryCartTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s72.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.megaStorerSurface)),
+                                .background(Color(WgcCoreDsColors.greenLight16)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(text = "👕", style = MaterialTheme.typography.titleLarge)
@@ -197,7 +197,7 @@ fun WgcFreshGroceryCartTemplate(
                                 text = item.product.title,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.megaStorerDark),
+                                color = Color(WgcCoreDsColors.greenDark4),
                                 maxLines = 1
                             )
 
@@ -206,7 +206,7 @@ fun WgcFreshGroceryCartTemplate(
                             Text(
                                 text = "${item.selectedColor} | Size ${item.selectedSize}",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                                color = Color(WgcCoreDsColors.gray9)
                             )
 
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -215,7 +215,7 @@ fun WgcFreshGroceryCartTemplate(
                                 text = item.product.price,
                                 style = MaterialTheme.typography.labelLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.megaStorerPrimary)
+                                color = Color(WgcCoreDsColors.green6)
                             )
                         }
 
@@ -228,14 +228,14 @@ fun WgcFreshGroceryCartTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s28.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.megaStorerSurface))
+                                    .background(Color(WgcCoreDsColors.greenLight16))
                                     .clickable { onDecrement(item) },
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.Remove,
                                     contentDescription = "Decrement",
-                                    tint = Color(WgcCoreDsColors.megaStorerDark),
+                                    tint = Color(WgcCoreDsColors.greenDark4),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                             }
@@ -244,14 +244,14 @@ fun WgcFreshGroceryCartTemplate(
                                 text = item.quantity.toString(),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.megaStorerDark)
+                                color = Color(WgcCoreDsColors.greenDark4)
                             )
 
                             Box(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s28.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.megaStorerPrimary))
+                                    .background(Color(WgcCoreDsColors.green6))
                                     .clickable { onIncrement(item) },
                                 contentAlignment = Alignment.Center
                             ) {
@@ -265,7 +265,7 @@ fun WgcFreshGroceryCartTemplate(
                         }
                     }
 
-                    HorizontalDivider(color = Color(WgcCoreDsColors.megaStorerBorder))
+                    HorizontalDivider(color = Color(WgcCoreDsColors.greenLight2))
                 }
 
                 // Cupom de Desconto
@@ -286,13 +286,13 @@ fun WgcFreshGroceryCartTemplate(
                                 Text(
                                     text = "Promo code",
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                                    color = Color(WgcCoreDsColors.gray9)
                                 )
                             },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = Color(WgcCoreDsColors.megaStorerPrimary),
-                                unfocusedBorderColor = Color(WgcCoreDsColors.megaStorerBorder)
+                                focusedBorderColor = Color(WgcCoreDsColors.green6),
+                                unfocusedBorderColor = Color(WgcCoreDsColors.greenLight2)
                             ),
                             singleLine = true
                         )
@@ -302,7 +302,7 @@ fun WgcFreshGroceryCartTemplate(
                         Button(
                             onClick = onApplyPromo,
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.megaStorerPrimary),
+                                containerColor = Color(WgcCoreDsColors.green6),
                                 contentColor = Color.White
                             ),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
@@ -325,7 +325,7 @@ fun WgcFreshGroceryCartTemplate(
                         text = "Order Summary",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStorerDark)
+                        color = Color(WgcCoreDsColors.greenDark4)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -337,13 +337,13 @@ fun WgcFreshGroceryCartTemplate(
                         Text(
                             text = "Subtotal",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                            color = Color(WgcCoreDsColors.gray9)
                         )
                         Text(
                             text = "$114.00",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.megaStorerDark)
+                            color = Color(WgcCoreDsColors.greenDark4)
                         )
                     }
 
@@ -356,13 +356,13 @@ fun WgcFreshGroceryCartTemplate(
                         Text(
                             text = "Shipping Fee",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                            color = Color(WgcCoreDsColors.gray9)
                         )
                         Text(
                             text = "Free",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.megaStorerSuccessGreen)
+                            color = Color(WgcCoreDsColors.green6)
                         )
                     }
 

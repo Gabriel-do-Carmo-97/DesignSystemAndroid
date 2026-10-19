@@ -28,10 +28,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Banner de Oferta ShopEase ("Free delivery on first item / First Product Free"):
@@ -48,9 +48,9 @@ fun WgcQuickShopOfferBanner(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.quickShopPrimary))
-            .padding(WgcCoreDsSpacing.md16.dp)
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
+            .background(Color(WgcCoreDsColors.orange37))
+            .padding(WgcCoreDsSpacing.MD16.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -63,9 +63,9 @@ fun WgcQuickShopOfferBanner(
                         imageVector = Icons.Default.LocalOffer,
                         contentDescription = null,
                         tint = Color.White,
-                        modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                        modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium,
@@ -74,7 +74,7 @@ fun WgcQuickShopOfferBanner(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
                 Text(
                     text = subtitle,
@@ -83,7 +83,7 @@ fun WgcQuickShopOfferBanner(
                 )
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             // Badge / Botão
             Button(
@@ -92,10 +92,10 @@ fun WgcQuickShopOfferBanner(
                     containerColor = Color.Black,
                     contentColor = Color.White
                 ),
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp),
                 contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                    horizontal = WgcCoreDsSpacing.md16.dp,
-                    vertical = WgcCoreDsSpacing.xs8.dp
+                    horizontal = WgcCoreDsSpacing.MD16.dp,
+                    vertical = WgcCoreDsSpacing.XS8.dp
                 )
             ) {
                 Text(

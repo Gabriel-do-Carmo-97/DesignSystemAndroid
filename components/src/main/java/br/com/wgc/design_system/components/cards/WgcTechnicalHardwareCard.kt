@@ -19,10 +19,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -40,24 +40,24 @@ fun WgcTechnicalHardwareCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-            Text(text = category, color = Color(WgcCoreDsColors.hardwareOrange), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
+            Text(text = category, color = Color(WgcCoreDsColors.orange17), fontWeight = FontWeight.Bold, fontSize = 12.sp)
             Text(text = name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Text(text = "De R$ " + String.format("%.2f", originalPrice), fontSize = 12.sp, color = Color.Gray)
             Text(
                 text = "Por R$ " + String.format("%.2f", discountPrice) + " no PIX",
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
-                color = Color(WgcCoreDsColors.hardwareOrange)
+                color = Color(WgcCoreDsColors.orange17)
             )
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Text(text = "Socket: $socket • TDP: ${tdpWatts}W • Score: $benchmarkScore pts", fontSize = 12.sp, color = Color.DarkGray)
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
             WgcClassicButton(
                 textButton = buttonText,
                 onClick = onBuyClick,

@@ -6,7 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
@@ -24,11 +24,11 @@ fun WgcSimpleDialog(
             shape = MaterialTheme.shapes.extraLarge,
             tonalElevation = AlertDialogDefaults.TonalElevation
         ) {
-            Column(modifier = Modifier.padding(WgcCoreDsSpacing.lg24.dp)) {
+            Column(modifier = Modifier.padding(WgcCoreDsSpacing.LG24.dp)) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.headlineSmall,
-                    modifier = Modifier.padding(bottom = WgcCoreDsSpacing.md16.dp)
+                    modifier = Modifier.padding(bottom = WgcCoreDsSpacing.MD16.dp)
                 )
                 options.forEach { option ->
                     ListItem(

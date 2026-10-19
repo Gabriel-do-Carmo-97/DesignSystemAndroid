@@ -35,9 +35,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import coil3.compose.AsyncImage
 
 /**
@@ -62,7 +62,7 @@ fun WgcMegaStoreProductCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
         colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
@@ -71,8 +71,8 @@ fun WgcMegaStoreProductCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(0.85f)
-                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.md.dp, topEnd = WgcCoreDsBorderRadius.md.dp))
-                    .background(Color(WgcCoreDsColors.megaStoreBackground))
+                    .clip(RoundedCornerShape(topStart = WgcCoreDsBorderRadius.MD.dp, topEnd = WgcCoreDsBorderRadius.MD.dp))
+                    .background(Color(WgcCoreDsColors.gray100))
             ) {
                 AsyncImage(
                     model = imageUrl,
@@ -85,10 +85,10 @@ fun WgcMegaStoreProductCard(
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopStart)
-                            .padding(WgcCoreDsSpacing.sm.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimary))
-                            .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = WgcCoreDsSpacing.xxs.dp)
+                            .padding(WgcCoreDsSpacing.SM.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
+                            .background(Color(WgcCoreDsColors.blue28))
+                            .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = WgcCoreDsSpacing.XXS.dp)
                     ) {
                         Text(
                             text = "-$discountPercent%",
@@ -103,7 +103,7 @@ fun WgcMegaStoreProductCard(
                     onClick = onFavoriteToggle,
                     modifier = Modifier
                         .align(Alignment.TopEnd)
-                        .padding(WgcCoreDsSpacing.xs.dp)
+                        .padding(WgcCoreDsSpacing.XS.dp)
                         .size(32.dp)
                         .clip(CircleShape)
                         .background(Color.White.copy(alpha = 0.85f))
@@ -111,7 +111,7 @@ fun WgcMegaStoreProductCard(
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                         contentDescription = "Favoritar",
-                        tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.megaStoreDark),
+                        tint = if (isFavorite) Color(WgcCoreDsColors.red500) else Color(WgcCoreDsColors.grayDark14),
                         modifier = Modifier.size(18.dp)
                     )
                 }
@@ -120,26 +120,26 @@ fun WgcMegaStoreProductCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.sm.dp)
+                    .padding(WgcCoreDsSpacing.SM.dp)
             ) {
                 Text(
                     text = category.uppercase(),
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                    color = Color(WgcCoreDsColors.gray4),
                     fontSize = 10.sp
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
-                    color = Color(WgcCoreDsColors.megaStoreDark),
+                    color = Color(WgcCoreDsColors.grayDark14),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -148,15 +148,15 @@ fun WgcMegaStoreProductCard(
                     Text(
                         text = price,
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.megaStorePrimary)
+                        color = Color(WgcCoreDsColors.blue28)
                     )
 
                     if (!originalPrice.isNullOrBlank()) {
-                        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs.dp))
+                        Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XS.dp))
                         Text(
                             text = originalPrice,
                             style = MaterialTheme.typography.bodySmall.copy(textDecoration = TextDecoration.LineThrough),
-                            color = Color(WgcCoreDsColors.megaStoreSecondaryText)
+                            color = Color(WgcCoreDsColors.gray4)
                         )
                     }
 
@@ -165,14 +165,14 @@ fun WgcMegaStoreProductCard(
                     Icon(
                         imageVector = Icons.Default.Star,
                         contentDescription = "Rating",
-                        tint = Color(WgcCoreDsColors.megaStoreGold),
+                        tint = Color(WgcCoreDsColors.orange30),
                         modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = rating.toString(),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.megaStoreDark),
+                        color = Color(WgcCoreDsColors.grayDark14),
                         modifier = Modifier.padding(start = 2.dp)
                     )
                 }

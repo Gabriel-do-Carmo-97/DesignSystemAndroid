@@ -96,18 +96,18 @@ fun WgcShoppeVisualSearchScreenTemplate(
                 modifier = Modifier
                     .size(280.dp)
                     .align(Alignment.Center)
-                    .border(2.dp, Color(WgcCoreDsColors.megaStorePrimary), RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp)),
+                    .border(2.dp, Color(WgcCoreDsColors.blue28), RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 if (isScanning) {
-                    CircularProgressIndicator(color = Color(WgcCoreDsColors.megaStorePrimary))
+                    CircularProgressIndicator(color = Color(WgcCoreDsColors.blue28))
                 } else if (!recognizedLabel.isNullOrBlank()) {
                     Box(
                         modifier = Modifier
                             .align(Alignment.BottomCenter)
                             .padding(bottom = WgcCoreDsSpacing.md.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.megaStorePrimary))
+                            .background(Color(WgcCoreDsColors.blue28))
                             .padding(horizontal = WgcCoreDsSpacing.md.dp, vertical = WgcCoreDsSpacing.xs.dp)
                     ) {
                         Text(
@@ -160,7 +160,7 @@ fun WgcShoppeVisualSearchScreenTemplate(
                             .clickable(onClick = onCaptureClick)
                             .padding(6.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.megaStorePrimary)),
+                            .background(Color(WgcCoreDsColors.blue28)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(

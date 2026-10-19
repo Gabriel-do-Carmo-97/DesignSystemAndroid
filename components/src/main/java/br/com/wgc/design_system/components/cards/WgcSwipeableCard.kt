@@ -30,8 +30,8 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -89,8 +89,8 @@ fun WgcSwipeableCard(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(color, RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
-                    .padding(horizontal = WgcCoreDsSpacing.lg.dp),
+                    .background(color, RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp))
+                    .padding(horizontal = WgcCoreDsSpacing.LG.dp),
                 contentAlignment = alignment
             ) {
                 Icon(
@@ -108,7 +108,7 @@ fun WgcSwipeableCard(
     ) {
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
         ) {
             content()
@@ -120,7 +120,7 @@ fun WgcSwipeableCard(
 @Composable
 private fun WgcSwipeableCardPreview() {
     WgcTheme {
-        Box(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Box(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcSwipeableCard(
                 onDismissToStart = {},
                 onDismissToEnd = {}
@@ -128,7 +128,7 @@ private fun WgcSwipeableCardPreview() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(WgcCoreDsSpacing.md.dp)
+                        .padding(WgcCoreDsSpacing.MD.dp)
                 ) {
                     Text(
                         text = "Arraste para o lado para excluir ou favoritar",

@@ -89,7 +89,7 @@ fun WgcClotheeCartTemplate(
                             .height(54.dp),
                         shape = RoundedCornerShape(100.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.apparelPrimary)
+                            containerColor = Color(WgcCoreDsColors.purple7)
                         )
                     ) {
                         Text(
@@ -124,12 +124,12 @@ fun WgcClotheeCartTemplate(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.apparelSurface))
+                            .background(Color(WgcCoreDsColors.grayLight8))
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.apparelDark)
+                            tint = Color(WgcCoreDsColors.grayDark18)
                         )
                     }
 
@@ -137,14 +137,14 @@ fun WgcClotheeCartTemplate(
                         text = "Cart",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
 
                     TextButton(onClick = onRemoveAll) {
                         Text(
                             text = "Remove All",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.apparelAlertRed)
+                            color = Color(WgcCoreDsColors.red24)
                         )
                     }
                 }
@@ -177,7 +177,7 @@ fun WgcClotheeCartTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(100.dp))
-                            .background(Color(WgcCoreDsColors.apparelSurface))
+                            .background(Color(WgcCoreDsColors.grayLight8))
                             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -188,7 +188,7 @@ fun WgcClotheeCartTemplate(
                             placeholder = {
                                 Text(
                                     text = "Enter Coupon Code",
-                                    color = Color(WgcCoreDsColors.apparelSecondaryText)
+                                    color = Color(WgcCoreDsColors.gray12)
                                 )
                             },
                             colors = OutlinedTextFieldDefaults.colors(
@@ -204,7 +204,7 @@ fun WgcClotheeCartTemplate(
                             modifier = Modifier
                                 .size(40.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.apparelPrimary))
+                                .background(Color(WgcCoreDsColors.purple7))
                                 .clickable(onClick = onApplyCoupon),
                             contentAlignment = Alignment.Center
                         ) {
@@ -260,13 +260,13 @@ private fun SummaryRow(
             text = title,
             style = if (isBold) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodyMedium,
             fontWeight = if (isBold) FontWeight.Bold else FontWeight.Normal,
-            color = if (isBold) Color(WgcCoreDsColors.apparelDark) else Color(WgcCoreDsColors.apparelSecondaryText)
+            color = if (isBold) Color(WgcCoreDsColors.grayDark18) else Color(WgcCoreDsColors.gray12)
         )
         Text(
             text = value,
             style = if (isBold) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodyMedium,
             fontWeight = if (isBold) FontWeight.Bold else FontWeight.Medium,
-            color = Color(WgcCoreDsColors.apparelDark)
+            color = Color(WgcCoreDsColors.grayDark18)
         )
     }
 }

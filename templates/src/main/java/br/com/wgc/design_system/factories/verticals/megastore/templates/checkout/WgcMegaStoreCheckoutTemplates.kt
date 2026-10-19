@@ -98,8 +98,12 @@ fun WgcShoppeCartScreenTemplate(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Column {
-                        Text(text = "Total Price", fontSize = 12.sp, color = Color(WgcCoreDsColors.megaStoreSecondaryText))
-                        Text(text = "$132.00", style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black), color = Color(WgcCoreDsColors.megaStorePrimary))
+                        Text(text = "Total Price", fontSize = 12.sp, color = Color(WgcCoreDsColors.gray4))
+                        Text(
+                            text = "$132.00",
+                            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Black),
+                            color = Color(WgcCoreDsColors.blue28)
+                        )
                     }
                     WgcButton(
                         text = "Checkout",
@@ -145,8 +149,8 @@ fun WgcShoppeCartScreenTemplate(
 
                         Column(modifier = Modifier.weight(1f)) {
                             Text(text = item.product.title, fontWeight = FontWeight.Bold, maxLines = 1)
-                            Text(text = "Size: ${item.selectedSize}", fontSize = 12.sp, color = Color(WgcCoreDsColors.megaStoreSecondaryText))
-                            Text(text = item.product.price, fontWeight = FontWeight.Black, color = Color(WgcCoreDsColors.megaStorePrimary))
+                            Text(text = "Size: ${item.selectedSize}", fontSize = 12.sp, color = Color(WgcCoreDsColors.gray4))
+                            Text(text = item.product.price, fontWeight = FontWeight.Black, color = Color(WgcCoreDsColors.blue28))
                         }
 
                         WgcQuantityStepper(
@@ -256,13 +260,13 @@ fun WgcShoppeToReceiveTrackingScreenTemplate(
                 modifier = Modifier
                     .size(96.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.megaStorePrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight16)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.LocalShipping,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.megaStorePrimary),
+                    tint = Color(WgcCoreDsColors.blue28),
                     modifier = Modifier.size(52.dp)
                 )
             }
@@ -272,14 +276,14 @@ fun WgcShoppeToReceiveTrackingScreenTemplate(
             Text(
                 text = "Order Dispatched!",
                 style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Black),
-                color = Color(WgcCoreDsColors.megaStoreDark)
+                color = Color(WgcCoreDsColors.grayDark14)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
 
             Text(
                 text = "Order $orderId is currently out for delivery.",
-                color = Color(WgcCoreDsColors.megaStoreSecondaryText),
+                color = Color(WgcCoreDsColors.gray4),
                 fontSize = 14.sp
             )
 

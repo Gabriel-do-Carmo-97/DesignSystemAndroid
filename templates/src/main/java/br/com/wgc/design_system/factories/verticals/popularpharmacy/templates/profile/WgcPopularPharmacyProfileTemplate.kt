@@ -34,7 +34,7 @@ fun WgcPagueMenosProfileTemplate(
                     text = "Meu Sempre Bem • Farmácia Popular",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.popularPharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark21)
                 )
             }
 

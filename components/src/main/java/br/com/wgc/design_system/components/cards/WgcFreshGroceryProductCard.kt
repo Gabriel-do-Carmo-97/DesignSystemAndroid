@@ -32,10 +32,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de produto Shopper:
@@ -57,28 +57,28 @@ fun WgcFreshGroceryProductCard(
 ) {
     Column(
         modifier = modifier
-            .width(WgcCoreDsSize.s160.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .width(WgcCoreDsSize.S160.dp)
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xs8.dp)
+            .padding(WgcCoreDsSpacing.XS8.dp)
     ) {
         // Área da Imagem + Badges
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s140.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.megaStorerSurface))
+                .height(WgcCoreDsSize.S140.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                .background(Color(WgcCoreDsColors.greenLight16))
         ) {
             if (imageSlot != null) {
                 imageSlot()
             } else {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s80.dp)
+                        .size(WgcCoreDsSize.S80.dp)
                         .align(Alignment.Center)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.megaStorerPrimaryLight)),
+                        .background(Color(WgcCoreDsColors.greenLight8)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -92,13 +92,13 @@ fun WgcFreshGroceryProductCard(
             if (discountBadge != null) {
                 Box(
                     modifier = Modifier
-                        .padding(WgcCoreDsSpacing.xs8.dp)
+                        .padding(WgcCoreDsSpacing.XS8.dp)
                         .align(Alignment.TopStart)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                        .background(Color(WgcCoreDsColors.megaStorerAccent))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
+                        .background(Color(WgcCoreDsColors.red29))
                         .padding(
-                            horizontal = WgcCoreDsSpacing.xs8.dp,
-                            vertical = WgcCoreDsSpacing.xxs4.dp
+                            horizontal = WgcCoreDsSpacing.XS8.dp,
+                            vertical = WgcCoreDsSpacing.XXS4.dp
                         )
                 ) {
                     Text(
@@ -115,63 +115,63 @@ fun WgcFreshGroceryProductCard(
                 onClick = onFavoriteToggle,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xxs4.dp)
-                    .size(WgcCoreDsSize.s32.dp)
+                    .padding(WgcCoreDsSpacing.XXS4.dp)
+                    .size(WgcCoreDsSize.S32.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.85f))
             ) {
                 Icon(
                     imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                     contentDescription = "Favoritar",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.megaStorerAccent) else Color(WgcCoreDsColors.megaStorerSecondaryText),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red29) else Color(WgcCoreDsColors.gray9),
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Rating
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
                 imageVector = Icons.Default.Star,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.megaStorerGold),
-                modifier = Modifier.size(WgcCoreDsSize.s14.dp)
+                tint = Color(WgcCoreDsColors.yellow10),
+                modifier = Modifier.size(WgcCoreDsSize.S14.dp)
             )
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
             Text(
                 text = rating,
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.megaStorerDark)
+                color = Color(WgcCoreDsColors.greenDark4)
             )
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Título do Produto
         Text(
             text = title,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = Color(WgcCoreDsColors.megaStorerDark),
+            color = Color(WgcCoreDsColors.greenDark4),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Preço
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Text(
                 text = price,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.megaStorerPrimary)
+                color = Color(WgcCoreDsColors.green6)
             )
 
             if (originalPrice != null) {
@@ -179,7 +179,7 @@ fun WgcFreshGroceryProductCard(
                     text = originalPrice,
                     style = MaterialTheme.typography.labelSmall,
                     textDecoration = TextDecoration.LineThrough,
-                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                    color = Color(WgcCoreDsColors.gray9)
                 )
             }
         }

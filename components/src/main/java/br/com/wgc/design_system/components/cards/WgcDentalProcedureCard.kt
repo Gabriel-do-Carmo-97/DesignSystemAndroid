@@ -28,11 +28,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcDentalProcedureCard(
@@ -45,40 +45,40 @@ fun WgcDentalProcedureCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth().clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s40.dp)
+                    .size(WgcCoreDsSize.S40.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.dentalTealLight)),
+                    .background(Color(WgcCoreDsColors.cyanLight3)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.HealthAndSafety,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.dentalTeal),
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    tint = Color(WgcCoreDsColors.cyan5),
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
-            Spacer(modifier = Modifier.size(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "Dente $toothNumber - $toothName",
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = Color(WgcCoreDsColors.dentalDark)
+                    color = Color(WgcCoreDsColors.cyanDark4)
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(modifier = Modifier.size(WgcCoreDsSize.s8.dp).clip(CircleShape).background(statusColor))
-                    Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
+                    Box(modifier = Modifier.size(WgcCoreDsSize.S8.dp).clip(CircleShape).background(statusColor))
+                    Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XXS4.dp))
                     Text(text = statusText, fontSize = 13.sp, color = Color.Gray)
                 }
             }

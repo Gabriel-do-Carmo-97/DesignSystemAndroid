@@ -28,11 +28,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -45,51 +45,51 @@ fun WgcFintechSuperAppCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.fintechSuperAppSurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.fintechSuperAppBorder))
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.blueLight3))
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.fintechOrangeLight)),
+                    .size(WgcCoreDsSize.S48.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                    .background(Color(WgcCoreDsColors.orangeLight8)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ShoppingBag,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.fintechOrange),
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    tint = Color(WgcCoreDsColors.orange20),
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = "SuperApp Shop • $partnerStore",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.fintechOrange),
+                    color = Color(WgcCoreDsColors.orange20),
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = offerTitle,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.fintechSuperAppTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark25)
                 )
                 Text(
                     text = "$cashbackPercentage% de Cashback na conta",
                     fontSize = 14.sp,
-                    color = Color(WgcCoreDsColors.fintechSuperAppTextSecondary)
+                    color = Color(WgcCoreDsColors.blue38)
                 )
             }
 

@@ -112,7 +112,7 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.gymTextPrimary),
+                                    tint = Color(WgcCoreDsColors.white),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -120,14 +120,14 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                         Column {
                             Text(
                                 text = "FICHAS DE TREINO",
-                                color = Color(WgcCoreDsColors.gymYellow),
+                                color = Color(WgcCoreDsColors.orange23),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Seu Plano Atual",
-                                color = Color(WgcCoreDsColors.gymTextPrimary),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -150,13 +150,13 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                                 .clickable { onSelectRoutine(index) },
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                             colors = CardDefaults.cardColors(
-                                containerColor = if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                                else Color(WgcCoreDsColors.gymDarkGray)
+                                containerColor = if (isSelected) Color(WgcCoreDsColors.orange23)
+                                else Color(WgcCoreDsColors.grayDark7)
                             ),
                             border = BorderStroke(
                                 WgcCoreDsSize.s1.dp,
-                                if (isSelected) Color(WgcCoreDsColors.gymYellow)
-                                else Color(WgcCoreDsColors.gymMediumGray)
+                                if (isSelected) Color(WgcCoreDsColors.orange23)
+                                else Color(WgcCoreDsColors.grayDark21)
                             )
                         ) {
                             Column(
@@ -168,15 +168,15 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                             ) {
                                 Text(
                                     text = "TREINO ${routine.letter}",
-                                    color = if (isSelected) Color(WgcCoreDsColors.gymTextInverse)
-                                    else Color(WgcCoreDsColors.gymTextPrimary),
+                                    color = if (isSelected) Color(WgcCoreDsColors.black)
+                                    else Color(WgcCoreDsColors.white),
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.Black
                                 )
                                 Text(
                                     text = "${routine.exercises.size} exerc.",
-                                    color = if (isSelected) Color(WgcCoreDsColors.gymTextInverse).copy(alpha = 0.8f)
-                                    else Color(WgcCoreDsColors.gymTextSecondary),
+                                    color = if (isSelected) Color(WgcCoreDsColors.black).copy(alpha = 0.8f)
+                                    else Color(WgcCoreDsColors.gray16),
                                     fontSize = 11.sp
                                 )
                             }
@@ -191,9 +191,9 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color(WgcCoreDsColors.gymDarkGray)
+                        containerColor = Color(WgcCoreDsColors.grayDark7)
                     ),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.gymMediumGray))
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.grayDark21))
                 ) {
                     Column(
                         modifier = Modifier
@@ -203,13 +203,13 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                     ) {
                         Text(
                             text = currentRoutine.title,
-                            color = Color(WgcCoreDsColors.gymTextPrimary),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = "Foco: ${currentRoutine.focus} • ~${currentRoutine.estimatedMinutes} min",
-                            color = Color(WgcCoreDsColors.gymTextSecondary),
+                            color = Color(WgcCoreDsColors.gray16),
                             fontSize = 12.sp
                         )
 
@@ -221,12 +221,12 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                             ) {
                                 Text(
                                     text = "Progresso",
-                                    color = Color(WgcCoreDsColors.gymTextSecondary),
+                                    color = Color(WgcCoreDsColors.gray16),
                                     fontSize = 11.sp
                                 )
                                 Text(
                                     text = "${currentRoutine.completedCount}/${currentRoutine.totalCount} feitos",
-                                    color = Color(WgcCoreDsColors.gymYellow),
+                                    color = Color(WgcCoreDsColors.orange23),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -237,8 +237,8 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                                     .fillMaxWidth()
                                     .height(WgcCoreDsSize.s8.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                                color = Color(WgcCoreDsColors.gymYellow),
-                                trackColor = Color(WgcCoreDsColors.gymMediumGray)
+                                color = Color(WgcCoreDsColors.orange23),
+                                trackColor = Color(WgcCoreDsColors.grayDark21)
                             )
                         }
                     }
@@ -254,7 +254,7 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = CardDefaults.cardColors(
-                            containerColor = Color(WgcCoreDsColors.gymMediumGray).copy(alpha = 0.5f)
+                            containerColor = Color(WgcCoreDsColors.grayDark21).copy(alpha = 0.5f)
                         )
                     ) {
                         Row(
@@ -271,19 +271,19 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Timer,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.gymYellow),
+                                    tint = Color(WgcCoreDsColors.orange23),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                                 Column {
                                     Text(
                                         text = "Cronômetro de Descanso",
-                                        color = Color(WgcCoreDsColors.gymTextPrimary),
+                                        color = Color(WgcCoreDsColors.white),
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                     Text(
                                         text = "Recomendado: 60 segundos",
-                                        color = Color(WgcCoreDsColors.gymTextSecondary),
+                                        color = Color(WgcCoreDsColors.gray16),
                                         fontSize = 10.sp
                                     )
                                 }
@@ -292,7 +292,7 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.gymYellow))
+                                    .background(Color(WgcCoreDsColors.orange23))
                                     .clickable { }
                                     .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp),
                                 contentAlignment = Alignment.Center
@@ -304,12 +304,12 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                                     Icon(
                                         imageVector = Icons.Default.PlayArrow,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.gymTextInverse),
+                                        tint = Color(WgcCoreDsColors.black),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                     Text(
                                         text = "INICIAR 60s",
-                                        color = Color(WgcCoreDsColors.gymTextInverse),
+                                        color = Color(WgcCoreDsColors.black),
                                         fontSize = 11.sp,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -342,7 +342,7 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s48.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.gymYellow))
+                        .background(Color(WgcCoreDsColors.orange23))
                         .clickable { onFinishWorkout() }
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     contentAlignment = Alignment.Center
@@ -354,12 +354,12 @@ fun WgcGymFitnessWorkoutRoutineTemplate(
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.gymTextInverse),
+                            tint = Color(WgcCoreDsColors.black),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Text(
                             text = "CONCLUIR TREINO DE HOJE",
-                            color = Color(WgcCoreDsColors.gymTextInverse),
+                            color = Color(WgcCoreDsColors.black),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )

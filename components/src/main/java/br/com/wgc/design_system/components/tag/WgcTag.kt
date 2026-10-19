@@ -27,57 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Variantes de cor e semântica para [WgcTag].
- */
-enum class WgcTagVariant {
-    Primary,
-    Secondary,
-    Success,
-    Error,
-    Warning,
-    Info,
-    Neutral
-}
-
-/**
- * Estilo de preenchimento para [WgcTag].
- */
-enum class WgcTagStyle {
-    Filled,
-    Outlined
-}
-
-/**
- * Tamanhos suportados para [WgcTag].
- */
-enum class WgcTagSize {
-    Small,
-    Medium
-}
-
-/**
- * WgcTag
- *
- * Componente atômico para exibição de rótulos de status, categorias, badges promocionais
- * e metadados contextuais (ex: "Novo", "Destaque", "Promoção", "Esgotado").
- *
- * @param text Rótulo textual da tag.
- * @param modifier Modificador de layout.
- * @param variant Variante cromática/semântica.
- * @param style Estilo de exibição (Filled ou Outlined).
- * @param size Dimensão da tag (Small ou Medium).
- * @param leadingIcon Ícone opcional à esquerda do texto.
- * @param trailingIcon Ícone opcional à direita do texto.
- */
-private data class WgcTagColors(
-    val primary: Color,
-    val container: Color,
-    val onContainer: Color
-)
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 private fun resolveTagColors(variant: WgcTagVariant): WgcTagColors = when (variant) {
@@ -152,13 +103,13 @@ fun WgcTag(
     }
 
     val horizontalPadding = when (size) {
-        WgcTagSize.Small -> WgcCoreDsSpacing.xxs4.dp
-        WgcTagSize.Medium -> WgcCoreDsSpacing.xs8.dp
+        WgcTagSize.Small -> WgcCoreDsSpacing.XXS4.dp
+        WgcTagSize.Medium -> WgcCoreDsSpacing.XS8.dp
     }
 
     val verticalPadding = when (size) {
-        WgcTagSize.Small -> WgcCoreDsSpacing.xxxs2.dp
-        WgcTagSize.Medium -> WgcCoreDsSpacing.xxs4.dp
+        WgcTagSize.Small -> WgcCoreDsSpacing.XXXS2.dp
+        WgcTagSize.Medium -> WgcCoreDsSpacing.XXS4.dp
     }
 
     val textStyle = when (size) {
@@ -166,7 +117,7 @@ fun WgcTag(
         WgcTagSize.Medium -> MaterialTheme.typography.labelMedium
     }
 
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)
 
     val surfaceModifier = if (onClick != null) {
         modifier.clickable(onClick = onClick)
@@ -183,7 +134,7 @@ fun WgcTag(
     ) {
         Row(
             modifier = Modifier.padding(horizontal = horizontalPadding, vertical = verticalPadding),
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp),
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (leadingIcon != null) {

@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Fábrica universal de esqueletos de carregamento pré-moldados (WgcSkeletonFactory).
@@ -22,8 +22,8 @@ object WgcSkeletonFactory {
         Column(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+                .padding(WgcCoreDsSpacing.MD.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
         ) {
             repeat(itemCount) {
                 WgcSkeletonListItem()
@@ -39,8 +39,8 @@ object WgcSkeletonFactory {
         Column(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md.dp)
+                .padding(WgcCoreDsSpacing.MD.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD.dp)
         ) {
             repeat(itemCount) {
                 WgcSkeletonCard()

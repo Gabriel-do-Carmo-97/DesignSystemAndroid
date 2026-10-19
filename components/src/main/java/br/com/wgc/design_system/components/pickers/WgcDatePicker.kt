@@ -18,8 +18,8 @@ import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -107,7 +107,7 @@ fun WgcDatePickerDialog(
             }
         },
         modifier = modifier,
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = DatePickerDefaults.colors(
             containerColor = MaterialTheme.colorScheme.surface
         )
@@ -129,8 +129,8 @@ private fun WgcDatePickerPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                    .padding(WgcCoreDsSpacing.MD16.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
             ) {
                 WgcDatePicker(state = state)
             }

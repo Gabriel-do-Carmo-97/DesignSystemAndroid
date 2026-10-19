@@ -106,23 +106,23 @@ fun CoreTokensShowcase(
 @Composable
 private fun ColorsSection() {
     val sampleColors = listOf(
-        Pair("primary (orange500)", Color(WgcCoreDsColors.primary)),
-        Pair("secondary (white)", Color(WgcCoreDsColors.secondary)),
-        Pair("success (green)", Color(WgcCoreDsColors.success)),
-        Pair("warning (yellow)", Color(WgcCoreDsColors.warning)),
-        Pair("error (red500)", Color(WgcCoreDsColors.error)),
-        Pair("foodDeliveryRed", Color(WgcCoreDsColors.foodDeliveryRed)),
-        Pair("marketplaceYellow", Color(WgcCoreDsColors.marketplaceYellow)),
-        Pair("dealMarketplaceOrange", Color(WgcCoreDsColors.dealMarketplaceOrange)),
-        Pair("freshGroceryEmerald", Color(WgcCoreDsColors.freshGroceryEmerald)),
-        Pair("apparelPrimary", Color(WgcCoreDsColors.apparelPrimary)),
-        Pair("gamingStoreBlue", Color(WgcCoreDsColors.gamingStoreBlue)),
-        Pair("gamingStoreAccent", Color(WgcCoreDsColors.gamingStoreAccent)),
-        Pair("liveStreamingPurple", Color(WgcCoreDsColors.liveStreamingPurple)),
-        Pair("liveStreamingDarkCard", Color(WgcCoreDsColors.liveStreamingDarkCard)),
-        Pair("socialFacebook", Color(WgcCoreDsColors.socialFacebook)),
-        Pair("socialInstagram", Color(WgcCoreDsColors.socialInstagram)),
-        Pair("socialLinkedIn", Color(WgcCoreDsColors.socialLinkedIn))
+        Pair("primary (orange500)", Color(WgcCoreDsColors.orange500)),
+        Pair("secondary (white)", Color(WgcCoreDsColors.white)),
+        Pair("success (green)", Color(WgcCoreDsColors.green27)),
+        Pair("warning (yellow)", Color(WgcCoreDsColors.yellow10)),
+        Pair("error (red500)", Color(WgcCoreDsColors.red500)),
+        Pair("foodDeliveryRed", Color(WgcCoreDsColors.red18)),
+        Pair("marketplaceYellow", Color(WgcCoreDsColors.yellow8)),
+        Pair("dealMarketplaceOrange", Color(WgcCoreDsColors.red21)),
+        Pair("freshGroceryEmerald", Color(WgcCoreDsColors.green13)),
+        Pair("apparelPrimary", Color(WgcCoreDsColors.purple7)),
+        Pair("gamingStoreBlue", Color(WgcCoreDsColors.blueDark20)),
+        Pair("gamingStoreAccent", Color(WgcCoreDsColors.blue45)),
+        Pair("liveStreamingPurple", Color(WgcCoreDsColors.purple6)),
+        Pair("liveStreamingDarkCard", Color(WgcCoreDsColors.grayDark15)),
+        Pair("socialFacebook", Color(WgcCoreDsColors.blue34)),
+        Pair("socialInstagram", Color(WgcCoreDsColors.pink3)),
+        Pair("socialLinkedIn", Color(WgcCoreDsColors.blue16))
     )
 
     LazyColumn(

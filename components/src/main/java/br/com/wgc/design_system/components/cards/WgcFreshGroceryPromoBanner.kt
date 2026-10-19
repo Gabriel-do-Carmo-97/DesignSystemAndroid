@@ -24,10 +24,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Banner promocional de destaque Shopper ("Don't Miss Out! Get discount up to 50%").
@@ -45,9 +45,9 @@ fun WgcFreshGroceryPromoBanner(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.megaStorerSaleOrange))
-            .padding(WgcCoreDsSpacing.md16.dp)
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
+            .background(Color(WgcCoreDsColors.orangeLight4))
+            .padding(WgcCoreDsSpacing.MD16.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -61,29 +61,29 @@ fun WgcFreshGroceryPromoBanner(
                     text = title,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.megaStorerDark)
+                    color = Color(WgcCoreDsColors.greenDark4)
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.megaStorerSecondaryText)
+                    color = Color(WgcCoreDsColors.gray9)
                 )
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
                 Button(
                     onClick = onButtonClick,
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.megaStorerPrimary),
+                        containerColor = Color(WgcCoreDsColors.green6),
                         contentColor = Color.White
                     ),
-                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
+                    shape = RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                        horizontal = WgcCoreDsSpacing.md16.dp,
-                        vertical = WgcCoreDsSpacing.xs8.dp
+                        horizontal = WgcCoreDsSpacing.MD16.dp,
+                        vertical = WgcCoreDsSpacing.XS8.dp
                     )
                 ) {
                     Text(
@@ -94,23 +94,23 @@ fun WgcFreshGroceryPromoBanner(
                 }
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             if (illustrationSlot != null) {
                 illustrationSlot()
             } else {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s80.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.megaStorerPrimaryLight)),
+                        .size(WgcCoreDsSize.S80.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                        .background(Color(WgcCoreDsColors.greenLight8)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = "50% OFF",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(WgcCoreDsColors.megaStorerPrimary)
+                        color = Color(WgcCoreDsColors.green6)
                     )
                 }
             }

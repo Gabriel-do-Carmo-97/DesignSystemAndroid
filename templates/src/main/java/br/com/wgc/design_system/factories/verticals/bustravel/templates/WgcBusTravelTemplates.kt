@@ -25,7 +25,7 @@ fun WgcClickBusSearchTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.busTravelGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.green9)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Passagens Rodoviárias Express", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
                 Text("São Paulo (Tietê) ➔ Rio de Janeiro (Novo Rio)", color = Color.White.copy(alpha = 0.9f))
             }
@@ -38,7 +38,7 @@ fun WgcClickBusSearchTemplate(modifier: Modifier = Modifier) {
                         Column {
                             Text(trip.company, fontWeight = FontWeight.Bold)
                             Text("${trip.departureTime} ➔ ${trip.arrivalTime}", color = Color.DarkGray)
-                            Text(trip.seatType, color = Color(WgcCoreDsColors.busTravelGreen), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                            Text(trip.seatType, color = Color(WgcCoreDsColors.green9), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                         }
                         Text("R$ ${"%,.2f".format(trip.price)}", fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
                     }

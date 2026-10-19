@@ -70,13 +70,13 @@ fun WgcStylishProfileScreenTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trendFashionDark)
+                        tint = Color(WgcCoreDsColors.blueDark19)
                     )
                 }
                 Text(
                     text = "Profile",
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
             }
         },
@@ -119,7 +119,7 @@ fun WgcStylishProfileScreenTemplate(
                 Text(
                     text = "Personal Details",
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -154,7 +154,7 @@ fun WgcStylishProfileScreenTemplate(
                 Text(
                     text = "Business Address Details",
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -214,7 +214,7 @@ fun WgcStylishProfileScreenTemplate(
                 Text(
                     text = "Bank Account Details",
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark)
+                    color = Color(WgcCoreDsColors.blueDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))

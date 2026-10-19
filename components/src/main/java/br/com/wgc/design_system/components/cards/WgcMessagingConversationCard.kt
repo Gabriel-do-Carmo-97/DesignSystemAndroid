@@ -23,11 +23,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
@@ -40,19 +40,19 @@ fun WgcMessagingConversationCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
+                    .size(WgcCoreDsSize.S48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.directMessagingGreen)),
+                    .background(Color(WgcCoreDsColors.green25)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -63,7 +63,7 @@ fun WgcMessagingConversationCard(
                 )
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -89,8 +89,8 @@ fun WgcMessagingConversationCard(
                     Box(
                         modifier = Modifier
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.directMessagingGreen))
-                            .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                            .background(Color(WgcCoreDsColors.green25))
+                            .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                     ) {
                         Text(
                             text = unreadCount.toString(),
@@ -109,7 +109,7 @@ fun WgcMessagingConversationCard(
 @Composable
 private fun WgcMessagingConversationCardPreview() {
     WgcTheme {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcMessagingConversationCard(
                 contactName = "Ana Silva",
                 lastMessage = "Olá! Tudo bem? Vamos alinhar a reunião de design amanhã?",

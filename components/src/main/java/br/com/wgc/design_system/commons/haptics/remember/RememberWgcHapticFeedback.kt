@@ -8,7 +8,17 @@ import br.com.wgc.design_system.commons.haptics.contract.WgcHapticFeedback
 import br.com.wgc.design_system.commons.haptics.impl.DefaultWgcHapticFeedback
 
 /**
- * Cria e lembra uma instância de [WgcHapticFeedback] no escopo da composição.
+ * Obtém uma instância padrão de [WgcHapticFeedback] lembrada na composição atual.
+ *
+ * Use em composables que disparam feedback a partir de interações do usuário; a instância é refeita
+ * somente quando o contexto ou o feedback háptico local mudar.
+ *
+ * ```kotlin
+ * val haptics = rememberWgcHapticFeedback()
+ * IconButton(onClick = { haptics.click(); onClose() }) {
+ *     Icon(imageVector = Icons.Default.Close, contentDescription = "Fechar")
+ * }
+ * ```
  */
 @Composable
 fun rememberWgcHapticFeedback(): WgcHapticFeedback {

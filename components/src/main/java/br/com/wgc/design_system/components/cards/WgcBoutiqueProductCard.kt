@@ -30,10 +30,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -54,16 +54,16 @@ fun WgcBoutiqueProductCard(
 ) {
     Column(
         modifier = modifier
-            .width(WgcCoreDsSize.s160.dp)
+            .width(WgcCoreDsSize.S160.dp)
             .clickable(onClick = onClick)
     ) {
         // Container da foto com cantos arredondados
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(WgcCoreDsSize.s180.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                .background(Color(WgcCoreDsColors.boutiqueSurface))
+                .height(WgcCoreDsSize.S180.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                .background(Color(WgcCoreDsColors.blueLight32))
         ) {
             if (!imageUrl.isNullOrEmpty()) {
                 AsyncImageDefault(
@@ -75,13 +75,13 @@ fun WgcBoutiqueProductCard(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(WgcCoreDsColors.boutiquePrimaryLight)),
+                        .background(Color(WgcCoreDsColors.purpleLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = title.take(2).uppercase(),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color(WgcCoreDsColors.boutiquePrimary),
+                        color = Color(WgcCoreDsColors.purple8),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -92,51 +92,51 @@ fun WgcBoutiqueProductCard(
                 onClick = onFavoriteClick,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(WgcCoreDsSpacing.xs8.dp)
-                    .size(WgcCoreDsSize.s32.dp)
+                    .padding(WgcCoreDsSpacing.XS8.dp)
+                    .size(WgcCoreDsSize.S32.dp)
                     .clip(CircleShape)
                     .background(Color.White.copy(alpha = 0.9f))
             ) {
                 Icon(
                     imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     contentDescription = if (isFavorite) "Remover favorito" else "Adicionar favorito",
-                    tint = if (isFavorite) Color(WgcCoreDsColors.boutiqueAlertRed) else Color(WgcCoreDsColors.boutiqueSecondaryText),
-                    modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                    tint = if (isFavorite) Color(WgcCoreDsColors.red22) else Color(WgcCoreDsColors.gray13),
+                    modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         // Título do produto
         Text(
             text = title,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.boutiqueDark),
+            color = Color(WgcCoreDsColors.grayDark13),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
 
         if (!subtitle.isNullOrEmpty()) {
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                color = Color(WgcCoreDsColors.gray13),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
         // Preço
         Text(
             text = price,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.boutiqueDark)
+            color = Color(WgcCoreDsColors.grayDark13)
         )
     }
 }

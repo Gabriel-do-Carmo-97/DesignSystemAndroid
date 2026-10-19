@@ -26,103 +26,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Variantes suportadas pelo WgcButton.
- * 
- * Esta enum define os estilos visuais disponíveis para o botão:
- * - [Primary]: Botão principal com fundo preenchido na cor primária
- * - [Secondary]: Botão secundário com fundo na cor secundária
- * - [Outlined]: Botão com borda e fundo transparente
- * - [Ghost]: Botão apenas com texto, sem borda nem fundo
- * - [Danger]: Botão com fundo na cor de erro/aviso
- */
-enum class WgcButtonVariant {
-    /**
-     * Botão principal com fundo preenchido na cor primária do tema.
-     * Use para ações principais e de alta importância.
-     */
-    Primary,
-    
-    /**
-     * Botão secundário com fundo na cor secundária do tema.
-     * Use para ações de importância média ou alternativas.
-     */
-    Secondary,
-    
-    /**
-     * Botão com borda e fundo transparente.
-     * Use para ações que não devem chamar muita atenção.
-     */
-    Outlined,
-    
-    /**
-     * Botão apenas com texto, sem borda nem fundo.
-     * Use para ações secundárias ou links clicáveis.
-     */
-    Ghost,
-    
-    /**
-     * Botão com fundo na cor de erro/aviso.
-     * Use para ações destrutivas ou de alto risco.
-     */
-    Danger
-}
-
-/**
- * Tamanhos padronizados para o WgcButton.
- * 
- * Esta enum define os tamanhos pré-configurados seguindo os tokens de design:
- * - [Small]: Botão compacto para espaços limitados (altura 36dp)
- * - [Medium]: Tamanho padrão para maioria dos casos (altura 56dp)
- * - [Large]: Botão destacado para ações importantes (altura 64dp)
- * 
- * @property minHeight Altura mínima do botão em dp
- * @property horizontalPadding Espaçamento horizontal interno em dp
- * @property fontSize Tamanho da fonte do texto em sp
- * @property indicatorSize Tamanho do indicador de carregamento em dp
- */
-enum class WgcButtonSize(
-    val minHeight: Dp,
-    val horizontalPadding: Dp,
-    val fontSize: TextUnit,
-    val indicatorSize: Dp
-) {
-    /**
-     * Botão compacto para espaços limitados.
-     * Altura: 36dp, Fonte: 12sp
-     */
-    Small(
-        minHeight = 36.dp,
-        horizontalPadding = WgcCoreDsSpacing.sm12.dp,
-        fontSize = 12.sp,
-        indicatorSize = 16.dp
-    ),
-    
-    /**
-     * Tamanho padrão para maioria dos casos.
-     * Altura: 56dp, Fonte: 14sp
-     */
-    Medium(
-        minHeight = 56.dp,
-        horizontalPadding = WgcCoreDsSpacing.md16.dp,
-        fontSize = 14.sp,
-        indicatorSize = 24.dp
-    ),
-    
-    /**
-     * Botão destacado para ações importantes.
-     * Altura: 64dp, Fonte: 16sp
-     */
-    Large(
-        minHeight = 64.dp,
-        horizontalPadding = WgcCoreDsSpacing.lg24.dp,
-        fontSize = 16.sp,
-        indicatorSize = 28.dp
-    )
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Fábrica Universal de Botões do Design System (WgcButton).
@@ -187,7 +92,7 @@ fun WgcButton(
     leadingIcon: (@Composable () -> Unit)? = null,
     trailingIcon: (@Composable () -> Unit)? = null
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
     val buttonModifier = modifier
         .fillMaxWidth()
         .heightIn(min = size.minHeight)
@@ -208,7 +113,7 @@ fun WgcButton(
             )
         } else {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(horizontal = size.horizontalPadding)
             ) {
@@ -307,8 +212,8 @@ fun WgcButton(
 private fun WgcButtonVariantsPreview() {
     MaterialTheme {
         androidx.compose.foundation.layout.Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             WgcButton(text = "Primary (Default)")
             WgcButton(text = "Secondary", variant = WgcButtonVariant.Secondary)

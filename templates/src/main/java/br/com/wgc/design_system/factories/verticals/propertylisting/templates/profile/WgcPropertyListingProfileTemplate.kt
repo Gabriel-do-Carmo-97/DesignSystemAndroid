@@ -112,7 +112,7 @@ fun WgcPropertyListingProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -124,7 +124,7 @@ fun WgcPropertyListingProfileTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s60.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyListingPrimary)),
+                                .background(Color(WgcCoreDsColors.green14)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -142,12 +142,12 @@ fun WgcPropertyListingProfileTemplate(
                                 text = userName,
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyListingDark)
+                                color = Color(WgcCoreDsColors.blueDark23)
                             )
                             Text(
                                 text = userEmail,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -161,7 +161,7 @@ fun WgcPropertyListingProfileTemplate(
                         .fillMaxWidth()
                         .clickable(onClick = onAdvertisePropertyClick),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingOrange))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.orange18))
                 ) {
                     Row(
                         modifier = Modifier
@@ -216,7 +216,7 @@ fun WgcPropertyListingProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         PropertyListingProfileMenuItem(
@@ -226,21 +226,21 @@ fun WgcPropertyListingProfileTemplate(
                             badgeText = if (unreadMessagesCount > 0) "$unreadMessagesCount novas" else null,
                             onClick = onMessagesClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyListingBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         PropertyListingProfileMenuItem(
                             icon = Icons.Default.FavoriteBorder,
                             title = "Imóveis Salvos",
                             subtitle = "$savedPropertiesCount imóveis favoritados",
                             onClick = onFavoritesClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyListingBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         PropertyListingProfileMenuItem(
                             icon = Icons.Default.NotificationsNone,
                             title = "Alertas de Busca",
                             subtitle = "Receba novidades dos seus bairros favoritos",
                             onClick = onAlertsClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyListingBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         PropertyListingProfileMenuItem(
                             icon = Icons.Default.Calculate,
                             title = "Simulador de Financiamento",
@@ -256,7 +256,7 @@ fun WgcPropertyListingProfileTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         PropertyListingProfileMenuItem(
@@ -265,14 +265,14 @@ fun WgcPropertyListingProfileTemplate(
                             subtitle = "Como negociar imóveis com total tranquilidade",
                             onClick = {}
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyListingBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         PropertyListingProfileMenuItem(
                             icon = Icons.Default.Info,
                             title = "Central de Ajuda & FAQ",
                             subtitle = "Tire suas dúvidas sobre o portal",
                             onClick = onHelpClick
                         )
-                        HorizontalDivider(color = Color(WgcCoreDsColors.propertyListingBorder))
+                        HorizontalDivider(color = Color(WgcCoreDsColors.blueLight8))
                         PropertyListingProfileMenuItem(
                             icon = Icons.Default.Info,
                             title = "Sobre o Property Listing",
@@ -290,7 +290,7 @@ fun WgcPropertyListingProfileTemplate(
 private fun PropertyListingProfileTopBar() {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Column(
@@ -305,7 +305,7 @@ private fun PropertyListingProfileTopBar() {
                 text = "Menu do Usuário",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyListingDark)
+                color = Color(WgcCoreDsColors.blueDark23)
             )
         }
     }
@@ -329,7 +329,7 @@ private fun PropertyListingProfileMenuItem(
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyListingPrimary),
+            tint = Color(WgcCoreDsColors.green14),
             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
         )
         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -339,14 +339,14 @@ private fun PropertyListingProfileMenuItem(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.propertyListingDark)
+                    color = Color(WgcCoreDsColors.blueDark23)
                 )
                 if (badgeText != null) {
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.propertyListingOrangeLight))
+                            .background(Color(WgcCoreDsColors.orangeLight7))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.xs8.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -356,7 +356,7 @@ private fun PropertyListingProfileMenuItem(
                             text = badgeText,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyListingOrangeDark)
+                            color = Color(WgcCoreDsColors.orange6)
                         )
                     }
                 }
@@ -364,13 +364,13 @@ private fun PropertyListingProfileMenuItem(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                color = Color(WgcCoreDsColors.blue22)
             )
         }
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+            tint = Color(WgcCoreDsColors.blue22),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }

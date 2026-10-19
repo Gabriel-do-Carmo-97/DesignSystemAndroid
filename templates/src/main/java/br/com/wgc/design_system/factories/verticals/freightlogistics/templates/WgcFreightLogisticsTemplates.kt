@@ -23,7 +23,7 @@ fun WgcLalamoveQuoteTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.freightLogisticsOrange)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.orange18)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Frete & Carretos Sob Demanda", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcLalamoveQuoteTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(veh.type, fontWeight = FontWeight.Bold)
                         Text("Capacidade até ${veh.capacityKg}kg", color = Color.Gray, fontSize = 14.sp)
-                        Text("A partir de R$ ${"%,.2f".format(veh.basePrice)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.freightLogisticsOrange))
+                        Text("A partir de R$ ${"%,.2f".format(veh.basePrice)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.orange18))
                     }
                 }
             }

@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
@@ -56,8 +56,8 @@ private fun WgcListItemPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.sm8.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp)
+                .padding(WgcCoreDsSpacing.SM8.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp)
         ) {
             WgcListItem(
                 headlineText = "Item Simples"

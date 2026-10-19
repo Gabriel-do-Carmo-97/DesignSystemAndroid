@@ -23,14 +23,14 @@ fun WgcCommunityChatServersTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.communityChatBlurple)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue43)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Comunidade & Servidores", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(CommunityChatMockData.sampleServers) { srv ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.workspaceDocsDark))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark22))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(srv.name, fontWeight = FontWeight.Bold, color = Color.White)
                         Text("${srv.channelsCount} canais • 🟢 ${srv.activeUsers} online", color = Color.Gray, fontSize = 14.sp)

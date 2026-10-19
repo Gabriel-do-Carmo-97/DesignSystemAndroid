@@ -29,11 +29,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import java.util.Locale
 
@@ -48,15 +48,15 @@ fun WgcHealthVaccineCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carePharmacySurface)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
-        border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.carePharmacyBorder))
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
+        border = BorderStroke(WgcCoreDsSize.S1.dp, Color(WgcCoreDsColors.blueLight11))
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -66,31 +66,31 @@ fun WgcHealthVaccineCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s36.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.carePharmacyVaccineGreenLight)),
+                            .size(WgcCoreDsSize.S36.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                            .background(Color(WgcCoreDsColors.greenLight5)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.Vaccines,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.carePharmacyVaccineGreen),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            tint = Color(WgcCoreDsColors.cyan1),
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
                     Column {
                         Text(
                             text = "Serviços Farmacêuticos",
                             fontSize = 14.sp,
-                            color = Color(WgcCoreDsColors.carePharmacyVaccineGreen),
+                            color = Color(WgcCoreDsColors.cyan1),
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = vaccineName,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                            color = Color(WgcCoreDsColors.blueDark15)
                         )
                     }
                 }
@@ -99,19 +99,19 @@ fun WgcHealthVaccineCard(
                     text = "R$ " + String.format(Locale.getDefault(), "%.2f", price),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyRed)
+                    color = Color(WgcCoreDsColors.red12)
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Text(
                 text = "Público: $targetAudience",
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.carePharmacyTextSecondary)
+                color = Color(WgcCoreDsColors.gray5)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -122,14 +122,14 @@ fun WgcHealthVaccineCard(
                     Icon(
                         imageVector = Icons.Default.CalendarMonth,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.carePharmacyBlue),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        tint = Color(WgcCoreDsColors.blue3),
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = nextAvailableSlot,
                         fontSize = 14.sp,
-                        color = Color(WgcCoreDsColors.carePharmacyBlue),
+                        color = Color(WgcCoreDsColors.blue3),
                         fontWeight = FontWeight.SemiBold
                     )
                 }

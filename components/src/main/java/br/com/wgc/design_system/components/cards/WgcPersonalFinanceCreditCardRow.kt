@@ -31,15 +31,16 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de visualização de Cartão de Crédito do Organizze.
  * Exibe o banco/emissor, últimos 4 dígitos, fatura atual, limite disponível e barra de uso.
  */
 @Composable
+@Suppress("LongMethod")
 fun WgcPersonalFinanceCreditCardRow(
     modifier: Modifier = Modifier,
     bankName: String = "Neobank Mastercard",
@@ -48,7 +49,7 @@ fun WgcPersonalFinanceCreditCardRow(
     availableLimit: String = "R$ 3.159,50",
     totalLimit: String = "R$ 5.000,00",
     closingDate: String = "Fecha em 24/05",
-    accentColor: Color = Color(WgcCoreDsColors.personalFinanceCardPurple),
+    accentColor: Color = Color(WgcCoreDsColors.purple3),
     usageProgress: Float = 0.368f,
     onClick: () -> Unit = {}
 ) {
@@ -56,14 +57,14 @@ fun WgcPersonalFinanceCreditCardRow(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.xxs4.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.XXS4.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Header do Cartão com Ícone e Nome
             Row(
@@ -74,7 +75,7 @@ fun WgcPersonalFinanceCreditCardRow(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSpacing.xl32.dp)
+                            .size(WgcCoreDsSpacing.XL32.dp)
                             .clip(CircleShape)
                             .background(accentColor),
                         contentAlignment = Alignment.Center
@@ -83,21 +84,21 @@ fun WgcPersonalFinanceCreditCardRow(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
                             tint = Color.White,
-                            modifier = Modifier.size(WgcCoreDsSpacing.md16.dp)
+                            modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+                    Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
                     Column {
                         Text(
                             text = bankName,
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.personalFinanceDark)
+                            color = Color(WgcCoreDsColors.blueDark33)
                         )
                         Text(
                             text = lastDigits,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                            color = Color(WgcCoreDsColors.gray11)
                         )
                     }
                 }
@@ -105,11 +106,11 @@ fun WgcPersonalFinanceCreditCardRow(
                 Text(
                     text = closingDate,
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                    color = Color(WgcCoreDsColors.gray11)
                 )
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             // Fatura Atual em destaque
             Row(
@@ -121,14 +122,14 @@ fun WgcPersonalFinanceCreditCardRow(
                     Text(
                         text = "Fatura atual",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = currentInvoice,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.personalFinanceExpenseRed)
+                        color = Color(WgcCoreDsColors.red23)
                     )
                 }
 
@@ -136,29 +137,29 @@ fun WgcPersonalFinanceCreditCardRow(
                     Text(
                         text = "Limite disponível",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = availableLimit,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(WgcCoreDsColors.personalFinancePrimary)
+                        color = Color(WgcCoreDsColors.cyan3)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             // Barra de Progresso do Limite
             LinearProgressIndicator(
                 progress = { usageProgress },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSpacing.xs8.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)),
+                    .height(WgcCoreDsSpacing.XS8.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)),
                 color = accentColor,
-                trackColor = Color(WgcCoreDsColors.personalFinanceBorder),
+                trackColor = Color(WgcCoreDsColors.blueLight7),
                 strokeCap = StrokeCap.Round
             )
         }
@@ -169,6 +170,6 @@ fun WgcPersonalFinanceCreditCardRow(
 @Composable
 private fun WgcOrganizzeCreditCardRowPreview() {
     WgcPersonalFinanceCreditCardRow(
-        modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+        modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
     )
 }

@@ -26,18 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Estado do upload de um arquivo.
- */
-enum class WgcUploadStatus {
-    IDLE,
-    UPLOADING,
-    SUCCESS,
-    ERROR
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Componente de anexo e upload de arquivos corporativo (WgcFileUpload).
@@ -55,11 +45,11 @@ fun WgcFileUpload(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp))
             .border(
                 width = 1.dp,
                 color = if (status == WgcUploadStatus.ERROR) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.outlineVariant,
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
             ),
         color = MaterialTheme.colorScheme.surface
     ) {
@@ -68,11 +58,11 @@ fun WgcFileUpload(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable(onClick = onSelectFile)
-                    .padding(WgcCoreDsSpacing.lg.dp),
+                    .padding(WgcCoreDsSpacing.LG.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp),
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
@@ -91,8 +81,8 @@ fun WgcFileUpload(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md.dp),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+                    .padding(WgcCoreDsSpacing.MD.dp),
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),

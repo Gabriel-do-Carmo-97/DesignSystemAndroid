@@ -7,7 +7,10 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 
 /**
- * Retorna o dado de [WgcAsyncUiState.Success] ou `null` caso contrário.
+ * Retorna o dado de sucesso ou `null` para os demais estados.
+ *
+ * Use quando um valor opcional for suficiente e não for necessário distinguir carregamento de erro.
+ * Exemplo: `val user = state.getOrNull()`.
  */
 fun <T> WgcAsyncUiState<T>.getOrNull(): T? =
     when (this) {
@@ -16,22 +19,33 @@ fun <T> WgcAsyncUiState<T>.getOrNull(): T? =
     }
 
 /**
- * Retorna se o estado atual é de carregamento ([WgcAsyncUiState.Loading]).
+ * Verifica se o estado está em carregamento.
+ *
+ * Exemplo: `if (state.isLoading()) showSpinner()`.
  */
 fun <T> WgcAsyncUiState<T>.isLoading(): Boolean = this is WgcAsyncUiState.Loading
 
 /**
- * Retorna se o estado atual é de sucesso ([WgcAsyncUiState.Success]).
+ * Verifica se o estado contém um resultado de sucesso.
+ *
+ * Exemplo: `if (state.isSuccess()) enableContinue()`.
  */
 fun <T> WgcAsyncUiState<T>.isSuccess(): Boolean = this is WgcAsyncUiState.Success
 
 /**
- * Retorna se o estado atual é de falha ([WgcAsyncUiState.Error]).
+ * Verifica se o estado representa uma falha.
+ *
+ * Exemplo: `if (state.isError()) showRetry()`.
  */
 fun <T> WgcAsyncUiState<T>.isError(): Boolean = this is WgcAsyncUiState.Error
 
 /**
- * Mapeia o dado contido em caso de [WgcAsyncUiState.Success], preservando os demais estados.
+ * Transforma somente o dado em [WgcAsyncUiState.Success], preservando os outros estados.
+ *
+ * Use para adaptar o modelo exibido sem alterar o estado assíncrono. Exemplo:
+ * `val names = state.map { user -> user.name }`.
+ *
+ * @param transform Conversão aplicada ao dado de sucesso.
  */
 inline fun <T, R> WgcAsyncUiState<T>.map(transform: (T) -> R): WgcAsyncUiState<R> =
     when (this) {
@@ -42,8 +56,12 @@ inline fun <T, R> WgcAsyncUiState<T>.map(transform: (T) -> R): WgcAsyncUiState<R
     }
 
 /**
- * Converte um [Flow] em um [Flow] observável de [WgcAsyncUiState], emitindo automaticamente
- * [WgcAsyncUiState.Loading] no início e interceptando erros em [WgcAsyncUiState.Error].
+ * Converte emissões de um [Flow] em estados assíncronos: emite [WgcAsyncUiState.Loading] no início,
+ * envolve cada valor em [WgcAsyncUiState.Success] e converte exceções em [WgcAsyncUiState.Error].
+ *
+ * Use ao conectar um fluxo de dados à UI. Exemplo: `repository.observeUser().asWgcAsyncUiState()`.
+ * O operador `catch` trata erros emitidos antes do término do fluxo; cancelamento segue as regras
+ * usuais de corrotinas.
  */
 fun <T> Flow<T>.asWgcAsyncUiState(): Flow<WgcAsyncUiState<T>> =
     this

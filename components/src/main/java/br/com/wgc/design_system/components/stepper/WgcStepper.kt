@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Ponto de entrada e alias corporativo para o componente de etapas WgcStepIndicator.
@@ -32,7 +32,7 @@ fun WgcStepper(
 @Composable
 private fun WgcStepperPreview() {
     MaterialTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             val sampleSteps = listOf(
                 WgcStepItem(title = "Dados", state = WgcStepState.COMPLETED),
                 WgcStepItem(title = "Endereço", state = WgcStepState.CURRENT),

@@ -14,8 +14,22 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 /**
- * Gerenciador corporativo para cópia de dados na área de transferência com suporte a dados sensíveis
- * (Pix, cartões, senhas) e destruição automática (auto-clear).
+ * Copia, consulta e limpa texto na área de transferência do Android, com suporte a marcação sensível,
+ * feedback háptico de sucesso e limpeza automática opcional.
+ *
+ * Use diretamente quando precisar controlar o ciclo de vida de um serviço de clipboard; em Compose,
+ * prefira [br.com.wgc.design_system.commons.clipboard.remember.rememberWgcClipboardManager].
+ * O período de limpeza é contado a partir da chamada; ao expirar, a limpeza ocorre somente se o
+ * primeiro item do clipe ainda contiver o mesmo texto.
+ *
+ * ```kotlin
+ * val clipboard = WgcClipboardManager(context)
+ * clipboard.copy("Código", code, isSensitive = true, autoClearDelayMs = 30_000L)
+ * ```
+ *
+ * @param context Context usado para obter o serviço Android de clipboard.
+ * @param hapticFeedback Feedback opcional disparado após copiar.
+ * @param scope Escopo em que é executada a limpeza automática agendada.
  */
 class WgcClipboardManager(
     private val context: Context,
@@ -27,7 +41,9 @@ class WgcClipboardManager(
     }
 
     /**
-     * Copia um texto para a área de transferência.
+     * Copia texto para a área de transferência e dispara feedback háptico de sucesso quando disponível.
+     * Marque conteúdo confidencial como sensível para ocultar sua prévia no Android 13 ou superior.
+     * Use `autoClearDelayMs` para tentar limpar depois do prazo; zero desativa a limpeza automática.
      *
      * @param label Rótulo do conteúdo copiado.
      * @param text Texto a ser copiado.
@@ -64,6 +80,9 @@ class WgcClipboardManager(
 
     /**
      * Limpa o conteúdo atualmente retido na área de transferência.
+     *
+     * Use após uma ação explícita de remoção ou quando dados copiados não devam mais permanecer
+     * disponíveis. No Android anterior ao Pie, substitui o conteúdo por texto vazio.
      */
 
     fun clear() {
@@ -75,12 +94,20 @@ class WgcClipboardManager(
     }
 
     /**
-     * Verifica se existe conteúdo na área de transferência.
+     * Informa se a área de transferência possui um clipe primário.
+     *
+     * Use antes de apresentar ações condicionais de colagem; `true` não garante que o item contenha texto.
+     *
+     * @return `true` se o serviço do clipboard estiver disponível e tiver clipe primário.
      */
     fun hasPrimaryClip(): Boolean = clipboard?.hasPrimaryClip() == true
 
     /**
-     * Obtém o texto atual presente no clipboard.
+     * Obtém o texto do primeiro item do clipe primário, se houver.
+     *
+     * Use para ler texto colado; outros tipos de conteúdo e clipes sem itens retornam `null`.
+     *
+     * @return Texto do primeiro item ou `null` quando não houver texto disponível.
      */
     fun getPrimaryClipText(): String? {
         val clip = clipboard?.primaryClip ?: return null
@@ -88,6 +115,7 @@ class WgcClipboardManager(
     }
 
     companion object {
+        /** Prazo padrão recomendado para a limpeza automática, em milissegundos (60 segundos). */
         const val DEFAULT_AUTO_CLEAR_MS = ComponentsConstants.Clipboard.DEFAULT_AUTO_CLEAR_MS
     }
 }

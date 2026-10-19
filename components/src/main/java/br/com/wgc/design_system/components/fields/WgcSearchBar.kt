@@ -22,8 +22,8 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Barra de Busca Reativa Corporativa (WgcSearchBar).
@@ -85,7 +85,7 @@ fun WgcSearchBar(
                 }
             }
         },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.sl18.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.SL18.dp),
         colors = OutlinedTextFieldDefaults.colors(
             focusedContainerColor = MaterialTheme.colorScheme.surface,
             unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
@@ -103,7 +103,7 @@ fun WgcSearchBar(
 @Composable
 private fun WgcSearchBarPreview() {
     MaterialTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcSearchBar(
                 query = "Camisa Polo",
                 onQueryChange = {},

@@ -321,3 +321,25 @@ private fun WgcCheckoutPaymentNavScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcCheckoutAddressNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcCheckoutAddressNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcCheckoutAddressNavScreen(
+            onNavigateBack = {},
+            onConfirmAddress = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcCheckoutPaymentNavScreen Preview", showBackground = true)
+@Composable
+private fun WgcCheckoutPaymentNavScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcCheckoutPaymentNavScreen(
+            onNavigateBack = {},
+            onConfirmPayment = {}
+        )
+    }
+}

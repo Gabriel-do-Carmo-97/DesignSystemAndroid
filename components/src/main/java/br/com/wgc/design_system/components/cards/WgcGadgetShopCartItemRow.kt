@@ -32,9 +32,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -57,17 +57,17 @@ fun WgcGadgetShopCartItemRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-            .background(Color(WgcCoreDsColors.gadgetShopSurface))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp))
+            .background(Color(WgcCoreDsColors.blueLight38))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp),
+            .padding(WgcCoreDsSpacing.SM12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Thumbnail do produto
         Box(
             modifier = Modifier
                 .size(72.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
@@ -81,13 +81,13 @@ fun WgcGadgetShopCartItemRow(
                 Text(
                     text = title.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(WgcCoreDsColors.gadgetShopPrimary),
+                    color = Color(WgcCoreDsColors.blue39),
                     fontWeight = FontWeight.Bold
                 )
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Dados do produto
         Column(
@@ -97,37 +97,37 @@ fun WgcGadgetShopCartItemRow(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.gadgetShopDark),
+                color = Color(WgcCoreDsColors.blueDark6),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
 
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                color = Color(WgcCoreDsColors.blue41),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
 
             Text(
                 text = price,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopPrimary)
+                color = Color(WgcCoreDsColors.blue39)
             )
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS8.dp))
 
         // Controles de quantidade e exclusão
         Column(
             horizontalAlignment = Alignment.End,
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
         ) {
             IconButton(
                 onClick = onRemoveClick,
@@ -136,14 +136,14 @@ fun WgcGadgetShopCartItemRow(
                 Icon(
                     imageVector = Icons.Default.DeleteOutline,
                     contentDescription = "Remover item",
-                    tint = Color(WgcCoreDsColors.gadgetShopAccentPink),
+                    tint = Color(WgcCoreDsColors.pink5),
                     modifier = Modifier.size(18.dp)
                 )
             }
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Box(
                     modifier = Modifier
@@ -157,7 +157,7 @@ fun WgcGadgetShopCartItemRow(
                         text = "–",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold,
-                        color = if (quantity > 1) Color(WgcCoreDsColors.gadgetShopDark) else Color(WgcCoreDsColors.gadgetShopSecondaryText)
+                        color = if (quantity > 1) Color(WgcCoreDsColors.blueDark6) else Color(WgcCoreDsColors.blue41)
                     )
                 }
 
@@ -165,15 +165,15 @@ fun WgcGadgetShopCartItemRow(
                     text = quantity.toString(),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.gadgetShopDark),
-                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xxs4.dp)
+                    color = Color(WgcCoreDsColors.blueDark6),
+                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XXS4.dp)
                 )
 
                 Box(
                     modifier = Modifier
                         .size(24.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                        .background(Color(WgcCoreDsColors.blue39))
                         .clickable { onQuantityChange(quantity + 1) },
                     contentAlignment = Alignment.Center
                 ) {

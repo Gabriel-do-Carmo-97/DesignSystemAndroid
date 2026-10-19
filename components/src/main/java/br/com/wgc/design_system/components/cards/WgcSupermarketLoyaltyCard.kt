@@ -29,11 +29,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 @Composable
@@ -54,20 +54,20 @@ fun WgcSupermarketLoyaltyCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isBlackTier) Color(WgcCoreDsColors.premiumGroceryTextPrimary) else Color(WgcCoreDsColors.premiumGroceryGreenDark)
+            containerColor = if (isBlackTier) Color(WgcCoreDsColors.cyanDark3) else Color(WgcCoreDsColors.greenDark5)
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = WgcCoreDsElevation.level3.dp
+            defaultElevation = WgcCoreDsElevation.LEVEL3.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.premiumGroceryGold)
+            width = WgcCoreDsSize.S1.dp,
+            color = Color(WgcCoreDsColors.orange34)
         )
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -76,32 +76,32 @@ fun WgcSupermarketLoyaltyCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s32.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                            .background(Color(WgcCoreDsColors.premiumGroceryGoldLight)),
+                            .size(WgcCoreDsSize.S32.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
+                            .background(Color(WgcCoreDsColors.orangeLight12)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = if (isBlackTier) Icons.Default.Diamond else Icons.Default.Star,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.premiumGroceryGold),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            tint = Color(WgcCoreDsColors.orange34),
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
                     Column {
                         Text(
                             text = "Fidelidade VIP • $tier",
-                            color = Color(WgcCoreDsColors.premiumGroceryGold),
+                            color = Color(WgcCoreDsColors.orange34),
                             fontWeight = FontWeight.Bold,
                             style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                         )
                         Text(
                             text = clientName,
-                            color = Color(WgcCoreDsColors.premiumGrocerySurface),
+                            color = Color(WgcCoreDsColors.white),
                             fontWeight = FontWeight.Bold,
                             style = androidx.compose.material3.MaterialTheme.typography.titleMedium
                         )
@@ -110,25 +110,25 @@ fun WgcSupermarketLoyaltyCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.premiumGrocerySurface))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                        .background(Color(WgcCoreDsColors.white))
                         .clickable(onClick = onShowQrCode)
-                        .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+                        .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XS8.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.QrCode,
                             contentDescription = "QR Code",
-                            tint = Color(WgcCoreDsColors.premiumGroceryGreenDark),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            tint = Color(WgcCoreDsColors.greenDark5),
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                         Text(
                             text = "Apresentar",
-                            color = Color(WgcCoreDsColors.premiumGroceryGreenDark),
+                            color = Color(WgcCoreDsColors.greenDark5),
                             fontWeight = FontWeight.Bold,
                             style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                         )
@@ -136,7 +136,7 @@ fun WgcSupermarketLoyaltyCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -146,12 +146,12 @@ fun WgcSupermarketLoyaltyCard(
                 Column {
                     Text(
                         text = "Moedas Acumuladas",
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                     )
                     Text(
                         text = "$coinsBalance Stillo Coins",
-                        color = Color(WgcCoreDsColors.premiumGroceryGold),
+                        color = Color(WgcCoreDsColors.orange34),
                         fontWeight = FontWeight.ExtraBold,
                         style = androidx.compose.material3.MaterialTheme.typography.titleMedium
                     )
@@ -160,23 +160,23 @@ fun WgcSupermarketLoyaltyCard(
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
                         text = "Economia no Mês",
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                     )
                     Text(
                         text = "R$ " + String.format(Locale.getDefault(), "%.2f", monthlySavings),
-                        color = Color(WgcCoreDsColors.premiumGrocerySurface),
+                        color = Color(WgcCoreDsColors.white),
                         fontWeight = FontWeight.ExtraBold,
                         style = androidx.compose.material3.MaterialTheme.typography.titleMedium
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -184,12 +184,12 @@ fun WgcSupermarketLoyaltyCard(
                 ) {
                     Text(
                         text = "Progresso para Black Diamond",
-                        color = Color(WgcCoreDsColors.premiumGroceryTextSecondary),
+                        color = Color(WgcCoreDsColors.cyan7),
                         style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                     )
                     Text(
                         text = "${(progressToNextTier * 100).toInt()}%",
-                        color = Color(WgcCoreDsColors.premiumGroceryGold),
+                        color = Color(WgcCoreDsColors.orange34),
                         fontWeight = FontWeight.Bold,
                         style = androidx.compose.material3.MaterialTheme.typography.bodySmall
                     )
@@ -198,10 +198,10 @@ fun WgcSupermarketLoyaltyCard(
                     progress = { progressToNextTier },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(WgcCoreDsSize.s6.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp)),
-                    color = Color(WgcCoreDsColors.premiumGroceryGold),
-                    trackColor = Color(WgcCoreDsColors.premiumGroceryGreenDark)
+                        .height(WgcCoreDsSize.S6.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp)),
+                    color = Color(WgcCoreDsColors.orange34),
+                    trackColor = Color(WgcCoreDsColors.greenDark5)
                 )
             }
         }

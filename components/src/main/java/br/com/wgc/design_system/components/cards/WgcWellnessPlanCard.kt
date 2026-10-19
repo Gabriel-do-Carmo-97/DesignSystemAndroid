@@ -27,11 +27,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de Plano Corporativo Corporate Wellness (Wellness Network).
@@ -54,20 +54,20 @@ fun WgcWellnessPlanCard(
     slotAction: (@Composable () -> Unit)? = null
 ) {
     val tierColor = Color(tier.colorHex)
-    val borderColor = if (isCurrentPlan) Color(WgcCoreDsColors.wellnessCoral) else Color(WgcCoreDsColors.wellnessBorder)
+    val borderColor = if (isCurrentPlan) Color(WgcCoreDsColors.red26) else Color(WgcCoreDsColors.blueLight6)
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-        border = BorderStroke(if (isCurrentPlan) WgcCoreDsSize.s2.dp else WgcCoreDsSize.s1.dp, borderColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = if (isCurrentPlan) WgcCoreDsElevation.level6.dp else WgcCoreDsElevation.level1.dp)
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+        border = BorderStroke(if (isCurrentPlan) WgcCoreDsSize.S2.dp else WgcCoreDsSize.S1.dp, borderColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = if (isCurrentPlan) WgcCoreDsElevation.LEVEL6.dp else WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             // Cabeçalho do Plano
             Row(
@@ -77,17 +77,17 @@ fun WgcWellnessPlanCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s16.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                            .size(WgcCoreDsSize.S16.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                             .background(tierColor)
                     )
                     Text(
                         text = "Plano ${tier.label}",
-                        color = Color(WgcCoreDsColors.wellnessDark),
+                        color = Color(WgcCoreDsColors.grayDark7),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -96,13 +96,13 @@ fun WgcWellnessPlanCard(
                 if (isCurrentPlan) {
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.wellnessCoralLight))
-                            .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
+                            .background(Color(WgcCoreDsColors.redLight8))
+                            .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Text(
                             text = "SEU PLANO ATUAL",
-                            color = Color(WgcCoreDsColors.wellnessCoral),
+                            color = Color(WgcCoreDsColors.red26),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Black
                         )
@@ -110,13 +110,13 @@ fun WgcWellnessPlanCard(
                 } else if (discountBadge != null) {
                     Box(
                         modifier = Modifier
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.wellnessForestLight))
-                            .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
+                            .background(Color(WgcCoreDsColors.greenLight4))
+                            .padding(horizontal = WgcCoreDsSpacing.SM12.dp, vertical = WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Text(
                             text = discountBadge,
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -127,25 +127,25 @@ fun WgcWellnessPlanCard(
             // Preço mensal
             Row(
                 verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = monthlyPrice,
-                    color = Color(WgcCoreDsColors.wellnessDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Black
                 )
                 Text(
                     text = "/ mês",
-                    color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                    color = Color(WgcCoreDsColors.gray7),
                     fontSize = 13.sp,
-                    modifier = Modifier.padding(bottom = WgcCoreDsSpacing.xxs4.dp)
+                    modifier = Modifier.padding(bottom = WgcCoreDsSpacing.XXS4.dp)
                 )
             }
 
             Text(
                 text = gymCountLabel,
-                color = Color(WgcCoreDsColors.wellnessForest),
+                color = Color(WgcCoreDsColors.cyanDark2),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold
             )
@@ -153,30 +153,30 @@ fun WgcWellnessPlanCard(
             // Lista de Benefícios
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
             ) {
                 benefits.forEach { benefit ->
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(WgcCoreDsSize.s16.dp)
-                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                .background(Color(WgcCoreDsColors.wellnessCheckInGreen).copy(alpha = 0.15f)),
+                                .size(WgcCoreDsSize.S16.dp)
+                                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
+                                .background(Color(WgcCoreDsColors.green17).copy(alpha = 0.15f)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Check,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
-                                modifier = Modifier.size(WgcCoreDsSize.s12.dp)
+                                tint = Color(WgcCoreDsColors.green17),
+                                modifier = Modifier.size(WgcCoreDsSize.S12.dp)
                             )
                         }
                         Text(
                             text = benefit,
-                            color = Color(WgcCoreDsColors.wellnessDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 12.sp
                         )
                     }
@@ -190,10 +190,10 @@ fun WgcWellnessPlanCard(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.wellnessForest))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                        .background(Color(WgcCoreDsColors.cyanDark2))
                         .clickable { onSelectPlan() }
-                        .padding(vertical = WgcCoreDsSpacing.sm12.dp),
+                        .padding(vertical = WgcCoreDsSpacing.SM12.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(

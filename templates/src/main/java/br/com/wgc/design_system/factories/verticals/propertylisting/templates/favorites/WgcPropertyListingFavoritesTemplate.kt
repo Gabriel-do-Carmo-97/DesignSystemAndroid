@@ -167,7 +167,7 @@ fun WgcPropertyListingFavoritesTemplate(
                     Card(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                     ) {
                         Row(
                             modifier = Modifier
@@ -179,13 +179,13 @@ fun WgcPropertyListingFavoritesTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s40.dp)
                                     .clip(CircleShape)
-                                    .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                                    .background(Color(WgcCoreDsColors.greenLight13)),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.NotificationsActive,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                    tint = Color(WgcCoreDsColors.green14),
                                     modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                                 )
                             }
@@ -195,12 +195,12 @@ fun WgcPropertyListingFavoritesTemplate(
                                     text = alertTitle,
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyListingDark)
+                                    color = Color(WgcCoreDsColors.blueDark23)
                                 )
                                 Text(
                                     text = "Notificações ativas por e-mail e app",
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                                    color = Color(WgcCoreDsColors.blue22)
                                 )
                             }
                         }
@@ -220,7 +220,7 @@ private fun PropertyListingFavoritesTopBar(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Column(
@@ -232,7 +232,7 @@ private fun PropertyListingFavoritesTopBar(
                 text = "Salvos & Alertas",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyListingDark)
+                color = Color(WgcCoreDsColors.blueDark23)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -241,7 +241,7 @@ private fun PropertyListingFavoritesTopBar(
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                    .background(Color(WgcCoreDsColors.propertyListingBackground))
+                    .background(Color(WgcCoreDsColors.blueLight37))
                     .padding(WgcCoreDsSpacing.xxs4.dp)
             ) {
                 TabPill(
@@ -269,7 +269,7 @@ private fun TabPill(
         modifier = Modifier
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.propertyListingPrimary) else Color.Transparent
+                if (isSelected) Color(WgcCoreDsColors.green14) else Color.Transparent
             )
             .clickable(onClick = onClick)
             .padding(
@@ -282,7 +282,7 @@ private fun TabPill(
             text = label,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-            color = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyListingSecondaryText)
+            color = if (isSelected) Color.White else Color(WgcCoreDsColors.blue22)
         )
     }
 }
@@ -304,13 +304,13 @@ private fun FavoritesEmptyState(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s80.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                    .background(Color(WgcCoreDsColors.greenLight13)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.FavoriteBorder,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.propertyListingOrange),
+                    tint = Color(WgcCoreDsColors.orange18),
                     modifier = Modifier.size(WgcCoreDsSize.s40.dp)
                 )
             }
@@ -321,7 +321,7 @@ private fun FavoritesEmptyState(
                 text = "Nenhum imóvel favoritado",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyListingDark)
+                color = Color(WgcCoreDsColors.blueDark23)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -329,7 +329,7 @@ private fun FavoritesEmptyState(
             Text(
                 text = "Salve os imóveis que você mais gostou para comparar preços e contatar corretores com facilidade.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                color = Color(WgcCoreDsColors.blue22)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -338,7 +338,7 @@ private fun FavoritesEmptyState(
                 onClick = onExploreClick,
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyListingPrimary),
+                    containerColor = Color(WgcCoreDsColors.green14),
                     contentColor = Color.White
                 )
             ) {

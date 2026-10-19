@@ -25,9 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 import br.com.wgc.design_system.components.stepper.WgcApparelQuantityStepper
 
@@ -50,17 +50,17 @@ fun WgcApparelCartItemCard(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.apparelSurface))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+            .background(Color(WgcCoreDsColors.grayLight8))
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.sm12.dp),
+            .padding(WgcCoreDsSpacing.SM12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Thumbnail do produto
         Box(
             modifier = Modifier
                 .size(64.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
@@ -74,24 +74,24 @@ fun WgcApparelCartItemCard(
                 Text(
                     text = title.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(WgcCoreDsColors.apparelPrimary),
+                    color = Color(WgcCoreDsColors.purple7),
                     fontWeight = FontWeight.Bold
                 )
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         // Informações centrais
         Column(
             modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
         ) {
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark),
+                color = Color(WgcCoreDsColors.grayDark18),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -99,16 +99,16 @@ fun WgcApparelCartItemCard(
             Text(
                 text = "Size - $size   Color - $colorName",
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.apparelSecondaryText)
+                color = Color(WgcCoreDsColors.gray12)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
 
             Text(
                 text = price,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
         }
 

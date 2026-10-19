@@ -239,3 +239,28 @@ private fun WgcTicketDetailScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcFaqDetailScreen Preview", showBackground = true)
+@Composable
+private fun WgcFaqDetailScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcFaqDetailScreen(
+            faqId = "101",
+            question = "Como redefinir minha senha?",
+            answer = "Acesse a tela de login, clique em 'Recuperar Senha' e siga as instruções enviadas por e-mail.",
+            onBackClick = {},
+            onContactSupport = {}
+        )
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcTicketDetailScreen Preview", showBackground = true)
+@Composable
+private fun WgcTicketDetailScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcTicketDetailScreen(
+            ticketId = "TK-987654",
+            onBackClick = {}
+        )
+    }
+}

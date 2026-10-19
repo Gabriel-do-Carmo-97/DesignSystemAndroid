@@ -23,7 +23,7 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.fragranceBeautyGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.greenDark6)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Fragrâncias & Cuidados Pessoais", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -34,7 +34,7 @@ fun WgcBoticarioHomeTemplate(modifier: Modifier = Modifier) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(prod.name, fontWeight = FontWeight.Bold)
                         Text(prod.line, color = Color.Gray, fontSize = 14.sp)
-                        Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.fragranceBeautyGreen))
+                        Text("R$ ${"%,.2f".format(prod.price)}", fontWeight = FontWeight.ExtraBold, color = Color(WgcCoreDsColors.greenDark6))
                     }
                 }
             }

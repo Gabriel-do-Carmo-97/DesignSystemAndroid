@@ -20,7 +20,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 
 @Composable
@@ -59,7 +59,7 @@ fun CheckboxDefaults(
         )
         Text(
             text = label,
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             color = MaterialTheme.colorScheme.onSurface
         )
     }

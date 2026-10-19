@@ -91,7 +91,7 @@ fun WgcShopEaseProfileTemplate(
                             bottomEnd = WgcCoreDsBorderRadius.display45.dp
                         )
                     )
-                    .background(Color(WgcCoreDsColors.quickShopPeachBg))
+                    .background(Color(WgcCoreDsColors.orangeLight1))
                     .padding(
                         horizontal = WgcCoreDsSpacing.lg24.dp,
                         vertical = WgcCoreDsSpacing.xl32.dp
@@ -103,7 +103,7 @@ fun WgcShopEaseProfileTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s80.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.quickShopPrimary)),
+                            .background(Color(WgcCoreDsColors.orange37)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
@@ -120,7 +120,7 @@ fun WgcShopEaseProfileTemplate(
                         text = userName,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.quickShopDark)
+                        color = Color(WgcCoreDsColors.grayDark19)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -128,7 +128,7 @@ fun WgcShopEaseProfileTemplate(
                     Text(
                         text = userEmail,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                        color = Color(WgcCoreDsColors.gray6)
                     )
                 }
             }
@@ -141,7 +141,7 @@ fun WgcShopEaseProfileTemplate(
                     text = "My Account",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.quickShopDark)
+                    color = Color(WgcCoreDsColors.grayDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -171,13 +171,13 @@ private fun ProfileRow(icon: ImageVector, title: String, onClick: () -> Unit = {
             modifier = Modifier
                 .size(WgcCoreDsSize.s40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.quickShopPrimaryLight)),
+                .background(Color(WgcCoreDsColors.orangeLight13)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.quickShopPrimaryDark),
+                tint = Color(WgcCoreDsColors.orange27),
                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
             )
         }
@@ -188,18 +188,18 @@ private fun ProfileRow(icon: ImageVector, title: String, onClick: () -> Unit = {
             text = title,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Medium,
-            color = Color(WgcCoreDsColors.quickShopDark),
+            color = Color(WgcCoreDsColors.grayDark19),
             modifier = Modifier.weight(1f)
         )
 
         Icon(
             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
-            tint = Color(WgcCoreDsColors.quickShopSecondaryText),
+            tint = Color(WgcCoreDsColors.gray6),
             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
         )
     }
-    HorizontalDivider(color = Color(WgcCoreDsColors.quickShopBorder))
+    HorizontalDivider(color = Color(WgcCoreDsColors.grayLight5))
 }
 
 @Preview(showBackground = true)

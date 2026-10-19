@@ -39,6 +39,7 @@ import br.com.wgc.design_system.core.WgcCoreDsSize
 import br.com.wgc.design_system.core.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
+@Suppress("LongMethod")
 @Composable
 fun WgcBeverageDeliveryHomeTemplate(
     beverages: List<BeverageItem> = BeverageDeliveryMockData.sampleBeverages,
@@ -46,7 +47,7 @@ fun WgcBeverageDeliveryHomeTemplate(
     onAddToCart: (BeverageItem) -> Unit = {}
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -54,7 +55,7 @@ fun WgcBeverageDeliveryHomeTemplate(
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.beverageDeliveryYellow))
+                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.yellow4))
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -85,12 +86,25 @@ fun WgcBeverageDeliveryHomeTemplate(
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(text = bev.name, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                        Text(text = "${bev.volume} • ${bev.temperatureStatus}", fontSize = 12.sp, color = Color(WgcCoreDsColors.flightTravelBlue))
+                        Text(
+                            text = "${bev.volume} • ${bev.temperatureStatus}",
+                            fontSize = 12.sp,
+                            color = Color(WgcCoreDsColors.blue1)
+                        )
                         if (bev.returnableBottle) {
-                            Text(text = "♻️ Garrafa retornável (traga o casco)", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.SemiBold)
+                            Text(
+                                text = "♻️ Garrafa retornável (traga o casco)",
+                                fontSize = 11.sp,
+                                color = Color(WgcCoreDsColors.green1),
+                                fontWeight = FontWeight.SemiBold
+                            )
                         }
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
-                        Text(text = "R$ " + String.format("%.2f", bev.price), fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                        Text(
+                            text = "R$ " + String.format("%.2f", bev.price),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
                     }
                     WgcClassicButton(
                         textButton = "Adicionar",
@@ -106,7 +120,12 @@ fun WgcBeverageDeliveryHomeTemplate(
 fun WgcBeverageDeliveryColdTrackerTemplate(
     distributor: DeliveryPartnerDistributor = BeverageDeliveryMockData.sampleDistributor
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(WgcCoreDsColors.gray50))
+            .padding(WgcCoreDsSpacing.md16.dp)
+    ) {
         Text(text = "Rastreio Imediato da Entrega", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -116,7 +135,12 @@ fun WgcBeverageDeliveryColdTrackerTemplate(
         ) {
             Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Default.DeliveryDining, contentDescription = null, tint = Color(WgcCoreDsColors.beverageDeliveryRed), modifier = Modifier.size(WgcCoreDsSize.s40.dp))
+                    Icon(
+                        imageVector = Icons.Default.DeliveryDining,
+                        contentDescription = null,
+                        tint = Color(WgcCoreDsColors.red15),
+                        modifier = Modifier.size(WgcCoreDsSize.s40.dp)
+                    )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Column {
                         Text(text = "O motoboy está a caminho!", fontWeight = FontWeight.Bold, fontSize = 16.sp)
@@ -136,7 +160,7 @@ fun WgcBeverageDeliveryOffersTemplate(
     beverages: List<BeverageItem> = BeverageDeliveryMockData.sampleBeverages
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)),
+        modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)),
         contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp),
         verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
     ) {
@@ -150,7 +174,7 @@ fun WgcBeverageDeliveryOffersTemplate(
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
-                    Text(text = "COMBO FINAL DE SEMANA", color = Color(WgcCoreDsColors.beverageDeliveryRed), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(text = "COMBO FINAL DE SEMANA", color = Color(WgcCoreDsColors.red15), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                     Text(text = bev.name, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(text = "Por apenas R$ " + String.format("%.2f", bev.price), fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 }
@@ -165,7 +189,7 @@ fun WgcBeverageDeliveryCartTemplate(
     onCheckout: () -> Unit = {}
 ) {
     val total = items.sumOf { it.price }
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
         Text(text = "Sacola Express", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         items.forEach { item ->
@@ -197,7 +221,7 @@ fun WgcBeverageDeliveryCartTemplate(
 
 @Composable
 fun WgcBeverageDeliveryProfileTemplate() {
-    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.grey50)).padding(WgcCoreDsSpacing.md16.dp)) {
+    Column(modifier = Modifier.fillMaxSize().background(Color(WgcCoreDsColors.gray50)).padding(WgcCoreDsSpacing.md16.dp)) {
         Text(text = "Minha Conta Beverage Delivery", fontWeight = FontWeight.Bold, fontSize = 18.sp)
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
         Card(
@@ -208,7 +232,7 @@ fun WgcBeverageDeliveryProfileTemplate() {
             Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
                 Text(text = "Nome: Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                 Text(text = "Endereço Padrão: Av. Paulista, 1000", fontSize = 14.sp)
-                Text(text = "Cupons da Geladeira: 3 ativos", fontSize = 14.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.SemiBold)
+                Text(text = "Cupons da Geladeira: 3 ativos", fontSize = 14.sp, color = Color(WgcCoreDsColors.green1), fontWeight = FontWeight.SemiBold)
             }
         }
     }

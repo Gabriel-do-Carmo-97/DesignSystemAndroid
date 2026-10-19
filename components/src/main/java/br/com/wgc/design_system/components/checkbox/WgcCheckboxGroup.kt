@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
@@ -42,7 +42,7 @@ fun WgcCheckboxGroup(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
     ) {
         if (enableSelectAll) {
             Row(
@@ -55,7 +55,7 @@ fun WgcCheckboxGroup(
                             onSelectionChange(items.toSet())
                         }
                     }
-                    .padding(vertical = WgcCoreDsSpacing.xs.dp),
+                    .padding(vertical = WgcCoreDsSpacing.XS.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TriStateCheckbox(
@@ -66,7 +66,7 @@ fun WgcCheckboxGroup(
                     text = selectAllLabel,
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface,
-                    modifier = Modifier.padding(start = WgcCoreDsSpacing.sm.dp)
+                    modifier = Modifier.padding(start = WgcCoreDsSpacing.SM.dp)
                 )
             }
         }

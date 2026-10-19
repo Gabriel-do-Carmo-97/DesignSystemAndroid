@@ -113,12 +113,12 @@ fun WgcShopEaseHomeTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.quickShopSurface))
+                        .background(Color(WgcCoreDsColors.blueLight36))
                 ) {
                     Icon(
                         imageVector = Icons.Default.Menu,
                         contentDescription = "Menu",
-                        tint = Color(WgcCoreDsColors.quickShopDark),
+                        tint = Color(WgcCoreDsColors.grayDark19),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -127,7 +127,7 @@ fun WgcShopEaseHomeTemplate(
                     text = "ShopEase",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(WgcCoreDsColors.quickShopPrimaryDark)
+                    color = Color(WgcCoreDsColors.orange27)
                 )
 
                 IconButton(
@@ -135,12 +135,12 @@ fun WgcShopEaseHomeTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.quickShopSurface))
+                        .background(Color(WgcCoreDsColors.blueLight36))
                 ) {
                     Icon(
                         imageVector = Icons.Default.ShoppingCart,
                         contentDescription = "Cart",
-                        tint = Color(WgcCoreDsColors.quickShopDark),
+                        tint = Color(WgcCoreDsColors.grayDark19),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -158,21 +158,21 @@ fun WgcShopEaseHomeTemplate(
                     Text(
                         text = "Search product...",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.quickShopSecondaryText)
+                        color = Color(WgcCoreDsColors.gray6)
                     )
                 },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.quickShopSecondaryText),
+                        tint = Color(WgcCoreDsColors.gray6),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 },
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(WgcCoreDsColors.quickShopSurface),
-                    unfocusedContainerColor = Color(WgcCoreDsColors.quickShopSurface),
+                    focusedContainerColor = Color(WgcCoreDsColors.blueLight36),
+                    unfocusedContainerColor = Color(WgcCoreDsColors.blueLight36),
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent
                 ),
@@ -203,8 +203,8 @@ fun WgcShopEaseHomeTemplate(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
                             .background(
-                                if (isSelected) Color(WgcCoreDsColors.quickShopPrimary)
-                                else Color(WgcCoreDsColors.quickShopSurface)
+                                if (isSelected) Color(WgcCoreDsColors.orange37)
+                                else Color(WgcCoreDsColors.blueLight36)
                             )
                             .clickable { onCategorySelect(cat) }
                             .padding(
@@ -216,7 +216,7 @@ fun WgcShopEaseHomeTemplate(
                             text = cat,
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) Color.White else Color(WgcCoreDsColors.quickShopDark)
+                            color = if (isSelected) Color.White else Color(WgcCoreDsColors.grayDark19)
                         )
                     }
                 }
@@ -234,7 +234,7 @@ fun WgcShopEaseHomeTemplate(
                     text = "New Arrivals",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.quickShopDark)
+                    color = Color(WgcCoreDsColors.grayDark19)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))

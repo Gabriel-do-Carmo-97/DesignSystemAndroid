@@ -24,26 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Estado de cada etapa do rastreamento Clothee.
- */
-enum class WgcClotheeStepState {
-    COMPLETED,
-    IN_PROGRESS,
-    PENDING
-}
-
-/**
- * Modelo de etapa para a timeline Clothee.
- */
-data class WgcClotheeTimelineStep(
-    val title: String,
-    val subtitle: String,
-    val state: WgcClotheeStepState
-)
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Linha do tempo vertical do ecossistema Clothee (WgcApparelOrderTimeline).
@@ -68,8 +50,8 @@ fun WgcApparelOrderTimeline(
                 ) {
                     val circleBg = when (step.state) {
                         WgcClotheeStepState.COMPLETED,
-                        WgcClotheeStepState.IN_PROGRESS -> Color(WgcCoreDsColors.apparelPrimary)
-                        WgcClotheeStepState.PENDING -> Color(WgcCoreDsColors.apparelSurface)
+                        WgcClotheeStepState.IN_PROGRESS -> Color(WgcCoreDsColors.purple7)
+                        WgcClotheeStepState.PENDING -> Color(WgcCoreDsColors.grayLight8)
                     }
 
                     Box(
@@ -98,9 +80,9 @@ fun WgcApparelOrderTimeline(
 
                     if (!isLast) {
                         val lineColor = if (step.state == WgcClotheeStepState.COMPLETED) {
-                            Color(WgcCoreDsColors.apparelPrimary)
+                            Color(WgcCoreDsColors.purple7)
                         } else {
-                            Color(WgcCoreDsColors.apparelBorder)
+                            Color(WgcCoreDsColors.grayLight4)
                         }
                         Box(
                             modifier = Modifier
@@ -111,12 +93,12 @@ fun WgcApparelOrderTimeline(
                     }
                 }
 
-                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
+                Spacer(modifier = Modifier.width(WgcCoreDsSpacing.MD16.dp))
 
                 // Detalhes da etapa
                 Column(
                     modifier = Modifier
-                        .padding(top = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(top = WgcCoreDsSpacing.XXS4.dp)
                         .weight(1f)
                 ) {
                     Text(
@@ -124,19 +106,19 @@ fun WgcApparelOrderTimeline(
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
                         color = if (step.state == WgcClotheeStepState.PENDING) {
-                            Color(WgcCoreDsColors.apparelSecondaryText)
+                            Color(WgcCoreDsColors.gray12)
                         } else {
-                            Color(WgcCoreDsColors.apparelDark)
+                            Color(WgcCoreDsColors.grayDark18)
                         }
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS2.dp))
                     Text(
                         text = step.subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                     if (!isLast) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD16.dp))
                     }
                 }
             }

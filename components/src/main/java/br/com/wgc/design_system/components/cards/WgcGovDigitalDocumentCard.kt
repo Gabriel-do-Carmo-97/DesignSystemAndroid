@@ -21,11 +21,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcGovDigitalDocumentCard(
@@ -37,11 +37,11 @@ fun WgcGovDigitalDocumentCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.govBlue)),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blue7)),
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -49,10 +49,10 @@ fun WgcGovDigitalDocumentCard(
                 Icon(
                     imageVector = Icons.Default.AccountBox,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.govYellow),
-                    modifier = Modifier.size(WgcCoreDsSize.s28.dp)
+                    tint = Color(WgcCoreDsColors.yellow4),
+                    modifier = Modifier.size(WgcCoreDsSize.S28.dp)
                 )
-                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XS8.dp))
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = documentTitle,
@@ -71,13 +71,13 @@ fun WgcGovDigitalDocumentCard(
                     Icon(
                         imageVector = Icons.Default.VerifiedUser,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.govYellow),
-                        modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                        tint = Color(WgcCoreDsColors.yellow4),
+                        modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                     )
-                    Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xxs4.dp))
+                    Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XXS4.dp))
                     Text(
                         text = securityLevel,
-                        color = Color(WgcCoreDsColors.govYellow),
+                        color = Color(WgcCoreDsColors.yellow4),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )

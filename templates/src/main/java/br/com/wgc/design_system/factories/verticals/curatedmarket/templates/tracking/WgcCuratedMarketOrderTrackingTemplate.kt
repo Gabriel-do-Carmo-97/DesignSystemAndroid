@@ -75,12 +75,12 @@ fun WgcTasselOrderTrackingTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                        .background(Color(WgcCoreDsColors.blueLight26))
                 ) {
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Fechar",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -91,13 +91,13 @@ fun WgcTasselOrderTrackingTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface)),
+                        .background(Color(WgcCoreDsColors.blueLight26)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Outlined.Mail,
                         contentDescription = "Tassel",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -141,7 +141,7 @@ fun WgcTasselOrderTrackingTemplate(
                         text = "Tracking details",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.curatedMarketDark)
+                        color = Color(WgcCoreDsColors.grayDark9)
                     )
 
                     val events = listOf(
@@ -160,13 +160,13 @@ fun WgcTasselOrderTrackingTemplate(
                                 text = eventTitle,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(WgcCoreDsColors.curatedMarketDark)
+                                color = Color(WgcCoreDsColors.grayDark9)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                             Text(
                                 text = eventTime,
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                                color = Color(WgcCoreDsColors.gray10)
                             )
                         }
                     }

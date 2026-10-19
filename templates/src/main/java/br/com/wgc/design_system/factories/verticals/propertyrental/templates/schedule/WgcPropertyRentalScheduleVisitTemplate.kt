@@ -131,7 +131,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyRentalSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -143,13 +143,13 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s60.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.propertyRentalPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.blueLight15)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Home,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyRentalPrimary),
+                                tint = Color(WgcCoreDsColors.blueDark26),
                                 modifier = Modifier.size(WgcCoreDsSize.s28.dp)
                             )
                         }
@@ -161,7 +161,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                                 text = property.title,
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalDark),
+                                color = Color(WgcCoreDsColors.blueDark26),
                                 maxLines = 1
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -169,14 +169,14 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                                 Icon(
                                     imageVector = Icons.Default.LocationOn,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                                    tint = Color(WgcCoreDsColors.blue21),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                 Text(
                                     text = "${property.neighborhood} • ${property.address}",
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                                    color = Color(WgcCoreDsColors.blue21),
                                     maxLines = 1
                                 )
                             }
@@ -185,7 +185,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                                 text = property.totalPrice,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyRentalPrimary)
+                                color = Color(WgcCoreDsColors.blueDark26)
                             )
                         }
                     }
@@ -198,7 +198,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     text = "Como você prefere visitar?",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -235,7 +235,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     text = "Escolha o dia",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -261,7 +261,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     text = "Horários pela Manhã",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -288,7 +288,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     text = "Horários pela Tarde",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -332,7 +332,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     text = "Observações ou dúvidas (opcional)",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyRentalDark)
+                    color = Color(WgcCoreDsColors.blueDark26)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -344,7 +344,7 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                         Text(
                             text = "Ex: Gostaria de checar a garagem e a vista da varanda",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                            color = Color(WgcCoreDsColors.blue21)
                         )
                     },
                     modifier = Modifier
@@ -352,10 +352,10 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                         .height(WgcCoreDsSize.s90.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(WgcCoreDsColors.propertyRentalYellow),
-                        unfocusedBorderColor = Color(WgcCoreDsColors.propertyRentalBorder),
-                        focusedContainerColor = Color(WgcCoreDsColors.propertyRentalSurface),
-                        unfocusedContainerColor = Color(WgcCoreDsColors.propertyRentalSurface)
+                        focusedBorderColor = Color(WgcCoreDsColors.yellow6),
+                        unfocusedBorderColor = Color(WgcCoreDsColors.blueLight8),
+                        focusedContainerColor = Color(WgcCoreDsColors.white),
+                        unfocusedContainerColor = Color(WgcCoreDsColors.white)
                     )
                 )
             }
@@ -371,14 +371,14 @@ fun WgcPropertyRentalScheduleVisitTemplate(
                     Icon(
                         imageVector = Icons.Default.Lock,
                         contentDescription = null,
-                        tint = Color(WgcCoreDsColors.propertyRentalGreen),
+                        tint = Color(WgcCoreDsColors.green4),
                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                     )
                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                     Text(
                         text = "Cancelamento ou reagendamento gratuito a qualquer momento.",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                        color = Color(WgcCoreDsColors.blue21)
                     )
                 }
             }
@@ -392,7 +392,7 @@ private fun PropertyRentalScheduleTopBar(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.xxs4.dp
     ) {
         Row(
@@ -411,7 +411,7 @@ private fun PropertyRentalScheduleTopBar(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.propertyRentalDark)
+                    tint = Color(WgcCoreDsColors.blueDark26)
                 )
             }
 
@@ -421,7 +421,7 @@ private fun PropertyRentalScheduleTopBar(
                 text = "Agendar Visita",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
         }
     }
@@ -436,8 +436,8 @@ private fun VisitTypeCard(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     onClick: () -> Unit
 ) {
-    val borderColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalPrimary) else Color(WgcCoreDsColors.propertyRentalBorder)
-    val bgColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalPrimaryLight) else Color(WgcCoreDsColors.propertyRentalSurface)
+    val borderColor = if (isSelected) Color(WgcCoreDsColors.blueDark26) else Color(WgcCoreDsColors.blueLight8)
+    val bgColor = if (isSelected) Color(WgcCoreDsColors.blueLight15) else Color(WgcCoreDsColors.white)
 
     Card(
         modifier = modifier.clickable(onClick = onClick),
@@ -453,7 +453,7 @@ private fun VisitTypeCard(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = if (isSelected) Color(WgcCoreDsColors.propertyRentalPrimary) else Color(WgcCoreDsColors.propertyRentalSecondaryText),
+                tint = if (isSelected) Color(WgcCoreDsColors.blueDark26) else Color(WgcCoreDsColors.blue21),
                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -461,13 +461,13 @@ private fun VisitTypeCard(
                 text = title,
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.propertyRentalDark)
+                color = Color(WgcCoreDsColors.blueDark26)
             )
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
             Text(
                 text = description,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color(WgcCoreDsColors.propertyRentalSecondaryText)
+                color = Color(WgcCoreDsColors.blue21)
             )
         }
     }
@@ -479,9 +479,9 @@ private fun DayChip(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val bgColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalPrimary) else Color(WgcCoreDsColors.propertyRentalSurface)
-    val textColor = if (isSelected) Color.White else Color(WgcCoreDsColors.propertyRentalDark)
-    val subTextColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalYellow) else Color(WgcCoreDsColors.propertyRentalSecondaryText)
+    val bgColor = if (isSelected) Color(WgcCoreDsColors.blueDark26) else Color(WgcCoreDsColors.white)
+    val textColor = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark26)
+    val subTextColor = if (isSelected) Color(WgcCoreDsColors.yellow6) else Color(WgcCoreDsColors.blue21)
 
     Column(
         modifier = Modifier
@@ -489,7 +489,7 @@ private fun DayChip(
             .background(bgColor)
             .border(
                 width = WgcCoreDsSpacing.xxxs2.dp,
-                color = if (isSelected) Color(WgcCoreDsColors.propertyRentalPrimary) else Color(WgcCoreDsColors.propertyRentalBorder),
+                color = if (isSelected) Color(WgcCoreDsColors.blueDark26) else Color(WgcCoreDsColors.blueLight8),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp)
             )
             .clickable(onClick = onClick)
@@ -522,9 +522,9 @@ private fun TimeSlotChip(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val bgColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalYellow) else Color(WgcCoreDsColors.propertyRentalSurface)
-    val textColor = Color(WgcCoreDsColors.propertyRentalDark)
-    val borderColor = if (isSelected) Color(WgcCoreDsColors.propertyRentalYellowDark) else Color(WgcCoreDsColors.propertyRentalBorder)
+    val bgColor = if (isSelected) Color(WgcCoreDsColors.yellow6) else Color(WgcCoreDsColors.white)
+    val textColor = Color(WgcCoreDsColors.blueDark26)
+    val borderColor = if (isSelected) Color(WgcCoreDsColors.yellow1) else Color(WgcCoreDsColors.blueLight8)
 
     Box(
         modifier = modifier
@@ -554,7 +554,7 @@ private fun PropertyRentalScheduleBottomBar(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyRentalSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.md16.dp
     ) {
         Box(
@@ -572,7 +572,7 @@ private fun PropertyRentalScheduleBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyRentalYellow))
+                    containerColor = Color(WgcCoreDsColors.yellow6))
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(

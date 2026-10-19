@@ -5,11 +5,17 @@ import br.com.wgc.design_system.commons.constants.ComponentsConstants
 import java.io.File
 
 /**
- * Contrato de interface para compressão e redimensionamento assíncrono de imagens no Design System WGC.
+ * Contrato para redimensionar e comprimir bitmaps de forma assíncrona, em memória ou a partir de arquivo.
+ *
+ * Use para reduzir dimensões e tamanho de imagens antes de armazená-las ou enviá-las; injete uma
+ * implementação, como [br.com.wgc.design_system.commons.image.impl.DefaultImageCompressor].
  */
 interface ImageCompressor {
     /**
-     * Redimensiona e comprime um [Bitmap] em memória para um array de bytes.
+     * Redimensiona, se necessário, e codifica um [Bitmap] como bytes no formato escolhido.
+     *
+     * Use quando a imagem já está carregada e o resultado precisa ser enviado ou mantido em memória.
+     * Os limites são dimensões máximas e a proporção é preservada pela implementação padrão.
      *
      * @param bitmap Bitmap de origem a ser comprimido.
      * @param maxWidth Largura máxima permitida em pixels.
@@ -27,7 +33,10 @@ interface ImageCompressor {
     ): ByteArray
 
     /**
-     * Lê, comprime e grava um arquivo de imagem no caminho de destino.
+     * Lê um arquivo de imagem, redimensiona/comprime seu bitmap e grava o resultado no destino.
+     *
+     * Use para gerar uma versão otimizada em disco. A implementação padrão falha se não conseguir
+     * decodificar a origem.
      *
      * @param sourceFile Arquivo de origem original.
      * @param destinationFile Arquivo de destino gravado.

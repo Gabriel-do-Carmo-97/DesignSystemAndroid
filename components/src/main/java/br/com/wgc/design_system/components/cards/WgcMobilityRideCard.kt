@@ -28,11 +28,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -45,32 +45,32 @@ fun WgcMobilityRideCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.mobilityYellow99)),
+                    .size(WgcCoreDsSize.S48.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                    .background(Color(WgcCoreDsColors.yellow3)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.DirectionsCar,
                     contentDescription = null,
                     tint = Color.Black,
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(

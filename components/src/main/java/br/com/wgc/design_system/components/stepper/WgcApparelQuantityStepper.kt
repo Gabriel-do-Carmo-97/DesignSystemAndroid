@@ -22,8 +22,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Seletor de quantidade no estilo Clothee (WgcApparelQuantityStepper).
@@ -40,7 +40,7 @@ fun WgcApparelQuantityStepper(
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
     ) {
         // Botão de diminuir
         Box(
@@ -48,8 +48,8 @@ fun WgcApparelQuantityStepper(
                 .size(32.dp)
                 .clip(CircleShape)
                 .background(
-                    if (count > minCount) Color(WgcCoreDsColors.apparelPrimary)
-                    else Color(WgcCoreDsColors.apparelPrimary).copy(alpha = 0.4f)
+                    if (count > minCount) Color(WgcCoreDsColors.purple7)
+                    else Color(WgcCoreDsColors.purple7).copy(alpha = 0.4f)
                 )
                 .clickable(enabled = count > minCount) { onCountChange(count - 1) },
             contentAlignment = Alignment.Center
@@ -67,7 +67,7 @@ fun WgcApparelQuantityStepper(
             text = count.toString(),
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.apparelDark)
+            color = Color(WgcCoreDsColors.grayDark18)
         )
 
         // Botão de aumentar
@@ -76,8 +76,8 @@ fun WgcApparelQuantityStepper(
                 .size(32.dp)
                 .clip(CircleShape)
                 .background(
-                    if (count < maxCount) Color(WgcCoreDsColors.apparelPrimary)
-                    else Color(WgcCoreDsColors.apparelPrimary).copy(alpha = 0.4f)
+                    if (count < maxCount) Color(WgcCoreDsColors.purple7)
+                    else Color(WgcCoreDsColors.purple7).copy(alpha = 0.4f)
                 )
                 .clickable(enabled = count < maxCount) { onCountChange(count + 1) },
             contentAlignment = Alignment.Center

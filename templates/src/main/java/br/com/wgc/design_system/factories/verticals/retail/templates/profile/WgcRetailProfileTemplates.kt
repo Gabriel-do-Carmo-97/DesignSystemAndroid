@@ -60,7 +60,7 @@ fun WgcKutukuSettingItem(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
-            .background(Color(WgcCoreDsColors.retailBackground))
+            .background(Color(WgcCoreDsColors.blueLight39))
             .clickable(onClick = onClick)
             .padding(horizontal = WgcCoreDsSpacing.md.dp, vertical = WgcCoreDsSpacing.md.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -73,7 +73,7 @@ fun WgcKutukuSettingItem(
             Icon(
                 imageVector = icon,
                 contentDescription = title,
-                tint = if (isDestructive) Color(WgcCoreDsColors.retailAlertRed) else Color(WgcCoreDsColors.retailDark),
+                tint = if (isDestructive) Color(WgcCoreDsColors.red23) else Color(WgcCoreDsColors.grayDark2),
                 modifier = Modifier.size(24.dp)
             )
 
@@ -81,7 +81,7 @@ fun WgcKutukuSettingItem(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = if (isDestructive) FontWeight.Bold else FontWeight.SemiBold,
-                color = if (isDestructive) Color(WgcCoreDsColors.retailAlertRed) else Color(WgcCoreDsColors.retailDark)
+                color = if (isDestructive) Color(WgcCoreDsColors.red23) else Color(WgcCoreDsColors.grayDark2)
             )
         }
 
@@ -93,12 +93,12 @@ fun WgcKutukuSettingItem(
                 Text(
                     text = value,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.retailSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.retailSecondaryText),
+                    tint = Color(WgcCoreDsColors.gray4),
                     modifier = Modifier.size(16.dp)
                 )
             }
@@ -106,7 +106,7 @@ fun WgcKutukuSettingItem(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                 contentDescription = null,
-                tint = Color(WgcCoreDsColors.retailSecondaryText),
+                tint = Color(WgcCoreDsColors.gray4),
                 modifier = Modifier.size(16.dp)
             )
         }
@@ -133,7 +133,7 @@ fun WgcKutukuSettingsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.retailSurface))
+            .background(Color(WgcCoreDsColors.white))
             .verticalScroll(rememberScrollState())
             .padding(horizontal = WgcCoreDsSpacing.lg.dp, vertical = WgcCoreDsSpacing.sm.dp)
     ) {
@@ -149,7 +149,7 @@ fun WgcKutukuSettingsScreen(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar",
-                    tint = Color(WgcCoreDsColors.retailDark)
+                    tint = Color(WgcCoreDsColors.grayDark2)
                 )
             }
 
@@ -157,14 +157,14 @@ fun WgcKutukuSettingsScreen(
                 text = "Settings",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.retailDark)
+                color = Color(WgcCoreDsColors.grayDark2)
             )
 
             IconButton(onClick = {}) {
                 Icon(
                     imageVector = Icons.Default.MoreVert,
                     contentDescription = "Mais opções",
-                    tint = Color(WgcCoreDsColors.retailDark)
+                    tint = Color(WgcCoreDsColors.grayDark2)
                 )
             }
         }
@@ -176,7 +176,7 @@ fun WgcKutukuSettingsScreen(
             text = "General",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))
@@ -217,7 +217,7 @@ fun WgcKutukuSettingsScreen(
             text = "Preferences",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
 
         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm.dp))

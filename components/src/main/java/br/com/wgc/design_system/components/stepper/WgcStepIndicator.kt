@@ -26,24 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Estado individual de cada etapa no Stepper.
- */
-enum class WgcStepState {
-    COMPLETED,
-    CURRENT,
-    UPCOMING
-}
-
-/**
- * Item representativo de uma etapa do formulário/fluxo (WgcStepItem).
- */
-data class WgcStepItem(
-    val title: String,
-    val state: WgcStepState
-)
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Indicador de Etapas Corporativo Horizontal (WgcStepIndicator).
@@ -76,7 +59,7 @@ fun WgcStepIndicator(
 
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Box(
                     modifier = Modifier
@@ -120,8 +103,8 @@ fun WgcStepIndicator(
                 HorizontalDivider(
                     modifier = Modifier
                         .weight(1f)
-                        .padding(horizontal = WgcCoreDsSpacing.xxs4.dp)
-                        .padding(bottom = WgcCoreDsSpacing.md16.dp),
+                        .padding(horizontal = WgcCoreDsSpacing.XXS4.dp)
+                        .padding(bottom = WgcCoreDsSpacing.MD16.dp),
                     thickness = 2.dp,
                     color = dividerColor
                 )
@@ -135,7 +118,7 @@ fun WgcStepIndicator(
 @Composable
 private fun WgcStepIndicatorPreview() {
     MaterialTheme {
-        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Surface(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             val sampleSteps = listOf(
                 WgcStepItem(title = "Dados", state = WgcStepState.COMPLETED),
                 WgcStepItem(title = "Endereço", state = WgcStepState.CURRENT),

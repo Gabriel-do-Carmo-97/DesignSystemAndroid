@@ -20,11 +20,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.theme.WgcTheme
@@ -40,20 +40,20 @@ fun WgcFashionItemCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp)) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s120.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .height(WgcCoreDsSize.S120.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color.LightGray)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             Text(
                 text = brandName.uppercase(),
@@ -67,7 +67,7 @@ fun WgcFashionItemCard(
                 fontWeight = FontWeight.Bold
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -78,7 +78,7 @@ fun WgcFashionItemCard(
                         text = "R$ " + String.format("%.2f", price),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.departmentFashionRed)
+                        color = Color(WgcCoreDsColors.red8)
                     )
                     Text(
                         text = installments,
@@ -100,7 +100,7 @@ fun WgcFashionItemCard(
 @Composable
 private fun WgcFashionItemCardPreview() {
     WgcTheme {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcFashionItemCard(
                 brandName = "Zara",
                 itemTitle = "Jaqueta de Couro Slim Fit",

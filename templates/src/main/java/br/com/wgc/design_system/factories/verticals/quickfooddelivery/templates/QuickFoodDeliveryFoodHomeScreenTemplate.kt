@@ -38,11 +38,11 @@ data class QuickFoodDeliveryHomeUiState(
     val address: String = "Av. Paulista, 1000 - Bela Vista",
     val searchQuery: String = "",
     val categories: List<WgcSquareCategoryItem> = listOf(
-        WgcSquareCategoryItem("1", "Entrega 15m", "⚡", Color(WgcCoreDsColors.foodDeliveryDarkBlue)),
-        WgcSquareCategoryItem("2", "Restaurantes", "🍕", Color(WgcCoreDsColors.quickShopCardBlue)),
-        WgcSquareCategoryItem("3", "Cupons", "🎟️", Color(WgcCoreDsColors.quickShopPeachBg)),
-        WgcSquareCategoryItem("4", "Mercado", "🛒", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
-        WgcSquareCategoryItem("5", "Bebidas", "🥤", Color(WgcCoreDsColors.quickShopCardPurple))
+        WgcSquareCategoryItem("1", "Entrega 15m", "⚡", Color(WgcCoreDsColors.blueDark18)),
+        WgcSquareCategoryItem("2", "Restaurantes", "🍕", Color(WgcCoreDsColors.blueLight18)),
+        WgcSquareCategoryItem("3", "Cupons", "🎟️", Color(WgcCoreDsColors.orangeLight1)),
+        WgcSquareCategoryItem("4", "Mercado", "🛒", Color(WgcCoreDsColors.greenLight9)),
+        WgcSquareCategoryItem("5", "Bebidas", "🥤", Color(WgcCoreDsColors.pinkLight1))
     ),
     val restaurants: List<QuickFoodDeliveryRestaurantItem> = listOf(
         QuickFoodDeliveryRestaurantItem("1", "Pizza Express", "4.9", "Pizzaria", "15-25 min", "Grátis", "R$ 12 OFF"),
@@ -105,7 +105,7 @@ fun WgcQuickFoodDeliveryHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(WgcCoreDsColors.grey100))
+                .background(Color(WgcCoreDsColors.gray100))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -122,7 +122,7 @@ fun WgcQuickFoodDeliveryHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.foodDeliveryDarkBlue))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueDark18))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
@@ -139,7 +139,7 @@ fun WgcQuickFoodDeliveryHomeScreenContent(
                     text = "Restaurantes em Destaque",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.foodDeliveryDarkBlue)
+                    color = Color(WgcCoreDsColors.blueDark18)
                 )
             }
 

@@ -18,9 +18,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Pílula de categoria do ecossistema Nexkart (WgcGadgetShopCategoryPill).
@@ -31,25 +31,25 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 fun WgcGadgetShopCategoryPill(
     modifier: Modifier = Modifier,
     title: String,
-    backgroundColor: Color = Color(WgcCoreDsColors.gadgetShopCatBeauty),
+    backgroundColor: Color = Color(WgcCoreDsColors.pinkLight2),
     isSelected: Boolean = false,
     onClick: () -> Unit = {}
 ) {
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.gadgetShopPrimary) else backgroundColor
+                if (isSelected) Color(WgcCoreDsColors.blue39) else backgroundColor
             )
             .clickable(onClick = onClick)
-            .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
+            .padding(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.XS8.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = title,
             style = MaterialTheme.typography.labelMedium,
             fontWeight = FontWeight.SemiBold,
-            color = if (isSelected) Color.White else Color(WgcCoreDsColors.gadgetShopDark)
+            color = if (isSelected) Color.White else Color(WgcCoreDsColors.blueDark6)
         )
     }
 }
@@ -60,13 +60,13 @@ private fun WgcNexkartCategoryPillPreview() {
     Row {
         WgcGadgetShopCategoryPill(
             title = "Beauty",
-            backgroundColor = Color(WgcCoreDsColors.gadgetShopCatBeauty),
+            backgroundColor = Color(WgcCoreDsColors.pinkLight2),
             isSelected = false
         )
         Spacer(modifier = Modifier.width(8.dp))
         WgcGadgetShopCategoryPill(
             title = "Gadgets",
-            backgroundColor = Color(WgcCoreDsColors.gadgetShopCatGadgets),
+            backgroundColor = Color(WgcCoreDsColors.orangeLight2),
             isSelected = true
         )
     }

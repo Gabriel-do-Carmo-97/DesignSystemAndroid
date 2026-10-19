@@ -15,16 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-
-/**
- * Item de trilha de navegação (Breadcrumb).
- */
-data class WgcBreadcrumbItem(
-    val id: String,
-    val title: String
-)
 
 /**
  * WgcBreadcrumb
@@ -38,7 +30,7 @@ fun WgcBreadcrumb(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = modifier.padding(vertical = WgcCoreDsSpacing.xs.dp),
+        modifier = modifier.padding(vertical = WgcCoreDsSpacing.XS.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         items.forEachIndexed { index, item ->
@@ -55,7 +47,7 @@ fun WgcBreadcrumb(
                     imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xxs.dp)
+                    modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XXS.dp)
                 )
             }
         }

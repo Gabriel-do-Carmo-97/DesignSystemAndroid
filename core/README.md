@@ -26,6 +26,45 @@ Os tokens são expostos através de classes imutáveis e padronizadas:
 
 ---
 
+## 🗂️ Organização dos pacotes Kotlin
+
+As APIs públicas do `:core` são agrupadas por tema. A reorganização dos pacotes é uma mudança
+incompatível com imports antigos: atualize os imports dos consumidores para o pacote indicado.
+Não há aliases retrocompatíveis no pacote anterior.
+
+| Pacote | Conteúdo |
+| :--- | :--- |
+| `br.com.wgc.design_system.core.tokens` | Escalas de espaçamento, raio, tamanho, elevação, tipografia, breakpoints e layout (`WgcCoreDsSpacing`, `WgcCoreDsSize`, `WgcWindowSizeClass`, `WgcMirrorBehavior`). |
+| `br.com.wgc.design_system.core.brand` | Marcas, temas por marca, ilustrações e assets (`WgcBrandTheme`, `WgcBrandAssetSet`). |
+| `br.com.wgc.design_system.core.theme` | Paleta de cores, contrato/implementação de tema, contexto e modo visual (`WgcThemeTokens`, `WgcThemeMode`). |
+| `br.com.wgc.design_system.core.accessibility` | Cálculos de contraste, harmonização e paleta de alto contraste (`WgcContrastCalculator`, `WgcHslColor`). |
+| `br.com.wgc.design_system.core.motion` | Durações, curvas e coreografia de animações (`WgcCoreDsMotion`, `WgcCubicBezier`). |
+| `br.com.wgc.design_system.core.feedback` | Tokens de feedback tátil e despacho de feedback (`WgcCoreDsHaptics`, `WgcFeedbackEvent`). |
+| `br.com.wgc.design_system.core.telemetry` | Eventos, listeners e tracker de telemetria (`WgcTelemetryEvent`, `WgcTelemetryTracker`). |
+| `br.com.wgc.design_system.core.remote` | Carga e representação de tokens remotos (`WgcRemoteTokensPayload`). |
+| `br.com.wgc.design_system.core.metadata` | Metadados de maturidade e estabilidade (`WgcMaturity`, `WgcMaturityLevel`). |
+| `br.com.wgc.design_system.constants` | Constantes centralizadas do módulo (`CoreConstants`). |
+
+Exemplo de imports e uso em Kotlin:
+
+```kotlin
+import br.com.wgc.design_system.core.brand.WgcBrandTheme
+import br.com.wgc.design_system.core.theme.WgcThemeContext
+import br.com.wgc.design_system.core.theme.WgcThemeMode
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
+
+val theme = WgcBrandTheme.finance()
+WgcThemeContext.updateTheme(WgcThemeMode.DARK, "finance")
+val sectionSpacingDp = WgcCoreDsSpacing.LG24
+```
+
+Cada declaração pública de tipo fica em seu próprio arquivo e possui KDoc em português com
+finalidade, uma seção **“Quando usar:”** e um exemplo breve. Constantes e entradas de enums
+usam `UPPER_SNAKE_CASE`. Os provedores podem agrupar seus próprios tokens/funções.
+Essa convenção aplica-se exclusivamente ao módulo `:core`.
+
+---
+
 ## 🚫 Regras Invioláveis do Módulo
 
 1. **Zero Compose Runtime (`@Composable`):** O `:core` deve permanecer agnóstico de UI framework. Ele manipula apenas primitivas e objetos leves em Kotlin puro.

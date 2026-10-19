@@ -26,9 +26,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de exibição e edição de endereço de entrega (WgcAddressCard).
@@ -41,8 +41,8 @@ fun WgcAddressCard(
     contactPhone: String? = "+44-784232",
     onChangeClick: () -> Unit
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.3f)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
+    val borderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.3f)
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -53,7 +53,7 @@ fun WgcAddressCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md.dp),
+                .padding(WgcCoreDsSpacing.MD.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.Top
         ) {
@@ -61,30 +61,30 @@ fun WgcAddressCard(
                 Icon(
                     imageVector = Icons.Outlined.LocationOn,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.trendFashionPink),
+                    tint = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier
                         .size(24.dp)
                         .padding(top = 2.dp)
                 )
-                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.size(WgcCoreDsSpacing.XS.dp))
                 Column {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                     Text(
                         text = address,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.textSecondary)
+                        color = Color(WgcCoreDsColors.gray6)
                     )
                     if (contactPhone != null) {
-                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+                        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
                         Text(
                             text = "Contact: $contactPhone",
                             style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Medium),
-                            color = Color(WgcCoreDsColors.trendFashionDark)
+                            color = Color(WgcCoreDsColors.blueDark19)
                         )
                     }
                 }
@@ -94,7 +94,7 @@ fun WgcAddressCard(
                 Icon(
                     imageVector = Icons.Outlined.Edit,
                     contentDescription = "Editar endereço",
-                    tint = Color(WgcCoreDsColors.trendFashionPink),
+                    tint = Color(WgcCoreDsColors.pink4),
                     modifier = Modifier.size(20.dp)
                 )
             }
@@ -105,7 +105,7 @@ fun WgcAddressCard(
 @Preview(name = "Address Card Preview", showBackground = true)
 @Composable
 private fun WgcAddressCardPreview() {
-    Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+    Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
         WgcAddressCard(
             onChangeClick = {}
         )

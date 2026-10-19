@@ -22,8 +22,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -49,8 +49,8 @@ fun WgcApparelCategoryAvatar(
                 .size(60.dp)
                 .clip(CircleShape)
                 .background(
-                    if (isSelected) Color(WgcCoreDsColors.apparelPrimaryLight)
-                    else Color(WgcCoreDsColors.apparelSurface)
+                    if (isSelected) Color(WgcCoreDsColors.purpleLight2)
+                    else Color(WgcCoreDsColors.grayLight8)
                 ),
             contentAlignment = Alignment.Center
         ) {
@@ -64,19 +64,19 @@ fun WgcApparelCategoryAvatar(
                 Text(
                     text = name.take(2).uppercase(),
                     style = MaterialTheme.typography.titleMedium,
-                    color = if (isSelected) Color(WgcCoreDsColors.apparelPrimary) else Color(WgcCoreDsColors.apparelDark),
+                    color = if (isSelected) Color(WgcCoreDsColors.purple7) else Color(WgcCoreDsColors.grayDark18),
                     fontWeight = FontWeight.Bold
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
         Text(
             text = name,
             style = MaterialTheme.typography.bodySmall,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color(WgcCoreDsColors.apparelPrimary) else Color(WgcCoreDsColors.apparelDark),
+            color = if (isSelected) Color(WgcCoreDsColors.purple7) else Color(WgcCoreDsColors.grayDark18),
             textAlign = TextAlign.Center,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis

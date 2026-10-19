@@ -85,7 +85,7 @@ fun WgcClotheeSettingsTemplate(
                     modifier = Modifier
                         .size(88.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.apparelSurface)),
+                        .background(Color(WgcCoreDsColors.grayLight8)),
                     contentAlignment = Alignment.Center
                 ) {
                     if (!avatarUrl.isNullOrEmpty()) {
@@ -99,7 +99,7 @@ fun WgcClotheeSettingsTemplate(
                             text = userName.take(1),
                             style = MaterialTheme.typography.headlineMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.apparelPrimary)
+                            color = Color(WgcCoreDsColors.purple7)
                         )
                     }
                 }
@@ -112,7 +112,7 @@ fun WgcClotheeSettingsTemplate(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.apparelSurface))
+                    .background(Color(WgcCoreDsColors.grayLight8))
                     .padding(WgcCoreDsSpacing.md16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
@@ -122,19 +122,19 @@ fun WgcClotheeSettingsTemplate(
                         text = userName,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = userEmail,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = userPhone,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.apparelSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
                 }
 
@@ -143,7 +143,7 @@ fun WgcClotheeSettingsTemplate(
                         text = "Edit",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelPrimary)
+                        color = Color(WgcCoreDsColors.purple7)
                     )
                 }
             }
@@ -197,7 +197,7 @@ fun WgcClotheeSettingsTemplate(
                     text = "Sign Out",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelAlertRed)
+                    color = Color(WgcCoreDsColors.red24)
                 )
             }
 
@@ -216,7 +216,7 @@ private fun SettingsItemRow(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-            .background(Color(WgcCoreDsColors.apparelSurface))
+            .background(Color(WgcCoreDsColors.grayLight8))
             .clickable(onClick = onClick)
             .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.md16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -226,7 +226,7 @@ private fun SettingsItemRow(
             Icon(
                 imageVector = icon,
                 contentDescription = title,
-                tint = Color(WgcCoreDsColors.apparelDark),
+                tint = Color(WgcCoreDsColors.grayDark18),
                 modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
@@ -234,14 +234,14 @@ private fun SettingsItemRow(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
         }
 
         Icon(
             imageVector = Icons.Default.ChevronRight,
             contentDescription = "Abrir",
-            tint = Color(WgcCoreDsColors.apparelSecondaryText)
+            tint = Color(WgcCoreDsColors.gray12)
         )
     }
 }

@@ -125,13 +125,13 @@ fun WgcOrganizzeDashboardTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSpacing.xxl40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.personalFinancePrimaryLight)),
+                            .background(Color(WgcCoreDsColors.cyanLight2)),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.Person,
                             contentDescription = "Perfil",
-                            tint = Color(WgcCoreDsColors.personalFinancePrimary),
+                            tint = Color(WgcCoreDsColors.cyan3),
                             modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
                         )
                     }
@@ -141,12 +141,12 @@ fun WgcOrganizzeDashboardTemplate(
                             text = "Olá, $userName 👋",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.personalFinanceDark)
+                            color = Color(WgcCoreDsColors.blueDark33)
                         )
                         Text(
                             text = "Suas finanças em dia",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                            color = Color(WgcCoreDsColors.gray11)
                         )
                     }
                 }
@@ -161,7 +161,7 @@ fun WgcOrganizzeDashboardTemplate(
                     Icon(
                         imageVector = Icons.Default.NotificationsNone,
                         contentDescription = "Notificações",
-                        tint = Color(WgcCoreDsColors.personalFinanceDark),
+                        tint = Color(WgcCoreDsColors.blueDark33),
                         modifier = Modifier.size(WgcCoreDsSpacing.lg24.dp)
                     )
                 }
@@ -195,12 +195,12 @@ fun WgcOrganizzeDashboardTemplate(
                     text = "Minhas contas",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.personalFinanceDark)
+                    color = Color(WgcCoreDsColors.blueDark33)
                 )
                 Text(
                     text = "${accounts.size} contas",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                    color = Color(WgcCoreDsColors.gray11)
                 )
             }
 
@@ -234,13 +234,13 @@ fun WgcOrganizzeDashboardTemplate(
                     text = "Cartões de crédito",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.personalFinanceDark)
+                    color = Color(WgcCoreDsColors.blueDark33)
                 )
                 TextButton(onClick = onViewAllCardsClick) {
                     Text(
                         text = "Ver todos",
                         style = MaterialTheme.typography.labelLarge,
-                        color = Color(WgcCoreDsColors.personalFinancePrimary),
+                        color = Color(WgcCoreDsColors.cyan3),
                         fontWeight = FontWeight.SemiBold
                     )
                 }
@@ -281,13 +281,13 @@ fun WgcOrganizzeDashboardTemplate(
                     text = "Últimos lançamentos",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.personalFinanceDark)
+                    color = Color(WgcCoreDsColors.blueDark33)
                 )
                 TextButton(onClick = onViewAllTransactionsClick) {
                     Text(
                         text = "Ver extrato",
                         style = MaterialTheme.typography.labelLarge,
-                        color = Color(WgcCoreDsColors.personalFinancePrimary),
+                        color = Color(WgcCoreDsColors.cyan3),
                         fontWeight = FontWeight.SemiBold
                     )
                 }
@@ -383,13 +383,13 @@ private fun AccountCardItem(
                 text = account.name,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark)
+                color = Color(WgcCoreDsColors.blueDark33)
             )
 
             Text(
                 text = account.type,
                 style = MaterialTheme.typography.labelSmall,
-                color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                color = Color(WgcCoreDsColors.gray11)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -398,7 +398,7 @@ private fun AccountCardItem(
                 text = if (isBalanceVisible) account.balance else "R$ •••",
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color(WgcCoreDsColors.personalFinanceDark)
+                color = Color(WgcCoreDsColors.blueDark33)
             )
         }
     }

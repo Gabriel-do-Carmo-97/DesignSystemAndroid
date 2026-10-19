@@ -10,7 +10,7 @@ data class ShopEaseProduct(
     val price: String,
     val originalPrice: String? = null,
     val discountBadge: String? = "20% off",
-    val backgroundColor: Color = Color(WgcCoreDsColors.quickShopCardRed),
+    val backgroundColor: Color = Color(WgcCoreDsColors.redLight7),
     val rating: String = "4.9",
     val description: String = "Super comfortable, high-performance running sneakers featuring responsive cushioning and breathable mesh.",
     val isFavorite: Boolean = false
@@ -41,7 +41,7 @@ object ShopEaseMockData {
             price = "$35.00",
             originalPrice = "$50.00",
             discountBadge = "30% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardRed),
+            backgroundColor = Color(WgcCoreDsColors.redLight7),
             isFavorite = true
         ),
         ShopEaseProduct(
@@ -51,7 +51,7 @@ object ShopEaseMockData {
             price = "$42.00",
             originalPrice = "$60.00",
             discountBadge = "25% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardPurple),
+            backgroundColor = Color(WgcCoreDsColors.pinkLight1),
             isFavorite = false
         ),
         ShopEaseProduct(
@@ -61,7 +61,7 @@ object ShopEaseMockData {
             price = "$22.00",
             originalPrice = "$30.00",
             discountBadge = "15% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardGreen),
+            backgroundColor = Color(WgcCoreDsColors.greenLight9),
             isFavorite = true
         ),
         ShopEaseProduct(
@@ -71,7 +71,7 @@ object ShopEaseMockData {
             price = "$120.00",
             originalPrice = "$150.00",
             discountBadge = "20% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardBlue),
+            backgroundColor = Color(WgcCoreDsColors.blueLight18),
             isFavorite = false
         ),
         ShopEaseProduct(
@@ -81,7 +81,7 @@ object ShopEaseMockData {
             price = "$48.00",
             originalPrice = "$65.00",
             discountBadge = "25% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardOrange),
+            backgroundColor = Color(WgcCoreDsColors.orangeLight4),
             isFavorite = true
         ),
         ShopEaseProduct(
@@ -91,7 +91,7 @@ object ShopEaseMockData {
             price = "$39.00",
             originalPrice = "$55.00",
             discountBadge = "30% off",
-            backgroundColor = Color(WgcCoreDsColors.quickShopCardRed),
+            backgroundColor = Color(WgcCoreDsColors.redLight7),
             isFavorite = false
         )
     )

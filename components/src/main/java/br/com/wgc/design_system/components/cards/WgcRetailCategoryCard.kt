@@ -24,9 +24,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -40,14 +40,14 @@ fun WgcRetailCategoryCard(
     productCountText: String,
     imageUrl: String? = null,
     isImageOnLeft: Boolean = false,
-    backgroundColor: Color = Color(WgcCoreDsColors.retailBackground),
+    backgroundColor: Color = Color(WgcCoreDsColors.blueLight39),
     onClick: () -> Unit = {}
 ) {
     Row(
         modifier = modifier
             .fillMaxWidth()
             .height(110.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XL.dp))
             .background(backgroundColor)
             .clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically
@@ -65,7 +65,7 @@ fun WgcRetailCategoryCard(
                 productCountText = productCountText,
                 modifier = Modifier
                     .weight(1f)
-                    .padding(horizontal = WgcCoreDsSpacing.md.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.MD.dp),
                 horizontalAlignment = Alignment.Start
             )
         } else {
@@ -74,7 +74,7 @@ fun WgcRetailCategoryCard(
                 productCountText = productCountText,
                 modifier = Modifier
                     .weight(1f)
-                    .padding(horizontal = WgcCoreDsSpacing.md.dp),
+                    .padding(horizontal = WgcCoreDsSpacing.MD.dp),
                 horizontalAlignment = Alignment.Start
             )
             CategoryCardImage(
@@ -104,13 +104,13 @@ private fun CategoryCardText(
             text = title,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.retailDark)
+            color = Color(WgcCoreDsColors.grayDark2)
         )
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXXS.dp))
         Text(
             text = productCountText,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(WgcCoreDsColors.retailSecondaryText)
+            color = Color(WgcCoreDsColors.gray4)
         )
     }
 }
@@ -135,14 +135,14 @@ private fun CategoryCardImage(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(WgcCoreDsColors.retailPrimaryLight).copy(alpha = 0.5f)),
+                    .background(Color(WgcCoreDsColors.blueLight21).copy(alpha = 0.5f)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = title.take(1).uppercase(),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailPrimary)
+                    color = Color(WgcCoreDsColors.blue33)
                 )
             }
         }

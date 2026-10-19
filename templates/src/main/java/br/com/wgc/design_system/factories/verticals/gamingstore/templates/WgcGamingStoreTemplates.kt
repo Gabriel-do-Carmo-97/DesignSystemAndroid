@@ -23,17 +23,17 @@ fun WgcGamingStoreCatalogTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.gamingStoreBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blueDark20)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("GAMING STORE • Promoção de Fim de Semana", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
     ) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)) {
             items(GamingStoreMockData.sampleGames) { game ->
-                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.gamingStoreCardBg))) {
+                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blue4))) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(game.title, fontWeight = FontWeight.Bold, color = Color.White)
-                        Text("${game.discount} • R$ ${"%,.2f".format(game.price)}", color = Color(WgcCoreDsColors.gamingStoreAccent), fontWeight = FontWeight.Bold)
+                        Text("${game.discount} • R$ ${"%,.2f".format(game.price)}", color = Color(WgcCoreDsColors.blue45), fontWeight = FontWeight.Bold)
                     }
                 }
             }

@@ -8,16 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 class WgcSkeletonScreenshotTest {
 
     @Preview(showBackground = true)
     @Composable
     fun WgcSkeletonVariantsPreview() {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp)) {
             WgcSkeletonListItem()
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.MD.dp))
             WgcSkeletonCard()
         }
     }

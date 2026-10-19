@@ -23,7 +23,7 @@ fun WgcCobasiHomeTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.petSuperstoreBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue18)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Pet Superstore • O Shopping do seu Animal", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

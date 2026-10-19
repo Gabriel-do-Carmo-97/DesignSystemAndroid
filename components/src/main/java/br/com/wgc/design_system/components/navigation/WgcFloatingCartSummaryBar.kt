@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -27,7 +27,7 @@ fun WgcFloatingCartSummaryBar(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .padding(WgcCoreDsSpacing.md16.dp),
+            .padding(WgcCoreDsSpacing.MD16.dp),
         shape = RoundedCornerShape(12.dp),
         color = containerColor,
         shadowElevation = 8.dp
@@ -35,7 +35,7 @@ fun WgcFloatingCartSummaryBar(
         Button(
             onClick = onClick,
             colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
-            contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.sm12.dp)
+            contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp, vertical = WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),

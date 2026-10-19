@@ -27,9 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 import br.com.wgc.design_system.components.stepper.WgcRetailQuantityStepper
 
@@ -54,26 +54,26 @@ fun WgcRetailCartItemRow(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = WgcCoreDsSpacing.sm.dp),
+                .padding(vertical = WgcCoreDsSpacing.SM.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Checkbox(
                 checked = isSelected,
                 onCheckedChange = onSelectionChange,
                 colors = CheckboxDefaults.colors(
-                    checkedColor = Color(WgcCoreDsColors.retailPrimary),
-                    uncheckedColor = Color(WgcCoreDsColors.retailBorder)
+                    checkedColor = Color(WgcCoreDsColors.blue33),
+                    uncheckedColor = Color(WgcCoreDsColors.blueLight10)
                 )
             )
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XXS.dp))
 
             // Imagem do produto
             Box(
                 modifier = Modifier
                     .size(80.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg.dp))
-                    .background(Color(WgcCoreDsColors.retailBackground)),
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.LG.dp))
+                    .background(Color(WgcCoreDsColors.blueLight39)),
                 contentAlignment = Alignment.Center
             ) {
                 if (!imageUrl.isNullOrEmpty()) {
@@ -86,31 +86,31 @@ fun WgcRetailCartItemRow(
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(Color(WgcCoreDsColors.retailPrimaryLight).copy(alpha = 0.5f)),
+                            .background(Color(WgcCoreDsColors.blueLight21).copy(alpha = 0.5f)),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = title.take(2).uppercase(),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.retailPrimary)
+                            color = Color(WgcCoreDsColors.blue33)
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM.dp))
 
             // Conteúdo e Stepper
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS.dp)
             ) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark),
+                    color = Color(WgcCoreDsColors.grayDark2),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -118,7 +118,7 @@ fun WgcRetailCartItemRow(
                 Text(
                     text = "Color: $colorVariant",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.retailSecondaryText)
+                    color = Color(WgcCoreDsColors.gray4)
                 )
 
                 Row(
@@ -135,14 +135,14 @@ fun WgcRetailCartItemRow(
                         text = price,
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
             }
         }
 
         HorizontalDivider(
-            color = Color(WgcCoreDsColors.retailBorder).copy(alpha = 0.5f),
+            color = Color(WgcCoreDsColors.blueLight10).copy(alpha = 0.5f),
             thickness = 1.dp
         )
     }

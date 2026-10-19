@@ -23,7 +23,7 @@ fun WgcBurgerKingMenuTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.flameFastFoodBrown)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.orangeDark2)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Flame Burger • Grelhados Artesanais", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -33,7 +33,7 @@ fun WgcBurgerKingMenuTemplate(modifier: Modifier = Modifier) {
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                     Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
                         Text(item.name, fontWeight = FontWeight.Bold)
-                        if (item.fireGrilled) Text("🔥 Grelhado no Fogo de Verdade", color = Color(WgcCoreDsColors.flameFastFoodOrange), fontSize = 14.sp)
+                        if (item.fireGrilled) Text("🔥 Grelhado no Fogo de Verdade", color = Color(WgcCoreDsColors.red7), fontSize = 14.sp)
                         Text("R$ ${"%,.2f".format(item.price)}", fontWeight = FontWeight.ExtraBold)
                     }
                 }

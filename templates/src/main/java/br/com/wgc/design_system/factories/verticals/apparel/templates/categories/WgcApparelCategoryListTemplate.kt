@@ -76,12 +76,12 @@ fun WgcClotheeCategoryListTemplate(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.apparelSurface))
+                            .background(Color(WgcCoreDsColors.grayLight8))
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back",
-                            tint = Color(WgcCoreDsColors.apparelDark)
+                            tint = Color(WgcCoreDsColors.grayDark18)
                         )
                     }
 
@@ -91,7 +91,7 @@ fun WgcClotheeCategoryListTemplate(
                         text = "Shop by Categories",
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.apparelDark)
+                        color = Color(WgcCoreDsColors.grayDark18)
                     )
                 }
             }
@@ -109,7 +109,7 @@ fun WgcClotheeCategoryListTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.apparelSurface))
+                            .background(Color(WgcCoreDsColors.grayLight8))
                             .clickable { onCategoryClick(category) }
                             .padding(WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -132,7 +132,7 @@ fun WgcClotheeCategoryListTemplate(
                                     text = category.name.take(2).uppercase(),
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.apparelPrimary)
+                                    color = Color(WgcCoreDsColors.purple7)
                                 )
                             }
                         }
@@ -144,19 +144,19 @@ fun WgcClotheeCategoryListTemplate(
                                 text = category.name,
                                 style = MaterialTheme.typography.bodyLarge,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(WgcCoreDsColors.apparelDark)
+                                color = Color(WgcCoreDsColors.grayDark18)
                             )
                             Text(
                                 text = "${category.itemCount} Items",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.apparelSecondaryText)
+                                color = Color(WgcCoreDsColors.gray12)
                             )
                         }
 
                         Icon(
                             imageVector = Icons.Default.ChevronRight,
                             contentDescription = "Ver categoria",
-                            tint = Color(WgcCoreDsColors.apparelSecondaryText)
+                            tint = Color(WgcCoreDsColors.gray12)
                         )
                     }
                 }

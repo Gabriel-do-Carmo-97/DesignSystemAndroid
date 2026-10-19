@@ -4,7 +4,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.wgc.design_system.commons.constants.ComponentsConstants
 
 /**
- * Anotação Multi-Preview para validação de acessibilidade tipográfica com escala normal (1.0x) e ampliada (1.5x).
+ * Gera previews com escala de fonte normal (1,0×) e ampliada (1,5×).
+ *
+ * Use para verificar legibilidade, quebra de linha e clipping em diferentes escalas de acessibilidade:
+ * `@FontScalePreviews @Composable fun TextPreview() { Text("Texto de exemplo") }`.
  */
 @Preview(
     name = "Font Normal (1.0x)",

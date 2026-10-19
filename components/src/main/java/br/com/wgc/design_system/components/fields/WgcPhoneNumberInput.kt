@@ -29,7 +29,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * WgcPhoneNumberInput
@@ -71,7 +71,7 @@ fun WgcPhoneNumberInput(
                 Row(
                     modifier = Modifier
                         .clickable { expanded = true }
-                        .padding(start = WgcCoreDsSpacing.sm.dp, end = WgcCoreDsSpacing.xs.dp),
+                        .padding(start = WgcCoreDsSpacing.SM.dp, end = WgcCoreDsSpacing.XS.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(

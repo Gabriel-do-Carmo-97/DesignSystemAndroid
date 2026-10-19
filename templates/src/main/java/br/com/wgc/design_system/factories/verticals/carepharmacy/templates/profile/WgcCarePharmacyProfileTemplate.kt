@@ -36,7 +36,7 @@ fun WgcCarePharmacyProfileTemplate(
                     text = "Meu Perfil de Saúde",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark15)
                 )
             }
 

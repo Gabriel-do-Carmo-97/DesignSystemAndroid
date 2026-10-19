@@ -24,6 +24,10 @@ import br.com.wgc.design_system.commons.constants.ComponentsConstants
  * @param onClickLabel Descrição de acessibilidade para a ação de clique (TalkBack).
  * @param role Tipo de elemento semântico para acessibilidade (ex: Role.Button).
  * @param onClick Ação executada quando o clique respeita o intervalo de debounce.
+ *
+ * Use em ações que não devem ser disparadas repetidamente em rápida sucessão, como envio de formulário.
+ * A primeira chamada também precisa respeitar a janela desde o tempo inicial zero; normalmente isso
+ * permite a interação imediatamente. Exemplo: `Modifier.debouncedClick { submit() }`.
  */
 fun Modifier.debouncedClick(
     debounceTimeMs: Long = ComponentsConstants.Modifiers.DEFAULT_DEBOUNCE_TIME_MS,
@@ -68,6 +72,17 @@ fun Modifier.debouncedClick(
 /**
  * Extensão de Modifier para cliques com debounce com customização explícita
  * de [MutableInteractionSource] e [Indication].
+ *
+ * Use esta sobrecarga quando o componente já compartilha uma fonte de interação ou precisa controlar
+ * a indicação visual. Exemplo: `Modifier.debouncedClick(source, indication) { onSelect() }`.
+ *
+ * @param interactionSource Fonte de interações compartilhada com outros elementos.
+ * @param indication Indicação visual do clique; `null` desativa o ripple.
+ * @param debounceTimeMs Intervalo mínimo entre cliques aceitos, em milissegundos.
+ * @param enabled Se o clique está habilitado.
+ * @param onClickLabel Rótulo de acessibilidade para a ação.
+ * @param role Papel semântico do elemento.
+ * @param onClick Ação executada para clique aceito.
  */
 fun Modifier.debouncedClick(
     interactionSource: MutableInteractionSource,

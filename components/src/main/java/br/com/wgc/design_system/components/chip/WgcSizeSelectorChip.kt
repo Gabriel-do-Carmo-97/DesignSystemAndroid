@@ -22,9 +22,9 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Chip para seleção de numeração e tamanhos de calçados e vestuário (WgcSizeSelectorChip).
@@ -39,11 +39,11 @@ fun WgcSizeSelectorChip(
     onClick: () -> Unit
 ) {
     val stateDesc = if (isSelected) "Tamanho $size selecionado" else "Tamanho $size não selecionado"
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm.dp)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM.dp)
 
-    val activeColor = Color(WgcCoreDsColors.trendFashionPink)
+    val activeColor = Color(WgcCoreDsColors.pink4)
     val inactiveBg = Color(WgcCoreDsColors.white)
-    val inactiveBorder = Color(WgcCoreDsColors.trendFashionBorderGray)
+    val inactiveBorder = Color(WgcCoreDsColors.gray17)
 
     val backgroundColor = when {
         !isEnabled -> MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
@@ -54,7 +54,7 @@ fun WgcSizeSelectorChip(
     val textColor = when {
         !isEnabled -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
         isSelected -> Color.White
-        else -> Color(WgcCoreDsColors.trendFashionDark)
+        else -> Color(WgcCoreDsColors.blueDark19)
     }
 
     val border = if (isSelected || !isEnabled) null else BorderStroke(1.dp, inactiveBorder)
@@ -74,7 +74,7 @@ fun WgcSizeSelectorChip(
         Box(
             modifier = Modifier
                 .sizeIn(minWidth = 48.dp, minHeight = 36.dp)
-                .padding(horizontal = WgcCoreDsSpacing.sm.dp, vertical = WgcCoreDsSpacing.xs.dp),
+                .padding(horizontal = WgcCoreDsSpacing.SM.dp, vertical = WgcCoreDsSpacing.XS.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -92,7 +92,7 @@ fun WgcSizeSelectorChip(
 @Composable
 private fun WgcSizeSelectorChipPreview() {
     Row(
-        modifier = Modifier.padding(WgcCoreDsSpacing.md.dp),
+        modifier = Modifier.padding(WgcCoreDsSpacing.MD.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         WgcSizeSelectorChip(
@@ -100,13 +100,13 @@ private fun WgcSizeSelectorChipPreview() {
             isSelected = false,
             onClick = {}
         )
-        Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs.dp))
+        Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XS.dp))
         WgcSizeSelectorChip(
             size = "7 UK",
             isSelected = true,
             onClick = {}
         )
-        Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.xs.dp))
+        Box(modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.XS.dp))
         WgcSizeSelectorChip(
             size = "8 UK",
             isEnabled = false,

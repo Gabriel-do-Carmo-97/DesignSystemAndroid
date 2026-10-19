@@ -7,6 +7,6 @@ package br.com.wgc.design_system.navigation
  * reutilizando templates de telas do :ds-templates e componentes do :design-system.
  */
 object WgcNavigationFlowsInfo {
-    const val MODULE_NAME: String = "ds-navigation-flows"
-    const val VERSION: String = "1.0.0"
+    const val MODULE_NAME: String   = "ds-navigation-flows"
+    const val VERSION: String   = "1.0.0"
 }

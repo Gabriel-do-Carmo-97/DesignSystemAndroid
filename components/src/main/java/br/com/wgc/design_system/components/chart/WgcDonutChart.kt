@@ -22,15 +22,6 @@ import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
 import br.com.wgc.design_system.theme.WgcTheme
 
 /**
- * Fatia individual do gráfico Donut.
- */
-data class WgcDonutSlice(
-    val value: Float,
-    val color: Color,
-    val label: String = ""
-)
-
-/**
  * WgcDonutChart
  *
  * Gráfico de rosca (Donut Chart) desenhado em Canvas para composição percentual de dados e despesas.

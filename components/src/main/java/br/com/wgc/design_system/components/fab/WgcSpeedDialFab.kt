@@ -28,18 +28,8 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
-
-/**
- * Ação individual de um Speed Dial FAB.
- */
-data class WgcSpeedDialAction(
-    val id: String,
-    val label: String,
-    val icon: ImageVector,
-    val onClick: () -> Unit
-)
 
 /**
  * WgcSpeedDialFab
@@ -61,7 +51,7 @@ fun WgcSpeedDialFab(
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.End,
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
     ) {
         AnimatedVisibility(
             visible = isOpen,
@@ -70,12 +60,12 @@ fun WgcSpeedDialFab(
         ) {
             Column(
                 horizontalAlignment = Alignment.End,
-                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm.dp)
+                verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM.dp)
             ) {
                 actions.forEach { action ->
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
                     ) {
                         Text(
                             text = action.label,

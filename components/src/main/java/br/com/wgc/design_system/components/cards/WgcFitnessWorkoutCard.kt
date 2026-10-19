@@ -33,26 +33,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-enum class WgcFitnessWorkoutIntensity(val label: String, val level: Int) {
-    LOW("Leve", 1),
-    MODERATE("Intermediário", 2),
-    HIGH("Avançado", 3),
-    EXTREME("Atleta", 4)
-}
-
-enum class WgcFitnessWorkoutCategory(val label: String, val colorHex: Int) {
-    HIIT("HIIT", WgcCoreDsColors.trainingOrange),
-    STRENGTH("FORÇA", WgcCoreDsColors.trainingVolt),
-    YOGA("YOGA", WgcCoreDsColors.trainingBlue),
-    MOBILITY("MOBILIDADE", WgcCoreDsColors.trainingPurple),
-    ENDURANCE("RESISTÊNCIA", WgcCoreDsColors.trainingVolt)
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcFitnessWorkoutCard(
@@ -72,17 +57,17 @@ fun WgcFitnessWorkoutCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.trainingDarkGray)
+            containerColor = Color(WgcCoreDsColors.grayDark11)
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -91,14 +76,14 @@ fun WgcFitnessWorkoutCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                         .background(Color(category.colorHex).copy(alpha = 0.2f))
                         .border(
-                            width = WgcCoreDsSize.s1.dp,
+                            width = WgcCoreDsSize.S1.dp,
                             color = Color(category.colorHex).copy(alpha = 0.6f),
-                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)
+                            shape = RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)
                         )
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = category.label,
@@ -110,51 +95,51 @@ fun WgcFitnessWorkoutCard(
 
                 IconButton(
                     onClick = onSaveToggle,
-                    modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                 ) {
                     Icon(
                         imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                         contentDescription = "Salvar Treino",
-                        tint = if (isSaved) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingSecondaryText)
+                        tint = if (isSaved) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.gray12)
                     )
                 }
             }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Box(
                     modifier = Modifier
-                        .size(WgcCoreDsSize.s64.dp)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.trainingMediumGray)),
+                        .size(WgcCoreDsSize.S64.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
+                        .background(Color(WgcCoreDsColors.grayDark20)),
                     contentAlignment = Alignment.Center
                 ) {
                     IconButton(onClick = onStartWorkout) {
                         Icon(
                             imageVector = Icons.Default.PlayArrow,
                             contentDescription = "Iniciar",
-                            tint = Color(WgcCoreDsColors.trainingVolt),
-                            modifier = Modifier.size(WgcCoreDsSize.s32.dp)
+                            tint = Color(WgcCoreDsColors.green28),
+                            modifier = Modifier.size(WgcCoreDsSize.S32.dp)
                         )
                     }
                 }
 
                 Column(
                     modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxxs2.dp)
+                    verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = title,
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "Com $trainerName",
-                        color = Color(WgcCoreDsColors.trainingSecondaryText),
+                        color = Color(WgcCoreDsColors.gray12),
                         fontSize = 14.sp
                     )
                 }
@@ -167,33 +152,33 @@ fun WgcFitnessWorkoutCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Schedule,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.trainingSecondaryText),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            tint = Color(WgcCoreDsColors.gray12),
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                         Text(
                             text = "$durationMinutes min",
-                            color = Color(WgcCoreDsColors.trainingWhite),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 14.sp
                         )
                     }
 
                     Text(
                         text = "•",
-                        color = Color(WgcCoreDsColors.trainingSecondaryText)
+                        color = Color(WgcCoreDsColors.gray12)
                     )
 
                     Text(
                         text = intensity.label,
-                        color = Color(WgcCoreDsColors.trainingLightGray),
+                        color = Color(WgcCoreDsColors.grayDark23),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -201,13 +186,13 @@ fun WgcFitnessWorkoutCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.trainingMediumGray))
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
+                        .background(Color(WgcCoreDsColors.grayDark20))
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXXS2.dp)
                 ) {
                     Text(
                         text = equipment,
-                        color = Color(WgcCoreDsColors.trainingSecondaryText),
+                        color = Color(WgcCoreDsColors.gray12),
                         fontSize = 14.sp
                     )
                 }

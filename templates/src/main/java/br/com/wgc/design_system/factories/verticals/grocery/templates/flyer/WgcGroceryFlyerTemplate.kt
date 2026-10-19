@@ -102,7 +102,7 @@ private fun FlyerHeaderBanner(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.groceryRed)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red19)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -114,13 +114,13 @@ private fun FlyerHeaderBanner(
                 Icon(
                     imageVector = Icons.Default.LocalOffer,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.groceryYellow),
+                    tint = Color(WgcCoreDsColors.orange13),
                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                 Text(
                     text = "TABLOIDE DIGITAL SUPERMERCADO",
-                    color = Color(WgcCoreDsColors.grocerySurface),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -132,13 +132,13 @@ private fun FlyerHeaderBanner(
                 Icon(
                     imageVector = Icons.Default.Place,
                     contentDescription = null,
-                    tint = Color(WgcCoreDsColors.grocerySurface).copy(alpha = 0.8f),
+                    tint = Color(WgcCoreDsColors.white).copy(alpha = 0.8f),
                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                 )
                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                 Text(
                     text = storeName,
-                    color = Color(WgcCoreDsColors.grocerySurface),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 12.sp
                 )
             }
@@ -147,7 +147,7 @@ private fun FlyerHeaderBanner(
 
             Text(
                 text = validity,
-                color = Color(WgcCoreDsColors.groceryYellow),
+                color = Color(WgcCoreDsColors.orange13),
                 fontSize = 10.sp,
                 fontWeight = FontWeight.SemiBold
             )
@@ -163,7 +163,7 @@ private fun FlyerOfferGridItem(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grocerySurface)),
+        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
     ) {
         Column(
@@ -176,14 +176,14 @@ private fun FlyerOfferGridItem(
                     .fillMaxWidth()
                     .height(WgcCoreDsSize.s100.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.groceryPlaceholder)),
+                    .background(Color(WgcCoreDsColors.blueLight1)),
                 contentAlignment = Alignment.TopEnd
             ) {
                 Box(
                     modifier = Modifier
                         .padding(WgcCoreDsSpacing.xs8.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                        .background(Color(WgcCoreDsColors.groceryRed))
+                        .background(Color(WgcCoreDsColors.red19))
                         .padding(
                             horizontal = WgcCoreDsSpacing.xs8.dp,
                             vertical = WgcCoreDsSpacing.xxs4.dp
@@ -191,7 +191,7 @@ private fun FlyerOfferGridItem(
                 ) {
                     Text(
                         text = offer.discountBadge,
-                        color = Color(WgcCoreDsColors.grocerySurface),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -204,7 +204,7 @@ private fun FlyerOfferGridItem(
                 text = offer.title,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.groceryTextPrimary),
+                color = Color(WgcCoreDsColors.blueDark13),
                 maxLines = 2
             )
 
@@ -213,7 +213,7 @@ private fun FlyerOfferGridItem(
             Text(
                 text = "De R$ " + String.format("%.2f", offer.originalPrice),
                 fontSize = 10.sp,
-                color = Color(WgcCoreDsColors.groceryTextSecondary),
+                color = Color(WgcCoreDsColors.gray5),
                 textDecoration = TextDecoration.LineThrough
             )
 
@@ -221,7 +221,7 @@ private fun FlyerOfferGridItem(
                 text = "R$ " + String.format("%.2f", offer.promoPrice),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.groceryRed)
+                color = Color(WgcCoreDsColors.red19)
             )
 
             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))

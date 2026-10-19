@@ -85,14 +85,14 @@ fun WgcKutukuOrderTrackingScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(WgcCoreDsColors.retailBackground))
+            .background(Color(WgcCoreDsColors.blueLight39))
     ) {
         // Área Superior com Mapa Simulado
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(240.dp)
-                .background(Color(WgcCoreDsColors.premiumGroceryGreenLight)),
+                .background(Color(WgcCoreDsColors.greenLight9)),
             contentAlignment = Alignment.Center
         ) {
             // Linhas de rua decorativas
@@ -125,7 +125,7 @@ fun WgcKutukuOrderTrackingScreen(
                 modifier = Modifier
                     .size(54.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.retailPrimary)),
+                    .background(Color(WgcCoreDsColors.blue33)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -153,7 +153,7 @@ fun WgcKutukuOrderTrackingScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.retailDark)
+                        tint = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f))
@@ -161,7 +161,7 @@ fun WgcKutukuOrderTrackingScreen(
                     text = "Order Tracking",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.retailDark)
+                    color = Color(WgcCoreDsColors.grayDark2)
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Spacer(modifier = Modifier.size(48.dp))
@@ -177,7 +177,7 @@ fun WgcKutukuOrderTrackingScreen(
                 topStart = WgcCoreDsBorderRadius.xxl.dp,
                 topEnd = WgcCoreDsBorderRadius.xxl.dp
             ),
-            color = Color(WgcCoreDsColors.retailSurface),
+            color = Color(WgcCoreDsColors.white),
             shadowElevation = 8.dp
         ) {
             Column(
@@ -193,7 +193,7 @@ fun WgcKutukuOrderTrackingScreen(
                         .width(48.dp)
                         .height(4.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                        .background(Color(WgcCoreDsColors.retailBorder))
+                        .background(Color(WgcCoreDsColors.blueLight10))
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md.dp))
@@ -205,7 +205,7 @@ fun WgcKutukuOrderTrackingScreen(
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp))
                         .border(
                             width = 1.dp,
-                            color = Color(WgcCoreDsColors.retailBorder),
+                            color = Color(WgcCoreDsColors.blueLight10),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl.dp)
                         )
                         .padding(WgcCoreDsSpacing.md.dp),
@@ -220,7 +220,7 @@ fun WgcKutukuOrderTrackingScreen(
                             modifier = Modifier
                                 .size(50.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md.dp))
-                                .background(Color(WgcCoreDsColors.retailPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.blueLight21)),
                             contentAlignment = Alignment.Center
                         ) {
                             if (!courierAvatarUrl.isNullOrEmpty()) {
@@ -233,7 +233,7 @@ fun WgcKutukuOrderTrackingScreen(
                                 Text(
                                     text = courierName.take(1),
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.retailPrimary)
+                                    color = Color(WgcCoreDsColors.blue33)
                                 )
                             }
                         }
@@ -243,12 +243,12 @@ fun WgcKutukuOrderTrackingScreen(
                                 text = courierName,
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.retailDark)
+                                color = Color(WgcCoreDsColors.grayDark2)
                             )
                             Text(
                                 text = courierRole,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.retailSecondaryText)
+                                color = Color(WgcCoreDsColors.gray4)
                             )
                         }
                     }
@@ -258,12 +258,12 @@ fun WgcKutukuOrderTrackingScreen(
                             onClick = onChatClick,
                             modifier = Modifier
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.retailBackground))
+                                .background(Color(WgcCoreDsColors.blueLight39))
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Language,
                                 contentDescription = "Chat",
-                                tint = Color(WgcCoreDsColors.retailDark)
+                                tint = Color(WgcCoreDsColors.grayDark2)
                             )
                         }
 
@@ -271,12 +271,12 @@ fun WgcKutukuOrderTrackingScreen(
                             onClick = onCallClick,
                             modifier = Modifier
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.retailBackground))
+                                .background(Color(WgcCoreDsColors.blueLight39))
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Call,
                                 contentDescription = "Ligar",
-                                tint = Color(WgcCoreDsColors.retailDark)
+                                tint = Color(WgcCoreDsColors.grayDark2)
                             )
                         }
                     }
@@ -290,7 +290,7 @@ fun WgcKutukuOrderTrackingScreen(
                         text = "Progress of your Order",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailDark)
+                        color = Color(WgcCoreDsColors.grayDark2)
                     )
                 }
 
@@ -307,13 +307,13 @@ fun WgcKutukuOrderTrackingScreen(
                         .fillMaxWidth()
                         .height(56.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp),
-                    border = BorderStroke(1.5.dp, Color(WgcCoreDsColors.retailPrimary))
+                    border = BorderStroke(1.5.dp, Color(WgcCoreDsColors.blue33))
                 ) {
                     Text(
                         text = "Mark as Done",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.retailPrimary)
+                        color = Color(WgcCoreDsColors.blue33)
                     )
                 }
 

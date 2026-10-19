@@ -69,7 +69,7 @@ fun WgcGlobalMarketplaceRegisterScreenTemplate(viewModel: BaseGlobalMarketplaceA
             WgcBrandAuthHeader(
                 brandName = "Global Marketplace",
                 brandLogoText = "GM",
-                brandColor = Color(WgcCoreDsColors.globalMarketplaceRed),
+                brandColor = Color(WgcCoreDsColors.red27),
                 title = "Cadastrar no Marketplace Global",
                 subtitle = "Ganhe cupons para novos usuários"
             )
@@ -98,7 +98,7 @@ fun WgcGlobalMarketplaceResetPasswordScreenTemplate(viewModel: BaseGlobalMarketp
             WgcBrandAuthHeader(
                 brandName = "Global Marketplace",
                 brandLogoText = "GM",
-                brandColor = Color(WgcCoreDsColors.globalMarketplaceRed),
+                brandColor = Color(WgcCoreDsColors.red27),
                 title = "Redefinir Senha no Marketplace Global",
                 subtitle = "Insira o código de verificação enviado"
             )

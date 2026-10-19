@@ -22,11 +22,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
 
 @Composable
@@ -40,25 +40,25 @@ fun WgcBeautyCosmeticCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.MD16.dp)) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(WgcCoreDsSize.s100.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                    .height(WgcCoreDsSize.S100.dp)
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                     .background(Color.LightGray)
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             Text(
                 text = "$perfumeOrBrand • $volume",
                 fontSize = 14.sp,
-                color = Color(WgcCoreDsColors.fragranceBeautyGreen),
+                color = Color(WgcCoreDsColors.greenDark6),
                 fontWeight = FontWeight.Bold
             )
             Text(
@@ -67,7 +67,7 @@ fun WgcBeautyCosmeticCard(
                 fontWeight = FontWeight.Bold
             )
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),

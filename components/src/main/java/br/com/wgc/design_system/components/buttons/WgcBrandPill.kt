@@ -20,10 +20,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
 /**
@@ -40,20 +40,20 @@ fun WgcBrandPill(
 ) {
     Row(
         modifier = modifier
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .background(
-                if (isSelected) Color(WgcCoreDsColors.boutiquePrimaryLight)
-                else Color(WgcCoreDsColors.boutiqueSurface)
+                if (isSelected) Color(WgcCoreDsColors.purpleLight2)
+                else Color(WgcCoreDsColors.blueLight32)
             )
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.xs8.dp),
+            .padding(WgcCoreDsSpacing.XS8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Caixa interna branca do logo
         Box(
             modifier = Modifier
-                .size(WgcCoreDsSize.s40.dp)
-                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                .size(WgcCoreDsSize.S40.dp)
+                .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
@@ -61,26 +61,26 @@ fun WgcBrandPill(
                 AsyncImageDefault(
                     image = logoUrl,
                     contentDescription = brandName,
-                    modifier = Modifier.fillMaxSize().padding(WgcCoreDsSpacing.xxs4.dp)
+                    modifier = Modifier.fillMaxSize().padding(WgcCoreDsSpacing.XXS4.dp)
                 )
             } else {
                 Text(
                     text = brandName.take(2).uppercase(),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color(WgcCoreDsColors.boutiquePrimary) else Color(WgcCoreDsColors.boutiqueDark)
+                    color = if (isSelected) Color(WgcCoreDsColors.purple8) else Color(WgcCoreDsColors.grayDark13)
                 )
             }
         }
 
-        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
+        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.SM12.dp))
 
         Text(
             text = brandName,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
-            color = if (isSelected) Color(WgcCoreDsColors.boutiquePrimary) else Color(WgcCoreDsColors.boutiqueDark),
-            modifier = Modifier.padding(end = WgcCoreDsSpacing.sm12.dp)
+            color = if (isSelected) Color(WgcCoreDsColors.purple8) else Color(WgcCoreDsColors.grayDark13),
+            modifier = Modifier.padding(end = WgcCoreDsSpacing.SM12.dp)
         )
     }
 }

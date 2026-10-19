@@ -21,7 +21,7 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.transitDigitalGreen)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.green1)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Carteira Digital de Trânsito • CDT", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }
@@ -29,7 +29,7 @@ fun WgcCdtCnhTemplate(modifier: Modifier = Modifier) {
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)) {
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
-                    Text("CNH DIGITAL COM QR CODE", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.transitDigitalGreen))
+                    Text("CNH DIGITAL COM QR CODE", fontWeight = FontWeight.Bold, color = Color(WgcCoreDsColors.green1))
                     Text("Gabriel do Carmo", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     Text("Categoria: AB • Validade: 14/09/2034", color = Color.DarkGray)
                     Text("Documento Oficial Válido em Todo Território Nacional", color = Color.Gray, fontSize = 14.sp)

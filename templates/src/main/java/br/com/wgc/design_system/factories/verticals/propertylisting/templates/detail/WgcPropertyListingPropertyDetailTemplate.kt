@@ -102,7 +102,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(WgcCoreDsSize.s240.dp)
-                        .background(Color(WgcCoreDsColors.propertyListingCardPlaceholder))
+                        .background(Color(WgcCoreDsColors.blueLight1))
                 ) {
                     if (photoSlot != null) {
                         photoSlot()
@@ -110,13 +110,13 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         Box(
                             modifier = Modifier
                                 .matchParentSize()
-                                .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.greenLight13)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Home,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                tint = Color(WgcCoreDsColors.green14),
                                 modifier = Modifier.size(WgcCoreDsSize.s64.dp)
                             )
                         }
@@ -135,7 +135,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Voltar",
-                            tint = Color(WgcCoreDsColors.propertyListingDark),
+                            tint = Color(WgcCoreDsColors.blueDark23),
                             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                         )
                     }
@@ -157,7 +157,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             Icon(
                                 imageVector = Icons.Default.Share,
                                 contentDescription = "Compartilhar",
-                                tint = Color(WgcCoreDsColors.propertyListingDark),
+                                tint = Color(WgcCoreDsColors.blueDark23),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                         }
@@ -172,7 +172,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             Icon(
                                 imageVector = if (property.isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                                 contentDescription = "Favoritar",
-                                tint = if (property.isFavorite) Color(WgcCoreDsColors.propertyListingOrange) else Color(WgcCoreDsColors.propertyListingDark),
+                                tint = if (property.isFavorite) Color(WgcCoreDsColors.orange18) else Color(WgcCoreDsColors.blueDark23),
                                 modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                             )
                         }
@@ -189,7 +189,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyListingPrimary))
+                                    .background(Color(WgcCoreDsColors.green14))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -240,14 +240,14 @@ fun WgcPropertyListingPropertyDetailTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyListingSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     Text(
                         text = property.price,
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyListingPrimary)
+                        color = Color(WgcCoreDsColors.green14)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -255,7 +255,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                     Text(
                         text = "${property.condoPrice} • ${property.iptuPrice}",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -264,7 +264,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         text = property.title,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyListingDark)
+                        color = Color(WgcCoreDsColors.blueDark23)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -273,14 +273,14 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         Icon(
                             imageVector = Icons.Default.LocationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyListingSecondaryText),
+                            tint = Color(WgcCoreDsColors.blue22),
                             modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                         Text(
                             text = "${property.address}, ${property.neighborhood} - ${property.city}",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
 
@@ -289,7 +289,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                     Text(
                         text = "Código do imóvel: ${property.code}",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
             }
@@ -301,7 +301,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -326,7 +326,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Row(
                         modifier = Modifier
@@ -338,13 +338,13 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s48.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                                .background(Color(WgcCoreDsColors.greenLight13)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Business,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                tint = Color(WgcCoreDsColors.green14),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -357,13 +357,13 @@ fun WgcPropertyListingPropertyDetailTemplate(
                                     text = property.agencyName,
                                     style = MaterialTheme.typography.titleSmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyListingDark)
+                                    color = Color(WgcCoreDsColors.blueDark23)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                 Icon(
                                     imageVector = Icons.Default.Verified,
                                     contentDescription = "Anunciante Verificado",
-                                    tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                    tint = Color(WgcCoreDsColors.green14),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                             }
@@ -371,7 +371,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             Text(
                                 text = property.agencyCreci,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }
@@ -385,7 +385,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -396,13 +396,13 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             text = "Sobre este imóvel",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyListingDark)
+                            color = Color(WgcCoreDsColors.blueDark23)
                         )
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
                         Text(
                             text = property.description,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                            color = Color(WgcCoreDsColors.blue22)
                         )
                     }
                 }
@@ -415,7 +415,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                         .fillMaxWidth()
                         .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white))
                 ) {
                     Column(
                         modifier = Modifier
@@ -426,7 +426,7 @@ fun WgcPropertyListingPropertyDetailTemplate(
                             text = "Características do imóvel e condomínio",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.propertyListingDark)
+                            color = Color(WgcCoreDsColors.blueDark23)
                         )
 
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -446,14 +446,14 @@ fun WgcPropertyListingPropertyDetailTemplate(
                                         Icon(
                                             imageVector = Icons.Default.Check,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                            tint = Color(WgcCoreDsColors.green14),
                                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                         )
                                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                         Text(
                                             text = amenity,
                                             style = MaterialTheme.typography.bodyMedium,
-                                            color = Color(WgcCoreDsColors.propertyListingDark)
+                                            color = Color(WgcCoreDsColors.blueDark23)
                                         )
                                     }
                                 }
@@ -476,12 +476,12 @@ private fun SpecColumn(label: String, value: String) {
             text = value,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = Color(WgcCoreDsColors.propertyListingDark)
+            color = Color(WgcCoreDsColors.blueDark23)
         )
         Text(
             text = label,
             style = MaterialTheme.typography.labelSmall,
-            color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+            color = Color(WgcCoreDsColors.blue22)
         )
     }
 }
@@ -493,7 +493,7 @@ private fun PropertyListingDetailBottomBar(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color(WgcCoreDsColors.propertyListingSurface),
+        color = Color(WgcCoreDsColors.white),
         shadowElevation = WgcCoreDsSpacing.md16.dp
     ) {
         Row(
@@ -514,7 +514,7 @@ private fun PropertyListingDetailBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyListingWhatsApp),
+                    containerColor = Color(WgcCoreDsColors.green25),
                     contentColor = Color.White
                 )
             ) {
@@ -541,7 +541,7 @@ private fun PropertyListingDetailBottomBar(
                     .height(WgcCoreDsSize.s48.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.propertyListingOrange),
+                    containerColor = Color(WgcCoreDsColors.orange18),
                     contentColor = Color.White
                 )
             ) {

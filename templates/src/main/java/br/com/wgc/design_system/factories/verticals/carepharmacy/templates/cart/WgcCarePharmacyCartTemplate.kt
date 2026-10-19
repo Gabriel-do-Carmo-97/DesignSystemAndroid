@@ -44,7 +44,7 @@ fun WgcDrogasilCartTemplate(
                     text = "Sacola da Farmácia (1 item)",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark15)
                 )
             }
 
@@ -52,7 +52,7 @@ fun WgcDrogasilCartTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.carePharmacySurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(WgcCoreDsSpacing.md16.dp)) {
@@ -60,12 +60,12 @@ fun WgcDrogasilCartTemplate(
                             text = "Protetor Solar Facial FPS 60",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                            color = Color(WgcCoreDsColors.blueDark15)
                         )
                         Text(
                             text = "1 unidade • R$ 79,90",
                             fontSize = 10.sp,
-                            color = Color(WgcCoreDsColors.carePharmacyTextSecondary)
+                            color = Color(WgcCoreDsColors.gray5)
                         )
                     }
                 }

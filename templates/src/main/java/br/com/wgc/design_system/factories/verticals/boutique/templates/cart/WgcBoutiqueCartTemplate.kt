@@ -107,12 +107,12 @@ fun WgcLazaCartTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -123,7 +123,7 @@ fun WgcLazaCartTemplate(
                     text = "Cart",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -170,7 +170,7 @@ fun WgcLazaCartTemplate(
                         text = "Delivery Address",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -179,7 +179,7 @@ fun WgcLazaCartTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                             .clickable(onClick = onAddressClick)
                             .padding(WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -194,7 +194,7 @@ fun WgcLazaCartTemplate(
                             Icon(
                                 imageVector = Icons.Default.LocationOn,
                                 contentDescription = "Endereço",
-                                tint = Color(WgcCoreDsColors.boutiquePrimary),
+                                tint = Color(WgcCoreDsColors.purple8),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -206,20 +206,20 @@ fun WgcLazaCartTemplate(
                                 text = address.city,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.boutiqueDark)
+                                color = Color(WgcCoreDsColors.grayDark13)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                             Text(
                                 text = address.country,
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
 
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                             contentDescription = "Alterar endereço",
-                            tint = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                            tint = Color(WgcCoreDsColors.gray13),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }
@@ -241,7 +241,7 @@ fun WgcLazaCartTemplate(
                         text = "Payment Method",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -250,7 +250,7 @@ fun WgcLazaCartTemplate(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                             .clickable(onClick = onPaymentMethodClick)
                             .padding(WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -265,7 +265,7 @@ fun WgcLazaCartTemplate(
                             Icon(
                                 imageVector = Icons.Default.CreditCard,
                                 contentDescription = "Cartão de pagamento",
-                                tint = Color(WgcCoreDsColors.boutiquePrimary),
+                                tint = Color(WgcCoreDsColors.purple8),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -277,20 +277,20 @@ fun WgcLazaCartTemplate(
                                 text = paymentCard.cardType,
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.boutiqueDark)
+                                color = Color(WgcCoreDsColors.grayDark13)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                             Text(
                                 text = paymentCard.cardNumber,
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
 
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                             contentDescription = "Alterar cartão",
-                            tint = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                            tint = Color(WgcCoreDsColors.gray13),
                             modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                         )
                     }
@@ -309,7 +309,7 @@ fun WgcLazaCartTemplate(
                     text = "Order Info",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
@@ -321,13 +321,13 @@ fun WgcLazaCartTemplate(
                     Text(
                         text = "Subtotal",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                     Text(
                         text = subtotal,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                 }
 
@@ -340,13 +340,13 @@ fun WgcLazaCartTemplate(
                     Text(
                         text = "Shipping Cost",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                     Text(
                         text = shippingCost,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                 }
 
@@ -360,13 +360,13 @@ fun WgcLazaCartTemplate(
                         text = "Total",
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                     Text(
                         text = totalCost,
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                 }
             }

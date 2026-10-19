@@ -8,7 +8,17 @@ import br.com.wgc.design_system.commons.clipboard.service.WgcClipboardManager
 import br.com.wgc.design_system.commons.haptics.remember.rememberWgcHapticFeedback
 
 /**
- * Cria e lembra um [WgcClipboardManager] no escopo da composição do Jetpack Compose.
+ * Obtém um [WgcClipboardManager] associado à composição atual, pronto para uso em eventos da interface.
+ *
+ * Use em um `@Composable` que precise copiar ou limpar texto sem recriar o gerenciador a cada
+ * recomposição. A instância acompanha o `Context`, o feedback háptico e o escopo de corrotinas locais.
+ *
+ * ```kotlin
+ * val clipboard = rememberWgcClipboardManager()
+ * Button(onClick = { clipboard.copy(label = "Chave Pix", text = pixKey, isSensitive = true) }) {
+ *     Text("Copiar")
+ * }
+ * ```
  */
 @Composable
 fun rememberWgcClipboardManager(): WgcClipboardManager {

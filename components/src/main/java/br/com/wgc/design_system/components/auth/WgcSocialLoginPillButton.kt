@@ -31,21 +31,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Provedores sociais suportados nos botões pill.
- */
-enum class WgcSocialPillProvider(
-    val defaultLabel: String,
-    val brandColor: Color
-) {
-    Facebook("Login with Facebook", Color(WgcCoreDsColors.socialFacebook)),
-    Instagram("Login with Instagram", Color(WgcCoreDsColors.socialInstagram)),
-    LinkedIn("Login with LinkedIn", Color(WgcCoreDsColors.socialLinkedIn))
-}
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Botão Social em Formato Pill de Largura Total (WgcSocialLoginPillButton).
@@ -77,11 +65,11 @@ fun WgcSocialLoginPillButton(
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.onSurface
         ),
-        elevation = ButtonDefaults.buttonElevation(defaultElevation = WgcCoreDsElevation.level1.dp),
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = WgcCoreDsSpacing.sm12.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = WgcCoreDsSpacing.SM12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
@@ -90,7 +78,7 @@ fun WgcSocialLoginPillButton(
                 tint = provider.brandColor,
                 modifier = Modifier.size(24.dp)
             )
-            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.width(WgcCoreDsSpacing.MD16.dp))
             Text(
                 text = displayLabel,
                 style = MaterialTheme.typography.bodyMedium,
@@ -113,7 +101,7 @@ fun WgcSocialLoginPillGroup(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
     ) {
         WgcSocialLoginPillButton(
             provider = WgcSocialPillProvider.Facebook,
@@ -134,7 +122,7 @@ fun WgcSocialLoginPillGroup(
 @Composable
 private fun WgcSocialLoginPillGroupPreview() {
     MaterialTheme {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             WgcSocialLoginPillGroup()
         }
     }

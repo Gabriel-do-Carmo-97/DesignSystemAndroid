@@ -23,7 +23,7 @@ fun WgcSlackChannelsTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.teamCollaborationAubergine)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.pinkDark1)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("WGC Engineering • Team Chat", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

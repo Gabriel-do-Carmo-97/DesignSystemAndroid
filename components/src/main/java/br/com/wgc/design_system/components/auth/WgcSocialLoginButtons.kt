@@ -5,7 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.buttons.WgcSecondaryClassicButton
 
@@ -21,7 +21,7 @@ fun WgcSocialLoginButtons(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
     ) {
         WgcSecondaryClassicButton(textButton = "G  Continuar com Google", onClick = onGoogleClick)
         WgcSecondaryClassicButton(textButton = "  Continuar com Apple", onClick = onAppleClick)

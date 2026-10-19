@@ -100,7 +100,7 @@ fun WgcCorporateWellnessPlansTemplate(
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = "Voltar",
-                                    tint = Color(WgcCoreDsColors.wellnessDark),
+                                    tint = Color(WgcCoreDsColors.grayDark7),
                                     modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                                 )
                             }
@@ -108,14 +108,14 @@ fun WgcCorporateWellnessPlansTemplate(
                         Column {
                             Text(
                                 text = "BENEFÍCIO CORPORATIVO",
-                                color = Color(WgcCoreDsColors.wellnessCoral),
+                                color = Color(WgcCoreDsColors.red26),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
                             )
                             Text(
                                 text = "Escolha seu Plano",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -129,8 +129,8 @@ fun WgcCorporateWellnessPlansTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessForestLight)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.greenLight4)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Column(
                         modifier = Modifier
@@ -140,14 +140,14 @@ fun WgcCorporateWellnessPlansTemplate(
                     ) {
                         Text(
                             text = "SUBSÍDIO DE ATÉ 70%",
-                            color = Color(WgcCoreDsColors.wellnessForest),
+                            color = Color(WgcCoreDsColors.cyanDark2),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Black,
                             letterSpacing = 0.5.sp
                         )
                         Text(
                             text = "A $companyName oferece planos exclusivos para você cuidar do corpo e da mente.",
-                            color = Color(WgcCoreDsColors.wellnessDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 13.sp
                         )
                     }
@@ -175,8 +175,8 @@ fun WgcCorporateWellnessPlansTemplate(
                         .fillMaxWidth()
                         .padding(bottom = WgcCoreDsSpacing.xl32.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.wellnessSurface)),
-                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.wellnessBorder))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
+                    border = BorderStroke(WgcCoreDsSize.s1.dp, Color(WgcCoreDsColors.blueLight6))
                 ) {
                     Row(
                         modifier = Modifier
@@ -188,19 +188,19 @@ fun WgcCorporateWellnessPlansTemplate(
                         Icon(
                             imageVector = Icons.Default.Security,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.wellnessCheckInGreen),
+                            tint = Color(WgcCoreDsColors.green17),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                         Column {
                             Text(
                                 text = "Sem carência e sem fidelidade",
-                                color = Color(WgcCoreDsColors.wellnessDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Cancele ou pause sua assinatura a qualquer momento diretamente pelo app.",
-                                color = Color(WgcCoreDsColors.wellnessSecondaryText),
+                                color = Color(WgcCoreDsColors.gray7),
                                 fontSize = 11.sp
                             )
                         }

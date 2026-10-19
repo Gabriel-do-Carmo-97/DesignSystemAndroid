@@ -27,11 +27,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
 
 @Composable
@@ -46,36 +46,36 @@ fun WgcChilledBeverageCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
         Row(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(WgcCoreDsSize.s48.dp)
+                    .size(WgcCoreDsSize.S48.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.beverageDeliveryYellow)),
+                    .background(Color(WgcCoreDsColors.yellow4)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.SportsBar,
                     contentDescription = null,
                     tint = Color.Black,
-                    modifier = Modifier.size(WgcCoreDsSize.s24.dp)
+                    modifier = Modifier.size(WgcCoreDsSize.S24.dp)
                 )
             }
-            Spacer(modifier = Modifier.size(WgcCoreDsSpacing.md16.dp))
+            Spacer(modifier = Modifier.size(WgcCoreDsSpacing.MD16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = drinkName, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                Text(text = "$volume • ❄️ $temperatureText", fontSize = 12.sp, color = Color(WgcCoreDsColors.flightTravelBlue))
+                Text(text = "$volume • ❄️ $temperatureText", fontSize = 12.sp, color = Color(WgcCoreDsColors.blue1))
                 if (isReturnable) {
-                    Text(text = "♻️ Casco Retornável", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
+                    Text(text = "♻️ Casco Retornável", fontSize = 11.sp, color = Color(WgcCoreDsColors.green1), fontWeight = FontWeight.Bold)
                 }
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
                 Text(text = "R$ " + String.format("%.2f", price), fontWeight = FontWeight.Bold, fontSize = 16.sp)
             }
             WgcClassicButton(

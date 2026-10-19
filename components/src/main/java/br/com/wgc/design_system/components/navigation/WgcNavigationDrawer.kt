@@ -21,7 +21,7 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -52,13 +52,13 @@ fun WgcNavigationDrawer(
                 Column(
                     modifier = Modifier
                         .fillMaxHeight()
-                        .padding(WgcCoreDsSpacing.md.dp),
+                        .padding(WgcCoreDsSpacing.MD.dp),
                     verticalArrangement = Arrangement.SpaceBetween
                 ) {
                     Column {
                         headerSlot?.invoke()
                         if (headerSlot != null) {
-                            HorizontalDivider(modifier = Modifier.padding(vertical = WgcCoreDsSpacing.md.dp))
+                            HorizontalDivider(modifier = Modifier.padding(vertical = WgcCoreDsSpacing.MD.dp))
                         }
                         items.forEach { item ->
                             val isSelected = item.route == selectedRoute
@@ -72,7 +72,7 @@ fun WgcNavigationDrawer(
                                 },
                                 selected = isSelected,
                                 onClick = { onItemSelected(item) },
-                                modifier = Modifier.padding(vertical = WgcCoreDsSpacing.xxs.dp)
+                                modifier = Modifier.padding(vertical = WgcCoreDsSpacing.XXS.dp)
                             )
                         }
                     }

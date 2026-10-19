@@ -20,20 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 import br.com.wgc.design_system.components.badge.WgcBadge
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
-
-/**
- * Modelo de item para menus suspensos corporativos (WgcDropdownItem).
- */
-data class WgcDropdownItem(
-    val id: String,
-    val title: String,
-    val leadingIcon: ImageVector? = null,
-    val badgeCount: Int? = null,
-    val isDestructive: Boolean = false,
-    val enabled: Boolean = true,
-    val onClick: () -> Unit = {}
-)
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Menu Suspenso Corporativo (WgcDropdownMenu).
@@ -112,7 +99,7 @@ private fun WgcDropdownMenuPreview() {
                 expanded = true,
                 onDismissRequest = {},
                 items = sampleItems,
-                modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+                modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
             )
         }
     }

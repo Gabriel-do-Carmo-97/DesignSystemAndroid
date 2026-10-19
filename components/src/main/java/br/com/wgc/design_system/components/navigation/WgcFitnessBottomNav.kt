@@ -1,78 +1,48 @@
 package br.com.wgc.design_system.components.navigation
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.FitnessCenter
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
 
-enum class WgcFitnessNavItem(val label: String, val icon: ImageVector) {
-    HOME("Início", Icons.Default.Home),
-    WORKOUTS("Treinos", Icons.Default.FitnessCenter),
-    EXPLORE("Explorar", Icons.Default.Search),
-    ACTIVITY("Atividade", Icons.Default.PlayCircle),
-    PROFILE("Perfil", Icons.Default.Person)
-}
-
+/**
+ * Barra de navegação inferior Fitness.
+ */
+@Deprecated(
+    message = "Utilize WgcBottomNavBar diretamente com WgcNavPresets.fitness ou lista dinâmica de WgcNavItem",
+    replaceWith = ReplaceWith(
+        "WgcBottomNavBar(items = WgcNavPresets.fitness, selectedRoute = selectedItem.name, onItemSelected = { ... })"
+    )
+)
 @Composable
 fun WgcFitnessBottomNav(
     selectedItem: WgcFitnessNavItem,
     onItemSelected: (WgcFitnessNavItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    NavigationBar(
-        modifier = modifier.background(Color(WgcCoreDsColors.trainingDarkGray)),
-        tonalElevation = WgcCoreDsElevation.level3.dp,
-        containerColor = Color(WgcCoreDsColors.trainingDarkGray)
-    ) {
-        WgcFitnessNavItem.entries.forEach { item ->
-            val isSelected = selectedItem == item
-            NavigationBarItem(
-                selected = isSelected,
-                onClick = { onItemSelected(item) },
-                icon = {
-                    Icon(
-                        imageVector = item.icon,
-                        contentDescription = item.label,
-                        modifier = Modifier.size(WgcCoreDsSize.s24.dp)
-                    )
-                },
-                label = {
-                    Text(
-                        text = item.label,
-                        fontSize = 9.sp,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                    )
-                },
-                colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.trainingBlack),
-                    selectedTextColor = Color(WgcCoreDsColors.trainingVolt),
-                    indicatorColor = Color(WgcCoreDsColors.trainingVolt),
-                    unselectedIconColor = Color(WgcCoreDsColors.trainingSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.trainingSecondaryText)
-                )
-            )
+    val items = remember {
+        WgcFitnessNavItem.entries.map { item ->
+            WgcNavItem(route = item.name, label = item.label, icon = item.icon)
         }
     }
+    WgcBottomNavBar(
+        items = items,
+        selectedRoute = selectedItem.name,
+        onItemSelected = { navItem ->
+            val match = WgcFitnessNavItem.entries.firstOrNull { it.name == navItem.route }
+            if (match != null) onItemSelected(match)
+        },
+        modifier = modifier,
+        containerColor = Color(WgcCoreDsColors.grayDark11),
+        selectedColor = Color(WgcCoreDsColors.green28),
+        unselectedColor = Color(WgcCoreDsColors.gray12),
+        indicatorColor = Color(WgcCoreDsColors.green28),
+        tonalElevation = WgcCoreDsElevation.LEVEL3.dp
+    )
 }
 
 @Preview(name = "Fitness Bottom Nav - Preview", showBackground = true)

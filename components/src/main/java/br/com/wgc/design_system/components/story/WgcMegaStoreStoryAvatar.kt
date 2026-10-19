@@ -25,9 +25,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import coil3.compose.AsyncImage
 
 /**
@@ -47,9 +47,9 @@ fun WgcMegaStoreStoryAvatar(
         colors = if (isLive) {
             listOf(Color(WgcCoreDsColors.red500), Color(WgcCoreDsColors.orange500))
         } else if (hasUnseenStory) {
-            listOf(Color(WgcCoreDsColors.megaStorePrimary), Color(WgcCoreDsColors.megaStorePrimaryLight))
+            listOf(Color(WgcCoreDsColors.blue28), Color(WgcCoreDsColors.blueLight16))
         } else {
-            listOf(Color(WgcCoreDsColors.megaStoreBorder), Color(WgcCoreDsColors.megaStoreBorder))
+            listOf(Color(WgcCoreDsColors.grayLight1), Color(WgcCoreDsColors.grayLight1))
         }
     )
 
@@ -65,7 +65,7 @@ fun WgcMegaStoreStoryAvatar(
                     .border(2.5.dp, gradientBrush, CircleShape)
                     .padding(3.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.megaStoreBackground)),
+                    .background(Color(WgcCoreDsColors.gray100)),
                 contentAlignment = Alignment.Center
             ) {
                 AsyncImage(
@@ -80,9 +80,9 @@ fun WgcMegaStoreStoryAvatar(
                 Box(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.CIRCULAR999.dp))
                         .background(Color(WgcCoreDsColors.red500))
-                        .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = 2.dp)
                 ) {
                     Text(
                         text = "LIVE",
@@ -94,12 +94,12 @@ fun WgcMegaStoreStoryAvatar(
             }
         }
 
-        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs.dp))
+        Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS.dp))
 
         Text(
             text = name,
             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium),
-            color = Color(WgcCoreDsColors.megaStoreDark),
+            color = Color(WgcCoreDsColors.grayDark14),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontSize = 11.sp

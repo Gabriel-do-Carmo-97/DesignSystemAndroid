@@ -71,7 +71,7 @@ fun WgcZapFipeZapCalculatorTemplate(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                    .background(Color(WgcCoreDsColors.white))
                     .padding(
                         horizontal = WgcCoreDsSpacing.sm12.dp,
                         vertical = WgcCoreDsSpacing.xs8.dp
@@ -82,7 +82,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        tint = Color(WgcCoreDsColors.blueDark10)
                     )
                 }
 
@@ -92,7 +92,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                     text = "Índice FipeZAP",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                    color = Color(WgcCoreDsColors.blueDark31)
                 )
             }
         }
@@ -111,7 +111,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyClassifiedsPrimary)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.blueDark31)),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
                     Column(
@@ -132,7 +132,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                    .background(Color(WgcCoreDsColors.propertyClassifiedsFipeGreen))
+                                    .background(Color(WgcCoreDsColors.green4))
                                     .padding(
                                         horizontal = WgcCoreDsSpacing.xs8.dp,
                                         vertical = WgcCoreDsSpacing.xxs4.dp
@@ -194,7 +194,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                                     text = "+11,2% em 12m",
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsOrange)
+                                    color = Color(WgcCoreDsColors.orange17)
                                 )
                             }
                         }
@@ -215,12 +215,12 @@ fun WgcZapFipeZapCalculatorTemplate(
                         text = "Ranking de Bairros em São Paulo",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                        color = Color(WgcCoreDsColors.blueDark10)
                     )
                     Text(
                         text = "Venda m²",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                        color = Color(WgcCoreDsColors.blue22)
                     )
                 }
             }
@@ -240,15 +240,15 @@ fun WgcZapFipeZapCalculatorTemplate(
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = if (isSelected) {
-                            Color(WgcCoreDsColors.propertyClassifiedsBlueLight)
+                            Color(WgcCoreDsColors.blueLight25)
                         } else {
-                            Color(WgcCoreDsColors.propertyClassifiedsSurface)
+                            Color(WgcCoreDsColors.white)
                         }
                     ),
                     border = if (isSelected) {
                         androidx.compose.foundation.BorderStroke(
                             width = WgcCoreDsSpacing.xxxs2.dp,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsBlue)
+                            color = Color(WgcCoreDsColors.blue17)
                         )
                     } else null,
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
@@ -265,14 +265,14 @@ fun WgcZapFipeZapCalculatorTemplate(
                                 text = metric.neighborhood,
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                color = Color(WgcCoreDsColors.blueDark10)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
                                     imageVector = Icons.Default.TrendingUp,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.propertyClassifiedsFipeGreen),
+                                    tint = Color(WgcCoreDsColors.green4),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
@@ -280,13 +280,13 @@ fun WgcZapFipeZapCalculatorTemplate(
                                     text = metric.variation12m,
                                     style = MaterialTheme.typography.bodySmall,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsFipeGreen)
+                                    color = Color(WgcCoreDsColors.green4)
                                 )
                                 Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                                 Text(
                                     text = "• Aluguel: ${metric.rentalYieldAnnual}",
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                    color = Color(WgcCoreDsColors.blue22)
                                 )
                             }
                         }
@@ -295,7 +295,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                             text = metric.averageM2Price,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.ExtraBold,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsPrimary)
+                            color = Color(WgcCoreDsColors.blueDark31)
                         )
                     }
                 }
@@ -309,10 +309,10 @@ fun WgcZapFipeZapCalculatorTemplate(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.propertyClassifiedsSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .border(
                             width = WgcCoreDsSpacing.xxxs2.dp,
-                            color = Color(WgcCoreDsColors.propertyClassifiedsBorder),
+                            color = Color(WgcCoreDsColors.blueLight8),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                         )
                         .padding(WgcCoreDsSpacing.md16.dp)
@@ -321,7 +321,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                         Icon(
                             imageVector = Icons.Default.Info,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.propertyClassifiedsBlue),
+                            tint = Color(WgcCoreDsColors.blue17),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.sm12.dp))
@@ -330,7 +330,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                                 text = "Como funciona o Índice FipeZAP?",
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsDark)
+                                color = Color(WgcCoreDsColors.blueDark10)
                             )
                             Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                             Text(
@@ -338,7 +338,7 @@ fun WgcZapFipeZapCalculatorTemplate(
                                     "e o Zap Imóveis, o índice analisa milhões de anúncios ativos para calcular a " +
                                     "precificação real do mercado brasileiro com rigor estatístico.",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.propertyClassifiedsSecondaryText)
+                                color = Color(WgcCoreDsColors.blue22)
                             )
                         }
                     }

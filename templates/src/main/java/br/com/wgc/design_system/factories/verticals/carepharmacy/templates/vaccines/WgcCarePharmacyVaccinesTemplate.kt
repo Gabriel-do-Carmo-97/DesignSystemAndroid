@@ -39,12 +39,12 @@ fun WgcDrogasilVaccinesTemplate(
                     text = "Vacinação & Serviços Farmacêuticos",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.carePharmacyTextPrimary)
+                    color = Color(WgcCoreDsColors.blueDark15)
                 )
                 Text(
                     text = "Aplicação em sala privativa por farmacêuticos habilitados com registro no RNDS",
                     fontSize = 10.sp,
-                    color = Color(WgcCoreDsColors.carePharmacyTextSecondary)
+                    color = Color(WgcCoreDsColors.gray5)
                 )
             }
 

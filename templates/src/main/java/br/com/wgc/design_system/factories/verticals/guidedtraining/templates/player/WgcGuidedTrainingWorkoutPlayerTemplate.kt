@@ -86,7 +86,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Encerrar treino",
-                        tint = Color(WgcCoreDsColors.trainingWhite),
+                        tint = Color(WgcCoreDsColors.white),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                 }
@@ -94,14 +94,14 @@ fun WgcNtcWorkoutPlayerTemplate(
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
                         text = workout.title.uppercase(),
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
                     )
                     Text(
                         text = "${workout.trainerName} • NTC",
-                        color = Color(WgcCoreDsColors.trainingSecondaryText),
+                        color = Color(WgcCoreDsColors.gray12),
                         fontSize = 10.sp
                     )
                 }
@@ -110,7 +110,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Áudio do Coach",
-                        tint = Color(WgcCoreDsColors.trainingVolt),
+                        tint = Color(WgcCoreDsColors.green28),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -154,14 +154,14 @@ fun WgcNtcWorkoutPlayerTemplate(
                 ) {
                     Text(
                         text = "ROTEIRO DO TREINO",
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
                     )
                     Text(
                         text = "${workout.exercises.size} Movimentos",
-                        color = Color(WgcCoreDsColors.trainingSecondaryText),
+                        color = Color(WgcCoreDsColors.gray12),
                         fontSize = 11.sp
                     )
                 }
@@ -177,17 +177,17 @@ fun WgcNtcWorkoutPlayerTemplate(
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = when {
-                            isCurrent -> Color(WgcCoreDsColors.trainingDarkGray)
-                            isCompleted -> Color(WgcCoreDsColors.trainingBlack)
-                            else -> Color(WgcCoreDsColors.trainingDarkGray).copy(alpha = 0.6f)
+                            isCurrent -> Color(WgcCoreDsColors.grayDark11)
+                            isCompleted -> Color(WgcCoreDsColors.grayDark3)
+                            else -> Color(WgcCoreDsColors.grayDark11).copy(alpha = 0.6f)
                         }
                     ),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
                         color = when {
-                            isCurrent -> Color(WgcCoreDsColors.trainingVolt)
-                            isCompleted -> Color(WgcCoreDsColors.trainingMediumGray)
-                            else -> Color(WgcCoreDsColors.trainingMediumGray).copy(alpha = 0.5f)
+                            isCurrent -> Color(WgcCoreDsColors.green28)
+                            isCompleted -> Color(WgcCoreDsColors.grayDark20)
+                            else -> Color(WgcCoreDsColors.grayDark20).copy(alpha = 0.5f)
                         }
                     )
                 ) {
@@ -205,9 +205,9 @@ fun WgcNtcWorkoutPlayerTemplate(
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                 .background(
                                     when {
-                                        isCurrent -> Color(WgcCoreDsColors.trainingVolt)
-                                        isCompleted -> Color(WgcCoreDsColors.trainingMediumGray)
-                                        else -> Color(WgcCoreDsColors.trainingLightGray)
+                                        isCurrent -> Color(WgcCoreDsColors.green28)
+                                        isCompleted -> Color(WgcCoreDsColors.grayDark20)
+                                        else -> Color(WgcCoreDsColors.grayDark23)
                                     }
                                 ),
                             contentAlignment = Alignment.Center
@@ -216,13 +216,13 @@ fun WgcNtcWorkoutPlayerTemplate(
                                 Icon(
                                     imageVector = Icons.Default.Check,
                                     contentDescription = "Concluído",
-                                    tint = Color(WgcCoreDsColors.trainingVolt),
+                                    tint = Color(WgcCoreDsColors.green28),
                                     modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                 )
                             } else {
                                 Text(
                                     text = "${index + 1}",
-                                    color = if (isCurrent) Color(WgcCoreDsColors.trainingBlack) else Color(WgcCoreDsColors.trainingWhite),
+                                    color = if (isCurrent) Color(WgcCoreDsColors.grayDark3) else Color(WgcCoreDsColors.white),
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Black
                                 )
@@ -233,13 +233,13 @@ fun WgcNtcWorkoutPlayerTemplate(
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = exercise.name,
-                                color = if (isCurrent) Color(WgcCoreDsColors.trainingWhite) else Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = if (isCurrent) Color(WgcCoreDsColors.white) else Color(WgcCoreDsColors.gray12),
                                 fontSize = 14.sp,
                                 fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium
                             )
                             Text(
                                 text = exercise.muscleGroup,
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 11.sp
                             )
                         }
@@ -247,7 +247,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                         // Duração
                         Text(
                             text = "${exercise.durationSeconds}s",
-                            color = if (isCurrent) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingSecondaryText),
+                            color = if (isCurrent) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.gray12),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -265,7 +265,7 @@ fun WgcNtcWorkoutPlayerTemplate(
                         .height(WgcCoreDsSize.s52.dp),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(WgcCoreDsColors.trainingVolt))
+                        containerColor = Color(WgcCoreDsColors.green28))
                 ) {
                     Text(
                         text = "CONCLUIR TREINO",

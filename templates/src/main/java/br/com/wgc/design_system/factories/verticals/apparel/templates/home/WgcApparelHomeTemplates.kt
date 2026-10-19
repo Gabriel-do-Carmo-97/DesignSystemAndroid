@@ -130,21 +130,21 @@ fun WgcClotheeHomeTemplate(
                     placeholder = {
                         Text(
                             text = "Search",
-                            color = Color(WgcCoreDsColors.apparelSecondaryText)
+                            color = Color(WgcCoreDsColors.gray12)
                         )
                     },
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = "Search",
-                            tint = Color(WgcCoreDsColors.apparelDark)
+                            tint = Color(WgcCoreDsColors.grayDark18)
                         )
                     },
                     shape = RoundedCornerShape(100.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                        unfocusedContainerColor = Color(WgcCoreDsColors.apparelSurface),
-                        focusedBorderColor = Color(WgcCoreDsColors.apparelPrimary),
+                        focusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                        unfocusedContainerColor = Color(WgcCoreDsColors.grayLight8),
+                        focusedBorderColor = Color(WgcCoreDsColors.purple7),
                         unfocusedBorderColor = Color.Transparent
                     ),
                     singleLine = true
@@ -165,14 +165,14 @@ fun WgcClotheeHomeTemplate(
                     text = "Categories",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Text(
                     text = "See All",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.apparelDark),
+                    color = Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.clickable(onClick = onSeeAllCategories)
                 )
             }
@@ -207,14 +207,14 @@ fun WgcClotheeHomeTemplate(
                     text = "Top Selling",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelDark)
+                    color = Color(WgcCoreDsColors.grayDark18)
                 )
 
                 Text(
                     text = "See All",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.apparelDark),
+                    color = Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.clickable(onClick = onSeeAllProducts)
                 )
             }
@@ -253,14 +253,14 @@ fun WgcClotheeHomeTemplate(
                     text = "New In",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.apparelPrimary)
+                    color = Color(WgcCoreDsColors.purple7)
                 )
 
                 Text(
                     text = "See All",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.apparelDark),
+                    color = Color(WgcCoreDsColors.grayDark18),
                     modifier = Modifier.clickable(onClick = onSeeAllProducts)
                 )
             }
@@ -312,7 +312,7 @@ private fun ClotheeHomeTopBar(
             modifier = Modifier
                 .size(40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.apparelSurface)),
+                .background(Color(WgcCoreDsColors.grayLight8)),
             contentAlignment = Alignment.Center
         ) {
             AsyncImageDefault(
@@ -326,7 +326,7 @@ private fun ClotheeHomeTopBar(
         Row(
             modifier = Modifier
                 .clip(RoundedCornerShape(100.dp))
-                .background(Color(WgcCoreDsColors.apparelSurface))
+                .background(Color(WgcCoreDsColors.grayLight8))
                 .clickable(onClick = onGenderToggle)
                 .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -335,13 +335,13 @@ private fun ClotheeHomeTopBar(
                 text = selectedGender,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.apparelDark)
+                color = Color(WgcCoreDsColors.grayDark18)
             )
             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
             Icon(
                 imageVector = Icons.Default.KeyboardArrowDown,
                 contentDescription = "Select Gender",
-                tint = Color(WgcCoreDsColors.apparelDark),
+                tint = Color(WgcCoreDsColors.grayDark18),
                 modifier = Modifier.size(18.dp)
             )
         }
@@ -351,7 +351,7 @@ private fun ClotheeHomeTopBar(
             modifier = Modifier
                 .size(40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.apparelPrimary))
+                .background(Color(WgcCoreDsColors.purple7))
                 .clickable(onClick = onCartClick),
             contentAlignment = Alignment.Center
         ) {
@@ -359,7 +359,7 @@ private fun ClotheeHomeTopBar(
                 badge = {
                     if (cartCount > 0) {
                         Badge(
-                            containerColor = Color(WgcCoreDsColors.apparelAlertRed),
+                            containerColor = Color(WgcCoreDsColors.red24),
                             contentColor = Color.White
                         ) {
                             Text(text = cartCount.toString())
@@ -409,11 +409,11 @@ private fun ClotheeBottomNavigation(
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(WgcCoreDsColors.apparelPrimary),
-                    selectedTextColor = Color(WgcCoreDsColors.apparelPrimary),
-                    unselectedIconColor = Color(WgcCoreDsColors.apparelSecondaryText),
-                    unselectedTextColor = Color(WgcCoreDsColors.apparelSecondaryText),
-                    indicatorColor = Color(WgcCoreDsColors.apparelPrimaryLight)
+                    selectedIconColor = Color(WgcCoreDsColors.purple7),
+                    selectedTextColor = Color(WgcCoreDsColors.purple7),
+                    unselectedIconColor = Color(WgcCoreDsColors.gray12),
+                    unselectedTextColor = Color(WgcCoreDsColors.gray12),
+                    indicatorColor = Color(WgcCoreDsColors.purpleLight2)
                 )
             )
         }

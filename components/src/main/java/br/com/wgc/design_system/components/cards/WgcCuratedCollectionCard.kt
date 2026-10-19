@@ -18,10 +18,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Card de coleção/categoria oficial do Tassel (WgcCuratedCollectionCard).
@@ -31,18 +31,18 @@ import br.com.wgc.design_system.core.WgcCoreDsSpacing
 fun WgcCuratedCollectionCard(
     modifier: Modifier = Modifier,
     title: String,
-    backgroundColor: Color = Color(WgcCoreDsColors.curatedMarketSurface),
-    textColor: Color = Color(WgcCoreDsColors.curatedMarketDark),
+    backgroundColor: Color = Color(WgcCoreDsColors.blueLight26),
+    textColor: Color = Color(WgcCoreDsColors.grayDark9),
     onClick: () -> Unit = {}
 ) {
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(WgcCoreDsSize.s88.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .height(WgcCoreDsSize.S88.dp)
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .background(backgroundColor)
             .clickable(onClick = onClick)
-            .padding(WgcCoreDsSpacing.md16.dp),
+            .padding(WgcCoreDsSpacing.MD16.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         Text(
@@ -59,8 +59,8 @@ fun WgcCuratedCollectionCard(
 private fun WgcTasselCollectionCardSalePreview() {
     WgcCuratedCollectionCard(
         title = "On sale",
-        backgroundColor = Color(WgcCoreDsColors.curatedMarketSalePink),
-        textColor = Color(WgcCoreDsColors.curatedMarketSalePinkText)
+        backgroundColor = Color(WgcCoreDsColors.redLight9),
+        textColor = Color(WgcCoreDsColors.red28)
     )
 }
 
@@ -69,8 +69,8 @@ private fun WgcTasselCollectionCardSalePreview() {
 private fun WgcTasselCollectionCardNewInPreview() {
     WgcCuratedCollectionCard(
         title = "New in",
-        backgroundColor = Color(WgcCoreDsColors.curatedMarketNewInPurple),
-        textColor = Color(WgcCoreDsColors.curatedMarketNewInPurpleText)
+        backgroundColor = Color(WgcCoreDsColors.blueLight29),
+        textColor = Color(WgcCoreDsColors.blue37)
     )
 }
 

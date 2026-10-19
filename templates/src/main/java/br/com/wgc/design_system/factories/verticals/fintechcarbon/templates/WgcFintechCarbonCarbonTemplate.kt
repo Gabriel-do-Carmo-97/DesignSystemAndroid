@@ -22,7 +22,7 @@ fun WgcC6CarbonTemplate(
             TopAppBar(
                 title = { Text("Cartão Carbon Mastercard Black", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(WgcCoreDsColors.fintechDark),
+                    containerColor = Color(WgcCoreDsColors.grayDark16),
                     titleContentColor = Color.White
                 )
             )

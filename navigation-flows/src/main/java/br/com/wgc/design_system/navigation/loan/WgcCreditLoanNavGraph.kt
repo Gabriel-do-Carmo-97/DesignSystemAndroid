@@ -174,3 +174,15 @@ private fun SuccessRow(label: String, value: String) {
         Text(text = value, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold)
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "LoanContractSuccessScreen Preview", showBackground = true)
+@Composable
+private fun LoanContractSuccessScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        LoanContractSuccessScreen(
+            contractNumber = "CTR-2024-885",
+            amount = 15000f,
+            onClose = {}
+        )
+    }
+}

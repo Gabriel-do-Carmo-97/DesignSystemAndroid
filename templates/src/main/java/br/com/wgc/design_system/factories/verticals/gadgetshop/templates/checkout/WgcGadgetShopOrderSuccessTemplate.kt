@@ -64,14 +64,14 @@ fun WgcNexkartOrderSuccessTemplate(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(Color(WgcCoreDsColors.gadgetShopPrimaryLight)),
+                    .background(Color(WgcCoreDsColors.blueLight31)),
                 contentAlignment = Alignment.Center
             ) {
                 Box(
                     modifier = Modifier
                         .size(64.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary)),
+                        .background(Color(WgcCoreDsColors.blue39)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -89,7 +89,7 @@ fun WgcNexkartOrderSuccessTemplate(
                 text = "Order Confirmed!",
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.gadgetShopDark),
+                color = Color(WgcCoreDsColors.blueDark6),
                 textAlign = TextAlign.Center
             )
 
@@ -98,7 +98,7 @@ fun WgcNexkartOrderSuccessTemplate(
             Text(
                 text = "Your order $orderId has been placed successfully.\nWe sent you a confirmation email.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.gadgetShopSecondaryText),
+                color = Color(WgcCoreDsColors.blue41),
                 textAlign = TextAlign.Center
             )
 
@@ -107,14 +107,14 @@ fun WgcNexkartOrderSuccessTemplate(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp))
-                    .background(Color(WgcCoreDsColors.gadgetShopSurface))
+                    .background(Color(WgcCoreDsColors.blueLight38))
                     .padding(horizontal = WgcCoreDsSpacing.md16.dp, vertical = WgcCoreDsSpacing.xs8.dp)
             ) {
                 Text(
                     text = deliveryEstimate,
                     style = MaterialTheme.typography.bodySmall,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(WgcCoreDsColors.gadgetShopPrimary)
+                    color = Color(WgcCoreDsColors.blue39)
                 )
             }
 
@@ -131,7 +131,7 @@ fun WgcNexkartOrderSuccessTemplate(
                         .fillMaxWidth()
                         .height(48.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                        .background(Color(WgcCoreDsColors.gadgetShopPrimary))
+                        .background(Color(WgcCoreDsColors.blue39))
                         .clickable(onClick = onTrackOrderClick),
                     contentAlignment = Alignment.Center
                 ) {
@@ -149,14 +149,14 @@ fun WgcNexkartOrderSuccessTemplate(
                         .fillMaxWidth()
                         .height(48.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                        .border(1.dp, Color(WgcCoreDsColors.gadgetShopBorder), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
+                        .border(1.dp, Color(WgcCoreDsColors.blueLight14), RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
                         .clickable(onClick = onContinueShoppingClick),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = "Continue Shopping",
                         style = MaterialTheme.typography.titleSmall,
-                        color = Color(WgcCoreDsColors.gadgetShopDark),
+                        color = Color(WgcCoreDsColors.blueDark6),
                         fontWeight = FontWeight.SemiBold
                     )
                 }

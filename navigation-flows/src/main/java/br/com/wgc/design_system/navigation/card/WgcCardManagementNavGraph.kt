@@ -184,3 +184,16 @@ private fun LimitSliderCard(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "CardLimitAdjustScreen Preview", showBackground = true)
+@Composable
+private fun CardLimitAdjustScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        CardLimitAdjustScreen(
+            currentLimit = 2500f,
+            maxLimit = 10000f,
+            onBackClick = {},
+            onSaveLimit = {}
+        )
+    }
+}

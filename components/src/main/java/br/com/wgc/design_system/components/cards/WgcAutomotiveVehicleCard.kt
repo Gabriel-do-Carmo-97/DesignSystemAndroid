@@ -20,10 +20,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 @Composable
 fun WgcAutomotiveVehicleCard(
@@ -40,14 +40,14 @@ fun WgcAutomotiveVehicleCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth().clickable { onClick() },
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.LEVEL1.dp)
     ) {
-        Column(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)) {
+        Column(modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)) {
             Text(text = makeModel, fontWeight = FontWeight.Bold, fontSize = 17.sp)
             Text(text = version, fontSize = 12.sp, color = Color.Gray)
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -57,20 +57,20 @@ fun WgcAutomotiveVehicleCard(
                     text = "R$ " + String.format("%.2f", price),
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = Color(WgcCoreDsColors.automotiveRed)
+                    color = Color(WgcCoreDsColors.red16)
                 )
                 Text(
                     text = "FIPE: R$ " + String.format("%.2f", fipePrice),
                     fontSize = 12.sp,
-                    color = Color(WgcCoreDsColors.transitDigitalGreen),
+                    color = Color(WgcCoreDsColors.green1),
                     fontWeight = FontWeight.SemiBold
                 )
             }
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
             Text(text = "$yearModel • $mileageKm km • $cityState", fontSize = 12.sp, color = Color.DarkGray)
             if (isReportApproved) {
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
-                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.transitDigitalGreen), fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
+                Text(text = "🛡️ Laudo Cautelar Aprovado", fontSize = 11.sp, color = Color(WgcCoreDsColors.green1), fontWeight = FontWeight.Bold)
             }
         }
     }

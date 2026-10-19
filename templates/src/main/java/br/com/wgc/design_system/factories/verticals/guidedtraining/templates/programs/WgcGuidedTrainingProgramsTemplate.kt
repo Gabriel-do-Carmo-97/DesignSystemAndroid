@@ -90,12 +90,12 @@ fun WgcNtcProgramsTemplate(
                             Icon(
                                 imageVector = Icons.Default.ViewAgenda,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingVolt),
+                                tint = Color(WgcCoreDsColors.green28),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Text(
                                 text = "PROGRAMAS GUIADOS",
-                                color = Color(WgcCoreDsColors.trainingVolt),
+                                color = Color(WgcCoreDsColors.green28),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
@@ -104,7 +104,7 @@ fun WgcNtcProgramsTemplate(
 
                         Text(
                             text = "Evolução Semana a Semana",
-                            color = Color(WgcCoreDsColors.trainingWhite),
+                            color = Color(WgcCoreDsColors.white),
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Black
                         )
@@ -116,10 +116,10 @@ fun WgcNtcProgramsTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingMediumGray)
+                        Color(WgcCoreDsColors.grayDark20)
                     )
                 ) {
                     Row(
@@ -132,12 +132,12 @@ fun WgcNtcProgramsTemplate(
                         Icon(
                             imageVector = Icons.Default.Info,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.trainingVolt),
+                            tint = Color(WgcCoreDsColors.green28),
                             modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                         )
                         Text(
                             text = "Os programas combinam treinos de força, mobilidade e recuperação ativa criados por Master Trainers.",
-                            color = Color(WgcCoreDsColors.trainingSecondaryText),
+                            color = Color(WgcCoreDsColors.gray12),
                             fontSize = 12.sp,
                             lineHeight = 16.sp
                         )
@@ -149,7 +149,7 @@ fun WgcNtcProgramsTemplate(
                 item {
                     Text(
                         text = "EM ANDAMENTO",
-                        color = Color(WgcCoreDsColors.trainingWhite),
+                        color = Color(WgcCoreDsColors.white),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 0.5.sp
@@ -175,7 +175,7 @@ fun WgcNtcProgramsTemplate(
             item {
                 Text(
                     text = "TODOS OS PROGRAMAS",
-                    color = Color(WgcCoreDsColors.trainingWhite),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 0.5.sp

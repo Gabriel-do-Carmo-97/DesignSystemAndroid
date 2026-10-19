@@ -141,3 +141,11 @@ fun WgcKycNavHost(
         )
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcKycNavHost Preview", showBackground = true)
+@Composable
+private fun WgcKycNavHostPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcKycNavHost()
+    }
+}

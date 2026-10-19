@@ -111,7 +111,7 @@ fun WgcPdaGourmetCartTemplate(
                     Row(modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(modifier = Modifier.weight(1f)) {
                             Text(item.product.title, fontWeight = FontWeight.Bold)
-                            Text("R$ ${String.format(Locale.getDefault(), "%.2f", item.product.clienteMaisPrice)}", color = Color(WgcCoreDsColors.premiumGroceryGreen))
+                            Text("R$ ${String.format(Locale.getDefault(), "%.2f", item.product.clienteMaisPrice)}", color = Color(WgcCoreDsColors.greenDark7))
                         }
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             IconButton(onClick = { onQuantityChange(item.product.id, item.quantity - 1) }) {

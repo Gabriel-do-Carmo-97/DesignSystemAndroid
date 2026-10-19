@@ -24,16 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.multi.theme.ThemePreviews
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.theme.WgcTheme
-
-/**
- * Ponto de dado para barra vertical.
- */
-data class WgcBarData(
-    val label: String,
-    val value: Float
-)
 
 /**
  * WgcBarChart
@@ -53,7 +45,7 @@ fun WgcBarChart(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS.dp)
     ) {
         Canvas(
             modifier = Modifier

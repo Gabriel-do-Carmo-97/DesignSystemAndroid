@@ -35,9 +35,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.feedback.WgcRatingBar
 import br.com.wgc.design_system.components.images.AsyncImageDefault
 
@@ -61,8 +61,8 @@ fun WgcEcommerceProductCard(
     onFavoriteToggle: (() -> Unit)? = null,
     onClick: () -> Unit
 ) {
-    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.md.dp)
-    val borderColor = Color(WgcCoreDsColors.trendFashionBorderGray).copy(alpha = 0.25f)
+    val shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD.dp)
+    val borderColor = Color(WgcCoreDsColors.gray17).copy(alpha = 0.25f)
 
     Card(
         modifier = modifier
@@ -80,7 +80,7 @@ fun WgcEcommerceProductCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(160.dp)
-                    .background(Color(WgcCoreDsColors.trendFashionLightGray))
+                    .background(Color(WgcCoreDsColors.grayLight10))
             ) {
                 AsyncImageDefault(
                     image = imageUrl,
@@ -94,10 +94,10 @@ fun WgcEcommerceProductCard(
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopStart)
-                            .padding(WgcCoreDsSpacing.xs.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xs.dp))
-                            .background(Color(WgcCoreDsColors.trendFashionPink))
-                            .padding(horizontal = WgcCoreDsSpacing.xs.dp, vertical = 2.dp)
+                            .padding(WgcCoreDsSpacing.XS.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.XS.dp))
+                            .background(Color(WgcCoreDsColors.pink4))
+                            .padding(horizontal = WgcCoreDsSpacing.XS.dp, vertical = 2.dp)
                     ) {
                         Text(
                             text = "$discountPercent% OFF",
@@ -112,7 +112,7 @@ fun WgcEcommerceProductCard(
                         onClick = onFavoriteToggle,
                         modifier = Modifier
                             .align(Alignment.TopEnd)
-                            .padding(WgcCoreDsSpacing.xxs.dp)
+                            .padding(WgcCoreDsSpacing.XXS.dp)
                             .size(32.dp)
                             .clip(CircleShape)
                             .background(Color.White.copy(alpha = 0.8f))
@@ -120,7 +120,7 @@ fun WgcEcommerceProductCard(
                         Icon(
                             imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                             contentDescription = if (isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
-                            tint = if (isFavorite) Color(WgcCoreDsColors.trendFashionPink) else Color(WgcCoreDsColors.trendFashionDark),
+                            tint = if (isFavorite) Color(WgcCoreDsColors.pink4) else Color(WgcCoreDsColors.blueDark19),
                             modifier = Modifier.size(18.dp)
                         )
                     }
@@ -131,12 +131,12 @@ fun WgcEcommerceProductCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.sm.dp)
+                    .padding(WgcCoreDsSpacing.SM.dp)
             ) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                    color = Color(WgcCoreDsColors.trendFashionDark),
+                    color = Color(WgcCoreDsColors.blueDark19),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -146,13 +146,13 @@ fun WgcEcommerceProductCard(
                     Text(
                         text = subtitle,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.textSecondary),
+                        color = Color(WgcCoreDsColors.gray6),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
                 }
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
 
                 // Price Row
                 Row(
@@ -161,23 +161,23 @@ fun WgcEcommerceProductCard(
                     Text(
                         text = price,
                         style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                        color = Color(WgcCoreDsColors.trendFashionDark)
+                        color = Color(WgcCoreDsColors.blueDark19)
                     )
 
                     if (originalPrice != null) {
-                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs.dp))
+                        Spacer(modifier = Modifier.width(WgcCoreDsSpacing.XS.dp))
                         Text(
                             text = originalPrice,
                             style = MaterialTheme.typography.bodySmall.copy(
                                 textDecoration = TextDecoration.LineThrough
                             ),
-                            color = Color(WgcCoreDsColors.textSecondary)
+                            color = Color(WgcCoreDsColors.gray6)
                         )
                     }
                 }
 
                 if (rating != null) {
-                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs.dp))
+                    Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS.dp))
                     WgcRatingBar(
                         rating = rating,
                         reviewCount = reviewCount,
@@ -195,7 +195,7 @@ private fun WgcEcommerceProductCardPreview() {
     Box(
         modifier = Modifier
             .width(180.dp)
-            .padding(WgcCoreDsSpacing.sm.dp)
+            .padding(WgcCoreDsSpacing.SM.dp)
     ) {
         WgcEcommerceProductCard(
             title = "Nike Sneakers",

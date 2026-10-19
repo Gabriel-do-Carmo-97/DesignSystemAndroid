@@ -36,8 +36,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Estados do componente de upload/seleção de mídia.
@@ -75,7 +75,7 @@ fun WgcMediaPicker(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+        verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
     ) {
         Text(
             text = label,
@@ -127,20 +127,20 @@ private fun WgcMediaIdleCard(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .border(
                 width = 1.dp,
                 color = borderColor,
-                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
             )
             .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f))
             .clickable(enabled = isEnabled, onClick = onClick)
-            .padding(WgcCoreDsSpacing.md16.dp),
+            .padding(WgcCoreDsSpacing.MD16.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.CloudUpload,
@@ -169,16 +169,16 @@ private fun WgcMediaIdleCard(
 private fun WgcMediaUploadingCard(progress: Float) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
             ) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(20.dp),
@@ -202,7 +202,7 @@ private fun WgcMediaUploadingCard(progress: Float) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(4.dp)
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)),
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp)),
                 color = MaterialTheme.colorScheme.primary
             )
         }
@@ -218,7 +218,7 @@ private fun WgcMediaSuccessCard(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.4f),
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
@@ -227,11 +227,11 @@ private fun WgcMediaSuccessCard(
     ) {
         Row(
             modifier = Modifier.padding(
-                horizontal = WgcCoreDsSpacing.md16.dp,
-                vertical = WgcCoreDsSpacing.xs8.dp
+                horizontal = WgcCoreDsSpacing.MD16.dp,
+                vertical = WgcCoreDsSpacing.XS8.dp
             ),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.Description,
@@ -284,7 +284,7 @@ private fun WgcMediaErrorCard(
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
@@ -292,9 +292,9 @@ private fun WgcMediaErrorCard(
         )
     ) {
         Row(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.Error,
@@ -322,7 +322,7 @@ private fun WgcMediaErrorCard(
                 color = MaterialTheme.colorScheme.error,
                 modifier = Modifier
                     .clickable(enabled = isEnabled, onClick = onRetry)
-                    .padding(WgcCoreDsSpacing.xxs4.dp)
+                    .padding(WgcCoreDsSpacing.XXS4.dp)
             )
         }
     }

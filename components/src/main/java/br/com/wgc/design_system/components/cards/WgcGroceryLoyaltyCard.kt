@@ -31,11 +31,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsElevation
-import br.com.wgc.design_system.core.WgcCoreDsSize
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsElevation
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSize
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import java.util.Locale
 
 /**
@@ -59,20 +59,20 @@ fun WgcGroceryLoyaltyCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.LG12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(WgcCoreDsColors.groceryBlue)
+            containerColor = Color(WgcCoreDsColors.blueDark32)
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = WgcCoreDsElevation.level3.dp
+            defaultElevation = WgcCoreDsElevation.LEVEL3.dp
         ),
         border = androidx.compose.foundation.BorderStroke(
-            width = WgcCoreDsSize.s1.dp,
-            color = Color(WgcCoreDsColors.groceryBlueDark)
+            width = WgcCoreDsSize.S1.dp,
+            color = Color(WgcCoreDsColors.blueDark14)
         )
     ) {
         Column(
-            modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp)
+            modifier = Modifier.padding(WgcCoreDsSpacing.MD16.dp)
         ) {
             // Linha Superior: Logo Supermercado & Botão Leitor Caixa
             Row(
@@ -82,20 +82,20 @@ fun WgcGroceryLoyaltyCard(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(WgcCoreDsSize.s32.dp)
-                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                            .size(WgcCoreDsSize.S32.dp)
+                            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                             .background(Color.White),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.CreditCard,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.groceryRed),
-                            modifier = Modifier.size(WgcCoreDsSize.s20.dp)
+                            tint = Color(WgcCoreDsColors.red19),
+                            modifier = Modifier.size(WgcCoreDsSize.S20.dp)
                         )
                     }
 
@@ -117,24 +117,24 @@ fun WgcGroceryLoyaltyCard(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+                        .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
                         .background(Color.White)
                         .clickable(onClick = onShowBarcodeClick)
-                        .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxs4.dp)
+                        .padding(horizontal = WgcCoreDsSpacing.XS8.dp, vertical = WgcCoreDsSpacing.XXS4.dp)
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.QrCode,
                             contentDescription = "Identificação no Caixa",
-                            tint = Color(WgcCoreDsColors.groceryBlue),
-                            modifier = Modifier.size(WgcCoreDsSize.s18.dp)
+                            tint = Color(WgcCoreDsColors.blueDark32),
+                            modifier = Modifier.size(WgcCoreDsSize.S18.dp)
                         )
                         Text(
                             text = "NO CAIXA",
-                            color = Color(WgcCoreDsColors.groceryBlue),
+                            color = Color(WgcCoreDsColors.blueDark32),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -142,15 +142,15 @@ fun WgcGroceryLoyaltyCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.sm12.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.SM12.dp))
 
             // Informações Financeiras e de Fidelidade
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
+                    .clip(RoundedCornerShape(WgcCoreDsBorderRadius.SM4.dp))
                     .background(Color.White.copy(alpha = 0.12f))
-                    .padding(WgcCoreDsSpacing.sm12.dp),
+                    .padding(WgcCoreDsSpacing.SM12.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -171,8 +171,8 @@ fun WgcGroceryLoyaltyCard(
 
                 Box(
                     modifier = Modifier
-                        .width(WgcCoreDsSize.s1.dp)
-                        .height(WgcCoreDsSize.s28.dp)
+                        .width(WgcCoreDsSize.S1.dp)
+                        .height(WgcCoreDsSize.S28.dp)
                         .background(Color.White.copy(alpha = 0.25f))
                 )
 
@@ -185,17 +185,17 @@ fun WgcGroceryLoyaltyCard(
                     )
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xxs4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XXS4.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.MonetizationOn,
                             contentDescription = null,
-                            tint = Color(WgcCoreDsColors.groceryYellow),
-                            modifier = Modifier.size(WgcCoreDsSize.s16.dp)
+                            tint = Color(WgcCoreDsColors.orange13),
+                            modifier = Modifier.size(WgcCoreDsSize.S16.dp)
                         )
                         Text(
                             text = "$coinsBalance",
-                            color = Color(WgcCoreDsColors.groceryYellow),
+                            color = Color(WgcCoreDsColors.orange13),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Black
                         )
@@ -203,7 +203,7 @@ fun WgcGroceryLoyaltyCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+            Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
 
             Text(
                 text = "Melhor dia de compra: dia $bestPurchaseDay • Até 10x sem juros nas lojas e site Supermercado",

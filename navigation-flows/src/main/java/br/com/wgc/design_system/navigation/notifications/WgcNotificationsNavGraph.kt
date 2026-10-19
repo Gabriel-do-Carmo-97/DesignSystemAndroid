@@ -147,3 +147,22 @@ private fun WgcNotificationDetailScreen(
         }
     }
 }
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcNotificationsNavHost Preview", showBackground = true)
+@Composable
+private fun WgcNotificationsNavHostPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcNotificationsNavHost()
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview(name = "WgcNotificationDetailScreen Preview", showBackground = true)
+@Composable
+private fun WgcNotificationDetailScreenPreview() {
+    br.com.wgc.design_system.theme.WgcTheme {
+        WgcNotificationDetailScreen(
+            notificationId = "NT-102030",
+            onBackClick = {}
+        )
+    }
+}

@@ -42,8 +42,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.components.buttons.WgcClassicButton
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 private const val SIGNATURE_BOX_HEIGHT = 200
 private const val DEFAULT_STROKE_WIDTH = 3f
@@ -76,14 +76,14 @@ fun WgcSignaturePad(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm12.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM12.dp)
         ) {
             SignatureHeader(strokesCount = strokes.size)
 
@@ -141,7 +141,7 @@ private fun SignatureCanvasBox(
         modifier = Modifier
             .fillMaxWidth()
             .height(SIGNATURE_BOX_HEIGHT.dp)
-            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
+            .clip(RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp))
             .background(MaterialTheme.colorScheme.surface)
             .pointerInput(isEnabled) {
                 if (!isEnabled) return@pointerInput
@@ -210,7 +210,7 @@ private fun SignatureControlsRow(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)) {
             IconButton(
                 onClick = onUndo,
                 enabled = isEnabled && hasStrokes

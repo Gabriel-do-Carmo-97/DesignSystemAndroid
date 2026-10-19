@@ -141,7 +141,7 @@ fun WgcPropertyListingHomeTemplate(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.propertyListingSurface))
+                        .background(Color(WgcCoreDsColors.white))
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
                     WgcPropertyListingSearchBar(
@@ -224,7 +224,7 @@ fun WgcPropertyListingHomeTemplate(
                         text = "Imobiliárias em Destaque",
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyListingDark),
+                        color = Color(WgcCoreDsColors.blueDark23),
                         modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
                     )
 
@@ -239,7 +239,7 @@ fun WgcPropertyListingHomeTemplate(
                         items(agencies) { agency ->
                             Card(
                                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
-                                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.propertyListingSurface)),
+                                colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                                 elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsSpacing.xxxs2.dp)
                             ) {
                                 Row(
@@ -253,13 +253,13 @@ fun WgcPropertyListingHomeTemplate(
                                         modifier = Modifier
                                             .size(WgcCoreDsSize.s32.dp)
                                             .clip(CircleShape)
-                                            .background(Color(WgcCoreDsColors.propertyListingPrimaryLight)),
+                                            .background(Color(WgcCoreDsColors.greenLight13)),
                                         contentAlignment = Alignment.Center
                                     ) {
                                         Icon(
                                             imageVector = Icons.Default.Business,
                                             contentDescription = null,
-                                            tint = Color(WgcCoreDsColors.propertyListingPrimary),
+                                            tint = Color(WgcCoreDsColors.green14),
                                             modifier = Modifier.size(WgcCoreDsSize.s18.dp)
                                         )
                                     }
@@ -268,7 +268,7 @@ fun WgcPropertyListingHomeTemplate(
                                         text = agency,
                                         style = MaterialTheme.typography.labelMedium,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.propertyListingDark)
+                                        color = Color(WgcCoreDsColors.blueDark23)
                                     )
                                 }
                             }
@@ -290,7 +290,7 @@ fun WgcPropertyListingHomeTemplate(
                         text = "Imóveis Encontrados (${filteredProperties.size})",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.propertyListingDark)
+                        color = Color(WgcCoreDsColors.blueDark23)
                     )
                 }
             }
@@ -332,7 +332,7 @@ private fun PropertyListingHomeTopBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(WgcCoreDsColors.propertyListingSurface))
+            .background(Color(WgcCoreDsColors.white))
             .padding(
                 horizontal = WgcCoreDsSpacing.md16.dp,
                 vertical = WgcCoreDsSpacing.sm12.dp
@@ -346,7 +346,7 @@ private fun PropertyListingHomeTopBar(
                 modifier = Modifier
                     .size(WgcCoreDsSize.s32.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                    .background(Color(WgcCoreDsColors.propertyListingPrimary)),
+                    .background(Color(WgcCoreDsColors.green14)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -364,12 +364,12 @@ private fun PropertyListingHomeTopBar(
                     text = "Property Listing",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.propertyListingPrimary)
+                    color = Color(WgcCoreDsColors.green14)
                 )
                 Text(
                     text = "O maior portal de imóveis",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color(WgcCoreDsColors.propertyListingSecondaryText)
+                    color = Color(WgcCoreDsColors.blue22)
                 )
             }
         }
@@ -379,12 +379,12 @@ private fun PropertyListingHomeTopBar(
             modifier = Modifier
                 .size(WgcCoreDsSize.s40.dp)
                 .clip(CircleShape)
-                .background(Color(WgcCoreDsColors.propertyListingBackground))
+                .background(Color(WgcCoreDsColors.blueLight37))
         ) {
             Icon(
                 imageVector = Icons.Default.NotificationsNone,
                 contentDescription = "Alertas e Notificações",
-                tint = Color(WgcCoreDsColors.propertyListingDark),
+                tint = Color(WgcCoreDsColors.blueDark23),
                 modifier = Modifier.size(WgcCoreDsSize.s22.dp)
             )
         }

@@ -140,12 +140,12 @@ fun WgcExtraLoyaltyTemplate(
                             Icon(
                                 imageVector = Icons.Default.Stars,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.hypermarketOrange),
+                                tint = Color(WgcCoreDsColors.orange19),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                             Text(
                                 text = "JUNTOU & GANHOU EXTRA",
-                                color = Color(WgcCoreDsColors.hypermarketOrange),
+                                color = Color(WgcCoreDsColors.orange19),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
@@ -154,7 +154,7 @@ fun WgcExtraLoyaltyTemplate(
 
                         Text(
                             text = "Sua Cartela Digital",
-                            color = Color(WgcCoreDsColors.hypermarketDark),
+                            color = Color(WgcCoreDsColors.grayDark7),
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Black
                         )
@@ -167,10 +167,10 @@ fun WgcExtraLoyaltyTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     ),
                     elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                 ) {
@@ -187,7 +187,7 @@ fun WgcExtraLoyaltyTemplate(
                         ) {
                             Text(
                                 text = "SELOS ACUMULADOS",
-                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                color = Color(WgcCoreDsColors.blue27),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
                                 letterSpacing = 0.5.sp
@@ -195,7 +195,7 @@ fun WgcExtraLoyaltyTemplate(
 
                             Text(
                                 text = "${stamps.currentStamps} de ${stamps.targetStamps} Selos",
-                                color = Color(WgcCoreDsColors.hypermarketOrange),
+                                color = Color(WgcCoreDsColors.orange19),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Black
                             )
@@ -220,11 +220,11 @@ fun WgcExtraLoyaltyTemplate(
                                             .size(WgcCoreDsSize.s40.dp)
                                             .clip(CircleShape)
                                             .background(
-                                                if (isFilled) Color(WgcCoreDsColors.hypermarketOrange) else Color(WgcCoreDsColors.hypermarketBackground)
+                                                if (isFilled) Color(WgcCoreDsColors.orange19) else Color(WgcCoreDsColors.blueLight33)
                                             )
                                             .border(
                                                 width = WgcCoreDsSize.s1.dp,
-                                                color = if (isFilled) Color(WgcCoreDsColors.hypermarketOrange) else Color(WgcCoreDsColors.hypermarketBorder),
+                                                color = if (isFilled) Color(WgcCoreDsColors.orange19) else Color(WgcCoreDsColors.blueLight6),
                                                 shape = CircleShape
                                             ),
                                         contentAlignment = Alignment.Center
@@ -239,7 +239,7 @@ fun WgcExtraLoyaltyTemplate(
                                         } else {
                                             Text(
                                                 text = "$slotIndex",
-                                                color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                                color = Color(WgcCoreDsColors.blue27),
                                                 fontSize = 11.sp,
                                                 fontWeight = FontWeight.Bold
                                             )
@@ -258,7 +258,7 @@ fun WgcExtraLoyaltyTemplate(
                                 .height(WgcCoreDsSize.s44.dp),
                             shape = RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(WgcCoreDsColors.hypermarketOrange),
+                                containerColor = Color(WgcCoreDsColors.orange19),
                                 contentColor = Color.White
                             )
                         ) {
@@ -287,7 +287,7 @@ fun WgcExtraLoyaltyTemplate(
             item {
                 Text(
                     text = "PRÊMIOS DISPONÍVEIS PARA RESGATE",
-                    color = Color(WgcCoreDsColors.hypermarketDark),
+                    color = Color(WgcCoreDsColors.grayDark7),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 0.5.sp
@@ -299,10 +299,10 @@ fun WgcExtraLoyaltyTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.hypermarketSurface)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.white)),
                     border = androidx.compose.foundation.BorderStroke(
                         width = WgcCoreDsSize.s1.dp,
-                        color = Color(WgcCoreDsColors.hypermarketBorder)
+                        color = Color(WgcCoreDsColors.blueLight6)
                     )
                 ) {
                     Column(
@@ -318,7 +318,7 @@ fun WgcExtraLoyaltyTemplate(
                         ) {
                             Text(
                                 text = reward.name,
-                                color = Color(WgcCoreDsColors.hypermarketDark),
+                                color = Color(WgcCoreDsColors.grayDark7),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -326,12 +326,12 @@ fun WgcExtraLoyaltyTemplate(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                                    .background(Color(WgcCoreDsColors.hypermarketOrangeLight))
+                                    .background(Color(WgcCoreDsColors.orangeLight5))
                                     .padding(horizontal = WgcCoreDsSpacing.xs8.dp, vertical = WgcCoreDsSpacing.xxxs2.dp)
                             ) {
                                 Text(
                                     text = "${reward.requiredStamps} Selos",
-                                    color = Color(WgcCoreDsColors.hypermarketOrange),
+                                    color = Color(WgcCoreDsColors.orange19),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -340,7 +340,7 @@ fun WgcExtraLoyaltyTemplate(
 
                         Text(
                             text = reward.description,
-                            color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                            color = Color(WgcCoreDsColors.blue27),
                             fontSize = 12.sp
                         )
 
@@ -352,12 +352,12 @@ fun WgcExtraLoyaltyTemplate(
                             Column {
                                 Text(
                                     text = "De ${reward.regularPrice}",
-                                    color = Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                    color = Color(WgcCoreDsColors.blue27),
                                     fontSize = 11.sp
                                 )
                                 Text(
                                     text = "Por ${reward.specialPriceWithStamps} + Selos",
-                                    color = Color(WgcCoreDsColors.hypermarketRed),
+                                    color = Color(WgcCoreDsColors.red12),
                                     fontSize = 15.sp,
                                     fontWeight = FontWeight.Black
                                 )
@@ -368,13 +368,13 @@ fun WgcExtraLoyaltyTemplate(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
                                     .background(
-                                        if (canRedeem) Color(WgcCoreDsColors.hypermarketSuccessGreenLight) else Color(WgcCoreDsColors.hypermarketBackground)
+                                        if (canRedeem) Color(WgcCoreDsColors.greenLight10) else Color(WgcCoreDsColors.blueLight33)
                                     )
                                     .padding(horizontal = WgcCoreDsSpacing.sm12.dp, vertical = WgcCoreDsSpacing.xs8.dp)
                             ) {
                                 Text(
                                     text = if (canRedeem) "PRONTO PARA RESGATAR" else "FALTAM ${reward.requiredStamps - stamps.currentStamps} SELOS",
-                                    color = if (canRedeem) Color(WgcCoreDsColors.hypermarketSuccessGreen) else Color(WgcCoreDsColors.hypermarketSecondaryText),
+                                    color = if (canRedeem) Color(WgcCoreDsColors.green4) else Color(WgcCoreDsColors.blue27),
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold
                                 )

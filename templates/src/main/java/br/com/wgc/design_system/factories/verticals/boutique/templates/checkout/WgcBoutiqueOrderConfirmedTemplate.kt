@@ -87,12 +87,12 @@ fun WgcLazaOrderConfirmedTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -108,13 +108,13 @@ fun WgcLazaOrderConfirmedTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s140.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiquePrimaryLight)),
+                        .background(Color(WgcCoreDsColors.purpleLight2)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
                         contentDescription = "Pedido confirmado",
-                        tint = Color(WgcCoreDsColors.boutiquePrimary),
+                        tint = Color(WgcCoreDsColors.purple8),
                         modifier = Modifier.size(WgcCoreDsSize.s72.dp)
                     )
                 }
@@ -126,7 +126,7 @@ fun WgcLazaOrderConfirmedTemplate(
                 text = "Order Confirmed!",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.boutiqueDark),
+                color = Color(WgcCoreDsColors.grayDark13),
                 textAlign = TextAlign.Center
             )
 
@@ -135,7 +135,7 @@ fun WgcLazaOrderConfirmedTemplate(
             Text(
                 text = "Your order $orderCode has been confirmed, we will send you confirmation email shortly.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(WgcCoreDsColors.boutiqueSecondaryText),
+                color = Color(WgcCoreDsColors.gray13),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
             )
@@ -150,7 +150,7 @@ fun WgcLazaOrderConfirmedTemplate(
                     .height(WgcCoreDsSize.s52.dp),
                 shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(WgcCoreDsColors.boutiqueSurface))
+                    containerColor = Color(WgcCoreDsColors.blueLight32))
             ) {
                 Text(
                     text = "Go to Orders",

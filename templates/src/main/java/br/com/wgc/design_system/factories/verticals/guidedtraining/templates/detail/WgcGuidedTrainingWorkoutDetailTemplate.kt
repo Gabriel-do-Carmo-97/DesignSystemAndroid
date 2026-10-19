@@ -81,14 +81,14 @@ fun WgcNtcWorkoutDetailTemplate(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.trainingWhite),
+                        tint = Color(WgcCoreDsColors.white),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                 }
 
                 Text(
                     text = "DETALHES DO TREINO",
-                    color = Color(WgcCoreDsColors.trainingWhite),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 1.sp
@@ -98,7 +98,7 @@ fun WgcNtcWorkoutDetailTemplate(
                     Icon(
                         imageVector = if (workout.isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                         contentDescription = "Salvar",
-                        tint = if (workout.isSaved) Color(WgcCoreDsColors.trainingVolt) else Color(WgcCoreDsColors.trainingWhite),
+                        tint = if (workout.isSaved) Color(WgcCoreDsColors.green28) else Color(WgcCoreDsColors.white),
                         modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                     )
                 }
@@ -111,10 +111,10 @@ fun WgcNtcWorkoutDetailTemplate(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(WgcCoreDsColors.trainingBlack))
+                        .background(Color(WgcCoreDsColors.grayDark3))
                         .border(
                             width = WgcCoreDsSize.s1.dp,
-                            color = Color(WgcCoreDsColors.trainingMediumGray)
+                            color = Color(WgcCoreDsColors.grayDark20)
                         )
                         .padding(WgcCoreDsSpacing.md16.dp)
                 ) {
@@ -125,7 +125,7 @@ fun WgcNtcWorkoutDetailTemplate(
                             .height(WgcCoreDsSize.s52.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.trainingVolt))
+                            containerColor = Color(WgcCoreDsColors.green28))
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
@@ -163,7 +163,7 @@ fun WgcNtcWorkoutDetailTemplate(
                     Card(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.lg12.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                        colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                         elevation = CardDefaults.cardElevation(defaultElevation = WgcCoreDsElevation.level1.dp)
                     ) {
                         Column(
@@ -189,7 +189,7 @@ fun WgcNtcWorkoutDetailTemplate(
 
                             Text(
                                 text = workout.title,
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Black,
                                 lineHeight = 28.sp
@@ -197,7 +197,7 @@ fun WgcNtcWorkoutDetailTemplate(
 
                             Text(
                                 text = workout.description,
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 13.sp,
                                 lineHeight = 18.sp
                             )
@@ -217,12 +217,12 @@ fun WgcNtcWorkoutDetailTemplate(
                                     Icon(
                                         imageVector = Icons.Default.Schedule,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.trainingVolt),
+                                        tint = Color(WgcCoreDsColors.green28),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                     Text(
                                         text = "${workout.durationMinutes} min",
-                                        color = Color(WgcCoreDsColors.trainingWhite),
+                                        color = Color(WgcCoreDsColors.white),
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -235,12 +235,12 @@ fun WgcNtcWorkoutDetailTemplate(
                                     Icon(
                                         imageVector = Icons.Default.LocalFireDepartment,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.trainingOrange),
+                                        tint = Color(WgcCoreDsColors.orange500),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                     Text(
                                         text = "${workout.estimatedCalories} kcal",
-                                        color = Color(WgcCoreDsColors.trainingWhite),
+                                        color = Color(WgcCoreDsColors.white),
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -253,12 +253,12 @@ fun WgcNtcWorkoutDetailTemplate(
                                     Icon(
                                         imageVector = Icons.Default.FitnessCenter,
                                         contentDescription = null,
-                                        tint = Color(WgcCoreDsColors.trainingSecondaryText),
+                                        tint = Color(WgcCoreDsColors.gray12),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                     Text(
                                         text = workout.equipment,
-                                        color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                        color = Color(WgcCoreDsColors.gray12),
                                         fontSize = 12.sp
                                     )
                                 }
@@ -273,10 +273,10 @@ fun WgcNtcWorkoutDetailTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingMediumGray)
+                        Color(WgcCoreDsColors.grayDark20)
                     )
                 ) {
                     Row(
@@ -290,13 +290,13 @@ fun WgcNtcWorkoutDetailTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s48.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.trainingMediumGray)),
+                                .background(Color(WgcCoreDsColors.grayDark20)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Person,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.trainingVolt),
+                                tint = Color(WgcCoreDsColors.green28),
                                 modifier = Modifier.size(WgcCoreDsSize.s24.dp)
                             )
                         }
@@ -304,13 +304,13 @@ fun WgcNtcWorkoutDetailTemplate(
                         Column {
                             Text(
                                 text = workout.trainerName,
-                                color = Color(WgcCoreDsColors.trainingWhite),
+                                color = Color(WgcCoreDsColors.white),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "Nike Master Trainer • Áudio Coaching incluso",
-                                color = Color(WgcCoreDsColors.trainingSecondaryText),
+                                color = Color(WgcCoreDsColors.gray12),
                                 fontSize = 12.sp
                             )
                         }
@@ -322,7 +322,7 @@ fun WgcNtcWorkoutDetailTemplate(
             item {
                 Text(
                     text = "EXERCÍCIOS INCLUSOS (${workout.exercises.size})",
-                    color = Color(WgcCoreDsColors.trainingWhite),
+                    color = Color(WgcCoreDsColors.white),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 0.5.sp
@@ -334,10 +334,10 @@ fun WgcNtcWorkoutDetailTemplate(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.trainingDarkGray)),
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.grayDark11)),
                     border = androidx.compose.foundation.BorderStroke(
                         WgcCoreDsSize.s1.dp,
-                        Color(WgcCoreDsColors.trainingMediumGray)
+                        Color(WgcCoreDsColors.grayDark20)
                     )
                 ) {
                     Column(
@@ -359,19 +359,19 @@ fun WgcNtcWorkoutDetailTemplate(
                                     modifier = Modifier
                                         .size(WgcCoreDsSize.s24.dp)
                                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp))
-                                        .background(Color(WgcCoreDsColors.trainingMediumGray)),
+                                        .background(Color(WgcCoreDsColors.grayDark20)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
                                         text = "${index + 1}",
-                                        color = Color(WgcCoreDsColors.trainingWhite),
+                                        color = Color(WgcCoreDsColors.white),
                                         fontSize = 11.sp,
                                         fontWeight = FontWeight.Bold
                                     )
                                 }
                                 Text(
                                     text = exercise.name,
-                                    color = Color(WgcCoreDsColors.trainingWhite),
+                                    color = Color(WgcCoreDsColors.white),
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -379,7 +379,7 @@ fun WgcNtcWorkoutDetailTemplate(
 
                             Text(
                                 text = "${exercise.durationSeconds}s",
-                                color = Color(WgcCoreDsColors.trainingVolt),
+                                color = Color(WgcCoreDsColors.green28),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -387,7 +387,7 @@ fun WgcNtcWorkoutDetailTemplate(
 
                         Text(
                             text = exercise.coachTip,
-                            color = Color(WgcCoreDsColors.trainingSecondaryText),
+                            color = Color(WgcCoreDsColors.gray12),
                             fontSize = 12.sp,
                             lineHeight = 16.sp
                         )

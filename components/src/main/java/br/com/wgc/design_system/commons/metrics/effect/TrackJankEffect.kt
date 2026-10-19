@@ -8,7 +8,18 @@ import br.com.wgc.design_system.commons.metrics.model.JankReport
 import br.com.wgc.design_system.commons.metrics.monitor.FrameMetricsMonitor
 
 /**
- * Composable Effect para monitoramento automático de Jank durante o ciclo de vida da tela Compose.
+ * Observa as métricas de frames da janela da Activity enquanto este composable estiver na composição.
+ *
+ * Use em uma tela Compose hospedada por uma Activity para registrar frames cuja duração atinja
+ * [thresholdMs]. O listener é removido ao sair da composição ou quando a Activity/limite muda.
+ * Fora de uma Activity, o efeito não inicia monitoramento.
+ *
+ * ```kotlin
+ * TrackJankEffect { report -> analytics.recordFrameJank(report.totalDurationMs) }
+ * ```
+ *
+ * @param thresholdMs Duração mínima do frame, em ms, para reportar jank.
+ * @param onJankDetected Callback chamado para cada frame acima do limite.
  */
 @Composable
 fun TrackJankEffect(

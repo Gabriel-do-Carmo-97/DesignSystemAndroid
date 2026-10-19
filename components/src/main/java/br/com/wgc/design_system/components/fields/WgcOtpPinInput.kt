@@ -26,8 +26,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 
 /**
  * Campo corporativo de código PIN/OTP com caixas visuais independentes por dígito.
@@ -61,7 +61,7 @@ fun WgcOtpPinInput(
         modifier = modifier.focusRequester(focusRequester),
         decorationBox = {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.sm8.dp),
+                horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.SM8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 repeat(length) { index ->
@@ -81,7 +81,7 @@ fun WgcOtpPinInput(
                             .border(
                                 width = if (isFocused) 2.dp else 1.dp,
                                 color = borderColor,
-                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
+                                shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp)
                             )
                             .clickable { focusRequester.requestFocus() },
                         contentAlignment = Alignment.Center

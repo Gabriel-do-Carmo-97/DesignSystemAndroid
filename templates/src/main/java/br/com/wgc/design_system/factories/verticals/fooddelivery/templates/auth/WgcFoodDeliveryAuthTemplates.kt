@@ -68,7 +68,7 @@ fun WgcFoodDeliveryRegisterScreenTemplate(viewModel: BaseFoodDeliveryAuthViewMod
             WgcBrandAuthHeader(
                 brandName = "Food Delivery",
                 brandLogoText = "FD",
-                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.foodDeliveryRed),
+                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.red18),
                 title = "Crie sua conta no Food Delivery",
                 subtitle = "Preencha seus dados para começar a pedir"
             )
@@ -98,7 +98,7 @@ fun WgcFoodDeliveryResetPasswordScreenTemplate(viewModel: BaseFoodDeliveryAuthVi
             WgcBrandAuthHeader(
                 brandName = "Food Delivery",
                 brandLogoText = "FD",
-                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.foodDeliveryRed),
+                brandColor = Color(br.com.wgc.design_system.core.WgcCoreDsColors.red18),
                 title = "Recuperar Conta Food Delivery",
                 subtitle = "Digite o código enviado por SMS/E-mail"
             )

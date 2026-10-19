@@ -13,21 +13,21 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import br.com.wgc.design_system.core.WgcCoreDsColors
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
 
 /**
  * Esquema de cores corporativo no modo escuro (Dark Mode).
  */
 val WgcDarkColorScheme: ColorScheme = darkColorScheme(
-    primary = Color(WgcCoreDsColors.primary),
-    secondary = Color(WgcCoreDsColors.secondary),
-    background = Color(WgcCoreDsColors.grey900),
-    surface = Color(WgcCoreDsColors.grey900),
-    error = Color(WgcCoreDsColors.error),
+    primary = Color(WgcCoreDsColors.orange500),
+    secondary = Color(WgcCoreDsColors.white),
+    background = Color(WgcCoreDsColors.gray900),
+    surface = Color(WgcCoreDsColors.gray900),
+    error = Color(WgcCoreDsColors.red500),
     onPrimary = Color(WgcCoreDsColors.white),
-    onSecondary = Color(WgcCoreDsColors.grey900),
-    onBackground = Color(WgcCoreDsColors.grey50),
-    onSurface = Color(WgcCoreDsColors.grey50),
+    onSecondary = Color(WgcCoreDsColors.gray900),
+    onBackground = Color(WgcCoreDsColors.gray50),
+    onSurface = Color(WgcCoreDsColors.gray50),
     onError = Color(WgcCoreDsColors.white)
 )
 
@@ -35,15 +35,15 @@ val WgcDarkColorScheme: ColorScheme = darkColorScheme(
  * Esquema de cores corporativo no modo claro (Light Mode).
  */
 val WgcLightColorScheme: ColorScheme = lightColorScheme(
-    primary = Color(WgcCoreDsColors.primary),
-    secondary = Color(WgcCoreDsColors.textPrimary),
-    background = Color(WgcCoreDsColors.background),
+    primary = Color(WgcCoreDsColors.orange500),
+    secondary = Color(WgcCoreDsColors.gray900),
+    background = Color(WgcCoreDsColors.gray50),
     surface = Color(WgcCoreDsColors.white),
-    error = Color(WgcCoreDsColors.error),
+    error = Color(WgcCoreDsColors.red500),
     onPrimary = Color(WgcCoreDsColors.white),
     onSecondary = Color(WgcCoreDsColors.white),
-    onBackground = Color(WgcCoreDsColors.textPrimary),
-    onSurface = Color(WgcCoreDsColors.textPrimary),
+    onBackground = Color(WgcCoreDsColors.gray900),
+    onSurface = Color(WgcCoreDsColors.gray900),
     onError = Color(WgcCoreDsColors.white)
 )
 

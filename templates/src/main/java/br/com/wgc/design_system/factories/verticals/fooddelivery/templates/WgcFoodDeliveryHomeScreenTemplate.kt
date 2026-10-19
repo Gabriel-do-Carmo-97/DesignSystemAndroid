@@ -39,11 +39,11 @@ data class FoodDeliveryHomeUiState(
     val address: String = "Rua Augusta, 1000 - Consolação",
     val searchQuery: String = "",
     val categories: List<WgcCircularCategoryItem> = listOf(
-        WgcCircularCategoryItem("1", "Restaurantes", "🍔", Color(WgcCoreDsColors.carePharmacyRedLight)),
-        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
-        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
-        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.quickShopCardOrange)),
-        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.quickShopCardPurple))
+        WgcCircularCategoryItem("1", "Restaurantes", "🍔", Color(WgcCoreDsColors.redLight3)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.blueLight18)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.greenLight9)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.orangeLight4)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.pinkLight1))
     ),
     val restaurants: List<FoodDeliveryRestaurant> = listOf(
         FoodDeliveryRestaurant("1", "Burger Bistro", "4.8", "Lanches", "1.1 km", "20-30 min", "Grátis", true),
@@ -106,7 +106,7 @@ fun WgcFoodDeliveryHomeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(Color(WgcCoreDsColors.foodDeliveryBgGray))
+                .background(Color(WgcCoreDsColors.grayLight9))
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
         ) {
@@ -125,7 +125,7 @@ fun WgcFoodDeliveryHomeScreenContent(
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.foodDeliveryRed))
+                    colors = CardDefaults.cardColors(containerColor = Color(WgcCoreDsColors.red18))
                 ) {
                     Column(
                         modifier = Modifier.padding(WgcCoreDsSpacing.md16.dp),

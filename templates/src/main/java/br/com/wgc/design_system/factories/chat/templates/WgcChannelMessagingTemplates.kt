@@ -23,7 +23,7 @@ fun WgcTelegramChatsTemplate(modifier: Modifier = Modifier) {
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
-            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.channelMessagingBlue)).padding(WgcCoreDsSpacing.md16.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().background(Color(WgcCoreDsColors.blue31)).padding(WgcCoreDsSpacing.md16.dp)) {
                 Text("Canais de Mensagem", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color.White)
             }
         }

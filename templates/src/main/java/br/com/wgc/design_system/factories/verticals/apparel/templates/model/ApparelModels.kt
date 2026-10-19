@@ -20,9 +20,9 @@ data class ClotheeProduct(
     val description: String = "Built for life and made to last, this sportswear piece features breathable, durable organic cotton fleece with ribbed trims and an athletic silhouette.",
     val availableSizes: List<String> = listOf("S", "M", "L", "XL", "2XL"),
     val availableColors: List<ClotheeColorOption> = listOf(
-        ClotheeColorOption("Lemon", Color(WgcCoreDsColors.productLemon)),
-        ClotheeColorOption("Purple", Color(WgcCoreDsColors.apparelPrimary)),
-        ClotheeColorOption("Charcoal", Color(WgcCoreDsColors.apparelDark)),
+        ClotheeColorOption("Lemon", Color(WgcCoreDsColors.yellowLight1)),
+        ClotheeColorOption("Purple", Color(WgcCoreDsColors.purple7)),
+        ClotheeColorOption("Charcoal", Color(WgcCoreDsColors.grayDark18)),
         ClotheeColorOption("White", Color(WgcCoreDsColors.white))
     )
 )

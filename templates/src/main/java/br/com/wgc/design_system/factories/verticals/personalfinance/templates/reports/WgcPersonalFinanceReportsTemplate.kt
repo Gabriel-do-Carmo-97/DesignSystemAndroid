@@ -66,7 +66,7 @@ fun WgcOrganizzeReportsTemplate(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(WgcCoreDsColors.personalFinancePrimary))
+                    .background(Color(WgcCoreDsColors.cyan3))
                     .padding(
                         horizontal = WgcCoreDsSpacing.md16.dp,
                         vertical = WgcCoreDsSpacing.sm12.dp
@@ -121,14 +121,14 @@ fun WgcOrganizzeReportsTemplate(
                     Text(
                         text = "Total de Despesas no Mês",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
                     Text(
                         text = totalExpenses,
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(WgcCoreDsColors.personalFinanceExpenseRed)
+                        color = Color(WgcCoreDsColors.red23)
                     )
 
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
@@ -138,7 +138,7 @@ fun WgcOrganizzeReportsTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s140.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.personalFinancePrimaryLight)),
+                            .background(Color(WgcCoreDsColors.cyanLight2)),
                         contentAlignment = Alignment.Center
                     ) {
                         Box(
@@ -151,7 +151,7 @@ fun WgcOrganizzeReportsTemplate(
                             Icon(
                                 imageVector = Icons.Default.PieChart,
                                 contentDescription = null,
-                                tint = Color(WgcCoreDsColors.personalFinancePrimary),
+                                tint = Color(WgcCoreDsColors.cyan3),
                                 modifier = Modifier.size(WgcCoreDsSpacing.xl32.dp)
                             )
                         }
@@ -161,7 +161,7 @@ fun WgcOrganizzeReportsTemplate(
                     Text(
                         text = "Alimentação e Moradia representam 65% dos gastos",
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                 }
             }
@@ -171,7 +171,7 @@ fun WgcOrganizzeReportsTemplate(
                 text = "Despesas por Categoria",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color(WgcCoreDsColors.personalFinanceDark),
+                color = Color(WgcCoreDsColors.blueDark33),
                 modifier = Modifier.padding(horizontal = WgcCoreDsSpacing.md16.dp)
             )
 
@@ -231,7 +231,7 @@ private fun CategoryBudgetRow(category: OrganizzeCategoryItem) {
                         text = category.name,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.personalFinanceDark)
+                        color = Color(WgcCoreDsColors.blueDark33)
                     )
                 }
 
@@ -240,12 +240,12 @@ private fun CategoryBudgetRow(category: OrganizzeCategoryItem) {
                         text = category.spentAmount,
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.personalFinanceDark)
+                        color = Color(WgcCoreDsColors.blueDark33)
                     )
                     Text(
                         text = "de ${category.budgetLimit}",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.personalFinanceSecondaryText)
+                        color = Color(WgcCoreDsColors.gray11)
                     )
                 }
             }
@@ -259,8 +259,8 @@ private fun CategoryBudgetRow(category: OrganizzeCategoryItem) {
                     .fillMaxWidth()
                     .height(WgcCoreDsSpacing.xs8.dp)
                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.sm4.dp)),
-                color = if (category.progress >= 1.0f) Color(WgcCoreDsColors.personalFinanceExpenseRed) else Color(category.color),
-                trackColor = Color(WgcCoreDsColors.personalFinanceBorder),
+                color = if (category.progress >= 1.0f) Color(WgcCoreDsColors.red23) else Color(category.color),
+                trackColor = Color(WgcCoreDsColors.blueLight7),
                 strokeCap = StrokeCap.Round
             )
         }

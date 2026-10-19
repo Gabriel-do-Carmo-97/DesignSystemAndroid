@@ -108,12 +108,12 @@ fun WgcLazaProductDetailTemplate(
                             Text(
                                 text = "Total Price",
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                             Text(
                                 text = "with VAT,SD",
                                 style = MaterialTheme.typography.labelSmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
 
@@ -121,7 +121,7 @@ fun WgcLazaProductDetailTemplate(
                             text = product.price,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
                     }
 
@@ -155,12 +155,12 @@ fun WgcLazaProductDetailTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -171,12 +171,12 @@ fun WgcLazaProductDetailTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s44.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                     ) {
                         Icon(
                             imageVector = if (product.isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                             contentDescription = "Favoritar",
-                            tint = if (product.isFavorite) Color(WgcCoreDsColors.boutiqueAlertRed) else Color(WgcCoreDsColors.boutiqueDark),
+                            tint = if (product.isFavorite) Color(WgcCoreDsColors.red22) else Color(WgcCoreDsColors.grayDark13),
                             modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                         )
                     }
@@ -186,13 +186,13 @@ fun WgcLazaProductDetailTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s44.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.boutiqueSurface))
+                            .background(Color(WgcCoreDsColors.blueLight32))
                     ) {
                         BadgedBox(
                             badge = {
                                 if (cartCount > 0) {
                                     Badge(
-                                        containerColor = Color(WgcCoreDsColors.boutiquePrimary),
+                                        containerColor = Color(WgcCoreDsColors.purple8),
                                         contentColor = Color.White
                                     ) {
                                         Text(text = cartCount.toString())
@@ -203,7 +203,7 @@ fun WgcLazaProductDetailTemplate(
                             Icon(
                                 imageVector = Icons.Default.ShoppingBag,
                                 contentDescription = "Carrinho",
-                                tint = Color(WgcCoreDsColors.boutiqueDark),
+                                tint = Color(WgcCoreDsColors.grayDark13),
                                 modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                             )
                         }
@@ -225,7 +225,7 @@ fun WgcLazaProductDetailTemplate(
                         .height(WgcCoreDsSize.s280.dp)
                         .padding(horizontal = WgcCoreDsSpacing.lg24.dp)
                         .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                        .background(Color(WgcCoreDsColors.boutiqueSurface)),
+                        .background(Color(WgcCoreDsColors.blueLight32)),
                     contentAlignment = Alignment.Center
                 ) {
                     if (!activeImage.isNullOrEmpty()) {
@@ -238,7 +238,7 @@ fun WgcLazaProductDetailTemplate(
                         Text(
                             text = product.title.take(2).uppercase(),
                             style = MaterialTheme.typography.displaySmall,
-                            color = Color(WgcCoreDsColors.boutiquePrimary),
+                            color = Color(WgcCoreDsColors.purple8),
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -258,10 +258,10 @@ fun WgcLazaProductDetailTemplate(
                                 modifier = Modifier
                                     .size(WgcCoreDsSize.s64.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                    .background(Color(WgcCoreDsColors.boutiqueSurface))
+                                    .background(Color(WgcCoreDsColors.blueLight32))
                                     .border(
                                         width = if (isCurrent) WgcCoreDsSpacing.xxxs2.dp else WgcCoreDsSpacing.none0.dp,
-                                        color = if (isCurrent) Color(WgcCoreDsColors.boutiquePrimary) else Color.Transparent,
+                                        color = if (isCurrent) Color(WgcCoreDsColors.purple8) else Color.Transparent,
                                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp)
                                     )
                                     .clickable { onImageSelected(index) },
@@ -292,14 +292,14 @@ fun WgcLazaProductDetailTemplate(
                     Text(
                         text = product.category,
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = product.title,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                 }
 
@@ -309,14 +309,14 @@ fun WgcLazaProductDetailTemplate(
                     Text(
                         text = "Price",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                        color = Color(WgcCoreDsColors.gray13)
                     )
                     Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxxs2.dp))
                     Text(
                         text = product.price,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.boutiqueDark)
+                        color = Color(WgcCoreDsColors.grayDark13)
                     )
                 }
             }
@@ -341,13 +341,13 @@ fun WgcLazaProductDetailTemplate(
                             text = "Size",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
 
                         Text(
                             text = "Size Guide",
                             style = MaterialTheme.typography.labelMedium,
-                            color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                            color = Color(WgcCoreDsColors.gray13)
                         )
                     }
 
@@ -364,8 +364,8 @@ fun WgcLazaProductDetailTemplate(
                                     .size(WgcCoreDsSize.s48.dp)
                                     .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
                                     .background(
-                                        if (isChosen) Color(WgcCoreDsColors.boutiquePrimary)
-                                        else Color(WgcCoreDsColors.boutiqueSurface)
+                                        if (isChosen) Color(WgcCoreDsColors.purple8)
+                                        else Color(WgcCoreDsColors.blueLight32)
                                     )
                                     .clickable { onSizeSelected(size) },
                                 contentAlignment = Alignment.Center
@@ -374,7 +374,7 @@ fun WgcLazaProductDetailTemplate(
                                     text = size,
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = if (isChosen) Color.White else Color(WgcCoreDsColors.boutiqueDark)
+                                    color = if (isChosen) Color.White else Color(WgcCoreDsColors.grayDark13)
                                 )
                             }
                         }
@@ -394,7 +394,7 @@ fun WgcLazaProductDetailTemplate(
                     text = "Description",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -402,7 +402,7 @@ fun WgcLazaProductDetailTemplate(
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                    color = Color(WgcCoreDsColors.gray13)
                 )
             }
 
@@ -426,14 +426,14 @@ fun WgcLazaProductDetailTemplate(
                             text = "Reviews",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
 
                         TextButton(onClick = onViewAllReviews) {
                             Text(
                                 text = "View All",
                                 style = MaterialTheme.typography.labelMedium,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
                     }
@@ -446,7 +446,7 @@ fun WgcLazaProductDetailTemplate(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.boutiqueSurface))
+                                .background(Color(WgcCoreDsColors.blueLight32))
                                 .padding(WgcCoreDsSpacing.md16.dp)
                         ) {
                             Row(
@@ -472,7 +472,7 @@ fun WgcLazaProductDetailTemplate(
                                             Text(
                                                 text = topReview.authorName.take(1),
                                                 fontWeight = FontWeight.Bold,
-                                                color = Color(WgcCoreDsColors.boutiquePrimary)
+                                                color = Color(WgcCoreDsColors.purple8)
                                             )
                                         }
                                     }
@@ -484,12 +484,12 @@ fun WgcLazaProductDetailTemplate(
                                             text = topReview.authorName,
                                             style = MaterialTheme.typography.bodyMedium,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(WgcCoreDsColors.boutiqueDark)
+                                            color = Color(WgcCoreDsColors.grayDark13)
                                         )
                                         Text(
                                             text = topReview.date,
                                             style = MaterialTheme.typography.labelSmall,
-                                            color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                            color = Color(WgcCoreDsColors.gray13)
                                         )
                                     }
                                 }
@@ -499,13 +499,13 @@ fun WgcLazaProductDetailTemplate(
                                         text = "${topReview.rating}",
                                         style = MaterialTheme.typography.bodySmall,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.boutiqueDark)
+                                        color = Color(WgcCoreDsColors.grayDark13)
                                     )
                                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                     Icon(
                                         imageVector = Icons.Default.Star,
                                         contentDescription = "Estrela",
-                                        tint = Color(WgcCoreDsColors.boutiqueGold),
+                                        tint = Color(WgcCoreDsColors.orange38),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                 }
@@ -516,7 +516,7 @@ fun WgcLazaProductDetailTemplate(
                             Text(
                                 text = topReview.comment,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
                     }

@@ -84,12 +84,12 @@ fun WgcLazaReviewsTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s44.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.boutiqueSurface))
+                        .background(Color(WgcCoreDsColors.blueLight32))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.boutiqueDark),
+                        tint = Color(WgcCoreDsColors.grayDark13),
                         modifier = Modifier.size(WgcCoreDsSize.s22.dp)
                     )
                 }
@@ -100,7 +100,7 @@ fun WgcLazaReviewsTemplate(
                     text = "Reviews",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.boutiqueDark)
+                    color = Color(WgcCoreDsColors.grayDark13)
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -125,7 +125,7 @@ fun WgcLazaReviewsTemplate(
                             text = "$totalReviewsCount Reviews",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.boutiqueDark)
+                            color = Color(WgcCoreDsColors.grayDark13)
                         )
 
                         Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
@@ -135,14 +135,14 @@ fun WgcLazaReviewsTemplate(
                                 text = averageRating.toString(),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(WgcCoreDsColors.boutiqueDark)
+                                color = Color(WgcCoreDsColors.grayDark13)
                             )
                             Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                             repeat(5) {
                                 Icon(
                                     imageVector = Icons.Default.Star,
                                     contentDescription = null,
-                                    tint = Color(WgcCoreDsColors.boutiqueGold),
+                                    tint = Color(WgcCoreDsColors.orange38),
                                     modifier = Modifier.size(WgcCoreDsSize.s14.dp)
                                 )
                             }
@@ -153,7 +153,7 @@ fun WgcLazaReviewsTemplate(
                     Button(
                         onClick = onAddReviewClick,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.boutiqueGold),
+                            containerColor = Color(WgcCoreDsColors.orange38),
                             contentColor = Color.White
                         ),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
@@ -191,7 +191,7 @@ fun WgcLazaReviewsTemplate(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                                .background(Color(WgcCoreDsColors.boutiqueSurface))
+                                .background(Color(WgcCoreDsColors.blueLight32))
                                 .padding(WgcCoreDsSpacing.md16.dp)
                         ) {
                             Row(
@@ -217,7 +217,7 @@ fun WgcLazaReviewsTemplate(
                                             Text(
                                                 text = review.authorName.take(1),
                                                 fontWeight = FontWeight.Bold,
-                                                color = Color(WgcCoreDsColors.boutiquePrimary)
+                                                color = Color(WgcCoreDsColors.purple8)
                                             )
                                         }
                                     }
@@ -229,12 +229,12 @@ fun WgcLazaReviewsTemplate(
                                             text = review.authorName,
                                             style = MaterialTheme.typography.bodyMedium,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(WgcCoreDsColors.boutiqueDark)
+                                            color = Color(WgcCoreDsColors.grayDark13)
                                         )
                                         Text(
                                             text = review.date,
                                             style = MaterialTheme.typography.labelSmall,
-                                            color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                            color = Color(WgcCoreDsColors.gray13)
                                         )
                                     }
                                 }
@@ -244,13 +244,13 @@ fun WgcLazaReviewsTemplate(
                                         text = "${review.rating}",
                                         style = MaterialTheme.typography.bodySmall,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color(WgcCoreDsColors.boutiqueDark)
+                                        color = Color(WgcCoreDsColors.grayDark13)
                                     )
                                     Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xxs4.dp))
                                     Icon(
                                         imageVector = Icons.Default.Star,
                                         contentDescription = "Estrela",
-                                        tint = Color(WgcCoreDsColors.boutiqueGold),
+                                        tint = Color(WgcCoreDsColors.orange38),
                                         modifier = Modifier.size(WgcCoreDsSize.s16.dp)
                                     )
                                 }
@@ -261,7 +261,7 @@ fun WgcLazaReviewsTemplate(
                             Text(
                                 text = review.comment,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(WgcCoreDsColors.boutiqueSecondaryText)
+                                color = Color(WgcCoreDsColors.gray13)
                             )
                         }
                     }

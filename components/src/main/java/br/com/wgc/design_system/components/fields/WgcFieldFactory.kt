@@ -13,18 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.components.auth.WgcOtpCodeInput
-
-/**
- * Tipos de campos suportados pela WgcFieldFactory.
- */
-enum class WgcFieldType {
-    Standard,
-    Search,
-    Password,
-    OtpCode
-}
 
 /**
  * Fábrica Universal de Campos de Entrada do Design System (WgcFieldFactory).
@@ -112,8 +102,8 @@ private fun WgcFieldFactoryPreview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
-            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+                .padding(WgcCoreDsSpacing.MD16.dp),
+            verticalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
         ) {
             WgcFieldFactory(type = WgcFieldType.Standard, value = "Texto Padrão")
             WgcFieldFactory(type = WgcFieldType.Search, value = "")

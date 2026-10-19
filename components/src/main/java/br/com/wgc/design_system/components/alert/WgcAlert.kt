@@ -16,44 +16,9 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-
-/**
- * Tipos de alerta disponíveis no WgcAlert.
- * 
- * Cada tipo define uma paleta de cores e ícone específico seguindo o Material Design 3:
- * - [SUCCESS]: Verde com ícone de check para confirmações positivas
- * - [ERROR]: Vermelho com ícone de erro para falhas e problemas
- * - [WARNING]: Amarelo/laranja com ícone de aviso para situações de atenção
- * - [INFO]: Azul com ícone de informação para comunicados neutros
- */
-enum class AlertType {
-    /**
-     * Alerta de sucesso com fundo verde e ícone de check.
-     * Use para confirmar que uma ação foi concluída com sucesso.
-     */
-    SUCCESS,
-    
-    /**
-     * Alerta de erro com fundo vermelho e ícone de erro.
-     * Use para comunicar falhas, erros de validação ou problemas.
-     */
-    ERROR,
-    
-    /**
-     * Alerta de aviso com fundo amarelo/laranja e ícone de aviso.
-     * Use para situações que requerem atenção do usuário.
-     */
-    WARNING,
-    
-    /**
-     * Alerta informativo com fundo azul e ícone de informação.
-     * Use para comunicados, dicas ou informações adicionais.
-     */
-    INFO
-}
 
 /**
  * Componente de Alerta (WgcAlert) inspirado no Material UI / Material 3.
@@ -136,16 +101,16 @@ fun WgcAlert(
 
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
+        shape = RoundedCornerShape(WgcCoreDsBorderRadius.MD8.dp),
         color = containerColor,
         contentColor = contentColor
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(WgcCoreDsSpacing.md16.dp),
+                .padding(WgcCoreDsSpacing.MD16.dp),
             verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.xs8.dp)
+            horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.XS8.dp)
         ) {
             Icon(
                 imageVector = icon,
@@ -155,13 +120,13 @@ fun WgcAlert(
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .padding(end = WgcCoreDsSpacing.xxs4.dp)
+                    .padding(end = WgcCoreDsSpacing.XXS4.dp)
             ) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleMedium
                 )
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xxs4.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XXS4.dp))
                 Text(
                     text = message,
                     style = MaterialTheme.typography.bodyMedium

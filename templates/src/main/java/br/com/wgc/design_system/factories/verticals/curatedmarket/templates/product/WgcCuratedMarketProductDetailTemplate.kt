@@ -89,7 +89,7 @@ fun WgcTasselProductDetailTemplate(
                             .height(WgcCoreDsSize.s52.dp),
                         shape = RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(WgcCoreDsColors.curatedMarketPrimary),
+                            containerColor = Color(WgcCoreDsColors.blue37),
                             contentColor = Color.White
                         )
                     ) {
@@ -125,12 +125,12 @@ fun WgcTasselProductDetailTemplate(
                     modifier = Modifier
                         .size(WgcCoreDsSize.s40.dp)
                         .clip(CircleShape)
-                        .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                        .background(Color(WgcCoreDsColors.blueLight26))
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Voltar",
-                        tint = Color(WgcCoreDsColors.curatedMarketDark),
+                        tint = Color(WgcCoreDsColors.grayDark9),
                         modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                     )
                 }
@@ -141,12 +141,12 @@ fun WgcTasselProductDetailTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                            .background(Color(WgcCoreDsColors.blueLight26))
                     ) {
                         Icon(
                             imageVector = if (product.isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
                             contentDescription = "Salvar",
-                            tint = if (product.isBookmarked) Color(WgcCoreDsColors.curatedMarketPrimary) else Color(WgcCoreDsColors.curatedMarketDark),
+                            tint = if (product.isBookmarked) Color(WgcCoreDsColors.blue37) else Color(WgcCoreDsColors.grayDark9),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -156,12 +156,12 @@ fun WgcTasselProductDetailTemplate(
                         modifier = Modifier
                             .size(WgcCoreDsSize.s40.dp)
                             .clip(CircleShape)
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                            .background(Color(WgcCoreDsColors.blueLight26))
                     ) {
                         Icon(
                             imageVector = Icons.Default.MoreVert,
                             contentDescription = "Mais opções",
-                            tint = Color(WgcCoreDsColors.curatedMarketDark),
+                            tint = Color(WgcCoreDsColors.grayDark9),
                             modifier = Modifier.size(WgcCoreDsSize.s20.dp)
                         )
                     }
@@ -184,7 +184,7 @@ fun WgcTasselProductDetailTemplate(
                                 .width(WgcCoreDsSize.s240.dp)
                                 .height(WgcCoreDsSize.s300.dp)
                                 .clip(RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp))
-                                .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                                .background(Color(WgcCoreDsColors.blueLight26))
                         ) {
                             AsyncImageDefault(
                                 image = imgUrl,
@@ -213,14 +213,14 @@ fun WgcTasselProductDetailTemplate(
                         text = product.title,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = Color(WgcCoreDsColors.curatedMarketDark)
+                        color = Color(WgcCoreDsColors.grayDark9)
                     )
 
                     // Selo da Marca
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.circular999.dp))
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                            .background(Color(WgcCoreDsColors.blueLight26))
                             .padding(
                                 horizontal = WgcCoreDsSpacing.sm12.dp,
                                 vertical = WgcCoreDsSpacing.xxs4.dp
@@ -230,7 +230,7 @@ fun WgcTasselProductDetailTemplate(
                             text = product.brand,
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                     }
                 }
@@ -241,7 +241,7 @@ fun WgcTasselProductDetailTemplate(
                     text = product.price,
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
             }
 
@@ -263,7 +263,7 @@ fun WgcTasselProductDetailTemplate(
                             .weight(1f)
                             .height(WgcCoreDsSize.s48.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                            .background(Color(WgcCoreDsColors.blueLight26))
                             .clickable { onColorSelect(selectedColor) }
                             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically,
@@ -273,14 +273,14 @@ fun WgcTasselProductDetailTemplate(
                             modifier = Modifier
                                 .size(WgcCoreDsSize.s12.dp)
                                 .clip(CircleShape)
-                                .background(Color(WgcCoreDsColors.curatedMarketDenimBlue))
+                                .background(Color(WgcCoreDsColors.blue40))
                         )
                         Spacer(modifier = Modifier.width(WgcCoreDsSpacing.xs8.dp))
                         Text(
                             text = selectedColor,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                     }
 
@@ -290,7 +290,7 @@ fun WgcTasselProductDetailTemplate(
                             .weight(1f)
                             .height(WgcCoreDsSize.s48.dp)
                             .clip(RoundedCornerShape(WgcCoreDsBorderRadius.md8.dp))
-                            .background(Color(WgcCoreDsColors.curatedMarketSurface))
+                            .background(Color(WgcCoreDsColors.blueLight26))
                             .clickable { onSizeSelect(selectedSize) }
                             .padding(horizontal = WgcCoreDsSpacing.md16.dp),
                         verticalAlignment = Alignment.CenterVertically,
@@ -300,7 +300,7 @@ fun WgcTasselProductDetailTemplate(
                             text = "Size: $selectedSize",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(WgcCoreDsColors.curatedMarketDark)
+                            color = Color(WgcCoreDsColors.grayDark9)
                         )
                     }
                 }
@@ -318,7 +318,7 @@ fun WgcTasselProductDetailTemplate(
                     text = "Details",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -326,7 +326,7 @@ fun WgcTasselProductDetailTemplate(
                 Text(
                     text = product.details,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                    color = Color(WgcCoreDsColors.gray10)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.md16.dp))
@@ -335,7 +335,7 @@ fun WgcTasselProductDetailTemplate(
                     text = "Description",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(WgcCoreDsColors.curatedMarketDark)
+                    color = Color(WgcCoreDsColors.grayDark9)
                 )
 
                 Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
@@ -343,7 +343,7 @@ fun WgcTasselProductDetailTemplate(
                 Text(
                     text = product.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(WgcCoreDsColors.curatedMarketSecondaryText)
+                    color = Color(WgcCoreDsColors.gray10)
                 )
             }
 

@@ -13,16 +13,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsColors
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.theme.WgcCoreDsColors
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
-
-data class WgcCircularCategoryItem(
-    val id: String,
-    val name: String,
-    val initials: String,
-    val backgroundColor: Color = Color(WgcCoreDsColors.grey100)
-)
 
 /**
  * Carrossel de Categorias Circulares Descritivo (WgcCircularCategoryRow).
@@ -31,18 +24,18 @@ data class WgcCircularCategoryItem(
 fun WgcCircularCategoryRow(
     modifier: Modifier = Modifier,
     categories: List<WgcCircularCategoryItem> = listOf(
-        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(WgcCoreDsColors.carePharmacyRedLight)),
-        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.quickShopCardBlue)),
-        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.premiumGroceryGreenLight)),
-        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.quickShopCardOrange)),
-        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.quickShopCardPurple))
+        WgcCircularCategoryItem("1", "Alimentos", "🍔", Color(WgcCoreDsColors.redLight3)),
+        WgcCircularCategoryItem("2", "Mercado", "🛒", Color(WgcCoreDsColors.blueLight18)),
+        WgcCircularCategoryItem("3", "Farmácia", "💊", Color(WgcCoreDsColors.greenLight9)),
+        WgcCircularCategoryItem("4", "Bebidas", "🍾", Color(WgcCoreDsColors.orangeLight4)),
+        WgcCircularCategoryItem("5", "Pet", "🐶", Color(WgcCoreDsColors.pinkLight1))
     ),
     onCategoryClick: (WgcCircularCategoryItem) -> Unit = {}
 ) {
     LazyRow(
         modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.md16.dp),
-        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.md16.dp)
+        contentPadding = PaddingValues(horizontal = WgcCoreDsSpacing.MD16.dp),
+        horizontalArrangement = Arrangement.spacedBy(WgcCoreDsSpacing.MD16.dp)
     ) {
         items(categories, key = { it.id }) { category ->
             Column(
@@ -60,7 +53,7 @@ fun WgcCircularCategoryRow(
                         Text(text = category.initials, style = MaterialTheme.typography.titleLarge)
                     }
                 }
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.xs8.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.XS8.dp))
                 Text(
                     text = category.name,
                     style = MaterialTheme.typography.labelMedium,

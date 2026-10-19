@@ -25,8 +25,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import br.com.wgc.design_system.core.WgcCoreDsBorderRadius
-import br.com.wgc.design_system.core.WgcCoreDsSpacing
+import br.com.wgc.design_system.core.tokens.WgcCoreDsBorderRadius
+import br.com.wgc.design_system.core.tokens.WgcCoreDsSpacing
 import br.com.wgc.design_system.commons.previews.components.WgcComponentPreviews
 
 /**
@@ -95,13 +95,13 @@ fun WgcTimePickerDialog(
         modifier = modifier
     ) {
         Surface(
-            shape = RoundedCornerShape(WgcCoreDsBorderRadius.xl16.dp),
+            shape = RoundedCornerShape(WgcCoreDsBorderRadius.XL16.dp),
             color = MaterialTheme.colorScheme.surface,
-            tonalElevation = WgcCoreDsSpacing.xxxs2.dp
+            tonalElevation = WgcCoreDsSpacing.XXXS2.dp
         ) {
             Column(
                 modifier = Modifier
-                    .padding(WgcCoreDsSpacing.lg24.dp),
+                    .padding(WgcCoreDsSpacing.LG24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
@@ -110,12 +110,12 @@ fun WgcTimePickerDialog(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(bottom = WgcCoreDsSpacing.md16.dp)
+                        .padding(bottom = WgcCoreDsSpacing.MD16.dp)
                 )
 
                 WgcTimePicker(state = state)
 
-                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.lg24.dp))
+                Spacer(modifier = Modifier.height(WgcCoreDsSpacing.LG24.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -154,7 +154,7 @@ private fun WgcTimePickerPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(WgcCoreDsSpacing.md16.dp),
+                    .padding(WgcCoreDsSpacing.MD16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 WgcTimePicker(state = state)
