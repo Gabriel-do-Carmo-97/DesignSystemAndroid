@@ -17,7 +17,7 @@ kotlinSerialization = "2.2.20"
 kotlinxSerializationCore = "1.11.0"
 detekt = "1.23.8"
 sonarqube = "7.5.0.8588"
-dokka = "2.2.0"
+dokka = "2.3.0"
 bcv = "0.18.2"
 
 navigationCompose = "2.9.8"
